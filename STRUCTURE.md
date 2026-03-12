@@ -74,7 +74,20 @@ graph TD
 
 ---
 
-## 4. Configuration
+## 4. Entry Points & Orchestration
+
+### run.py
+To simplify local development, a `run.py` script is provided at the root. It acts as a process orchestrator that:
+1. **Checks Infrastructure:** Verifies Redis is running and reachable.
+2. **Environment Setup:** Ensures `.env` exists (auto-creates from `.env.example` if missing).
+3. **Parallel Execution:** Spawns two subprocesses:
+    - **API Process:** `uvicorn scraper_os.api.main:app`
+    - **Worker Process:** `taskiq worker scraper_os.infrastructure.queue.broker:broker`
+4. **Lifecycle Management:** Handles `Ctrl+C` to gracefully terminate both the API and the Worker, preventing orphaned browser processes.
+
+---
+
+## 5. Configuration
 
 The system uses **Pydantic Settings** for centralized configuration management. Environment variables are prefixed with `SCRAPER_`.
 

@@ -36,14 +36,9 @@ Smart Scraping API with LLM-orchestration and Stateful Actors.
    # Edit .env with your API keys and settings
    ```
 
-4. **Run API:**
+4. **Run Everything:**
    ```bash
-   uvicorn scraper_os.api.main:app --reload
-   ```
-
-4. **Run Worker:**
-   ```bash
-   taskiq worker scraper_os.infrastructure.queue.broker:broker
+   python run.py
    ```
 
 ## Documentation
