@@ -80,6 +80,10 @@ class Settings(BaseSettings):
         default=None,
         description="Override OpenAI base URL (for compatible proxies).",
     )
+    openai_model: str = Field(
+        default="gpt-4o-2024-05-13",
+        description="Default OpenAI model for structured output and vision tasks.",
+    )
     jina_api_url: Optional[str] = Field(
         default=None,
         description="Jina Reader V2 HuggingFace Endpoint URL.",
@@ -87,6 +91,10 @@ class Settings(BaseSettings):
     jina_api_key: Optional[str] = Field(
         default=None,
         description="Auth token for Jina endpoint.",
+    )
+    jina_model: Optional[str] = Field(
+        default=None,
+        description="Target model for Jina Reader extraction (optional).",
     )
     omni_parser_url: Optional[str] = Field(
         default=None,

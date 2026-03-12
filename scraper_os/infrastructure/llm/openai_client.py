@@ -28,12 +28,13 @@ class OpenAIClient:
         prompt: str,
         response_model: Type[BaseModel],
         system_prompt: str = "You are a helpful web automation assistant.",
-        model: str = "gpt-4o-2024-05-13",
+        model: Optional[str] = None,
     ) -> Any:
         """Call OpenAI with a Pydantic model for structured output."""
+        target_model = model or settings.openai_model
         try:
-            completion = await self.client.beta.chat.completions.parse(
-                model=model,
+            completion = await self.client.beta.chat.completions.parse(  # type: ignore
+                model=target_model,
                 messages=[
                     {"role": "system", "content": system_prompt},
                     {"role": "user", "content": prompt},
@@ -46,12 +47,13 @@ class OpenAIClient:
             return None
 
     async def analyze_screenshot(
-        self, base64_image: str, prompt: str, model: str = "gpt-4o"
+        self, base64_image: str, prompt: str, model: Optional[str] = None
     ) -> str:
         """Analyze a screenshot using a Vision-capable model."""
+        target_model = model or settings.openai_model
         try:
             response = await self.client.chat.completions.create(
-                model=model,
+                model=target_model,
                 messages=[
                     {
                         "role": "user",
@@ -67,7 +69,8 @@ class OpenAIClient:
                     }
                 ],
             )
-            return response.choices[0].message.content
+            content = response.choices[0].message.content
+            return content if content is not None else ""
         except Exception as exc:
             logger.error("OpenAI vision analysis failed: %s", exc)
             return f"Error: {exc}"

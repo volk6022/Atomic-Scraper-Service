@@ -37,6 +37,9 @@ class JinaClient:
         if self.api_key:
             headers["Authorization"] = f"Bearer {self.api_key}"
 
+        if settings.jina_model:
+            headers["X-Model"] = settings.jina_model
+
         if extract_schema:
             headers["X-Return-Format"] = "json"
             headers["X-Schema"] = str(extract_schema)
