@@ -1,0 +1,40 @@
+version: '3.8'
+
+services:
+  redis:
+    image: redis:7-alpine
+    container_name: scraper_redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    command: redis-server --appendonly yes
+    restart: unless-stopped
+
+  api:
+    build: .
+    container_name: scraper_api
+    ports:
+      - "8000:8000"
+    environment:
+      - REDIS_URL=redis://redis:6379
+      - OPENAI_API_KEY=${OPENAI_API_KEY:-}
+      - JINA_API_KEY=${JINA_API_KEY:-}
+    depends_on:
+      - redis
+    restart: unless-stopped
+
+  worker:
+    build: .
+    container_name: scraper_worker
+    command: taskiq worker infrastructure.queue.broker:broker --redis-url redis://redis:6379
+    environment:
+      - REDIS_URL=redis://redis:6379
+      - OPENAI_API_KEY=${OPENAI_API_KEY:-}
+      - JINA_API_KEY=${JINA_API_KEY:-}
+    depends_on:
+      - redis
+    restart: unless-stopped
+
+volumes:
+  redis_data:
