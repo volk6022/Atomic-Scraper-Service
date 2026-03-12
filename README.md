@@ -30,7 +30,13 @@ Smart Scraping API with LLM-orchestration and Stateful Actors.
    playwright install chromium
    ```
 
-3. **Run API:**
+3. **Configure Environment:**
+   ```bash
+   cp .env.example .env
+   # Edit .env with your API keys and settings
+   ```
+
+4. **Run API:**
    ```bash
    uvicorn scraper_os.api.main:app --reload
    ```

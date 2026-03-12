@@ -71,3 +71,19 @@ graph TD
     Loop -- Exit Command --> Close
     Close --> End(Terminate Worker)
 ```
+
+---
+
+## 4. Configuration
+
+The system uses **Pydantic Settings** for centralized configuration management. Environment variables are prefixed with `SCRAPER_`.
+
+### Setup
+A `.env.example` file is provided in the root directory. Copy it to `.env` to customize your local environment:
+- `SCRAPER_REDIS_URL`: Connection string for Taskiq broker and Pub/Sub.
+- `SCRAPER_SERPER_PROXIES`: A JSON list of proxy URLs for the stateless pool.
+- `SCRAPER_OPENAI_API_KEY`: API key for decision-making and extraction logic.
+- `SCRAPER_SESSION_TIMEOUT_SECONDS`: Idle timeout for stateful actors (default: 300s).
+
+Refer to `scraper_os/core/config.py` for all available settings.
+
