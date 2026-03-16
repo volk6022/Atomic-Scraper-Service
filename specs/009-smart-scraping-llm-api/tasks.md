@@ -55,21 +55,22 @@
 
 **Independent Test**: Send a request to `POST /scraper` or `POST /serper` and receive valid content/results without session state.
 
-### Tests for User Story 1
+### Tests for User Story 1 (Test-First)
 
-- [ ] T012 [P] [US1] Contract test for `/scraper` and `/serper` in `tests/contract/test_stateless.py`
-- [ ] T013 [P] [US1] Integration test for Playwright atomic scrape in `tests/integration/test_atomic_scrape.py`
+- [ ] T015 [P] [US1] Write failing contract test for `/scraper` and `/serper` in `tests/contract/test_stateless.py`
+- [ ] T016 [P] [US1] Write failing integration test for Playwright atomic scrape in `tests/integration/test_atomic_scrape.py`
+- [ ] T017 [P] [US1] Write failing contract test for `/omni-parse` and `/jina-extract` in `tests/contract/test_analysis.py`
 
 ### Implementation for User Story 1
 
-- [ ] T014 [P] [US1] Create `ScrapeTask` model in `src/domain/models/requests.py`
-- [ ] T015 [US1] Implement stateless browser context management in `src/infrastructure/browser/pool_manager.py`
-- [ ] T016 [US1] Implement `POST /scraper` endpoint in `src/api/routers/stateless.py`
-- [ ] T017 [US1] Implement Serper-compatible search transformation in `src/infrastructure/external_api/search_client.py`
-- [ ] T018 [US1] Implement `POST /serper` endpoint in `src/api/routers/stateless.py`
-- [ ] T019 [P] [US1] Implement proxy round-robin selection from local file in `src/infrastructure/browser/proxy_provider.py`
-- [ ] T020 [P] [US1] Implement Omni-Parser analysis endpoint `POST /omni-parse` in `src/api/routers/stateless.py`
-- [ ] T021 [P] [US1] Implement Jina extraction endpoint `POST /jina-extract` in `src/api/routers/stateless.py`
+- [ ] T018 [P] [US1] Create `ScrapeTask` model in `src/domain/models/requests.py`
+- [ ] T019 [US1] Implement stateless browser context management in `src/infrastructure/browser/pool_manager.py`
+- [ ] T020 [US1] Implement `POST /scraper` endpoint in `src/api/routers/stateless.py`
+- [ ] T021 [US1] Implement Serper-compatible search transformation in `src/infrastructure/external_api/search_client.py`
+- [ ] T022 [US1] Implement `POST /serper` endpoint in `src/api/routers/stateless.py`
+- [ ] T023 [P] [US1] Implement proxy round-robin selection from local file in `src/infrastructure/browser/proxy_provider.py`
+- [ ] T024 [P] [US1] Implement Omni-Parser analysis endpoint `POST /omni-parse` in `src/api/routers/stateless.py`
+- [ ] T025 [P] [US1] Implement Jina extraction endpoint `POST /jina-extract` in `src/api/routers/stateless.py`
 
 **Checkpoint**: User Story 1 (Atomic Scraper & Search) is fully functional.
 
@@ -81,22 +82,23 @@
 
 **Independent Test**: Initiate a session via `POST /sessions`, connect via WebSocket, and execute a `screenshot` command.
 
-### Tests for User Story 2
+### Tests for User Story 2 (Test-First)
 
-- [ ] T022 [P] [US2] Contract test for `/sessions` and WebSocket in `tests/contract/test_sessions.py`
-- [ ] T023 [P] [US2] Integration test for Taskiq Actor browser session in `tests/integration/test_session_actor.py`
+- [ ] T026 [P] [US2] Write failing contract test for `/sessions` and WebSocket in `tests/contract/test_sessions.py`
+- [ ] T027 [P] [US2] Write failing integration test for Taskiq Actor browser session in `tests/integration/test_session_actor.py`
+- [ ] T028 [P] [US2] Write failing unit tests for DSL actions (click, fill, goto) in `tests/unit/test_actions.py`
 
 ### Implementation for User Story 2
 
-- [ ] T024 [P] [US2] Create `InteractiveSession` model in `src/domain/models/dsl.py`
-- [ ] T025 [US2] Implement Taskiq Actor for isolated browser sessions in `src/infrastructure/queue/session_actor.py`
-- [ ] T026 [US2] Implement Redis Pub/Sub coordination for WebSockets in `src/api/websockets/manager.py`
-- [ ] T027 [US2] Implement `POST /sessions` endpoint in `src/api/routers/sessions.py`
-- [ ] T028 [US2] Implement WebSocket handler for command loop in `src/api/websockets/handler.py`
-- [ ] T029 [P] [US2] Implement navigation actions (goto, scroll) in `src/actions/navigation.py`
-- [ ] T030 [P] [US2] Implement interaction actions (click_coord, fill) in `src/actions/interaction.py`
-- [ ] T031 [P] [US2] Implement extraction actions (screenshot, get_dom) in `src/actions/extraction.py`
-- [ ] T032 [US2] Integrate Omni-click and Jina-extract into session actions in `src/actions/ai_actions.py`
+- [ ] T029 [P] [US2] Create `InteractiveSession` model in `src/domain/models/dsl.py`
+- [ ] T030 [US2] Implement Taskiq Actor for isolated browser sessions in `src/infrastructure/queue/session_actor.py`
+- [ ] T031 [US2] Implement Redis Pub/Sub coordination for WebSockets in `src/api/websockets/manager.py`
+- [ ] T032 [US2] Implement `POST /sessions` endpoint in `src/api/routers/sessions.py`
+- [ ] T033 [US2] Implement WebSocket handler for command loop in `src/api/websockets/handler.py`
+- [ ] T034 [P] [US2] Implement navigation actions (goto, scroll) in `src/actions/navigation.py`
+- [ ] T035 [P] [US2] Implement interaction actions (click_coord, fill) in `src/actions/interaction.py`
+- [ ] T036 [P] [US2] Implement extraction actions (screenshot, get_dom) in `src/actions/extraction.py`
+- [ ] T037 [US2] Integrate Omni-click and Jina-extract into session actions in `src/actions/ai_actions.py`
 
 **Checkpoint**: User Story 2 (Stateful Sessions) is fully functional.
 
@@ -108,16 +110,16 @@
 
 **Independent Test**: Create a session, wait for inactivity timeout, and verify the Taskiq process/browser context is closed.
 
-### Tests for User Story 3
+### Tests for User Story 3 (Test-First)
 
-- [ ] T033 [P] [US3] Unit test for inactivity monitor in `tests/unit/test_cleanup.py`
-- [ ] T034 [US3] Integration test for session auto-termination in `tests/integration/test_timeout.py`
+- [ ] T038 [P] [US3] Write failing unit test for inactivity monitor in `tests/unit/test_cleanup.py`
+- [ ] T039 [US3] Write failing integration test for session auto-termination in `tests/integration/test_timeout.py`
 
 ### Implementation for User Story 3
 
-- [ ] T035 [US3] Implement inactivity tracking in `src/infrastructure/browser/session_manager.py`
-- [ ] T036 [US3] Implement background cleanup task for timed-out sessions in `src/infrastructure/queue/cleanup_worker.py`
-- [ ] T037 [US3] Implement Fail-Fast blocking detection and error reporting in `src/infrastructure/browser/session_manager.py`
+- [ ] T040 [US3] Implement inactivity tracking in `src/infrastructure/browser/session_manager.py`
+- [ ] T041 [US3] Implement background cleanup task for timed-out sessions in `src/infrastructure/queue/cleanup_worker.py`
+- [ ] T042 [US3] Implement Fail-Fast blocking detection and error reporting in `src/infrastructure/browser/session_manager.py`
 
 **Checkpoint**: User Story 3 (Resource Management) is fully functional.
 
