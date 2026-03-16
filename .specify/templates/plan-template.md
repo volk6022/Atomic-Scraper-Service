@@ -36,6 +36,9 @@
 - [ ] **III. Resource Lifecycle**: Are timeouts handled if this is a stateful feature?
 - [ ] **IV. Architecture**: Does the code fit into the API/Domain/Infrastructure/Actions layers?
 - [ ] **V. DSL Integration**: Is the new capability exposed as a discrete Action?
+- [ ] **VI. Test-First**: Have failing tests been drafted/planned before implementation?
+- [ ] **VII. Infrastructure**: Does this require Redis or other services managed via `docker-compose`?
+- [ ] **VIII. Backend-Only**: Confirm no frontend/UI components are being introduced.
 
 ## Project Structure
 

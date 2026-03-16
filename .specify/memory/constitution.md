@@ -1,22 +1,14 @@
 <!--
 Sync Impact Report
-Version change: 0.0.0 → 1.0.0
+Version change: 1.2.0 → 1.3.0
 List of modified principles:
-  - [PRINCIPLE_1_NAME] → I. Dual-Context Isolation (Stateless/Stateful)
-  - [PRINCIPLE_2_NAME] → II. Unified AI Orchestration Facade
-  - [PRINCIPLE_3_NAME] → III. Resource Lifecycle Governance
-  - [PRINCIPLE_4_NAME] → IV. Clean Architecture Boundaries
-  - [PRINCIPLE_5_NAME] → V. Command-Driven Interaction (DSL)
+  - Added: VII. Backend-Only Focus (No Frontend)
 Added sections:
-  - Technical Constraints
-  - Development Workflow
+  - None
 Removed sections:
   - None
 Templates requiring updates:
   - ✅ updated: .specify/templates/plan-template.md
-  - ✅ updated: .specify/templates/spec-template.md
-  - ✅ updated: .specify/templates/tasks-template.md
-  - ✅ updated: .opencode/command/speckit.constitution.md
 Follow-up TODOs:
   - TODO(RATIFICATION_DATE): Original adoption date unknown.
 -->
@@ -40,13 +32,21 @@ Code MUST be organized into isolated layers: API (Presentation), Domain (Models/
 ### V. Command-Driven Interaction (DSL)
 Interactive sessions MUST be driven by a Domain Specific Language (DSL) defined in `CommandPayload`. Every action (navigation, extraction, AI-decision) MUST be a discrete, registry-backed class that operates on a Playwright page. This ensures predictable behavior and enables easy extension of system capabilities.
 
+### VI. Test-First Implementation (TDD Mandatory)
+Tests MUST be generated and established before any functional code is written. Every feature, action, or bug fix MUST start with failing test cases (unit, contract, or integration) that define the expected outcome. Functional implementation is only permitted once the test suite is ready to verify the "Green" state.
+
+### VII. Backend-Only Focus (No Frontend)
+This project is a pure backend service. Development MUST NOT include any frontend components, web interfaces, or browser-rendered dashboards (excluding generated API documentation). All functionality MUST be exposed via REST and WebSocket APIs only.
+
 ## Technical Constraints
 - **Concurrency**: Use `asyncio` for I/O bound tasks (Network, Playwright) and separate processes (Taskiq) for isolation.
 - **Data Exchange**: Use Redis Pub/Sub for real-time command/result routing between FastAPI and Stateful Actors.
+- **Infrastructure Orchestration**: Redis and other persistent shared services MUST be managed via `docker-compose`. Developers and CI/CD pipelines MUST use the project's `docker-compose.yml` to ensure consistent environment parity.
 - **Stateless Stability**: The global Playwright instance in Stateless workers MUST remain active for the duration of the worker process to minimize context creation overhead.
 
 ## Development Workflow
 - **Spec First**: Features MUST be defined in `.specify/templates/spec-template.md` before implementation.
+- **Test-Driven Cycle**: Follow the Red-Green-Refactor cycle. Tests must fail first, then implementation makes them pass, followed by cleanup.
 - **Testing Discipline**: New Actions MUST be verified with Playwright mocks. E2E tests MUST verify the full flow from WebSocket command to browser action.
 - **Documentation**: Every directory MUST contain a `doc.md` explaining its responsibility and key patterns.
 
@@ -60,4 +60,4 @@ This Constitution is the primary authority for architectural and procedural deci
 
 **Compliance**: All PRs MUST be reviewed against this constitution. Automated linting and type-checking (mypy/ruff) are mandatory for all contributions.
 
-**Version**: 1.0.0 | **Ratified**: TODO(RATIFICATION_DATE) | **Last Amended**: 2026-03-16
+**Version**: 1.3.0 | **Ratified**: TODO(RATIFICATION_DATE) | **Last Amended**: 2026-03-16
