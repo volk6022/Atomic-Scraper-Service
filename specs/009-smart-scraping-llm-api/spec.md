@@ -81,7 +81,11 @@ As a system administrator, I want the system to automatically close idle session
 - **FR-007**: System MUST automatically terminate interactive sessions after 10 minutes of inactivity.
 - **FR-008**: System MUST support proxy integration for all network requests. Stateless tasks MUST use a round-robin selection from a pool defined in a local static YAML/JSON configuration file.
 - **FR-009**: System MUST provide a "Toolbox" of commands for sessions (e.g., Screenshot, GetDOM, ClickCoordinate, TypeText, Scroll).
-- **FR-010**: System MUST support horizontal scaling of interactive sessions across a multi-node cluster using Redis Pub/Sub for coordination.
+- **FR-011**: System MUST provide a REST endpoint for direct Omni-Parser analysis of base64 images.
+- **FR-012**: System MUST provide a REST endpoint for Jina-based HTML to Markdown/JSON conversion.
+- **FR-013**: System MUST support WebSocket actions for extraction and field filling via selectors (ID, element content, etc.).
+- **FR-014**: System MUST support WebSocket action for full-page snapshots.
+- **FR-015**: System MUST support WebSocket actions for clicking and filling fields via full-page coordinate mappings.
 
 ### Key Entities *(include if feature involves data)*
 
