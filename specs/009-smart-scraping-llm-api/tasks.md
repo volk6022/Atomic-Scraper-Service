@@ -18,9 +18,10 @@
 **Purpose**: Project initialization and basic structure
 
 - [ ] T001 Create project structure `src/{api,domain,infrastructure,actions,core}` and `tests/{unit,integration,contract}`
-- [ ] T002 Initialize Python 3.11+ project with `pyproject.toml` including FastAPI, Taskiq, Playwright, Redis, Pydantic, OpenAI, HTTPX
+- [ ] T002 Initialize Python 3.11+ project using `uv init` and add dependencies (FastAPI, Taskiq, Playwright, Redis, Pydantic, OpenAI, HTTPX) via `uv add`
 - [ ] T003 [P] Configure `ruff` for linting and `pytest` with `pytest-asyncio`
 - [ ] T004 Create `src/core/config.py` for API keys, Redis URLs, and timeout settings
+- [ ] T043 [P] Create `docker-compose.yml` to manage Redis service for Taskiq and caching
 
 ---
 
@@ -28,13 +29,21 @@
 
 **Purpose**: Core infrastructure that MUST be complete before ANY user story can be implemented
 
-- [ ] T005 [P] Implement `src/infrastructure/queue/broker.py` for Taskiq Redis broker setup
-- [ ] T006 [P] Implement `src/infrastructure/browser/pool_manager.py` for global Playwright browser instance management
-- [ ] T007 [P] Implement `src/infrastructure/external_api/facade.py` base `LLMFacade` for modular provider management
-- [ ] T008 [P] Implement Static API Key authentication middleware in `src/api/auth.py`
-- [ ] T009 Implement base DSL Command models in `src/domain/models/dsl.py`
-- [ ] T010 Implement Action Registry in `src/domain/registry/action_registry.py`
-- [ ] T011 [P] Implement `src/infrastructure/queue/workers.py` to host Taskiq workers
+### Foundational Tests (Test-First)
+
+- [ ] T005 [P] Write failing integration test for Redis connection in `tests/integration/test_redis.py`
+- [ ] T006 [P] Write failing unit test for LLM Facade base class in `tests/unit/test_llm_facade.py`
+- [ ] T007 [P] Write failing test for Static API Key auth in `tests/integration/test_auth.py`
+
+### Foundational Implementation
+
+- [ ] T008 [P] Implement `src/infrastructure/queue/broker.py` for Taskiq Redis broker setup (connect to Redis via Docker)
+- [ ] T009 [P] Implement `src/infrastructure/browser/pool_manager.py` for global Playwright browser instance management
+- [ ] T010 [P] Implement `src/infrastructure/external_api/facade.py` base `LLMFacade` for modular provider management
+- [ ] T011 [P] Implement Static API Key authentication middleware in `src/api/auth.py`
+- [ ] T012 Implement base DSL Command models in `src/domain/models/dsl.py`
+- [ ] T013 Implement Action Registry in `src/domain/registry/action_registry.py`
+- [ ] T014 [P] Implement `src/infrastructure/queue/workers.py` to host Taskiq workers
 
 **Checkpoint**: Foundation ready - user story implementation can now begin in parallel
 
@@ -119,7 +128,7 @@
 - [ ] T038 [P] Verify compliance with Constitution Principles (I-VI)
 - [ ] T039 [P] Update `README.md` and `quickstart.md` with final API examples
 - [ ] T040 Finalize error handling and logging formatting in `src/core/logging.py`
-- [ ] T041 Run full suite of contract and integration tests
+- [ ] T041 Run full suite of contract and integration tests using `uv run pytest`
 - [ ] T042 [P] Security audit of static API key implementation
 
 ---
