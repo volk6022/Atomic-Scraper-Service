@@ -5,6 +5,17 @@
 **Status**: Draft  
 **Input**: User description: "@playwright_orchestrator_plan_2.md "
 
+## Clarifications
+
+### Session 2026-03-16
+
+- Q: Access Blocked Handling Strategy → A: Fail Fast: Immediately return the error to the client with the status/reason.
+- Q: AI Provider Rate Limit Handling → A: Client-side responsibility: system bubbles up errors.
+- Q: AI Integration Responsibility → A: Server provides tools; client orchestrates AI.
+- Q: Search Engine Integration Scope → A: Google Only (via Serper-compatible interface).
+- Q: Proxy Pool Configuration Source → A: Static YAML/JSON: Load proxies from a local file on startup.
+- Q: Authentication & Authorization Mechanism → A: Static API Key (X-API-Key header / token query param).
+
 ## User Scenarios & Testing *(mandatory)*
 
 ### User Story 1 - Fast Atomic Scraping (Priority: P1)
@@ -18,22 +29,22 @@ As a developer, I want to quickly retrieve structured data or HTML from a URL wi
 **Acceptance Scenarios**:
 
 1. **Given** a valid target URL, **When** a scrape request is sent, **Then** the system returns the full HTML content within acceptable latency.
-2. **Given** a search query, **When** a search request is sent, **Then** the system returns structured search results.
+2. **Given** a Google Search query, **When** a search request is sent, **Then** the system returns structured results compatible with the Serper API format.
 
 ---
 
-### User Story 2 - Interactive LLM-Driven Session (Priority: P2)
+### User Story 2 - Interactive Session Tools (Priority: P2)
 
-As a data engineer, I want to perform complex navigation on a website using AI-driven reasoning, so I can extract data from protected or complex web applications.
+As a data engineer, I want a suite of automated tools (screenshot, DOM extraction, coordinate identification) within a stateful session, so I can use my own external AI/logic to orchestrate complex navigation.
 
-**Why this priority**: Critical for handling modern, dynamic web apps that traditional scrapers fail to navigate.
+**Why this priority**: Essential for complex web apps where the client needs low-level control and visual feedback.
 
-**Independent Test**: Can be tested by initiating a session, sending a navigation command, and receiving a confirmation of the action.
+**Independent Test**: Can be tested by initiating a session, requesting a screenshot or DOM dump, and verifying the received data.
 
 **Acceptance Scenarios**:
 
-1. **Given** an active session, **When** a user sends a command to interact with a specific UI element, **Then** the system identifies the target and performs the action.
-2. **Given** a page with complex data, **When** a user requests extraction, **Then** the system returns a structured representation of the page content.
+1. **Given** an active session, **When** a user sends a command for a screenshot or DOM extraction, **Then** the system returns the data in the requested format.
+2. **Given** a coordinate-based click command from the client, **When** processed by the session, **Then** the system performs the mouse action on the target page.
 
 ---
 
@@ -54,22 +65,22 @@ As a system administrator, I want the system to automatically close idle session
 
 ### Edge Cases
 
-- **Access Blocked**: How does the system handle a scenario where the target website blocks access?
-- **Provider Rate Limits**: How does the system handle rate limits from external AI providers?
-- **Context Overflow**: What happens if the page data exceeds the processing capacity of the AI model?
+- **Access Blocked**: If the target website blocks access (e.g., 403, 429, or CAPTCHA), the system MUST immediately return the error to the client with the specific status and reason (Fail Fast).
+- **Data Volume**: If the requested DOM or screenshot exceeds transport limits, the system MUST return a size-related error rather than crashing or truncating silently.
 
 ## Requirements *(mandatory)*
 
 ### Functional Requirements
 
-- **FR-001**: System MUST provide a REST interface for atomic scraping and search operations.
+- **FR-001**: System MUST provide a REST interface for atomic scraping and search operations, secured by a static API Key.
 - **FR-002**: System MUST adhere to **Constitution Principle I (Isolation)** and **IV (Architecture)** by separating stateless and stateful execution environments.
 - **FR-003**: All implementation MUST follow **Constitution Principle VI (Test-First)**.
 - **FR-004**: System MUST maintain a persistent pool of browser instances for atomic tasks to minimize startup latency.
 - **FR-005**: System MUST spawn isolated processes with dedicated browser instances for interactive sessions.
-- **FR-006**: System MUST support real-time communication for interactive sessions.
+- **FR-006**: System MUST support real-time communication for interactive sessions, secured by an API Key/token.
 - **FR-007**: System MUST automatically terminate interactive sessions after 10 minutes of inactivity.
-- **FR-008**: System MUST support proxy integration for all network requests.
+- **FR-008**: System MUST support proxy integration for all network requests. Stateless tasks MUST use a round-robin selection from a pool defined in a local static YAML/JSON configuration file.
+- **FR-009**: System MUST provide a "Toolbox" of commands for sessions (e.g., Screenshot, GetDOM, ClickCoordinate, TypeText, Scroll).
 - **FR-010**: System MUST support horizontal scaling of interactive sessions across a multi-node cluster using Redis Pub/Sub for coordination.
 
 ### Key Entities *(include if feature involves data)*
