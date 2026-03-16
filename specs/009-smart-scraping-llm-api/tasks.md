@@ -132,6 +132,9 @@
 - [ ] T040 Finalize error handling and logging formatting in `src/core/logging.py`
 - [ ] T041 Run full suite of contract and integration tests using `uv run pytest`
 - [ ] T042 [P] Security audit of static API key implementation
+- [ ] T044 [P] Implement performance benchmark script in `scripts/benchmark_stateless.py` to verify SC-001 (<2s latency)
+- [ ] T045 [P] Implement concurrency stress test in `scripts/stress_test_sessions.py` to verify SC-004 (20+ concurrent sessions)
+- [ ] T046 [P] Create `benchmarks/RESULTS.md` to document latency and resource usage under load
 
 ---
 
