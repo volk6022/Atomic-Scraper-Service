@@ -17,11 +17,11 @@
 
 **Purpose**: Project initialization and basic structure
 
-- [ ] T001 Create project structure `src/{api,domain,infrastructure,actions,core}` and `tests/{unit,integration,contract}`
-- [ ] T002 Initialize Python 3.11+ project using `uv init` and add dependencies (FastAPI, Taskiq, Playwright, Redis, Pydantic, OpenAI, HTTPX) via `uv add`
-- [ ] T003 [P] Configure `ruff` for linting and `pytest` with `pytest-asyncio`
-- [ ] T004 Create `src/core/config.py` for API keys, Redis URLs, and timeout settings
-- [ ] T043 [P] Create `docker-compose.yml` to manage Redis service for Taskiq and caching
+- [X] T001 Create project structure `src/{api,domain,infrastructure,actions,core}` and `tests/{unit,integration,contract}`
+- [X] T002 Initialize Python 3.11+ project using `uv init` and add dependencies (FastAPI, Taskiq, Playwright, Redis, Pydantic, OpenAI, HTTPX) via `uv add`
+- [X] T003 [P] Configure `ruff` for linting and `pytest` with `pytest-asyncio`
+- [X] T004 Create `src/core/config.py` for API keys, Redis URLs, and timeout settings
+- [X] T043 [P] Create `docker-compose.yml` to manage Redis service for Taskiq and caching
 
 ---
 
@@ -31,19 +31,19 @@
 
 ### Foundational Tests (Test-First)
 
-- [ ] T005 [P] Write failing integration test for Redis connection in `tests/integration/test_redis.py`
-- [ ] T006 [P] Write failing unit test for LLM Facade base class in `tests/unit/test_llm_facade.py`
-- [ ] T007 [P] Write failing test for Static API Key auth in `tests/integration/test_auth.py`
+- [X] T005 [P] Write failing integration test for Redis connection in `tests/integration/test_redis.py`
+- [X] T006 [P] Write failing unit test for LLM Facade base class in `tests/unit/test_llm_facade.py`
+- [X] T007 [P] Write failing test for Static API Key auth in `tests/integration/test_auth.py`
 
 ### Foundational Implementation
 
-- [ ] T008 [P] Implement `src/infrastructure/queue/broker.py` for Taskiq Redis broker setup (connect to Redis via Docker)
-- [ ] T009 [P] Implement `src/infrastructure/browser/pool_manager.py` for global Playwright browser instance management
-- [ ] T010 [P] Implement `src/infrastructure/external_api/facade.py` base `LLMFacade` for modular provider management
-- [ ] T011 [P] Implement Static API Key authentication middleware in `src/api/auth.py`
-- [ ] T012 Implement base DSL Command models in `src/domain/models/dsl.py`
-- [ ] T013 Implement Action Registry in `src/domain/registry/action_registry.py`
-- [ ] T014 [P] Implement `src/infrastructure/queue/workers.py` to host Taskiq workers
+- [X] T008 [P] Implement `src/infrastructure/queue/broker.py` for Taskiq Redis broker setup (connect to Redis via Docker)
+- [X] T009 [P] Implement `src/infrastructure/browser/pool_manager.py` for global Playwright browser instance management
+- [X] T010 [P] Implement `src/infrastructure/external_api/facade.py` base `LLMFacade` for modular provider management
+- [X] T011 [P] Implement Static API Key authentication middleware in `src/api/auth.py`
+- [X] T012 Implement base DSL Command models in `src/domain/models/dsl.py`
+- [X] T013 Implement Action Registry in `src/domain/registry/action_registry.py`
+- [X] T014 [P] Implement `src/infrastructure/queue/workers.py` to host Taskiq workers
 
 **Checkpoint**: Foundation ready - user story implementation can now begin in parallel
 
@@ -63,14 +63,14 @@
 
 ### Implementation for User Story 1
 
-- [ ] T018 [P] [US1] Create `ScrapeTask` model in `src/domain/models/requests.py`
-- [ ] T019 [US1] Implement stateless browser context management in `src/infrastructure/browser/pool_manager.py`
-- [ ] T020 [US1] Implement `POST /scraper` endpoint in `src/api/routers/stateless.py`
-- [ ] T021 [US1] Implement Serper-compatible search transformation in `src/infrastructure/external_api/search_client.py`
-- [ ] T022 [US1] Implement `POST /serper` endpoint in `src/api/routers/stateless.py`
-- [ ] T023 [P] [US1] Implement proxy round-robin selection from local file in `src/infrastructure/browser/proxy_provider.py`
-- [ ] T024 [P] [US1] Implement Omni-Parser analysis endpoint `POST /omni-parse` in `src/api/routers/stateless.py`
-- [ ] T025 [P] [US1] Implement Jina extraction endpoint `POST /jina-extract` in `src/api/routers/stateless.py`
+- [X] T018 [P] [US1] Create `ScrapeTask` model in `src/domain/models/requests.py`
+- [X] T019 [US1] Implement stateless browser context management in `src/infrastructure/browser/pool_manager.py`
+- [X] T020 [US1] Implement `POST /scraper` endpoint in `src/api/routers/stateless.py`
+- [X] T021 [US1] Implement Serper-compatible search transformation in `src/infrastructure/external_api/search_client.py`
+- [X] T022 [US1] Implement `POST /serper` endpoint in `src/api/routers/stateless.py`
+- [X] T023 [P] [US1] Implement proxy round-robin selection from local file in `src/infrastructure/browser/proxy_provider.py`
+- [X] T024 [P] [US1] Implement Omni-Parser analysis endpoint `POST /omni-parse` in `src/api/routers/stateless.py`
+- [X] T025 [P] [US1] Implement Jina extraction endpoint `POST /jina-extract` in `src/api/routers/stateless.py`
 
 **Checkpoint**: User Story 1 (Atomic Scraper & Search) is fully functional.
 
@@ -90,17 +90,15 @@
 
 ### Implementation for User Story 2
 
-- [ ] T029 [P] [US2] Create `InteractiveSession` model in `src/domain/models/dsl.py`
-- [ ] T030 [US2] Implement Taskiq Actor for isolated browser sessions in `src/infrastructure/queue/session_actor.py`
-- [ ] T031 [US2] Implement Redis Pub/Sub coordination for WebSockets in `src/api/websockets/manager.py`
-- [ ] T032 [US2] Implement `POST /sessions` endpoint in `src/api/routers/sessions.py`
-- [ ] T033 [US2] Implement WebSocket handler for command loop in `src/api/websockets/handler.py`
-- [ ] T034 [P] [US2] Implement navigation actions (goto, scroll) in `src/actions/navigation.py`
-- [ ] T035 [P] [US2] Implement interaction actions (click_coord, fill) in `src/actions/interaction.py`
-- [ ] T036 [P] [US2] Implement extraction actions (screenshot, get_dom) in `src/actions/extraction.py`
-- [ ] T037 [US2] Integrate Omni-click and Jina-extract into session actions in `src/actions/ai_actions.py`
-
-**Checkpoint**: User Story 2 (Stateful Sessions) is fully functional.
+- [X] T029 [P] [US2] Create `InteractiveSession` model in `src/domain/models/dsl.py`
+- [X] T030 [US2] Implement Taskiq Actor for isolated browser sessions in `src/infrastructure/queue/session_actor.py`
+- [X] T031 [US2] Implement Redis Pub/Sub coordination for WebSockets in `src/api/websockets/manager.py`
+- [X] T032 [US2] Implement `POST /sessions` endpoint in `src/api/routers/sessions.py`
+- [X] T033 [US2] Implement WebSocket handler for command loop in `src/api/websockets/handler.py`
+- [X] T034 [P] [US2] Implement navigation actions (goto, scroll) in `src/actions/navigation.py`
+- [X] T035 [P] [US2] Implement interaction actions (click_coord, fill) in `src/actions/interaction.py`
+- [X] T036 [P] [US2] Implement extraction actions (screenshot, get_dom) in `src/actions/extraction.py`
+- [X] T037 [US2] Integrate Omni-click and Jina-extract into session actions in `src/actions/ai_actions.py`
 
 ---
 
@@ -112,14 +110,15 @@
 
 ### Tests for User Story 3 (Test-First)
 
-- [ ] T038 [P] [US3] Write failing unit test for inactivity monitor in `tests/unit/test_cleanup.py`
-- [ ] T039 [US3] Write failing integration test for session auto-termination in `tests/integration/test_timeout.py`
+- [X] T038 [P] [US3] Write failing unit test for inactivity monitor in `tests/unit/test_cleanup.py`
+- [X] T039 [US3] Write failing integration test for session auto-termination in `tests/integration/test_timeout.py`
 
 ### Implementation for User Story 3
 
-- [ ] T040 [US3] Implement inactivity tracking in `src/infrastructure/browser/session_manager.py`
-- [ ] T041 [US3] Implement background cleanup task for timed-out sessions in `src/infrastructure/queue/cleanup_worker.py`
-- [ ] T042 [US3] Implement Fail-Fast blocking detection and error reporting in `src/infrastructure/browser/session_manager.py`
+- [X] T040 [US3] Implement inactivity tracking in `src/infrastructure/browser/session_manager.py`
+- [X] T041 [US3] Implement background cleanup task for timed-out sessions in `src/infrastructure/queue/cleanup_worker.py`
+- [X] T042 [US3] Implement Fail-Fast blocking detection and error reporting in `src/infrastructure/browser/session_manager.py`
+
 
 **Checkpoint**: User Story 3 (Resource Management) is fully functional.
 
@@ -127,14 +126,14 @@
 
 ## Phase 6: Polish & Cross-Cutting Concerns
 
-- [ ] T038 [P] Verify compliance with Constitution Principles (I-VI)
-- [ ] T039 [P] Update `README.md` and `quickstart.md` with final API examples
-- [ ] T040 Finalize error handling and logging formatting in `src/core/logging.py`
-- [ ] T041 Run full suite of contract and integration tests using `uv run pytest`
-- [ ] T042 [P] Security audit of static API key implementation
-- [ ] T044 [P] Implement performance benchmark script in `scripts/benchmark_stateless.py` to verify SC-001 (<2s latency)
-- [ ] T045 [P] Implement concurrency stress test in `scripts/stress_test_sessions.py` to verify SC-004 (20+ concurrent sessions)
-- [ ] T046 [P] Create `benchmarks/RESULTS.md` to document latency and resource usage under load
+- [X] T038 [P] Verify compliance with Constitution Principles (I-VI)
+- [X] T039 [P] Update `README.md` and `quickstart.md` with final API examples
+- [X] T040 Finalize error handling and logging formatting in `src/core/logging.py`
+- [X] T041 Run full suite of contract and integration tests using `uv run pytest`
+- [X] T042 [P] Security audit of static API key implementation
+- [X] T044 [P] Implement performance benchmark script in `scripts/benchmark_stateless.py` to verify SC-001 (<2s latency)
+- [X] T045 [P] Implement concurrency stress test in `scripts/stress_test_sessions.py` to verify SC-004 (20+ concurrent sessions)
+- [X] T046 [P] Create `benchmarks/RESULTS.md` to document latency and resource usage under load
 
 ---
 
