@@ -62,7 +62,7 @@ scraper_os/
 │   ├── browser/
 │   │   ├── pool_manager.py        # Глобальный браузер для Stateless задач
 │   │   └── session_manager.py     # Изолированный браузер для Stateful сессий
-│   ├── llm/
+│   ├── external_api/
 │   │   ├── facade.py              # LLMFacade (Единая точка входа)
 │   │   ├── openai_client.py
 │   │   └── jina_client.py
@@ -329,7 +329,7 @@ async def run_stateful_session(session_id: str, config: SessionConfig):
 ### 5.4. Паттерн Фасад для ИИ (LLMFacade)
 
 ```python
-# infrastructure/llm/facade.py
+# infrastructure/external_api/facade.py
 class LLMFacade:
     def __init__(self):
         # Клиенты инициализируются внутри (Httpx / OpenAI)
