@@ -135,6 +135,7 @@
 - [X] T045 [P] Implement concurrency stress test in `scripts/stress_test_sessions.py` to verify SC-004 (20+ concurrent sessions)
 - [X] T046 [P] Create `benchmarks/RESULTS.md` to document latency and resource usage under load
 - [X] T047 Decouple Extraction and Orchestration AI clients (OpenAI-compatible) in `src/infrastructure/external_api/facade.py`
+- [X] T048 Update `README.md` and create `STRUCTURE.md` for project documentation
 
 ---
 

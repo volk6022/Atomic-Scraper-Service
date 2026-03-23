@@ -13,8 +13,11 @@ High-throughput atomic scraping and stateful interactive browser sessions with L
 - **Language**: Python 3.11+
 - **Framework**: FastAPI
 - **Async Logic**: Playwright, Taskiq (Redis Broker)
-- **AI Tools**: OpenAI, Jina Reader V2, Omni-Parser
+- **AI Tools**: Flexible OpenAI-compatible configuration (LM Studio, OpenAI, etc.), Jina Reader V2, Omni-Parser
 - **Infrastructure**: Redis (Pub/Sub and Task Queue), Docker
+
+## [Project Structure](STRUCTURE.md)
+Detailed directory layout and layer responsibilities are documented in [STRUCTURE.md](STRUCTURE.md).
 
 ## Quickstart
 
