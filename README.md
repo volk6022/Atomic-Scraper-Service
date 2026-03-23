@@ -71,13 +71,16 @@ uv run python -m pytest tests
 
 The project includes an MCP (Model Context Protocol) server that exposes all web interactions as tools for LLMs.
 
+Session tools (`session_goto`, `session_screenshot`, etc.) communicate with the backend via **`POST /sessions/{session_id}/command`** — a regular HTTP endpoint — instead of WebSocket. This is intentional: MCP runs over stdio and cannot maintain a persistent WS connection. The WebSocket endpoint (`/ws/{session_id}`) remains available for other clients.
+
 ### Running the MCP Server
+To run the MCP server manually from any directory:
 ```bash
-uv run src/mcp_server.py
+cd C:/[repo_path]/Atomic-Scraper-Service && uv run python -m src.mcp_server
 ```
 
-### Claude Desktop Configuration
-Add this to your `claude_desktop_config.json`:
+### Claude Desktop / OpenCode Configuration
+Add this to your `claude_desktop_config.json` (or equivalent MCP config):
 ```json
 {
   "mcpServers": {
@@ -86,12 +89,12 @@ Add this to your `claude_desktop_config.json`:
       "args": [
         "run",
         "--project",
-        "C:/Users/bhunp/Documents/Atomic-Scraper-Service",
+        "C:/[repo_path]/Atomic-Scraper-Service",
         "python",
-        "src/mcp_server.py"
+        "C:/[repo_path]/Atomic-Scraper-Service/src/mcp_server.py"
       ],
       "env": {
-        "API_KEY": "default_internal_key"
+        "API_KEY": "your_internal_key"
       }
     }
   }
@@ -105,11 +108,17 @@ Add this to your `claude_desktop_config.json`:
 
 ## JSON DSL Guide
 
-The JSON DSL allows you to control browser sessions via WebSockets.
+The JSON DSL controls browser sessions. Commands can be sent two ways:
 
-1.  **Start a Session**: `POST /sessions` (requires `X-API-Key`) -> returns `session_id`.
-2.  **Connect via WebSocket**: `ws://localhost:8000/ws/{session_id}`.
-3.  **Send Commands**: Send JSON in the format `{"type": "<command>", "params": { ... }}`.
+### Option A: HTTP (recommended for MCP / programmatic clients)
+1. **Start a Session**: `POST /sessions` (requires `X-API-Key`) -> returns `session_id`.
+2. **Send Commands**: `POST /sessions/{session_id}/command` with body `{"type": "<command>", "params": { ... }}`.
+3. **Result** is returned directly in the HTTP response (blocks up to 60 s).
+
+### Option B: WebSocket (recommended for interactive / streaming clients)
+1. **Start a Session**: `POST /sessions` -> returns `session_id`.
+2. **Connect**: `ws://localhost:8000/ws/{session_id}`.
+3. **Send Commands**: Send JSON frames `{"type": "<command>", "params": { ... }}`. Results arrive as push frames on the same connection.
 
 ### Core Commands
 - **`goto`**: `{"url": "https://..."}` - Navigate to a URL.

@@ -72,14 +72,35 @@ Terminates a persistent browser actor manually.
 }
 ```
 
+### `POST /sessions/{session_id}/command`
+Send a single DSL command to an active session and receive the result synchronously.
+
+Recommended for **MCP / programmatic clients** that cannot hold a persistent WebSocket connection. Internally, the server publishes the command to the same Redis `cmd:{session_id}` channel as the WebSocket handler, then waits (up to 60 s) for the result on `res:{session_id}`.
+
+- **Request**: `CommandRequest`
+```json
+{
+  "type": "goto",
+  "params": { "url": "https://news.ycombinator.com" }
+}
+```
+- **Response**: the action result object, e.g.
+```json
+{ "status": "success", "message": "Navigated to https://news.ycombinator.com" }
+```
+- **Error responses**:
+  - `504 Gateway Timeout` — actor did not respond within 60 s (session may be expired)
+  - `422 Unprocessable Entity` — malformed request body
+
 ### `WS /ws/{session_id}`
-WebSocket connection for sending DSL commands.
+WebSocket connection for sending DSL commands. Recommended for **interactive / streaming clients** (browser frontends, `test_ws.py`, long-running automation scripts) that need bi-directional, low-latency communication and may send many commands over a single connection.
 
 ---
 
 ## 3. DSL Command Interactions
 
-Commands sent over the WebSocket in the format: `{"type": "<command>", "params": { ... }}`
+Commands are sent either over WebSocket or via `POST /sessions/{session_id}/command` in the format:
+`{"type": "<command>", "params": { ... }}`
 
 ### `goto`
 Navigates the current session to a new URL.

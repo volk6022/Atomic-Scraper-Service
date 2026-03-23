@@ -7,7 +7,7 @@ src/
 ├── api/                           # [Presentation Layer] REST & WebSockets
 │   ├── routers/                   # Endpoint definitions (stateless, sessions)
 │   │   ├── stateless.py           # Atomic scraper, search, analysis endpoints
-│   │   └── sessions.py            # Session management endpoints
+│   │   └── sessions.py            # Session lifecycle + POST /sessions/{id}/command
 │   ├── websockets/                # WebSocket communication logic
 │   │   ├── handler.py             # WebSocket connection handler
 │   │   └── manager.py             # Redis Pub/Sub coordination for WebSockets
