@@ -23,7 +23,29 @@ orchestration_client = get_orchestration_client()
 
 
 @router.post("/scraper", response_model=ScrapeResponse)
-# ... (rest of the scrape function remains the same)
+async def scrape(request: ScrapeRequest):
+    try:
+        context = await pool_manager.create_context(
+            proxy={"server": request.proxy} if request.proxy else None
+        )
+        page = await context.new_page()
+        await page.goto(str(request.url), wait_until=request.wait_until)  # type: ignore
+        content = await page.content()
+        await context.close()
+        return ScrapeResponse(
+            url=str(request.url), content=content, status=TaskStatus.SUCCESS
+        )
+    except Exception as e:
+        return ScrapeResponse(
+            url=str(request.url), status=TaskStatus.FAILED, error=str(e)
+        )
+
+
+@router.post("/serper", response_model=SearchResponse)
+async def serper(request: SearchRequest):
+    return await search_client.search(request)
+
+
 @router.post("/omni-parse")
 async def omni_parse(request: OmniParseRequest):
     # Use orchestration client for UI grounding tasks

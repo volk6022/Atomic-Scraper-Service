@@ -6,7 +6,7 @@ from src.domain.models.dsl import CommandType
 
 @action_registry.register(CommandType.GOTO)
 async def goto_action(page: Page, params: Dict[str, Any]) -> Dict[str, Any]:
-    url = params.get("url")
+    url = params.get("url", "")
     await page.goto(url)
     return {"status": "success"}
 

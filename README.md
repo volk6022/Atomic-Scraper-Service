@@ -49,14 +49,17 @@ Detailed directory layout and layer responsibilities are documented in [STRUCTUR
     ```bash
     docker-compose up -d
     ```
-4.  **Run API**:
-    ```bash
-    uv run python -m src.api.main
-    ```
+### Run API (PM2)
+To run the service with PM2, including the background workers:
+```bash
+pm2 start ecosystem.config.js
+```
 
-### Usage
-- **Atomic Scrape**: `POST /scraper` with `{"url": "..."}`
-- **Interactive Session**: `POST /sessions` to get `session_id`, then connect via `ws:///ws/{session_id}`.
+### Manual Testing
+You can use the provided `test_ws.py` to verify the WebSocket session and DSL commands:
+1. Ensure the server is running.
+2. Install test dependencies: `pip install websockets httpx`.
+3. Run the test: `python test_ws.py`.
 
 ## Testing
 Run the full test suite (including contract and integration tests):
@@ -64,7 +67,63 @@ Run the full test suite (including contract and integration tests):
 uv run python -m pytest tests
 ```
 
+## MCP Server
+
+The project includes an MCP (Model Context Protocol) server that exposes all web interactions as tools for LLMs.
+
+### Running the MCP Server
+```bash
+uv run src/mcp_server.py
+```
+
+### Claude Desktop Configuration
+Add this to your `claude_desktop_config.json`:
+```json
+{
+  "mcpServers": {
+    "atomic-scraper": {
+      "command": "uv",
+      "args": [
+        "run",
+        "--project",
+        "C:/Users/bhunp/Documents/Atomic-Scraper-Service",
+        "python",
+        "src/mcp_server.py"
+      ],
+      "env": {
+        "API_KEY": "default_internal_key"
+      }
+    }
+  }
+}
+```
+
+### Available Tools
+- **Stateless**: `scrape`, `search`, `omni_parse`, `jina_extract`
+- **Session Management**: `create_session`, `delete_session`
+- **Interactive (DSL)**: `session_goto`, `session_scroll`, `session_click`, `session_type`, `session_screenshot`, `session_click_omni`, `session_extract_jina`
+
+## JSON DSL Guide
+
+The JSON DSL allows you to control browser sessions via WebSockets.
+
+1.  **Start a Session**: `POST /sessions` (requires `X-API-Key`) -> returns `session_id`.
+2.  **Connect via WebSocket**: `ws://localhost:8000/ws/{session_id}`.
+3.  **Send Commands**: Send JSON in the format `{"type": "<command>", "params": { ... }}`.
+
+### Core Commands
+- **`goto`**: `{"url": "https://..."}` - Navigate to a URL.
+- **`scroll`**: `{"direction": "down", "amount": 500}` - Scroll the page.
+- **`click_coord`**: `{"x": 0.5, "y": 0.2}` - Click relative coordinates.
+- **`type`**: `{"selector": "input", "text": "hello"}` - Type into a selector.
+- **`screenshot`**: `{}` - Capture base64 screenshot.
+
+### AI-Enhanced
+- **`click_omni`**: `{"element_description": "the login button"}` - AI-based grounding.
+- **`extract_jina`**: `{"extraction_schema": {...}}` - Structured extraction.
+
 ## Documentation
+- [Web Interactions (DSL & API)](web_interactions.md)
 - [Tasks](specs/009-smart-scraping-llm-api/tasks.md)
 - [Implementation Plan](specs/009-smart-scraping-llm-api/plan.md)
 - [Research Findings](specs/009-smart-scraping-llm-api/research.md)

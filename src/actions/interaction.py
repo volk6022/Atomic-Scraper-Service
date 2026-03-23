@@ -6,16 +6,21 @@ from src.domain.models.dsl import CommandType
 
 @action_registry.register(CommandType.CLICK_COORD)
 async def click_coord_action(page: Page, params: Dict[str, Any]) -> Dict[str, Any]:
-    x = params.get("x")
-    y = params.get("y")
+    x = params.get("x", 0)
+    y = params.get("y", 0)
     viewport = page.viewport_size
-    await page.mouse.click(x * viewport["width"], y * viewport["height"])
+    if viewport:
+        await page.mouse.click(
+            float(x) * viewport["width"], float(y) * viewport["height"]
+        )
+    else:
+        await page.mouse.click(float(x), float(y))
     return {"status": "success"}
 
 
 @action_registry.register(CommandType.TYPE)
 async def type_action(page: Page, params: Dict[str, Any]) -> Dict[str, Any]:
-    selector = params.get("selector")
-    text = params.get("text")
+    selector = params.get("selector", "")
+    text = params.get("text", "")
     await page.fill(selector, text)
     return {"status": "success"}

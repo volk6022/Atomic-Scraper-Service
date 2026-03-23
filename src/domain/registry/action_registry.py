@@ -1,4 +1,4 @@
-from typing import Dict, Any, Callable, Type
+from typing import Dict, Any, Callable, Type, Optional
 from src.domain.models.dsl import CommandType
 
 
@@ -13,7 +13,7 @@ class ActionRegistry:
 
         return decorator
 
-    def get_action(self, command_type: CommandType) -> Callable:
+    def get_action(self, command_type: CommandType) -> Optional[Callable]:
         return self._actions.get(command_type)
 
 

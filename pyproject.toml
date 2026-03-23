@@ -16,6 +16,9 @@ dependencies = [
     "ruff>=0.15.6",
     "taskiq-redis>=1.2.2",
     "taskiq>=0.12.1",
+    "uvicorn>=0.30.0",
+    "websockets>=13.0",
+    "fastmcp>=3.1.1",
 ]
 
 [tool.ruff]

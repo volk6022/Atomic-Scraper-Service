@@ -1,6 +1,6 @@
 import httpx
 from src.core.config import settings
-from src.domain.models.requests import SearchRequest, SearchResponse
+from src.domain.models.requests import SearchRequest, SearchResponse, SearchResult
 
 
 class SearchClient:
@@ -12,12 +12,12 @@ class SearchClient:
         return SearchResponse(
             searchParameters={"q": request.q, "type": "search", "engine": "google"},
             organic=[
-                {
-                    "title": "Example",
-                    "link": "https://example.com",
-                    "snippet": "Example snippet",
-                    "position": 1,
-                }
+                SearchResult(
+                    title="Example",
+                    link="https://example.com",
+                    snippet="Example snippet",
+                    position=1,
+                )
             ],
         )
 
