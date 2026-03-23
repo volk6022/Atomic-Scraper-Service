@@ -5,7 +5,7 @@ from src.domain.models.requests import SearchRequest, SearchResponse
 
 class SearchClient:
     def __init__(self):
-        self.api_key = settings.OPENAI_API_KEY  # Or Serper key if used
+        self.api_key = settings.ORCHESTRATION_API_KEY  # Or Serper key if used
 
     async def search(self, request: SearchRequest) -> SearchResponse:
         # Mocking for now, as per Serper compatibility requirement

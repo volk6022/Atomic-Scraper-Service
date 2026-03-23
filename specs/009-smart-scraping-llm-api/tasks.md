@@ -57,9 +57,9 @@
 
 ### Tests for User Story 1 (Test-First)
 
-- [ ] T015 [P] [US1] Write failing contract test for `/scraper` and `/serper` in `tests/contract/test_stateless.py`
-- [ ] T016 [P] [US1] Write failing integration test for Playwright atomic scrape in `tests/integration/test_atomic_scrape.py`
-- [ ] T017 [P] [US1] Write failing contract test for `/omni-parse` and `/jina-extract` in `tests/contract/test_analysis.py`
+- [X] T015 [P] [US1] Write failing contract test for `/scraper` and `/serper` in `tests/contract/test_stateless.py`
+- [X] T016 [P] [US1] Write failing integration test for Playwright atomic scrape in `tests/integration/test_atomic_scrape.py`
+- [X] T017 [P] [US1] Write failing contract test for `/omni-parse` and `/jina-extract` in `tests/contract/test_analysis.py`
 
 ### Implementation for User Story 1
 
@@ -84,9 +84,9 @@
 
 ### Tests for User Story 2 (Test-First)
 
-- [ ] T026 [P] [US2] Write failing contract test for `/sessions` and WebSocket in `tests/contract/test_sessions.py`
-- [ ] T027 [P] [US2] Write failing integration test for Taskiq Actor browser session in `tests/integration/test_session_actor.py`
-- [ ] T028 [P] [US2] Write failing unit tests for DSL actions (click, fill, goto) in `tests/unit/test_actions.py`
+- [X] T026 [P] [US2] Write failing contract test for `/sessions` and WebSocket in `tests/contract/test_sessions.py`
+- [X] T027 [P] [US2] Write failing integration test for Taskiq Actor browser session in `tests/integration/test_session_actor.py`
+- [X] T028 [P] [US2] Write failing unit tests for DSL actions (click, fill, goto) in `tests/unit/test_actions.py`
 
 ### Implementation for User Story 2
 
@@ -134,6 +134,7 @@
 - [X] T044 [P] Implement performance benchmark script in `scripts/benchmark_stateless.py` to verify SC-001 (<2s latency)
 - [X] T045 [P] Implement concurrency stress test in `scripts/stress_test_sessions.py` to verify SC-004 (20+ concurrent sessions)
 - [X] T046 [P] Create `benchmarks/RESULTS.md` to document latency and resource usage under load
+- [X] T047 Decouple Extraction and Orchestration AI clients (OpenAI-compatible) in `src/infrastructure/external_api/facade.py`
 
 ---
 
