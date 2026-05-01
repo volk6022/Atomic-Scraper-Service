@@ -8,6 +8,11 @@ High-throughput atomic scraping and stateful interactive browser sessions with L
 - **AI Integration**: Omni-Parser for UI grounding (SoM approach) and Jina Reader for structured markdown extraction.
 - **Resource Management**: Automatic 10-minute inactivity timeout for stateful sessions.
 - **Modular Design**: Clean architecture with layers for API, Domain, Infrastructure, and Actions.
+- **Docker Production Ready**: Dockerfile with Playwright, docker-compose with api/worker/redis, health endpoint.
+- **Anti-Bot Evasion**: Stealth browser pool with User-Agent rotation, proxy integration, human-like interactions.
+- **Yandex Maps Extraction**: Extract structured business data (name, address, phone, website, geo coordinates).
+- **Site Content Enrichment**: Extract clean text from company websites with optional about/services page crawling.
+- **Per-Domain Rate Limiting**: Redis-based token bucket (30/hour for `*.yandex.*`, 1000/hour fallback).
 
 ## Tech Stack
 - **Language**: Python 3.11+
@@ -31,6 +36,7 @@ Detailed directory layout and layer responsibilities are documented in [STRUCTUR
     ```bash
     uv init .
     uv sync
+    playwright install chromium
     ```
 2.  **Environment Variables**:
     Create a `.env` file from `.env.example`. This service uses separate configurations for **Extraction** (e.g., Jina Reader LM) and **Orchestration** (e.g., Reasoning/Navigation):
@@ -49,6 +55,16 @@ Detailed directory layout and layer responsibilities are documented in [STRUCTUR
     ```bash
     docker-compose up -d
     ```
+
+### Docker Production
+```bash
+# Build and run all services
+docker build -t atomic-scraper .
+docker-compose up -d
+
+# Check health
+curl http://localhost:8000/healthz
+```
 ### Run API (PM2)
 To run the service with PM2, including the background workers:
 ```bash
@@ -131,9 +147,45 @@ The JSON DSL controls browser sessions. Commands can be sent two ways:
 - **`click_omni`**: `{"element_description": "the login button"}` - AI-based grounding.
 - **`extract_jina`**: `{"extraction_schema": {...}}` - Structured extraction.
 
+## ML/CV Pipeline API Endpoints
+
+### Yandex Maps Extraction (Feature: 010-scraper-mlcv-prep)
+```bash
+# Extract business data from Yandex Maps
+POST /api/v1/yandex-maps/extract
+{
+  "category": "restaurants",
+  "center": {"lat": 59.934, "lng": 30.306},
+  "radius": 1000
+}
+```
+
+### Site Content Enrichment
+```bash
+# Extract clean text from company website
+POST /api/v1/enrich
+{
+  "url": "https://example.com",
+  "crawl_about": true,
+  "max_words": 500
+}
+```
+
+### Rate Limiting
+- Default: 30 requests/hour for `*.yandex.*` domains
+- Fallback: 1000 requests/hour for other domains
+- Returns 429 with `Retry-After` header when exceeded
+
 ## Documentation
 - [Web Interactions (DSL & API)](web_interactions.md)
 - [Tasks](specs/009-smart-scraping-llm-api/tasks.md)
 - [Implementation Plan](specs/009-smart-scraping-llm-api/plan.md)
 - [Research Findings](specs/009-smart-scraping-llm-api/research.md)
 - [Data Model](specs/009-smart-scraping-llm-api/data-model.md)
+
+## ML/CV Pipeline Integration
+- [Feature Spec](specs/010-scraper-mlcv-prep/spec.md) - Docker, Yandex Maps, enrichment, rate limiting
+- [Implementation Plan](specs/010-scraper-mlcv-prep/plan.md)
+- [Tasks](specs/010-scraper-mlcv-prep/tasks.md) - 48/48 tasks complete
+- [Data Model](specs/010-scraper-mlcv-prep/data-model.md)
+- [Quickstart](specs/010-scraper-mlcv-prep/quickstart.md)

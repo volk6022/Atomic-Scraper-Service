@@ -2,7 +2,7 @@
 
 **Feature Branch**: `010-scraper-mlcv-prep`  
 **Created**: 2026-05-01  
-**Status**: Draft  
+**Status**: Complete (48/48 tasks)  
 **Input**: User description: "REVIEW-auto-monitor-ml-cv.md - prepare Atomic-Scraper-Service for ML/CV pipeline (Docker + Yandex Maps stealth + site enrichment)"
 
 ## User Scenarios & Testing *(mandatory)*

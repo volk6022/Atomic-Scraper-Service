@@ -34,25 +34,46 @@ This document defines the agentic roles and coordination strategies for the Smar
 - **Isolated Contexts**: Each session (stateless or stateful) gets a unique `BrowserContext` for data isolation.
 - **Cleanup**: Automatic disposal of contexts on task completion or timeout.
 
+---
+
 # Atomic-Scraper-Service Development Guidelines
 
-Auto-generated from all feature plans. Last updated: 2026-03-16
+Auto-generated from all feature plans. Last updated: 2026-05-01
 
 ## Active Technologies
 
-- Python 3.11+ (based on asyncio requirements) + FastAPI, Taskiq (with Redis broker), Playwright, Redis, Pydantic v2, OpenAI, HTTPX (009-smart-scraping-llm-api)
+- Python 3.11+ (based on asyncio requirements) + FastAPI, Taskiq (with Redis broker), Playwright, Redis, Pydantic v2, OpenAI, HTTPX
+- Feature 010-scraper-mlcv-prep: Docker production readiness, Anti-bot evasion (stealth, proxy, rate limiting), Yandex Maps extraction, Site enrichment
 
 ## Project Structure
 
 ```text
-backend/
-frontend/
+src/
+├── api/                    # REST & WebSockets
+│   ├── routers/           # Endpoints
+│   └── middleware/        # Rate limiting, auth
+├── domain/                # Business logic & models
+│   └── models/           # Pydantic models
+├── infrastructure/        # External integrations
+│   ├── browser/          # Playwright, stealth pool
+│   ├── rate_limiter/     # Redis token bucket
+│   └── external_api/     # Clients
+├── actions/              # DSL implementation
+└── core/                 # Config, logging
 tests/
+├── unit/
+├── contract/
+├── integration/
+└── e2e/
 ```
 
 ## Commands
 
-cd src [ONLY COMMANDS FOR ACTIVE TECHNOLOGIES][ONLY COMMANDS FOR ACTIVE TECHNOLOGIES] pytest [ONLY COMMANDS FOR ACTIVE TECHNOLOGIES][ONLY COMMANDS FOR ACTIVE TECHNOLOGIES] ruff check .
+```bash
+cd src
+pytest
+ruff check .
+```
 
 ## Code Style
 
@@ -61,6 +82,18 @@ Python 3.11+ (based on asyncio requirements): Follow standard conventions
 ## Recent Changes
 
 - 009-smart-scraping-llm-api: Added Python 3.11+ (based on asyncio requirements) + FastAPI, Taskiq (with Redis broker), Playwright, Redis, Pydantic v2, OpenAI, HTTPX
+- 010-scraper-mlcv-prep: Added Docker production readiness, Anti-bot evasion (stealth browser, User-Agent rotation, proxy integration), Yandex Maps extraction (`/api/v1/yandex-maps/extract`), Site enrichment (`/api/v1/enrich`), Per-domain rate limiting (30/hour for `*.yandex.*`)
+
+## API Endpoints
+
+| Endpoint | Description |
+|----------|-------------|
+| `GET /healthz` | Health check with Redis and browser pool status |
+| `POST /api/v1/yandex-maps/extract` | Extract business data from Yandex Maps |
+| `POST /api/v1/enrich` | Extract clean text from company websites |
+| `POST /sessions` | Create browser session |
+| `POST /sessions/{id}/command` | Execute DSL command |
+| `WS /ws/{session_id}` | WebSocket for interactive sessions |
 
 <!-- MANUAL ADDITIONS START -->
 <!-- MANUAL ADDITIONS END -->
