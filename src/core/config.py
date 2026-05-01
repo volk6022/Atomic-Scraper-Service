@@ -5,6 +5,8 @@ from typing import Optional
 class Settings(BaseSettings):
     API_KEY: str = "default_internal_key"
     REDIS_URL: str = "redis://localhost:6379"
+    REDIS_HOST: str = "localhost"
+    REDIS_PORT: int = 6379
 
     # Extraction Settings (e.g., Jina Reader LM)
     EXTRACTION_API_BASE: str = "http://localhost:1234/v1"
