@@ -1,4 +1,4 @@
-from pydantic import BaseModel, HttpUrl
+from pydantic import BaseModel, HttpUrl, Field
 from typing import Optional, List
 from enum import Enum
 import uuid
@@ -50,3 +50,31 @@ class JinaExtractRequest(BaseModel):
     html: str
     format: str = "markdown"
     extraction_schema: Optional[dict] = None
+
+
+class YandexMapsExtractRequest(BaseModel):
+    category: str
+    center: dict
+    radius: int = Field(..., ge=100, le=5000)
+
+
+class YandexMapsExtractResponse(BaseModel):
+    businesses: list
+    total: int
+    category: str
+    center: dict
+    radius: int
+
+
+class EnrichRequest(BaseModel):
+    url: HttpUrl
+    crawl_about: bool = False
+    crawl_services: bool = False
+
+
+class EnrichResponse(BaseModel):
+    url: str
+    text: str
+    word_count: int
+    truncated: bool
+    pages_crawled: Optional[List[str]] = None

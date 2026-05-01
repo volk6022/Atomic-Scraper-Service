@@ -1,7 +1,8 @@
 import asyncio
 from typing import Optional
 from playwright.async_api import async_playwright, Browser, BrowserContext
-from src.core.config import settings
+from src.infrastructure.browser.stealth_pool import stealth_pool
+from src.infrastructure.browser.user_agent_pool import user_agent_pool
 
 
 class BrowserPoolManager:
@@ -28,8 +29,23 @@ class BrowserPoolManager:
             return self._browser
 
     async def create_context(
-        self, proxy: Optional[str] = None, user_agent: Optional[str] = None, **kwargs
+        self,
+        proxy: Optional[str] = None,
+        user_agent: Optional[str] = None,
+        stealth: bool = False,
+        **kwargs,
     ) -> BrowserContext:
+        if stealth:
+            if not user_agent:
+                user_agent = user_agent_pool.get_user_agent()
+
+            context = await stealth_pool.create_context(user_agent=user_agent)
+
+            if proxy:
+                await context.set_proxy(**{"server": proxy})
+
+            return context
+
         browser = await self.get_browser(proxy=proxy)
 
         context_options = {}

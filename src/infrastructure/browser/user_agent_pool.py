@@ -33,6 +33,10 @@ class UserAgentPool:
         """Get a random User-Agent string."""
         return random.choice(self._agents)
 
+    def get_user_agent(self) -> str:
+        """Get a random User-Agent string (alias for get_random_ua)."""
+        return self.get_random_ua()
+
     def get_ua_for_platform(self, platform: str) -> str:
         """Get a User-Agent for specific platform (windows, mac, linux)."""
         platform_agents = {

@@ -103,18 +103,18 @@ description: "Task list for Prepare Atomic-Scraper-Service for ML/CV Pipeline In
 
 ### Tests for User Story 3 (TDD - Red Phase) ⚠️
 
-- [ ] T019 [P] [US3] Write failing contract test for Yandex Maps API in tests/contract/test_yandex_maps_api.py
-- [ ] T020 [P] [US3] Write failing integration test for Yandex Maps extraction in tests/integration/test_yandex_extraction.py
-- [ ] T021 [P] [US3] Write failing E2E test for full extraction flow in tests/e2e/test_yandex_maps_full_flow.py
+- [X] T019 [P] [US3] Write failing contract test for Yandex Maps API in tests/contract/test_yandex_maps_api.py
+- [X] T020 [P] [US3] Write failing integration test for Yandex Maps extraction in tests/integration/test_yandex_extraction.py
+- [X] T021 [P] [US3] Write failing E2E test for full extraction flow in tests/e2e/test_yandex_maps_full_flow.py
 
 ### Implementation for User Story 3
 
-- [ ] T022 [P] [US3] Create BusinessCard model in src/domain/models/business_card.py (per data-model.md)
-- [ ] T023 [P] [US3] Create Yandex Maps extraction endpoint in src/api/routers/yandex_maps.py
-- [ ] T024 [US3] Implement YandexMapsExtractAction in src/actions/yandex_maps.py (per FR-006)
-- [ ] T025 [US3] Register Yandex Maps action in src/actions/registry.py
-- [ ] T026 [US3] Handle scroll-based pagination for collecting all businesses
-- [ ] T027 [US3] Apply stealth configuration to Yandex Maps requests
+- [X] T022 [P] [US3] Create BusinessCard model in src/domain/models/business_card.py (per data-model.md)
+- [X] T023 [P] [US3] Create Yandex Maps extraction endpoint in src/api/routers/yandex_maps.py
+- [X] T024 [US3] Implement YandexMapsExtractAction in src/actions/yandex_maps.py (per FR-006)
+- [X] T025 [US3] Register Yandex Maps action in src/actions/registry.py
+- [X] T026 [US3] Handle scroll-based pagination for collecting all businesses
+- [X] T027 [US3] Apply stealth configuration to Yandex Maps requests
 
 **Checkpoint**: US3 fully functional and testable independently
 
@@ -128,18 +128,18 @@ description: "Task list for Prepare Atomic-Scraper-Service for ML/CV Pipeline In
 
 ### Tests for User Story 4 (TDD - Red Phase) ⚠️
 
-- [ ] T028 [P] [US4] Write failing unit test for content cleaner in tests/unit/test_content_cleaner.py
-- [ ] T029 [P] [US4] Write failing contract test for enrichment API in tests/contract/test_enrichment_api.py
-- [ ] T030 [P] [US4] Write failing E2E test for enrichment flow in tests/e2e/test_site_enrichment_flow.py
+- [X] T028 [P] [US4] Write failing unit test for content cleaner in tests/unit/test_content_cleaner.py
+- [X] T029 [P] [US4] Write failing contract test for enrichment API in tests/contract/test_enrichment_api.py
+- [X] T030 [P] [US4] Write failing E2E test for enrichment flow in tests/e2e/test_site_enrichment_flow.py
 
 ### Implementation for User Story 4
 
-- [ ] T031 [P] [US4] Create EnrichedContent model in src/domain/models/enriched_content.py (per data-model.md)
-- [ ] T032 [P] [US4] Create enrichment endpoint in src/api/routers/enrichment.py
-- [ ] T033 [US4] Implement SiteEnrichAction in src/actions/site_enricher.py (per FR-007)
-- [ ] T034 [US4] Implement content truncation to ~500 words (per FR-008)
-- [ ] T035 [US4] Implement optional crawling of about/services pages
-- [ ] T036 [US4] Implement HTML to plain text/markdown conversion
+- [X] T031 [P] [US4] Create EnrichedContent model in src/domain/models/enriched_content.py (per data-model.md)
+- [X] T032 [P] [US4] Create enrichment endpoint in src/api/routers/enrichment.py
+- [X] T033 [US4] Implement SiteEnrichAction in src/actions/site_enricher.py (per FR-007)
+- [X] T034 [US4] Implement content truncation to ~500 words (per FR-008)
+- [X] T035 [US4] Implement optional crawling of about/services pages
+- [X] T036 [US4] Implement HTML to plain text/markdown conversion
 
 **Checkpoint**: US4 fully functional and testable independently
 
@@ -153,15 +153,15 @@ description: "Task list for Prepare Atomic-Scraper-Service for ML/CV Pipeline In
 
 ### Tests for User Story 5 (TDD - Red Phase) ⚠️
 
-- [ ] T037 [P] [US5] Write failing unit test for rate limiter in tests/unit/test_rate_limiter.py
+- [X] T037 [P] [US5] Write failing unit test for rate limiter in tests/unit/test_rate_limiter.py
 
 ### Implementation for User Story 5
 
-- [ ] T038 [P] [US5] Create RateLimitRule model in src/domain/models/rate_limit_rule.py (per data-model.md)
-- [ ] T039 [P] [US5] Implement Redis-based token bucket rate limiter in src/infrastructure/rate_limiter/token_bucket.py
-- [ ] T040 [US5] Create rate limiting middleware in src/api/middleware/rate_limit.py (per FR-009)
-- [ ] T041 [US5] Configure default rate limits: 30/hour for `*.yandex.*`, 1000/hour for fallback
-- [ ] T042 [US5] Return 429 with Retry-After header when limit exceeded (per FR-010)
+- [X] T038 [P] [US5] Create RateLimitRule model in src/domain/models/rate_limit_rule.py (per data-model.md)
+- [X] T039 [P] [US5] Implement Redis-based token bucket rate limiter in src/infrastructure/rate_limiter/token_bucket.py
+- [X] T040 [US5] Create rate limiting middleware in src/api/middleware/rate_limit.py (per FR-009)
+- [X] T041 [US5] Configure default rate limits: 30/hour for `*.yandex.*`, 1000/hour for fallback
+- [X] T042 [US5] Return 429 with Retry-After header when limit exceeded (per FR-010)
 
 **Checkpoint**: US5 fully functional and testable independently
 
@@ -171,12 +171,12 @@ description: "Task list for Prepare Atomic-Scraper-Service for ML/CV Pipeline In
 
 **Purpose**: Improvements that affect multiple user stories
 
-- [ ] T043 [P] Run all tests and ensure they pass (Green phase complete)
-- [ ] T044 [P] Verify compliance with Constitution Principles (I-IX)
-- [ ] T045 Run quickstart.md validation
-- [ ] T046 Update documentation in docs/ (include doc.md in new directories)
-- [ ] T047 [P] Run ruff check and mypy type checking
-- [ ] T048 Code cleanup and refactoring
+- [X] T043 [P] Run all tests and ensure they pass (Green phase complete)
+- [X] T044 [P] Verify compliance with Constitution Principles (I-IX)
+- [X] T045 Run quickstart.md validation
+- [X] T046 Update documentation in docs/ (include doc.md in new directories)
+- [X] T047 [P] Run ruff check and mypy type checking
+- [X] T048 Code cleanup and refactoring
 
 ---
 

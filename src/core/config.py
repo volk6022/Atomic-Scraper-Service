@@ -1,5 +1,4 @@
 from pydantic_settings import BaseSettings, SettingsConfigDict
-from typing import Optional
 
 
 class Settings(BaseSettings):
@@ -21,6 +20,10 @@ class Settings(BaseSettings):
     # Scraper Settings
     BROWSER_TIMEOUT: int = 30000  # 30 seconds
     SESSION_INACTIVITY_TIMEOUT: int = 600  # 10 minutes
+
+    # Rate Limiting Settings
+    RATE_LIMIT_YANDEX_PER_HOUR: int = 30
+    RATE_LIMIT_DEFAULT_PER_HOUR: int = 1000
 
     model_config = SettingsConfigDict(env_file=".env")
 

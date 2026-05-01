@@ -9,8 +9,6 @@ import asyncio
 import random
 from typing import Optional
 from playwright.async_api import async_playwright, Browser, BrowserContext, Page
-from src.infrastructure.browser.user_agent_pool import user_agent_pool
-from src.infrastructure.browser.proxy_provider import proxy_provider
 
 
 class HumanEmulator:
