@@ -1,18 +1,21 @@
 <!--
 Sync Impact Report
-Version change: 1.2.0 → 1.3.0
+Version change: 1.3.0 → 1.4.0
 List of modified principles:
-  - Added: VII. Backend-Only Focus (No Frontend)
+  - Added: VIII. Production Deployment Readiness
+  - Added: IX. Anti-Bot Detection Mitigation
 Added sections:
-  - None
+  - VIII. Production Deployment Readiness (Core Principles)
+  - IX. Anti-Bot Detection Mitigation (Core Principles)
 Removed sections:
   - None
 Templates requiring updates:
-  - ✅ updated: .specify/templates/plan-template.md
+  - ✅ updated: .specify/templates/plan-template.md (Constitution Check section)
+  - ⚠ pending: .specify/templates/spec-template.md (TDD already enforced, no changes needed)
+  - ⚠ pending: .specify/templates/tasks-template.md (no changes needed)
 Follow-up TODOs:
-  - TODO(RATIFICATION_DATE): Original adoption date unknown.
+  - TODO(RATIFICATION_DATE): Original adoption date unknown - remains from v1.3.0
 -->
-
 # Atomic Scraper Service Constitution
 
 ## Core Principles
@@ -38,6 +41,12 @@ Tests MUST be generated and established before any functional code is written. E
 ### VII. Backend-Only Focus (No Frontend)
 This project is a pure backend service. Development MUST NOT include any frontend components, web interfaces, or browser-rendered dashboards (excluding generated API documentation). All functionality MUST be exposed via REST and WebSocket APIs only.
 
+### VIII. Production Deployment Readiness
+The system MUST be production-ready with containerization support. This includes: (a) a Dockerfile based on Playwright-compatible image with all browser dependencies; (b) docker-compose configuration that includes api, worker, and redis services with proper networking; (c) a `/healthz` endpoint that returns 200 OK when the service is healthy. This ensures the service can be deployed reliably in production environments alongside Redis and worker processes.
+
+### IX. Anti-Bot Detection Mitigation
+The system MUST provide capabilities to mitigate anti-bot detection when scraping target websites. This includes: (a) stealth browser capabilities such as User-Agent rotation and human-like interaction patterns; (b) integrated proxy pool support that can be optionally applied to requests; (c) per-domain rate limiting with configurable limits (e.g., default 30/hour for `*.yandex.*` domains). These capabilities enable the service to collect data from sites with anti-bot protections without immediate blocking.
+
 ## Technical Constraints
 - **Concurrency**: Use `asyncio` for I/O bound tasks (Network, Playwright) and separate processes (Taskiq) for isolation.
 - **Data Exchange**: Use Redis Pub/Sub for real-time command/result routing between FastAPI and Stateful Actors.
@@ -60,4 +69,4 @@ This Constitution is the primary authority for architectural and procedural deci
 
 **Compliance**: All PRs MUST be reviewed against this constitution. Automated linting and type-checking (mypy/ruff) are mandatory for all contributions.
 
-**Version**: 1.3.0 | **Ratified**: TODO(RATIFICATION_DATE) | **Last Amended**: 2026-03-16
+**Version**: 1.4.0 | **Ratified**: TODO(RATIFICATION_DATE) | **Last Amended**: 2026-05-01

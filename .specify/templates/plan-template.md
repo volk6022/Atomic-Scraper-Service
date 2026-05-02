@@ -37,8 +37,9 @@
 - [ ] **IV. Architecture**: Does the code fit into the API/Domain/Infrastructure/Actions layers?
 - [ ] **V. DSL Integration**: Is the new capability exposed as a discrete Action?
 - [ ] **VI. Test-First**: Have failing tests been drafted/planned before implementation?
-- [ ] **VII. Infrastructure**: Does this require Redis or other services managed via `docker-compose`?
-- [ ] **VIII. Backend-Only**: Confirm no frontend/UI components are being introduced.
+- [ ] **VII. Backend-Only**: Confirm no frontend/UI components are being introduced.
+- [ ] **VIII. Production Deployment**: Does this require Dockerfile, docker-compose updates, or a `/healthz` endpoint?
+- [ ] **IX. Anti-Bot Mitigation**: Does this feature involve scraping that requires stealth, proxy, or rate limiting?
 
 ## Project Structure
 
