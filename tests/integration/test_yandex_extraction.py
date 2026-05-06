@@ -26,16 +26,31 @@ async def test_yandex_maps_action_extracts_businesses():
 @pytest.mark.asyncio
 async def test_yandex_maps_action_accepts_location_params():
     """Yandex Maps action should accept category, center, radius parameters."""
+    from unittest.mock import MagicMock
     try:
         from src.actions.yandex_maps import YandexMapsExtractAction
 
         action = YandexMapsExtractAction()
-        result = await action.execute(
-            category="restaurants", center={"lat": 59.934, "lng": 30.306}, radius=1000
-        )
+
+        mock_page = MagicMock()
+        mock_page.goto = AsyncMock()
+        mock_page.query_selector_all = AsyncMock(return_value=[])
+        mock_page.wait_for_selector = AsyncMock()
+        mock_page.content = AsyncMock(return_value="")
+        mock_context = AsyncMock()
+        mock_context.new_page = AsyncMock(return_value=mock_page)
+        mock_context.close = AsyncMock()
+
+        with patch.object(action.pool_manager, "create_context", return_value=mock_context):
+            with patch("asyncio.sleep", new_callable=AsyncMock):
+                result = await action.execute(
+                    category="restaurants",
+                    center={"lat": 59.934, "lng": 30.306},
+                    radius=1000,
+                )
         assert result is not None
-    except Exception:
-        pytest.fail("YandexMapsExtractAction does not accept location parameters")
+    except Exception as e:
+        pytest.fail(f"YandexMapsExtractAction does not accept location parameters: {e}")
 
 
 @pytest.mark.asyncio
@@ -53,25 +68,30 @@ async def test_yandex_maps_uses_stealth_browser():
 @pytest.mark.asyncio
 async def test_yandex_maps_pagination_handles_scroll():
     """Yandex Maps extraction should handle scroll-based pagination."""
+    from unittest.mock import MagicMock
     try:
         from src.actions.yandex_maps import YandexMapsExtractAction
 
         action = YandexMapsExtractAction()
 
-        with patch.object(
-            action, "_extract_page", new_callable=AsyncMock
-        ) as mock_extract:
-            mock_extract.return_value = []
+        mock_page = MagicMock()
+        mock_page.goto = AsyncMock()
+        mock_context = AsyncMock()
+        mock_context.new_page = AsyncMock(return_value=mock_page)
+        mock_context.close = AsyncMock()
 
-            result = await action.execute(
-                category="restaurants",
-                center={"lat": 59.934, "lng": 30.306},
-                radius=1000,
-            )
+        with patch.object(action.pool_manager, "create_context", return_value=mock_context):
+            with patch.object(action, "_extract_page", new_callable=AsyncMock, return_value=[]):
+                with patch("asyncio.sleep", new_callable=AsyncMock):
+                    result = await action.execute(
+                        category="restaurants",
+                        center={"lat": 59.934, "lng": 30.306},
+                        radius=1000,
+                    )
 
-            assert result is not None
-    except Exception:
-        pytest.fail("YandexMapsExtractAction does not handle pagination")
+        assert result is not None
+    except Exception as e:
+        pytest.fail(f"YandexMapsExtractAction does not handle pagination: {e}")
 
 
 @pytest.mark.asyncio

@@ -1,5 +1,5 @@
 import random
-from typing import Optional, List
+from typing import Optional, Union, List
 from pathlib import Path
 
 
@@ -14,9 +14,9 @@ class ProxyProvider:
             with open(self.proxy_file, "r") as f:
                 self._proxies = [line.strip() for line in f if line.strip()]
 
-    def get_proxy(self) -> Optional[str]:
+    def get_proxy(self) -> Union[str, dict]:
         if not self._proxies:
-            return None
+            return {}
         return random.choice(self._proxies)
 
 

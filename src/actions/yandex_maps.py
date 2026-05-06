@@ -3,6 +3,8 @@ import random
 from typing import List, Dict, Optional
 
 from src.domain.models.business_card import BusinessCard
+from src.domain.models.dsl import CommandType
+from src.domain.registry.action_registry import action_registry
 from src.infrastructure.browser.user_agent_pool import UserAgentPool
 from src.infrastructure.browser.pool_manager import BrowserPoolManager
 from src.core.logging import get_logger
@@ -223,3 +225,6 @@ class YandexMapsExtractAction:
 
         except Exception:
             return False
+
+
+action_registry.register(CommandType.YANDEX_MAPS_EXTRACT)(YandexMapsExtractAction)

@@ -18,6 +18,7 @@ class CommandType(str, Enum):
     SCROLL = "scroll"
     SCREENSHOT = "screenshot"
     EXTRACT_JINA = "extract_jina"
+    YANDEX_MAPS_EXTRACT = "yandex_maps_extract"
 
 
 class Command(BaseModel):

@@ -98,3 +98,71 @@ def test_content_cleaner_utility_exists():
         assert html_to_text is not None
     except ImportError:
         pytest.fail("Content cleaner utilities do not exist")
+
+
+@pytest.mark.asyncio
+async def test_content_truncated_to_500_words():
+    """Enrichment action must truncate content to at most 500 words."""
+    from unittest.mock import patch, AsyncMock
+    from httpx import AsyncClient, ASGITransport
+    from src.domain.models.enriched_content import EnrichedContent
+    from src.api.main import app
+
+    long_text = " ".join(["word"] * 600)
+    truncated_content = EnrichedContent(
+        url="https://example.com",
+        text=" ".join(["word"] * 500),
+        word_count=500,
+        truncated=True,
+    )
+
+    transport = ASGITransport(app=app)
+    async with AsyncClient(transport=transport, base_url="http://test") as client:
+        with patch(
+            "src.actions.site_enricher.SiteEnrichAction.execute",
+            new_callable=AsyncMock,
+            return_value=truncated_content,
+        ):
+            response = await client.post(
+                "/api/v1/enrich",
+                headers={"X-API-Key": "default_internal_key"},
+                json={"url": "https://example.com"},
+            )
+    assert response.status_code == 200
+    data = response.json()
+    assert data["word_count"] <= 500
+    assert data["truncated"] is True
+
+
+@pytest.mark.asyncio
+async def test_html_stripped_from_output():
+    """Enrichment response text must not contain raw HTML tags."""
+    from unittest.mock import patch, AsyncMock
+    from httpx import AsyncClient, ASGITransport
+    from src.domain.models.enriched_content import EnrichedContent
+    from src.api.main import app
+
+    clean_content = EnrichedContent(
+        url="https://example.com",
+        text="We build software for clients worldwide.",
+        word_count=7,
+        truncated=False,
+    )
+
+    transport = ASGITransport(app=app)
+    async with AsyncClient(transport=transport, base_url="http://test") as client:
+        with patch(
+            "src.actions.site_enricher.SiteEnrichAction.execute",
+            new_callable=AsyncMock,
+            return_value=clean_content,
+        ):
+            response = await client.post(
+                "/api/v1/enrich",
+                headers={"X-API-Key": "default_internal_key"},
+                json={"url": "https://example.com"},
+            )
+    assert response.status_code == 200
+    text = response.json()["text"]
+    assert "<html" not in text.lower()
+    assert "<div" not in text.lower()
+    assert "<p>" not in text.lower()

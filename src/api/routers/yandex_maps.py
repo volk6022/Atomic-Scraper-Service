@@ -18,14 +18,16 @@ async def extract_businesses(request: YandexMapsExtractRequest):
         action = YandexMapsExtractAction()
 
         businesses = await action.execute(
-            category=request.category, center=request.center, radius=request.radius
+            category=request.category,
+            center=request.center.model_dump(),
+            radius=request.radius,
         )
 
         return YandexMapsExtractResponse(
             businesses=[biz.model_dump() for biz in businesses],
             total=len(businesses),
             category=request.category,
-            center=request.center,
+            center=request.center.model_dump(),
             radius=request.radius,
         )
 

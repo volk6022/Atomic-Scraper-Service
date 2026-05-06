@@ -52,9 +52,14 @@ class JinaExtractRequest(BaseModel):
     extraction_schema: Optional[dict] = None
 
 
+class GeoCenter(BaseModel):
+    lat: float = Field(..., ge=-90, le=90)
+    lng: float = Field(..., ge=-180, le=180)
+
+
 class YandexMapsExtractRequest(BaseModel):
     category: str
-    center: dict
+    center: GeoCenter
     radius: int = Field(..., ge=100, le=5000)
 
 

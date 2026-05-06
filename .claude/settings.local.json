@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python -m pytest tests/ -x --tb=short -q)",
+      "Bash(python -m pytest tests/ --tb=short -q)",
+      "Bash(docker compose *)"
+    ]
+  }
+}

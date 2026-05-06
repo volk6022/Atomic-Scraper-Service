@@ -70,6 +70,7 @@ class StealthPool:
         self._playwright = None
         self._browser: Optional[Browser] = None
         self._lock = asyncio.Lock()
+        self.human_emulation_enabled = True
 
     async def launch(self, **kwargs) -> Browser:
         """Launch stealth browser with anti-detection options."""
@@ -98,6 +99,9 @@ class StealthPool:
                 "--disable-features=IsolateOrigins,site-per-process",
             ],
         }
+
+    async def new_context(self, **kwargs) -> BrowserContext:
+        return await self.create_context(**kwargs)
 
     async def create_context(self, **kwargs) -> BrowserContext:
         """Create stealth browser context with anti-detection settings."""
