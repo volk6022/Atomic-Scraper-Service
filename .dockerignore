@@ -3,7 +3,9 @@ node_modules/
 Dockerfile*
 .dockerignore
 *.log*
-.env*
+.env
+.env.local
+.env.*.local
 coverage/
 __pycache__/
 *.pyc
