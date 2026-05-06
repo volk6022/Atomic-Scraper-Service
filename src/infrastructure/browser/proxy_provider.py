@@ -10,7 +10,7 @@ class ProxyProvider:
         self._load_proxies()
 
     def _load_proxies(self):
-        if self.proxy_file.exists():
+        if self.proxy_file.is_file():
             with open(self.proxy_file, "r") as f:
                 self._proxies = [line.strip() for line in f if line.strip()]
 

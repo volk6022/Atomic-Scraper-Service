@@ -7,6 +7,7 @@ from src.domain.models.dsl import CommandType
 from src.domain.registry.action_registry import action_registry
 from src.infrastructure.browser.user_agent_pool import UserAgentPool
 from src.infrastructure.browser.pool_manager import BrowserPoolManager
+from src.infrastructure.browser.proxy_provider import proxy_provider
 from src.core.logging import get_logger
 
 logger = get_logger(__name__)
@@ -23,10 +24,11 @@ class YandexMapsExtractAction:
         self, category: str, center: Dict[str, float], radius: int
     ) -> List[BusinessCard]:
         user_agent = self.user_agent_pool.get_user_agent()
-        logger.info(f"Starting Yandex Maps extraction for category: {category}")
+        proxy = proxy_provider.get_proxy() or None
+        logger.info(f"Starting Yandex Maps extraction for category: {category}, proxy: {bool(proxy)}")
 
         context = await self.pool_manager.create_context(
-            user_agent=user_agent, stealth=True
+            user_agent=user_agent, stealth=True, proxy=proxy
         )
 
         page = await context.new_page()

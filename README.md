@@ -3,6 +3,7 @@
 High-throughput atomic scraping and stateful interactive browser sessions with LLM orchestration.
 
 ## Features
+
 - **Stateless Scraper**: Fast atomic scraping and Google search transformation (Serper-compatible).
 - **Stateful Sessions**: Interactive browser sessions via DSL over WebSockets with Taskiq Actors.
 - **AI Integration**: Omni-Parser for UI grounding (SoM approach) and Jina Reader for structured markdown extraction.
@@ -15,6 +16,7 @@ High-throughput atomic scraping and stateful interactive browser sessions with L
 - **Per-Domain Rate Limiting**: Redis-based token bucket (30/hour for `*.yandex.*`, 1000/hour fallback).
 
 ## Tech Stack
+
 - **Language**: Python 3.11+
 - **Framework**: FastAPI
 - **Async Logic**: Playwright, Taskiq (Redis Broker)
@@ -22,95 +24,186 @@ High-throughput atomic scraping and stateful interactive browser sessions with L
 - **Infrastructure**: Redis (Pub/Sub and Task Queue), Docker
 
 ## [Project Structure](STRUCTURE.md)
+
 Detailed directory layout and layer responsibilities are documented in [STRUCTURE.md](STRUCTURE.md).
+
+---
 
 ## Quickstart
 
 ### Prerequisites
+
 - Python 3.11+
 - Docker & Docker Compose
 - AI Providers: LM Studio (local), OpenAI (cloud), or any OpenAI-compatible API.
 
-### Installation
-1.  **Clone and Setup**:
-    ```bash
-    uv init .
-    uv sync
-    playwright install chromium
-    ```
-2.  **Environment Variables**:
-    Create a `.env` file from `.env.example`. This service uses separate configurations for **Extraction** (e.g., Jina Reader LM) and **Orchestration** (e.g., Reasoning/Navigation):
-    ```env
-    # Extraction Settings (e.g., Local LM Studio)
-    EXTRACTION_API_BASE=http://localhost:1234/v1
-    EXTRACTION_API_KEY=lm-studio
-    EXTRACTION_MODEL_NAME=jina-reader-lm
+### Installation (local dev)
 
-    # Orchestration Settings (e.g., OpenAI)
-    ORCHESTRATION_API_BASE=https://api.openai.com/v1
-    ORCHESTRATION_API_KEY=sk-...
-    ORCHESTRATION_MODEL_NAME=gpt-4o
-    ```
-3.  **Start Infrastructure**:
-    ```bash
-    docker-compose up -d
-    ```
+```bash
+# 1. Install dependencies
+uv sync
+
+# 2. Install Playwright browsers (must use uv run — playwright lives in the venv)
+uv run playwright install --with-deps chromium
+
+# 3. Copy and edit environment config
+cp .env.example .env
+```
+
+Key `.env` values:
+
+```env
+API_KEY=default_internal_key          # internal auth header value
+
+EXTRACTION_API_BASE=http://localhost:1234/v1
+EXTRACTION_API_KEY=lm-studio
+EXTRACTION_MODEL_NAME=jina-reader-lm
+
+ORCHESTRATION_API_BASE=https://api.openai.com/v1
+ORCHESTRATION_API_KEY=sk-...
+ORCHESTRATION_MODEL_NAME=gpt-4o
+```
+
+### Proxy Configuration (optional)
+
+Create `proxies.txt` in the project root, one proxy per line in `http://user:pass@host:port` format:
+
+```
+http://user:pass@1.2.3.4:8080
+http://user:pass@5.6.7.8:8080
+```
+
+> **Note for Yandex Maps**: Yandex blocks datacenter proxy IPs at the browser level. Use **residential proxies** (e.g., Bright Data, Oxylabs) to get actual scraping results.
 
 ### Docker Production
+
 ```bash
-# Build and run all services
-docker build -t atomic-scraper .
-docker-compose up -d
+# Build and start all services (api, worker, redis)
+docker compose up -d
 
 # Check health
 curl http://localhost:8000/healthz
+# {"status":"healthy","redis":"connected","browser_pool":"ready"}
 ```
-### Run API (PM2)
-To run the service with PM2, including the background workers:
+
+> `proxies.txt` is automatically bind-mounted into the container if it exists.
+> **Important**: create `proxies.txt` before the first `docker compose up`.
+> If Docker creates it as a directory (a known Docker Desktop on Windows quirk), run
+> `docker compose down && docker compose up -d` to remount correctly.
+
+### Run API without Docker (PM2)
+
 ```bash
 pm2 start ecosystem.config.js
 ```
 
-### Manual Testing
-You can use the provided `test_ws.py` to verify the WebSocket session and DSL commands:
-1. Ensure the server is running.
-2. Install test dependencies: `pip install websockets httpx`.
-3. Run the test: `python test_ws.py`.
+---
+
+## API Reference
+
+All endpoints except `/healthz` require the header `X-API-Key: <API_KEY>`.
+
+### Health
+
+```
+GET /healthz
+→ {"status": "healthy"|"degraded", "redis": "connected"|"error", "browser_pool": "ready"|"degraded"}
+```
+
+### Yandex Maps Extraction
+
+```
+POST /api/v1/yandex-maps/extract
+{
+  "category": "restaurants",
+  "center": {"lat": 59.934, "lng": 30.306},   // lat ∈ [-90,90], lng ∈ [-180,180]
+  "radius": 1000                                // metres, 100–5000
+}
+→ {"businesses": [...], "total": N, "category": "...", "center": {...}, "radius": N}
+```
+
+Each business card: `name`, `address`, and optionally `phone`, `website`, `geo`.
+
+### Site Content Enrichment
+
+```
+POST /api/v1/enrich
+{
+  "url": "https://example.com",
+  "crawl_about": false,
+  "crawl_services": false
+}
+→ {"url": "...", "text": "...", "word_count": N, "truncated": bool, "pages_crawled": [...]}
+```
+
+Content is truncated to ≤ 500 words. Raw HTML is stripped.
+
+### Rate Limiting
+
+- `*.yandex.*` domains: **30 requests/hour**
+- All other domains: **1000 requests/hour**
+- Exceeded limit: `429 Too Many Requests` with `Retry-After` header
+
+### Interactive Browser Sessions (DSL)
+
+```
+POST /sessions                              → {"session_id": "..."}
+POST /sessions/{id}/command  {"type": "goto", "params": {"url": "..."}}
+DELETE /sessions/{id}
+WS   /ws/{session_id}                       # streaming commands
+```
+
+**DSL commands**: `goto`, `scroll`, `click_coord`, `click_omni`, `type`, `screenshot`, `extract_jina`
+
+---
 
 ## Testing
-Run the full test suite (including contract and integration tests):
+
 ```bash
-uv run python -m pytest tests
+# Full test suite (99 tests, no Docker needed except 2 live E2E tests)
+python -m pytest tests/ -q
+
+# Run the two live E2E tests (requires docker compose up)
+python -m pytest tests/e2e/test_site_enrichment_flow.py::test_enrichment_returns_clean_text \
+                 tests/e2e/test_yandex_maps_full_flow.py::test_yandex_maps_endpoint_returns_businesses -v
 ```
+
+Test breakdown:
+
+| Suite | Tests | Notes |
+|-------|-------|-------|
+| unit/ | 17 | No external dependencies |
+| contract/ | 28 | In-process FastAPI via `ASGITransport` |
+| integration/ | 31 | Mocked browser; Docker config checks |
+| e2e/ | 23 | Structural + middleware; 2 hit live `localhost:8000` |
+
+---
 
 ## MCP Server
 
-The project includes an MCP (Model Context Protocol) server that exposes all web interactions as tools for LLMs.
+The project includes an MCP (Model Context Protocol) server exposing all web interactions as tools.
 
-Session tools (`session_goto`, `session_screenshot`, etc.) communicate with the backend via **`POST /sessions/{session_id}/command`** — a regular HTTP endpoint — instead of WebSocket. This is intentional: MCP runs over stdio and cannot maintain a persistent WS connection. The WebSocket endpoint (`/ws/{session_id}`) remains available for other clients.
+Session tools communicate via `POST /sessions/{id}/command` (HTTP) instead of WebSocket — MCP runs over stdio and cannot maintain a persistent WS connection.
 
-### Running the MCP Server
-To run the MCP server manually from any directory:
+### Running
+
 ```bash
-cd C:/[repo_path]/Atomic-Scraper-Service && uv run python -m src.mcp_server
+uv run python -m src.mcp_server
 ```
 
 ### Claude Desktop / OpenCode Configuration
-Add this to your `claude_desktop_config.json` (or equivalent MCP config):
+
 ```json
 {
   "mcpServers": {
     "atomic-scraper": {
       "command": "uv",
       "args": [
-        "run",
-        "--project",
-        "C:/[repo_path]/Atomic-Scraper-Service",
-        "python",
-        "C:/[repo_path]/Atomic-Scraper-Service/src/mcp_server.py"
+        "run", "--project", "C:/[repo_path]/Atomic-Scraper-Service",
+        "python", "C:/[repo_path]/Atomic-Scraper-Service/src/mcp_server.py"
       ],
       "env": {
-        "API_KEY": "your_internal_key"
+        "API_KEY": "default_internal_key"
       }
     }
   }
@@ -118,74 +211,19 @@ Add this to your `claude_desktop_config.json` (or equivalent MCP config):
 ```
 
 ### Available Tools
+
 - **Stateless**: `scrape`, `search`, `omni_parse`, `jina_extract`
 - **Session Management**: `create_session`, `delete_session`
 - **Interactive (DSL)**: `session_goto`, `session_scroll`, `session_click`, `session_type`, `session_screenshot`, `session_click_omni`, `session_extract_jina`
 
-## JSON DSL Guide
-
-The JSON DSL controls browser sessions. Commands can be sent two ways:
-
-### Option A: HTTP (recommended for MCP / programmatic clients)
-1. **Start a Session**: `POST /sessions` (requires `X-API-Key`) -> returns `session_id`.
-2. **Send Commands**: `POST /sessions/{session_id}/command` with body `{"type": "<command>", "params": { ... }}`.
-3. **Result** is returned directly in the HTTP response (blocks up to 60 s).
-
-### Option B: WebSocket (recommended for interactive / streaming clients)
-1. **Start a Session**: `POST /sessions` -> returns `session_id`.
-2. **Connect**: `ws://localhost:8000/ws/{session_id}`.
-3. **Send Commands**: Send JSON frames `{"type": "<command>", "params": { ... }}`. Results arrive as push frames on the same connection.
-
-### Core Commands
-- **`goto`**: `{"url": "https://..."}` - Navigate to a URL.
-- **`scroll`**: `{"direction": "down", "amount": 500}` - Scroll the page.
-- **`click_coord`**: `{"x": 0.5, "y": 0.2}` - Click relative coordinates.
-- **`type`**: `{"selector": "input", "text": "hello"}` - Type into a selector.
-- **`screenshot`**: `{}` - Capture base64 screenshot.
-
-### AI-Enhanced
-- **`click_omni`**: `{"element_description": "the login button"}` - AI-based grounding.
-- **`extract_jina`**: `{"extraction_schema": {...}}` - Structured extraction.
-
-## ML/CV Pipeline API Endpoints
-
-### Yandex Maps Extraction (Feature: 010-scraper-mlcv-prep)
-```bash
-# Extract business data from Yandex Maps
-POST /api/v1/yandex-maps/extract
-{
-  "category": "restaurants",
-  "center": {"lat": 59.934, "lng": 30.306},
-  "radius": 1000
-}
-```
-
-### Site Content Enrichment
-```bash
-# Extract clean text from company website
-POST /api/v1/enrich
-{
-  "url": "https://example.com",
-  "crawl_about": true,
-  "max_words": 500
-}
-```
-
-### Rate Limiting
-- Default: 30 requests/hour for `*.yandex.*` domains
-- Fallback: 1000 requests/hour for other domains
-- Returns 429 with `Retry-After` header when exceeded
+---
 
 ## Documentation
-- [Web Interactions (DSL & API)](web_interactions.md)
-- [Tasks](specs/009-smart-scraping-llm-api/tasks.md)
-- [Implementation Plan](specs/009-smart-scraping-llm-api/plan.md)
-- [Research Findings](specs/009-smart-scraping-llm-api/research.md)
-- [Data Model](specs/009-smart-scraping-llm-api/data-model.md)
 
-## ML/CV Pipeline Integration
-- [Feature Spec](specs/010-scraper-mlcv-prep/spec.md) - Docker, Yandex Maps, enrichment, rate limiting
-- [Implementation Plan](specs/010-scraper-mlcv-prep/plan.md)
-- [Tasks](specs/010-scraper-mlcv-prep/tasks.md) - 48/48 tasks complete
+- [Project Structure](STRUCTURE.md)
+- [Web Interactions (DSL & API)](web_interactions.md)
+- [Feature Spec 010 — ML/CV Pipeline](specs/010-scraper-mlcv-prep/spec.md)
+- [Implementation Plan 010](specs/010-scraper-mlcv-prep/plan.md)
+- [Tasks 010 — 48/48 complete](specs/010-scraper-mlcv-prep/tasks.md)
 - [Data Model](specs/010-scraper-mlcv-prep/data-model.md)
 - [Quickstart](specs/010-scraper-mlcv-prep/quickstart.md)

@@ -39,12 +39,11 @@ class BrowserPoolManager:
             if not user_agent:
                 user_agent = user_agent_pool.get_user_agent()
 
-            context = await stealth_pool.create_context(user_agent=user_agent)
-
+            extra = {}
             if proxy:
-                await context.set_proxy(**{"server": proxy})
+                extra["proxy"] = {"server": proxy}
 
-            return context
+            return await stealth_pool.create_context(user_agent=user_agent, **extra)
 
         browser = await self.get_browser(proxy=proxy)
 

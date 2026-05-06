@@ -55,18 +55,15 @@ def test_enriched_content_model_exists():
 
 def test_enrichment_returns_clean_text():
     """Enrichment should return clean text, not raw HTML."""
-    import pytest
-
-    pytest.skip("Requires live browser - run manually in Docker environment")
-
     try:
         import httpx
         import asyncio
 
         async def check():
-            async with httpx.AsyncClient(timeout=30.0) as client:
+            async with httpx.AsyncClient(timeout=60.0) as client:
                 response = await client.post(
                     "http://localhost:8000/api/v1/enrich",
+                    headers={"X-API-Key": "default_internal_key"},
                     json={
                         "url": "https://example.com",
                     },

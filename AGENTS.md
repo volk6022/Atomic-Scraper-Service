@@ -38,28 +38,31 @@ This document defines the agentic roles and coordination strategies for the Smar
 
 # Atomic-Scraper-Service Development Guidelines
 
-Auto-generated from all feature plans. Last updated: 2026-05-01
+Last updated: 2026-05-07
 
 ## Active Technologies
 
-- Python 3.11+ (based on asyncio requirements) + FastAPI, Taskiq (with Redis broker), Playwright, Redis, Pydantic v2, OpenAI, HTTPX
-- Feature 010-scraper-mlcv-prep: Docker production readiness, Anti-bot evasion (stealth, proxy, rate limiting), Yandex Maps extraction, Site enrichment
+- Python 3.12, FastAPI, Taskiq (Redis broker), Playwright, Redis, Pydantic v2, OpenAI-compatible API, HTTPX
+- `uv` for dependency management and running scripts
 
 ## Project Structure
 
 ```text
 src/
-├── api/                    # REST & WebSockets
-│   ├── routers/           # Endpoints
-│   └── middleware/        # Rate limiting, auth
-├── domain/                # Business logic & models
-│   └── models/           # Pydantic models
-├── infrastructure/        # External integrations
-│   ├── browser/          # Playwright, stealth pool
-│   ├── rate_limiter/     # Redis token bucket
-│   └── external_api/     # Clients
-├── actions/              # DSL implementation
-└── core/                 # Config, logging
+├── api/
+│   ├── routers/           # stateless.py, sessions.py, health.py, yandex_maps.py, enrichment.py
+│   ├── middleware/        # rate_limit.py (per-domain token bucket), auth.py (X-API-Key)
+│   └── main.py
+├── domain/
+│   ├── models/            # requests.py, dsl.py, business_card.py, enriched_content.py
+│   ├── utils/             # content_cleaner.py
+│   └── registry/          # action_registry.py
+├── infrastructure/
+│   ├── browser/           # pool_manager.py, stealth_pool.py, user_agent_pool.py, proxy_provider.py
+│   ├── rate_limiter/      # token_bucket.py
+│   └── external_api/      # facade.py, clients/
+├── actions/               # navigation.py, interaction.py, extraction.py, yandex_maps.py, site_enricher.py
+└── core/                  # config.py, logging.py
 tests/
 ├── unit/
 ├── contract/
@@ -70,30 +73,115 @@ tests/
 ## Commands
 
 ```bash
-cd src
-pytest
-ruff check .
+# Install dependencies
+uv sync
+
+# Install Playwright browsers (MUST use uv run — playwright lives in .venv)
+uv run playwright install --with-deps chromium
+
+# Run all tests (99 tests, no Docker required)
+python -m pytest tests/ -q
+
+# Run live E2E tests (require docker compose up)
+python -m pytest tests/e2e/test_site_enrichment_flow.py::test_enrichment_returns_clean_text \
+                 tests/e2e/test_yandex_maps_full_flow.py::test_yandex_maps_endpoint_returns_businesses -v
+
+# Docker
+docker compose up -d
+docker compose logs api --tail=30
+
+# Lint / type-check
+uv run ruff check src tests
+uv run mypy src
 ```
 
 ## Code Style
 
-Python 3.11+ (based on asyncio requirements): Follow standard conventions
+- Python 3.12 standard conventions; async-first (all browser/HTTP I/O is `async`/`await`)
+- No docstrings on trivial helpers; only add comments for non-obvious invariants
+- New actions must be registered in `src/actions/__init__.py` and `src/domain/models/dsl.py`
 
-## Recent Changes
+## API Authentication
 
-- 009-smart-scraping-llm-api: Added Python 3.11+ (based on asyncio requirements) + FastAPI, Taskiq (with Redis broker), Playwright, Redis, Pydantic v2, OpenAI, HTTPX
-- 010-scraper-mlcv-prep: Added Docker production readiness, Anti-bot evasion (stealth browser, User-Agent rotation, proxy integration), Yandex Maps extraction (`/api/v1/yandex-maps/extract`), Site enrichment (`/api/v1/enrich`), Per-domain rate limiting (30/hour for `*.yandex.*`)
+All protected endpoints require `X-API-Key: <API_KEY>` header. Default value: `default_internal_key` (set in `.env` and `src/core/config.py`). Tests use this same value.
 
 ## API Endpoints
 
-| Endpoint | Description |
-|----------|-------------|
-| `GET /healthz` | Health check with Redis and browser pool status |
-| `POST /api/v1/yandex-maps/extract` | Extract business data from Yandex Maps |
-| `POST /api/v1/enrich` | Extract clean text from company websites |
-| `POST /sessions` | Create browser session |
-| `POST /sessions/{id}/command` | Execute DSL command |
-| `WS /ws/{session_id}` | WebSocket for interactive sessions |
+| Endpoint | Auth | Description |
+|----------|------|-------------|
+| `GET /healthz` | No | Health check (Redis + browser pool status) |
+| `POST /api/v1/yandex-maps/extract` | Yes | Extract business data from Yandex Maps |
+| `POST /api/v1/enrich` | Yes | Extract clean text from company websites |
+| `POST /sessions` | Yes | Create browser session |
+| `POST /sessions/{id}/command` | Yes | Execute DSL command |
+| `WS /ws/{session_id}` | — | WebSocket for interactive sessions |
+
+## Proxy Configuration
+
+`proxies.txt` in the project root — one proxy per line, format: `http://user:pass@host:port`
+
+- Loaded at startup by `ProxyProvider` (`src/infrastructure/browser/proxy_provider.py`)
+- Rotated randomly per Yandex Maps request
+- Mounted into Docker containers as a read-only bind mount
+- **IMPORTANT**: create the file before first `docker compose up`. If Docker creates it as a directory (Windows Docker Desktop quirk), run `docker compose down && docker compose up -d`
+- **Yandex Maps requires residential proxies**. Datacenter IPs (e.g. Webshare) work for curl but Chromium gets blocked at the TLS/browser level
+
+## Key Implementation Notes
+
+### Playwright in Docker
+Playwright is installed via `uv run playwright install --with-deps chromium` in the Dockerfile — **not** bare `playwright install`. `uv sync` installs into `.venv` which is not on `$PATH`.
+
+### Proxy wiring
+- `ProxyProvider.get_proxy()` returns a proxy URL string or `{}` (empty dict, falsy) when no proxies are configured
+- `ProxyProvider._load_proxies()` uses `is_file()` not `exists()` — guards against Docker creating a directory stub at the mount path
+- `BrowserPoolManager.create_context(stealth=True, proxy=url)` passes proxy as `{"server": url}` to `browser.new_context()` — Playwright does not support setting proxy after context creation
+
+### Action Registry
+Register new actions in two places:
+1. `src/domain/models/dsl.py` — add `CommandType` enum value
+2. `src/actions/<module>.py` — call `action_registry.register(CommandType.X)(MyAction)` at module level
+3. `src/actions/__init__.py` — import the module so registration runs at startup
+
+### Rate Limiting
+- Middleware in `src/api/middleware/rate_limit.py` intercepts all requests except `/healthz`, `/docs`, `/openapi.json`
+- Redis required for limiting to work; if Redis is unreachable, requests are allowed through with a warning log
+- In Docker: the API container must use the `redis` service hostname (not `localhost`) — set `REDIS_URL=redis://redis:6379` in `.env` for containerized deployments
+
+### GeoCenter Validation
+`YandexMapsExtractRequest` uses a nested `GeoCenter` model with `lat ∈ [-90, 90]` and `lng ∈ [-180, 180]`. Invalid coordinates return `422`. The router converts `GeoCenter` to `dict` before passing to the action.
+
+## Test Suite Status (2026-05-07)
+
+**99 passed, 0 failed, 0 skipped**
+
+| Suite | Count | Notes |
+|-------|-------|-------|
+| unit/ | 17 | Fully mocked |
+| contract/ | 28 | In-process FastAPI, mocked actions |
+| integration/ | 31 | Mocked browser; Docker config file checks |
+| e2e/ | 23 | 21 in-process, 2 hit live localhost:8000 |
+
+The 2 live E2E tests (`test_enrichment_returns_clean_text`, `test_yandex_maps_endpoint_returns_businesses`) require `docker compose up`. The Yandex Maps test validates the API stack and response schema — actual businesses require residential proxies.
+
+## Recent Changes
+
+### 2026-05-07
+- Fixed `Dockerfile`: `playwright install` → `uv run playwright install --with-deps chromium`
+- Fixed `ProxyProvider`: `exists()` → `is_file()` to guard against Docker directory-stub mounts; returns `{}` instead of `None` for empty pool
+- Fixed `BrowserPoolManager`: removed `context.set_proxy()` (not a Playwright API); proxy now passed at `new_context()` creation
+- Wired `proxy_provider` into `YandexMapsExtractAction.execute()`
+- Added `GeoCenter` model with coordinate validation to `YandexMapsExtractRequest`
+- Added `YANDEX_MAPS_EXTRACT` to `CommandType` enum; registered `YandexMapsExtractAction` in action registry
+- Added `human_emulation_enabled` attribute and `new_context()` alias to `StealthPool`
+- Fixed `API_KEY` in `.env` from placeholder `your_internal_key` → `default_internal_key`
+- Added auth headers + action mocks to `tests/contract/test_yandex_maps_api.py`
+- Added browser mocking to 2 integration tests that previously hit real Yandex network
+- New E2E test files: `test_auth_flow.py`, `test_rate_limiting_flow.py`; extended `test_site_enrichment_flow.py` and `test_yandex_maps_full_flow.py`
+- Removed `pytest.skip()` from live E2E tests; both now run against Docker stack
+
+### 2026-05-01
+- 009-smart-scraping-llm-api: FastAPI, Taskiq, Playwright, Redis, Pydantic v2, OpenAI-compatible API
+- 010-scraper-mlcv-prep: Docker production readiness, stealth browser, User-Agent rotation, proxy integration, Yandex Maps extraction (`/api/v1/yandex-maps/extract`), site enrichment (`/api/v1/enrich`), per-domain rate limiting
 
 <!-- MANUAL ADDITIONS START -->
 <!-- MANUAL ADDITIONS END -->

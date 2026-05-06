@@ -3,7 +3,21 @@
     "allow": [
       "Bash(python -m pytest tests/ -x --tb=short -q)",
       "Bash(python -m pytest tests/ --tb=short -q)",
-      "Bash(docker compose *)"
+      "Bash(docker compose *)",
+      "Bash(curl -s http://localhost:8000/healthz)",
+      "Bash(python -m pytest tests/ -v)",
+      "Bash(python -m pytest tests/ -q)",
+      "Bash(python -m pytest tests/ --collect-only -q)",
+      "Bash(python -m pytest tests/ -q --no-header)",
+      "Bash(python -m pytest tests/ -v --no-header)",
+      "Bash(python -m pytest tests/e2e/test_enrichment_returns_clean_text -v tests/e2e/test_site_enrichment_flow.py::test_enrichment_returns_clean_text tests/e2e/test_yandex_maps_full_flow.py::test_yandex_maps_endpoint_returns_businesses -v --tb=short)",
+      "Bash(python -m pytest tests/e2e/test_site_enrichment_flow.py::test_enrichment_returns_clean_text tests/e2e/test_yandex_maps_full_flow.py::test_yandex_maps_endpoint_returns_businesses -v --tb=short)",
+      "Bash(python -m pytest tests/e2e/test_yandex_maps_full_flow.py::test_yandex_maps_endpoint_returns_businesses -v --tb=short)",
+      "Bash(docker exec atomic-scraper-service-api-1 python -c ' *)",
+      "Bash(docker exec *)",
+      "Bash(curl -s -X POST http://localhost:8000/api/v1/yandex-maps/extract -H 'Content-Type: application/json' -H 'X-API-Key: default_internal_key' -d '{\"category\":\"restaurants\",\"center\":{\"lat\":59.934,\"lng\":30.306},\"radius\":500}')",
+      "Bash(python -m json.tool)",
+      "Bash(python -m pytest tests/ -q --tb=short)"
     ]
   }
 }

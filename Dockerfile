@@ -6,7 +6,7 @@ COPY pyproject.toml uv.lock ./
 
 RUN pip install uv && uv sync --frozen
 
-RUN playwright install --with-deps chromium
+RUN uv run playwright install --with-deps chromium
 
 COPY src/ ./src/
 COPY .env.example ./
