@@ -7,6 +7,9 @@ class Settings(BaseSettings):
     REDIS_HOST: str = "localhost"
     REDIS_PORT: int = 6379
 
+    # API Server
+    PORT: int = 8000
+
     # Extraction Settings (e.g., Jina Reader LM)
     EXTRACTION_API_BASE: str = "http://localhost:1234/v1"
     EXTRACTION_API_KEY: str = "lm-studio"

@@ -38,9 +38,11 @@ This document defines the agentic roles and coordination strategies for the Smar
 
 # Atomic-Scraper-Service Development Guidelines
 
-Last updated: 2026-05-07
+Last updated: 2026-05-11
 
 ## Active Technologies
+- Python 3.12 + FastAPI, Taskiq, Playwright, Redis, Pydantic v2, LangGraph, LangChain (011-auto-research-agent)
+- Redis (task queues), in-memory with 24-hour retention (per spec) (011-auto-research-agent)
 
 - Python 3.12, FastAPI, Taskiq (Redis broker), Playwright, Redis, Pydantic v2, OpenAI-compatible API, HTTPX
 - `uv` for dependency management and running scripts
@@ -61,7 +63,9 @@ src/
 │   ├── browser/           # pool_manager.py, stealth_pool.py, user_agent_pool.py, proxy_provider.py
 │   ├── rate_limiter/      # token_bucket.py
 │   └── external_api/      # facade.py, clients/
-├── actions/               # navigation.py, interaction.py, extraction.py, yandex_maps.py, site_enricher.py
+├── actions/
+│   ├── research/          # nodes.py, tools.py, modes.py, state.py, graph.py (LangGraph agent)
+│   ├── navigation.py, interaction.py, extraction.py, yandex_maps.py, site_enricher.py
 └── core/                  # config.py, logging.py
 tests/
 ├── unit/
@@ -112,8 +116,12 @@ All protected endpoints require `X-API-Key: <API_KEY>` header. Default value: `d
 | `GET /healthz` | No | Health check (Redis + browser pool status) |
 | `POST /api/v1/yandex-maps/extract` | Yes | Extract business data from Yandex Maps |
 | `POST /api/v1/enrich` | Yes | Extract clean text from company websites |
+| `POST /api/v1/research/run` | Yes | Start research task (LangGraph agent) |
+| `GET /api/v1/research/status/{task_id}` | Yes | Get research task status |
+| `GET /api/v1/research/stream/{task_id}` | Yes | Stream research progress (SSE) |
 | `POST /sessions` | Yes | Create browser session |
 | `POST /sessions/{id}/command` | Yes | Execute DSL command |
+| `DELETE /sessions/{id}` | Yes | Delete browser session |
 | `WS /ws/{session_id}` | — | WebSocket for interactive sessions |
 
 ## Proxy Configuration
@@ -164,24 +172,13 @@ Register new actions in two places:
 The 2 live E2E tests (`test_enrichment_returns_clean_text`, `test_yandex_maps_endpoint_returns_businesses`) require `docker compose up`. The Yandex Maps test validates the API stack and response schema — actual businesses require residential proxies.
 
 ## Recent Changes
+- 011-auto-research-agent: Added Python 3.12 + FastAPI, Taskiq, Playwright, Redis, Pydantic v2, LangGraph, LangChain
 
 ### 2026-05-07
 - Fixed `Dockerfile`: `playwright install` → `uv run playwright install --with-deps chromium`
 - Fixed `ProxyProvider`: `exists()` → `is_file()` to guard against Docker directory-stub mounts; returns `{}` instead of `None` for empty pool
-- Fixed `BrowserPoolManager`: removed `context.set_proxy()` (not a Playwright API); proxy now passed at `new_context()` creation
-- Wired `proxy_provider` into `YandexMapsExtractAction.execute()`
-- Added `GeoCenter` model with coordinate validation to `YandexMapsExtractRequest`
-- Added `YANDEX_MAPS_EXTRACT` to `CommandType` enum; registered `YandexMapsExtractAction` in action registry
-- Added `human_emulation_enabled` attribute and `new_context()` alias to `StealthPool`
-- Fixed `API_KEY` in `.env` from placeholder `your_internal_key` → `default_internal_key`
-- Added auth headers + action mocks to `tests/contract/test_yandex_maps_api.py`
-- Added browser mocking to 2 integration tests that previously hit real Yandex network
-- New E2E test files: `test_auth_flow.py`, `test_rate_limiting_flow.py`; extended `test_site_enrichment_flow.py` and `test_yandex_maps_full_flow.py`
-- Removed `pytest.skip()` from live E2E tests; both now run against Docker stack
 
 ### 2026-05-01
-- 009-smart-scraping-llm-api: FastAPI, Taskiq, Playwright, Redis, Pydantic v2, OpenAI-compatible API
-- 010-scraper-mlcv-prep: Docker production readiness, stealth browser, User-Agent rotation, proxy integration, Yandex Maps extraction (`/api/v1/yandex-maps/extract`), site enrichment (`/api/v1/enrich`), per-domain rate limiting
 
 <!-- MANUAL ADDITIONS START -->
 <!-- MANUAL ADDITIONS END -->

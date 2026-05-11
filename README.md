@@ -13,6 +13,7 @@ High-throughput atomic scraping and stateful interactive browser sessions with L
 - **Anti-Bot Evasion**: Stealth browser pool with User-Agent rotation, proxy integration, human-like interactions.
 - **Yandex Maps Extraction**: Extract structured business data (name, address, phone, website, geo coordinates).
 - **Site Content Enrichment**: Extract clean text from company websites with optional about/services page crawling.
+- **Research Agent**: Autonomous AI research using LangGraph with web search, scraping, and structured report generation.
 - **Per-Domain Rate Limiting**: Redis-based token bucket (30/hour for `*.yandex.*`, 1000/hour fallback).
 
 ## Tech Stack
@@ -138,6 +139,25 @@ POST /api/v1/enrich
 
 Content is truncated to ≤ 500 words. Raw HTML is stripped.
 
+### Research Agent
+
+```
+POST /api/v1/research/run
+{
+  "query": "research topic",
+  "mode": "quick" | "balanced" | "deep"  // default: "balanced"
+}
+→ {"task_id": "...", "status": "pending", "message": "Research task queued"}
+
+GET /api/v1/research/status/{task_id}
+→ {"task_id": "...", "status": "completed"|"running"|"failed", "result": {...}, ...}
+
+GET /api/v1/research/stream/{task_id}
+→ text/event-stream with progress events
+```
+
+The Research Agent uses LangGraph to iteratively search, scrape, and synthesize information into a structured report.
+
 ### Rate Limiting
 
 - `*.yandex.*` domains: **30 requests/hour**
@@ -213,6 +233,8 @@ uv run python -m src.mcp_server
 ### Available Tools
 
 - **Stateless**: `scrape`, `search`, `omni_parse`, `jina_extract`
+- **Data Extraction**: `yandex_maps_extract`, `enrich_website`
+- **Research Agent**: `research_run`, `research_status`, `research_stream`
 - **Session Management**: `create_session`, `delete_session`
 - **Interactive (DSL)**: `session_goto`, `session_scroll`, `session_click`, `session_type`, `session_screenshot`, `session_click_omni`, `session_extract_jina`
 

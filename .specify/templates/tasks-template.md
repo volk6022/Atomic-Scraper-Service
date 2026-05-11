@@ -150,7 +150,7 @@ Examples of foundational tasks (adjust based on your project):
 
 **Purpose**: Improvements that affect multiple user stories
 
-- [ ] TXXX [P] Verify compliance with Constitution Principles (I-VI)
+- [ ] TXXX [P] Verify compliance with Constitution Principles (I-X)
 - [ ] TXXX [P] Documentation updates in docs/ (include doc.md in new directories)
 - [ ] TXXX Code cleanup and refactoring
 - [ ] TXXX Performance optimization across all stories

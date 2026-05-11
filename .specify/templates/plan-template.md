@@ -40,6 +40,7 @@
 - [ ] **VII. Backend-Only**: Confirm no frontend/UI components are being introduced.
 - [ ] **VIII. Production Deployment**: Does this require Dockerfile, docker-compose updates, or a `/healthz` endpoint?
 - [ ] **IX. Anti-Bot Mitigation**: Does this feature involve scraping that requires stealth, proxy, or rate limiting?
+- [ ] **X. Autonomous Research Agent**: If this feature involves autonomous research, does it use LangGraph orchestration, enforce loop safety (token budget, iteration cap, deadline, stall detection), and reuse existing scraping tools?
 
 ## Project Structure
 
