@@ -19,6 +19,8 @@ class EnrichedContent(BaseModel):
     @field_validator("word_count")
     @classmethod
     def validate_word_count(cls, v: int) -> int:
-        if v > 510:
-            raise ValueError("word_count should not exceed 510 (truncation required)")
+        # truncate_content splits on whitespace; count_words uses \b\w+\b regex,
+        # which can yield ~5-10% more tokens on Russian/mixed text. Allow 600.
+        if v > 600:
+            raise ValueError("word_count should not exceed 600 (truncation required)")
         return v
