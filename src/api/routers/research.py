@@ -2,6 +2,7 @@
 
 import uuid
 import logging
+import asyncio
 from datetime import datetime
 from typing import Optional
 
@@ -15,12 +16,12 @@ from src.domain.models.research import (
     ResearchReport,
 )
 from src.api.auth import get_api_key
+from src.core.config import settings
+from src.infrastructure.queue.research_worker import execute_research_task
 
 logger = logging.getLogger(__name__)
 
 router = APIRouter(prefix="/research", tags=["research"])
-
-MAX_CONCURRENT_TASKS = 5
 
 _task_store: dict = {}
 
@@ -51,10 +52,10 @@ async def run_research(
 ):
     """Submit a new research task"""
     concurrent = await get_concurrent_task_count(api_key)
-    if concurrent >= MAX_CONCURRENT_TASKS:
+    if concurrent >= settings.MAX_CONCURRENT_RESEARCH_TASKS:
         raise HTTPException(
             status_code=status.HTTP_429_TOO_MANY_REQUESTS,
-            detail=f"Maximum {MAX_CONCURRENT_TASKS} concurrent tasks allowed",
+            detail=f"Maximum {settings.MAX_CONCURRENT_RESEARCH_TASKS} concurrent tasks allowed",
         )
 
     task_id = str(uuid.uuid4())
@@ -69,6 +70,8 @@ async def run_research(
         "created_at": datetime.utcnow().isoformat() + "Z",
         "updated_at": datetime.utcnow().isoformat() + "Z",
     }
+
+    execute_research_task.kiq(task_id)
 
     return ResearchTaskCreateResponse(
         task_id=task_id,
@@ -142,7 +145,5 @@ async def stream_research_events(
                 break
 
             yield f"event: progress\ndata: {{'iteration': {task.get('iteration', 0)}}}\n\n"
-
-    import asyncio
 
     return StreamingResponse(event_generator(), media_type="text/event-stream")

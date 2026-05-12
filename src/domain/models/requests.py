@@ -1,5 +1,5 @@
 from pydantic import BaseModel, HttpUrl, Field
-from typing import Optional, List
+from typing import Optional, List, Literal
 from enum import Enum
 import uuid
 
@@ -14,6 +14,8 @@ class ScrapeRequest(BaseModel):
     url: HttpUrl
     proxy: Optional[str] = None
     wait_until: Optional[str] = "domcontentloaded"
+    clean_html: bool = False
+    output_format: Literal["html", "text", "markdown"] = "html"
 
 
 class ScrapeResponse(BaseModel):
@@ -26,7 +28,7 @@ class ScrapeResponse(BaseModel):
 
 class SearchRequest(BaseModel):
     q: str
-    num: int = 10
+    num: int = Field(default=10, ge=1, le=100)
 
 
 class SearchResult(BaseModel):
@@ -46,7 +48,7 @@ class OmniParseRequest(BaseModel):
     prompt: Optional[str] = None
 
 
-class JinaExtractRequest(BaseModel):
+class HtmlToMdRequest(BaseModel):
     html: str
     format: str = "markdown"
     extraction_schema: Optional[dict] = None

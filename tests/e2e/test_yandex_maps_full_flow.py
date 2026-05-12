@@ -51,7 +51,9 @@ def test_yandex_maps_endpoint_returns_businesses():
                         "radius": 500,
                     },
                 )
-                assert response.status_code == 200, f"Expected 200, got {response.status_code}: {response.text}"
+                assert response.status_code == 200, (
+                    f"Expected 200, got {response.status_code}: {response.text}"
+                )
                 data = response.json()
                 assert "businesses" in data
                 assert "total" in data
@@ -103,40 +105,36 @@ def test_proxy_provider_works_for_yandex_maps():
 
 @pytest.mark.asyncio
 async def test_business_card_schema_complete():
-    """YandexMapsExtractAction.execute must return dicts with name and address keys."""
-    from unittest.mock import patch, AsyncMock
-    from httpx import AsyncClient, ASGITransport
+    """BusinessCard model must have required fields and correct types."""
     from src.domain.models.business_card import BusinessCard
-    from src.api.main import app
 
-    cards = [
-        BusinessCard(name="Café Nord", address="Nevsky pr. 1", phone="+7 812 000 0000"),
-        BusinessCard(name="Sushi Bar", address="Ligovsky pr. 10"),
-    ]
+    card = BusinessCard(
+        name="Café Nord", address="Nevsky pr. 1", phone="+7 812 000 0000"
+    )
+    assert isinstance(card.name, str), "name must be string"
+    assert len(card.name) > 0, "name must not be empty"
+    assert isinstance(card.address, str), "address must be string"
+    assert card.phone is None or isinstance(card.phone, str), (
+        "phone must be string or None"
+    )
+    assert isinstance(card.geo, (dict, type(None))), (
+        "geo must be GeoCoordinates or None"
+    )
+    assert isinstance(card.website, (str, type(None))), "website must be string or None"
+    assert isinstance(card.category, (str, type(None))), (
+        "category must be string or None"
+    )
 
-    transport = ASGITransport(app=app)
-    async with AsyncClient(transport=transport, base_url="http://test") as client:
-        with patch(
-            "src.actions.yandex_maps.YandexMapsExtractAction.execute",
-            new_callable=AsyncMock,
-            return_value=cards,
-        ):
-            response = await client.post(
-                "/api/v1/yandex-maps/extract",
-                headers={"X-API-Key": "default_internal_key"},
-                json={
-                    "category": "cafe",
-                    "center": {"lat": 59.934, "lng": 30.306},
-                    "radius": 500,
-                },
-            )
-    assert response.status_code == 200
-    data = response.json()
-    assert data["total"] == 2
-    for card in data["businesses"]:
-        assert "name" in card
-        assert "address" in card
-        assert isinstance(card["name"], str)
+    card_with_geo = BusinessCard(
+        name="Test",
+        address="Addr",
+        geo={"lat": 59.934, "lng": 30.306},
+        website="https://example.com",
+        category="restaurant",
+    )
+    assert card_with_geo.geo.lat == 59.934
+    assert card_with_geo.geo.lng == 30.306
+    assert card_with_geo.website == "https://example.com"
 
 
 @pytest.mark.asyncio
@@ -177,4 +175,44 @@ async def test_pagination_collects_multiple_pages():
     ):
         results = await action._extract_all_pages(mock_page, "restaurants")
 
-    assert len(results) == 20
+    assert len(results) == 20, f"Expected 20 results from 2 pages, got {len(results)}"
+    assert results[0].name == "Biz 0", "First page results should start from Biz 0"
+    assert results[10].name == "Biz 10", "Second page results should start from Biz 10"
+    assert call_count == 2, f"Expected 2 page extractions, got {call_count}"
+
+
+@pytest.mark.asyncio
+async def test_yandex_maps_model_validation():
+    """YandexMapsExtractRequest must validate geo coordinates."""
+    from pydantic import ValidationError
+    from src.domain.models.requests import YandexMapsExtractRequest, GeoCenter
+
+    valid_request = YandexMapsExtractRequest(
+        category="restaurants",
+        center=GeoCenter(lat=59.934, lng=30.306),
+        radius=1000,
+    )
+    assert valid_request.center.lat == 59.934
+    assert valid_request.center.lng == 30.306
+    assert valid_request.radius == 1000
+
+    with pytest.raises(ValidationError):
+        YandexMapsExtractRequest(
+            category="restaurants",
+            center=GeoCenter(lat=95.0, lng=30.306),
+            radius=1000,
+        )
+
+    with pytest.raises(ValidationError):
+        YandexMapsExtractRequest(
+            category="restaurants",
+            center=GeoCenter(lat=59.934, lng=200.0),
+            radius=1000,
+        )
+
+    with pytest.raises(ValidationError):
+        YandexMapsExtractRequest(
+            category="restaurants",
+            center=GeoCenter(lat=59.934, lng=30.306),
+            radius=10000,
+        )

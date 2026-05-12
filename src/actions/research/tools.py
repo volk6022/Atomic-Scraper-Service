@@ -16,7 +16,7 @@ class SearchHit:
 @tool
 async def web_search(query: str, k: int = 5) -> list[dict]:
     """
-    Perform a web search using Google SERP.
+    Perform a web search using Google SERP via real browser search.
 
     Args:
         query: Search query string
@@ -25,26 +25,26 @@ async def web_search(query: str, k: int = 5) -> list[dict]:
     Returns:
         List of search results with url, title, and snippet
     """
-    from src.actions.site_enricher import SiteEnrichAction
+    from src.infrastructure.external_api.search_client import search_client
+    from src.domain.models.requests import SearchRequest
+    from src.core.logging import get_logger
 
-    action = SiteEnrichAction()
-
-    google_url = f"https://www.google.com/search?q={query}&num={k}"
+    logger = get_logger(__name__)
 
     try:
-        result = await action.execute(google_url)
+        request = SearchRequest(q=query, num=k)
+        response = await search_client.search(request)
 
-        results = []
-        for i, line in enumerate(result.text.split("\n")[:k]):
-            results.append(
-                {
-                    "url": f"https://example.com/result{i}",
-                    "title": f"Result {i + 1} for {query}",
-                    "snippet": line[:200] if line else "",
-                }
-            )
-        return results
+        return [
+            {
+                "url": r.link,
+                "title": r.title,
+                "snippet": r.snippet,
+            }
+            for r in response.organic
+        ]
     except Exception as e:
+        logger.error(f"Web search failed for '{query}': {e}")
         return [{"error": str(e)}]
 
 
@@ -80,38 +80,52 @@ async def scrape_url(url: str) -> dict:
 
 
 @tool
-async def extract_facts(doc: str, focus: Optional[str] = None) -> list[dict]:
+async def extract_facts(
+    doc: str, focus: Optional[str] = None, source_url: Optional[str] = None
+) -> list[dict]:
     """
-    Extract factual claims from a document using LLM.
+    Extract factual claims from document text using heuristic extraction.
 
     Args:
         doc: Document text to analyze
         focus: Optional focus area (e.g., "pricing", "features")
+        source_url: Optional source URL for attribution
 
     Returns:
         List of extracted facts with claim, confidence, source
     """
-    from src.infrastructure.external_api.facade import get_extraction_client
+    import re
 
-    facade = get_extraction_client()
+    if not doc:
+        return [{"error": "Empty document"}]
 
-    prompt = f"Extract factual claims from the following text"
-    if focus:
-        prompt += f" focusing on: {focus}"
-    prompt += f"\n\n{doc[:2000]}"
+    facts = []
+    sentences = re.split(r"[.!?]\s+", doc)
 
-    try:
-        result = await facade.generate(prompt)
+    for sentence in sentences:
+        sentence = sentence.strip()
+        if not sentence:
+            continue
 
-        facts = []
-        if result and isinstance(result, str):
-            facts.append(
-                {
-                    "claim": result[:200],
-                    "confidence": 0.5,
-                    "source_url": "extracted",
-                }
-            )
-        return facts
-    except Exception as e:
-        return [{"error": str(e)}]
+        if len(sentence) < 20 or len(sentence) > 500:
+            continue
+
+        if re.search(r"\d+[%€$£]|\d{4}-\d{2}|\$\d+|€\d+|\d+\.\d+", sentence):
+            confidence = 0.7
+        elif re.search(r"\d+", sentence):
+            confidence = 0.5
+        else:
+            continue
+
+        if focus and focus.lower() not in sentence.lower():
+            continue
+
+        facts.append(
+            {
+                "claim": sentence[:200],
+                "confidence": confidence,
+                "source_url": source_url or "extracted",
+            }
+        )
+
+    return facts[:10]

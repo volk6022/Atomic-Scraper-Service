@@ -1,12 +1,15 @@
-from fastapi import APIRouter, Depends, HTTPException
+from fastapi import APIRouter, Depends, HTTPException, status
 from src.api.auth import get_api_key
+from src.api.utils.errors import error_response
 from src.infrastructure.queue.session_actor import run_session_actor
 from src.api.websockets.manager import manager
+from src.domain.models.errors import RedisUnavailableError
 from pydantic import BaseModel
 from typing import Any, Dict, Optional
 import asyncio
 import json
 import uuid
+import redis
 
 
 router = APIRouter(dependencies=[Depends(get_api_key)])
@@ -31,14 +34,27 @@ class CreateSessionRequest(BaseModel):
 @router.post("/sessions")
 async def create_session(request: CreateSessionRequest):
     session_id = str(uuid.uuid4())
-    # Start the session actor in the background
-    await run_session_actor.kiq(
-        session_id,
-        headless=request.headless,
-        proxy=request.proxy,
-        user_agent=request.user_agent,
-        viewport=request.viewport,
-    )
+    try:
+        await run_session_actor.kiq(
+            session_id,
+            headless=request.headless,
+            proxy=request.proxy,
+            user_agent=request.user_agent,
+            viewport=request.viewport,
+        )
+    except (
+        redis.exceptions.ConnectionError,
+        redis.exceptions.TimeoutError,
+        redis.exceptions.RedisError,
+    ) as e:
+        raise HTTPException(
+            status_code=status.HTTP_503_SERVICE_UNAVAILABLE,
+            detail=error_response(
+                "Session creation temporarily unavailable",
+                "REDIS_UNAVAILABLE",
+                {"reason": str(e)},
+            ),
+        )
     return {"session_id": session_id, "status": "active"}
 
 
@@ -57,14 +73,48 @@ async def send_command(session_id: str, command: CommandRequest):
     """
     payload = command.model_dump()
 
-    # Subscribe *before* publishing so we never miss the response.
-    pubsub = await manager.subscribe_results(session_id)
     try:
-        await manager.publish_command(session_id, payload)
+        pubsub = await manager.subscribe_results(session_id)
+    except (
+        RedisUnavailableError,
+        redis.exceptions.ConnectionError,
+        redis.exceptions.TimeoutError,
+        redis.exceptions.RedisError,
+    ) as e:
+        if isinstance(e, RedisUnavailableError):
+            code, details = e.code, e.details
+            error_msg = "Command endpoint temporarily unavailable"
+        else:
+            code, details = "REDIS_UNAVAILABLE", {"reason": str(e)}
+            error_msg = "Command endpoint temporarily unavailable"
+        raise HTTPException(
+            status_code=status.HTTP_503_SERVICE_UNAVAILABLE,
+            detail=error_response(error_msg, code, details),
+        )
+    try:
+        try:
+            await manager.publish_command(session_id, payload)
+        except (
+            RedisUnavailableError,
+            redis.exceptions.ConnectionError,
+            redis.exceptions.TimeoutError,
+            redis.exceptions.RedisError,
+        ) as e:
+            if isinstance(e, RedisUnavailableError):
+                code, details = e.code, e.details
+                error_msg = "Command publishing temporarily unavailable"
+            else:
+                code, details = "REDIS_UNAVAILABLE", {"reason": str(e)}
+                error_msg = "Command publishing temporarily unavailable"
+            raise HTTPException(
+                status_code=status.HTTP_503_SERVICE_UNAVAILABLE,
+                detail=error_response(error_msg, code, details),
+            )
 
         deadline = asyncio.get_event_loop().time() + COMMAND_TIMEOUT
         async for message in pubsub.listen():
             if asyncio.get_event_loop().time() > deadline:
+                await pubsub.unsubscribe(f"res:{session_id}")
                 raise HTTPException(
                     status_code=504, detail="Command timed out waiting for result"
                 )
@@ -78,8 +128,24 @@ async def send_command(session_id: str, command: CommandRequest):
 
 @router.delete("/sessions/{session_id}")
 async def delete_session(session_id: str):
-    # Send a special command to the actor to stop
-    await manager.publish_command(session_id, {"type": "stop"})
+    try:
+        await manager.publish_command(session_id, {"type": "stop"})
+    except (
+        RedisUnavailableError,
+        redis.exceptions.ConnectionError,
+        redis.exceptions.TimeoutError,
+        redis.exceptions.RedisError,
+    ) as e:
+        if isinstance(e, RedisUnavailableError):
+            code, details = e.code, e.details
+            error_msg = "Session deletion temporarily unavailable"
+        else:
+            code, details = "REDIS_UNAVAILABLE", {"reason": str(e)}
+            error_msg = "Session deletion temporarily unavailable"
+        raise HTTPException(
+            status_code=status.HTTP_503_SERVICE_UNAVAILABLE,
+            detail=error_response(error_msg, code, details),
+        )
     return {
         "status": "success",
         "message": f"Session {session_id} termination signal sent",

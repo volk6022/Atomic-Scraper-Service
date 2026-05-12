@@ -21,6 +21,12 @@ def clean_html_content(html: str) -> str:
     return content.strip()
 
 
+def html_to_markdown(html: str) -> str:
+    from markdownify import markdownify, ATX
+
+    return markdownify(html, heading_style=ATX)
+
+
 def html_to_text(html: str) -> str:
     content = clean_html_content(html)
     content = re.sub(r"<br\s*/?>", "\n", content, flags=re.IGNORECASE)

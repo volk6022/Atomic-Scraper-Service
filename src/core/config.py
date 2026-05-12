@@ -1,3 +1,4 @@
+from pydantic import Field
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
@@ -23,6 +24,7 @@ class Settings(BaseSettings):
     # Scraper Settings
     BROWSER_TIMEOUT: int = 30000  # 30 seconds
     SESSION_INACTIVITY_TIMEOUT: int = 600  # 10 minutes
+    MAX_CONCURRENT_RESEARCH_TASKS: int = Field(default=5, ge=1, le=100)
 
     # Rate Limiting Settings
     RATE_LIMIT_YANDEX_PER_HOUR: int = 30

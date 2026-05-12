@@ -38,11 +38,13 @@ This document defines the agentic roles and coordination strategies for the Smar
 
 # Atomic-Scraper-Service Development Guidelines
 
-Last updated: 2026-05-11
+Last updated: 2026-05-12
 
 ## Active Technologies
 - Python 3.12 + FastAPI, Taskiq, Playwright, Redis, Pydantic v2, LangGraph, LangChain (011-auto-research-agent)
 - Redis (task queues), in-memory with 24-hour retention (per spec) (011-auto-research-agent)
+- Python 3.12 + FastAPI, Playwright, Taskiq, Redis, Pydantic v2, httpx, LangGraph, LangChain (013-fix-impl)
+- Redis (task queues), in-memory task store (24h retention) (013-fix-impl)
 
 - Python 3.12, FastAPI, Taskiq (Redis broker), Playwright, Redis, Pydantic v2, OpenAI-compatible API, HTTPX
 - `uv` for dependency management and running scripts
@@ -172,11 +174,11 @@ Register new actions in two places:
 The 2 live E2E tests (`test_enrichment_returns_clean_text`, `test_yandex_maps_endpoint_returns_businesses`) require `docker compose up`. The Yandex Maps test validates the API stack and response schema — actual businesses require residential proxies.
 
 ## Recent Changes
+- 013-fix-impl: Added Python 3.12 + FastAPI, Playwright, Taskiq, Redis, Pydantic v2, httpx, LangGraph, LangChain
 - 011-auto-research-agent: Added Python 3.12 + FastAPI, Taskiq, Playwright, Redis, Pydantic v2, LangGraph, LangChain
 
 ### 2026-05-07
 - Fixed `Dockerfile`: `playwright install` → `uv run playwright install --with-deps chromium`
-- Fixed `ProxyProvider`: `exists()` → `is_file()` to guard against Docker directory-stub mounts; returns `{}` instead of `None` for empty pool
 
 ### 2026-05-01
 
