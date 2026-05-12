@@ -2,7 +2,6 @@ from fastapi import APIRouter, Depends, HTTPException
 from src.api.auth import get_api_key
 from src.infrastructure.queue.session_actor import run_session_actor
 from src.api.websockets.manager import manager
-from src.core.config import settings
 from pydantic import BaseModel
 from typing import Any, Dict, Optional
 import asyncio
@@ -22,11 +21,24 @@ class CommandRequest(BaseModel):
     params: Optional[Dict[str, Any]] = {}
 
 
+class CreateSessionRequest(BaseModel):
+    headless: bool = True
+    proxy: Optional[str] = None
+    user_agent: Optional[str] = None
+    viewport: Dict[str, int] = {"width": 1280, "height": 720}
+
+
 @router.post("/sessions")
-async def create_session():
+async def create_session(request: CreateSessionRequest):
     session_id = str(uuid.uuid4())
     # Start the session actor in the background
-    await run_session_actor.kiq(session_id)
+    await run_session_actor.kiq(
+        session_id,
+        headless=request.headless,
+        proxy=request.proxy,
+        user_agent=request.user_agent,
+        viewport=request.viewport,
+    )
     return {"session_id": session_id, "status": "active"}
 
 

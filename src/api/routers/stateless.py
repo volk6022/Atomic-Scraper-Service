@@ -25,9 +25,7 @@ orchestration_client = get_orchestration_client()
 @router.post("/scraper", response_model=ScrapeResponse)
 async def scrape(request: ScrapeRequest):
     try:
-        context = await pool_manager.create_context(
-            proxy={"server": request.proxy} if request.proxy else None
-        )
+        context = await pool_manager.create_context(proxy=request.proxy, headless=True)
         page = await context.new_page()
         await page.goto(str(request.url), wait_until=request.wait_until)  # type: ignore
         content = await page.content()
