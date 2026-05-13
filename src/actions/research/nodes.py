@@ -2,7 +2,6 @@
 
 import time
 import logging
-from typing import Any
 
 from src.actions.research.state import ResearchState, NodeEvent
 

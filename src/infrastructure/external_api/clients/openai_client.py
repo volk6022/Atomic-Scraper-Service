@@ -31,5 +31,5 @@ class OpenAICompatibleClient(LLMFacade):
 
         try:
             return json.loads(response_text)
-        except:
+        except Exception:
             return {"raw_response": response_text}

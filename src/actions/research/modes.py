@@ -4,7 +4,6 @@ import time
 from dataclasses import dataclass
 from typing import Optional
 
-from src.domain.models.research import ResearchMode
 
 
 @dataclass

@@ -1,7 +1,6 @@
 """LangGraph state definitions for Research Agent"""
 
 from typing import TypedDict, Literal, Optional
-import time
 
 
 class ScoredUrl(TypedDict):

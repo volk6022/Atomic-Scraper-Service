@@ -99,7 +99,7 @@ class TestResearchStatusEndpoint:
     @pytest.mark.asyncio
     async def test_get_status_running_returns_progress(self, app_with_research):
         """GET /status/{task_id} while running should return progress"""
-        with patch("src.api.routers.research.get_research_task") as mock_get:
+        with patch("src.api.routers.research.get_task") as mock_get:
             mock_get.return_value = {
                 "task_id": "test-123",
                 "status": "running",
@@ -125,7 +125,7 @@ class TestResearchStatusEndpoint:
     @pytest.mark.asyncio
     async def test_get_status_completed_returns_report(self, app_with_research):
         """GET /status/{task_id} after completion should return ResearchReport"""
-        with patch("src.api.routers.research.get_research_task") as mock_get:
+        with patch("src.api.routers.research.get_task") as mock_get:
             mock_get.return_value = {
                 "task_id": "test-123",
                 "status": "completed",
@@ -176,7 +176,7 @@ class TestResearchStatusEndpoint:
     @pytest.mark.asyncio
     async def test_get_status_fake_id_returns_404(self, app_with_research):
         """GET /status/{fake_id} should return 404"""
-        with patch("src.api.routers.research.get_research_task") as mock_get:
+        with patch("src.api.routers.research.get_task") as mock_get:
             mock_get.return_value = None
 
             transport = ASGITransport(app=app_with_research)
@@ -197,10 +197,13 @@ class TestResearchStreamEndpoint:
     @pytest.mark.asyncio
     async def test_get_stream_returns_sse_events(self, app_with_research):
         """GET /stream/{task_id} should return SSE events"""
-        with patch("src.api.routers.research.get_research_task") as mock_get:
+        with (
+            patch("src.api.routers.research.get_task") as mock_get,
+            patch("asyncio.sleep", new_callable=AsyncMock) as mock_sleep,
+        ):
             mock_get.return_value = {
                 "task_id": "test-123",
-                "status": "running",
+                "status": "completed",
                 "phase": "searching",
                 "iteration": 2,
                 "created_at": "2026-05-11T12:00:00Z",
@@ -213,6 +216,7 @@ class TestResearchStreamEndpoint:
                 response = await client.get(
                     "/api/v1/research/stream/test-123",
                     headers={"X-API-Key": "default_internal_key"},
+                    timeout=5,
                 )
 
         assert response.status_code == 200

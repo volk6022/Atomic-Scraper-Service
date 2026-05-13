@@ -4,7 +4,6 @@ import uuid
 import logging
 import asyncio
 from datetime import datetime
-from typing import Optional
 
 from fastapi import APIRouter, Depends, HTTPException, status
 from fastapi.responses import StreamingResponse
@@ -17,28 +16,18 @@ from src.domain.models.research import (
 )
 from src.api.auth import get_api_key
 from src.core.config import settings
-from src.infrastructure.queue.research_worker import execute_research_task
+from src.infrastructure.queue.research_task import execute_research_task
+from src.infrastructure.tasks.research_store import (
+    get_task,
+    set_task,
+    get_concurrent_task_count,
+)
+
+get_research_task = get_task
 
 logger = logging.getLogger(__name__)
 
-router = APIRouter(prefix="/research", tags=["research"])
-
-_task_store: dict = {}
-
-
-async def get_concurrent_task_count(api_key: str) -> int:
-    """Get number of running tasks for an API key"""
-    return sum(1 for t in _task_store.values() if t.get("status") == "running")
-
-
-async def get_research_task(task_id: str) -> Optional[dict]:
-    """Get research task from store"""
-    return _task_store.get(task_id)
-
-
-async def set_research_task(task_id: str, data: dict) -> None:
-    """Set research task in store"""
-    _task_store[task_id] = data
+router = APIRouter(tags=["research"])
 
 
 @router.post(
@@ -51,7 +40,7 @@ async def run_research(
     api_key: str = Depends(get_api_key),
 ):
     """Submit a new research task"""
-    concurrent = await get_concurrent_task_count(api_key)
+    concurrent = get_concurrent_task_count(api_key)
     if concurrent >= settings.MAX_CONCURRENT_RESEARCH_TASKS:
         raise HTTPException(
             status_code=status.HTTP_429_TOO_MANY_REQUESTS,
@@ -60,18 +49,21 @@ async def run_research(
 
     task_id = str(uuid.uuid4())
 
-    _task_store[task_id] = {
-        "task_id": task_id,
-        "query": request.query,
-        "mode": request.mode,
-        "status": "running",
-        "phase": "starting",
-        "iteration": 0,
-        "created_at": datetime.utcnow().isoformat() + "Z",
-        "updated_at": datetime.utcnow().isoformat() + "Z",
-    }
+    set_task(
+        task_id,
+        {
+            "task_id": task_id,
+            "query": request.query,
+            "mode": request.mode,
+            "status": "running",
+            "phase": "starting",
+            "iteration": 0,
+            "created_at": datetime.utcnow().isoformat() + "Z",
+            "updated_at": datetime.utcnow().isoformat() + "Z",
+        },
+    )
 
-    execute_research_task.kiq(task_id)
+    await execute_research_task.kiq(task_id)
 
     return ResearchTaskCreateResponse(
         task_id=task_id,
@@ -86,7 +78,7 @@ async def get_research_status(
     api_key: str = Depends(get_api_key),
 ):
     """Get status of a research task"""
-    task = await get_research_task(task_id)
+    task = get_task(task_id)
 
     if not task:
         raise HTTPException(
@@ -122,7 +114,7 @@ async def stream_research_events(
     api_key: str = Depends(get_api_key),
 ):
     """Stream SSE events for a research task"""
-    task = await get_research_task(task_id)
+    task = get_task(task_id)
 
     if not task:
         raise HTTPException(
@@ -132,11 +124,11 @@ async def stream_research_events(
 
     async def event_generator():
         yield f"event: started\ndata: {task_id}\n\n"
-        yield f"event: progress\ndata: {{'phase': 'running'}}\n\n"
+        yield "event: progress\ndata: {'phase': 'running'}\n\n"
 
         while True:
             await asyncio.sleep(2)
-            task = await get_research_task(task_id)
+            task = get_task(task_id)
             if not task:
                 break
 

@@ -142,7 +142,7 @@ async def session_goto(session_id: str, url: str) -> str:
 
 @mcp.tool()
 async def session_scroll(
-    session_id: str, direction: str = "down", amount: int = 500
+    session_id: str, direction: str = "down", amount: int = 400
 ) -> str:
     """Scroll the page in an active session."""
     result = await send_command(

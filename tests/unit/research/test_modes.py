@@ -8,21 +8,21 @@ class TestResearchModePresets:
 
     def test_speed_mode_has_correct_max_iterations(self):
         """Speed mode should have 2 iterations"""
-        from src.actions.research.modes import ResearchMode, get_mode_preset
+        from src.actions.research.modes import get_mode_preset
 
         preset = get_mode_preset("speed")
         assert preset.max_iters == 2
 
     def test_balanced_mode_has_correct_max_iterations(self):
         """Balanced mode should have 6 iterations"""
-        from src.actions.research.modes import ResearchMode, get_mode_preset
+        from src.actions.research.modes import get_mode_preset
 
         preset = get_mode_preset("balanced")
         assert preset.max_iters == 6
 
     def test_quality_mode_has_correct_max_iterations(self):
         """Quality mode should have 25 iterations"""
-        from src.actions.research.modes import ResearchMode, get_mode_preset
+        from src.actions.research.modes import get_mode_preset
 
         preset = get_mode_preset("quality")
         assert preset.max_iters == 25
