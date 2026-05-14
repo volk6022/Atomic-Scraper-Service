@@ -40,7 +40,7 @@ async def run_research(
     api_key: str = Depends(get_api_key),
 ):
     """Submit a new research task"""
-    concurrent = get_concurrent_task_count(api_key)
+    concurrent = await get_concurrent_task_count(api_key)
     if concurrent >= settings.MAX_CONCURRENT_RESEARCH_TASKS:
         raise HTTPException(
             status_code=status.HTTP_429_TOO_MANY_REQUESTS,

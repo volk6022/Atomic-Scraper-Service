@@ -6,6 +6,7 @@ from redis.asyncio import Redis
 from src.core.config import settings
 from src.infrastructure.browser.pool_manager import pool_manager
 from src.domain.registry.action_registry import action_registry
+from src.domain.models.dsl import CommandType
 from src.infrastructure.queue.broker import broker
 
 
@@ -40,8 +41,13 @@ class SessionActor:
         if not action_type:
             return {"status": "error", "message": "Missing action type"}
 
+        try:
+            command_type = CommandType(action_type)
+        except ValueError:
+            return {"status": "error", "message": f"Unknown action: {action_type}"}
+
         params = command.get("params", {})
-        action_func = action_registry.get_action(action_type)
+        action_func = action_registry.get_action(command_type)
         if action_func:
             return await action_func(self.page, params)
         return {"status": "error", "message": f"Unknown action: {action_type}"}

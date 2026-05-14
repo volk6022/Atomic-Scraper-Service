@@ -1,0 +1,40 @@
+=== Extracted 40 results ===
+Position 1: Wikipedia +3
+  Link: https://en.wikipedia.org/wiki/Artificial_intelligence
+  Snippet: 
+
+Position 2: UNESCO +2
+  Link: https://www.unesco.org/en/artificial-intelligence
+  Snippet: 
+
+Position 3: Amazon Web Services (AWS) +1
+  Link: https://aws.amazon.com/what-is/artificial-intelligence/
+  Snippet: 
+
+Position 4: What Is Artificial Intelligence (AI)? - IBMWhat is AI? Artif
+  Link: https://www.ibm.com/think/topics/artificial-intelligence
+  Snippet: at enables computers and machines to simulate human learning, comprehensi...IBM
+
+Position 5: What is artificial intelligence and how is it used? | Topics
+  Link: https://www.europarl.europa.eu/topics/en/article/20200827STO85804/what
+  Snippet: is the ability of a machine to display human-like capabilities such as reasoning
+
+Position 6: What is Artificial Intelligence? - NASAArtificial intelligen
+  Link: https://www.nasa.gov/what-is-artificial-intelligence/
+  Snippet: erform complex tasks normally done by human-reasoning, decision makin...NASA (.g
+
+Position 7: What is AI (artificial intelligence)? - McKinseyAbout Quantu
+  Link: https://www.mckinsey.com/featured-insights/mckinsey-explainers/what-is
+  Snippet: Labs is our center of technology development and client innovation, which has ..
+
+Position 8: Keynote address by President von der Leyen at the European S
+  Link: https://ec.europa.eu/commission/presscorner/detail/en/speech_26_1060
+  Snippet: ldrenWe all recognise the extraordinary opportunities this technological revolut
+
+Position 9: What is Artificial intelligence (AI)? - Michigan Technologic
+  Link: https://www.mtu.edu/computing/ai/
+  Snippet: ence (AI)? Artificial intelligence (AI) encompasses the fields of computer and d
+
+Position 10: Film industry cannot fight rise of artificial intelligence, 
+  Link: https://www.theguardian.com/film/2026/may/12/film-world-must-not-resis
+  Snippet: e announces raft of free upgrades for Android phones. 7h ago. AI-powered hacking

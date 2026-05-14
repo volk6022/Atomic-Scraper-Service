@@ -24,19 +24,41 @@ class GoogleSearchClient:
             )
             page = await context.new_page()
 
-            search_url = f"https://www.google.com/search?q={quote(query)}&num=20"
+            search_url = f"https://www.google.com/search?q={quote(query)}"
             logger.info(f"Navigating to Google search: {query}")
 
-            await page.goto(search_url, wait_until="networkidle", timeout=30000)
+            await page.goto(search_url, wait_until="load", timeout=30000)
+
+            try:
+                await page.wait_for_selector("[data-rpos]", timeout=10000)
+            except Exception:
+                try:
+                    await page.wait_for_selector(".g", timeout=5000)
+                except Exception:
+                    await page.wait_for_selector("#search", timeout=5000)
+
             await asyncio.sleep(2)
 
             results = []
-            result_containers = await page.locator(".g").all()
+            result_containers = await page.locator("[data-rpos]").all()
 
-            for idx, container in enumerate(result_containers[:20], start=1):
+            if not result_containers:
+                result_containers = await page.locator(".g").all()
+            if not result_containers:
+                result_containers = await page.locator(".Gx5Nad").all()
+            if not result_containers:
+                result_containers = await page.locator(".VWHQLd").all()
+
+            logger.info(f"Found {len(result_containers)} result containers")
+
+            for container in result_containers:
                 try:
+                    idx = await container.get_attribute("data-rpos")
+                    idx = int(idx) if idx else len(results) + 1
+
                     title_el = container.locator("h3").first
-                    link_el = container.locator("a").first
+                    link_el = container.locator("a[ping]").first
+                    snippet_el = container.locator(".VwiC3b, .st, [data-sncf]").first
 
                     title = (
                         await title_el.text_content()
@@ -48,8 +70,6 @@ class GoogleSearchClient:
                         if await link_el.count() > 0
                         else ""
                     )
-
-                    snippet_el = container.locator(".VwiC3b, .st").first
                     snippet = (
                         await snippet_el.text_content()
                         if await snippet_el.count() > 0
@@ -66,7 +86,7 @@ class GoogleSearchClient:
                             }
                         )
                 except Exception as e:
-                    logger.debug(f"Failed to extract result {idx}: {e}")
+                    logger.debug(f"Failed to extract result: {e}")
                     continue
 
             if not results:

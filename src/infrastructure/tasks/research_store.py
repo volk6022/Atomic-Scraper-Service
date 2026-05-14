@@ -15,6 +15,6 @@ def set_task(task_id: str, data: dict) -> None:
     _task_store[task_id] = data
 
 
-def get_concurrent_task_count(api_key: str) -> int:
+async def get_concurrent_task_count(api_key: str) -> int:
     """Get number of running tasks for an API key"""
     return sum(1 for t in _task_store.values() if t.get("status") == "running")
