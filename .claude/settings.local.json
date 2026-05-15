@@ -17,7 +17,9 @@
       "Bash(docker exec *)",
       "Bash(curl -s -X POST http://localhost:8000/api/v1/yandex-maps/extract -H 'Content-Type: application/json' -H 'X-API-Key: default_internal_key' -d '{\"category\":\"restaurants\",\"center\":{\"lat\":59.934,\"lng\":30.306},\"radius\":500}')",
       "Bash(python -m json.tool)",
-      "Bash(python -m pytest tests/ -q --tb=short)"
+      "Bash(python -m pytest tests/ -q --tb=short)",
+      "Bash(pm2 restart *)",
+      "Bash(uv run *)"
     ]
   }
 }

@@ -1,6 +1,9 @@
 import asyncio
+import random
 from typing import Optional, List
 from urllib.parse import quote
+
+from src.infrastructure.browser.stealth_pool import HumanEmulator
 
 from src.core.logging import get_logger
 from src.domain.models.requests import SearchRequest, SearchResponse, SearchResult
@@ -27,7 +30,11 @@ class GoogleSearchClient:
             search_url = f"https://www.google.com/search?q={quote(query)}"
             logger.info(f"Navigating to Google search: {query}")
 
-            await page.goto(search_url, wait_until="load", timeout=30000)
+            await page.goto(search_url, wait_until="domcontentloaded", timeout=45000)
+
+            # Detect CAPTCHA immediately — before wasting 20s on selectors
+            if "/sorry/" in page.url or "captcha" in (await page.title()).lower():
+                raise Exception("Google CAPTCHA detected")
 
             try:
                 await page.wait_for_selector("[data-rpos]", timeout=10000)
@@ -37,7 +44,8 @@ class GoogleSearchClient:
                 except Exception:
                     await page.wait_for_selector("#search", timeout=5000)
 
-            await asyncio.sleep(2)
+            await asyncio.sleep(random.uniform(1.5, 4.0))
+            await HumanEmulator.random_scroll(page)
 
             results = []
             result_containers = await page.locator("[data-rpos]").all()
@@ -134,11 +142,13 @@ class GoogleSearchClient:
         try:
             raw_results = await self._search_with_browser(request.q, proxy)
         except Exception as e:
-            logger.warning(f"Browser search failed, trying without proxy: {e}")
+            # Retry with a fresh proxy rotation (new exit IP), never fallback to no-proxy
+            retry_proxy = self._proxy_provider.get_proxy() if self._proxy_provider else proxy
+            logger.warning(f"Browser search failed ({e}), retrying with fresh proxy rotation")
             try:
-                raw_results = await self._search_with_browser(request.q, None)
+                raw_results = await self._search_with_browser(request.q, retry_proxy)
             except Exception as e2:
-                logger.error(f"Both attempts failed: {e2}")
+                logger.error(f"Both proxy attempts failed: {e2}")
                 raise Exception(
                     "Google search blocked or failed. Use residential proxies."
                 )

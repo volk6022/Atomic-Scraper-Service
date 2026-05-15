@@ -110,7 +110,11 @@ class StealthPool:
         stealth_context_options = self._get_stealth_context_options()
         stealth_context_options.update(kwargs)
 
-        return await browser.new_context(**stealth_context_options)
+        context = await browser.new_context(**stealth_context_options)
+        await context.add_init_script(
+            "Object.defineProperty(navigator, 'webdriver', {get: () => undefined})"
+        )
+        return context
 
     def _get_stealth_context_options(self) -> dict:
         """Get stealth context options to avoid detection."""

@@ -34,7 +34,7 @@ class BrowserPoolManager:
                 launch_options = {"headless": headless}
 
                 if proxy:
-                    launch_options["proxy"] = {"server": proxy}
+                    launch_options["proxy"] = proxy if isinstance(proxy, dict) else {"server": proxy}
 
                 self._browser = await self._playwright.chromium.launch(**launch_options)
                 self._browser_headless = headless
@@ -55,7 +55,7 @@ class BrowserPoolManager:
 
             extra = {}
             if proxy:
-                extra["proxy"] = {"server": proxy}
+                extra["proxy"] = proxy if isinstance(proxy, dict) else {"server": proxy}
 
             return await stealth_pool.create_context(user_agent=user_agent, **extra)
 
@@ -72,7 +72,7 @@ class BrowserPoolManager:
             context_options["user_agent"] = user_agent
 
         if proxy:
-            context_options["proxy"] = {"server": proxy}
+            context_options["proxy"] = proxy if isinstance(proxy, dict) else {"server": proxy}
 
         if viewport:
             context_options["viewport"] = viewport

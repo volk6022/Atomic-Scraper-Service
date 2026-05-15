@@ -1,6 +1,7 @@
 import random
-from typing import Optional, Union, List
+from typing import Optional, List
 from pathlib import Path
+from urllib.parse import urlparse
 
 
 class ProxyProvider:
@@ -14,10 +15,19 @@ class ProxyProvider:
             with open(self.proxy_file, "r") as f:
                 self._proxies = [line.strip() for line in f if line.strip()]
 
-    def get_proxy(self) -> Union[str, dict]:
+    def get_proxy(self) -> Optional[dict]:
         if not self._proxies:
-            return {}
-        return random.choice(self._proxies)
+            return None
+        # Chromium does not support SOCKS5 proxy authentication — use HTTP only
+        http_proxies = [p for p in self._proxies if p.startswith("http://")]
+        raw = random.choice(http_proxies if http_proxies else self._proxies)
+        parsed = urlparse(raw)
+        result: dict = {"server": f"{parsed.scheme}://{parsed.hostname}:{parsed.port}"}
+        if parsed.username:
+            result["username"] = parsed.username
+        if parsed.password:
+            result["password"] = parsed.password
+        return result
 
 
 proxy_provider = ProxyProvider()
