@@ -1,0 +1,2852 @@
+[
+  {
+    "query": "What is artificial intelligence",
+    "runs": [
+      {
+        "ok": true,
+        "seconds": 18.070518799999263,
+        "organic_count": 10,
+        "attempts": 1,
+        "error": "",
+        "started_at": 1779117149.4294868,
+        "repeat_idx": 1
+      },
+      {
+        "ok": true,
+        "seconds": 14.797489899967331,
+        "organic_count": 10,
+        "attempts": 1,
+        "error": "",
+        "started_at": 1779117149.4325018,
+        "repeat_idx": 2
+      },
+      {
+        "ok": true,
+        "seconds": 10.077303799975198,
+        "organic_count": 9,
+        "attempts": 1,
+        "error": "",
+        "started_at": 1779117149.4315002,
+        "repeat_idx": 3
+      },
+      {
+        "ok": true,
+        "seconds": 15.802505799976643,
+        "organic_count": 10,
+        "attempts": 2,
+        "error": "",
+        "started_at": 1779117149.4325018,
+        "repeat_idx": 4
+      },
+      {
+        "ok": true,
+        "seconds": 6.211126099980902,
+        "organic_count": 9,
+        "attempts": 1,
+        "error": "",
+        "started_at": 1779117159.6239464,
+        "repeat_idx": 5
+      },
+      {
+        "ok": true,
+        "seconds": 2.628379500005394,
+        "organic_count": 9,
+        "attempts": 1,
+        "error": "",
+        "started_at": 1779117164.3317616,
+        "repeat_idx": 6
+      },
+      {
+        "ok": true,
+        "seconds": 2.59988119994523,
+        "organic_count": 9,
+        "attempts": 1,
+        "error": "",
+        "started_at": 1779117165.3375196,
+        "repeat_idx": 7
+      },
+      {
+        "ok": true,
+        "seconds": 2.7481688000261784,
+        "organic_count": 9,
+        "attempts": 1,
+        "error": "",
+        "started_at": 1779117165.9402397,
+        "repeat_idx": 8
+      },
+      {
+        "ok": true,
+        "seconds": 7.379723599995486,
+        "organic_count": 9,
+        "attempts": 1,
+        "error": "",
+        "started_at": 1779117167.072772,
+        "repeat_idx": 9
+      },
+      {
+        "ok": true,
+        "seconds": 8.093152999994345,
+        "organic_count": 9,
+        "attempts": 1,
+        "error": "",
+        "started_at": 1779117167.6099124,
+        "repeat_idx": 10
+      }
+    ]
+  },
+  {
+    "query": "python asyncio tutorial",
+    "runs": [
+      {
+        "ok": false,
+        "seconds": 12.148469000007026,
+        "organic_count": 0,
+        "attempts": 3,
+        "error": "empty",
+        "started_at": 1779117168.0417764,
+        "repeat_idx": 1
+      },
+      {
+        "ok": true,
+        "seconds": 7.068263699999079,
+        "organic_count": 6,
+        "attempts": 1,
+        "error": "",
+        "started_at": 1779117168.7984245,
+        "repeat_idx": 2
+      },
+      {
+        "ok": false,
+        "seconds": 7.325199200015049,
+        "organic_count": 0,
+        "attempts": 3,
+        "error": "empty",
+        "started_at": 1779117174.5581284,
+        "repeat_idx": 3
+      },
+      {
+        "ok": true,
+        "seconds": 2.9974727999651805,
+        "organic_count": 10,
+        "attempts": 1,
+        "error": "",
+        "started_at": 1779117175.8120768,
+        "repeat_idx": 4
+      },
+      {
+        "ok": true,
+        "seconds": 7.200011400040239,
+        "organic_count": 10,
+        "attempts": 1,
+        "error": "",
+        "started_at": 1779117175.9684224,
+        "repeat_idx": 5
+      },
+      {
+        "ok": true,
+        "seconds": 7.303842400026042,
+        "organic_count": 10,
+        "attempts": 3,
+        "error": "",
+        "started_at": 1779117178.914333,
+        "repeat_idx": 6
+      },
+      {
+        "ok": false,
+        "seconds": 7.385608799988404,
+        "organic_count": 0,
+        "attempts": 3,
+        "error": "empty",
+        "started_at": 1779117180.2915893,
+        "repeat_idx": 7
+      },
+      {
+        "ok": false,
+        "seconds": 7.344229899987113,
+        "organic_count": 0,
+        "attempts": 3,
+        "error": "empty",
+        "started_at": 1779117181.994668,
+        "repeat_idx": 8
+      },
+      {
+        "ok": true,
+        "seconds": 4.8901415999862365,
+        "organic_count": 10,
+        "attempts": 2,
+        "error": "",
+        "started_at": 1779117183.276306,
+        "repeat_idx": 9
+      },
+      {
+        "ok": true,
+        "seconds": 2.470999200013466,
+        "organic_count": 10,
+        "attempts": 1,
+        "error": "",
+        "started_at": 1779117186.3187513,
+        "repeat_idx": 10
+      }
+    ]
+  },
+  {
+    "query": "best coffee shops Saint Petersburg Russia",
+    "runs": [
+      {
+        "ok": false,
+        "seconds": 9.86678949999623,
+        "organic_count": 0,
+        "attempts": 3,
+        "error": "empty",
+        "started_at": 1779117187.787033,
+        "repeat_idx": 1
+      },
+      {
+        "ok": false,
+        "seconds": 9.34570010000607,
+        "organic_count": 0,
+        "attempts": 3,
+        "error": "empty",
+        "started_at": 1779117188.2679121,
+        "repeat_idx": 2
+      },
+      {
+        "ok": true,
+        "seconds": 6.793749500007834,
+        "organic_count": 10,
+        "attempts": 2,
+        "error": "",
+        "started_at": 1779117188.9037292,
+        "repeat_idx": 3
+      },
+      {
+        "ok": true,
+        "seconds": 4.654274099972099,
+        "organic_count": 10,
+        "attempts": 1,
+        "error": "",
+        "started_at": 1779117189.4486234,
+        "repeat_idx": 4
+      },
+      {
+        "ok": true,
+        "seconds": 8.20765830000164,
+        "organic_count": 10,
+        "attempts": 3,
+        "error": "",
+        "started_at": 1779117194.2138286,
+        "repeat_idx": 5
+      },
+      {
+        "ok": false,
+        "seconds": 8.028288000030443,
+        "organic_count": 0,
+        "attempts": 3,
+        "error": "empty",
+        "started_at": 1779117195.8093305,
+        "repeat_idx": 6
+      },
+      {
+        "ok": false,
+        "seconds": 7.9256757000111975,
+        "organic_count": 0,
+        "attempts": 3,
+        "error": "empty",
+        "started_at": 1779117197.7166471,
+        "repeat_idx": 7
+      },
+      {
+        "ok": false,
+        "seconds": 11.686308500007726,
+        "organic_count": 0,
+        "attempts": 3,
+        "error": "empty",
+        "started_at": 1779117197.7626357,
+        "repeat_idx": 8
+      },
+      {
+        "ok": true,
+        "seconds": 5.581177700019907,
+        "organic_count": 10,
+        "attempts": 2,
+        "error": "",
+        "started_at": 1779117202.5277555,
+        "repeat_idx": 9
+      },
+      {
+        "ok": true,
+        "seconds": 9.022210699971765,
+        "organic_count": 10,
+        "attempts": 2,
+        "error": "",
+        "started_at": 1779117203.9469256,
+        "repeat_idx": 10
+      }
+    ]
+  },
+  {
+    "query": "how to bake sourdough bread at home",
+    "runs": [
+      {
+        "ok": false,
+        "seconds": 15.587372000038158,
+        "organic_count": 0,
+        "attempts": 3,
+        "error": "empty",
+        "started_at": 1779117205.7540352,
+        "repeat_idx": 1
+      },
+      {
+        "ok": true,
+        "seconds": 2.675691799959168,
+        "organic_count": 10,
+        "attempts": 1,
+        "error": "",
+        "started_at": 1779117208.211253,
+        "repeat_idx": 2
+      },
+      {
+        "ok": false,
+        "seconds": 11.388572700030636,
+        "organic_count": 0,
+        "attempts": 3,
+        "error": "empty",
+        "started_at": 1779117209.5517466,
+        "repeat_idx": 3
+      },
+      {
+        "ok": true,
+        "seconds": 11.802187799999956,
+        "organic_count": 10,
+        "attempts": 3,
+        "error": "",
+        "started_at": 1779117210.9890804,
+        "repeat_idx": 4
+      },
+      {
+        "ok": true,
+        "seconds": 9.212391699955333,
+        "organic_count": 10,
+        "attempts": 2,
+        "error": "",
+        "started_at": 1779117213.0789702,
+        "repeat_idx": 5
+      },
+      {
+        "ok": false,
+        "seconds": 7.34316079999553,
+        "organic_count": 0,
+        "attempts": 3,
+        "error": "empty",
+        "started_at": 1779117221.0508015,
+        "repeat_idx": 6
+      },
+      {
+        "ok": true,
+        "seconds": 7.517012700031046,
+        "organic_count": 10,
+        "attempts": 3,
+        "error": "",
+        "started_at": 1779117221.453824,
+        "repeat_idx": 7
+      },
+      {
+        "ok": true,
+        "seconds": 3.017556600039825,
+        "organic_count": 10,
+        "attempts": 1,
+        "error": "",
+        "started_at": 1779117222.398774,
+        "repeat_idx": 8
+      },
+      {
+        "ok": true,
+        "seconds": 2.583725099975709,
+        "organic_count": 10,
+        "attempts": 1,
+        "error": "",
+        "started_at": 1779117222.8966959,
+        "repeat_idx": 9
+      },
+      {
+        "ok": true,
+        "seconds": 5.136678000038955,
+        "organic_count": 10,
+        "attempts": 2,
+        "error": "",
+        "started_at": 1779117225.5340106,
+        "repeat_idx": 10
+      }
+    ]
+  },
+  {
+    "query": "GDP of Germany 2024",
+    "runs": [
+      {
+        "ok": false,
+        "seconds": 8.306722199951764,
+        "organic_count": 0,
+        "attempts": 3,
+        "error": "empty",
+        "started_at": 1779117225.5951583,
+        "repeat_idx": 1
+      },
+      {
+        "ok": false,
+        "seconds": 7.85730329999933,
+        "organic_count": 0,
+        "attempts": 3,
+        "error": "empty",
+        "started_at": 1779117228.4947226,
+        "repeat_idx": 2
+      },
+      {
+        "ok": false,
+        "seconds": 9.747796199982986,
+        "organic_count": 0,
+        "attempts": 3,
+        "error": "empty",
+        "started_at": 1779117229.084106,
+        "repeat_idx": 3
+      },
+      {
+        "ok": false,
+        "seconds": 8.191498000000138,
+        "organic_count": 0,
+        "attempts": 3,
+        "error": "empty",
+        "started_at": 1779117230.7711525,
+        "repeat_idx": 4
+      },
+      {
+        "ok": true,
+        "seconds": 2.8648576000123285,
+        "organic_count": 10,
+        "attempts": 1,
+        "error": "",
+        "started_at": 1779117234.007162,
+        "repeat_idx": 5
+      },
+      {
+        "ok": true,
+        "seconds": 8.454682699986733,
+        "organic_count": 10,
+        "attempts": 3,
+        "error": "",
+        "started_at": 1779117236.4550607,
+        "repeat_idx": 6
+      },
+      {
+        "ok": true,
+        "seconds": 5.40111449995311,
+        "organic_count": 10,
+        "attempts": 2,
+        "error": "",
+        "started_at": 1779117236.9774268,
+        "repeat_idx": 7
+      },
+      {
+        "ok": true,
+        "seconds": 2.699623900000006,
+        "organic_count": 10,
+        "attempts": 1,
+        "error": "",
+        "started_at": 1779117238.9387777,
+        "repeat_idx": 8
+      },
+      {
+        "ok": true,
+        "seconds": 5.252066000015475,
+        "organic_count": 10,
+        "attempts": 2,
+        "error": "",
+        "started_at": 1779117239.0774708,
+        "repeat_idx": 9
+      },
+      {
+        "ok": true,
+        "seconds": 2.6646328000351787,
+        "organic_count": 10,
+        "attempts": 1,
+        "error": "",
+        "started_at": 1779117241.755451,
+        "repeat_idx": 10
+      }
+    ]
+  },
+  {
+    "query": "Tesla stock price last 5 years",
+    "runs": [
+      {
+        "ok": true,
+        "seconds": 2.65084710001247,
+        "organic_count": 10,
+        "attempts": 1,
+        "error": "",
+        "started_at": 1779117242.4814188,
+        "repeat_idx": 1
+      },
+      {
+        "ok": false,
+        "seconds": 7.719651899999008,
+        "organic_count": 0,
+        "attempts": 3,
+        "error": "empty",
+        "started_at": 1779117244.4203224,
+        "repeat_idx": 2
+      },
+      {
+        "ok": true,
+        "seconds": 2.576769700041041,
+        "organic_count": 10,
+        "attempts": 1,
+        "error": "",
+        "started_at": 1779117244.5209053,
+        "repeat_idx": 3
+      },
+      {
+        "ok": true,
+        "seconds": 7.467423300025985,
+        "organic_count": 10,
+        "attempts": 3,
+        "error": "",
+        "started_at": 1779117245.016822,
+        "repeat_idx": 4
+      },
+      {
+        "ok": false,
+        "seconds": 7.685926500009373,
+        "organic_count": 0,
+        "attempts": 3,
+        "error": "empty",
+        "started_at": 1779117245.2468588,
+        "repeat_idx": 5
+      },
+      {
+        "ok": true,
+        "seconds": 2.667792099993676,
+        "organic_count": 10,
+        "attempts": 1,
+        "error": "",
+        "started_at": 1779117247.1988719,
+        "repeat_idx": 6
+      },
+      {
+        "ok": false,
+        "seconds": 8.323366500029806,
+        "organic_count": 0,
+        "attempts": 3,
+        "error": "empty",
+        "started_at": 1779117249.9926796,
+        "repeat_idx": 7
+      },
+      {
+        "ok": true,
+        "seconds": 2.6330760999699123,
+        "organic_count": 10,
+        "attempts": 1,
+        "error": "",
+        "started_at": 1779117252.252452,
+        "repeat_idx": 8
+      },
+      {
+        "ok": true,
+        "seconds": 2.573248100001365,
+        "organic_count": 10,
+        "attempts": 1,
+        "error": "",
+        "started_at": 1779117252.594478,
+        "repeat_idx": 9
+      },
+      {
+        "ok": false,
+        "seconds": 7.835280500003137,
+        "organic_count": 0,
+        "attempts": 3,
+        "error": "empty",
+        "started_at": 1779117253.0411384,
+        "repeat_idx": 10
+      }
+    ]
+  },
+  {
+    "query": "climate change effects 2025",
+    "runs": [
+      {
+        "ok": true,
+        "seconds": 2.818666699982714,
+        "organic_count": 10,
+        "attempts": 1,
+        "error": "",
+        "started_at": 1779117254.9870784,
+        "repeat_idx": 1
+      },
+      {
+        "ok": false,
+        "seconds": 7.38955329998862,
+        "organic_count": 0,
+        "attempts": 3,
+        "error": "empty",
+        "started_at": 1779117255.2831993,
+        "repeat_idx": 2
+      },
+      {
+        "ok": true,
+        "seconds": 2.5559560999972746,
+        "organic_count": 10,
+        "attempts": 1,
+        "error": "",
+        "started_at": 1779117257.9167445,
+        "repeat_idx": 3
+      },
+      {
+        "ok": false,
+        "seconds": 7.236501100007445,
+        "organic_count": 0,
+        "attempts": 3,
+        "error": "empty",
+        "started_at": 1779117258.4110174,
+        "repeat_idx": 4
+      },
+      {
+        "ok": false,
+        "seconds": 7.488830999995116,
+        "organic_count": 0,
+        "attempts": 3,
+        "error": "empty",
+        "started_at": 1779117260.58455,
+        "repeat_idx": 5
+      },
+      {
+        "ok": false,
+        "seconds": 7.420616000017617,
+        "organic_count": 0,
+        "attempts": 3,
+        "error": "empty",
+        "started_at": 1779117260.9889219,
+        "repeat_idx": 6
+      },
+      {
+        "ok": false,
+        "seconds": 7.477862999949139,
+        "organic_count": 0,
+        "attempts": 3,
+        "error": "empty",
+        "started_at": 1779117262.7754076,
+        "repeat_idx": 7
+      },
+      {
+        "ok": false,
+        "seconds": 15.317062699992675,
+        "organic_count": 0,
+        "attempts": 3,
+        "error": "empty",
+        "started_at": 1779117265.7502282,
+        "repeat_idx": 8
+      },
+      {
+        "ok": false,
+        "seconds": 11.307689200039022,
+        "organic_count": 0,
+        "attempts": 3,
+        "error": "empty",
+        "started_at": 1779117268.1827788,
+        "repeat_idx": 9
+      },
+      {
+        "ok": false,
+        "seconds": 11.54876030003652,
+        "organic_count": 0,
+        "attempts": 3,
+        "error": "empty",
+        "started_at": 1779117268.5219529,
+        "repeat_idx": 10
+      }
+    ]
+  },
+  {
+    "query": "best science fiction movies 2024",
+    "runs": [
+      {
+        "ok": false,
+        "seconds": 11.205734899966046,
+        "organic_count": 0,
+        "attempts": 3,
+        "error": "empty",
+        "started_at": 1779117270.3660505,
+        "repeat_idx": 1
+      },
+      {
+        "ok": false,
+        "seconds": 7.8283039999660105,
+        "organic_count": 0,
+        "attempts": 3,
+        "error": "empty",
+        "started_at": 1779117279.6012914,
+        "repeat_idx": 2
+      },
+      {
+        "ok": false,
+        "seconds": 7.804781099956017,
+        "organic_count": 0,
+        "attempts": 3,
+        "error": "empty",
+        "started_at": 1779117280.172988,
+        "repeat_idx": 3
+      },
+      {
+        "ok": false,
+        "seconds": 8.196361400012393,
+        "organic_count": 0,
+        "attempts": 3,
+        "error": "empty",
+        "started_at": 1779117281.176796,
+        "repeat_idx": 4
+      },
+      {
+        "ok": false,
+        "seconds": 9.807112199952826,
+        "organic_count": 0,
+        "attempts": 3,
+        "error": "empty",
+        "started_at": 1779117281.675242,
+        "repeat_idx": 5
+      },
+      {
+        "ok": false,
+        "seconds": 7.884370399988256,
+        "organic_count": 0,
+        "attempts": 3,
+        "error": "empty",
+        "started_at": 1779117287.5322042,
+        "repeat_idx": 6
+      },
+      {
+        "ok": true,
+        "seconds": 8.293300199962687,
+        "organic_count": 9,
+        "attempts": 3,
+        "error": "",
+        "started_at": 1779117288.0857952,
+        "repeat_idx": 7
+      },
+      {
+        "ok": false,
+        "seconds": 7.81281560001662,
+        "organic_count": 0,
+        "attempts": 3,
+        "error": "empty",
+        "started_at": 1779117289.4792354,
+        "repeat_idx": 8
+      },
+      {
+        "ok": false,
+        "seconds": 7.830848700017668,
+        "organic_count": 0,
+        "attempts": 3,
+        "error": "empty",
+        "started_at": 1779117291.5887117,
+        "repeat_idx": 9
+      },
+      {
+        "ok": false,
+        "seconds": 7.507230199989863,
+        "organic_count": 0,
+        "attempts": 3,
+        "error": "empty",
+        "started_at": 1779117295.5223768,
+        "repeat_idx": 10
+      }
+    ]
+  },
+  {
+    "query": "buy iPhone 15 Pro Max",
+    "runs": [
+      {
+        "ok": false,
+        "seconds": 7.5609344999538735,
+        "organic_count": 0,
+        "attempts": 3,
+        "error": "empty",
+        "started_at": 1779117296.494628,
+        "repeat_idx": 1
+      },
+      {
+        "ok": true,
+        "seconds": 8.440783499972895,
+        "organic_count": 10,
+        "attempts": 3,
+        "error": "",
+        "started_at": 1779117297.392309,
+        "repeat_idx": 2
+      },
+      {
+        "ok": false,
+        "seconds": 8.051799699955154,
+        "organic_count": 0,
+        "attempts": 3,
+        "error": "empty",
+        "started_at": 1779117299.525401,
+        "repeat_idx": 3
+      },
+      {
+        "ok": false,
+        "seconds": 21.6050579000148,
+        "organic_count": 0,
+        "attempts": 3,
+        "error": "empty",
+        "started_at": 1779117303.1322398,
+        "repeat_idx": 4
+      },
+      {
+        "ok": false,
+        "seconds": 7.83136170002399,
+        "organic_count": 0,
+        "attempts": 3,
+        "error": "empty",
+        "started_at": 1779117304.1699295,
+        "repeat_idx": 5
+      },
+      {
+        "ok": false,
+        "seconds": 7.707603299990296,
+        "organic_count": 0,
+        "attempts": 3,
+        "error": "empty",
+        "started_at": 1779117305.9459765,
+        "repeat_idx": 6
+      },
+      {
+        "ok": false,
+        "seconds": 7.968338600010611,
+        "organic_count": 0,
+        "attempts": 3,
+        "error": "empty",
+        "started_at": 1779117307.690927,
+        "repeat_idx": 7
+      },
+      {
+        "ok": false,
+        "seconds": 8.044488699990325,
+        "organic_count": 0,
+        "attempts": 3,
+        "error": "empty",
+        "started_at": 1779117312.1049953,
+        "repeat_idx": 8
+      },
+      {
+        "ok": false,
+        "seconds": 10.825154100020882,
+        "organic_count": 0,
+        "attempts": 3,
+        "error": "empty",
+        "started_at": 1779117313.7609446,
+        "repeat_idx": 9
+      },
+      {
+        "ok": false,
+        "seconds": 9.425035600026604,
+        "organic_count": 0,
+        "attempts": 3,
+        "error": "empty",
+        "started_at": 1779117315.7713602,
+        "repeat_idx": 10
+      }
+    ]
+  },
+  {
+    "query": "weather forecast Moscow tomorrow",
+    "runs": [
+      {
+        "ok": false,
+        "seconds": 11.544947799993679,
+        "organic_count": 0,
+        "attempts": 3,
+        "error": "empty",
+        "started_at": 1779117320.2645316,
+        "repeat_idx": 1
+      },
+      {
+        "ok": true,
+        "seconds": 7.850992500025313,
+        "organic_count": 10,
+        "attempts": 3,
+        "error": "",
+        "started_at": 1779117324.687354,
+        "repeat_idx": 2
+      },
+      {
+        "ok": false,
+        "seconds": 7.530763400020078,
+        "organic_count": 0,
+        "attempts": 3,
+        "error": "empty",
+        "started_at": 1779117324.8408184,
+        "repeat_idx": 3
+      },
+      {
+        "ok": false,
+        "seconds": 10.228198600001633,
+        "organic_count": 0,
+        "attempts": 3,
+        "error": "empty",
+        "started_at": 1779117325.307283,
+        "repeat_idx": 4
+      },
+      {
+        "ok": false,
+        "seconds": 22.455109199974686,
+        "organic_count": 0,
+        "attempts": 3,
+        "error": "empty",
+        "started_at": 1779117331.9150162,
+        "repeat_idx": 5
+      },
+      {
+        "ok": false,
+        "seconds": 9.076105300046038,
+        "organic_count": 0,
+        "attempts": 3,
+        "error": "empty",
+        "started_at": 1779117332.4840147,
+        "repeat_idx": 6
+      },
+      {
+        "ok": false,
+        "seconds": 9.290603399975225,
+        "organic_count": 0,
+        "attempts": 3,
+        "error": "empty",
+        "started_at": 1779117332.6530309,
+        "repeat_idx": 7
+      },
+      {
+        "ok": false,
+        "seconds": 7.931951700011268,
+        "organic_count": 0,
+        "attempts": 3,
+        "error": "empty",
+        "started_at": 1779117335.6406121,
+        "repeat_idx": 8
+      },
+      {
+        "ok": false,
+        "seconds": 8.262914999970235,
+        "organic_count": 0,
+        "attempts": 3,
+        "error": "empty",
+        "started_at": 1779117341.6623118,
+        "repeat_idx": 9
+      },
+      {
+        "ok": false,
+        "seconds": 8.50304529996356,
+        "organic_count": 0,
+        "attempts": 3,
+        "error": "empty",
+        "started_at": 1779117342.067053,
+        "repeat_idx": 10
+      }
+    ]
+  },
+  {
+    "query": "JavaScript framework comparison 2024",
+    "runs": [
+      {
+        "ok": false,
+        "seconds": 8.259314799972344,
+        "organic_count": 0,
+        "attempts": 3,
+        "error": "empty",
+        "started_at": 1779117343.6748297,
+        "repeat_idx": 1
+      },
+      {
+        "ok": false,
+        "seconds": 6.745779799995944,
+        "organic_count": 0,
+        "attempts": 3,
+        "error": "empty",
+        "started_at": 1779117350.0366688,
+        "repeat_idx": 2
+      },
+      {
+        "ok": false,
+        "seconds": 7.583002500003204,
+        "organic_count": 0,
+        "attempts": 3,
+        "error": "empty",
+        "started_at": 1779117350.6741607,
+        "repeat_idx": 3
+      },
+      {
+        "ok": false,
+        "seconds": 9.161184099968523,
+        "organic_count": 0,
+        "attempts": 3,
+        "error": "empty",
+        "started_at": 1779117352.0532548,
+        "repeat_idx": 4
+      },
+      {
+        "ok": true,
+        "seconds": 7.346111999999266,
+        "organic_count": 10,
+        "attempts": 3,
+        "error": "",
+        "started_at": 1779117354.4851048,
+        "repeat_idx": 5
+      },
+      {
+        "ok": true,
+        "seconds": 2.8964589000097476,
+        "organic_count": 10,
+        "attempts": 1,
+        "error": "",
+        "started_at": 1779117356.8955693,
+        "repeat_idx": 6
+      },
+      {
+        "ok": true,
+        "seconds": 2.694684199988842,
+        "organic_count": 10,
+        "attempts": 1,
+        "error": "",
+        "started_at": 1779117358.3719785,
+        "repeat_idx": 7
+      },
+      {
+        "ok": true,
+        "seconds": 2.617787400027737,
+        "organic_count": 10,
+        "attempts": 1,
+        "error": "",
+        "started_at": 1779117359.8934667,
+        "repeat_idx": 8
+      },
+      {
+        "ok": true,
+        "seconds": 7.742661399999633,
+        "organic_count": 10,
+        "attempts": 3,
+        "error": "",
+        "started_at": 1779117361.1704361,
+        "repeat_idx": 9
+      },
+      {
+        "ok": true,
+        "seconds": 5.047489700024016,
+        "organic_count": 10,
+        "attempts": 2,
+        "error": "",
+        "started_at": 1779117361.3244543,
+        "repeat_idx": 10
+      }
+    ]
+  },
+  {
+    "query": "best restaurants in Tokyo Michelin",
+    "runs": [
+      {
+        "ok": false,
+        "seconds": 8.078304799972102,
+        "organic_count": 0,
+        "attempts": 3,
+        "error": "empty",
+        "started_at": 1779117361.9427207,
+        "repeat_idx": 1
+      },
+      {
+        "ok": true,
+        "seconds": 3.2065357000101358,
+        "organic_count": 6,
+        "attempts": 1,
+        "error": "",
+        "started_at": 1779117362.6204524,
+        "repeat_idx": 2
+      },
+      {
+        "ok": true,
+        "seconds": 5.334872099978384,
+        "organic_count": 6,
+        "attempts": 2,
+        "error": "",
+        "started_at": 1779117365.9303348,
+        "repeat_idx": 3
+      },
+      {
+        "ok": true,
+        "seconds": 2.9173898000153713,
+        "organic_count": 10,
+        "attempts": 1,
+        "error": "",
+        "started_at": 1779117366.4847758,
+        "repeat_idx": 4
+      },
+      {
+        "ok": true,
+        "seconds": 3.391501900041476,
+        "organic_count": 10,
+        "attempts": 1,
+        "error": "",
+        "started_at": 1779117369.021081,
+        "repeat_idx": 5
+      },
+      {
+        "ok": true,
+        "seconds": 5.474857399996836,
+        "organic_count": 10,
+        "attempts": 2,
+        "error": "",
+        "started_at": 1779117369.5031445,
+        "repeat_idx": 6
+      },
+      {
+        "ok": true,
+        "seconds": 2.7241632000077516,
+        "organic_count": 10,
+        "attempts": 1,
+        "error": "",
+        "started_at": 1779117370.126111,
+        "repeat_idx": 7
+      },
+      {
+        "ok": true,
+        "seconds": 2.863469800038729,
+        "organic_count": 10,
+        "attempts": 1,
+        "error": "",
+        "started_at": 1779117371.3796878,
+        "repeat_idx": 8
+      },
+      {
+        "ok": true,
+        "seconds": 2.9233724999940023,
+        "organic_count": 6,
+        "attempts": 1,
+        "error": "",
+        "started_at": 1779117372.5218105,
+        "repeat_idx": 9
+      },
+      {
+        "ok": false,
+        "seconds": 7.74368970002979,
+        "organic_count": 0,
+        "attempts": 3,
+        "error": "empty",
+        "started_at": 1779117372.9541228,
+        "repeat_idx": 10
+      }
+    ]
+  },
+  {
+    "query": "how to fix WiFi connection issues",
+    "runs": [
+      {
+        "ok": true,
+        "seconds": 5.4106672999914736,
+        "organic_count": 7,
+        "attempts": 2,
+        "error": "",
+        "started_at": 1779117374.3536546,
+        "repeat_idx": 1
+      },
+      {
+        "ok": true,
+        "seconds": 7.890139499970246,
+        "organic_count": 7,
+        "attempts": 3,
+        "error": "",
+        "started_at": 1779117375.0790372,
+        "repeat_idx": 2
+      },
+      {
+        "ok": false,
+        "seconds": 8.157942100020591,
+        "organic_count": 0,
+        "attempts": 3,
+        "error": "empty",
+        "started_at": 1779117375.5577848,
+        "repeat_idx": 3
+      },
+      {
+        "ok": true,
+        "seconds": 2.6632411999744363,
+        "organic_count": 7,
+        "attempts": 1,
+        "error": "",
+        "started_at": 1779117379.8660038,
+        "repeat_idx": 4
+      },
+      {
+        "ok": false,
+        "seconds": 7.290821000002325,
+        "organic_count": 0,
+        "attempts": 3,
+        "error": "empty",
+        "started_at": 1779117380.8081212,
+        "repeat_idx": 5
+      },
+      {
+        "ok": true,
+        "seconds": 5.028012000024319,
+        "organic_count": 10,
+        "attempts": 2,
+        "error": "",
+        "started_at": 1779117382.6304688,
+        "repeat_idx": 6
+      },
+      {
+        "ok": false,
+        "seconds": 9.025930400006473,
+        "organic_count": 0,
+        "attempts": 3,
+        "error": "empty",
+        "started_at": 1779117383.079193,
+        "repeat_idx": 7
+      },
+      {
+        "ok": false,
+        "seconds": 7.311913800018374,
+        "organic_count": 0,
+        "attempts": 3,
+        "error": "empty",
+        "started_at": 1779117383.8220963,
+        "repeat_idx": 8
+      },
+      {
+        "ok": true,
+        "seconds": 8.13343350001378,
+        "organic_count": 10,
+        "attempts": 3,
+        "error": "",
+        "started_at": 1779117387.767199,
+        "repeat_idx": 9
+      },
+      {
+        "ok": false,
+        "seconds": 8.08191499998793,
+        "organic_count": 0,
+        "attempts": 3,
+        "error": "empty",
+        "started_at": 1779117388.2123814,
+        "repeat_idx": 10
+      }
+    ]
+  },
+  {
+    "query": "history of the Roman Empire",
+    "runs": [
+      {
+        "ok": true,
+        "seconds": 12.348370700026862,
+        "organic_count": 10,
+        "attempts": 3,
+        "error": "",
+        "started_at": 1779117391.2466104,
+        "repeat_idx": 1
+      },
+      {
+        "ok": true,
+        "seconds": 3.076344600005541,
+        "organic_count": 10,
+        "attempts": 1,
+        "error": "",
+        "started_at": 1779117392.20854,
+        "repeat_idx": 2
+      },
+      {
+        "ok": true,
+        "seconds": 2.689814099983778,
+        "organic_count": 10,
+        "attempts": 1,
+        "error": "",
+        "started_at": 1779117395.3859742,
+        "repeat_idx": 3
+      },
+      {
+        "ok": true,
+        "seconds": 6.284266899980139,
+        "organic_count": 10,
+        "attempts": 2,
+        "error": "",
+        "started_at": 1779117396.0062225,
+        "repeat_idx": 4
+      },
+      {
+        "ok": false,
+        "seconds": 10.178545399976429,
+        "organic_count": 0,
+        "attempts": 3,
+        "error": "empty",
+        "started_at": 1779117396.4071813,
+        "repeat_idx": 5
+      },
+      {
+        "ok": true,
+        "seconds": 6.079309599997941,
+        "organic_count": 10,
+        "attempts": 1,
+        "error": "",
+        "started_at": 1779117398.1808312,
+        "repeat_idx": 6
+      },
+      {
+        "ok": true,
+        "seconds": 3.987922600004822,
+        "organic_count": 10,
+        "attempts": 1,
+        "error": "",
+        "started_at": 1779117402.3999727,
+        "repeat_idx": 7
+      },
+      {
+        "ok": false,
+        "seconds": 9.072487799974624,
+        "organic_count": 0,
+        "attempts": 3,
+        "error": "empty",
+        "started_at": 1779117403.7032652,
+        "repeat_idx": 8
+      },
+      {
+        "ok": true,
+        "seconds": 17.04436880000867,
+        "organic_count": 10,
+        "attempts": 3,
+        "error": "",
+        "started_at": 1779117404.364011,
+        "repeat_idx": 9
+      },
+      {
+        "ok": false,
+        "seconds": 17.43463219999103,
+        "organic_count": 0,
+        "attempts": 3,
+        "error": "empty",
+        "started_at": 1779117406.493347,
+        "repeat_idx": 10
+      }
+    ]
+  },
+  {
+    "query": "cryptocurrency market analysis today",
+    "runs": [
+      {
+        "ok": true,
+        "seconds": 4.775402100000065,
+        "organic_count": 10,
+        "attempts": 1,
+        "error": "",
+        "started_at": 1779117406.695285,
+        "repeat_idx": 1
+      },
+      {
+        "ok": true,
+        "seconds": 3.361713799997233,
+        "organic_count": 10,
+        "attempts": 1,
+        "error": "",
+        "started_at": 1779117411.5782602,
+        "repeat_idx": 2
+      },
+      {
+        "ok": true,
+        "seconds": 10.982990699994843,
+        "organic_count": 10,
+        "attempts": 3,
+        "error": "",
+        "started_at": 1779117412.890583,
+        "repeat_idx": 3
+      },
+      {
+        "ok": true,
+        "seconds": 7.583784199960064,
+        "organic_count": 10,
+        "attempts": 2,
+        "error": "",
+        "started_at": 1779117415.04406,
+        "repeat_idx": 4
+      },
+      {
+        "ok": true,
+        "seconds": 4.004389000008814,
+        "organic_count": 10,
+        "attempts": 1,
+        "error": "",
+        "started_at": 1779117421.5192022,
+        "repeat_idx": 5
+      },
+      {
+        "ok": true,
+        "seconds": 2.8999314000247978,
+        "organic_count": 10,
+        "attempts": 1,
+        "error": "",
+        "started_at": 1779117422.736621,
+        "repeat_idx": 6
+      },
+      {
+        "ok": true,
+        "seconds": 3.2810591000015847,
+        "organic_count": 10,
+        "attempts": 1,
+        "error": "",
+        "started_at": 1779117423.973804,
+        "repeat_idx": 7
+      },
+      {
+        "ok": true,
+        "seconds": 8.402788800012786,
+        "organic_count": 10,
+        "attempts": 1,
+        "error": "",
+        "started_at": 1779117424.0517652,
+        "repeat_idx": 8
+      },
+      {
+        "ok": true,
+        "seconds": 4.11597589997109,
+        "organic_count": 10,
+        "attempts": 1,
+        "error": "",
+        "started_at": 1779117425.6325233,
+        "repeat_idx": 9
+      },
+      {
+        "ok": true,
+        "seconds": 5.196360200003255,
+        "organic_count": 10,
+        "attempts": 1,
+        "error": "",
+        "started_at": 1779117425.7410078,
+        "repeat_idx": 10
+      }
+    ]
+  },
+  {
+    "query": "yoga poses for beginners",
+    "runs": [
+      {
+        "ok": true,
+        "seconds": 4.874790700036101,
+        "organic_count": 5,
+        "attempts": 1,
+        "error": "",
+        "started_at": 1779117427.3617625,
+        "repeat_idx": 1
+      },
+      {
+        "ok": true,
+        "seconds": 6.939737799984869,
+        "organic_count": 10,
+        "attempts": 2,
+        "error": "",
+        "started_at": 1779117429.8595068,
+        "repeat_idx": 2
+      },
+      {
+        "ok": true,
+        "seconds": 3.7821456999517977,
+        "organic_count": 9,
+        "attempts": 1,
+        "error": "",
+        "started_at": 1779117431.043838,
+        "repeat_idx": 3
+      },
+      {
+        "ok": true,
+        "seconds": 8.999483400024474,
+        "organic_count": 10,
+        "attempts": 3,
+        "error": "",
+        "started_at": 1779117432.3449745,
+        "repeat_idx": 4
+      },
+      {
+        "ok": true,
+        "seconds": 3.6895450999727473,
+        "organic_count": 9,
+        "attempts": 1,
+        "error": "",
+        "started_at": 1779117432.5597558,
+        "repeat_idx": 5
+      },
+      {
+        "ok": true,
+        "seconds": 16.552885700017214,
+        "organic_count": 9,
+        "attempts": 3,
+        "error": "",
+        "started_at": 1779117434.9291058,
+        "repeat_idx": 6
+      },
+      {
+        "ok": false,
+        "seconds": 12.38885260000825,
+        "organic_count": 0,
+        "attempts": 3,
+        "error": "empty",
+        "started_at": 1779117436.3642569,
+        "repeat_idx": 7
+      },
+      {
+        "ok": false,
+        "seconds": 10.641803700011224,
+        "organic_count": 0,
+        "attempts": 3,
+        "error": "empty",
+        "started_at": 1779117436.904467,
+        "repeat_idx": 8
+      },
+      {
+        "ok": true,
+        "seconds": 3.8578713999595493,
+        "organic_count": 10,
+        "attempts": 1,
+        "error": "",
+        "started_at": 1779117441.4548225,
+        "repeat_idx": 9
+      },
+      {
+        "ok": true,
+        "seconds": 4.647386300028302,
+        "organic_count": 9,
+        "attempts": 1,
+        "error": "",
+        "started_at": 1779117445.4169962,
+        "repeat_idx": 10
+      }
+    ]
+  },
+  {
+    "query": "top universities in Europe 2024",
+    "runs": [
+      {
+        "ok": true,
+        "seconds": 7.300132499949541,
+        "organic_count": 9,
+        "attempts": 2,
+        "error": "",
+        "started_at": 1779117447.64905,
+        "repeat_idx": 1
+      },
+      {
+        "ok": true,
+        "seconds": 6.974693599971943,
+        "organic_count": 9,
+        "attempts": 2,
+        "error": "",
+        "started_at": 1779117448.854763,
+        "repeat_idx": 2
+      },
+      {
+        "ok": false,
+        "seconds": 10.55112730001565,
+        "organic_count": 0,
+        "attempts": 3,
+        "error": "empty",
+        "started_at": 1779117450.1749318,
+        "repeat_idx": 3
+      },
+      {
+        "ok": true,
+        "seconds": 11.07116649998352,
+        "organic_count": 9,
+        "attempts": 3,
+        "error": "",
+        "started_at": 1779117451.5839136,
+        "repeat_idx": 4
+      },
+      {
+        "ok": false,
+        "seconds": 14.980981000000611,
+        "organic_count": 0,
+        "attempts": 3,
+        "error": "empty",
+        "started_at": 1779117455.0504296,
+        "repeat_idx": 5
+      },
+      {
+        "ok": false,
+        "seconds": 7.878300599986687,
+        "organic_count": 0,
+        "attempts": 3,
+        "error": "empty",
+        "started_at": 1779117455.9336019,
+        "repeat_idx": 6
+      },
+      {
+        "ok": true,
+        "seconds": 15.550079000007827,
+        "organic_count": 10,
+        "attempts": 3,
+        "error": "",
+        "started_at": 1779117460.8369863,
+        "repeat_idx": 7
+      },
+      {
+        "ok": true,
+        "seconds": 11.967759600025602,
+        "organic_count": 10,
+        "attempts": 3,
+        "error": "",
+        "started_at": 1779117462.7669964,
+        "repeat_idx": 8
+      },
+      {
+        "ok": true,
+        "seconds": 11.816245800000615,
+        "organic_count": 9,
+        "attempts": 3,
+        "error": "",
+        "started_at": 1779117463.9119136,
+        "repeat_idx": 9
+      },
+      {
+        "ok": true,
+        "seconds": 10.413530000019819,
+        "organic_count": 9,
+        "attempts": 3,
+        "error": "",
+        "started_at": 1779117470.1329532,
+        "repeat_idx": 10
+      }
+    ]
+  },
+  {
+    "query": "upcoming Marvel movies 2025",
+    "runs": [
+      {
+        "ok": true,
+        "seconds": 3.8317327999975532,
+        "organic_count": 10,
+        "attempts": 1,
+        "error": "",
+        "started_at": 1779117474.8370466,
+        "repeat_idx": 1
+      },
+      {
+        "ok": true,
+        "seconds": 10.059110400034115,
+        "organic_count": 9,
+        "attempts": 1,
+        "error": "",
+        "started_at": 1779117475.8410125,
+        "repeat_idx": 2
+      },
+      {
+        "ok": true,
+        "seconds": 2.8654593999963254,
+        "organic_count": 10,
+        "attempts": 1,
+        "error": "",
+        "started_at": 1779117476.4901328,
+        "repeat_idx": 3
+      },
+      {
+        "ok": true,
+        "seconds": 3.2449466999969445,
+        "organic_count": 10,
+        "attempts": 1,
+        "error": "",
+        "started_at": 1779117478.7823486,
+        "repeat_idx": 4
+      },
+      {
+        "ok": true,
+        "seconds": 3.7871126999962144,
+        "organic_count": 10,
+        "attempts": 1,
+        "error": "",
+        "started_at": 1779117479.4611366,
+        "repeat_idx": 5
+      },
+      {
+        "ok": true,
+        "seconds": 3.797528200026136,
+        "organic_count": 10,
+        "attempts": 1,
+        "error": "",
+        "started_at": 1779117480.6519766,
+        "repeat_idx": 6
+      },
+      {
+        "ok": true,
+        "seconds": 3.50498470000457,
+        "organic_count": 9,
+        "attempts": 1,
+        "error": "",
+        "started_at": 1779117482.1347408,
+        "repeat_idx": 7
+      },
+      {
+        "ok": true,
+        "seconds": 3.6600051000132225,
+        "organic_count": 10,
+        "attempts": 1,
+        "error": "",
+        "started_at": 1779117483.3524132,
+        "repeat_idx": 8
+      },
+      {
+        "ok": true,
+        "seconds": 10.051599800004624,
+        "organic_count": 10,
+        "attempts": 1,
+        "error": "",
+        "started_at": 1779117484.5607834,
+        "repeat_idx": 9
+      },
+      {
+        "ok": true,
+        "seconds": 2.687320700031705,
+        "organic_count": 10,
+        "attempts": 1,
+        "error": "",
+        "started_at": 1779117485.7459445,
+        "repeat_idx": 10
+      }
+    ]
+  },
+  {
+    "query": "sustainable energy solutions home",
+    "runs": [
+      {
+        "ok": true,
+        "seconds": 13.53124260000186,
+        "organic_count": 10,
+        "attempts": 2,
+        "error": "",
+        "started_at": 1779117486.0060081,
+        "repeat_idx": 1
+      },
+      {
+        "ok": false,
+        "seconds": 20.43003350001527,
+        "organic_count": 0,
+        "attempts": 3,
+        "error": "empty",
+        "started_at": 1779117487.117289,
+        "repeat_idx": 2
+      },
+      {
+        "ok": true,
+        "seconds": 2.9968669999507256,
+        "organic_count": 10,
+        "attempts": 1,
+        "error": "",
+        "started_at": 1779117488.5428483,
+        "repeat_idx": 3
+      },
+      {
+        "ok": true,
+        "seconds": 22.9757307000109,
+        "organic_count": 9,
+        "attempts": 3,
+        "error": "",
+        "started_at": 1779117491.6406348,
+        "repeat_idx": 4
+      },
+      {
+        "ok": true,
+        "seconds": 8.779824900033418,
+        "organic_count": 10,
+        "attempts": 1,
+        "error": "",
+        "started_at": 1779117494.716838,
+        "repeat_idx": 5
+      },
+      {
+        "ok": true,
+        "seconds": 11.747746500012,
+        "organic_count": 10,
+        "attempts": 1,
+        "error": "",
+        "started_at": 1779117499.6467626,
+        "repeat_idx": 6
+      },
+      {
+        "ok": true,
+        "seconds": 9.562521399988327,
+        "organic_count": 10,
+        "attempts": 1,
+        "error": "",
+        "started_at": 1779117503.5969536,
+        "repeat_idx": 7
+      },
+      {
+        "ok": true,
+        "seconds": 5.315251200052444,
+        "organic_count": 10,
+        "attempts": 1,
+        "error": "",
+        "started_at": 1779117507.660723,
+        "repeat_idx": 8
+      },
+      {
+        "ok": true,
+        "seconds": 6.3595662000007,
+        "organic_count": 9,
+        "attempts": 2,
+        "error": "",
+        "started_at": 1779117511.5055506,
+        "repeat_idx": 9
+      },
+      {
+        "ok": true,
+        "seconds": 9.819310599996243,
+        "organic_count": 10,
+        "attempts": 3,
+        "error": "",
+        "started_at": 1779117513.0878766,
+        "repeat_idx": 10
+      }
+    ]
+  },
+  {
+    "query": "chocolate cake recipe easy",
+    "runs": [
+      {
+        "ok": true,
+        "seconds": 3.1039229999878444,
+        "organic_count": 10,
+        "attempts": 1,
+        "error": "",
+        "started_at": 1779117513.273591,
+        "repeat_idx": 1
+      },
+      {
+        "ok": true,
+        "seconds": 6.3968494000146165,
+        "organic_count": 10,
+        "attempts": 2,
+        "error": "",
+        "started_at": 1779117514.7215364,
+        "repeat_idx": 2
+      },
+      {
+        "ok": true,
+        "seconds": 3.0393610000028275,
+        "organic_count": 10,
+        "attempts": 1,
+        "error": "",
+        "started_at": 1779117516.4860814,
+        "repeat_idx": 3
+      },
+      {
+        "ok": true,
+        "seconds": 6.390081899997313,
+        "organic_count": 10,
+        "attempts": 2,
+        "error": "",
+        "started_at": 1779117517.9746637,
+        "repeat_idx": 4
+      },
+      {
+        "ok": true,
+        "seconds": 10.032269199960865,
+        "organic_count": 10,
+        "attempts": 3,
+        "error": "",
+        "started_at": 1779117519.6288102,
+        "repeat_idx": 5
+      },
+      {
+        "ok": true,
+        "seconds": 3.175000600051135,
+        "organic_count": 10,
+        "attempts": 1,
+        "error": "",
+        "started_at": 1779117521.2248943,
+        "repeat_idx": 6
+      },
+      {
+        "ok": true,
+        "seconds": 3.0199604999506846,
+        "organic_count": 10,
+        "attempts": 1,
+        "error": "",
+        "started_at": 1779117523.0130165,
+        "repeat_idx": 7
+      },
+      {
+        "ok": false,
+        "seconds": 9.993531199987046,
+        "organic_count": 0,
+        "attempts": 3,
+        "error": "empty",
+        "started_at": 1779117524.4666736,
+        "repeat_idx": 8
+      },
+      {
+        "ok": true,
+        "seconds": 4.144288900017273,
+        "organic_count": 10,
+        "attempts": 1,
+        "error": "",
+        "started_at": 1779117524.5132718,
+        "repeat_idx": 9
+      },
+      {
+        "ok": true,
+        "seconds": 6.48795339994831,
+        "organic_count": 10,
+        "attempts": 2,
+        "error": "",
+        "started_at": 1779117526.1343658,
+        "repeat_idx": 10
+      }
+    ]
+  },
+  {
+    "query": "best programming languages to learn 2025",
+    "runs": [
+      {
+        "ok": true,
+        "seconds": 3.447420999989845,
+        "organic_count": 9,
+        "attempts": 1,
+        "error": "",
+        "started_at": 1779117528.7687383,
+        "repeat_idx": 1
+      },
+      {
+        "ok": true,
+        "seconds": 3.5211359999957494,
+        "organic_count": 9,
+        "attempts": 1,
+        "error": "",
+        "started_at": 1779117529.7616444,
+        "repeat_idx": 2
+      },
+      {
+        "ok": true,
+        "seconds": 3.045261500054039,
+        "organic_count": 10,
+        "attempts": 1,
+        "error": "",
+        "started_at": 1779117532.3273754,
+        "repeat_idx": 3
+      },
+      {
+        "ok": true,
+        "seconds": 3.5774804999819025,
+        "organic_count": 9,
+        "attempts": 1,
+        "error": "",
+        "started_at": 1779117532.7289164,
+        "repeat_idx": 4
+      },
+      {
+        "ok": true,
+        "seconds": 3.2008777000010014,
+        "organic_count": 9,
+        "attempts": 1,
+        "error": "",
+        "started_at": 1779117533.3957791,
+        "repeat_idx": 5
+      },
+      {
+        "ok": true,
+        "seconds": 3.291650600032881,
+        "organic_count": 9,
+        "attempts": 1,
+        "error": "",
+        "started_at": 1779117534.5745096,
+        "repeat_idx": 6
+      },
+      {
+        "ok": true,
+        "seconds": 3.390729199978523,
+        "organic_count": 10,
+        "attempts": 1,
+        "error": "",
+        "started_at": 1779117535.4862401,
+        "repeat_idx": 7
+      },
+      {
+        "ok": false,
+        "seconds": 9.701247800025158,
+        "organic_count": 0,
+        "attempts": 3,
+        "error": "empty",
+        "started_at": 1779117536.4121318,
+        "repeat_idx": 8
+      },
+      {
+        "ok": true,
+        "seconds": 3.231857700040564,
+        "organic_count": 10,
+        "attempts": 1,
+        "error": "",
+        "started_at": 1779117536.7038724,
+        "repeat_idx": 9
+      },
+      {
+        "ok": false,
+        "seconds": 16.503865999984555,
+        "organic_count": 0,
+        "attempts": 3,
+        "error": "empty",
+        "started_at": 1779117537.9729433,
+        "repeat_idx": 10
+      }
+    ]
+  },
+  {
+    "query": "Bitcoin price prediction 2025",
+    "runs": [
+      {
+        "ok": true,
+        "seconds": 3.004420100012794,
+        "organic_count": 10,
+        "attempts": 1,
+        "error": "",
+        "started_at": 1779117538.9830697,
+        "repeat_idx": 1
+      },
+      {
+        "ok": true,
+        "seconds": 3.1282899999641813,
+        "organic_count": 10,
+        "attempts": 1,
+        "error": "",
+        "started_at": 1779117540.0502293,
+        "repeat_idx": 2
+      },
+      {
+        "ok": true,
+        "seconds": 2.9688937999890186,
+        "organic_count": 10,
+        "attempts": 1,
+        "error": "",
+        "started_at": 1779117542.0896878,
+        "repeat_idx": 3
+      },
+      {
+        "ok": true,
+        "seconds": 3.044575400010217,
+        "organic_count": 10,
+        "attempts": 1,
+        "error": "",
+        "started_at": 1779117543.291791,
+        "repeat_idx": 4
+      },
+      {
+        "ok": false,
+        "seconds": 10.942869299964514,
+        "organic_count": 0,
+        "attempts": 3,
+        "error": "empty",
+        "started_at": 1779117545.158902,
+        "repeat_idx": 5
+      },
+      {
+        "ok": true,
+        "seconds": 16.26228650001576,
+        "organic_count": 10,
+        "attempts": 3,
+        "error": "",
+        "started_at": 1779117546.2220514,
+        "repeat_idx": 6
+      },
+      {
+        "ok": false,
+        "seconds": 10.27584289998049,
+        "organic_count": 0,
+        "attempts": 3,
+        "error": "empty",
+        "started_at": 1779117546.4378316,
+        "repeat_idx": 7
+      },
+      {
+        "ok": false,
+        "seconds": 12.295774800004438,
+        "organic_count": 0,
+        "attempts": 3,
+        "error": "empty",
+        "started_at": 1779117554.5885048,
+        "repeat_idx": 8
+      },
+      {
+        "ok": false,
+        "seconds": 11.430689400003757,
+        "organic_count": 0,
+        "attempts": 3,
+        "error": "empty",
+        "started_at": 1779117556.2057786,
+        "repeat_idx": 9
+      },
+      {
+        "ok": false,
+        "seconds": 11.848317099967971,
+        "organic_count": 0,
+        "attempts": 3,
+        "error": "empty",
+        "started_at": 1779117556.8237832,
+        "repeat_idx": 10
+      }
+    ]
+  },
+  {
+    "query": "hiking trails Switzerland Alps",
+    "runs": [
+      {
+        "ok": true,
+        "seconds": 10.05748090002453,
+        "organic_count": 10,
+        "attempts": 1,
+        "error": "",
+        "started_at": 1779117562.5857687,
+        "repeat_idx": 1
+      },
+      {
+        "ok": false,
+        "seconds": 7.623493699997198,
+        "organic_count": 0,
+        "attempts": 3,
+        "error": "empty",
+        "started_at": 1779117566.997797,
+        "repeat_idx": 2
+      },
+      {
+        "ok": false,
+        "seconds": 15.19816329999594,
+        "organic_count": 0,
+        "attempts": 3,
+        "error": "empty",
+        "started_at": 1779117567.7405376,
+        "repeat_idx": 3
+      },
+      {
+        "ok": false,
+        "seconds": 7.637730299960822,
+        "organic_count": 0,
+        "attempts": 3,
+        "error": "empty",
+        "started_at": 1779117568.7754166,
+        "repeat_idx": 4
+      },
+      {
+        "ok": false,
+        "seconds": 9.954952400003094,
+        "organic_count": 0,
+        "attempts": 3,
+        "error": "empty",
+        "started_at": 1779117572.7564247,
+        "repeat_idx": 5
+      },
+      {
+        "ok": false,
+        "seconds": 9.669085300003644,
+        "organic_count": 0,
+        "attempts": 3,
+        "error": "empty",
+        "started_at": 1779117574.7279422,
+        "repeat_idx": 6
+      },
+      {
+        "ok": false,
+        "seconds": 9.583548299968243,
+        "organic_count": 0,
+        "attempts": 3,
+        "error": "empty",
+        "started_at": 1779117576.5222318,
+        "repeat_idx": 7
+      },
+      {
+        "ok": false,
+        "seconds": 7.64569620002294,
+        "organic_count": 0,
+        "attempts": 3,
+        "error": "empty",
+        "started_at": 1779117582.8254223,
+        "repeat_idx": 8
+      },
+      {
+        "ok": true,
+        "seconds": 5.902556799992453,
+        "organic_count": 10,
+        "attempts": 2,
+        "error": "",
+        "started_at": 1779117583.0456223,
+        "repeat_idx": 9
+      },
+      {
+        "ok": true,
+        "seconds": 5.469810400041752,
+        "organic_count": 10,
+        "attempts": 2,
+        "error": "",
+        "started_at": 1779117584.5119948,
+        "repeat_idx": 10
+      }
+    ]
+  },
+  {
+    "query": "Docker containers tutorial",
+    "runs": [
+      {
+        "ok": true,
+        "seconds": 6.695322400017176,
+        "organic_count": 10,
+        "attempts": 1,
+        "error": "",
+        "started_at": 1779117586.2203293,
+        "repeat_idx": 1
+      },
+      {
+        "ok": true,
+        "seconds": 12.673037800006568,
+        "organic_count": 10,
+        "attempts": 3,
+        "error": "",
+        "started_at": 1779117589.051954,
+        "repeat_idx": 2
+      },
+      {
+        "ok": false,
+        "seconds": 8.443945899954997,
+        "organic_count": 0,
+        "attempts": 3,
+        "error": "empty",
+        "started_at": 1779117590.0911474,
+        "repeat_idx": 3
+      },
+      {
+        "ok": true,
+        "seconds": 3.567261799995322,
+        "organic_count": 10,
+        "attempts": 1,
+        "error": "",
+        "started_at": 1779117590.5845828,
+        "repeat_idx": 4
+      },
+      {
+        "ok": true,
+        "seconds": 7.640795500017703,
+        "organic_count": 10,
+        "attempts": 3,
+        "error": "",
+        "started_at": 1779117593.0294774,
+        "repeat_idx": 5
+      },
+      {
+        "ok": true,
+        "seconds": 2.7045381999923848,
+        "organic_count": 10,
+        "attempts": 1,
+        "error": "",
+        "started_at": 1779117594.2531757,
+        "repeat_idx": 6
+      },
+      {
+        "ok": true,
+        "seconds": 5.789229000045452,
+        "organic_count": 10,
+        "attempts": 2,
+        "error": "",
+        "started_at": 1779117597.059245,
+        "repeat_idx": 7
+      },
+      {
+        "ok": false,
+        "seconds": 10.170115899993107,
+        "organic_count": 0,
+        "attempts": 3,
+        "error": "empty",
+        "started_at": 1779117598.6473792,
+        "repeat_idx": 8
+      },
+      {
+        "ok": true,
+        "seconds": 2.8363410999882035,
+        "organic_count": 6,
+        "attempts": 1,
+        "error": "",
+        "started_at": 1779117600.7751148,
+        "repeat_idx": 9
+      },
+      {
+        "ok": true,
+        "seconds": 3.6239710999652743,
+        "organic_count": 10,
+        "attempts": 1,
+        "error": "",
+        "started_at": 1779117601.8391879,
+        "repeat_idx": 10
+      }
+    ]
+  },
+  {
+    "query": "mortgage rates US 2024",
+    "runs": [
+      {
+        "ok": true,
+        "seconds": 3.5745943000074476,
+        "organic_count": 10,
+        "attempts": 1,
+        "error": "",
+        "started_at": 1779117602.9500327,
+        "repeat_idx": 1
+      },
+      {
+        "ok": false,
+        "seconds": 9.367895299976226,
+        "organic_count": 0,
+        "attempts": 3,
+        "error": "empty",
+        "started_at": 1779117603.721307,
+        "repeat_idx": 2
+      },
+      {
+        "ok": true,
+        "seconds": 9.459081200009678,
+        "organic_count": 10,
+        "attempts": 3,
+        "error": "",
+        "started_at": 1779117605.5770774,
+        "repeat_idx": 3
+      },
+      {
+        "ok": false,
+        "seconds": 7.834176599979401,
+        "organic_count": 0,
+        "attempts": 3,
+        "error": "empty",
+        "started_at": 1779117606.6320865,
+        "repeat_idx": 4
+      },
+      {
+        "ok": true,
+        "seconds": 8.261849300004542,
+        "organic_count": 10,
+        "attempts": 3,
+        "error": "",
+        "started_at": 1779117608.9194555,
+        "repeat_idx": 5
+      },
+      {
+        "ok": true,
+        "seconds": 8.65986920002615,
+        "organic_count": 9,
+        "attempts": 2,
+        "error": "",
+        "started_at": 1779117613.198245,
+        "repeat_idx": 6
+      },
+      {
+        "ok": true,
+        "seconds": 3.527819599956274,
+        "organic_count": 9,
+        "attempts": 1,
+        "error": "",
+        "started_at": 1779117614.5777981,
+        "repeat_idx": 7
+      },
+      {
+        "ok": true,
+        "seconds": 4.248883199994452,
+        "organic_count": 9,
+        "attempts": 1,
+        "error": "",
+        "started_at": 1779117615.149667,
+        "repeat_idx": 8
+      },
+      {
+        "ok": true,
+        "seconds": 2.6405161999864504,
+        "organic_count": 9,
+        "attempts": 1,
+        "error": "",
+        "started_at": 1779117617.2898405,
+        "repeat_idx": 9
+      },
+      {
+        "ok": false,
+        "seconds": 7.872490000037942,
+        "organic_count": 0,
+        "attempts": 3,
+        "error": "empty",
+        "started_at": 1779117618.2173784,
+        "repeat_idx": 10
+      }
+    ]
+  },
+  {
+    "query": "cat behavior explained",
+    "runs": [
+      {
+        "ok": true,
+        "seconds": 2.9267531000077724,
+        "organic_count": 10,
+        "attempts": 1,
+        "error": "",
+        "started_at": 1779117619.5056732,
+        "repeat_idx": 1
+      },
+      {
+        "ok": false,
+        "seconds": 15.115500000014435,
+        "organic_count": 0,
+        "attempts": 3,
+        "error": "empty",
+        "started_at": 1779117620.033796,
+        "repeat_idx": 2
+      },
+      {
+        "ok": false,
+        "seconds": 7.4984781999955885,
+        "organic_count": 0,
+        "attempts": 3,
+        "error": "empty",
+        "started_at": 1779117621.9592512,
+        "repeat_idx": 3
+      },
+      {
+        "ok": false,
+        "seconds": 7.465078200038988,
+        "organic_count": 0,
+        "attempts": 3,
+        "error": "empty",
+        "started_at": 1779117622.5449784,
+        "repeat_idx": 4
+      },
+      {
+        "ok": false,
+        "seconds": 7.5618018000386655,
+        "organic_count": 0,
+        "attempts": 3,
+        "error": "empty",
+        "started_at": 1779117626.2013836,
+        "repeat_idx": 5
+      },
+      {
+        "ok": false,
+        "seconds": 7.895940999966115,
+        "organic_count": 0,
+        "attempts": 3,
+        "error": "empty",
+        "started_at": 1779117629.5578384,
+        "repeat_idx": 6
+      },
+      {
+        "ok": false,
+        "seconds": 15.72599640005501,
+        "organic_count": 0,
+        "attempts": 3,
+        "error": "empty",
+        "started_at": 1779117630.1160104,
+        "repeat_idx": 7
+      },
+      {
+        "ok": true,
+        "seconds": 8.666983400005847,
+        "organic_count": 10,
+        "attempts": 3,
+        "error": "",
+        "started_at": 1779117633.8707433,
+        "repeat_idx": 8
+      },
+      {
+        "ok": true,
+        "seconds": 8.307068399968557,
+        "organic_count": 10,
+        "attempts": 3,
+        "error": "",
+        "started_at": 1779117635.2594717,
+        "repeat_idx": 9
+      },
+      {
+        "ok": false,
+        "seconds": 14.779818700044416,
+        "organic_count": 0,
+        "attempts": 3,
+        "error": "empty",
+        "started_at": 1779117637.5604281,
+        "repeat_idx": 10
+      }
+    ]
+  },
+  {
+    "query": "best electric cars 2024",
+    "runs": [
+      {
+        "ok": true,
+        "seconds": 5.613629599974956,
+        "organic_count": 10,
+        "attempts": 2,
+        "error": "",
+        "started_at": 1779117642.6404197,
+        "repeat_idx": 1
+      },
+      {
+        "ok": false,
+        "seconds": 7.772592299967073,
+        "organic_count": 0,
+        "attempts": 3,
+        "error": "empty",
+        "started_at": 1779117643.6807883,
+        "repeat_idx": 2
+      },
+      {
+        "ok": false,
+        "seconds": 7.1502522000228055,
+        "organic_count": 0,
+        "attempts": 3,
+        "error": "empty",
+        "started_at": 1779117645.9527414,
+        "repeat_idx": 3
+      },
+      {
+        "ok": false,
+        "seconds": 6.518200899998192,
+        "organic_count": 0,
+        "attempts": 3,
+        "error": "empty",
+        "started_at": 1779117648.3560858,
+        "repeat_idx": 4
+      },
+      {
+        "ok": true,
+        "seconds": 5.795187700015958,
+        "organic_count": 10,
+        "attempts": 2,
+        "error": "",
+        "started_at": 1779117651.5603223,
+        "repeat_idx": 5
+      },
+      {
+        "ok": true,
+        "seconds": 7.56370679999236,
+        "organic_count": 10,
+        "attempts": 3,
+        "error": "",
+        "started_at": 1779117652.4431655,
+        "repeat_idx": 6
+      },
+      {
+        "ok": false,
+        "seconds": 8.174709500046447,
+        "organic_count": 0,
+        "attempts": 3,
+        "error": "empty",
+        "started_at": 1779117653.215545,
+        "repeat_idx": 7
+      },
+      {
+        "ok": false,
+        "seconds": 8.55283739999868,
+        "organic_count": 0,
+        "attempts": 3,
+        "error": "empty",
+        "started_at": 1779117654.9789383,
+        "repeat_idx": 8
+      },
+      {
+        "ok": false,
+        "seconds": 7.560122099996079,
+        "organic_count": 0,
+        "attempts": 3,
+        "error": "empty",
+        "started_at": 1779117657.467564,
+        "repeat_idx": 9
+      },
+      {
+        "ok": true,
+        "seconds": 4.997870500024874,
+        "organic_count": 10,
+        "attempts": 2,
+        "error": "",
+        "started_at": 1779117660.1212459,
+        "repeat_idx": 10
+      }
+    ]
+  },
+  {
+    "query": "symptoms of the common cold",
+    "runs": [
+      {
+        "ok": true,
+        "seconds": 2.8595184999867342,
+        "organic_count": 10,
+        "attempts": 1,
+        "error": "",
+        "started_at": 1779117661.49848,
+        "repeat_idx": 1
+      },
+      {
+        "ok": true,
+        "seconds": 2.798275700013619,
+        "organic_count": 10,
+        "attempts": 1,
+        "error": "",
+        "started_at": 1779117663.6384268,
+        "repeat_idx": 2
+      },
+      {
+        "ok": true,
+        "seconds": 5.2996861999854445,
+        "organic_count": 10,
+        "attempts": 2,
+        "error": "",
+        "started_at": 1779117664.4735742,
+        "repeat_idx": 3
+      },
+      {
+        "ok": true,
+        "seconds": 7.591126699990127,
+        "organic_count": 10,
+        "attempts": 3,
+        "error": "",
+        "started_at": 1779117665.1192925,
+        "repeat_idx": 4
+      },
+      {
+        "ok": true,
+        "seconds": 8.153885099978652,
+        "organic_count": 10,
+        "attempts": 3,
+        "error": "",
+        "started_at": 1779117665.2310686,
+        "repeat_idx": 5
+      },
+      {
+        "ok": false,
+        "seconds": 7.5888376999646425,
+        "organic_count": 0,
+        "attempts": 3,
+        "error": "empty",
+        "started_at": 1779117666.5449278,
+        "repeat_idx": 6
+      },
+      {
+        "ok": true,
+        "seconds": 2.6901387000107206,
+        "organic_count": 10,
+        "attempts": 1,
+        "error": "",
+        "started_at": 1779117669.873952,
+        "repeat_idx": 7
+      },
+      {
+        "ok": false,
+        "seconds": 10.371994699991774,
+        "organic_count": 0,
+        "attempts": 3,
+        "error": "empty",
+        "started_at": 1779117672.674219,
+        "repeat_idx": 8
+      },
+      {
+        "ok": true,
+        "seconds": 12.500308799964841,
+        "organic_count": 10,
+        "attempts": 2,
+        "error": "",
+        "started_at": 1779117672.812821,
+        "repeat_idx": 9
+      },
+      {
+        "ok": false,
+        "seconds": 10.015116499969736,
+        "organic_count": 0,
+        "attempts": 3,
+        "error": "empty",
+        "started_at": 1779117673.4927163,
+        "repeat_idx": 10
+      }
+    ]
+  },
+  {
+    "query": "Linux command line basics",
+    "runs": [
+      {
+        "ok": true,
+        "seconds": 5.612482299969997,
+        "organic_count": 10,
+        "attempts": 1,
+        "error": "",
+        "started_at": 1779117674.2489316,
+        "repeat_idx": 1
+      },
+      {
+        "ok": false,
+        "seconds": 7.978834400011692,
+        "organic_count": 0,
+        "attempts": 3,
+        "error": "empty",
+        "started_at": 1779117679.969159,
+        "repeat_idx": 2
+      },
+      {
+        "ok": false,
+        "seconds": 9.838131800002884,
+        "organic_count": 0,
+        "attempts": 3,
+        "error": "empty",
+        "started_at": 1779117683.147594,
+        "repeat_idx": 3
+      },
+      {
+        "ok": false,
+        "seconds": 9.926503299968317,
+        "organic_count": 0,
+        "attempts": 3,
+        "error": "empty",
+        "started_at": 1779117683.6096697,
+        "repeat_idx": 4
+      },
+      {
+        "ok": true,
+        "seconds": 12.932232599996496,
+        "organic_count": 10,
+        "attempts": 2,
+        "error": "",
+        "started_at": 1779117685.4193013,
+        "repeat_idx": 5
+      },
+      {
+        "ok": false,
+        "seconds": 9.202884599973913,
+        "organic_count": 0,
+        "attempts": 3,
+        "error": "empty",
+        "started_at": 1779117688.0537438,
+        "repeat_idx": 6
+      },
+      {
+        "ok": true,
+        "seconds": 5.353151699993759,
+        "organic_count": 10,
+        "attempts": 2,
+        "error": "",
+        "started_at": 1779117693.0919588,
+        "repeat_idx": 7
+      },
+      {
+        "ok": true,
+        "seconds": 5.6635963000007905,
+        "organic_count": 10,
+        "attempts": 2,
+        "error": "",
+        "started_at": 1779117693.649306,
+        "repeat_idx": 8
+      },
+      {
+        "ok": false,
+        "seconds": 8.96617900003912,
+        "organic_count": 0,
+        "attempts": 3,
+        "error": "empty",
+        "started_at": 1779117697.3577678,
+        "repeat_idx": 9
+      },
+      {
+        "ok": true,
+        "seconds": 2.9261388999875635,
+        "organic_count": 10,
+        "attempts": 1,
+        "error": "",
+        "started_at": 1779117698.4449677,
+        "repeat_idx": 10
+      }
+    ]
+  },
+  {
+    "query": "photography tips for beginners DSLR",
+    "runs": [
+      {
+        "ok": true,
+        "seconds": 9.300492700014729,
+        "organic_count": 10,
+        "attempts": 3,
+        "error": "",
+        "started_at": 1779117698.5520425,
+        "repeat_idx": 1
+      },
+      {
+        "ok": false,
+        "seconds": 8.395596500020474,
+        "organic_count": 0,
+        "attempts": 3,
+        "error": "empty",
+        "started_at": 1779117699.4179063,
+        "repeat_idx": 2
+      },
+      {
+        "ok": false,
+        "seconds": 8.75759290001588,
+        "organic_count": 0,
+        "attempts": 3,
+        "error": "empty",
+        "started_at": 1779117701.4837847,
+        "repeat_idx": 3
+      },
+      {
+        "ok": false,
+        "seconds": 7.549657800002024,
+        "organic_count": 0,
+        "attempts": 3,
+        "error": "empty",
+        "started_at": 1779117706.4256158,
+        "repeat_idx": 4
+      },
+      {
+        "ok": true,
+        "seconds": 7.390062400023453,
+        "organic_count": 10,
+        "attempts": 2,
+        "error": "",
+        "started_at": 1779117707.9087582,
+        "repeat_idx": 5
+      },
+      {
+        "ok": false,
+        "seconds": 7.729578900034539,
+        "organic_count": 0,
+        "attempts": 3,
+        "error": "empty",
+        "started_at": 1779117707.9697042,
+        "repeat_idx": 6
+      },
+      {
+        "ok": false,
+        "seconds": 7.549673300003633,
+        "organic_count": 0,
+        "attempts": 3,
+        "error": "empty",
+        "started_at": 1779117710.3461726,
+        "repeat_idx": 7
+      },
+      {
+        "ok": false,
+        "seconds": 7.716607199981809,
+        "organic_count": 0,
+        "attempts": 3,
+        "error": "empty",
+        "started_at": 1779117714.0792918,
+        "repeat_idx": 8
+      },
+      {
+        "ok": false,
+        "seconds": 7.607653699989896,
+        "organic_count": 0,
+        "attempts": 3,
+        "error": "empty",
+        "started_at": 1779117715.4110658,
+        "repeat_idx": 9
+      },
+      {
+        "ok": true,
+        "seconds": 7.538852000026964,
+        "organic_count": 10,
+        "attempts": 3,
+        "error": "",
+        "started_at": 1779117715.8001664,
+        "repeat_idx": 10
+      }
+    ]
+  }
+]

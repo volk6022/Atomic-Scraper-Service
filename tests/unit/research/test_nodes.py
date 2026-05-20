@@ -48,10 +48,27 @@ class TestPlanNode:
     """Test plan_node generates gaps from evidence"""
 
     @pytest.mark.asyncio
-    async def test_plan_generates_gaps(self):
-        """plan_node should generate open questions from current evidence"""
-        from src.actions.research.nodes import plan_node
+    async def test_plan_generates_gaps(self, monkeypatch):
+        """plan_node should generate open questions from current evidence.
+
+        Stubs the orchestration LLM so this is a unit test (no LM Studio dep).
+        """
+        from src.actions.research import nodes
         from src.actions.research.state import ResearchState
+        from src.infrastructure.external_api import facade
+
+        class _FakeClient:
+            async def generate(self, prompt, system_prompt=None):
+                return (
+                    '["What are common AI applications?",'
+                    ' "How is AI different from machine learning?",'
+                    ' "What is the history of AI?"]'
+                )
+
+            async def extract(self, content, schema):
+                return {}
+
+        monkeypatch.setattr(facade, "get_orchestration_client", lambda: _FakeClient())
 
         state: ResearchState = {
             "query": "What is AI?",
@@ -62,7 +79,7 @@ class TestPlanNode:
             "deadline_ts": time.time() + 120,
             "iteration": 0,
             "gaps": [],
-            "visited_urls": set(),
+            "visited_urls": [],
             "candidate_urls": [],
             "facts": [],
             "citations": [
@@ -78,7 +95,7 @@ class TestPlanNode:
             "trace": [],
         }
 
-        result = await plan_node(state)
+        result = await nodes.plan_node(state)
         assert "gaps" in result
         assert len(result["gaps"]) > 0
 
@@ -87,10 +104,30 @@ class TestSearchNode:
     """Test search_node performs web search"""
 
     @pytest.mark.asyncio
-    async def test_search_returns_candidates(self):
-        """search_node should append candidate URLs from search"""
-        from src.actions.research.nodes import search_node
+    async def test_search_returns_candidates(self, monkeypatch):
+        """search_node should append candidate URLs from search.
+
+        Stubs the underlying `web_search` tool so this stays a unit test (no
+        network / no SearXNG dependency).
+        """
+        from src.actions.research import nodes
         from src.actions.research.state import ResearchState
+        from src.domain.models.requests import SearchResponse, SearchResult
+        from src.infrastructure.external_api import search_client as sc
+
+        async def fake_search(request):
+            return SearchResponse(
+                searchParameters={"q": request.q, "type": "search",
+                                  "engine": "stub", "num": request.num},
+                organic=[
+                    SearchResult(title="AI", link="https://example.com/ai",
+                                 snippet="...", position=1),
+                    SearchResult(title="ML", link="https://example.com/ml",
+                                 snippet="...", position=2),
+                ],
+            )
+
+        monkeypatch.setattr(sc.search_client, "search", fake_search)
 
         state: ResearchState = {
             "query": "What is AI?",
@@ -101,7 +138,7 @@ class TestSearchNode:
             "deadline_ts": time.time() + 120,
             "iteration": 0,
             "gaps": ["What is artificial intelligence?"],
-            "visited_urls": set(),
+            "visited_urls": [],
             "candidate_urls": [],
             "facts": [],
             "citations": [],
@@ -111,7 +148,7 @@ class TestSearchNode:
             "trace": [],
         }
 
-        result = await search_node(state)
+        result = await nodes.search_node(state)
         assert "candidate_urls" in result
         assert len(result["candidate_urls"]) > 0
 
@@ -148,7 +185,10 @@ class TestRankDedupeNode:
         }
 
         result = await rank_dedupe_node(state)
-        urls = [c["url"] for c in result["candidate_urls"]]
+        # rank_dedupe now emits `current_batch` of unvisited candidates and keeps
+        # the full pool in `candidate_urls` (the previous overwrite-and-truncate
+        # behaviour dropped URLs we hadn't tried yet).
+        urls = [c["url"] for c in result["current_batch"]]
         assert "https://visited.com" not in urls
         assert "https://new.com" in urls
 

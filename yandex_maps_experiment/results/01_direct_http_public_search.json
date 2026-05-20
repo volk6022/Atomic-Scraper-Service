@@ -1,0 +1,18 @@
+{
+  "approach": "direct HTTP -> yandex.ru/maps/api/search",
+  "success": false,
+  "captcha_detected": false,
+  "http_status": 400,
+  "items_collected": 0,
+  "fields_per_item": [],
+  "egress_ip": null,
+  "duration_s": 6.3,
+  "notes": "Warmup OK; trying internal /maps/api/search. | JSON parse failed: Expecting value: line 1 column 1 (char 0)",
+  "sample": [
+    {
+      "raw_snippet": "Bad Request"
+    }
+  ],
+  "error": null,
+  "started_at": "2026-05-17T08:10:01.307440+00:00"
+}

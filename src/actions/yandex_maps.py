@@ -1,232 +1,421 @@
-import asyncio
-import random
-from typing import List, Dict, Optional
+"""Yandex Maps actions — XHR-intercept strategy.
 
-from src.domain.models.business_card import BusinessCard
+Implements two actions, both derived from the experiments in
+`yandex_maps_experiment/` (see `docs/yandex-maps-scraping-experiment-journal.md`):
+
+* :class:`YandexMapsExtractAction` — discovery. Launches a headless browser
+  through a residential proxy, navigates to a regional search URL, intercepts
+  responses to ``/maps/api/search``, and parses ``data.items[]`` to build
+  :class:`YandexOrganization` objects (65+ fields per org including
+  phones/coordinates/services/photos/metro/ИНН).
+
+* :class:`YandexMapsReviewsAction` — reviews. Same browser session pattern,
+  but observes ``/maps/api/business/fetchReviews`` URLs, then replays them
+  via ``page.request.get(...)`` to authenticate against the same-origin
+  endpoint with live session cookies.
+
+Both actions are registered in :data:`action_registry`.
+"""
+
+from __future__ import annotations
+
+import asyncio
+import json
+import logging
+from typing import Any, Optional
+from urllib.parse import quote
+
+from src.core.logging import get_logger
 from src.domain.models.dsl import CommandType
+from src.domain.models.yandex_organization import YandexOrganization
+from src.domain.models.yandex_review import YandexReview
 from src.domain.registry.action_registry import action_registry
-from src.infrastructure.browser.user_agent_pool import UserAgentPool
 from src.infrastructure.browser.pool_manager import BrowserPoolManager
 from src.infrastructure.browser.proxy_provider import proxy_provider
-from src.core.logging import get_logger
+from src.infrastructure.browser.user_agent_pool import UserAgentPool
 
 logger = get_logger(__name__)
 
 
+class YandexCaptchaError(RuntimeError):
+    """Raised when Yandex SmartCaptcha is detected on the loaded page."""
+
+
+# Endpoints that the search results SPA hits with org payloads.
+_SEARCH_API_MARKERS = (
+    "/maps/api/search",
+    "search-maps.yandex.ru/v1",
+    "fullobjects",
+)
+# Endpoint that the org reviews tab hits for review pages.
+_REVIEWS_API_MARKER = "fetchReviews"
+
+# Paths inside the `/maps/api/search` JSON that may hold the array of orgs.
+_SEARCH_ITEMS_PATHS: tuple[tuple[str, ...], ...] = (
+    ("data", "items"),
+    ("items",),
+    ("data", "geo", "items"),
+)
+# Paths inside the `fetchReviews` JSON that may hold the array of reviews.
+_REVIEW_ITEMS_PATHS: tuple[tuple[str, ...], ...] = (
+    ("data", "reviews"),
+    ("reviews",),
+    ("data", "items"),
+    ("items",),
+)
+
+
+def _get_in(data: Any, path: tuple[str, ...]) -> Optional[Any]:
+    cur = data
+    for key in path:
+        if isinstance(cur, dict) and key in cur:
+            cur = cur[key]
+        else:
+            return None
+    return cur
+
+
+def _extract_array(data: Any, paths: tuple[tuple[str, ...], ...]) -> Optional[list]:
+    for path in paths:
+        cur = _get_in(data, path)
+        if isinstance(cur, list):
+            return cur
+    return None
+
+
+def _is_business_item(it: Any) -> bool:
+    """`data.items` contains transit stops / metro stations too; we only want orgs."""
+    if not isinstance(it, dict):
+        return False
+    return any(k in it for k in ("permalink", "seoname", "oid")) and bool(
+        it.get("id") or it.get("oid") or it.get("businessId")
+    )
+
+
 class YandexMapsExtractAction:
-    def __init__(self):
+    """Discovery: text-query search inside a region → list[YandexOrganization]."""
+
+    def __init__(self) -> None:
         self.pool_manager = BrowserPoolManager()
         self.user_agent_pool = UserAgentPool()
-        self.max_scroll_attempts = 20
-        self.scroll_delay = 1.5
+        self.scroll_limit = 25
+        self.scroll_pause_ms = 900
+        self.captured_response_timeout = 10.0
 
     async def execute(
-        self, category: str, center: Dict[str, float], radius: int
-    ) -> List[BusinessCard]:
-        user_agent = self.user_agent_pool.get_user_agent()
+        self,
+        query: str,
+        region_id: int = 2,
+        city_slug: str = "saint-petersburg",
+        target_count: int = 40,
+        include_raw: bool = True,
+    ) -> list[YandexOrganization]:
         proxy = proxy_provider.get_proxy() or None
-        logger.info(f"Starting Yandex Maps extraction for category: {category}, proxy: {bool(proxy)}")
+        user_agent = self.user_agent_pool.get_user_agent()
+        logger.info(
+            "yandex_maps.extract: query=%r region_id=%s city=%s target=%s proxy=%s",
+            query, region_id, city_slug, target_count, bool(proxy),
+        )
 
         context = await self.pool_manager.create_context(
-            user_agent=user_agent, stealth=True, proxy=proxy
+            user_agent=user_agent,
+            stealth=True,
+            proxy=proxy,
+            locale="ru-RU",
+            timezone_id="Europe/Moscow",
+            viewport={"width": 1440, "height": 900},
         )
 
-        page = await context.new_page()
+        captured: list[dict[str, Any]] = []
+        pending_tasks: list[asyncio.Task] = []
 
-        try:
-            lat, lng = center["lat"], center["lng"]
-            yandex_url = (
-                f"https://yandex.ru/maps/?ll={lng}%2C{lat}"
-                f"&spn={radius / 11132:.4f}%2C{radius / 11132:.4f}"
-                f"&text={category}"
-            )
-
-            await page.goto(yandex_url, wait_until="networkidle", timeout=30000)
-
-            await asyncio.sleep(random.uniform(1, 2))
-
-            businesses = await self._extract_all_pages(page, category)
-
-            logger.info(f"Extracted {len(businesses)} businesses")
-            return businesses
-
-        except Exception as e:
-            logger.error(f"Yandex Maps extraction failed: {e}")
-            raise
-        finally:
-            await context.close()
-
-    async def _extract_all_pages(self, page, category: str) -> List[BusinessCard]:
-        all_businesses = []
-        seen_names = set()
-        scroll_attempts = 0
-
-        while scroll_attempts < self.max_scroll_attempts:
-            businesses = await self._extract_page(page, category)
-
-            for biz in businesses:
-                if biz.name not in seen_names:
-                    seen_names.add(biz.name)
-                    all_businesses.append(biz)
-
-            has_more = await self._scroll_down(page)
-            if not has_more:
-                break
-
-            await asyncio.sleep(self.scroll_delay + random.uniform(0, 0.5))
-            scroll_attempts += 1
-
-        return all_businesses
-
-    async def _extract_page(self, page, category: str) -> List[BusinessCard]:
-        businesses = []
-
-        try:
-            await page.wait_for_selector(
-                ".business-card, .search-list-view__serp-item, [data-name='BusinessCard']",
-                timeout=5000,
-            )
-        except Exception:
-            pass
-
-        cards = await page.query_selector_all(
-            ".business-card, .search-list-view__serp-item, [data-name='BusinessCard']"
-        )
-
-        for card in cards:
+        async def _capture(resp) -> None:
+            url = resp.url
             try:
-                business = await self._parse_business_card(card, category)
-                if business and business.name:
-                    businesses.append(business)
-            except Exception as e:
-                logger.debug(f"Failed to parse card: {e}")
+                body = await resp.text()
+            except Exception as exc:  # noqa: BLE001 — defensive
+                logger.debug("failed to read response body for %s: %s", url[:120], exc)
+                return
+            captured.append({"url": url, "status": resp.status, "body": body})
+            logger.debug("captured XHR %s %s (%dB)", resp.status, url[:120], len(body))
+
+        def on_response(resp) -> None:
+            # `page.on("response", …)` is synchronous; schedule async work and
+            # remember the task so we can drain it before the context closes.
+            if any(m in resp.url for m in _SEARCH_API_MARKERS):
+                pending_tasks.append(asyncio.create_task(_capture(resp)))
+
+        try:
+            page = await context.new_page()
+            page.on("response", on_response)
+
+            url = (
+                f"https://yandex.ru/maps/{region_id}/{city_slug}/search/{quote(query, safe='')}/"
+            )
+            try:
+                await page.goto(url, wait_until="domcontentloaded", timeout=60_000)
+            except Exception as exc:
+                logger.warning("page.goto failed: %s", exc)
+                raise
+
+            content_lower = (await page.content()).lower()
+            if "smartcaptcha" in content_lower or "showcaptcha" in content_lower:
+                raise YandexCaptchaError(f"captcha on initial load of {url}")
+
+            try:
+                await page.wait_for_selector(
+                    ".search-list-view, .search-snippet-view", timeout=20_000
+                )
+            except Exception as exc:
+                logger.warning("results panel never appeared: %s", exc)
+
+            await self._scroll_until(page, target_count)
+
+            # Drain pending body reads before closing the context (else
+            # `resp.text()` will fail with "Target page, context or browser
+            # has been closed").
+            if pending_tasks:
+                await asyncio.gather(*pending_tasks, return_exceptions=True)
+        finally:
+            try:
+                await context.close()
+            except Exception:
+                pass
+
+        orgs = self._parse_captured(captured, include_raw=include_raw)
+        logger.info(
+            "yandex_maps.extract: captured=%d unique_orgs=%d",
+            len(captured), len(orgs),
+        )
+        return orgs
+
+    async def _scroll_until(self, page, target_count: int) -> None:
+        """DOM-scroll until either target reached or the list stops growing."""
+        count_js = (
+            "() => document.querySelectorAll("
+            "'li.search-snippet-view, div.search-snippet-view'"
+            ").length"
+        )
+        scroll_js = """() => {
+            const list = document.querySelector(
+                '.scroll__container, .search-list-view__list, .search-list-view'
+            ) || document.querySelector('div[class*=search-list]');
+            if (list) list.scrollBy(0, 2000);
+            window.scrollBy(0, 1500);
+        }"""
+
+        seen, stale = 0, 0
+        for _ in range(self.scroll_limit):
+            try:
+                count = await page.evaluate(count_js)
+            except Exception:
+                count = seen
+            if count >= target_count:
+                break
+            if count == seen:
+                stale += 1
+                if stale >= 3:
+                    break
+            else:
+                stale = 0
+            seen = count
+            try:
+                await page.evaluate(scroll_js)
+            except Exception:
+                pass
+            await page.wait_for_timeout(self.scroll_pause_ms)
+
+    def _parse_captured(
+        self, captured: list[dict[str, Any]], *, include_raw: bool
+    ) -> list[YandexOrganization]:
+        orgs: list[YandexOrganization] = []
+        seen_oids: set[str] = set()
+
+        for cap in captured:
+            body = cap.get("body") or ""
+            if len(body) < 80:
+                continue
+            try:
+                data = json.loads(body)
+            except Exception:
                 continue
 
-        if not businesses:
-            businesses = await self._fallback_extraction(page, category)
+            items = _extract_array(data, _SEARCH_ITEMS_PATHS)
+            if not items:
+                continue
 
-        return businesses
-
-    async def _parse_business_card(self, card, category: str) -> Optional[BusinessCard]:
-        try:
-            name_elem = await card.query_selector(
-                ".business-card__title, .search-business-snippet-view__title, [data-name='title']"
-            )
-            name = await name_elem.text_content() if name_elem else None
-
-            address_elem = await card.query_selector(
-                ".business-card__address, .search-business-snippet-view__address"
-            )
-            address = await address_elem.text_content() if address_elem else None
-
-            if not name:
-                return None
-
-            phone = None
-            phone_elem = await card.query_selector(
-                ".business-card__phone, .search-business-snippet-view__phone"
-            )
-            if phone_elem:
-                phone = await phone_elem.text_content()
-
-            website = None
-            website_elem = await card.query_selector(
-                ".business-card__website a, .search-business-snippet-view__link"
-            )
-            if website_elem:
-                href = await website_elem.get_attribute("href")
-                if href and href.startswith("http"):
-                    website = href
-
-            geo = None
-            geo_elem = await card.query_selector(
-                ".business-card__coordinates, .search-business-snippet-view__coordinates"
-            )
-            if geo_elem:
-                coord_text = await geo_elem.text_content()
-                if coord_text:
-                    coords = coord_text.replace(",", ".").split()
-                    if len(coords) >= 2:
-                        try:
-                            geo = {"lat": float(coords[0]), "lng": float(coords[1])}
-                        except ValueError:
-                            pass
-
-            return BusinessCard(
-                name=name.strip() if name else "",
-                address=address.strip() if address else "",
-                phone=phone.strip() if phone else None,
-                website=website,
-                geo=geo,
-                category=category,
-            )
-        except Exception as e:
-            logger.debug(f"Failed to parse business card: {e}")
-            return None
-
-    async def _fallback_extraction(self, page, category: str) -> List[BusinessCard]:
-        businesses = []
-
-        try:
-            content = await page.content()
-            if "yandex" in content.lower():
-                name_elems = await page.query_selector_all(
-                    "a[class*='title'], .name, [class*='BusinessName']"
+            for raw_item in items:
+                if not _is_business_item(raw_item):
+                    continue
+                oid = str(
+                    raw_item.get("id") or raw_item.get("oid") or raw_item.get("businessId") or ""
                 )
-                address_elems = await page.query_selector_all(
-                    "address, .address, [class*='Address']"
-                )
+                if not oid or oid in seen_oids:
+                    continue
+                try:
+                    org = YandexOrganization.from_yandex_item(raw_item, keep_raw=include_raw)
+                except Exception as exc:
+                    logger.debug("skipping malformed org item oid=%s: %s", oid, exc)
+                    continue
+                seen_oids.add(oid)
+                orgs.append(org)
 
-                for i, name_elem in enumerate(name_elems[:50]):
-                    try:
-                        name = await name_elem.text_content()
-                        address = (
-                            await address_elems[i].text_content()
-                            if i < len(address_elems)
-                            else None
-                        )
+        return orgs
 
-                        if name and len(name.strip()) > 2:
-                            businesses.append(
-                                BusinessCard(
-                                    name=name.strip(),
-                                    address=address.strip() if address else "",
-                                    category=category,
-                                )
-                            )
-                    except Exception:
-                        continue
-        except Exception as e:
-            logger.warning(f"Fallback extraction failed: {e}")
 
-        return businesses
+class YandexMapsReviewsAction:
+    """Reviews: observe `fetchReviews` URL, replay via same browser session."""
 
-    async def _scroll_down(self, page) -> bool:
+    def __init__(self) -> None:
+        self.pool_manager = BrowserPoolManager()
+        self.user_agent_pool = UserAgentPool()
+        self.scroll_iterations = 5
+        self.scroll_pause_ms = 1200
+
+    async def execute(
+        self,
+        business_oid: str,
+        seoname: str,
+        count: int = 50,
+        ranking: str = "by_time",
+        pages: int = 1,
+        include_raw: bool = True,
+    ) -> list[YandexReview]:
+        proxy = proxy_provider.get_proxy() or None
+        user_agent = self.user_agent_pool.get_user_agent()
+        logger.info(
+            "yandex_maps.reviews: oid=%s seoname=%s count=%s ranking=%s pages=%s",
+            business_oid, seoname, count, ranking, pages,
+        )
+
+        context = await self.pool_manager.create_context(
+            user_agent=user_agent,
+            stealth=True,
+            proxy=proxy,
+            locale="ru-RU",
+            timezone_id="Europe/Moscow",
+            viewport={"width": 1440, "height": 900},
+        )
+
+        observed_urls: list[str] = []
+
+        def on_response(resp) -> None:
+            if _REVIEWS_API_MARKER in resp.url and resp.status == 200:
+                observed_urls.append(resp.url)
+
+        org_url = f"https://yandex.ru/maps/org/{seoname}/{business_oid}/reviews/"
+        all_reviews: list[dict[str, Any]] = []
+
         try:
-            before_height = await page.evaluate("document.body.scrollHeight")
+            page = await context.new_page()
+            page.on("response", on_response)
 
-            await page.evaluate("""
-                window.scrollTo({
-                    top: document.body.scrollHeight,
-                    behavior: 'smooth'
-                });
-            """)
+            try:
+                await page.goto(org_url, wait_until="domcontentloaded", timeout=60_000)
+            except Exception as exc:
+                logger.warning("page.goto reviews failed: %s", exc)
+                raise
 
-            await asyncio.sleep(1)
+            content_lower = (await page.content()).lower()
+            if "smartcaptcha" in content_lower or "showcaptcha" in content_lower:
+                raise YandexCaptchaError(f"captcha on reviews page {org_url}")
 
-            after_height = await page.evaluate("document.body.scrollHeight")
+            try:
+                await page.wait_for_selector(
+                    ".business-reviews-card-view, .business-review-view, .scroll__container",
+                    timeout=20_000,
+                )
+            except Exception as exc:
+                logger.debug("reviews ui not detected: %s", exc)
 
-            scroll_button = await page.query_selector(
-                ".scroll-button, .yandex-maps__scroll-more, [class*='showMore']"
-            )
-            if scroll_button:
-                await scroll_button.click()
-                await asyncio.sleep(1)
+            await self._scroll_reviews_pane(page)
+            # Let the last batch of `fetchReviews` XHRs land in our observer.
+            await asyncio.sleep(1.5)
 
-            return after_height > before_height
+            # Replay each observed URL via the live session — this is what the
+            # research found to be the only reliable way to read the full body
+            # (param ordering & cookies must match exactly).
+            seen_urls: set[str] = set()
+            for u in observed_urls[: max(1, pages)]:
+                if u in seen_urls:
+                    continue
+                seen_urls.add(u)
+                try:
+                    resp = await page.request.get(
+                        u,
+                        headers={
+                            "Referer": org_url,
+                            "Accept": "application/json, text/plain, */*",
+                            "X-Requested-With": "XMLHttpRequest",
+                        },
+                        timeout=30_000,
+                    )
+                except Exception as exc:
+                    logger.warning("fetchReviews replay failed for %s: %s", u[:120], exc)
+                    continue
 
-        except Exception:
-            return False
+                if resp.status != 200:
+                    logger.warning("fetchReviews replay %s -> %s", u[:120], resp.status)
+                    continue
+
+                try:
+                    data = await resp.json()
+                except Exception as exc:
+                    logger.warning("fetchReviews replay JSON parse failed: %s", exc)
+                    continue
+
+                items = _extract_array(data, _REVIEW_ITEMS_PATHS)
+                if items:
+                    all_reviews.extend(items)
+        finally:
+            try:
+                await context.close()
+            except Exception:
+                pass
+
+        reviews = self._dedup_reviews(all_reviews, include_raw=include_raw)
+        logger.info(
+            "yandex_maps.reviews: observed=%d unique_reviews=%d",
+            len(observed_urls), len(reviews),
+        )
+        return reviews
+
+    async def _scroll_reviews_pane(self, page) -> None:
+        scroll_js = """() => {
+            const c = document.querySelector(
+                '.scroll__container, .business-reviews-card-view, div[class*=reviews]'
+            );
+            if (c) c.scrollBy(0, 4000);
+            window.scrollBy(0, 3000);
+        }"""
+        for _ in range(self.scroll_iterations):
+            try:
+                await page.evaluate(scroll_js)
+            except Exception:
+                pass
+            await page.wait_for_timeout(self.scroll_pause_ms)
+
+    def _dedup_reviews(
+        self, items: list[dict[str, Any]], *, include_raw: bool
+    ) -> list[YandexReview]:
+        seen: set[str] = set()
+        out: list[YandexReview] = []
+        for raw in items:
+            if not isinstance(raw, dict):
+                continue
+            rid = str(raw.get("reviewId") or raw.get("id") or raw.get("publicId") or "")
+            if not rid or rid in seen:
+                continue
+            try:
+                review = YandexReview.from_yandex_item(raw, keep_raw=include_raw)
+            except Exception as exc:
+                if logger.isEnabledFor(logging.DEBUG):
+                    logger.debug("skipping malformed review %s: %s", rid, exc)
+                continue
+            seen.add(rid)
+            out.append(review)
+        return out
 
 
 action_registry.register(CommandType.YANDEX_MAPS_EXTRACT)(YandexMapsExtractAction)
+action_registry.register(CommandType.YANDEX_MAPS_REVIEWS)(YandexMapsReviewsAction)

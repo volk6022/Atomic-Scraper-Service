@@ -1,0 +1,587 @@
+[
+  {
+    "name": "requests_bs4__no_proxy",
+    "runs": [
+      {
+        "ok": false,
+        "seconds": 1.129668000008678,
+        "organic_count": 0,
+        "error": "RuntimeError: http 429"
+      },
+      {
+        "ok": false,
+        "seconds": 1.1941485999996075,
+        "organic_count": 0,
+        "error": "RuntimeError: http 429"
+      },
+      {
+        "ok": false,
+        "seconds": 1.2175453999952879,
+        "organic_count": 0,
+        "error": "RuntimeError: http 429"
+      },
+      {
+        "ok": false,
+        "seconds": 0.9695837000035681,
+        "organic_count": 0,
+        "error": "RuntimeError: http 429"
+      },
+      {
+        "ok": false,
+        "seconds": 1.1758574999985285,
+        "organic_count": 0,
+        "error": "RuntimeError: http 429"
+      },
+      {
+        "ok": false,
+        "seconds": 1.1267458999936935,
+        "organic_count": 0,
+        "error": "RuntimeError: http 429"
+      },
+      {
+        "ok": false,
+        "seconds": 1.2655746999953408,
+        "organic_count": 0,
+        "error": "RuntimeError: http 429"
+      },
+      {
+        "ok": false,
+        "seconds": 1.1731615000026068,
+        "organic_count": 0,
+        "error": "RuntimeError: http 429"
+      },
+      {
+        "ok": false,
+        "seconds": 1.0040070999966701,
+        "organic_count": 0,
+        "error": "RuntimeError: http 429"
+      },
+      {
+        "ok": false,
+        "seconds": 1.2161386999941897,
+        "organic_count": 0,
+        "error": "RuntimeError: http 429"
+      }
+    ]
+  },
+  {
+    "name": "requests_bs4__http",
+    "runs": [
+      {
+        "ok": false,
+        "seconds": 5.242274300006102,
+        "organic_count": 0,
+        "error": "BlockedError: captcha / consent / sorry page"
+      },
+      {
+        "ok": false,
+        "seconds": 2.2245838999951957,
+        "organic_count": 0,
+        "error": "BlockedError: captcha / consent / sorry page"
+      },
+      {
+        "ok": false,
+        "seconds": 4.472636600010446,
+        "organic_count": 0,
+        "error": "BlockedError: captcha / consent / sorry page"
+      },
+      {
+        "ok": false,
+        "seconds": 4.4750697999988915,
+        "organic_count": 0,
+        "error": "BlockedError: captcha / consent / sorry page"
+      },
+      {
+        "ok": false,
+        "seconds": 1.5255101999937324,
+        "organic_count": 0,
+        "error": "BlockedError: captcha / consent / sorry page"
+      },
+      {
+        "ok": false,
+        "seconds": 20.008257699999376,
+        "organic_count": 0,
+        "error": "ProxyError: HTTPSConnectionPool(host='www.google.com', port=443): Max retries exceeded with url: /search?q=What+is+artificial+intelligence&num=10&hl=en&gl=us&pws=0 (Caused by ProxyError('Unable to connect to proxy', ConnectTimeoutError(<HTTPSConnection(host='np.puls-proxy.com', port=823) at 0x16ec0c8dac0>, 'Connection to np.puls-proxy.com timed out. (connect timeout=20.0)')))"
+      },
+      {
+        "ok": false,
+        "seconds": 5.419079500003136,
+        "organic_count": 0,
+        "error": "RuntimeError: http 429"
+      },
+      {
+        "ok": false,
+        "seconds": 20.08208089999971,
+        "organic_count": 0,
+        "error": "ProxyError: HTTPSConnectionPool(host='www.google.com', port=443): Max retries exceeded with url: /search?q=What+is+artificial+intelligence&num=10&hl=en&gl=us&pws=0 (Caused by ProxyError('Unable to connect to proxy', ConnectTimeoutError(<HTTPSConnection(host='np.puls-proxy.com', port=823) at 0x16ec0c8d7f0>, 'Connection to np.puls-proxy.com timed out. (connect timeout=20.0)')))"
+      },
+      {
+        "ok": false,
+        "seconds": 20.078402899991488,
+        "organic_count": 0,
+        "error": "ProxyError: HTTPSConnectionPool(host='www.google.com', port=443): Max retries exceeded with url: /search?q=What+is+artificial+intelligence&num=10&hl=en&gl=us&pws=0 (Caused by ProxyError('Unable to connect to proxy', ConnectTimeoutError(<HTTPSConnection(host='np.puls-proxy.com', port=823) at 0x16ec0c8e240>, 'Connection to np.puls-proxy.com timed out. (connect timeout=20.0)')))"
+      },
+      {
+        "ok": false,
+        "seconds": 1.8601685999892652,
+        "organic_count": 0,
+        "error": "BlockedError: captcha / consent / sorry page"
+      }
+    ]
+  },
+  {
+    "name": "requests_bs4__socks5",
+    "runs": [
+      {
+        "ok": false,
+        "seconds": 5.842864399994141,
+        "organic_count": 0,
+        "error": "BlockedError: captcha / consent / sorry page"
+      },
+      {
+        "ok": false,
+        "seconds": 2.4190680000028806,
+        "organic_count": 0,
+        "error": "BlockedError: captcha / consent / sorry page"
+      },
+      {
+        "ok": false,
+        "seconds": 1.9748766999982763,
+        "organic_count": 0,
+        "error": "BlockedError: captcha / consent / sorry page"
+      },
+      {
+        "ok": false,
+        "seconds": 5.868992800009437,
+        "organic_count": 0,
+        "error": "BlockedError: captcha / consent / sorry page"
+      },
+      {
+        "ok": false,
+        "seconds": 5.5641342000017175,
+        "organic_count": 0,
+        "error": "BlockedError: captcha / consent / sorry page"
+      },
+      {
+        "ok": false,
+        "seconds": 5.5396054000011645,
+        "organic_count": 0,
+        "error": "BlockedError: captcha / consent / sorry page"
+      },
+      {
+        "ok": false,
+        "seconds": 4.9939472999976715,
+        "organic_count": 0,
+        "error": "BlockedError: captcha / consent / sorry page"
+      },
+      {
+        "ok": false,
+        "seconds": 2.0871301999868592,
+        "organic_count": 0,
+        "error": "BlockedError: captcha / consent / sorry page"
+      },
+      {
+        "ok": false,
+        "seconds": 8.200003200006904,
+        "organic_count": 0,
+        "error": "BlockedError: captcha / consent / sorry page"
+      },
+      {
+        "ok": false,
+        "seconds": 5.419771500004572,
+        "organic_count": 0,
+        "error": "BlockedError: captcha / consent / sorry page"
+      }
+    ]
+  },
+  {
+    "name": "playwright_basic__no_proxy",
+    "runs": [
+      {
+        "ok": false,
+        "seconds": 10.165509700003895,
+        "organic_count": 0,
+        "error": "BlockedError: captcha / sorry page"
+      },
+      {
+        "ok": false,
+        "seconds": 10.280771799996728,
+        "organic_count": 0,
+        "error": "BlockedError: captcha / sorry page"
+      },
+      {
+        "ok": false,
+        "seconds": 10.291705800002092,
+        "organic_count": 0,
+        "error": "BlockedError: captcha / sorry page"
+      },
+      {
+        "ok": false,
+        "seconds": 10.18378130000201,
+        "organic_count": 0,
+        "error": "BlockedError: captcha / sorry page"
+      },
+      {
+        "ok": false,
+        "seconds": 10.327160700006061,
+        "organic_count": 0,
+        "error": "BlockedError: captcha / sorry page"
+      },
+      {
+        "ok": false,
+        "seconds": 10.33384949999163,
+        "organic_count": 0,
+        "error": "BlockedError: captcha / sorry page"
+      },
+      {
+        "ok": false,
+        "seconds": 10.354789299992262,
+        "organic_count": 0,
+        "error": "BlockedError: captcha / sorry page"
+      },
+      {
+        "ok": false,
+        "seconds": 10.171274099993752,
+        "organic_count": 0,
+        "error": "BlockedError: captcha / sorry page"
+      },
+      {
+        "ok": false,
+        "seconds": 10.344597399991471,
+        "organic_count": 0,
+        "error": "BlockedError: captcha / sorry page"
+      },
+      {
+        "ok": false,
+        "seconds": 10.188266999990446,
+        "organic_count": 0,
+        "error": "BlockedError: captcha / sorry page"
+      }
+    ]
+  },
+  {
+    "name": "playwright_basic__http",
+    "runs": [
+      {
+        "ok": false,
+        "seconds": 45.98021090000111,
+        "organic_count": 0,
+        "error": "TimeoutError: Page.goto: Timeout 45000ms exceeded.\nCall log:\n  - navigating to \"https://www.google.com/search?q=What+is+artificial+intelligence&num=10&hl=en&gl=us&pws=0\", waiting until \"domcontentloaded\"\n"
+      },
+      {
+        "ok": false,
+        "seconds": 45.99979109999549,
+        "organic_count": 0,
+        "error": "TimeoutError: Page.goto: Timeout 45000ms exceeded.\nCall log:\n  - navigating to \"https://www.google.com/search?q=What+is+artificial+intelligence&num=10&hl=en&gl=us&pws=0\", waiting until \"domcontentloaded\"\n"
+      },
+      {
+        "ok": false,
+        "seconds": 45.95784369998728,
+        "organic_count": 0,
+        "error": "TimeoutError: Page.goto: Timeout 45000ms exceeded.\nCall log:\n  - navigating to \"https://www.google.com/search?q=What+is+artificial+intelligence&num=10&hl=en&gl=us&pws=0\", waiting until \"domcontentloaded\"\n"
+      },
+      {
+        "ok": false,
+        "seconds": 45.973325800005114,
+        "organic_count": 0,
+        "error": "TimeoutError: Page.goto: Timeout 45000ms exceeded.\nCall log:\n  - navigating to \"https://www.google.com/search?q=What+is+artificial+intelligence&num=10&hl=en&gl=us&pws=0\", waiting until \"domcontentloaded\"\n"
+      },
+      {
+        "ok": false,
+        "seconds": 45.965580800009775,
+        "organic_count": 0,
+        "error": "TimeoutError: Page.goto: Timeout 45000ms exceeded.\nCall log:\n  - navigating to \"https://www.google.com/search?q=What+is+artificial+intelligence&num=10&hl=en&gl=us&pws=0\", waiting until \"domcontentloaded\"\n"
+      },
+      {
+        "ok": false,
+        "seconds": 46.0056859000033,
+        "organic_count": 0,
+        "error": "TimeoutError: Page.goto: Timeout 45000ms exceeded.\nCall log:\n  - navigating to \"https://www.google.com/search?q=What+is+artificial+intelligence&num=10&hl=en&gl=us&pws=0\", waiting until \"domcontentloaded\"\n"
+      },
+      {
+        "ok": false,
+        "seconds": 45.97664949999307,
+        "organic_count": 0,
+        "error": "TimeoutError: Page.goto: Timeout 45000ms exceeded.\nCall log:\n  - navigating to \"https://www.google.com/search?q=What+is+artificial+intelligence&num=10&hl=en&gl=us&pws=0\", waiting until \"domcontentloaded\"\n"
+      },
+      {
+        "ok": false,
+        "seconds": 45.96379699998943,
+        "organic_count": 0,
+        "error": "TimeoutError: Page.goto: Timeout 45000ms exceeded.\nCall log:\n  - navigating to \"https://www.google.com/search?q=What+is+artificial+intelligence&num=10&hl=en&gl=us&pws=0\", waiting until \"domcontentloaded\"\n"
+      },
+      {
+        "ok": false,
+        "seconds": 46.052341999995406,
+        "organic_count": 0,
+        "error": "TimeoutError: Page.goto: Timeout 45000ms exceeded.\nCall log:\n  - navigating to \"https://www.google.com/search?q=What+is+artificial+intelligence&num=10&hl=en&gl=us&pws=0\", waiting until \"domcontentloaded\"\n"
+      },
+      {
+        "ok": false,
+        "seconds": 45.973346700004186,
+        "organic_count": 0,
+        "error": "TimeoutError: Page.goto: Timeout 45000ms exceeded.\nCall log:\n  - navigating to \"https://www.google.com/search?q=What+is+artificial+intelligence&num=10&hl=en&gl=us&pws=0\", waiting until \"domcontentloaded\"\n"
+      }
+    ]
+  },
+  {
+    "name": "playwright_basic__socks5",
+    "runs": [
+      {
+        "ok": false,
+        "seconds": 11.741933700002846,
+        "organic_count": 0,
+        "error": "BlockedError: captcha / sorry page"
+      },
+      {
+        "ok": false,
+        "seconds": 16.47294010000769,
+        "organic_count": 0,
+        "error": "BlockedError: captcha / sorry page"
+      },
+      {
+        "ok": false,
+        "seconds": 17.052015199995367,
+        "organic_count": 0,
+        "error": "BlockedError: captcha / sorry page"
+      },
+      {
+        "ok": false,
+        "seconds": 16.80770060000941,
+        "organic_count": 0,
+        "error": "BlockedError: captcha / sorry page"
+      },
+      {
+        "ok": false,
+        "seconds": 18.187016199997743,
+        "organic_count": 0,
+        "error": "BlockedError: captcha / sorry page"
+      },
+      {
+        "ok": false,
+        "seconds": 17.34173689999443,
+        "organic_count": 0,
+        "error": "BlockedError: captcha / sorry page"
+      },
+      {
+        "ok": false,
+        "seconds": 13.326522999996087,
+        "organic_count": 0,
+        "error": "BlockedError: captcha / sorry page"
+      },
+      {
+        "ok": false,
+        "seconds": 19.181700200002524,
+        "organic_count": 0,
+        "error": "BlockedError: captcha / sorry page"
+      },
+      {
+        "ok": false,
+        "seconds": 16.94758749999164,
+        "organic_count": 0,
+        "error": "BlockedError: captcha / sorry page"
+      },
+      {
+        "ok": false,
+        "seconds": 30.9459499999939,
+        "organic_count": 0,
+        "error": "BlockedError: captcha / sorry page"
+      }
+    ]
+  },
+  {
+    "name": "playwright_stealth__no_proxy",
+    "runs": [
+      {
+        "ok": false,
+        "seconds": 12.794691100003547,
+        "organic_count": 0,
+        "error": "BlockedError: captcha / sorry page"
+      },
+      {
+        "ok": false,
+        "seconds": 10.141400199994678,
+        "organic_count": 0,
+        "error": "BlockedError: captcha / sorry page"
+      },
+      {
+        "ok": false,
+        "seconds": 10.30014750000555,
+        "organic_count": 0,
+        "error": "BlockedError: captcha / sorry page"
+      },
+      {
+        "ok": false,
+        "seconds": 10.278740499998094,
+        "organic_count": 0,
+        "error": "BlockedError: captcha / sorry page"
+      },
+      {
+        "ok": false,
+        "seconds": 10.631578000000445,
+        "organic_count": 0,
+        "error": "BlockedError: captcha / sorry page"
+      },
+      {
+        "ok": false,
+        "seconds": 10.28902399999788,
+        "organic_count": 0,
+        "error": "BlockedError: captcha / sorry page"
+      },
+      {
+        "ok": false,
+        "seconds": 10.636790499993367,
+        "organic_count": 0,
+        "error": "BlockedError: captcha / sorry page"
+      },
+      {
+        "ok": false,
+        "seconds": 10.949467600003118,
+        "organic_count": 0,
+        "error": "BlockedError: captcha / sorry page"
+      },
+      {
+        "ok": false,
+        "seconds": 10.348320000004605,
+        "organic_count": 0,
+        "error": "BlockedError: captcha / sorry page"
+      },
+      {
+        "ok": false,
+        "seconds": 10.264911199992639,
+        "organic_count": 0,
+        "error": "BlockedError: captcha / sorry page"
+      }
+    ]
+  },
+  {
+    "name": "playwright_stealth__http",
+    "runs": [
+      {
+        "ok": false,
+        "seconds": 46.09085409999534,
+        "organic_count": 0,
+        "error": "TimeoutError: Page.goto: Timeout 45000ms exceeded.\nCall log:\n  - navigating to \"https://www.google.com/search?q=What+is+artificial+intelligence&num=10&hl=en&gl=us&pws=0\", waiting until \"domcontentloaded\"\n"
+      },
+      {
+        "ok": false,
+        "seconds": 46.06061139999656,
+        "organic_count": 0,
+        "error": "TimeoutError: Page.goto: Timeout 45000ms exceeded.\nCall log:\n  - navigating to \"https://www.google.com/search?q=What+is+artificial+intelligence&num=10&hl=en&gl=us&pws=0\", waiting until \"domcontentloaded\"\n"
+      },
+      {
+        "ok": false,
+        "seconds": 46.0663077999925,
+        "organic_count": 0,
+        "error": "TimeoutError: Page.goto: Timeout 45000ms exceeded.\nCall log:\n  - navigating to \"https://www.google.com/search?q=What+is+artificial+intelligence&num=10&hl=en&gl=us&pws=0\", waiting until \"domcontentloaded\"\n"
+      },
+      {
+        "ok": false,
+        "seconds": 46.04424210000434,
+        "organic_count": 0,
+        "error": "TimeoutError: Page.goto: Timeout 45000ms exceeded.\nCall log:\n  - navigating to \"https://www.google.com/search?q=What+is+artificial+intelligence&num=10&hl=en&gl=us&pws=0\", waiting until \"domcontentloaded\"\n"
+      },
+      {
+        "ok": false,
+        "seconds": 46.04407789999095,
+        "organic_count": 0,
+        "error": "TimeoutError: Page.goto: Timeout 45000ms exceeded.\nCall log:\n  - navigating to \"https://www.google.com/search?q=What+is+artificial+intelligence&num=10&hl=en&gl=us&pws=0\", waiting until \"domcontentloaded\"\n"
+      },
+      {
+        "ok": false,
+        "seconds": 46.08485359999759,
+        "organic_count": 0,
+        "error": "TimeoutError: Page.goto: Timeout 45000ms exceeded.\nCall log:\n  - navigating to \"https://www.google.com/search?q=What+is+artificial+intelligence&num=10&hl=en&gl=us&pws=0\", waiting until \"domcontentloaded\"\n"
+      },
+      {
+        "ok": false,
+        "seconds": 46.054909500002395,
+        "organic_count": 0,
+        "error": "TimeoutError: Page.goto: Timeout 45000ms exceeded.\nCall log:\n  - navigating to \"https://www.google.com/search?q=What+is+artificial+intelligence&num=10&hl=en&gl=us&pws=0\", waiting until \"domcontentloaded\"\n"
+      },
+      {
+        "ok": false,
+        "seconds": 46.189623900005245,
+        "organic_count": 0,
+        "error": "TimeoutError: Page.goto: Timeout 45000ms exceeded.\nCall log:\n  - navigating to \"https://www.google.com/search?q=What+is+artificial+intelligence&num=10&hl=en&gl=us&pws=0\", waiting until \"domcontentloaded\"\n"
+      },
+      {
+        "ok": false,
+        "seconds": 46.07465480000246,
+        "organic_count": 0,
+        "error": "TimeoutError: Page.goto: Timeout 45000ms exceeded.\nCall log:\n  - navigating to \"https://www.google.com/search?q=What+is+artificial+intelligence&num=10&hl=en&gl=us&pws=0\", waiting until \"domcontentloaded\"\n"
+      },
+      {
+        "ok": false,
+        "seconds": 46.214618099998916,
+        "organic_count": 0,
+        "error": "TimeoutError: Page.goto: Timeout 45000ms exceeded.\nCall log:\n  - navigating to \"https://www.google.com/search?q=What+is+artificial+intelligence&num=10&hl=en&gl=us&pws=0\", waiting until \"domcontentloaded\"\n"
+      }
+    ]
+  },
+  {
+    "name": "playwright_stealth__socks5",
+    "runs": [
+      {
+        "ok": false,
+        "seconds": 17.3849945999973,
+        "organic_count": 0,
+        "error": "BlockedError: captcha / sorry page"
+      },
+      {
+        "ok": false,
+        "seconds": 12.315604699993855,
+        "organic_count": 0,
+        "error": "BlockedError: captcha / sorry page"
+      },
+      {
+        "ok": false,
+        "seconds": 17.664427600000636,
+        "organic_count": 0,
+        "error": "BlockedError: captcha / sorry page"
+      },
+      {
+        "ok": false,
+        "seconds": 21.25038179999683,
+        "organic_count": 0,
+        "error": "BlockedError: captcha / sorry page"
+      },
+      {
+        "ok": false,
+        "seconds": 31.301032799994573,
+        "organic_count": 0,
+        "error": "BlockedError: captcha / sorry page"
+      },
+      {
+        "ok": false,
+        "seconds": 14.939178700005868,
+        "organic_count": 0,
+        "error": "BlockedError: captcha / sorry page"
+      },
+      {
+        "ok": false,
+        "seconds": 13.778938400006155,
+        "organic_count": 0,
+        "error": "BlockedError: captcha / sorry page"
+      },
+      {
+        "ok": false,
+        "seconds": 22.281180700010736,
+        "organic_count": 0,
+        "error": "Error: Page.goto: net::ERR_TUNNEL_CONNECTION_FAILED at https://www.google.com/search?q=What+is+artificial+intelligence&num=10&hl=en&gl=us&pws=0\nCall log:\n  - navigating to \"https://www.google.com/search?q=What+is+artificial+intelligence&num=10&hl=en&gl=us&pws=0\", waiting until \"domcontentloaded\"\n"
+      },
+      {
+        "ok": false,
+        "seconds": 14.419615100006922,
+        "organic_count": 0,
+        "error": "BlockedError: captcha / sorry page"
+      },
+      {
+        "ok": false,
+        "seconds": 37.03219969999918,
+        "organic_count": 0,
+        "error": "BlockedError: captcha / sorry page"
+      }
+    ]
+  }
+]

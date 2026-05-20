@@ -27,7 +27,7 @@ def _mock_search_response():
     from src.domain.models.requests import SearchResponse, SearchResult
 
     return SearchResponse(
-        searchParameters={"q": "test query", "type": "search", "engine": "google"},
+        searchParameters={"q": "test query", "type": "search", "engine": "searxng"},
         organic=[
             SearchResult(
                 title="Test Result",
@@ -122,12 +122,12 @@ async def test_scraper_with_output_format():
 async def test_serper_returns_search_results():
     """Serper endpoint should return search results with mocked client"""
     from src.api.main import app
-    from src.infrastructure.external_api.search_client import GoogleSearchClient
+    from src.infrastructure.external_api.search_client import SearXngSearchClient
 
     transport = ASGITransport(app=app)
     async with AsyncClient(transport=transport, base_url="http://test") as client:
         with patch.object(
-            GoogleSearchClient,
+            SearXngSearchClient,
             "search",
             new_callable=AsyncMock,
             return_value=_mock_search_response(),

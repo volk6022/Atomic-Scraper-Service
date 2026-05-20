@@ -1,5 +1,5 @@
 """
-Contract test for /serper endpoint (Google Search).
+Contract test for /serper endpoint (SearXNG-backed search).
 Tests real endpoint behavior without full service mocking.
 """
 
@@ -15,7 +15,7 @@ def _mock_search_response():
     from src.domain.models.requests import SearchResponse, SearchResult
 
     return SearchResponse(
-        searchParameters={"q": "test query", "type": "search", "engine": "google"},
+        searchParameters={"q": "test query", "type": "search", "engine": "searxng"},
         organic=[
             SearchResult(
                 title="Test Result",
@@ -34,7 +34,7 @@ def _mock_search_response_with_num(num: int):
         searchParameters={
             "q": "test",
             "type": "search",
-            "engine": "google",
+            "engine": "searxng",
             "num": num,
         },
         organic=[
@@ -53,12 +53,12 @@ def _mock_search_response_with_num(num: int):
 async def test_serper_returns_200_with_valid_query():
     """Serper endpoint should return 200 OK with valid query"""
     from src.api.main import app
-    from src.infrastructure.external_api.search_client import GoogleSearchClient
+    from src.infrastructure.external_api.search_client import SearXngSearchClient
 
     transport = ASGITransport(app=app)
     async with AsyncClient(transport=transport, base_url="http://test") as client:
         with patch.object(
-            GoogleSearchClient,
+            SearXngSearchClient,
             "search",
             new_callable=AsyncMock,
             return_value=_mock_search_response(),
@@ -75,12 +75,12 @@ async def test_serper_returns_200_with_valid_query():
 async def test_serper_returns_search_results_structure():
     """Serper endpoint should return proper search results structure"""
     from src.api.main import app
-    from src.infrastructure.external_api.search_client import GoogleSearchClient
+    from src.infrastructure.external_api.search_client import SearXngSearchClient
 
     transport = ASGITransport(app=app)
     async with AsyncClient(transport=transport, base_url="http://test") as client:
         with patch.object(
-            GoogleSearchClient,
+            SearXngSearchClient,
             "search",
             new_callable=AsyncMock,
             return_value=_mock_search_response(),
@@ -101,12 +101,12 @@ async def test_serper_returns_search_results_structure():
 async def test_serper_organic_result_structure():
     """Each organic result should have required fields"""
     from src.api.main import app
-    from src.infrastructure.external_api.search_client import GoogleSearchClient
+    from src.infrastructure.external_api.search_client import SearXngSearchClient
 
     transport = ASGITransport(app=app)
     async with AsyncClient(transport=transport, base_url="http://test") as client:
         with patch.object(
-            GoogleSearchClient,
+            SearXngSearchClient,
             "search",
             new_callable=AsyncMock,
             return_value=_mock_search_response(),
@@ -163,12 +163,12 @@ async def test_serper_validates_num_parameter():
 async def test_serper_with_custom_num():
     """Serper endpoint should accept custom num parameter"""
     from src.api.main import app
-    from src.infrastructure.external_api.search_client import GoogleSearchClient
+    from src.infrastructure.external_api.search_client import SearXngSearchClient
 
     transport = ASGITransport(app=app)
     async with AsyncClient(transport=transport, base_url="http://test") as client:
         with patch.object(
-            GoogleSearchClient,
+            SearXngSearchClient,
             "search",
             new_callable=AsyncMock,
             return_value=_mock_search_response_with_num(5),
@@ -187,12 +187,12 @@ async def test_serper_with_custom_num():
 async def test_serper_default_num():
     """Serper endpoint should use default num=10 when not specified"""
     from src.api.main import app
-    from src.infrastructure.external_api.search_client import GoogleSearchClient
+    from src.infrastructure.external_api.search_client import SearXngSearchClient
 
     transport = ASGITransport(app=app)
     async with AsyncClient(transport=transport, base_url="http://test") as client:
         with patch.object(
-            GoogleSearchClient,
+            SearXngSearchClient,
             "search",
             new_callable=AsyncMock,
             return_value=_mock_search_response_with_num(10),

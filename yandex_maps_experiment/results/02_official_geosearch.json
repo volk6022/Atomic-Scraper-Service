@@ -1,0 +1,21 @@
+{
+  "approach": "official Geosearch /v1/ (no API key)",
+  "success": false,
+  "captcha_detected": false,
+  "http_status": 400,
+  "items_collected": 0,
+  "fields_per_item": [],
+  "egress_ip": null,
+  "duration_s": 52.03,
+  "notes": "no-key: HTTP 400, body='<?xml version=\"1.0\" encoding=\"UTF-8\"?><error><statusCode>400</statusCode><error>Bad Request</error><message>Missing apikey</message></error>' | fake-key: HTTP 403",
+  "sample": [
+    {
+      "no_key_status": 400,
+      "no_key_body": "",
+      "fake_key_status": 403,
+      "fake_key_body": "<?xml version=\"1.0\" encoding=\"UTF-8\"?><error><statusCode>403</statusCode><error>Forbidden</error><message>Invalid api key</message></error>"
+    }
+  ],
+  "error": null,
+  "started_at": "2026-05-18T09:39:09.999937+00:00"
+}

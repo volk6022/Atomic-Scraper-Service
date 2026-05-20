@@ -1,0 +1,5385 @@
+{
+  "approach": "Playwright + stealth + XHR intercept",
+  "success": true,
+  "captcha_detected": false,
+  "http_status": null,
+  "items_collected": 48,
+  "fields_per_item": [
+    "additionalAddress",
+    "address",
+    "advert",
+    "advertOffer",
+    "analyticsId",
+    "aspects",
+    "awards",
+    "bounds",
+    "breadcrumbs",
+    "businessImages",
+    "businessLinks",
+    "businessProperties",
+    "categories",
+    "chain",
+    "compositeAddress",
+    "coordinates",
+    "country",
+    "currentWorkingStatus",
+    "description",
+    "discoveries",
+    "displayCoordinates",
+    "entrances",
+    "eventsPreviews",
+    "featureGroups",
+    "features",
+    "fullAddress",
+    "geoId",
+    "hasStories",
+    "histogramData",
+    "houseEncodedCoordinates",
+    "id",
+    "index",
+    "lastMileStory",
+    "logId",
+    "matchedObjects",
+    "mediaOrderTemplate",
+    "metrika",
+    "metro",
+    "modularCard",
+    "modularPin"
+  ],
+  "egress_ip": null,
+  "duration_s": 16.35,
+  "notes": "captured 2 XHR responses; 48 org objects after dedup",
+  "sample": [
+    {
+      "type": "business",
+      "requestId": "1779097409739092-2107242103-addrs-upper-yp-90",
+      "index": 0,
+      "analyticsId": "25",
+      "title": "Дэнтал Конфидэнс",
+      "description": "Бармалеева ул., 12",
+      "address": "Бармалеева ул., 12",
+      "coordinates": [
+        30.3056,
+        59.964324
+      ],
+      "displayCoordinates": [
+        30.3056,
+        59.964324
+      ],
+      "bounds": [
+        [
+          30.301414,
+          59.962215
+        ],
+        [
+          30.309625,
+          59.966331
+        ]
+      ],
+      "uri": "ymapsbm1://org?oid=82071161567",
+      "logId": "dHlwZT1iaXpmaW5kZXI7aWQ9ODIwNzExNjE1Njc=",
+      "requestSerpId": "1779097403635403-637133801-addrs-upper-yp-39",
+      "id": "82071161567",
+      "metro": [
+        {
+          "id": "station__9805891",
+          "name": "Петроградская",
+          "distance": "560 м",
+          "distanceValue": 561.577,
+          "coordinates": [
+            30.310995482,
+            59.966159282
+          ],
+          "type": "metro",
+          "color": "#0070bf"
+        },
+        {
+          "id": "station__9805918",
+          "name": "Чкаловская",
+          "distance": "1,13 км",
+          "distanceValue": 1133.78,
+          "coordinates": [
+            30.292241382,
+            59.961065678
+          ],
+          "type": "metro",
+          "color": "#8647b2"
+        },
+        {
+          "id": "station__9805928",
+          "name": "Горьковская",
+          "distance": "1,44 км",
+          "distanceValue": 1437.82,
+          "coordinates": [
+            30.319178137,
+            59.956146492
+          ],
+          "type": "metro",
+          "color": "#0070bf"
+        }
+      ],
+      "stops": [
+        {
+          "id": "stop__10066109",
+          "name": "Большой проспект П.С.",
+          "distance": "18 м",
+          "distanceValue": 18.87,
+          "coordinates": [
+            30.305289274,
+            59.964384884
+          ],
+          "type": "common"
+        },
+        {
+          "id": "stop__10071504",
+          "name": "Ординарная улица / Большой проспект П.С.",
+          "distance": "320 м",
+          "distanceValue": 319.499,
+          "coordinates": [
+            30.309629371,
+            59.96439047
+          ],
+          "type": "common"
+        },
+        {
+          "id": "stop__10066106",
+          "name": "Большой проспект П.С. / Улица Ленина",
+          "distance": "460 м",
+          "distanceValue": 463.889,
+          "coordinates": [
+            30.304389138,
+            59.962353254
+          ],
+          "type": "common"
+        },
+        {
+          "id": "stop__10075252",
+          "name": "Станция метро Петроградская",
+          "distance": "600 м",
+          "distanceValue": 602.241,
+          "coordinates": [
+            30.310061319,
+            59.967107307
+          ],
+          "type": "common"
+        },
+        {
+          "id": "stop__10145540",
+          "name": "Чкаловский проспект",
+          "distance": "680 м",
+          "distanceValue": 676.082,
+          "coordinates": [
+            30.304782259,
+            59.969253572
+          ],
+          "type": "common"
+        }
+      ],
+      "photos": {
+        "count": 100,
+        "urlTemplate": "https://avatars.mds.yandex.net/get-altay/7456447/2a00000183ae920550e3e3966fcd878d2dd2/%s",
+        "items": [
+          {
+            "urlTemplate": "https://avatars.mds.yandex.net/get-altay/7456447/2a00000183ae920550e3e3966fcd878d2dd2/%s"
+          },
+          {
+            "urlTemplate": "https://avatars.mds.yandex.net/get-altay/1633254/2a00000185d8d6575e4249f9eb9e6fe67985/%s"
+          },
+          {
+            "urlTemplate": "https://avatars.mds.yandex.net/get-altay/7044542/2a00000183ae94e736b5af13092d1839d5d7/%s"
+          },
+          {
+            "urlTemplate": "https://avatars.mds.yandex.net/get-altay/1775373/2a00000185d8db46423af4a3a53f4da29c52/%s"
+          },
+          {
+            "urlTemplate": "https://avatars.mds.yandex.net/get-altay/372953/2a00000185d8db4d6ee9529cfbaf6e5c3d61/%s"
+          },
+          {
+            "urlTemplate": "https://avatars.mds.yandex.net/get-altay/998237/2a00000185d8db395e2a39ea3a1adea923ab/%s"
+          },
+          {
+            "urlTemplate": "https://avatars.mds.yandex.net/get-altay/1005628/2a00000185d8db3b14f11b57236e8dc581ea/%s"
+          },
+          {
+            "urlTemplate": "https://avatars.mds.yandex.net/get-altay/1532977/2a00000185d8db2d7c2cdd8651306bb27c08/%s"
+          },
+          {
+            "urlTemplate": "https://avatars.mds.yandex.net/get-altay/6446898/2a00000183ae967d69d3388b6b914c7bd1ce/%s"
+          },
+          {
+            "urlTemplate": "https://avatars.mds.yandex.net/get-altay/4633583/2a0000017a99f33bfadfadf09269cebc3bc0/%s"
+          }
+        ]
+      },
+      "entrances": [
+        {
+          "coordinates": [
+            30.30560775,
+            59.96432841
+          ],
+          "azimuth": 38.638564804143016,
+          "tilt": 0
+        }
+      ],
+      "routePoint": {
+        "context": "djJ8ChQKEgl2pztPPE4-QBHfxgMdb_tNQBIqChIJKZYZPjtOPkAR5PPMw3D7TUASDTgyMDcxMTYxNTY3XzAdAACAPyAE"
+      },
+      "panorama": {
+        "id": "1254521640_626037009_23_1753270670",
+        "direction": [
+          172.4,
+          10
+        ],
+        "point": {
+          "type": "Point",
+          "coordinates": [
+            30.305578396,
+            59.9644053704
+          ]
+        },
+        "preview": "https://static-pano.maps.yandex.ru/v1/?panoid=1254521640_626037009_23_1753270670&size=500%2C240&azimuth=172.4&tilt=10&api_key=maps&signature=HrUebf7ImF0LtoWJhryrN4FbLFIm8gEeEEoWwy88pI4="
+      },
+      "shortTitle": "Дэнтал Конфидэнс",
+      "fullAddress": "Санкт-Петербург, Бармалеева улица, 12",
+      "country": "Россия",
+      "status": "open",
+      "businessLinks": [],
+      "ratingData": {
+        "ratingCount": 338,
+        "ratingValue": 5,
+        "reviewCount": 292
+      },
+      "sources": [
+        {
+          "id": "32top",
+          "name": "32top.ru",
+          "href": "https://www.32top.ru/"
+        },
+        {
+          "id": "yandex",
+          "name": "Яндекс",
+          "href": "https://ya.ru/"
+        }
+      ],
+      "categories": [
+        {
+          "id": "184106132",
+          "name": "Стоматологическая клиника",
+          "class": "dental",
+          "seoname": "dental_clinic",
+          "pluralName": "Стоматологии"
+        },
+        {
+          "id": "184106130",
+          "name": "стоматологическая поликлиника",
+          "class": "dental",
+          "seoname": "dental_polyclinic",
+          "pluralName": "Стоматологии"
+        },
+        {
+          "id": "64561926512",
+          "name": "детская стоматология",
+          "class": "dental",
+          "seoname": "children_dentistry",
+          "pluralName": "Детские стоматологии"
+        }
+      ],
+      "phones": [
+        {
+          "number": "+7 (812) 218-28-10",
+          "type": "phone",
+          "value": "+78122182810"
+        },
+        {
+          "number": "+7 (812) 602-64-12",
+          "type": "phone",
+          "value": "+78126026412",
+          "info": "Администратор"
+        }
+      ],
+      "features": [
+        {
+          "id": "dentist_services",
+          "value": [
+            {
+              "id": "dental_surgery",
+              "name": "хирургия"
+            },
+            {
+              "id": "aesthetic_dentistry",
+              "name": "эстетическая стоматология"
+            },
+            {
+              "id": "endodontics",
+              "name": "эндодонтия"
+            },
+            {
+              "id": "implantology",
+              "name": "имплантология"
+            },
+            {
+              "id": "radiography",
+              "name": "рентгенография"
+            },
+            {
+              "id": "orthodontics",
+              "name": "ортодонтия"
+            },
+            {
+              "id": "dental_prosthetics",
+              "name": "протезирование"
+            },
+            {
+              "id": "therapy",
+              "name": "терапия"
+            },
+            {
+              "id": "filling",
+              "name": "пломбирование"
+            },
+            {
+              "id": "extractions",
+              "name": "удаление зубов"
+            },
+            {
+              "id": "teeth_whitening",
+              "name": "отбеливание"
+            },
+            {
+              "id": "caries_treatment",
+              "name": "лечение кариеса"
+            },
+            {
+              "id": "veneers",
+              "name": "виниры и люминиры"
+            },
+            {
+              "id": "braces",
+              "name": "брекеты"
+            },
+            {
+              "id": "dental_hygiene",
+              "name": "гигиена полости рта"
+            },
+            {
+              "id": "crowns",
+              "name": "коронки"
+            },
+            {
+              "id": "treatment_of_gum_disease",
+              "name": "лечение дёсен"
+            },
+            {
+              "id": "root_canal_treatment",
+              "name": "лечение каналов"
+            },
+            {
+              "id": "computer tomography",
+              "name": "компьютерная томография"
+            },
+            {
+              "id": "treatment_of_periodontitis",
+              "name": "лечение периодонтита"
+            },
+            {
+              "id": "treatment_of_tooth_cysts",
+              "name": "лечение кисты зуба"
+            },
+            {
+              "id": "restoration_of_teeth",
+              "name": "реставрация зубов"
+            },
+            {
+              "id": "aligners",
+              "name": "элайнеры"
+            },
+            {
+              "id": "dental_treatment_anesthesia",
+              "name": "наркоз"
+            },
+            {
+              "id": "treatment_under_the_microscope",
+              "name": "лечение под микроскопом"
+            },
+            {
+              "id": "orthopedics_service",
+              "name": "ортопедия"
+            },
+            {
+              "id": "dental_treatment_sedation",
+              "name": "седация"
+            },
+            {
+              "id": "digital_dentistry",
+              "name": "цифровая стоматология CAD/CAM"
+            },
+            {
+              "id": "laser_dentistry",
+              "name": "лазерная стоматология"
+            },
+            {
+              "id": "gnathology",
+              "name": "гнатология"
+            },
+            {
+              "id": "temporomandibular_joint_treatment",
+              "name": "лечение височно-нижнечелюстного сустава"
+            },
+            {
+              "id": "bone_grafting",
+              "name": "костная пластика"
+            }
+          ],
+          "name": "услуги",
+          "type": "enum",
+          "important": true
+        },
+        {
+          "id": "for_children",
+          "value": true,
+          "name": "есть детский кабинет",
+          "type": "bool",
+          "important": true
+        },
+        {
+          "id": "street_entrance",
+          "value": true,
+          "type": "bool",
+          "important": false
+        },
+        {
+          "id": "preliminary_registration",
+          "value": true,
+          "name": "предварительная запись",
+          "type": "bool",
+          "important": false
+        },
+        {
+          "id": "show_briefly_about_the_place_block",
+          "value": true,
+          "type": "bool",
+          "important": false
+        },
+        {
+          "id": "wheelchair_access",
+          "value": [
+            {
+              "id": "unavailable",
+              "name": "недоступно"
+            }
+          ],
+          "name": "доступность входа на инвалидной коляске",
+          "type": "enum",
+          "important": false
+        },
+        {
+          "id": "payment_method",
+          "value": [
+            {
+              "id": "cash",
+              "name": "наличными"
+            },
+            {
+              "id": "payment_card",
+              "name": "оплата картой"
+            },
+            {
+              "id": "wire_transfer",
+              "name": "банковским переводом"
+            },
+            {
+              "id": "installment",
+              "name": "рассрочка"
+            },
+            {
+              "id": "cashless_payment",
+              "name": "безналичная"
+            }
+          ],
+          "name": "способ оплаты",
+          "type": "enum",
+          "important": false
+        },
+        {
+          "id": "payment_by_credit_card",
+          "value": true,
+          "name": "Оплата картой",
+          "type": "bool",
+          "important": false
+        },
+        {
+          "id": "view_medicine_booking",
+          "value": true,
+          "type": "bool",
+          "important": false
+        },
+        {
+          "id": "promotions",
+          "value": [
+            {
+              "id": "discounts",
+              "name": "скидки"
+            },
+            {
+              "id": "promotions",
+              "name": "акции"
+            },
+            {
+              "id": "gifts",
+              "name": "подарки"
+            },
+            {
+              "id": "special_offers",
+              "name": "спецпредложения"
+            },
+            {
+              "id": "bonuses",
+              "name": "бонусы"
+            }
+          ],
+          "name": "акции",
+          "type": "enum",
+          "important": false
+        },
+        {
+          "id": "pediatric_specialists",
+          "value": [
+            {
+              "id": "pediatric_dentist",
+              "name": "детский стоматолог"
+            }
+          ],
+          "name": "детские врачи и специалисты",
+          "type": "enum",
+          "important": false
+        },
+        {
+          "id": "dental treatment in installments",
+          "value": true,
+          "name": "лечение зубов в рассрочку",
+          "type": "bool",
+          "important": false
+        },
+        {
+          "id": "good_place",
+          "value": true,
+          "type": "bool",
+          "important": false
+        },
+        {
+          "id": "Possible_with_dog",
+          "value": true,
+          "name": "Можно с собакой",
+          "type": "bool",
+          "important": false
+        },
+        {
+          "id": "free examination",
+          "value": true,
+          "name": "бесплатная консультация",
+          "type": "bool",
+          "important": false
+        },
+        {
+          "id": "uni_medic_specialization",
+          "value": [
+            {
+              "id": "stomatolog_terapevt",
+              "name": "стоматолог-терапевт"
+            },
+            {
+              "id": "stomatolog_ortoped",
+              "name": "стаматолог-ортопед"
+            },
+            {
+              "id": "stomatolog_ortodont",
+              "name": "стоматолог-ортодонт"
+            },
+            {
+              "id": "stomatolog_implantolog",
+              "name": "стоматолог-имплантолог"
+            },
+            {
+              "id": "stomatolog",
+              "name": "стоматолог"
+            },
+            {
+              "id": "ortoped",
+              "name": "ортопед"
+            },
+            {
+              "id": "terapevt",
+              "name": "терапевт"
+            },
+            {
+              "id": "khirurg",
+              "name": "хирург"
+            },
+            {
+              "id": "stomatolog_khirurg",
+              "name": "стоматолог-хирург"
+            }
+          ],
+          "aref": "#medicine_unisearch",
+          "type": "enum",
+          "important": false
+        },
+        {
+          "id": "guarantee",
+          "value": true,
+          "name": "гарантия",
+          "type": "bool",
+          "important": false
+        },
+        {
+          "id": "uni_medic_min_appointment_price",
+          "value": "400 ₽",
+          "aref": "#medicine_unisearch",
+          "type": "text",
+          "important": false
+        },
+        {
+          "id": "uni_medic_adult",
+          "value": true,
+          "aref": "#medicine_unisearch",
+          "type": "bool",
+          "important": false
+        },
+        {
+          "id": "wi_fi",
+          "value": true,
+          "name": "Wi-Fi",
+          "type": "bool",
+          "important": false
+        },
+        {
+          "id": "uni_medic_kid",
+          "value": true,
+          "aref": "#medicine_unisearch",
+          "type": "bool",
+          "important": false
+        },
+        {
+          "id": "roszdrav_license",
+          "value": true,
+          "name": "данные от Росздравнадзора",
+          "type": "bool",
+          "important": false
+        },
+        {
+          "id": "medical_specialists",
+          "value": [
+            {
+              "id": "stomatologist",
+              "name": "стоматолог"
+            }
+          ],
+          "name": "врачи и специалисты",
+          "type": "enum",
+          "important": false
+        }
+      ],
+      "mediaOrderTemplate": "p,v,p,v,v,p,v*,p*",
+      "featureGroups": [
+        {
+          "name": "Доступность",
+          "featureIds": [
+            "elevator_wheelchair_accessible",
+            "ramp",
+            "wheelchair_access",
+            "call_button",
+            "toilet_for_disabled",
+            "parking_disabled",
+            "automatic_door"
+          ]
+        },
+        {
+          "name": "Достижения",
+          "featureIds": [
+            "good_place"
+          ]
+        }
+      ],
+      "businessProperties": {
+        "has_verified_owner": true,
+        "geoproduct_poi_color": "#ABAEB3",
+        "show_ymyl_disclaimer": true,
+        "unusual_hours": [
+          "2026-05-09",
+          "2026-05-11"
+        ],
+        "geoproduct_poi_label_color": "#7A7F85"
+      },
+      "seoname": "dental_konfidens",
+      "geoId": 120660,
+      "compositeAddress": {
+        "country": "Россия",
+        "locality": "Санкт-Петербург",
+        "street": "Бармалеева улица",
+        "house": "12"
+      },
+      "modularCard": {
+        "showClaimOrganization": true,
+        "showTaxiButton": true,
+        "showFeedbackButton": true,
+        "showReviews": true,
+        "showAddPhotoButton": true,
+        "showCompetitors": false,
+        "showDirectBanner": false,
+        "showAdditionalAds": false,
+        "showWorkHours": true,
+        "showContacts": true,
+        "showFriendsLiked": false,
+        "showVisualPricesTab": false,
+        "showHotelEnrichment": false,
+        "promoBadgeFeature": [],
+        "offerBadgeId": [],
+        "showCourierButton": false,
+        "hotelReviewsStubType": 0
+      },
+      "modularPin": {
+        "subtitleHints": [
+          {
+            "text": "5",
+            "type": "RATING",
+            "properties": {
+              "rating": {
+                "showGoodPlace": true
+              }
+            }
+          },
+          {
+            "text": "6900 ₽  Лечение кариеса",
+            "type": "PRICE",
+            "properties": {
+              "price": {
+                "name": "Лечение кариеса",
+                "exactPrice": {
+                  "value": 6900,
+                  "text": "6900 ₽",
+                  "currency": "₽"
+                }
+              }
+            }
+          }
+        ],
+        "allowMultilineSubtitle": false
+      },
+      "modularSnippet": {
+        "showNeurosummary": true,
+        "showMentionedOnSite": false,
+        "showTitle": "SHORT_TITLE",
+        "showAddress": "SHORT_ADDRESS",
+        "showCategory": "SINGLE_CATEGORY",
+        "showRating": "FIVE_STAR_RATING",
+        "showPhoto": "LOGO",
+        "showWorkHours": true,
+        "showVerified": true,
+        "showDistanceFromTransit": false,
+        "showBookmark": true,
+        "showEta": true,
+        "showGeoproductOffer": true,
+        "subtitleHint": [
+          {
+            "type": "PRICE",
+            "text": "6900 ₽  Лечение кариеса",
+            "properties": {
+              "price": {
+                "name": "Лечение кариеса",
+                "exactPrice": {
+                  "value": 6900,
+                  "text": "6900 ₽",
+                  "currency": "₽"
+                }
+              }
+            }
+          }
+        ],
+        "galleryButton": [
+          "PRICES"
+        ],
+        "shownGoodsNumber": 3,
+        "showDescription": false,
+        "showCollectionBadge": true,
+        "showFriendsLiked": false,
+        "showCourierButton": false,
+        "showYandexEatsOrderButton": false,
+        "infoBlock": [
+          {
+            "type": "GOODS"
+          },
+          {
+            "type": "SUBTITLE",
+            "subtitleHint": {
+              "text": "6900 ₽  Лечение кариеса",
+              "type": "PRICE",
+              "properties": {
+                "price": {
+                  "name": "Лечение кариеса",
+                  "exactPrice": {
+                    "value": 6900,
+                    "text": "6900 ₽",
+                    "currency": "₽"
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "serpActionButtons": [
+          6,
+          1,
+          3,
+          5,
+          0
+        ],
+        "awards": [
+          0
+        ],
+        "promoBadgeFeature": [],
+        "offerBadgeId": [],
+        "showHotelEnrichment": false
+      },
+      "tzOffset": 10800,
+      "workingTimeText": "ежедневно, 09:00–21:00",
+      "workingTime": [
+        [
+          {
+            "from": {
+              "hours": 9,
+              "minutes": 0
+            },
+            "to": {
+              "hours": 21,
+              "minutes": 0
+            }
+          }
+        ],
+        [
+          {
+            "from": {
+              "hours": 9,
+              "minutes": 0
+            },
+            "to": {
+              "hours": 21,
+              "minutes": 0
+            }
+          }
+        ],
+        [
+          {
+            "from": {
+              "hours": 9,
+              "minutes": 0
+            },
+            "to": {
+              "hours": 21,
+              "minutes": 0
+            }
+          }
+        ],
+        [
+          {
+            "from": {
+              "hours": 9,
+              "minutes": 0
+            },
+            "to": {
+              "hours": 21,
+              "minutes": 0
+            }
+          }
+        ],
+        [
+          {
+            "from": {
+              "hours": 9,
+              "minutes": 0
+            },
+            "to": {
+              "hours": 21,
+              "minutes": 0
+            }
+          }
+        ],
+        [
+          {
+            "from": {
+              "hours": 9,
+              "minutes": 0
+            },
+            "to": {
+              "hours": 21,
+              "minutes": 0
+            }
+          }
+        ],
+        [
+          {
+            "from": {
+              "hours": 9,
+              "minutes": 0
+            },
+            "to": {
+              "hours": 21,
+              "minutes": 0
+            }
+          }
+        ]
+      ],
+      "currentWorkingStatus": {
+        "isOpenNow": true,
+        "text": "Открыто до 21:00",
+        "shortText": "До 21:00",
+        "tag": []
+      },
+      "socialLinks": [
+        {
+          "type": "whatsapp",
+          "href": "https://wa.me/79019707906?text=%D0%9E%D0%B1%D1%80%D0%B0%D1%89%D0%B5%D0%BD%D0%B8%D0%B5+%D0%B8%D0%B7+%D0%AF%D0%BD%D0%B4%D0%B5%D0%BA%D1%81+%D0%9A%D0%B0%D1%80%D1%82%0A%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!+%D0%9C%D0%B5%D0%BD%D1%8F+%D0%B7%D0%B0%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D0%BE%D0%B2%D0%B0%D0%BB%D0%BE+%D0%B2%D0%B0%D1%88%D0%B5+%D0%BF%D1%80%D0%B5%D0%B4%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5",
+          "readableHref": "+79019707906"
+        },
+        {
+          "type": "vkontakte",
+          "href": "https://vk.com/dc.stom",
+          "readableHref": "vk.com/dc.stom"
+        }
+      ],
+      "urls": [
+        "https://dctom.ru/"
+      ],
+      "advert": {
+        "title": "",
+        "text": "",
+        "url": "",
+        "ordInfo": {
+          "client": {
+            "id": "32007914",
+            "tin": "7813647750",
+            "name": "ООО \"ДЭНТАЛ КОНФИДЭНС\""
+          }
+        },
+        "isBko": false,
+        "actionButtons": [
+          {
+            "type": "url",
+            "title": "Записаться на приём",
+            "value": "https://yandex.ru/business/widget/request/company/82071161567",
+            "iframe": {
+              "width": 480,
+              "height": 680
+            }
+          }
+        ],
+        "highlighted": true,
+        "products": [
+          {
+            "title": "Имплантация All on 4",
+            "img": "https://avatars.mds.yandex.net/get-tycoon/20112490/2a0000019e02836207411fe9d483502ebc6e/M_height",
+            "disclaimer": "Есть противопоказания. Посоветуйтесь с врачом."
+          },
+          {
+            "title": "Брекеты",
+            "img": "https://avatars.mds.yandex.net/get-tycoon/18733683/2a0000019dfda4a33b264059a362b52bc911/M_height",
+            "disclaimer": "Есть противопоказания. Посоветуйтесь с врачом."
+          },
+          {
+            "title": "Бесплатная консультация стоматолога",
+            "img": "https://avatars.mds.yandex.net/get-tycoon/15269188/2a0000019e0282ced131d8ce7cad75baeef1/M_height",
+            "price": {
+              "text": "1 р.",
+              "value": 1,
+              "currency": "RUB"
+            },
+            "disclaimer": "Есть противопоказания. Посоветуйтесь с врачом."
+          },
+          {
+            "title": "Имплантация зуба",
+            "img": "https://avatars.mds.yandex.net/get-tycoon/19823610/2a0000019e0283d9f58a279212f8ce04b067/M_height",
+            "price": {
+              "text": "19900 р.",
+              "value": 19900,
+              "currency": "RUB"
+            },
+            "disclaimer": "Есть противопоказания. Посоветуйтесь с врачом."
+          },
+          {
+            "title": "Элайнеры",
+            "img": "https://avatars.mds.yandex.net/get-tycoon/20379869/2a0000019e0284c9821386c692246046da80/M_height",
+            "price": {
+              "text": "150000 р.",
+              "value": 150000,
+              "currency": "RUB"
+            },
+            "disclaimer": "Есть противопоказания. Посоветуйтесь с врачом."
+          },
+          {
+            "title": "ВНЧС / гнатология",
+            "img": "https://avatars.mds.yandex.net/get-tycoon/19253756/2a0000019dfda702d1e3294f19d079a18914/M_height",
+            "disclaimer": "Есть противопоказания. Посоветуйтесь с врачом."
+          },
+          {
+            "title": "Лечение кариеса",
+            "img": "https://avatars.mds.yandex.net/get-tycoon/20182187/2a0000019e0285203e228579e99d6740fc6c/M_height",
+            "price": {
+              "text": "6900 р.",
+              "value": 6900,
+              "currency": "RUB"
+            },
+            "disclaimer": "Есть противопоказания. Посоветуйтесь с врачом."
+          },
+          {
+            "title": "Профессиональная гигиена",
+            "img": "https://avatars.mds.yandex.net/get-tycoon/20182187/2a0000019e02858051fece4ee130eeddfb80/M_height",
+            "price": {
+              "text": "5800 р.",
+              "value": 5800,
+              "currency": "RUB"
+            },
+            "disclaimer": "Есть противопоказания. Посоветуйтесь с врачом."
+          }
+        ]
+      },
+      "businessImages": {
+        "logo": {
+          "urlTemplate": "https://avatars.mds.yandex.net/get-altay/1246719/2a00000185cff5c0f930a6682e083bf0ad74/%s",
+          "tag": [
+            "owner_photo"
+          ],
+          "id": "2a00000185cff5c0f930a6682e083bf0ad74"
+        }
+      },
+      "references": [
+        {
+          "id": "4891753046",
+          "scope": "nyak"
+        },
+        {
+          "id": "72057609517235725",
+          "scope": "geoprod-21246"
+        }
+      ],
+      "subtitleItems": [
+        {
+          "type": "goods",
+          "text": "6900 ₽  Лечение кариеса",
+          "property": [
+            {
+              "key": "name",
+              "value": "Лечение кариеса"
+            },
+            {
+              "key": "price",
+              "value": "6900"
+            },
+            {
+              "key": "currency",
+              "value": "₽"
+            }
+          ]
+        }
+      ],
+      "metrika": {
+        "counter": 82761295,
+        "goals": {
+          "call": "make-call",
+          "cta": "cta-button",
+          "route": "make-route",
+          "site": "site",
+          "whatsapp": "whatsapp",
+          "telegram": "telegram",
+          "viber": "viber",
+          "vkontakte": "vkontakte",
+          "youtube": "social-youtube",
+          "odnoklassniki": "social-odnoklassniki",
+          "instagram": "instagram_subscribe",
+          "stories": "stories-button",
+          "taxi": "call-taxi",
+          "booking": "booking",
+          "subscribe": "subscribe",
+          "send-to-phone": "send-to-phone",
+          "booking-open": "booking-open",
+          "share": "share",
+          "booking-confirmed": "booking-confirmed",
+          "booking-visited": "booking-visited",
+          "start-route": "start-route",
+          "visited-organization": "visited-organization"
+        }
+      },
+      "routeToChoose": [
+        {
+          "icon-url": "https://yastatic.net/s3/web4static/_/v2/static/media/twoGis_logo.f6efe2e1.png",
+          "label": "2ГИС",
+          "route-types": {
+            "auto": "car",
+            "bus": "bus",
+            "walking": "pedestrian"
+          },
+          "route-url-template": "https://2gis.ru/directions/tab/{routeTypeParam}/points/{fromParam}|{toParam}&utm_from=route",
+          "search-text-url-template": "https://2gis.ru/search/{encodedText}",
+          "service": "2gis"
+        },
+        {
+          "icon-url": "https://yastatic.net/s3/web4static/_/v2/static/media/yandex_logo.c2cc5125.png",
+          "label": "Яндекс Карты",
+          "route-types": {
+            "auto": "auto",
+            "bus": "mt",
+            "walking": "pd"
+          },
+          "route-url-template": "https://maps.yandex.ru/?mode=routes&rtext={fromParam}~{toParam}&rtt={routeTypeParam}&source=wizbiz_new_map_single&utm_source=yandex&utm_medium=wizbiz_map&utm_campaign=route",
+          "search-text-url-template": "https://yandex.ru/maps/?mode=search&text={encodedText}",
+          "service": "yandex_maps"
+        }
+      ],
+      "matchedObjects": {
+        "hasPhotos": true,
+        "categories": [
+          {
+            "categoryName": "",
+            "categoryItems": [
+              {
+                "title": "Лечение кариеса",
+                "description": "Лечение кариеса для первичных пациентов",
+                "photoLink": "https://avatars.mds.yandex.net/get-sprav-products/8331772/2a0000019e026902dec170f66c86cbb6af28/{size}",
+                "price": "6900",
+                "currency": "₽"
+              },
+              {
+                "title": "Восстановление зуба цельнолитой коронкой",
+                "description": "",
+                "photoLink": "",
+                "price": "18800",
+                "currency": "₽"
+              },
+              {
+                "title": "Установка имплантата NeoDent",
+                "description": "",
+                "photoLink": "",
+                "price": "44000",
+                "currency": "₽"
+              },
+              {
+                "title": "All-on-4: новые зубы за 1 день",
+                "description": "Стоимость указана \"от\"",
+                "photoLink": "https://avatars.mds.yandex.net/get-sprav-products/4079840/2a0000019dfda97cd04da0ea7bf880260a80/{size}",
+                "price": "89000",
+                "currency": "₽"
+              },
+              {
+                "title": "Имплантация зуба",
+                "description": "",
+                "photoLink": "https://avatars.mds.yandex.net/get-sprav-products/1643978/2a0000019dfda9f93fc1f35da17ffc68269a/{size}",
+                "price": "19900",
+                "currency": "₽"
+              },
+              {
+                "title": "Брекеты",
+                "description": "Цена указана \"от\"",
+                "photoLink": "https://avatars.mds.yandex.net/get-sprav-products/218134/2a0000019dfdaa57e6bb743df497f36a1477/{size}",
+                "price": "19900",
+                "currency": "₽"
+              },
+              {
+                "title": "Восстановление зуба металлокерамической коронкой Co-Cr",
+                "description": "",
+                "photoLink": "",
+                "price": "25000",
+                "currency": "₽"
+              },
+              {
+                "title": "Восстановление зуба металлокерамической коронкой Co-Cr CAD/CAM",
+                "description": "",
+                "photoLink": "",
+                "price": "27000",
+                "currency": "₽"
+              },
+              {
+                "title": "Восстановление зуба коронкой на основе оксида циркония стандартная",
+                "description": "",
+                "photoLink": "",
+                "price": "35000",
+                "currency": "₽"
+              },
+              {
+                "title": "Протезирование зуба коронкой металлокерамической на импланте на винтовой фикцации стандарт",
+                "description": "",
+                "photoLink": "",
+                "price": "45000",
+                "currency": "₽"
+              },
+              {
+                "title": "Протезирование зуба коронкой на основе оксида циркония с винтовой фиксацией на имплантат Стандарт",
+                "description": "",
+                "photoLink": "",
+                "price": "45000",
+                "currency": "₽"
+              },
+              {
+                "title": "Установка имплантата Osstem",
+                "description": "",
+                "photoLink": "",
+                "price": "35000",
+                "currency": "₽"
+              },
+              {
+                "title": "Установка имплантата Straumann",
+                "description": "",
+                "photoLink": "",
+                "price": "75000",
+                "currency": "₽"
+              },
+              {
+                "title": "Установка имплантата Alpha Bio",
+                "description": "",
+                "photoLink": "",
+                "price": "30000",
+                "currency": "₽"
+              },
+              {
+                "title": "Установка имплантата Any one",
+                "description": "",
+                "photoLink": "",
+                "price": "39900",
+                "currency": "₽"
+              },
+              {
+                "title": "Установка имплантата Nobel",
+                "description": "",
+                "photoLink": "",
+                "price": "73000",
+                "currency": "₽"
+              },
+              {
+                "title": "Установка имплантата Rielens",
+                "description": "",
+                "photoLink": "",
+                "price": "37000",
+                "currency": "₽"
+              },
+              {
+                "title": "Установка имплантата Lenmiriot под ключ",
+                "description": "",
+                "photoLink": "",
+                "price": "19900",
+                "currency": "₽"
+              }
+            ]
+          }
+        ]
+      },
+      "topObjects": {
+        "hasPhotos": true,
+        "isYandexEda": false,
+        "rubric": "medicine",
+        "categories": [
+          {
+            "categoryName": "popular",
+            "categoryItems": [
+              {
+                "title": "All-on-4: новые зубы за 1 день",
+                "description": "Стоимость указана \"от\"",
+                "photoLink": "https://avatars.mds.yandex.net/get-sprav-products/4079840/2a0000019dfda97cd04da0ea7bf880260a80/{size}",
+                "price": "89000",
+                "currency": "₽"
+              },
+              {
+                "title": "Имплантация зуба",
+                "photoLink": "https://avatars.mds.yandex.net/get-sprav-products/1643978/2a0000019dfda9f93fc1f35da17ffc68269a/{size}",
+                "price": "19900",
+                "currency": "₽"
+              },
+              {
+                "title": "Брекеты",
+                "description": "Цена указана \"от\"",
+                "photoLink": "https://avatars.mds.yandex.net/get-sprav-products/218134/2a0000019dfdaa57e6bb743df497f36a1477/{size}",
+                "price": "19900",
+                "currency": "₽"
+              },
+              {
+                "title": "Лечение кариеса",
+                "description": "Лечение кариеса для первичных пациентов",
+                "photoLink": "https://avatars.mds.yandex.net/get-sprav-products/8331772/2a0000019e026902dec170f66c86cbb6af28/{size}",
+                "price": "6900",
+                "currency": "₽"
+              },
+              {
+                "title": "Установка имплантата Alpha Bio",
+                "price": "30000",
+                "currency": "₽"
+              },
+              {
+                "title": "Установка имплантата Osstem",
+                "price": "35000",
+                "currency": "₽"
+              },
+              {
+                "title": "Установка имплантата Lenmiriot под ключ",
+                "price": "19900",
+                "currency": "₽"
+              }
+            ]
+          }
+        ],
+        "fullObjectsCount": 18,
+        "relevance": {
+          "lastUploadTime": "2026-05-17T13:04:36.890577Z",
+          "lastUpdateTime": "2026-05-07T12:43:16.786014Z"
+        },
+        "source": {
+          "id": "TYCOON",
+          "name": "Представитель организации",
+          "disclaimerText": "Есть противопоказания. Посоветуйтесь с врачом."
+        }
+      },
+      "parentRubrics": [
+        0,
+        0
+      ],
+      "eventsPreviews": {
+        "count": 100,
+        "uri": "tycoon_events/1.x",
+        "items": [
+          {
+            "id": 66445713,
+            "contentShort": "Сложный случай\n\nПациент обратился с проблемой прикуса и дискомфортом в суставе.\n\nВ таких ситуациях важно не просто «поставить пломбу» или уб...",
+            "text": "Сложный случай\n\nПациент обратился с проблемой прикуса и дискомфортом в суставе.\n\nВ таких ситуациях важно не просто «поставить пломбу» или уб...",
+            "publicationTime": 1778755717188,
+            "photos": [
+              {
+                "id": "87881be1-c1cc-49d2-b08b-a47642c7a596",
+                "size": {
+                  "width": 1672,
+                  "height": 941
+                },
+                "urlTemplate": "https://avatars.mds.yandex.net/get-sprav-posts/20037612/2a0000019e261a38915f5675da19e23ab3f0/%s",
+                "possibleSizes": [
+                  "S",
+                  "M",
+                  "L",
+                  "XL"
+                ]
+              }
+            ],
+            "uri": "tycoon_events/1.x/post/66445713",
+            "urls": [],
+            "itemType": "post"
+          },
+          {
+            "id": 66418362,
+            "contentShort": "Щёлкает челюсть?\n\nЩелчки в челюсти, хруст, напряжение в лице, стираемость зубов или дискомфорт при жевании — это не всегда «само пройдёт».\n\n...",
+            "text": "Щёлкает челюсть?\n\nЩелчки в челюсти, хруст, напряжение в лице, стираемость зубов или дискомфорт при жевании — это не всегда «само пройдёт».\n\n...",
+            "publicationTime": 1778680281229,
+            "photos": [
+              {
+                "id": "45c261c1-adce-4161-b21a-eb62c9667d2a",
+                "size": {
+                  "width": 1672,
+                  "height": 941
+                },
+                "urlTemplate": "https://avatars.mds.yandex.net/get-sprav-posts/18799621/2a0000019e219b240b3f7e9d94c7120b3f8f/%s",
+                "possibleSizes": [
+                  "S",
+                  "M",
+                  "L",
+                  "XL"
+                ]
+              }
+            ],
+            "uri": "tycoon_events/1.x/post/66418362",
+            "urls": [],
+            "itemType": "post"
+          },
+          {
+            "id": 66361735,
+            "contentShort": "Когда важно понять причину\n\nИногда зубы беспокоят не из-за одной очевидной проблемы.\n\nСтираемость, сколы, дискомфорт при жевании, щелчки в ч...",
+            "text": "Когда важно понять причину\n\nИногда зубы беспокоят не из-за одной очевидной проблемы.\n\nСтираемость, сколы, дискомфорт при жевании, щелчки в ч...",
+            "publicationTime": 1778583585857,
+            "photos": [
+              {
+                "id": "dfdfcb53-2501-454a-847f-6a4276306fce",
+                "size": {
+                  "width": 1672,
+                  "height": 941
+                },
+                "urlTemplate": "https://avatars.mds.yandex.net/get-sprav-posts/20318488/2a0000019e1bd7a793c810638fd46fd1469a/%s",
+                "possibleSizes": [
+                  "S",
+                  "M",
+                  "L",
+                  "XL"
+                ]
+              }
+            ],
+            "uri": "tycoon_events/1.x/post/66361735",
+            "urls": [],
+            "itemType": "post"
+          },
+          {
+            "id": 66299552,
+            "contentShort": "Диагностика ВНЧС и прикуса\n\nЩёлкает челюсть, стираются зубы, есть напряжение в лице или дискомфорт при жевании?\n\nПричина может быть не в одн...",
+            "text": "Диагностика ВНЧС и прикуса\n\nЩёлкает челюсть, стираются зубы, есть напряжение в лице или дискомфорт при жевании?\n\nПричина может быть не в одн...",
+            "publicationTime": 1778325956671,
+            "photos": [
+              {
+                "id": "dba71ab1-9925-4c28-adc1-5b0ff37aed2f",
+                "size": {
+                  "width": 1672,
+                  "height": 941
+                },
+                "urlTemplate": "https://avatars.mds.yandex.net/get-sprav-posts/17719886/2a0000019e0c7c9b64f097a9ae7d9a967757/%s",
+                "possibleSizes": [
+                  "S",
+                  "M",
+                  "L",
+                  "XL"
+                ]
+              }
+            ],
+            "uri": "tycoon_events/1.x/post/66299552",
+            "urls": [],
+            "itemType": "post"
+          },
+          {
+            "id": 66276026,
+            "contentShort": "Ваша уверенность начинается здесь\n\nУлыбка влияет на то, как мы говорим, общаемся, фотографируемся и чувствуем себя каждый день.\n\nИногда стом...",
+            "text": "Ваша уверенность начинается здесь\n\nУлыбка влияет на то, как мы говорим, общаемся, фотографируемся и чувствуем себя каждый день.\n\nИногда стом...",
+            "publicationTime": 1778245243467,
+            "photos": [
+              {
+                "id": "b24d41bd-7544-4489-88ff-e6e7ab363b39",
+                "size": {
+                  "width": 1672,
+                  "height": 941
+                },
+                "urlTemplate": "https://avatars.mds.yandex.net/get-sprav-posts/20318488/2a0000019e07acffdf412c6c95bc6df9e9ff/%s",
+                "possibleSizes": [
+                  "S",
+                  "M",
+                  "L",
+                  "XL"
+                ]
+              }
+            ],
+            "uri": "tycoon_events/1.x/post/66276026",
+            "urls": [],
+            "itemType": "post"
+          }
+        ]
+      },
+      "awards": {
+        "goodPlaceYear": "2026"
+      },
+      "hasStories": true,
+      "aspects": [
+        {
+          "id": "3502044682",
+          "isTrusted": true,
+          "text": "Качество лечения",
+          "count": 161,
+          "positive": 156,
+          "neutral": 0,
+          "negative": 5,
+          "photos": []
+        },
+        {
+          "id": "3502121746",
+          "isTrusted": true,
+          "text": "Исправление прикуса",
+          "count": 43,
+          "positive": 39,
+          "neutral": 0,
+          "negative": 4,
+          "photos": [
+            {
+              "link": "https://avatars.mds.yandex.net/get-altay/14336229/2a00000198180087c3f3d12a4214b2a333a5/%",
+              "mds_namespace": "altay"
+            },
+            {
+              "link": "https://avatars.mds.yandex.net/get-altay/14635327/2a000001981801145e912762bdb1c17277e8/%",
+              "mds_namespace": "altay"
+            },
+            {
+              "link": "https://avatars.mds.yandex.net/get-altay/16136409/2a000001981801363a63cd02a4d6380dab76/%",
+              "mds_namespace": "altay"
+            },
+            {
+              "link": "https://avatars.mds.yandex.net/get-altay/15413593/2a000001981800d5aabf5378ae069916794e/%",
+              "mds_namespace": "altay"
+            },
+            {
+              "link": "https://avatars.mds.yandex.net/get-altay/14917207/2a0000019818012483a57f2f5ff81090d587/%",
+              "mds_namespace": "altay"
+            },
+            {
+              "link": "https://avatars.mds.yandex.net/get-altay/16319048/2a000001981800ba04318747e1c6bccd9ec5/%",
+              "mds_namespace": "altay"
+            },
+            {
+              "link": "https://avatars.mds.yandex.net/get-altay/15286626/2a0000019818008cbc953bdc07cbad9dea0a/%",
+              "mds_namespace": "altay"
+            },
+            {
+              "link": "https://avatars.mds.yandex.net/get-altay/16161139/2a0000019818012acf57753554004e6a041d/%",
+              "mds_namespace": "altay"
+            },
+            {
+              "link": "https://avatars.mds.yandex.net/get-altay/16487000/2a00000198180107f3ebd2acf8f1dbc2adcf/%",
+              "mds_namespace": "altay"
+            },
+            {
+              "link": "https://avatars.mds.yandex.net/get-altay/16390227/2a00000198180088a9293b3259a0f97d0f19/%",
+              "mds_namespace": "altay"
+            }
+          ]
+        },
+        {
+          "id": "3502044686",
+          "isTrusted": true,
+          "text": "Время ожидания",
+          "count": 41,
+          "positive": 36,
+          "neutral": 0,
+          "negative": 5,
+          "photos": []
+        },
+        {
+          "id": "3502121741",
+          "isTrusted": true,
+          "text": "Брекеты",
+          "count": 29,
+          "positive": 26,
+          "neutral": 0,
+          "negative": 3,
+          "photos": [
+            {
+              "link": "https://avatars.mds.yandex.net/get-altay/14635327/2a000001981801145e912762bdb1c17277e8/%",
+              "mds_namespace": "altay"
+            },
+            {
+              "link": "https://avatars.mds.yandex.net/get-altay/16136409/2a000001981801363a63cd02a4d6380dab76/%",
+              "mds_namespace": "altay"
+            },
+            {
+              "link": "https://avatars.mds.yandex.net/get-altay/15413593/2a000001981800d5aabf5378ae069916794e/%",
+              "mds_namespace": "altay"
+            },
+            {
+              "link": "https://avatars.mds.yandex.net/get-altay/14336229/2a00000198180087c3f3d12a4214b2a333a5/%",
+              "mds_namespace": "altay"
+            },
+            {
+              "link": "https://avatars.mds.yandex.net/get-altay/14917207/2a0000019818012483a57f2f5ff81090d587/%",
+              "mds_namespace": "altay"
+            }
+          ]
+        },
+        {
+          "id": "3502043729",
+          "isTrusted": true,
+          "text": "Чистота",
+          "count": 22,
+          "positive": 22,
+          "neutral": 0,
+          "negative": 0,
+          "photos": []
+        },
+        {
+          "id": "3502121740",
+          "isTrusted": true,
+          "text": "Чистка зубов",
+          "count": 19,
+          "positive": 19,
+          "neutral": 0,
+          "negative": 0,
+          "photos": []
+        },
+        {
+          "id": "3502044269",
+          "isTrusted": true,
+          "text": "Оборудование",
+          "count": 18,
+          "positive": 18,
+          "neutral": 0,
+          "negative": 0,
+          "photos": [
+            {
+              "link": "https://avatars.mds.yandex.net/get-altay/15286626/2a0000019817f8f38f919772d5cb8eab017a/%",
+              "mds_namespace": "altay"
+            },
+            {
+              "link": "https://avatars.mds.yandex.net/get-altay/16418365/2a0000019817f8e5983eefb4cfdf2c8b3505/%",
+              "mds_namespace": "altay"
+            },
+            {
+              "link": "https://avatars.mds.yandex.net/get-altay/15386900/2a0000019817f8eb356304c7683f01f2eb2e/%",
+              "mds_namespace": "altay"
+            },
+            {
+              "link": "https://avatars.mds.yandex.net/get-altay/15343885/2a0000019841b20f8756907ad9b380013a2d/%",
+              "mds_namespace": "altay"
+            },
+            {
+              "link": "https://avatars.mds.yandex.net/get-altay/15343885/2a0000019817f8ed21abd550a3f43ed2e4f4/%",
+              "mds_namespace": "altay"
+            },
+            {
+              "link": "https://avatars.mds.yandex.net/get-altay/16557473/2a0000019817f8f2201b6282a835eb8d5f71/%",
+              "mds_namespace": "altay"
+            },
+            {
+              "link": "https://avatars.mds.yandex.net/get-altay/4633583/2a0000017a99f33bfadfadf09269cebc3bc0/%",
+              "mds_namespace": "altay"
+            },
+            {
+              "link": "https://avatars.mds.yandex.net/get-altay/16417401/2a0000019841b209727ab33c43d61de70934/%",
+              "mds_namespace": "altay"
+            },
+            {
+              "link": "https://avatars.mds.yandex.net/get-altay/16866637/2a0000019841b2106f8f06c3ccf3041b62e5/%",
+              "mds_namespace": "altay"
+            },
+            {
+              "link": "https://avatars.mds.yandex.net/get-altay/14246212/2a0000019841b20e3644e9d396a0cc3e0205/%",
+              "mds_namespace": "altay"
+            }
+          ]
+        },
+        {
+          "id": "3502121736",
+          "isTrusted": true,
+          "text": "Лечение кариеса",
+          "count": 16,
+          "positive": 16,
+          "neutral": 0,
+          "negative": 0,
+          "photos": []
+        },
+        {
+          "id": "3502044629",
+          "isTrusted": true,
+          "text": "Расположение",
+          "count": 14,
+          "positive": 14,
+          "neutral": 0,
+          "negative": 0,
+          "photos": [
+            {
+              "link": "https://avatars.mds.yandex.net/get-altay/4547379/2a00000183ae8786dcf789c9cca936d044f5/%",
+              "mds_namespace": "altay"
+            },
+            {
+              "link": "https://avatars.mds.yandex.net/get-altay/6334827/2a0000017f9baf7528e9d4f55f44a0931203/%",
+              "mds_namespace": "altay"
+            },
+            {
+              "link": "https://avatars.mds.yandex.net/get-altay/11403733/2a0000018e0a2a92800cebacf33b78df9123/%",
+              "mds_namespace": "altay"
+            },
+            {
+              "link": "https://avatars.mds.yandex.net/get-altay/988435/2a00000190ccf5ea3bada3d5743b3a3afe05/%",
+              "mds_namespace": "altay"
+            },
+            {
+              "link": "https://avatars.mds.yandex.net/get-altay/13203115/2a0000018f1fad95488955dcc9124bcfc580/%",
+              "mds_namespace": "altay"
+            },
+            {
+              "link": "https://avatars.mds.yandex.net/get-altay/13091609/2a0000018e11057ab03608acbd5448ac470a/%",
+              "mds_namespace": "altay"
+            },
+            {
+              "link": "https://avatars.mds.yandex.net/get-altay/8072647/2a000001861e637904a6cd2449eb020996e6/%",
+              "mds_namespace": "altay"
+            },
+            {
+              "link": "https://avatars.mds.yandex.net/get-altay/14102738/2a00000195a2739f0e923b0f2d96a3d9bc4e/%",
+              "mds_namespace": "altay"
+            },
+            {
+              "link": "https://avatars.mds.yandex.net/get-altay/16378552/2a0000019841b2036c4830ac8096d020e534/%",
+              "mds_namespace": "altay"
+            },
+            {
+              "link": "https://avatars.mds.yandex.net/get-altay/13474366/2a000001938a893af7af7f9f54bf780da57e/%",
+              "mds_namespace": "altay"
+            }
+          ]
+        },
+        {
+          "id": "3502043730",
+          "isTrusted": true,
+          "text": "Интерьер",
+          "count": 14,
+          "positive": 14,
+          "neutral": 0,
+          "negative": 0,
+          "photos": [
+            {
+              "link": "https://avatars.mds.yandex.net/get-altay/16137047/2a0000019817f8708db1432558da7c4177b1/%",
+              "mds_namespace": "altay"
+            },
+            {
+              "link": "https://avatars.mds.yandex.net/get-altay/5477999/2a0000017cb023df082b5501746395e58943/%",
+              "mds_namespace": "altay"
+            },
+            {
+              "link": "https://avatars.mds.yandex.net/get-altay/10702222/2a0000018aa8756e25f7319584218bf942db/%",
+              "mds_namespace": "altay"
+            },
+            {
+              "link": "https://avatars.mds.yandex.net/get-altay/15437010/2a0000019817f9c79e07f810839ad38c9aec/%",
+              "mds_namespace": "altay"
+            },
+            {
+              "link": "https://avatars.mds.yandex.net/get-altay/5115998/2a0000018f1fadbc4b618fd08b2f3ce70028/%",
+              "mds_namespace": "altay"
+            },
+            {
+              "link": "https://avatars.mds.yandex.net/get-altay/4437253/2a0000017a99dac0b420c637dbfa0edac031/%",
+              "mds_namespace": "altay"
+            },
+            {
+              "link": "https://avatars.mds.yandex.net/get-altay/16323929/2a0000019841b2068ff0cc28fea8ecef93d2/%",
+              "mds_namespace": "altay"
+            },
+            {
+              "link": "https://avatars.mds.yandex.net/get-altay/18785127/2a0000019cffa851da627aae6c8ca183f1e8/%",
+              "mds_namespace": "altay"
+            },
+            {
+              "link": "https://avatars.mds.yandex.net/get-altay/16417401/2a0000019841b1ff2eafb5f7fdaa756d8099/%",
+              "mds_namespace": "altay"
+            },
+            {
+              "link": "https://avatars.mds.yandex.net/get-altay/998237/2a00000185d8db395e2a39ea3a1adea923ab/%",
+              "mds_namespace": "altay"
+            }
+          ]
+        },
+        {
+          "id": "3502121750",
+          "isTrusted": true,
+          "text": "Реставрация зубов",
+          "count": 13,
+          "positive": 11,
+          "neutral": 0,
+          "negative": 2,
+          "photos": []
+        },
+        {
+          "id": "3502121745",
+          "isTrusted": true,
+          "text": "Детская стоматология",
+          "count": 10,
+          "positive": 10,
+          "neutral": 0,
+          "negative": 0,
+          "photos": []
+        }
+      ],
+      "houseEncodedCoordinates": "Z0kYdQdlTEcHQFtjfXV3dX5kZw==",
+      "videos": {
+        "items": [
+          {
+            "id": "vplvl7fys7kwyrudifqs",
+            "videoUrl": "https://runtime.strm.yandex.ru/player/video/vplvl7fys7kwyrudifqs",
+            "thumbnailUrl": "https://avatars.mds.yandex.net/get-vh/5104943/2a000001918e8eff511644d3650e29079472/orig",
+            "tags": [
+              {
+                "id": "hardcoded-video",
+                "name": "Видео"
+              }
+            ],
+            "height": 1280,
+            "width": 720
+          },
+          {
+            "id": "vplvhx2ar4yjybpxl4pu",
+            "videoUrl": "https://runtime.strm.yandex.ru/player/video/vplvhx2ar4yjybpxl4pu",
+            "thumbnailUrl": "https://avatars.mds.yandex.net/get-vh/5353805/2a00000190974da4c1924716c3ef18712958/orig",
+            "tags": [
+              {
+                "id": "hardcoded-video",
+                "name": "Видео"
+              }
+            ],
+            "height": 1280,
+            "width": 720
+          },
+          {
+            "id": "vplvflu6jzrt4pvzlcda",
+            "videoUrl": "https://runtime.strm.yandex.ru/player/video/vplvflu6jzrt4pvzlcda",
+            "thumbnailUrl": "https://avatars.mds.yandex.net/get-vh/4361455/2a00000190493f5b633760ca8977f153e2e2/orig",
+            "tags": [
+              {
+                "id": "hardcoded-video",
+                "name": "Видео"
+              }
+            ],
+            "height": 1280,
+            "width": 720
+          },
+          {
+            "id": "vplvgqu3sqfl4apl4id3",
+            "videoUrl": "https://runtime.strm.yandex.ru/player/video/vplvgqu3sqfl4apl4id3",
+            "thumbnailUrl": "https://avatars.mds.yandex.net/get-vh/5102996/2a0000018f4cac753d344476183ab3f9f83e/orig",
+            "tags": [
+              {
+                "id": "hardcoded-video",
+                "name": "Видео"
+              }
+            ],
+            "height": 1280,
+            "width": 720
+          },
+          {
+            "id": "vplveh3rh35exu4lje2z",
+            "videoUrl": "https://runtime.strm.yandex.ru/player/video/vplveh3rh35exu4lje2z",
+            "thumbnailUrl": "https://avatars.mds.yandex.net/get-vh/6549758/2a0000018d3a99742337f83c989231c2bc6c/orig",
+            "tags": [
+              {
+                "id": "hardcoded-video",
+                "name": "Видео"
+              }
+            ],
+            "height": 1280,
+            "width": 720
+          },
+          {
+            "id": "vplv3wypnoq75m67ahgg",
+            "videoUrl": "https://runtime.strm.yandex.ru/player/video/vplv3wypnoq75m67ahgg",
+            "thumbnailUrl": "https://avatars.mds.yandex.net/get-vh/6471303/2a0000018c432ad98320bae3e8648d090489/orig",
+            "tags": [
+              {
+                "id": "hardcoded-video",
+                "name": "Видео"
+              }
+            ],
+            "height": 1920,
+            "width": 1080
+          },
+          {
+            "id": "vplv5gaju76qwc5vyyq5",
+            "videoUrl": "https://runtime.strm.yandex.ru/player/video/vplv5gaju76qwc5vyyq5",
+            "thumbnailUrl": "https://avatars.mds.yandex.net/get-vh/6516250/2a0000018bf628b270b5e44d52eab77e0a40/orig",
+            "tags": [
+              {
+                "id": "hardcoded-video",
+                "name": "Видео"
+              }
+            ],
+            "height": 1920,
+            "width": 1080
+          },
+          {
+            "id": "vplvbmqqe6luvudqed6h",
+            "videoUrl": "https://runtime.strm.yandex.ru/player/video/vplvbmqqe6luvudqed6h",
+            "thumbnailUrl": "https://avatars.mds.yandex.net/get-vh/6213324/2a00000187ec9df2e8830b67cbbdbc687f50/orig",
+            "tags": [
+              {
+                "id": "hardcoded-video",
+                "name": "Видео"
+              }
+            ],
+            "height": 1920,
+            "width": 1080
+          },
+          {
+            "id": "vplv6kjvnjlc3fdjx5ld",
+            "videoUrl": "https://runtime.strm.yandex.ru/player/video/vplv6kjvnjlc3fdjx5ld",
+            "thumbnailUrl": "https://avatars.mds.yandex.net/get-vh/5117499/2a00000187ec9ea4a98054621fb20fa1601a/orig",
+            "tags": [
+              {
+                "id": "hardcoded-video",
+                "name": "Видео"
+              }
+            ],
+            "height": 1920,
+            "width": 1080
+          },
+          {
+            "id": "vplvs2se2hodefflk3p4",
+            "videoUrl": "https://runtime.strm.yandex.ru/player/video/vplvs2se2hodefflk3p4",
+            "thumbnailUrl": "https://avatars.mds.yandex.net/get-vh/17633406/2a0000019dd92f9940be8f02e3fb9bb483e3/orig",
+            "tags": [
+              {
+                "id": "hardcoded-video",
+                "name": "Видео"
+              }
+            ],
+            "height": 1280,
+            "width": 720
+          },
+          {
+            "id": "vplvd26fteya4yy7pwhw",
+            "videoUrl": "https://runtime.strm.yandex.ru/player/video/vplvd26fteya4yy7pwhw",
+            "thumbnailUrl": "https://avatars.mds.yandex.net/get-vh/20320691/2a0000019d86880ede7d5f5ea2976664f09a/orig",
+            "tags": [
+              {
+                "id": "hardcoded-video",
+                "name": "Видео"
+              }
+            ],
+            "height": 1280,
+            "width": 720
+          },
+          {
+            "id": "vplvh6mxkz7wfltad5kg",
+            "videoUrl": "https://runtime.strm.yandex.ru/player/video/vplvh6mxkz7wfltad5kg",
+            "thumbnailUrl": "https://avatars.mds.yandex.net/get-vh/16503059/2a0000019d86827b510bc446a719fa12bfd9/orig",
+            "tags": [
+              {
+                "id": "hardcoded-video",
+                "name": "Видео"
+              }
+            ],
+            "height": 1280,
+            "width": 720
+          },
+          {
+            "id": "vplvf4bxqvmmp3pl3jim",
+            "videoUrl": "https://runtime.strm.yandex.ru/player/video/vplvf4bxqvmmp3pl3jim",
+            "thumbnailUrl": "https://avatars.mds.yandex.net/get-vh/16499410/2a0000019d867c22645cdb94be9e0c17b5ca/orig",
+            "tags": [
+              {
+                "id": "hardcoded-video",
+                "name": "Видео"
+              }
+            ],
+            "height": 1280,
+            "width": 720
+          }
+        ]
+      },
+      "promo": {
+        "hasActiveAdvert": true,
+        "promoAction": {
+          "name": "Современная ортодонтия — это точность и прогнозируемый результат.",
+          "description": "Исправление прикуса под контролем AI\nСовременная ортодонтия — это точность и прогнозируемый результат.",
+          "url": "https://dctom.ru/",
+          "photo": {
+            "urlTemplate": "https://avatars.mds.yandex.net/get-sprav-posts/18799621/2a0000019dd8e827c1ddf8b7f18201852f77/%s",
+            "possibleSizes": [
+              "S",
+              "M",
+              "L",
+              "XL"
+            ]
+          }
+        }
+      },
+      "needSimilarOrgsRequest": false,
+      "region": {
+        "id": 2,
+        "type": 6,
+        "capitalId": 0,
+        "hierarchy": [
+          225,
+          10174,
+          2
+        ],
+        "seoname": "saint-petersburg",
+        "bounds": [
+          [
+            29.647787,
+            59.631827369843656
+          ],
+          [
+            30.982207000000002,
+            60.242925369843654
+          ]
+        ],
+        "longitude": 30.314997,
+        "latitude": 59.938784,
+        "zoom": 11,
+        "names": {
+          "ablative": "",
+          "accusative": "Санкт‑Петербург",
+          "dative": "Санкт‑Петербургу",
+          "directional": "",
+          "genitive": "Санкт‑Петербурга",
+          "instrumental": "Санкт‑Петербургом",
+          "locative": "",
+          "nominative": "Санкт‑Петербург",
+          "preposition": "в",
+          "prepositional": "Санкт‑Петербурге"
+        }
+      },
+      "breadcrumbs": [
+        {
+          "name": "Карты",
+          "type": "root",
+          "url": "https://yandex.ru/maps/"
+        },
+        {
+          "name": "Санкт‑Петербург",
+          "type": "region",
+          "url": "https://yandex.ru/maps/2/saint-petersburg/",
+          "region": {
+            "center": [
+              30.314997,
+              59.938784
+            ],
+            "zoom": 11
+          }
+        },
+        {
+          "category": {
+            "id": "184106132",
+            "name": "Стоматологическая клиника",
+            "class": "dental",
+            "seoname": "dental_clinic",
+            "pluralName": "Стоматологии"
+          },
+          "name": "Стоматологии",
+          "type": "category",
+          "url": "https://yandex.ru/maps/2/saint-petersburg/category/dental_clinic/184106132/"
+        }
+      ]
+    },
+    {
+      "type": "business",
+      "requestId": "1779097409739092-2107242103-addrs-upper-yp-90",
+      "index": 1,
+      "analyticsId": "26",
+      "title": "ЭмДиСи Дентал",
+      "description": "Малый просп. Васильевского острова, 11, Санкт-Петербург",
+      "address": "Малый просп. Васильевского острова, 11, Санкт-Петербург",
+      "coordinates": [
+        30.2768,
+        59.947934
+      ],
+      "displayCoordinates": [
+        30.2768,
+        59.947934
+      ],
+      "bounds": [
+        [
+          30.272749,
+          59.945919
+        ],
+        [
+          30.28096,
+          59.950037
+        ]
+      ],
+      "uri": "ymapsbm1://org?oid=238681452050",
+      "logId": "dHlwZT1iaXpmaW5kZXI7aWQ9MjM4NjgxNDUyMDUw",
+      "requestSerpId": "1779097403635403-637133801-addrs-upper-yp-39",
+      "id": "238681452050",
+      "metro": [
+        {
+          "id": "station__9805909",
+          "name": "Спортивная",
+          "distance": "430 м",
+          "distanceValue": 425.476,
+          "coordinates": [
+            30.283247397,
+            59.948286425
+          ],
+          "type": "metro",
+          "color": "#8647b2"
+        },
+        {
+          "id": "100118702",
+          "name": "Василеостровская",
+          "distance": "750 м",
+          "distanceValue": 754.428,
+          "coordinates": [
+            30.278198242,
+            59.942744547
+          ],
+          "type": "metro",
+          "color": "#3aa63a"
+        },
+        {
+          "id": "station__9805918",
+          "name": "Чкаловская",
+          "distance": "2,34 км",
+          "distanceValue": 2337.7,
+          "coordinates": [
+            30.291790771,
+            59.961046848
+          ],
+          "type": "metro",
+          "color": "#8647b2"
+        }
+      ],
+      "stops": [
+        {
+          "id": "stop__10070383",
+          "name": "Малый проспект В.О.",
+          "distance": "78 м",
+          "distanceValue": 78.7975,
+          "coordinates": [
+            30.277994321,
+            59.948191018
+          ],
+          "type": "common"
+        },
+        {
+          "id": "stop__10070868",
+          "name": "Набережная Макарова – Станция метро Спортивная",
+          "distance": "291 м",
+          "distanceValue": 291.926,
+          "coordinates": [
+            30.28104339,
+            59.948449225
+          ],
+          "type": "common"
+        },
+        {
+          "id": "stop__10070389",
+          "name": "Малый проспект В.О.",
+          "distance": "400 м",
+          "distanceValue": 397.173,
+          "coordinates": [
+            30.27120665,
+            59.946751872
+          ],
+          "type": "common"
+        },
+        {
+          "id": "stop__10065337",
+          "name": "8-я и 9-я линии В.О. / Малый проспект В.О.",
+          "distance": "400 м",
+          "distanceValue": 403.612,
+          "coordinates": [
+            30.270874428,
+            59.94611885
+          ],
+          "type": "common"
+        },
+        {
+          "id": "stop__10070385",
+          "name": "Малый проспект В. О. / 8-я и 9-я линии В.О.",
+          "distance": "420 м",
+          "distanceValue": 415.944,
+          "coordinates": [
+            30.271759616,
+            59.945891823
+          ],
+          "type": "common"
+        }
+      ],
+      "photos": {
+        "count": 132,
+        "urlTemplate": "https://avatars.mds.yandex.net/get-altay/2838749/2a00000175ad3cdc85136a179de611136cb8/%s",
+        "items": [
+          {
+            "urlTemplate": "https://avatars.mds.yandex.net/get-altay/2838749/2a00000175ad3cdc85136a179de611136cb8/%s"
+          },
+          {
+            "urlTemplate": "https://avatars.mds.yandex.net/get-altay/16417401/2a0000019a5fa2c6bf38bdb0fa859bd20165/%s"
+          },
+          {
+            "urlTemplate": "https://avatars.mds.yandex.net/get-altay/16333276/2a0000019a5fa2c3b7f2ac90e3a7a36b99dc/%s"
+          },
+          {
+            "urlTemplate": "https://avatars.mds.yandex.net/get-altay/16161139/2a0000019a5fa2c4ef78a6114ef85e6f5be6/%s"
+          },
+          {
+            "urlTemplate": "https://avatars.mds.yandex.net/get-altay/16437561/2a0000019720524429d97d06a548c5bc780a/%s"
+          },
+          {
+            "urlTemplate": "https://avatars.mds.yandex.net/get-altay/5449087/2a0000017cb01c79b341307f7b18b422ae3d/%s"
+          },
+          {
+            "urlTemplate": "https://avatars.mds.yandex.net/get-altay/15285331/2a00000194eb95bddb101ba3e953acfdece9/%s"
+          },
+          {
+            "urlTemplate": "https://avatars.mds.yandex.net/get-altay/7979597/2a0000018faafbba039aba863e42dc52c1c0/%s"
+          },
+          {
+            "urlTemplate": "https://avatars.mds.yandex.net/get-altay/963534/2a000001624d3bf78c7259fedc1a69ed6cfd/%s"
+          },
+          {
+            "urlTemplate": "https://avatars.mds.yandex.net/get-altay/15032884/2a000001972092eeb4d5bd41022198b603ff/%s"
+          }
+        ]
+      },
+      "entrances": [
+        {
+          "coordinates": [
+            30.276715,
+            59.94792844
+          ],
+          "azimuth": 240.40370678457887,
+          "tilt": 0
+        },
+        {
+          "coordinates": [
+            30.276837,
+            59.947949
+          ],
+          "azimuth": 151.2972152620215,
+          "tilt": 0
+        }
+      ],
+      "routePoint": {
+        "context": "djJ8ChQKEgkJUFPL1kY-QBHIXxi4VflNQAoUChIJoFIlyt5GPkARUaOQZFb5TUASMAoSCfAKr-rNRj5AEdrVN3JV-U1AEg4yMzg2ODE0NTIwNTBfMB0AAIA_IDotAAC0Qw,,"
+      },
+      "panorama": {
+        "id": "1254350069_626234214_23_1723022742",
+        "direction": [
+          11.278243,
+          5.871587
+        ],
+        "point": {
+          "type": "Point",
+          "coordinates": [
+            30.276817,
+            59.947826
+          ]
+        },
+        "preview": "https://static-pano.maps.yandex.ru/v1/?panoid=1254350069_626234214_23_1723022742&size=500%2C240&azimuth=11.278243&tilt=5.871587&api_key=maps&signature=2SJHRm1AInuyCZpkgwkIP3lYi9dp5IrDfHTu17VYzZA="
+      },
+      "shortTitle": "Mdc Дентал",
+      "fullAddress": "Санкт-Петербург, Малый проспект Васильевского острова, 11",
+      "country": "Россия",
+      "postalCode": "199178",
+      "status": "open",
+      "businessLinks": [],
+      "ratingData": {
+        "ratingCount": 163,
+        "ratingValue": 5,
+        "reviewCount": 117
+      },
+      "sources": [
+        {
+          "id": "32top",
+          "name": "32top.ru",
+          "href": "https://www.32top.ru/"
+        },
+        {
+          "id": "Yellmed",
+          "name": "Yellmed Медицинский портал",
+          "href": "https://yellmed.ru/"
+        },
+        {
+          "id": "yandex",
+          "name": "Яндекс",
+          "href": "https://ya.ru/"
+        }
+      ],
+      "categories": [
+        {
+          "id": "184106132",
+          "name": "Стоматологическая клиника",
+          "class": "dental",
+          "seoname": "dental_clinic",
+          "pluralName": "Стоматологии"
+        }
+      ],
+      "phones": [
+        {
+          "number": "+7 (994) 254-36-45",
+          "type": "phone",
+          "value": "+79942543645"
+        }
+      ],
+      "features": [
+        {
+          "id": "dentist_services",
+          "value": [
+            {
+              "id": "dental_surgery",
+              "name": "хирургия"
+            },
+            {
+              "id": "aesthetic_dentistry",
+              "name": "эстетическая стоматология"
+            },
+            {
+              "id": "endodontics",
+              "name": "эндодонтия"
+            },
+            {
+              "id": "implantology",
+              "name": "имплантология"
+            },
+            {
+              "id": "radiography",
+              "name": "рентгенография"
+            },
+            {
+              "id": "orthodontics",
+              "name": "ортодонтия"
+            },
+            {
+              "id": "maxillo_facial_surgery",
+              "name": "челюстно-лицевая хирургия"
+            },
+            {
+              "id": "dental_prosthetics",
+              "name": "протезирование"
+            },
+            {
+              "id": "therapy",
+              "name": "терапия"
+            },
+            {
+              "id": "plastic_frenum",
+              "name": "френулопластика"
+            },
+            {
+              "id": "filling",
+              "name": "пломбирование"
+            },
+            {
+              "id": "extractions",
+              "name": "удаление зубов"
+            },
+            {
+              "id": "teeth_whitening",
+              "name": "отбеливание"
+            },
+            {
+              "id": "caries_treatment",
+              "name": "лечение кариеса"
+            },
+            {
+              "id": "veneers",
+              "name": "виниры и люминиры"
+            },
+            {
+              "id": "braces",
+              "name": "брекеты"
+            },
+            {
+              "id": "dental_hygiene",
+              "name": "гигиена полости рта"
+            },
+            {
+              "id": "crowns",
+              "name": "коронки"
+            },
+            {
+              "id": "treatment_of_gum_disease",
+              "name": "лечение дёсен"
+            },
+            {
+              "id": "root_canal_treatment",
+              "name": "лечение каналов"
+            },
+            {
+              "id": "bone_grafting",
+              "name": "костная пластика"
+            },
+            {
+              "id": "treatment_of_periodontitis",
+              "name": "лечение периодонтита"
+            },
+            {
+              "id": "treatment_of_tooth_cysts",
+              "name": "лечение кисты зуба"
+            },
+            {
+              "id": "restoration_of_teeth",
+              "name": "реставрация зубов"
+            }
+          ],
+          "name": "услуги",
+          "aref": "#Yellmed",
+          "type": "enum",
+          "important": true
+        },
+        {
+          "id": "for_children",
+          "value": true,
+          "name": "есть детский кабинет",
+          "aref": "#Yellmed",
+          "type": "bool",
+          "important": true
+        },
+        {
+          "id": "gift_certificate",
+          "value": true,
+          "name": "подарочный сертификат",
+          "type": "bool",
+          "important": false
+        },
+        {
+          "id": "good_place",
+          "value": true,
+          "type": "bool",
+          "important": false
+        },
+        {
+          "id": "car_park",
+          "value": true,
+          "name": "парковка",
+          "type": "bool",
+          "important": false
+        },
+        {
+          "id": "medical_specialists",
+          "value": [
+            {
+              "id": "dental_hygienist",
+              "name": "стоматолог-гигиенист"
+            },
+            {
+              "id": "dental_surgeon",
+              "name": "стоматолог-хирург"
+            },
+            {
+              "id": "orthopedic_dentist",
+              "name": "стоматолог-ортопед"
+            },
+            {
+              "id": "implantologist",
+              "name": "имплантолог"
+            },
+            {
+              "id": "orthodontist",
+              "name": "ортодонт"
+            },
+            {
+              "id": "stomatologist",
+              "name": "стоматолог"
+            }
+          ],
+          "name": "врачи и специалисты",
+          "type": "enum",
+          "important": false
+        },
+        {
+          "id": "payment_method",
+          "value": [
+            {
+              "id": "prepayment",
+              "name": "предоплата"
+            },
+            {
+              "id": "postpay",
+              "name": "постоплата"
+            },
+            {
+              "id": "cash",
+              "name": "наличными"
+            },
+            {
+              "id": "payment_card",
+              "name": "оплата картой"
+            },
+            {
+              "id": "wire_transfer",
+              "name": "банковским переводом"
+            },
+            {
+              "id": "cashless_payment",
+              "name": "безналичная"
+            },
+            {
+              "id": "by_credit_card",
+              "name": "оплата кредитной картой"
+            }
+          ],
+          "name": "способ оплаты",
+          "type": "enum",
+          "important": false
+        },
+        {
+          "id": "wheelchair_accessability",
+          "value": true,
+          "type": "bool",
+          "important": false
+        },
+        {
+          "id": "dental treatment in installments",
+          "value": true,
+          "name": "лечение зубов в рассрочку",
+          "type": "bool",
+          "important": false
+        },
+        {
+          "id": "uni_medic_min_appointment_price",
+          "value": "500 ₽",
+          "type": "text",
+          "important": false
+        },
+        {
+          "id": "promotions",
+          "value": [
+            {
+              "id": "discounts",
+              "name": "скидки"
+            },
+            {
+              "id": "promotions",
+              "name": "акции"
+            },
+            {
+              "id": "special_offers",
+              "name": "спецпредложения"
+            },
+            {
+              "id": "gifts",
+              "name": "подарки"
+            }
+          ],
+          "name": "акции",
+          "type": "enum",
+          "important": false
+        },
+        {
+          "id": "uni_medic_adult",
+          "value": true,
+          "aref": "#medicine_unisearch",
+          "type": "bool",
+          "important": false
+        },
+        {
+          "id": "uni_medic_kid",
+          "value": true,
+          "aref": "#medicine_unisearch",
+          "type": "bool",
+          "important": false
+        },
+        {
+          "id": "call_button",
+          "value": true,
+          "name": "кнопка вызова персонала",
+          "type": "bool",
+          "important": false
+        },
+        {
+          "id": "preliminary_registration",
+          "value": true,
+          "name": "предварительная запись",
+          "type": "bool",
+          "important": false
+        },
+        {
+          "id": "ramp",
+          "value": true,
+          "name": "пандус",
+          "type": "bool",
+          "important": false
+        },
+        {
+          "id": "payment_by_credit_card",
+          "value": true,
+          "name": "Оплата картой",
+          "aref": "#Yellmed",
+          "type": "bool",
+          "important": false
+        },
+        {
+          "id": "uni_medic_specialization",
+          "value": [
+            {
+              "id": "stomatolog",
+              "name": "стоматолог"
+            },
+            {
+              "id": "stomatolog_implantolog",
+              "name": "стоматолог-имплантолог"
+            },
+            {
+              "id": "stomatolog_ortodont",
+              "name": "стоматолог-ортодонт"
+            },
+            {
+              "id": "stomatolog_ortoped",
+              "name": "стаматолог-ортопед"
+            },
+            {
+              "id": "stomatolog_terapevt",
+              "name": "стоматолог-терапевт"
+            },
+            {
+              "id": "stomatolog_khirurg",
+              "name": "стоматолог-хирург"
+            }
+          ],
+          "aref": "#medicine_unisearch",
+          "type": "enum",
+          "important": false
+        },
+        {
+          "id": "guarantee",
+          "value": true,
+          "name": "гарантия",
+          "type": "bool",
+          "important": false
+        },
+        {
+          "id": "wheelchair_access",
+          "value": [
+            {
+              "id": "full_access",
+              "name": "доступно"
+            }
+          ],
+          "name": "доступность входа на инвалидной коляске",
+          "type": "enum",
+          "important": false
+        },
+        {
+          "id": "wi_fi",
+          "value": true,
+          "name": "Wi-Fi",
+          "aref": "#Yellmed",
+          "type": "bool",
+          "important": false
+        },
+        {
+          "id": "street_entrance",
+          "value": true,
+          "type": "bool",
+          "important": false
+        },
+        {
+          "id": "wheelchair_accessible_vocabulary",
+          "value": [
+            {
+              "id": "wheelchair_accessible_na",
+              "name": "недоступно"
+            }
+          ],
+          "name": "доступность помещения на инвалидной коляске",
+          "type": "enum",
+          "important": false
+        },
+        {
+          "id": "pediatric_specialists",
+          "value": [
+            {
+              "id": "pediatric_dentist",
+              "name": "детский стоматолог"
+            },
+            {
+              "id": "pediatric_surgeon",
+              "name": "детский хирург"
+            }
+          ],
+          "name": "детские врачи и специалисты",
+          "type": "enum",
+          "important": false
+        },
+        {
+          "id": "pay_all_category_offer",
+          "value": "5%",
+          "name": "Кешбэк на все покупки",
+          "iconLight": {
+            "urlTemplate": "https://avatars.mds.yandex.net/get-geosearch/13621774/pay_app/%s"
+          },
+          "type": "text",
+          "important": false
+        },
+        {
+          "id": "medical_certificate",
+          "value": [
+            {
+              "id": "certificate_for_kindergarten",
+              "name": "справка в детский сад"
+            },
+            {
+              "id": "exchange_card",
+              "name": "обменная карта"
+            }
+          ],
+          "name": "предоставляемые справки",
+          "type": "enum",
+          "important": false
+        },
+        {
+          "id": "show_briefly_about_the_place_block",
+          "value": true,
+          "type": "bool",
+          "important": false
+        }
+      ],
+      "mediaOrderTemplate": "p,v,p,v,v,p,v*,p*",
+      "featureGroups": [
+        {
+          "name": "Доступность",
+          "featureIds": [
+            "wheelchair_accessability",
+            "elevator_wheelchair_accessible",
+            "ramp",
+            "wheelchair_access",
+            "call_button",
+            "toilet_for_disabled",
+            "parking_disabled",
+            "automatic_door",
+            "wheelchair_accessible_vocabulary"
+          ]
+        },
+        {
+          "name": "Достижения",
+          "featureIds": [
+            "good_place"
+          ]
+        }
+      ],
+      "businessProperties": {
+        "has_verified_owner": true,
+        "geoproduct_poi_color": "#ABAEB3",
+        "show_ymyl_disclaimer": true,
+        "unusual_hours": [
+          "2026-05-09",
+          "2026-05-11"
+        ],
+        "geoproduct_poi_label_color": "#7A7F85"
+      },
+      "seoname": "emdisi_dental",
+      "geoId": 120607,
+      "compositeAddress": {
+        "country": "Россия",
+        "locality": "Санкт-Петербург",
+        "street": "Малый проспект Васильевского острова",
+        "house": "11"
+      },
+      "modularCard": {
+        "showClaimOrganization": true,
+        "showTaxiButton": true,
+        "showFeedbackButton": true,
+        "showReviews": true,
+        "showAddPhotoButton": true,
+        "showCompetitors": false,
+        "showDirectBanner": false,
+        "showAdditionalAds": false,
+        "showWorkHours": true,
+        "showContacts": true,
+        "showFriendsLiked": false,
+        "showVisualPricesTab": false,
+        "showHotelEnrichment": false,
+        "promoBadgeFeature": [
+          "pay_all_category_offer"
+        ],
+        "offerBadgeId": [],
+        "showCourierButton": false,
+        "hotelReviewsStubType": 0
+      },
+      "modularPin": {
+        "subtitleHints": [
+          {
+            "text": "5",
+            "type": "RATING",
+            "properties": {
+              "rating": {
+                "showGoodPlace": true
+              }
+            }
+          },
+          {
+            "text": "13000 ₽  Удаление зуба мудрости",
+            "type": "PRICE",
+            "properties": {
+              "price": {
+                "name": "Удаление зуба мудрости",
+                "exactPrice": {
+                  "value": 13000,
+                  "text": "13000 ₽",
+                  "currency": "₽"
+                }
+              }
+            }
+          }
+        ],
+        "allowMultilineSubtitle": false
+      },
+      "modularSnippet": {
+        "showNeurosummary": true,
+        "showMentionedOnSite": false,
+        "showTitle": "SHORT_TITLE",
+        "showAddress": "SHORT_ADDRESS",
+        "showCategory": "SINGLE_CATEGORY",
+        "showRating": "FIVE_STAR_RATING",
+        "showPhoto": "LOGO",
+        "showWorkHours": true,
+        "showVerified": true,
+        "showDistanceFromTransit": false,
+        "showBookmark": true,
+        "showEta": true,
+        "showGeoproductOffer": true,
+        "subtitleHint": [
+          {
+            "type": "PRICE",
+            "text": "13000 ₽  Удаление зуба мудрости",
+            "properties": {
+              "price": {
+                "name": "Удаление зуба мудрости",
+                "exactPrice": {
+                  "value": 13000,
+                  "text": "13000 ₽",
+                  "currency": "₽"
+                }
+              }
+            }
+          }
+        ],
+        "galleryButton": [
+          "PRICES"
+        ],
+        "shownGoodsNumber": 3,
+        "showDescription": false,
+        "showCollectionBadge": true,
+        "showFriendsLiked": false,
+        "showCourierButton": false,
+        "showYandexEatsOrderButton": false,
+        "infoBlock": [
+          {
+            "type": "GOODS"
+          },
+          {
+            "type": "SUBTITLE",
+            "subtitleHint": {
+              "text": "13000 ₽  Удаление зуба мудрости",
+              "type": "PRICE",
+              "properties": {
+                "price": {
+                  "name": "Удаление зуба мудрости",
+                  "exactPrice": {
+                    "value": 13000,
+                    "text": "13000 ₽",
+                    "currency": "₽"
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "serpActionButtons": [
+          6,
+          1,
+          3,
+          5,
+          0
+        ],
+        "awards": [
+          0
+        ],
+        "promoBadgeFeature": [],
+        "offerBadgeId": [],
+        "showHotelEnrichment": false
+      },
+      "tzOffset": 10800,
+      "workingTimeText": "пн-пт 10:00–21:00; сб 10:00–16:00",
+      "workingTime": [
+        null,
+        [
+          {
+            "from": {
+              "hours": 10,
+              "minutes": 0
+            },
+            "to": {
+              "hours": 21,
+              "minutes": 0
+            }
+          }
+        ],
+        [
+          {
+            "from": {
+              "hours": 10,
+              "minutes": 0
+            },
+            "to": {
+              "hours": 21,
+              "minutes": 0
+            }
+          }
+        ],
+        [
+          {
+            "from": {
+              "hours": 10,
+              "minutes": 0
+            },
+            "to": {
+              "hours": 21,
+              "minutes": 0
+            }
+          }
+        ],
+        [
+          {
+            "from": {
+              "hours": 10,
+              "minutes": 0
+            },
+            "to": {
+              "hours": 21,
+              "minutes": 0
+            }
+          }
+        ],
+        [
+          {
+            "from": {
+              "hours": 10,
+              "minutes": 0
+            },
+            "to": {
+              "hours": 21,
+              "minutes": 0
+            }
+          }
+        ],
+        [
+          {
+            "from": {
+              "hours": 10,
+              "minutes": 0
+            },
+            "to": {
+              "hours": 16,
+              "minutes": 0
+            }
+          }
+        ]
+      ],
+      "currentWorkingStatus": {
+        "isOpenNow": true,
+        "text": "Открыто до 21:00",
+        "shortText": "До 21:00",
+        "tag": []
+      },
+      "urls": [
+        "http://mdc-spb.ru/"
+      ],
+      "socialLinks": [
+        {
+          "type": "vkontakte",
+          "href": "https://vk.com/vk.mdc2017",
+          "readableHref": "vk.com/vk.mdc2017"
+        },
+        {
+          "type": "whatsapp",
+          "href": "https://wa.me/79812764893?text=%D0%9E%D0%B1%D1%80%D0%B0%D1%89%D0%B5%D0%BD%D0%B8%D0%B5+%D0%B8%D0%B7+%D0%AF%D0%BD%D0%B4%D0%B5%D0%BA%D1%81+%D0%9A%D0%B0%D1%80%D1%82%0A%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!+%D0%9C%D0%B5%D0%BD%D1%8F+%D0%B7%D0%B0%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D0%BE%D0%B2%D0%B0%D0%BB%D0%BE+%D0%B2%D0%B0%D1%88%D0%B5+%D0%BF%D1%80%D0%B5%D0%B4%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5",
+          "readableHref": "+79812764893"
+        }
+      ],
+      "advert": {
+        "title": "",
+        "text": "",
+        "url": "",
+        "ordInfo": {
+          "client": {
+            "id": "69354144",
+            "tin": "7801722096",
+            "name": "ООО \"ДЕНТАЛ\""
+          }
+        },
+        "isBko": false,
+        "actionButtons": [
+          {
+            "type": "url",
+            "title": "Записаться на приём",
+            "value": "https://yandex.ru/business/widget/request/company/238681452050",
+            "iframe": {
+              "width": 480,
+              "height": 680
+            }
+          }
+        ],
+        "highlighted": true,
+        "products": [
+          {
+            "title": "Имплантология",
+            "img": "https://avatars.mds.yandex.net/get-tycoon/19122291/2a0000019c50763391208da724683aca74ca/M_height",
+            "url": "https://mdc.clients.site/filter-category/implantaciya/",
+            "disclaimer": "Есть противопоказания. Посоветуйтесь с врачом."
+          },
+          {
+            "title": "Пародонтология",
+            "img": "https://avatars.mds.yandex.net/get-tycoon/20036290/2a0000019c52051f137f9373295a4d2c8374/M_height",
+            "url": "https://mdc-spb.ru/services/periodontics?erid=3MtFQRkqfB2huzBcHHtt6Ws5rQuuHS",
+            "disclaimer": "Есть противопоказания. Посоветуйтесь с врачом.",
+            "ordToken": "3MtFQRkqfB2huzBcHHtt6Ws5rQuuHS"
+          },
+          {
+            "title": "Детская стоматология",
+            "img": "https://avatars.mds.yandex.net/get-tycoon/17685433/2a0000019c52140f412fbc350b4ded7fe89b/M_height",
+            "url": "https://mdc-spb.ru/services/child",
+            "disclaimer": "Есть противопоказания. Посоветуйтесь с врачом."
+          },
+          {
+            "title": "Протезирование зубов",
+            "img": "https://avatars.mds.yandex.net/get-tycoon/9720852/2a00000188a338331a15682e9b032c179e25/M_height",
+            "url": "https://mdc-spb.ru/services/orthopedics?erid=3MtFQRkqfB2huzBcHHtt6Ws5rQuuMi",
+            "disclaimer": "Есть противопоказания. Посоветуйтесь с врачом.",
+            "ordToken": "3MtFQRkqfB2huzBcHHtt6Ws5rQuuMi"
+          },
+          {
+            "title": "Ортодонтия",
+            "img": "https://avatars.mds.yandex.net/get-tycoon/16994900/2a0000019c523719fb213e5e603ca9669174/M_height",
+            "url": "https://mdc-spb.ru/services/orthodontics?erid=3MtFQRkqfB2huzBcHHtt6Ws5rQuuMj",
+            "disclaimer": "Есть противопоказания. Посоветуйтесь с врачом.",
+            "ordToken": "3MtFQRkqfB2huzBcHHtt6Ws5rQuuMj"
+          },
+          {
+            "title": "Эстетическая стоматология",
+            "img": "https://avatars.mds.yandex.net/get-tycoon/9720852/2a00000188a4bb46c9a42ce99b16148ca3e5/M_height",
+            "url": "https://mdc-spb.ru/services/aesthetic?erid=3MtFQRkqfB2huzBcHHtt6Ws5rQuuMm",
+            "disclaimer": "Есть противопоказания. Посоветуйтесь с врачом.",
+            "ordToken": "3MtFQRkqfB2huzBcHHtt6Ws5rQuuMm"
+          },
+          {
+            "title": "Хирургическая стоматология",
+            "img": "https://avatars.mds.yandex.net/get-tycoon/9732222/2a00000188a4ba8fb93031d86fc6fb4a4eb7/M_height",
+            "url": "https://mdc-spb.ru/services/surgery?erid=3MtFQRkqfB2huzBcHHtt6Ws5rQuuHR",
+            "disclaimer": "Есть противопоказания. Посоветуйтесь с врачом.",
+            "ordToken": "3MtFQRkqfB2huzBcHHtt6Ws5rQuuHR"
+          }
+        ]
+      },
+      "businessImages": {
+        "logo": {
+          "urlTemplate": "https://avatars.mds.yandex.net/get-altay/19547455/2a0000019be0a870e1c732424523f81f2599/%s",
+          "tag": [
+            "owner_photo"
+          ],
+          "id": "2a0000019be0a870e1c732424523f81f2599"
+        }
+      },
+      "references": [
+        {
+          "id": "4886109616",
+          "scope": "nyak"
+        }
+      ],
+      "subtitleItems": [
+        {
+          "type": "goods",
+          "text": "13000 ₽  Удаление зуба мудрости",
+          "property": [
+            {
+              "key": "name",
+              "value": "Удаление зуба мудрости"
+            },
+            {
+              "key": "price",
+              "value": "13000"
+            },
+            {
+              "key": "currency",
+              "value": "₽"
+            }
+          ]
+        }
+      ],
+      "metrika": {
+        "counter": 59773624,
+        "goals": {
+          "call": "make-call",
+          "cta": "cta-button",
+          "route": "make-route",
+          "site": "site",
+          "whatsapp": "whatsapp",
+          "telegram": "telegram",
+          "viber": "viber",
+          "vkontakte": "vkontakte",
+          "youtube": "social-youtube",
+          "odnoklassniki": "social-odnoklassniki",
+          "instagram": "instagram_subscribe",
+          "stories": "stories-button",
+          "taxi": "call-taxi",
+          "booking": "booking",
+          "subscribe": "subscribe",
+          "send-to-phone": "send-to-phone",
+          "booking-open": "booking-open",
+          "share": "share",
+          "booking-confirmed": "booking-confirmed",
+          "booking-visited": "booking-visited",
+          "start-route": "start-route",
+          "visited-organization": "visited-organization"
+        }
+      },
+      "routeToChoose": [
+        {
+          "icon-url": "https://yastatic.net/s3/web4static/_/v2/static/media/twoGis_logo.f6efe2e1.png",
+          "label": "2ГИС",
+          "route-types": {
+            "auto": "car",
+            "bus": "bus",
+            "walking": "pedestrian"
+          },
+          "route-url-template": "https://2gis.ru/directions/tab/{routeTypeParam}/points/{fromParam}|{toParam}&utm_from=route",
+          "search-text-url-template": "https://2gis.ru/search/{encodedText}",
+          "service": "2gis"
+        },
+        {
+          "icon-url": "https://yastatic.net/s3/web4static/_/v2/static/media/yandex_logo.c2cc5125.png",
+          "label": "Яндекс Карты",
+          "route-types": {
+            "auto": "auto",
+            "bus": "mt",
+            "walking": "pd"
+          },
+          "route-url-template": "https://maps.yandex.ru/?mode=routes&rtext={fromParam}~{toParam}&rtt={routeTypeParam}&source=wizbiz_new_map_single&utm_source=yandex&utm_medium=wizbiz_map&utm_campaign=route",
+          "search-text-url-template": "https://yandex.ru/maps/?mode=search&text={encodedText}",
+          "service": "yandex_maps"
+        }
+      ],
+      "matchedObjects": {
+        "hasPhotos": true,
+        "categories": [
+          {
+            "categoryName": "",
+            "categoryItems": [
+              {
+                "title": "Удаление зуба мудрости",
+                "description": "",
+                "photoLink": "",
+                "price": "13000",
+                "currency": "₽"
+              },
+              {
+                "title": "Лечение кариеса у детей",
+                "description": "",
+                "photoLink": "",
+                "price": "6000",
+                "currency": "₽"
+              },
+              {
+                "title": "Консультация",
+                "description": "Консультация врача стоматолога с составлением  плана лечения.",
+                "photoLink": "",
+                "price": "1500",
+                "currency": "₽"
+              },
+              {
+                "title": "Профессиональная гигиена полости рта",
+                "description": "Чистка ультразвуком, аэрофлоу и фторирование зубов.",
+                "photoLink": "",
+                "price": "7500",
+                "currency": "₽"
+              },
+              {
+                "title": "Удаление зуба",
+                "description": "",
+                "photoLink": "https://avatars.mds.yandex.net/get-sprav-products/17700615/2a0000019be10110c0ea660a21551d105efa/{size}",
+                "price": "8000",
+                "currency": "₽"
+              },
+              {
+                "title": "Лечение кариеса",
+                "description": "",
+                "photoLink": "https://avatars.mds.yandex.net/get-sprav-products/2757887/2a0000019a58f0c32a60b90107975315bd0f/{size}",
+                "price": "7500",
+                "currency": "₽"
+              },
+              {
+                "title": "Коронка металлокерамика",
+                "description": "",
+                "photoLink": "",
+                "price": "19000",
+                "currency": "₽"
+              },
+              {
+                "title": "Глубокое фторирование (две челюсти)",
+                "description": "",
+                "photoLink": "",
+                "price": "6000",
+                "currency": "₽"
+              },
+              {
+                "title": "Имплантация всё на 4",
+                "description": "",
+                "photoLink": "",
+                "price": "170000",
+                "currency": "₽"
+              },
+              {
+                "title": "Имплантация всё на 6",
+                "description": "",
+                "photoLink": "",
+                "price": "210000",
+                "currency": "₽"
+              },
+              {
+                "title": "Элайнеры",
+                "description": "",
+                "photoLink": "https://avatars.mds.yandex.net/get-sprav-products/2805495/2a0000019be10603fed9295b23282996577b/{size}",
+                "price": "207000",
+                "currency": "₽"
+              },
+              {
+                "title": "Брекет система",
+                "description": "",
+                "photoLink": "https://avatars.mds.yandex.net/get-sprav-products/2805495/2a0000019be0fde0fe57071df97c9eac31d0/{size}",
+                "price": "70000",
+                "currency": "₽"
+              },
+              {
+                "title": "Отбеливание +ремтерапия",
+                "description": "Безопасное отбеливание +фторирование ваших зубов",
+                "photoLink": "https://avatars.mds.yandex.net/get-sprav-products/13944716/2a0000019818fda3e7fa2c5a4c920ccbf9ae/{size}",
+                "price": "15000",
+                "currency": "₽"
+              },
+              {
+                "title": "3D сканирование челюстей",
+                "description": "Диагностическое сканирование верхней и нижней челюстей с составлением плана лечения",
+                "photoLink": "",
+                "price": "13000",
+                "currency": "₽"
+              },
+              {
+                "title": "Имплантат пр.Германия",
+                "description": "",
+                "photoLink": "",
+                "price": "35000",
+                "currency": "₽"
+              },
+              {
+                "title": "Пародонтологическое лечение",
+                "description": "Все виды пародонтологического лечения дёсен.",
+                "photoLink": "https://avatars.mds.yandex.net/get-sprav-products/17712810/2a0000019be101ed629223fc5ff3f11b216f/{size}",
+                "price": "6000",
+                "currency": "₽"
+              },
+              {
+                "title": "Наращивание кости",
+                "description": "Наращивание обьема костной ткани для установки дентальной имплантации.",
+                "photoLink": "",
+                "price": "25000",
+                "currency": "₽"
+              },
+              {
+                "title": "Коронка циркон",
+                "description": "",
+                "photoLink": "",
+                "price": "30000",
+                "currency": "₽"
+              },
+              {
+                "title": "лечение под микроскопом",
+                "description": "под анестезией лечение кариеса с помощью микроскопа",
+                "photoLink": "https://avatars.mds.yandex.net/get-sprav-products/13944716/2a0000019a58f4349bcaee7c959af5c21a5d/{size}",
+                "price": "12000",
+                "currency": "₽"
+              }
+            ]
+          }
+        ]
+      },
+      "topObjects": {
+        "hasPhotos": true,
+        "isYandexEda": false,
+        "rubric": "medicine",
+        "categories": [
+          {
+            "categoryName": "popular",
+            "categoryItems": [
+              {
+                "title": "лечение под микроскопом",
+                "description": "под анестезией лечение кариеса с помощью микроскопа",
+                "photoLink": "https://avatars.mds.yandex.net/get-sprav-products/13944716/2a0000019a58f4349bcaee7c959af5c21a5d/{size}",
+                "price": "12000",
+                "currency": "₽"
+              },
+              {
+                "title": "Лечение кариеса",
+                "photoLink": "https://avatars.mds.yandex.net/get-sprav-products/2757887/2a0000019a58f0c32a60b90107975315bd0f/{size}",
+                "price": "7500",
+                "currency": "₽"
+              },
+              {
+                "title": "Удаление зуба",
+                "photoLink": "https://avatars.mds.yandex.net/get-sprav-products/17700615/2a0000019be10110c0ea660a21551d105efa/{size}",
+                "price": "8000",
+                "currency": "₽"
+              }
+            ]
+          }
+        ],
+        "fullObjectsCount": 19,
+        "relevance": {
+          "lastUploadTime": "2026-05-17T13:07:46.080004Z",
+          "lastUpdateTime": "2026-01-22T14:46:27.806303Z"
+        },
+        "source": {
+          "id": "TYCOON",
+          "name": "Представитель организации",
+          "disclaimerText": "Есть противопоказания. Посоветуйтесь с врачом."
+        }
+      },
+      "parentRubrics": [
+        0,
+        0
+      ],
+      "eventsPreviews": {
+        "count": 17,
+        "uri": "tycoon_events/1.x",
+        "items": []
+      },
+      "awards": {
+        "goodPlaceYear": "2026"
+      },
+      "hasStories": true,
+      "aspects": [
+        {
+          "id": "3502044682",
+          "isTrusted": true,
+          "text": "Качество лечения",
+          "count": 75,
+          "positive": 74,
+          "neutral": 0,
+          "negative": 1,
+          "photos": []
+        },
+        {
+          "id": "3502121745",
+          "isTrusted": true,
+          "text": "Детская стоматология",
+          "count": 21,
+          "positive": 20,
+          "neutral": 0,
+          "negative": 1,
+          "photos": [
+            {
+              "link": "https://avatars.mds.yandex.net/get-altay/10328405/2a0000018ee11bc12d43c50fe507c081ef71/%",
+              "mds_namespace": "altay"
+            },
+            {
+              "link": "https://avatars.mds.yandex.net/get-altay/16457969/2a00000199e22a86cbcca499c926ef4d9247/%",
+              "mds_namespace": "altay"
+            },
+            {
+              "link": "https://avatars.mds.yandex.net/get-altay/6528051/2a000001883f5d338cfd8f5d55e1bb2a79f0/%",
+              "mds_namespace": "altay"
+            },
+            {
+              "link": "https://avatars.mds.yandex.net/get-altay/14763372/2a0000019664587c8545bada34f5a79b9cd1/%",
+              "mds_namespace": "altay"
+            },
+            {
+              "link": "https://avatars.mds.yandex.net/get-altay/16161139/2a0000019a5fa2c4ef78a6114ef85e6f5be6/%",
+              "mds_namespace": "altay"
+            },
+            {
+              "link": "https://avatars.mds.yandex.net/get-altay/5449087/2a0000017cb01c79b341307f7b18b422ae3d/%",
+              "mds_namespace": "altay"
+            },
+            {
+              "link": "https://avatars.mds.yandex.net/get-altay/13477341/2a00000190c0e8a0e3a2b959d439b1ff3873/%",
+              "mds_namespace": "altay"
+            },
+            {
+              "link": "https://avatars.mds.yandex.net/get-altay/14010724/2a000001945efaf36bf53d8ca0f6d9b243f1/%",
+              "mds_namespace": "altay"
+            },
+            {
+              "link": "https://avatars.mds.yandex.net/get-altay/15112342/2a00000194459efe494ee0f5f914b0bc9440/%",
+              "mds_namespace": "altay"
+            },
+            {
+              "link": "https://avatars.mds.yandex.net/get-altay/14402904/2a00000193ade4d0b10ab2248a6fea8b2f21/%",
+              "mds_namespace": "altay"
+            }
+          ]
+        },
+        {
+          "id": "3502121735",
+          "isTrusted": true,
+          "text": "Удаление зубов",
+          "count": 15,
+          "positive": 14,
+          "neutral": 1,
+          "negative": 0,
+          "photos": []
+        },
+        {
+          "id": "3502121750",
+          "isTrusted": true,
+          "text": "Реставрация зубов",
+          "count": 12,
+          "positive": 11,
+          "neutral": 0,
+          "negative": 1,
+          "photos": []
+        },
+        {
+          "id": "3502044686",
+          "isTrusted": true,
+          "text": "Время ожидания",
+          "count": 11,
+          "positive": 11,
+          "neutral": 0,
+          "negative": 0,
+          "photos": []
+        },
+        {
+          "id": "3502044269",
+          "isTrusted": true,
+          "text": "Оборудование",
+          "count": 11,
+          "positive": 10,
+          "neutral": 1,
+          "negative": 0,
+          "photos": [
+            {
+              "link": "https://avatars.mds.yandex.net/get-altay/19699569/2a0000019cfebdcd0db5935413e2be2fab09/%",
+              "mds_namespace": "altay"
+            },
+            {
+              "link": "https://avatars.mds.yandex.net/get-altay/17773264/2a0000019c134c4178e6ee6a58f0c7308a23/%",
+              "mds_namespace": "altay"
+            },
+            {
+              "link": "https://avatars.mds.yandex.net/get-altay/9954022/2a00000189d5da12f0055e3a946d65d61cbb/%",
+              "mds_namespace": "altay"
+            },
+            {
+              "link": "https://avatars.mds.yandex.net/get-altay/2838749/2a00000175ad3cdc85136a179de611136cb8/%",
+              "mds_namespace": "altay"
+            },
+            {
+              "link": "https://avatars.mds.yandex.net/get-altay/14402904/2a00000193ade4d0b10ab2248a6fea8b2f21/%",
+              "mds_namespace": "altay"
+            },
+            {
+              "link": "https://avatars.mds.yandex.net/get-altay/15045776/2a000001966d5551bdd0515a7497b246dc1e/%",
+              "mds_namespace": "altay"
+            },
+            {
+              "link": "https://avatars.mds.yandex.net/get-altay/11410105/2a00000190daf377cc54ac748935e25af649/%",
+              "mds_namespace": "altay"
+            },
+            {
+              "link": "https://avatars.mds.yandex.net/get-altay/14392184/2a00000195f605820c81eb32c7ed84f97c1f/%",
+              "mds_namespace": "altay"
+            },
+            {
+              "link": "https://avatars.mds.yandex.net/get-altay/15249330/2a00000195f63fdeb9f566efc0134e2ff95e/%",
+              "mds_namespace": "altay"
+            },
+            {
+              "link": "https://avatars.mds.yandex.net/get-altay/16333276/2a0000019a5fa2c3b7f2ac90e3a7a36b99dc/%",
+              "mds_namespace": "altay"
+            }
+          ]
+        },
+        {
+          "id": "3502121740",
+          "isTrusted": true,
+          "text": "Чистка зубов",
+          "count": 10,
+          "positive": 10,
+          "neutral": 0,
+          "negative": 0,
+          "photos": []
+        }
+      ],
+      "houseEncodedCoordinates": "Z0kYdABmQUADQFtjfXV1dnVkbA==",
+      "videos": {
+        "items": [
+          {
+            "id": "vplvyxfk7rwzciy2f5y3",
+            "videoUrl": "https://runtime.strm.yandex.ru/player/video/vplvyxfk7rwzciy2f5y3",
+            "thumbnailUrl": "https://avatars.mds.yandex.net/get-vh/6249895/2a0000018ee112a4168acaa27735cdfd8444/orig",
+            "tags": [
+              {
+                "id": "hardcoded-video",
+                "name": "Видео"
+              }
+            ],
+            "height": 848,
+            "width": 480
+          },
+          {
+            "id": "vplveasjxjc2g62a4o72",
+            "videoUrl": "https://runtime.strm.yandex.ru/player/video/vplveasjxjc2g62a4o72",
+            "thumbnailUrl": "https://avatars.mds.yandex.net/get-vh/15551221/2a0000019a4849bd24bfe1bc0b16fa3cd51c/orig",
+            "tags": [
+              {
+                "id": "hardcoded-video",
+                "name": "Видео"
+              }
+            ],
+            "height": 1920,
+            "width": 1080
+          },
+          {
+            "id": "vplvb7tpnyezluih23en",
+            "videoUrl": "https://runtime.strm.yandex.ru/player/video/vplvb7tpnyezluih23en",
+            "thumbnailUrl": "https://avatars.mds.yandex.net/get-vh/4948429/2a00000194889ed673fa42473ff8ec0c72e0/orig",
+            "tags": [
+              {
+                "id": "hardcoded-video",
+                "name": "Видео"
+              }
+            ],
+            "height": 1920,
+            "width": 1080
+          },
+          {
+            "id": "vplvflthmbhv3nozime7",
+            "videoUrl": "https://runtime.strm.yandex.ru/player/video/vplvflthmbhv3nozime7",
+            "thumbnailUrl": "https://avatars.mds.yandex.net/get-vh/14331150/2a0000019a5fa74e6dfae28864cd8167227b/orig",
+            "tags": [
+              {
+                "id": "hardcoded-video",
+                "name": "Видео"
+              }
+            ],
+            "height": 1920,
+            "width": 1080
+          },
+          {
+            "id": "vplvgyrh64xezjamrv7i",
+            "videoUrl": "https://runtime.strm.yandex.ru/player/video/vplvgyrh64xezjamrv7i",
+            "thumbnailUrl": "https://avatars.mds.yandex.net/get-vh/4910452/2a00000190c0e78469282dfb17ea665c2901/orig",
+            "tags": [
+              {
+                "id": "hardcoded-video",
+                "name": "Видео"
+              }
+            ],
+            "height": 1280,
+            "width": 720
+          },
+          {
+            "id": "vplv633pqn6cxaqfgsqi",
+            "videoUrl": "https://runtime.strm.yandex.ru/player/video/vplv633pqn6cxaqfgsqi",
+            "thumbnailUrl": "https://avatars.mds.yandex.net/get-vh/4946956/2a0000018df5159fe88071f062ce3b329552/orig",
+            "tags": [
+              {
+                "id": "hardcoded-video",
+                "name": "Видео"
+              }
+            ],
+            "height": 1280,
+            "width": 720
+          },
+          {
+            "id": "vplvpo7mfvxxmpl65i33",
+            "videoUrl": "https://runtime.strm.yandex.ru/player/video/vplvpo7mfvxxmpl65i33",
+            "thumbnailUrl": "https://avatars.mds.yandex.net/get-vh/13965829/2a0000019c0fabe66a064f4c535bcb944e35/orig",
+            "tags": [
+              {
+                "id": "hardcoded-video",
+                "name": "Видео"
+              }
+            ],
+            "height": 1896,
+            "width": 1066
+          },
+          {
+            "id": "vplvm4ag7unulmpogovm",
+            "videoUrl": "https://runtime.strm.yandex.ru/player/video/vplvm4ag7unulmpogovm",
+            "thumbnailUrl": "https://avatars.mds.yandex.net/get-vh/16462352/2a0000019c0fa4b84f4813e90eb7a4623e6a/orig",
+            "tags": [
+              {
+                "id": "hardcoded-video",
+                "name": "Видео"
+              }
+            ],
+            "height": 1080,
+            "width": 1890
+          },
+          {
+            "id": "vplvnps4iroibwvrvpc3",
+            "videoUrl": "https://runtime.strm.yandex.ru/player/video/vplvnps4iroibwvrvpc3",
+            "thumbnailUrl": "https://avatars.mds.yandex.net/get-vh/16017614/2a0000019cfebbc6c130cb410fcfd6c85447/orig",
+            "tags": [
+              {
+                "id": "hardcoded-video",
+                "name": "Видео"
+              }
+            ],
+            "height": 1280,
+            "width": 700
+          }
+        ]
+      },
+      "needSimilarOrgsRequest": false,
+      "advertOffer": {
+        "cardHint": {
+          "id": "pay_all_category_offer",
+          "text": {
+            "text": "Кешбэк на все покупки 5%",
+            "color": {}
+          },
+          "icon": {
+            "light": {
+              "urlTemplate": "https://avatars.mds.yandex.net/get-geosearch/13621774/pay_app/%s"
+            }
+          }
+        }
+      },
+      "region": {
+        "id": 2,
+        "type": 6,
+        "capitalId": 0,
+        "hierarchy": [
+          225,
+          10174,
+          2
+        ],
+        "seoname": "saint-petersburg",
+        "bounds": [
+          [
+            29.647787,
+            59.631827369843656
+          ],
+          [
+            30.982207000000002,
+            60.242925369843654
+          ]
+        ],
+        "longitude": 30.314997,
+        "latitude": 59.938784,
+        "zoom": 11,
+        "names": {
+          "ablative": "",
+          "accusative": "Санкт‑Петербург",
+          "dative": "Санкт‑Петербургу",
+          "directional": "",
+          "genitive": "Санкт‑Петербурга",
+          "instrumental": "Санкт‑Петербургом",
+          "locative": "",
+          "nominative": "Санкт‑Петербург",
+          "preposition": "в",
+          "prepositional": "Санкт‑Петербурге"
+        }
+      },
+      "breadcrumbs": [
+        {
+          "name": "Карты",
+          "type": "root",
+          "url": "https://yandex.ru/maps/"
+        },
+        {
+          "name": "Санкт‑Петербург",
+          "type": "region",
+          "url": "https://yandex.ru/maps/2/saint-petersburg/",
+          "region": {
+            "center": [
+              30.314997,
+              59.938784
+            ],
+            "zoom": 11
+          }
+        },
+        {
+          "category": {
+            "id": "184106132",
+            "name": "Стоматологическая клиника",
+            "class": "dental",
+            "seoname": "dental_clinic",
+            "pluralName": "Стоматологии"
+          },
+          "name": "Стоматологии",
+          "type": "category",
+          "url": "https://yandex.ru/maps/2/saint-petersburg/category/dental_clinic/184106132/"
+        }
+      ]
+    },
+    {
+      "type": "business",
+      "requestId": "1779097409739092-2107242103-addrs-upper-yp-90",
+      "index": 2,
+      "analyticsId": "27",
+      "title": "Dentalab",
+      "description": "ул. Куйбышева, 18",
+      "address": "ул. Куйбышева, 18",
+      "coordinates": [
+        30.328313,
+        59.955854
+      ],
+      "displayCoordinates": [
+        30.328313,
+        59.955854
+      ],
+      "bounds": [
+        [
+          30.324088,
+          59.953822
+        ],
+        [
+          30.332298,
+          59.95794
+        ]
+      ],
+      "uri": "ymapsbm1://org?oid=125608681405",
+      "logId": "dHlwZT1iaXpmaW5kZXI7aWQ9MTI1NjA4NjgxNDA1",
+      "requestSerpId": "1779097403635403-637133801-addrs-upper-yp-39",
+      "id": "125608681405",
+      "metro": [
+        {
+          "id": "station__9805928",
+          "name": "Горьковская",
+          "distance": "730 м",
+          "distanceValue": 734.207,
+          "coordinates": [
+            30.319178137,
+            59.956146492
+          ],
+          "type": "metro",
+          "color": "#0070bf"
+        },
+        {
+          "id": "station__9805896",
+          "name": "Площадь Ленина",
+          "distance": "1,71 км",
+          "distanceValue": 1705.04,
+          "coordinates": [
+            30.354563816,
+            59.958620249
+          ],
+          "type": "metro",
+          "color": "#f23d30"
+        },
+        {
+          "id": "station__9805891",
+          "name": "Петроградская",
+          "distance": "1,71 км",
+          "distanceValue": 1712.57,
+          "coordinates": [
+            30.310995482,
+            59.966159282
+          ],
+          "type": "metro",
+          "color": "#0070bf"
+        }
+      ],
+      "stops": [
+        {
+          "id": "stop__10075882",
+          "name": "Троицкая площадь П.С.",
+          "distance": "188 м",
+          "distanceValue": 188.34,
+          "coordinates": [
+            30.326698031,
+            59.954771908
+          ],
+          "type": "common"
+        },
+        {
+          "id": "stop__10070612",
+          "name": "Мичуринская улица",
+          "distance": "196 м",
+          "distanceValue": 196.519,
+          "coordinates": [
+            30.330174393,
+            59.956089841
+          ],
+          "type": "common"
+        },
+        {
+          "id": "stop__10076534",
+          "name": "Улица Куйбышева",
+          "distance": "400 м",
+          "distanceValue": 404.022,
+          "coordinates": [
+            30.332834536,
+            59.95804985
+          ],
+          "type": "common"
+        },
+        {
+          "id": "stop__10075111",
+          "name": "Станция метро Горьковская",
+          "distance": "620 м",
+          "distanceValue": 621.838,
+          "coordinates": [
+            30.321644085,
+            59.955628023
+          ],
+          "type": "common"
+        },
+        {
+          "id": "stop__10070340",
+          "name": "Малая Монетная улица",
+          "distance": "860 м",
+          "distanceValue": 857.281,
+          "coordinates": [
+            30.323910136,
+            59.961245759
+          ],
+          "type": "common"
+        }
+      ],
+      "photos": {
+        "count": 31,
+        "urlTemplate": "https://avatars.mds.yandex.net/get-altay/12810232/2a000001913d7c3493a011849d18920c44b7/%s",
+        "items": [
+          {
+            "urlTemplate": "https://avatars.mds.yandex.net/get-altay/12810232/2a000001913d7c3493a011849d18920c44b7/%s"
+          },
+          {
+            "urlTemplate": "https://avatars.mds.yandex.net/get-altay/988435/2a000001913d8f7e382b07552061614a0a17/%s"
+          },
+          {
+            "urlTemplate": "https://avatars.mds.yandex.net/get-altay/19876101/2a0000019d4b2e8a61bb26082b3cead5d797/%s"
+          },
+          {
+            "urlTemplate": "https://avatars.mds.yandex.net/get-altay/19648454/2a0000019dc671db25a9cc754d381a9ef0a8/%s"
+          },
+          {
+            "urlTemplate": "https://avatars.mds.yandex.net/get-altay/10804279/2a000001913d7ce6d251461defbaf5375149/%s"
+          },
+          {
+            "urlTemplate": "https://avatars.mds.yandex.net/get-altay/14112077/2a000001913d8efcb9cb6725c13b993af64e/%s"
+          },
+          {
+            "urlTemplate": "https://avatars.mds.yandex.net/get-altay/19619196/2a0000019dc66ec8b720e34d6d0b71d85527/%s"
+          },
+          {
+            "urlTemplate": "https://avatars.mds.yandex.net/get-altay/19753916/2a0000019dc668b3e75753c2af5e208979fb/%s"
+          },
+          {
+            "urlTemplate": "https://avatars.mds.yandex.net/get-altay/19547455/2a0000019d4b27a42fb2543284c45bf5f2d2/%s"
+          },
+          {
+            "urlTemplate": "https://avatars.mds.yandex.net/get-altay/10768168/2a000001913d8d09b6eb0479831e0a0eb1ee/%s"
+          },
+          {
+            "urlTemplate": "https://avatars.mds.yandex.net/get-altay/18116908/2a0000019dc66f4237aaf1223b92bd846f8c/%s"
+          }
+        ]
+      },
+      "entrances": [
+        {
+          "coordinates": [
+            30.32841454,
+            59.95588645
+          ],
+          "azimuth": 138.148374666884,
+          "tilt": 0
+        }
+      ],
+      "routePoint": {
+        "context": "djJ8ChQKEgm11Kz5ElQ-QBFDuLh8WvpNQBIrChIJrgzLGzdUPkARtSjcwFf6TUASDjEyNTYwODY4MTQwNV8wHQAAgD8gLQ,,"
+      },
+      "panorama": {
+        "id": "1254657390_626137959_23_1662967766",
+        "direction": [
+          2.082374,
+          -7.510886
+        ],
+        "point": {
+          "type": "Point",
+          "coordinates": [
+            30.328335,
+            59.955919
+          ]
+        },
+        "preview": "https://static-pano.maps.yandex.ru/v1/?panoid=1254657390_626137959_23_1662967766&size=500%2C240&azimuth=2.082374&tilt=-7.510886&api_key=maps&signature=u7Ap3J012gAfcWmXJ9VrDzemMRYXnYNaN9_tUKrhrfI="
+      },
+      "shortTitle": "Dentalab",
+      "fullAddress": "Санкт-Петербург, улица Куйбышева, 18",
+      "country": "Россия",
+      "chain": {
+        "id": "225476389059",
+        "name": "DentaLab",
+        "seoname": "dentalab"
+      },
+      "status": "open",
+      "businessLinks": [],
+      "ratingData": {
+        "ratingCount": 717,
+        "ratingValue": 5,
+        "reviewCount": 653
+      },
+      "sources": [
+        {
+          "id": "yandex",
+          "name": "Яндекс",
+          "href": "https://ya.ru/"
+        },
+        {
+          "id": "docdoc",
+          "name": "docdoc.ru",
+          "href": "https://docdoc.ru/clinic/dentalab_dentalab_na_michurinskoy"
+        }
+      ],
+      "categories": [
+        {
+          "id": "184106132",
+          "name": "Стоматологическая клиника",
+          "class": "dental",
+          "seoname": "dental_clinic",
+          "pluralName": "Стоматологии"
+        }
+      ],
+      "phones": [
+        {
+          "number": "+7 (812) 604-39-29",
+          "type": "phone",
+          "value": "+78126043929"
+        }
+      ],
+      "features": [
+        {
+          "id": "dentist_services",
+          "value": [
+            {
+              "id": "dental_surgery",
+              "name": "хирургия"
+            },
+            {
+              "id": "aesthetic_dentistry",
+              "name": "эстетическая стоматология"
+            },
+            {
+              "id": "endodontics",
+              "name": "эндодонтия"
+            },
+            {
+              "id": "implantology",
+              "name": "имплантология"
+            },
+            {
+              "id": "radiography",
+              "name": "рентгенография"
+            },
+            {
+              "id": "orthodontics",
+              "name": "ортодонтия"
+            },
+            {
+              "id": "maxillo_facial_surgery",
+              "name": "челюстно-лицевая хирургия"
+            },
+            {
+              "id": "dental_prosthetics",
+              "name": "протезирование"
+            },
+            {
+              "id": "therapy",
+              "name": "терапия"
+            },
+            {
+              "id": "plastic_frenum",
+              "name": "френулопластика"
+            },
+            {
+              "id": "filling",
+              "name": "пломбирование"
+            },
+            {
+              "id": "extractions",
+              "name": "удаление зубов"
+            },
+            {
+              "id": "teeth_whitening",
+              "name": "отбеливание"
+            },
+            {
+              "id": "caries_treatment",
+              "name": "лечение кариеса"
+            },
+            {
+              "id": "veneers",
+              "name": "виниры и люминиры"
+            },
+            {
+              "id": "braces",
+              "name": "брекеты"
+            },
+            {
+              "id": "dental_hygiene",
+              "name": "гигиена полости рта"
+            },
+            {
+              "id": "crowns",
+              "name": "коронки"
+            },
+            {
+              "id": "treatment_of_gum_disease",
+              "name": "лечение дёсен"
+            },
+            {
+              "id": "root_canal_treatment",
+              "name": "лечение каналов"
+            },
+            {
+              "id": "computer tomography",
+              "name": "компьютерная томография"
+            },
+            {
+              "id": "bone_grafting",
+              "name": "костная пластика"
+            },
+            {
+              "id": "treatment_of_periodontitis",
+              "name": "лечение периодонтита"
+            },
+            {
+              "id": "treatment_of_tooth_cysts",
+              "name": "лечение кисты зуба"
+            },
+            {
+              "id": "restoration_of_teeth",
+              "name": "реставрация зубов"
+            },
+            {
+              "id": "gnathology",
+              "name": "гнатология"
+            },
+            {
+              "id": "aligners",
+              "name": "элайнеры"
+            },
+            {
+              "id": "laser_dentistry",
+              "name": "лазерная стоматология"
+            },
+            {
+              "id": "digital_dentistry",
+              "name": "цифровая стоматология CAD/CAM"
+            },
+            {
+              "id": "skyces",
+              "name": "скайсы"
+            },
+            {
+              "id": "repair_of_dentures",
+              "name": "ремонт зубных протезов"
+            }
+          ],
+          "name": "услуги",
+          "type": "enum",
+          "important": true
+        },
+        {
+          "id": "parking_disabled",
+          "value": true,
+          "name": "парковка для людей с инвалидностью",
+          "type": "bool",
+          "important": true
+        },
+        {
+          "id": "toilet_for_disabled",
+          "value": true,
+          "name": "туалет для людей с инвалидностью",
+          "type": "bool",
+          "important": true
+        },
+        {
+          "id": "for_children",
+          "value": true,
+          "name": "есть детский кабинет",
+          "type": "bool",
+          "important": true
+        },
+        {
+          "id": "gift_certificate",
+          "value": true,
+          "name": "подарочный сертификат",
+          "type": "bool",
+          "important": false
+        },
+        {
+          "id": "free examination",
+          "value": true,
+          "name": "бесплатная консультация",
+          "type": "bool",
+          "important": false
+        },
+        {
+          "id": "good_place",
+          "value": true,
+          "type": "bool",
+          "important": false
+        },
+        {
+          "id": "car_park",
+          "value": true,
+          "name": "парковка",
+          "type": "bool",
+          "important": false
+        },
+        {
+          "id": "medical_specialists",
+          "value": [
+            {
+              "id": "surgeon",
+              "name": "хирург"
+            },
+            {
+              "id": "podiatrist",
+              "name": "ортопед"
+            },
+            {
+              "id": "stomatologist",
+              "name": "стоматолог"
+            },
+            {
+              "id": "therapist",
+              "name": "терапевт"
+            },
+            {
+              "id": "dental_technician",
+              "name": "зубной техник"
+            },
+            {
+              "id": "gnatologist",
+              "name": "гнатолог"
+            },
+            {
+              "id": "orthodontist",
+              "name": "ортодонт"
+            }
+          ],
+          "name": "врачи и специалисты",
+          "type": "enum",
+          "important": false
+        },
+        {
+          "id": "payment_method",
+          "value": [
+            {
+              "id": "discount_system",
+              "name": "дисконтная система скидок"
+            },
+            {
+              "id": "prepayment",
+              "name": "предоплата"
+            },
+            {
+              "id": "cash",
+              "name": "наличными"
+            },
+            {
+              "id": "payment_card",
+              "name": "оплата картой"
+            },
+            {
+              "id": "wire_transfer",
+              "name": "банковским переводом"
+            },
+            {
+              "id": "installment",
+              "name": "рассрочка"
+            },
+            {
+              "id": "cashless_payment",
+              "name": "безналичная"
+            },
+            {
+              "id": "qr_code",
+              "name": "QR-код"
+            },
+            {
+              "id": "by_credit_card",
+              "name": "оплата кредитной картой"
+            }
+          ],
+          "name": "способ оплаты",
+          "type": "enum",
+          "important": false
+        },
+        {
+          "id": "dental treatment in installments",
+          "value": true,
+          "name": "лечение зубов в рассрочку",
+          "type": "bool",
+          "important": false
+        },
+        {
+          "id": "uni_medic_min_appointment_price",
+          "value": "1500 ₽",
+          "aref": "#medicine_unisearch",
+          "type": "text",
+          "important": false
+        },
+        {
+          "id": "promotions",
+          "value": [
+            {
+              "id": "discounts",
+              "name": "скидки"
+            },
+            {
+              "id": "promotions",
+              "name": "акции"
+            },
+            {
+              "id": "special_offers",
+              "name": "спецпредложения"
+            },
+            {
+              "id": "bonuses",
+              "name": "бонусы"
+            },
+            {
+              "id": "gifts",
+              "name": "подарки"
+            }
+          ],
+          "name": "акции",
+          "type": "enum",
+          "important": false
+        },
+        {
+          "id": "uni_medic_adult",
+          "value": true,
+          "aref": "#medicine_unisearch",
+          "type": "bool",
+          "important": false
+        },
+        {
+          "id": "uni_medic_kid",
+          "value": true,
+          "aref": "#medicine_unisearch",
+          "type": "bool",
+          "important": false
+        },
+        {
+          "id": "call_button",
+          "value": true,
+          "name": "кнопка вызова персонала",
+          "type": "bool",
+          "important": false
+        },
+        {
+          "id": "preliminary_registration",
+          "value": true,
+          "name": "предварительная запись",
+          "type": "bool",
+          "important": false
+        },
+        {
+          "id": "ramp",
+          "value": true,
+          "name": "пандус",
+          "type": "bool",
+          "important": false
+        },
+        {
+          "id": "payment_by_credit_card",
+          "value": true,
+          "name": "Оплата картой",
+          "type": "bool",
+          "important": false
+        },
+        {
+          "id": "bike_parking",
+          "value": true,
+          "name": "велопарковка",
+          "type": "bool",
+          "important": false
+        },
+        {
+          "id": "uni_medic_specialization",
+          "value": [
+            {
+              "id": "stomatolog_khirurg",
+              "name": "стоматолог-хирург"
+            },
+            {
+              "id": "stomatolog_terapevt",
+              "name": "стоматолог-терапевт"
+            },
+            {
+              "id": "stomatolog_ortoped",
+              "name": "стаматолог-ортопед"
+            },
+            {
+              "id": "stomatolog_ortodont",
+              "name": "стоматолог-ортодонт"
+            },
+            {
+              "id": "chelyustno_licevoj_khirurg",
+              "name": "челюстно-лицевой хирург"
+            },
+            {
+              "id": "stomatolog_implantolog",
+              "name": "стоматолог-имплантолог"
+            },
+            {
+              "id": "stomatolog",
+              "name": "стоматолог"
+            },
+            {
+              "id": "khirurg",
+              "name": "хирург"
+            },
+            {
+              "id": "stomatolog_parodontolog",
+              "name": "стоматолог-пародонтолог"
+            }
+          ],
+          "aref": "#medicine_unisearch",
+          "type": "enum",
+          "important": false
+        },
+        {
+          "id": "guarantee",
+          "value": true,
+          "name": "гарантия",
+          "type": "bool",
+          "important": false
+        },
+        {
+          "id": "wheelchair_access",
+          "value": [
+            {
+              "id": "unavailable",
+              "name": "недоступно"
+            }
+          ],
+          "name": "доступность входа на инвалидной коляске",
+          "type": "enum",
+          "important": false
+        },
+        {
+          "id": "wi_fi",
+          "value": true,
+          "name": "Wi-Fi",
+          "type": "bool",
+          "important": false
+        },
+        {
+          "id": "street_entrance",
+          "value": true,
+          "type": "bool",
+          "important": false
+        },
+        {
+          "id": "wheelchair_accessible_vocabulary",
+          "value": [
+            {
+              "id": "wheelchair_accessible_pa",
+              "name": "частично доступно"
+            }
+          ],
+          "name": "доступность помещения на инвалидной коляске",
+          "type": "enum",
+          "important": false
+        },
+        {
+          "id": "pediatric_specialists",
+          "value": [
+            {
+              "id": "pediatric_dentist",
+              "name": "детский стоматолог"
+            }
+          ],
+          "name": "детские врачи и специалисты",
+          "type": "enum",
+          "important": false
+        },
+        {
+          "id": "medical_certificate",
+          "value": [
+            {
+              "id": "sick_list",
+              "name": "больничный лист"
+            },
+            {
+              "id": "medical_examinations",
+              "name": "медицинский осмотр"
+            },
+            {
+              "id": "medical_books",
+              "name": "медицинская книжка"
+            },
+            {
+              "id": "086_u",
+              "name": "справка для поступления на работу, учебу"
+            },
+            {
+              "id": "medical examination for seafarers",
+              "name": "медкомиссия для моряков"
+            }
+          ],
+          "name": "предоставляемые справки",
+          "type": "enum",
+          "important": false
+        },
+        {
+          "id": "show_briefly_about_the_place_block",
+          "value": true,
+          "type": "bool",
+          "important": false
+        },
+        {
+          "id": "view_medicine_booking",
+          "value": true,
+          "type": "bool",
+          "important": false
+        }
+      ],
+      "mediaOrderTemplate": "p,v,p,v,v,p,v*,p*",
+      "featureGroups": [
+        {
+          "name": "Доступность",
+          "featureIds": [
+            "elevator_wheelchair_accessible",
+            "ramp",
+            "wheelchair_access",
+            "call_button",
+            "toilet_for_disabled",
+            "parking_disabled",
+            "automatic_door",
+            "wheelchair_accessible_vocabulary"
+          ]
+        },
+        {
+          "name": "Достижения",
+          "featureIds": [
+            "good_place"
+          ]
+        }
+      ],
+      "businessProperties": {
+        "has_verified_owner": true,
+        "geoproduct_poi_color": "#ABAEB3",
+        "show_ymyl_disclaimer": true,
+        "unusual_hours": [
+          "2026-05-09",
+          "2026-05-11"
+        ],
+        "geoproduct_poi_label_color": "#7A7F85"
+      },
+      "seoname": "dentalab",
+      "geoId": 120659,
+      "compositeAddress": {
+        "country": "Россия",
+        "locality": "Санкт-Петербург",
+        "street": "улица Куйбышева",
+        "house": "18"
+      },
+      "modularCard": {
+        "showClaimOrganization": true,
+        "showTaxiButton": true,
+        "showFeedbackButton": true,
+        "showReviews": true,
+        "showAddPhotoButton": true,
+        "showCompetitors": false,
+        "showDirectBanner": false,
+        "showAdditionalAds": false,
+        "showWorkHours": true,
+        "showContacts": true,
+        "showFriendsLiked": false,
+        "showVisualPricesTab": false,
+        "showHotelEnrichment": false,
+        "promoBadgeFeature": [],
+        "offerBadgeId": [],
+        "showCourierButton": false,
+        "hotelReviewsStubType": 0
+      },
+      "modularPin": {
+        "subtitleHints": [
+          {
+            "text": "5",
+            "type": "RATING",
+            "properties": {
+              "rating": {
+                "showGoodPlace": true
+              }
+            }
+          },
+          {
+            "text": "Открыто до 21:00",
+            "type": "WORKING_HOURS",
+            "properties": {
+              "workingHours": {
+                "shortText": "До 21:00",
+                "isOpen": true
+              }
+            }
+          }
+        ],
+        "allowMultilineSubtitle": false
+      },
+      "modularSnippet": {
+        "showNeurosummary": true,
+        "showMentionedOnSite": false,
+        "showTitle": "SHORT_TITLE",
+        "showAddress": "SHORT_ADDRESS",
+        "showCategory": "SINGLE_CATEGORY",
+        "showRating": "FIVE_STAR_RATING",
+        "showPhoto": "LOGO",
+        "showWorkHours": true,
+        "showVerified": true,
+        "showDistanceFromTransit": false,
+        "showBookmark": true,
+        "showEta": true,
+        "showGeoproductOffer": true,
+        "subtitleHint": [],
+        "galleryButton": [
+          "PRICES"
+        ],
+        "shownGoodsNumber": 3,
+        "showDescription": false,
+        "showCollectionBadge": true,
+        "showFriendsLiked": false,
+        "showCourierButton": false,
+        "showYandexEatsOrderButton": false,
+        "infoBlock": [],
+        "serpActionButtons": [
+          6,
+          1,
+          3,
+          5,
+          0
+        ],
+        "awards": [
+          0
+        ],
+        "promoBadgeFeature": [],
+        "offerBadgeId": [],
+        "showHotelEnrichment": false
+      },
+      "tzOffset": 10800,
+      "workingTimeText": "ежедневно, 09:00–21:00",
+      "workingTime": [
+        [
+          {
+            "from": {
+              "hours": 9,
+              "minutes": 0
+            },
+            "to": {
+              "hours": 21,
+              "minutes": 0
+            }
+          }
+        ],
+        [
+          {
+            "from": {
+              "hours": 9,
+              "minutes": 0
+            },
+            "to": {
+              "hours": 21,
+              "minutes": 0
+            }
+          }
+        ],
+        [
+          {
+            "from": {
+              "hours": 9,
+              "minutes": 0
+            },
+            "to": {
+              "hours": 21,
+              "minutes": 0
+            }
+          }
+        ],
+        [
+          {
+            "from": {
+              "hours": 9,
+              "minutes": 0
+            },
+            "to": {
+              "hours": 21,
+              "minutes": 0
+            }
+          }
+        ],
+        [
+          {
+            "from": {
+              "hours": 9,
+              "minutes": 0
+            },
+            "to": {
+              "hours": 21,
+              "minutes": 0
+            }
+          }
+        ],
+        [
+          {
+            "from": {
+              "hours": 9,
+              "minutes": 0
+            },
+            "to": {
+              "hours": 21,
+              "minutes": 0
+            }
+          }
+        ],
+        [
+          {
+            "from": {
+              "hours": 9,
+              "minutes": 0
+            },
+            "to": {
+              "hours": 21,
+              "minutes": 0
+            }
+          }
+        ]
+      ],
+      "currentWorkingStatus": {
+        "isOpenNow": true,
+        "text": "Открыто до 21:00",
+        "shortText": "До 21:00",
+        "tag": []
+      },
+      "socialLinks": [
+        {
+          "type": "telegram",
+          "href": "https://t.me/dentalabclinic",
+          "readableHref": "@dentalabclinic"
+        },
+        {
+          "type": "vkontakte",
+          "href": "https://vk.com/dentalabclinic",
+          "readableHref": "vk.com/dentalabclinic"
+        },
+        {
+          "type": "max",
+          "href": "https://max.ru/dentalabclinic",
+          "readableHref": "max.ru/dentalabclinic"
+        }
+      ],
+      "urls": [
+        "https://dentalab.ru/"
+      ],
+      "advert": {
+        "title": "",
+        "text": "",
+        "url": "",
+        "ordInfo": {
+          "client": {
+            "id": "322288051",
+            "tin": "7813464717",
+            "name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"СТОМА ПРОФ\""
+          }
+        },
+        "isBko": false,
+        "photo": "https://avatars.mds.yandex.net/get-tycoon/14684200/2a00000195133e08f3f86b408e83a39161c8/priority-headline-background",
+        "logo": "https://avatars.mds.yandex.net/get-tycoon/15266384/2a000001951342ce495d320c6b2c1cf92334/priority-headline-logo-square",
+        "pinBranding": {
+          "dot": {
+            "default": "https://avatars.mds.yandex.net/get-tycoon/20232048/30444674_dust_search_standard_2026-03-25T12_01_36/dust_%s",
+            "hover": "https://avatars.mds.yandex.net/get-tycoon/20022140/30444674_dust_search_hover_2026-03-25T12_01_36/dust_%s",
+            "visited": "https://avatars.mds.yandex.net/get-tycoon/6432176/30444674_dust_search_visited_2026-03-25T12_01_36/dust_%s"
+          },
+          "base": {
+            "default": "https://avatars.mds.yandex.net/get-tycoon/18143924/30444674_drop_search_standard_2026-03-25T12_01_35/drop_%s",
+            "hover": "https://avatars.mds.yandex.net/get-tycoon/20305035/30444674_drop_search_hover_2026-03-25T12_01_35/drop_%s",
+            "visited": "https://avatars.mds.yandex.net/get-tycoon/20267394/30444674_drop_search_visited_2026-03-25T12_01_35/drop_%s"
+          },
+          "active": {
+            "default": "https://avatars.mds.yandex.net/get-tycoon/17685433/30444674_pin_search_standard_2026-03-25T12_01_36/pin_%s"
+          }
+        },
+        "actionButtons": [
+          {
+            "type": "url",
+            "title": "Записаться на приём",
+            "value": "https://dentalab.ru/signup"
+          }
+        ],
+        "highlighted": true,
+        "products": [
+          {
+            "title": "Профессиональная гигиена",
+            "img": "https://avatars.mds.yandex.net/get-tycoon/13940820/2a00000190c2ac3d3a67d862af933b3c4e1e/M_height",
+            "price": {
+              "text": "8 000 р.",
+              "value": 8000,
+              "currency": "RUB"
+            },
+            "url": "https://dentalab.ru/services/hygiene?erid=3MtFQRkqfB2huzBcHHttRqpeVimbbA",
+            "disclaimer": "Есть противопоказания. Посоветуйтесь с врачом.",
+            "ordToken": "3MtFQRkqfB2huzBcHHttRqpeVimbbA"
+          },
+          {
+            "title": "Лечение кариеса",
+            "img": "https://avatars.mds.yandex.net/get-tycoon/13940820/2a00000190c505664f0672656641f76d0883/M_height",
+            "price": {
+              "text": "4 900 р.",
+              "value": 4900,
+              "currency": "RUB"
+            },
+            "url": "https://dentalab.ru/services/therapy?erid=3MtFQRkqfB2huzBcHHttRqpeVimbfX",
+            "disclaimer": "Есть противопоказания. Посоветуйтесь с врачом.",
+            "ordToken": "3MtFQRkqfB2huzBcHHttRqpeVimbfX"
+          },
+          {
+            "title": "Удаление зуба",
+            "img": "https://avatars.mds.yandex.net/get-tycoon/13719813/2a00000190c4c88779d45619c6b904a1447e/M_height",
+            "price": {
+              "text": "3 800 р.",
+              "value": 3800,
+              "currency": "RUB"
+            },
+            "url": "https://dentalab.ru/services/surgery?erid=3MtFQRkqfB2huzBcHHttRqpeVimbbC",
+            "disclaimer": "Есть противопоказания. Посоветуйтесь с врачом.",
+            "ordToken": "3MtFQRkqfB2huzBcHHttRqpeVimbbC"
+          },
+          {
+            "title": "Седация",
+            "img": "https://avatars.mds.yandex.net/get-tycoon/15090263/2a00000194acd3f5d71350945d548d05298a/M_height",
+            "url": "https://dentalab.ru/?erid=3MtFQRkqfB2huzBcHHttRqpeVimbfY",
+            "disclaimer": "Есть противопоказания. Посоветуйтесь с врачом.",
+            "ordToken": "3MtFQRkqfB2huzBcHHttRqpeVimbfY"
+          },
+          {
+            "title": "Коронки",
+            "img": "https://avatars.mds.yandex.net/get-tycoon/15214437/2a0000019541f81cac56590c1912244eebe5/M_height",
+            "price": {
+              "text": "29 900 р.",
+              "value": 29900,
+              "currency": "RUB"
+            },
+            "url": "https://dentalab.ru/?erid=3MtFQRkqfB2huzBcHHttRqpeVimbfZ",
+            "disclaimer": "Есть противопоказания. Посоветуйтесь с врачом.",
+            "ordToken": "3MtFQRkqfB2huzBcHHttRqpeVimbfZ"
+          },
+          {
+            "title": "Имплантация",
+            "img": "https://avatars.mds.yandex.net/get-tycoon/13875239/2a00000190c4cd447fb77a60745469085830/M_height",
+            "price": {
+              "text": "49 000 р.",
+              "value": 49000,
+              "currency": "RUB"
+            },
+            "url": "https://dentalab.ru/services/implantation?erid=3MtFQRkqfB2huzBcHHttRqpeVimbbD",
+            "disclaimer": "Есть противопоказания. Посоветуйтесь с врачом.",
+            "ordToken": "3MtFQRkqfB2huzBcHHttRqpeVimbbD"
+          },
+          {
+            "title": "Лечение молочных зубов",
+            "img": "https://avatars.mds.yandex.net/get-tycoon/10240522/2a00000190c4e64a323bd35f29726a18715a/M_height",
+            "price": {
+              "text": "4 500 р.",
+              "value": 4500,
+              "currency": "RUB"
+            },
+            "url": "https://dentalab.ru/services/children?erid=3MtFQRkqfB2huzBcHHttRqpeVimbbE",
+            "disclaimer": "Есть противопоказания. Посоветуйтесь с врачом.",
+            "ordToken": "3MtFQRkqfB2huzBcHHttRqpeVimbbE"
+          },
+          {
+            "title": "Виниры",
+            "img": "https://avatars.mds.yandex.net/get-tycoon/13853165/2a00000190c4c304c5f05368618483220a77/M_height",
+            "price": {
+              "text": "29 000 р.",
+              "value": 29000,
+              "currency": "RUB"
+            },
+            "url": "https://dentalab.ru/services/veneers?erid=3MtFQRkqfB2huzBcHHttRqpeVimbbB",
+            "disclaimer": "Есть противопоказания. Посоветуйтесь с врачом.",
+            "ordToken": "3MtFQRkqfB2huzBcHHttRqpeVimbbB"
+          },
+          {
+            "title": "Брекеты",
+            "img": "https://avatars.mds.yandex.net/get-tycoon/13940820/2a00000190c50115be110c51e2cbc35696f4/M_height",
+            "price": {
+              "text": "40 000 р.",
+              "value": 40000,
+              "currency": "RUB"
+            },
+            "url": "https://dentalab.ru/services/brackets?erid=3MtFQRkqfB2huzBcHHttRqpeVimbfW",
+            "disclaimer": "Есть противопоказания. Посоветуйтесь с врачом.",
+            "ordToken": "3MtFQRkqfB2huzBcHHttRqpeVimbfW"
+          },
+          {
+            "title": "Отбеливание зубов лампой ZOOM-4",
+            "img": "https://avatars.mds.yandex.net/get-tycoon/13719813/2a00000190c4f823ff8768e1a67636e1c26d/M_height",
+            "price": {
+              "text": "50 000 р.",
+              "value": 50000,
+              "currency": "RUB"
+            },
+            "url": "https://dentalab.ru/services/whitening?erid=3MtFQRkqfB2huzBcHHttRqpeVimbfV",
+            "disclaimer": "Есть противопоказания. Посоветуйтесь с врачом.",
+            "ordToken": "3MtFQRkqfB2huzBcHHttRqpeVimbfV"
+          }
+        ]
+      },
+      "businessImages": {
+        "logo": {
+          "urlTemplate": "https://avatars.mds.yandex.net/get-altay/18101536/2a0000019d6d5df88742839f1a0df578b568/%s",
+          "tag": [
+            "chain-logo"
+          ],
+          "id": "18101536_2a0000019d6d5df88742839f1a0df578b568"
+        }
+      },
+      "references": [
+        {
+          "id": "4057569308",
+          "scope": "nyak"
+        }
+      ],
+      "subtitleItems": [
+        {
+          "type": "working_hours",
+          "text": "До 21:00",
+          "property": [
+            {
+              "key": "is_open",
+              "value": "1"
+            },
+            {
+              "key": "short_text",
+              "value": "До 21:00"
+            },
+            {
+              "key": "text",
+              "value": "Открыто до 21:00"
+            }
+          ]
+        },
+        {
+          "type": "rating",
+          "text": "10",
+          "property": [
+            {
+              "key": "value",
+              "value": "10"
+            },
+            {
+              "key": "value_5",
+              "value": "5"
+            },
+            {
+              "key": "yandex_star",
+              "value": "1"
+            }
+          ]
+        }
+      ],
+      "metrika": {
+        "counter": 65296768,
+        "goals": {
+          "call": "make-call",
+          "cta": "cta-button",
+          "route": "make-route",
+          "site": "site",
+          "whatsapp": "whatsapp",
+          "telegram": "telegram",
+          "viber": "viber",
+          "vkontakte": "vkontakte",
+          "youtube": "social-youtube",
+          "odnoklassniki": "social-odnoklassniki",
+          "instagram": "instagram_subscribe",
+          "stories": "stories-button",
+          "taxi": "call-taxi",
+          "booking": "booking",
+          "subscribe": "subscribe",
+          "send-to-phone": "send-to-phone",
+          "booking-open": "booking-open",
+          "share": "share",
+          "booking-confirmed": "booking-confirmed",
+          "booking-visited": "booking-visited",
+          "start-route": "start-route",
+          "visited-organization": "visited-organization"
+        }
+      },
+      "routeToChoose": [
+        {
+          "icon-url": "https://yastatic.net/s3/web4static/_/v2/static/media/yandex_logo.c2cc5125.png",
+          "label": "Яндекс Карты",
+          "route-types": {
+            "auto": "auto",
+            "bus": "mt",
+            "walking": "pd"
+          },
+          "route-url-template": "https://maps.yandex.ru/?mode=routes&rtext={fromParam}~{toParam}&rtt={routeTypeParam}&source=wizbiz_new_map_single&utm_source=yandex&utm_medium=wizbiz_map&utm_campaign=route",
+          "search-text-url-template": "https://yandex.ru/maps/?mode=search&text={encodedText}",
+          "service": "yandex_maps"
+        },
+        {
+          "icon-url": "https://yastatic.net/s3/web4static/_/v2/static/media/twoGis_logo.f6efe2e1.png",
+          "label": "2ГИС",
+          "route-types": {
+            "auto": "car",
+            "bus": "bus",
+            "walking": "pedestrian"
+          },
+          "route-url-template": "https://2gis.ru/directions/tab/{routeTypeParam}/points/{fromParam}|{toParam}&utm_from=route",
+          "search-text-url-template": "https://2gis.ru/search/{encodedText}",
+          "service": "2gis"
+        }
+      ],
+      "topObjects": {
+        "hasPhotos": false,
+        "isYandexEda": false,
+        "rubric": "medicine",
+        "categories": [
+          {
+            "categoryName": "popular",
+            "categoryItems": [
+              {
+                "title": "Анестезиологическое сопровождение при проведении терапевтических/хирургических манипуляций (1 час)",
+                "price": "15000",
+                "currency": "₽"
+              },
+              {
+                "title": "Коррекция прикуса с использованием съемных и несъемных конструкций. Термокаппа для формирования композитных накладок",
+                "price": "22000",
+                "currency": "₽"
+              },
+              {
+                "title": "Восстановление зуба пломбой. Лечение пульпита молочного зуба в два посещения (первое посещение)",
+                "price": "8000",
+                "currency": "₽"
+              },
+              {
+                "title": "Печать 3D моделей и диагностика в лаборатории для анализа окклюзии",
+                "price": "15000",
+                "currency": "₽"
+              },
+              {
+                "title": "Внутрикостная дентальная имплантация временного имплантата или мини-имплантата",
+                "price": "16000",
+                "currency": "₽"
+              },
+              {
+                "title": "Прием (осмотр, консультация) врача-гнатолога расширенный",
+                "price": "7000",
+                "currency": "₽"
+              },
+              {
+                "title": "Ортодонтическая коррекция с применением систем элайнеров. Восстановление утерянного элайнера",
+                "price": "15000",
+                "currency": "₽"
+              },
+              {
+                "title": "Восстановление зуба коронкой с использованием цельнолитой культевой вкладки из КХС (изготовленной лабораторным методом)",
+                "price": "14000",
+                "currency": "₽"
+              },
+              {
+                "title": "Профессиональное отбеливание зубов клиническое препаратом Opalescence Boost PF (2 челюсти в линии улыбки)",
+                "price": "28000",
+                "currency": "₽"
+              },
+              {
+                "title": "Гингивопластика. Устранение рецессии десневого края коронарным лоскутом (1 зуб)",
+                "price": "15500",
+                "currency": "₽"
+              }
+            ]
+          }
+        ],
+        "fullObjectsCount": 414,
+        "relevance": {
+          "lastUploadTime": "2026-05-16T16:15:36.174832Z"
+        },
+        "source": {
+          "id": "MEDFLEX",
+          "name": "МедФлекс",
+          "disclaimerText": "Есть противопоказания. Посоветуйтесь с врачом."
+        }
+      },
+      "parentRubrics": [
+        0,
+        0
+      ],
+      "discoveries": [
+        {
+          "alias": "khoroshee-mesto-rajony_stomatologicheskaya-klinika_gor-kovskaya-piter-2",
+          "title": "Стоматологии с наградой «Хорошее место 2026» на «Горьковской»",
+          "description": "",
+          "photoUrlTemplate": "https://avatars.mds.yandex.net/get-altay/9709783/2a0000018925fb315d65f8515f773dc320fd/%s",
+          "placeNumber": 5,
+          "partner": {
+            "name": "Хорошее место",
+            "iconTemplate": "https://avatars.mds.yandex.net/get-discovery-int/1534577/2a00000196448018d60ab50a465b0a658c41/%s"
+          }
+        }
+      ],
+      "eventsPreviews": {
+        "count": 7,
+        "uri": "tycoon_events/1.x",
+        "items": [
+          {
+            "id": 65905559,
+            "contentShort": "🏆 ГОРДИМСЯ НАШИМ ГЛАВНЫМ ВРАЧОМ! 🏆(https://topaward.ru/#vote)\n\nХаритошин Игорь Александрович, наш главный врач, участвует в номинации «Луч...",
+            "text": "🏆 ГОРДИМСЯ НАШИМ ГЛАВНЫМ ВРАЧОМ! 🏆(https://topaward.ru/#vote)\n\nХаритошин Игорь Александрович, наш главный врач, участвует в номинации «Луч...",
+            "publicationTime": 1777390172166,
+            "photos": [
+              {
+                "id": "6ae17944-c19d-44c9-81e4-c21d630859d2",
+                "size": {
+                  "width": 2400,
+                  "height": 960
+                },
+                "urlTemplate": "https://avatars.mds.yandex.net/get-sprav-posts/20318488/2a0000019dd575ba6cd031354340048435f7/%s",
+                "possibleSizes": [
+                  "S",
+                  "M",
+                  "L",
+                  "XL"
+                ]
+              }
+            ],
+            "uri": "tycoon_events/1.x/post/65905559",
+            "urls": [],
+            "itemType": "post"
+          },
+          {
+            "id": 65796570,
+            "contentShort": "🥇Друзья, делимся отличной новостью, которой по-настоящему гордимся: наш капитан Игорь Александрович признан лучшим в городе!\n\nНезависимые п...",
+            "text": "🥇Друзья, делимся отличной новостью, которой по-настоящему гордимся: наш капитан Игорь Александрович признан лучшим в городе!\n\nНезависимые п...",
+            "publicationTime": 1777150782490,
+            "photos": [
+              {
+                "id": "c40c26b8-2aaf-4217-a045-9f62909db072",
+                "size": {
+                  "width": 2480,
+                  "height": 3508
+                },
+                "urlTemplate": "https://avatars.mds.yandex.net/get-sprav-posts/18799621/2a0000019dc670d4b2243e8c89892c110a3f/%s",
+                "possibleSizes": [
+                  "S",
+                  "M",
+                  "L",
+                  "XL"
+                ]
+              }
+            ],
+            "uri": "tycoon_events/1.x/post/65796570",
+            "urls": [],
+            "itemType": "post"
+          }
+        ]
+      },
+      "awards": {
+        "goodPlaceYear": "2026"
+      },
+      "hasStories": true,
+      "aspects": [
+        {
+          "id": "3502044682",
+          "isTrusted": true,
+          "text": "Качество лечения",
+          "count": 427,
+          "positive": 420,
+          "neutral": 1,
+          "negative": 6,
+          "photos": []
+        },
+        {
+          "id": "3502044686",
+          "isTrusted": true,
+          "text": "Время ожидания",
+          "count": 133,
+          "positive": 133,
+          "neutral": 0,
+          "negative": 0,
+          "photos": []
+        },
+        {
+          "id": "3502121735",
+          "isTrusted": true,
+          "text": "Удаление зубов",
+          "count": 82,
+          "positive": 76,
+          "neutral": 3,
+          "negative": 3,
+          "photos": []
+        },
+        {
+          "id": "3502121745",
+          "isTrusted": true,
+          "text": "Детская стоматология",
+          "count": 58,
+          "positive": 55,
+          "neutral": 0,
+          "negative": 3,
+          "photos": []
+        },
+        {
+          "id": "3502121740",
+          "isTrusted": true,
+          "text": "Чистка зубов",
+          "count": 49,
+          "positive": 47,
+          "neutral": 0,
+          "negative": 2,
+          "photos": []
+        },
+        {
+          "id": "3502121739",
+          "isTrusted": true,
+          "text": "Протезирование",
+          "count": 41,
+          "positive": 40,
+          "neutral": 0,
+          "negative": 1,
+          "photos": []
+        },
+        {
+          "id": "3502043729",
+          "isTrusted": true,
+          "text": "Чистота",
+          "count": 40,
+          "positive": 39,
+          "neutral": 1,
+          "negative": 0,
+          "photos": []
+        },
+        {
+          "id": "3502121738",
+          "isTrusted": true,
+          "text": "Импланты",
+          "count": 37,
+          "positive": 34,
+          "neutral": 2,
+          "negative": 1,
+          "photos": []
+        },
+        {
+          "id": "3502044629",
+          "isTrusted": true,
+          "text": "Расположение",
+          "count": 35,
+          "positive": 35,
+          "neutral": 0,
+          "negative": 0,
+          "photos": []
+        },
+        {
+          "id": "3502121743",
+          "isTrusted": true,
+          "text": "Анестезия",
+          "count": 31,
+          "positive": 30,
+          "neutral": 1,
+          "negative": 0,
+          "photos": []
+        },
+        {
+          "id": "3502043730",
+          "isTrusted": true,
+          "text": "Интерьер",
+          "count": 30,
+          "positive": 30,
+          "neutral": 0,
+          "negative": 0,
+          "photos": [
+            {
+              "link": "https://avatars.mds.yandex.net/get-altay/988435/2a000001913d8f7e382b07552061614a0a17/%",
+              "mds_namespace": "altay"
+            },
+            {
+              "link": "https://avatars.mds.yandex.net/get-altay/16340554/2a0000019c2d10d5145de0e7b6177246b3a8/%",
+              "mds_namespace": "altay"
+            },
+            {
+              "link": "https://avatars.mds.yandex.net/get-altay/10505037/2a000001913d8de6d609ea6924885182b953/%",
+              "mds_namespace": "altay"
+            },
+            {
+              "link": "https://avatars.mds.yandex.net/get-altay/10768168/2a000001913d8d09b6eb0479831e0a0eb1ee/%",
+              "mds_namespace": "altay"
+            },
+            {
+              "link": "https://avatars.mds.yandex.net/get-altay/14112077/2a000001913d8efcb9cb6725c13b993af64e/%",
+              "mds_namespace": "altay"
+            },
+            {
+              "link": "https://avatars.mds.yandex.net/get-altay/13930885/2a000001913d8daf895ed7f1a5582758ece4/%",
+              "mds_namespace": "altay"
+            },
+            {
+              "link": "https://avatars.mds.yandex.net/get-altay/13419691/2a00000191749fe22ac51bb4f6578fbcd8a9/%",
+              "mds_namespace": "altay"
+            },
+            {
+              "link": "https://avatars.mds.yandex.net/get-altay/5097807/2a000001913d8caa3fbf9f879f209e8daa28/%",
+              "mds_namespace": "altay"
+            },
+            {
+              "link": "https://avatars.mds.yandex.net/get-altay/12810232/2a000001913d7c3493a011849d18920c44b7/%",
+              "mds_namespace": "altay"
+            },
+            {
+              "link": "https://avatars.mds.yandex.net/get-altay/11277832/2a000001913d80fe846670119475e83a3c75/%",
+              "mds_namespace": "altay"
+            }
+          ]
+        },
+        {
+          "id": "3502044269",
+          "isTrusted": true,
+          "text": "Оборудование",
+          "count": 30,
+          "positive": 30,
+          "neutral": 0,
+          "negative": 0,
+          "photos": [
+            {
+              "link": "https://avatars.mds.yandex.net/get-altay/12810232/2a000001913d7c3493a011849d18920c44b7/%",
+              "mds_namespace": "altay"
+            },
+            {
+              "link": "https://avatars.mds.yandex.net/get-altay/10804279/2a000001913d7ce6d251461defbaf5375149/%",
+              "mds_namespace": "altay"
+            },
+            {
+              "link": "https://avatars.mds.yandex.net/get-altay/11277832/2a000001913d80fe846670119475e83a3c75/%",
+              "mds_namespace": "altay"
+            },
+            {
+              "link": "https://avatars.mds.yandex.net/get-altay/11385005/2a000001913d849b01da5b993f9d7ada87f5/%",
+              "mds_namespace": "altay"
+            },
+            {
+              "link": "https://avatars.mds.yandex.net/get-altay/10247017/2a000001913d851fc9d2608e1c83a067d35b/%",
+              "mds_namespace": "altay"
+            }
+          ]
+        },
+        {
+          "id": "3502121746",
+          "isTrusted": true,
+          "text": "Исправление прикуса",
+          "count": 21,
+          "positive": 20,
+          "neutral": 1,
+          "negative": 0,
+          "photos": []
+        },
+        {
+          "id": "3502121736",
+          "isTrusted": true,
+          "text": "Лечение кариеса",
+          "count": 21,
+          "positive": 19,
+          "neutral": 0,
+          "negative": 2,
+          "photos": []
+        },
+        {
+          "id": "3502121750",
+          "isTrusted": true,
+          "text": "Реставрация зубов",
+          "count": 18,
+          "positive": 17,
+          "neutral": 0,
+          "negative": 1,
+          "photos": []
+        },
+        {
+          "id": "3502121741",
+          "isTrusted": true,
+          "text": "Брекеты",
+          "count": 18,
+          "positive": 16,
+          "neutral": 2,
+          "negative": 0,
+          "photos": []
+        },
+        {
+          "id": "3502121734",
+          "isTrusted": true,
+          "text": "Пломбирование зубов",
+          "count": 16,
+          "positive": 14,
+          "neutral": 1,
+          "negative": 1,
+          "photos": []
+        },
+        {
+          "id": "3502121737",
+          "isTrusted": true,
+          "text": "Установка коронок",
+          "count": 12,
+          "positive": 11,
+          "neutral": 0,
+          "negative": 1,
+          "photos": []
+        }
+      ],
+      "houseEncodedCoordinates": "Z0kYdQVoSEwEQFtjfXV0dHRkYg==",
+      "videos": {
+        "items": [
+          {
+            "id": "vplvk37ajv5f6r7fofra",
+            "videoUrl": "https://runtime.strm.yandex.ru/player/video/vplvk37ajv5f6r7fofra",
+            "thumbnailUrl": "https://avatars.mds.yandex.net/get-vh/6332636/2a0000018c688fe14b840af3ca849121bb57/orig",
+            "tags": [
+              {
+                "id": "hardcoded-video",
+                "name": "Видео"
+              }
+            ],
+            "height": 1080,
+            "width": 1920
+          }
+        ]
+      },
+      "needSimilarOrgsRequest": false,
+      "region": {
+        "id": 2,
+        "type": 6,
+        "capitalId": 0,
+        "hierarchy": [
+          225,
+          10174,
+          2
+        ],
+        "seoname": "saint-petersburg",
+        "bounds": [
+          [
+            29.647787,
+            59.631827369843656
+          ],
+          [
+            30.982207000000002,
+            60.242925369843654
+          ]
+        ],
+        "longitude": 30.314997,
+        "latitude": 59.938784,
+        "zoom": 11,
+        "names": {
+          "ablative": "",
+          "accusative": "Санкт‑Петербург",
+          "dative": "Санкт‑Петербургу",
+          "directional": "",
+          "genitive": "Санкт‑Петербурга",
+          "instrumental": "Санкт‑Петербургом",
+          "locative": "",
+          "nominative": "Санкт‑Петербург",
+          "preposition": "в",
+          "prepositional": "Санкт‑Петербурге"
+        }
+      },
+      "breadcrumbs": [
+        {
+          "name": "Карты",
+          "type": "root",
+          "url": "https://yandex.ru/maps/"
+        },
+        {
+          "name": "Санкт‑Петербург",
+          "type": "region",
+          "url": "https://yandex.ru/maps/2/saint-petersburg/",
+          "region": {
+            "center": [
+              30.314997,
+              59.938784
+            ],
+            "zoom": 11
+          }
+        },
+        {
+          "category": {
+            "id": "184106132",
+            "name": "Стоматологическая клиника",
+            "class": "dental",
+            "seoname": "dental_clinic",
+            "pluralName": "Стоматологии"
+          },
+          "name": "Стоматологии",
+          "type": "category",
+          "url": "https://yandex.ru/maps/2/saint-petersburg/category/dental_clinic/184106132/"
+        }
+      ]
+    }
+  ],
+  "error": null,
+  "started_at": "2026-05-18T09:43:18.919267+00:00"
+}

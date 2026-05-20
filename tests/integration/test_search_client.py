@@ -1,14 +1,20 @@
 """
-Integration tests for Google search client.
+Integration tests for SearXNG-backed search client.
 
-Tests search_client behavior - both the interface and the underlying models.
+Tests search_client behavior — interface, underlying models, and retry/parse logic
+against a mocked SearXNG HTTP backend.
 """
 
 import pytest
 from unittest.mock import patch, AsyncMock, MagicMock
-from src.domain.models.requests import SearchRequest, SearchResponse, SearchResult
-from src.infrastructure.external_api.search_client import search_client, SearchClient
 from inspect import iscoroutinefunction
+
+from src.domain.models.requests import SearchRequest, SearchResponse, SearchResult
+from src.infrastructure.external_api.search_client import (
+    search_client,
+    SearchClient,
+    SearXngSearchClient,
+)
 
 
 class TestSearchClientInterface:
@@ -22,17 +28,17 @@ class TestSearchClientInterface:
         )
 
     @pytest.mark.asyncio
-    async def test_search_client_has_proxy_provider(self):
-        """search_client should have proxy_provider attribute"""
-        assert hasattr(search_client, "_proxy_provider"), (
-            "search_client should have _proxy_provider"
-        )
+    async def test_search_client_is_searxng_backed(self):
+        """search_client should be a SearXngSearchClient with sane config"""
+        assert isinstance(search_client, SearXngSearchClient)
+        assert search_client._base_url.startswith("http")
+        assert search_client._max_retries >= 0
 
     @pytest.mark.asyncio
     async def test_search_client_returns_search_response_type(self):
-        """search_client.search() should return SearchResponse type"""
+        """search_client.search() should return SearchResponse with engine=searxng"""
         mock_response = SearchResponse(
-            searchParameters={"q": "test", "type": "search", "engine": "google"},
+            searchParameters={"q": "test", "type": "search", "engine": "searxng"},
             organic=[
                 SearchResult(
                     title="Result 1",
@@ -53,31 +59,27 @@ class TestSearchClientInterface:
         assert isinstance(result.searchParameters, dict)
         assert "q" in result.searchParameters
         assert result.searchParameters["q"] == "test"
-        assert result.searchParameters["engine"] == "google"
+        assert result.searchParameters["engine"] == "searxng"
 
 
 class TestSearchRequestModel:
     """Test SearchRequest model behavior"""
 
     def test_search_request_accepts_query_parameter(self):
-        """SearchRequest should accept q parameter"""
         request = SearchRequest(q="python programming")
         assert request.q == "python programming"
         assert isinstance(request.q, str)
 
     def test_search_request_accepts_num_parameter(self):
-        """SearchRequest should accept num parameter with default"""
         request = SearchRequest(q="test", num=20)
         assert request.num == 20
         assert isinstance(request.num, int)
 
     def test_search_request_default_num_is_10(self):
-        """SearchRequest should have default num=10"""
         request = SearchRequest(q="test")
         assert request.num == 10
 
     def test_search_request_validates_required_q(self):
-        """SearchRequest should require q parameter"""
         with pytest.raises(Exception):
             SearchRequest()
 
@@ -86,7 +88,6 @@ class TestSearchResultModel:
     """Test SearchResult model behavior"""
 
     def test_search_result_has_required_fields(self):
-        """SearchResult should have all required fields"""
         result = SearchResult(
             title="Test Title",
             link="https://test.com",
@@ -99,7 +100,6 @@ class TestSearchResultModel:
         assert result.position == 1
 
     def test_search_result_position_must_be_positive(self):
-        """SearchResult position should be positive integer"""
         result = SearchResult(
             title="Test",
             link="https://test.com",
@@ -109,7 +109,6 @@ class TestSearchResultModel:
         assert result.position >= 1
 
     def test_search_result_accepts_empty_snippet(self):
-        """SearchResult should accept empty snippet"""
         result = SearchResult(
             title="Test",
             link="https://test.com",
@@ -123,9 +122,8 @@ class TestSearchResponseModel:
     """Test SearchResponse model behavior"""
 
     def test_search_response_has_search_parameters(self):
-        """SearchResponse should include searchParameters"""
         response = SearchResponse(
-            searchParameters={"q": "test", "type": "search", "engine": "google"},
+            searchParameters={"q": "test", "type": "search", "engine": "searxng"},
             organic=[],
         )
         assert hasattr(response, "searchParameters")
@@ -134,9 +132,8 @@ class TestSearchResponseModel:
         assert "engine" in response.searchParameters
 
     def test_search_response_has_organic_results(self):
-        """SearchResponse should include organic results list"""
         response = SearchResponse(
-            searchParameters={"q": "test", "type": "search", "engine": "google"},
+            searchParameters={"q": "test", "type": "search", "engine": "searxng"},
             organic=[
                 SearchResult(
                     title="Result 1",
@@ -151,17 +148,15 @@ class TestSearchResponseModel:
         assert len(response.organic) == 1
 
     def test_search_response_organic_defaults_to_empty_list(self):
-        """SearchResponse should accept empty organic list"""
         response = SearchResponse(
-            searchParameters={"q": "test", "type": "search", "engine": "google"},
+            searchParameters={"q": "test", "type": "search", "engine": "searxng"},
             organic=[],
         )
         assert response.organic == []
 
     def test_search_response_accepts_multiple_results(self):
-        """SearchResponse should accept multiple organic results"""
         response = SearchResponse(
-            searchParameters={"q": "test", "type": "search", "engine": "google"},
+            searchParameters={"q": "test", "type": "search", "engine": "searxng"},
             organic=[
                 SearchResult(
                     title=f"Result {i}",
@@ -175,72 +170,129 @@ class TestSearchResponseModel:
         assert len(response.organic) == 5
 
 
-class TestSearchClientWithBrowser:
-    """Test search_client with mocked browser to verify flow"""
+def _mock_searxng_response(results: list[dict], status_code: int = 200) -> MagicMock:
+    """Helper: build a fake httpx Response with given SearXNG JSON payload."""
+    resp = MagicMock()
+    resp.status_code = status_code
+    resp.json = MagicMock(return_value={"results": results})
+    return resp
+
+
+class TestSearXngClientLogic:
+    """Test SearXngSearchClient parse + retry behavior against mocked httpx."""
+
+    def _make_client(self, max_retries: int = 2, min_organic: int = 1) -> SearXngSearchClient:
+        return SearXngSearchClient(
+            base_url="http://fake-searxng:8080",
+            timeout=5.0,
+            max_retries=max_retries,
+            retry_delay=0.0,
+            min_organic=min_organic,
+        )
 
     @pytest.mark.asyncio
-    async def test_search_creates_browser_context(self):
-        """Search should create browser context via pool_manager"""
-        with patch(
-            "src.infrastructure.external_api.search_client.pool_manager"
-        ) as mock_pm:
-            mock_context = MagicMock()
-            mock_context.create_context = AsyncMock()
-            mock_pm.create_context = AsyncMock(return_value=mock_context)
-
-            client = SearchClient()
-            request = SearchRequest(q="test", num=5)
-
-            try:
-                await client.search(request)
-            except Exception:
-                pass
-
-            assert mock_pm.create_context.called
-
-    @pytest.mark.asyncio
-    async def test_search_fallback_without_proxy(self):
-        """Search should fallback to no proxy when proxy fails"""
-
-        class TestSearchClient(SearchClient):
-            async def _search_with_browser(self, query, proxy=None):
-                return [
-                    {
-                        "title": "Test",
-                        "link": "https://test.com",
-                        "snippet": "Test",
-                        "position": 1,
-                    }
-                ]
-
-        client = TestSearchClient()
-        request = SearchRequest(q="test")
-        result = await client.search(request)
-
-        assert isinstance(result, SearchResponse)
-        assert len(result.organic) == 1
-        assert result.organic[0].title == "Test"
+    async def test_parses_results_into_search_result(self):
+        client = self._make_client()
+        payload = [
+            {"url": "https://a.example", "title": "A", "content": "snip A"},
+            {"url": "https://b.example", "title": "B", "content": "snip B"},
+        ]
+        with patch.object(
+            client._client, "get", new_callable=AsyncMock,
+            return_value=_mock_searxng_response(payload),
+        ):
+            resp = await client.search(SearchRequest(q="test", num=10))
+        assert resp.searchParameters["engine"] == "searxng"
+        assert len(resp.organic) == 2
+        assert resp.organic[0].title == "A"
+        assert resp.organic[0].link == "https://a.example"
+        assert resp.organic[0].position == 1
+        assert resp.organic[1].position == 2
 
     @pytest.mark.asyncio
-    async def test_search_limits_results_by_num(self):
-        """Search should limit results to num parameter"""
+    async def test_dedupes_links(self):
+        client = self._make_client()
+        payload = [
+            {"url": "https://x.example", "title": "X1", "content": "s1"},
+            {"url": "https://x.example", "title": "X1 dup", "content": "s1 dup"},
+            {"url": "https://y.example", "title": "Y", "content": "s2"},
+        ]
+        with patch.object(
+            client._client, "get", new_callable=AsyncMock,
+            return_value=_mock_searxng_response(payload),
+        ):
+            resp = await client.search(SearchRequest(q="test", num=10))
+        assert [r.link for r in resp.organic] == ["https://x.example", "https://y.example"]
 
-        class TestSearchClient(SearchClient):
-            async def _search_with_browser(self, query, proxy=None):
-                return [
-                    {
-                        "title": f"Result {i}",
-                        "link": f"https://test{i}.com",
-                        "snippet": f"Snippet {i}",
-                        "position": i,
-                    }
-                    for i in range(1, 11)
-                ]
+    @pytest.mark.asyncio
+    async def test_skips_non_http_links(self):
+        client = self._make_client()
+        payload = [
+            {"url": "ftp://nope.example", "title": "ftp", "content": ""},
+            {"url": "", "title": "blank", "content": ""},
+            {"url": "https://ok.example", "title": "OK", "content": "snip"},
+        ]
+        with patch.object(
+            client._client, "get", new_callable=AsyncMock,
+            return_value=_mock_searxng_response(payload),
+        ):
+            resp = await client.search(SearchRequest(q="test", num=10))
+        assert len(resp.organic) == 1
+        assert resp.organic[0].link == "https://ok.example"
 
-        client = TestSearchClient()
-        request = SearchRequest(q="test", num=3)
-        result = await client.search(request)
+    @pytest.mark.asyncio
+    async def test_limits_to_num(self):
+        client = self._make_client()
+        payload = [
+            {"url": f"https://e{i}.example", "title": f"R{i}", "content": f"s{i}"}
+            for i in range(1, 11)
+        ]
+        with patch.object(
+            client._client, "get", new_callable=AsyncMock,
+            return_value=_mock_searxng_response(payload),
+        ):
+            resp = await client.search(SearchRequest(q="test", num=3))
+        assert len(resp.organic) == 3
+        assert resp.organic[2].title == "R3"
 
-        assert len(result.organic) == 3
-        assert result.organic[0].title == "Result 1"
-        assert result.organic[2].title == "Result 3"
+    @pytest.mark.asyncio
+    async def test_retries_on_http_error_then_succeeds(self):
+        client = self._make_client(max_retries=2)
+        bad = _mock_searxng_response([], status_code=502)
+        good = _mock_searxng_response(
+            [{"url": "https://ok.example", "title": "OK", "content": "snip"}]
+        )
+        with patch.object(
+            client._client, "get", new_callable=AsyncMock,
+            side_effect=[bad, good],
+        ) as mock_get:
+            resp = await client.search(SearchRequest(q="test", num=10))
+        assert mock_get.call_count == 2
+        assert len(resp.organic) == 1
+
+    @pytest.mark.asyncio
+    async def test_retries_on_empty_organic_then_succeeds(self):
+        client = self._make_client(max_retries=2, min_organic=1)
+        empty = _mock_searxng_response([])
+        good = _mock_searxng_response(
+            [{"url": "https://ok.example", "title": "OK", "content": ""}]
+        )
+        with patch.object(
+            client._client, "get", new_callable=AsyncMock,
+            side_effect=[empty, good],
+        ) as mock_get:
+            resp = await client.search(SearchRequest(q="test", num=10))
+        assert mock_get.call_count == 2
+        assert len(resp.organic) == 1
+
+    @pytest.mark.asyncio
+    async def test_raises_after_exhausting_retries(self):
+        client = self._make_client(max_retries=2)
+        bad = _mock_searxng_response([], status_code=502)
+        with patch.object(
+            client._client, "get", new_callable=AsyncMock,
+            side_effect=[bad, bad, bad],
+        ) as mock_get:
+            with pytest.raises(Exception, match="after 3 attempts"):
+                await client.search(SearchRequest(q="test", num=10))
+        assert mock_get.call_count == 3

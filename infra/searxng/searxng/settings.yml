@@ -1,0 +1,95 @@
+# SearXNG settings — production-инстанс для Atomic-Scraper-Service.
+# Минимальный override: включаем JSON API, выключаем limiter, направляем
+# исходящий трафик через pool из 20 puls socks5.
+#
+# Подтверждено прогонами в serp_experiment/REPORT_searxng.md (прогон 9):
+#   VPN на хосте + этот pool + retries=2 в клиенте → 95.3% success.
+#
+# После правок: docker compose restart searxng
+
+use_default_settings: true
+
+general:
+  debug: false
+  instance_name: "atomic-scraper"
+  enable_metrics: true
+
+search:
+  safe_search: 0
+  autocomplete: ""
+  default_lang: "en"
+  ban_time_on_fail: 5
+  max_ban_time_on_fail: 120
+  # !!! критично — JSON API доступен только если перечислен здесь
+  formats:
+    - html
+    - json
+
+server:
+  port: 8080
+  bind_address: "0.0.0.0"
+  base_url: false
+  # шумит на single-user инстансе → выключаем
+  limiter: false
+  public_instance: false
+  # secret_key подставляется из env SEARXNG_SECRET (см. docker-compose.yml)
+  secret_key: "atomic-scraper-do-not-use-in-prod"
+  image_proxy: false
+  http_protocol_version: "1.1"
+  method: "GET"
+
+ui:
+  default_locale: "en"
+  query_in_title: false
+  default_theme: simple
+
+# Pool из 20 puls socks5 (10 ru + 10 pl), sessttl.10 = sticky на 10 минут.
+# SearXNG ротирует upstream proxy round-robin'ом. Retry-loop в клиенте
+# (src/infrastructure/external_api/searxng_client.py) использует это:
+# повторная попытка → новый IP из пула.
+outgoing:
+  request_timeout: 8.0
+  max_request_timeout: 12.0
+  useragent_suffix: ""
+  pool_connections: 20
+  pool_maxsize: 10
+  enable_http2: false
+  extra_proxy_timeout: 5
+  proxies:
+    all://:
+      - socks5h://efea0cd216087051c2e6__cr.ru;sessttl.10:fc6a3125b4c606fa@np.puls-proxy.com:11000
+      - socks5h://efea0cd216087051c2e6__cr.ru;sessttl.10:fc6a3125b4c606fa@np.puls-proxy.com:11001
+      - socks5h://efea0cd216087051c2e6__cr.ru;sessttl.10:fc6a3125b4c606fa@np.puls-proxy.com:11002
+      - socks5h://efea0cd216087051c2e6__cr.ru;sessttl.10:fc6a3125b4c606fa@np.puls-proxy.com:11003
+      - socks5h://efea0cd216087051c2e6__cr.ru;sessttl.10:fc6a3125b4c606fa@np.puls-proxy.com:11004
+      - socks5h://efea0cd216087051c2e6__cr.ru;sessttl.10:fc6a3125b4c606fa@np.puls-proxy.com:11005
+      - socks5h://efea0cd216087051c2e6__cr.ru;sessttl.10:fc6a3125b4c606fa@np.puls-proxy.com:11006
+      - socks5h://efea0cd216087051c2e6__cr.ru;sessttl.10:fc6a3125b4c606fa@np.puls-proxy.com:11007
+      - socks5h://efea0cd216087051c2e6__cr.ru;sessttl.10:fc6a3125b4c606fa@np.puls-proxy.com:11008
+      - socks5h://efea0cd216087051c2e6__cr.ru;sessttl.10:fc6a3125b4c606fa@np.puls-proxy.com:11009
+      - socks5h://efea0cd216087051c2e6__cr.pl;sessttl.10:fc6a3125b4c606fa@np.puls-proxy.com:11000
+      - socks5h://efea0cd216087051c2e6__cr.pl;sessttl.10:fc6a3125b4c606fa@np.puls-proxy.com:11001
+      - socks5h://efea0cd216087051c2e6__cr.pl;sessttl.10:fc6a3125b4c606fa@np.puls-proxy.com:11002
+      - socks5h://efea0cd216087051c2e6__cr.pl;sessttl.10:fc6a3125b4c606fa@np.puls-proxy.com:11003
+      - socks5h://efea0cd216087051c2e6__cr.pl;sessttl.10:fc6a3125b4c606fa@np.puls-proxy.com:11004
+      - socks5h://efea0cd216087051c2e6__cr.pl;sessttl.10:fc6a3125b4c606fa@np.puls-proxy.com:11005
+      - socks5h://efea0cd216087051c2e6__cr.pl;sessttl.10:fc6a3125b4c606fa@np.puls-proxy.com:11006
+      - socks5h://efea0cd216087051c2e6__cr.pl;sessttl.10:fc6a3125b4c606fa@np.puls-proxy.com:11007
+      - socks5h://efea0cd216087051c2e6__cr.pl;sessttl.10:fc6a3125b4c606fa@np.puls-proxy.com:11008
+      - socks5h://efea0cd216087051c2e6__cr.pl;sessttl.10:fc6a3125b4c606fa@np.puls-proxy.com:11009
+
+# Явно выключаем заведомо-плохие/онион-движки, чтобы они не тянули
+# request_timeout впустую перед попаданием в suspended.
+engines:
+  - name: brave
+    disabled: true
+  - name: startpage
+    disabled: true
+  - name: karmasearch
+    disabled: true
+  - name: karmasearch videos
+    disabled: true
+  - name: ahmia
+    disabled: true
+  - name: torch
+    disabled: true

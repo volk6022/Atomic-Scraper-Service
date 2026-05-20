@@ -1,44 +1,58 @@
+import html as html_module
 import re
 
 
-def clean_html_content(html: str) -> str:
-    content = html
-    content = re.sub(
-        r"<script[^>]*>.*?</script>", "", content, flags=re.DOTALL | re.IGNORECASE
-    )
-    content = re.sub(
-        r"<style[^>]*>.*?</style>", "", content, flags=re.DOTALL | re.IGNORECASE
-    )
+_NOISE_BLOCK_TAGS = (
+    "head", "script", "style", "noscript", "iframe",
+    "nav", "header", "footer", "aside", "form", "svg",
+)
+
+
+def _strip_noise_blocks(content: str) -> str:
+    for tag in _NOISE_BLOCK_TAGS:
+        content = re.sub(
+            rf"<{tag}\b[^>]*>.*?</{tag}>",
+            "",
+            content,
+            flags=re.DOTALL | re.IGNORECASE,
+        )
     content = re.sub(r"<!--.*?-->", "", content, flags=re.DOTALL)
-    content = re.sub(
-        r"<noscript[^>]*>.*?</noscript>", "", content, flags=re.DOTALL | re.IGNORECASE
-    )
-    content = re.sub(
-        r"<iframe[^>]*>.*?</iframe>", "", content, flags=re.DOTALL | re.IGNORECASE
-    )
+    return content
+
+
+def clean_html_content(html: str) -> str:
+    """Strip scripts/styles/comments/nav-like chrome and remaining tags; collapse whitespace.
+
+    Returns plain text — structure is lost. Use html_to_text() to keep paragraph breaks
+    or html_to_markdown() to keep full structure.
+    """
+    content = _strip_noise_blocks(html)
     content = re.sub(r"<[^>]+>", "", content)
     content = re.sub(r"\s+", " ", content)
-    return content.strip()
+    return html_module.unescape(content).strip()
 
 
 def html_to_markdown(html: str) -> str:
     from markdownify import markdownify, ATX
 
-    return markdownify(html, heading_style=ATX)
+    cleaned = _strip_noise_blocks(html)
+    return markdownify(cleaned, heading_style=ATX)
 
 
 def html_to_text(html: str) -> str:
-    content = clean_html_content(html)
+    """Convert HTML to plain text preserving paragraph/heading/list line breaks."""
+    content = _strip_noise_blocks(html)
     content = re.sub(r"<br\s*/?>", "\n", content, flags=re.IGNORECASE)
-    content = re.sub(r"</p>", "\n\n", content, flags=re.IGNORECASE)
-    content = re.sub(r"</div>", "\n", content, flags=re.IGNORECASE)
-    content = re.sub(r"</li>", "\n", content, flags=re.IGNORECASE)
-    content = re.sub(r"</h[1-6]>", "\n\n", content, flags=re.IGNORECASE)
+    content = re.sub(r"</p\s*>", "\n\n", content, flags=re.IGNORECASE)
+    content = re.sub(r"</div\s*>", "\n", content, flags=re.IGNORECASE)
+    content = re.sub(r"</li\s*>", "\n", content, flags=re.IGNORECASE)
+    content = re.sub(r"</h[1-6]\s*>", "\n\n", content, flags=re.IGNORECASE)
+    content = re.sub(r"</tr\s*>", "\n", content, flags=re.IGNORECASE)
     content = re.sub(r"<[^>]+>", "", content)
-    content = re.sub(r"\n\s*\n", "\n\n", content)
     content = re.sub(r"[ \t]+", " ", content)
-    content = content.strip()
-    return content
+    content = re.sub(r"\n[ \t]+", "\n", content)
+    content = re.sub(r"\n{3,}", "\n\n", content)
+    return html_module.unescape(content).strip()
 
 
 def count_words(text: str) -> int:

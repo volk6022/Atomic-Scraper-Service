@@ -1,0 +1,14 @@
+{
+  "approach": "HTML bootstrap parse",
+  "success": false,
+  "captcha_detected": false,
+  "http_status": 200,
+  "items_collected": 0,
+  "fields_per_item": [],
+  "egress_ip": null,
+  "duration_s": 3.66,
+  "notes": "",
+  "sample": [],
+  "error": null,
+  "started_at": "2026-05-17T08:10:49.134856+00:00"
+}

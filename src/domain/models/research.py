@@ -49,8 +49,8 @@ class ResearchRequest(BaseModel):
 
     query: str = Field(..., min_length=3, max_length=2000)
     mode: ResearchMode = "balanced"
-    max_iters: Optional[int] = Field(default=None, ge=1, le=20)
-    max_tokens: Optional[int] = Field(default=None, ge=1000, le=32000)
+    max_iters: Optional[int] = Field(default=None, ge=1, le=50)
+    max_tokens: Optional[int] = Field(default=None, ge=1000, le=2_000_000)
 
 
 class ResearchTaskStatus(BaseModel):

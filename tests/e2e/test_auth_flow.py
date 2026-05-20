@@ -10,9 +10,15 @@ VALID_KEY = "default_internal_key"
 
 PROTECTED_ROUTES = [
     ("POST", "/api/v1/yandex-maps/extract", {
-        "category": "restaurants",
-        "center": {"lat": 59.934, "lng": 30.306},
-        "radius": 1000,
+        "query": "стоматология",
+        "region_id": 2,
+        "city_slug": "saint-petersburg",
+        "target_count": 20,
+    }),
+    ("POST", "/api/v1/yandex-maps/reviews", {
+        "business_oid": "82071161567",
+        "seoname": "dental_konfidens",
+        "count": 50,
     }),
     ("POST", "/api/v1/enrich", {"url": "https://example.com"}),
 ]
@@ -39,7 +45,6 @@ async def test_valid_api_key_grants_access(method, path, body):
     """Every protected route must NOT return 403 when a valid API key is provided."""
     from src.api.main import app
     from unittest.mock import patch, AsyncMock
-    from src.domain.models.business_card import BusinessCard
     from src.domain.models.enriched_content import EnrichedContent
 
     transport = ASGITransport(app=app)
@@ -49,7 +54,12 @@ async def test_valid_api_key_grants_access(method, path, body):
             patch(
                 "src.actions.yandex_maps.YandexMapsExtractAction.execute",
                 new_callable=AsyncMock,
-                return_value=[BusinessCard(name="A", address="B")],
+                return_value=[],
+            ),
+            patch(
+                "src.actions.yandex_maps.YandexMapsReviewsAction.execute",
+                new_callable=AsyncMock,
+                return_value=[],
             ),
             patch(
                 "src.actions.site_enricher.SiteEnrichAction.execute",

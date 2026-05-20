@@ -1,7 +1,11 @@
-from pydantic import BaseModel, HttpUrl, Field
-from typing import Optional, List, Literal
 from enum import Enum
+from typing import List, Literal, Optional
 import uuid
+
+from pydantic import BaseModel, Field, HttpUrl
+
+from src.domain.models.yandex_organization import YandexOrganization
+from src.domain.models.yandex_review import YandexReview
 
 
 class TaskStatus(str, Enum):
@@ -54,23 +58,55 @@ class HtmlToMdRequest(BaseModel):
     extraction_schema: Optional[dict] = None
 
 
-class GeoCenter(BaseModel):
-    lat: float = Field(..., ge=-90, le=90)
-    lng: float = Field(..., ge=-180, le=180)
+# -----------------------------------------------------------------------------
+# Yandex Maps — text + region search (XHR-intercept approach, see
+# `docs/yandex-maps-scraping-experiment-journal.md`).
+# -----------------------------------------------------------------------------
 
 
 class YandexMapsExtractRequest(BaseModel):
-    category: str
-    center: GeoCenter
-    radius: int = Field(..., ge=100, le=5000)
+    """Search Yandex Maps for organizations by text query within a region."""
+
+    query: str = Field(..., min_length=1, max_length=200, description="напр. 'стоматология'")
+    region_id: int = Field(
+        2, ge=1, description="Yandex `lr=` region id (2 = SPB, 213 = Moscow)"
+    )
+    city_slug: str = Field(
+        "saint-petersburg",
+        min_length=1,
+        max_length=100,
+        description="URL slug used in `/maps/{region_id}/{city_slug}/search/...`",
+    )
+    target_count: int = Field(
+        40, ge=1, le=200, description="Stop once N unique organizations are collected"
+    )
+    include_raw: bool = Field(
+        True, description="Whether to include the upstream `raw` JSON per org in the response"
+    )
 
 
 class YandexMapsExtractResponse(BaseModel):
-    businesses: list
+    organizations: list[YandexOrganization]
     total: int
-    category: str
-    center: dict
-    radius: int
+    query: str
+    region_id: int
+
+
+class YandexMapsReviewsRequest(BaseModel):
+    """Fetch reviews for a single organization via `fetchReviews` replay."""
+
+    business_oid: str = Field(..., pattern=r"^\d+$", description="Yandex business id")
+    seoname: str = Field(..., min_length=1, max_length=200, description="URL slug")
+    count: int = Field(50, ge=1, le=200, description="Reviews per page (Yandex internal cap ~50)")
+    ranking: Literal["by_time", "by_rating"] = "by_time"
+    pages: int = Field(1, ge=1, le=10, description="Number of scroll-driven pages to collect")
+    include_raw: bool = Field(True, description="Whether to keep the upstream raw JSON per review")
+
+
+class YandexMapsReviewsResponse(BaseModel):
+    reviews: list[YandexReview]
+    total: int
+    business_oid: str
 
 
 class EnrichRequest(BaseModel):

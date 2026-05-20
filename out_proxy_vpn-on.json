@@ -1,0 +1,286 @@
+[
+  {
+    "name": "searxng_local",
+    "runs": [
+      {
+        "ok": true,
+        "seconds": 12.051099100004649,
+        "organic_count": 10,
+        "error": ""
+      },
+      {
+        "ok": true,
+        "seconds": 11.837324899999658,
+        "organic_count": 10,
+        "error": ""
+      },
+      {
+        "ok": true,
+        "seconds": 12.0471996999986,
+        "organic_count": 10,
+        "error": ""
+      },
+      {
+        "ok": true,
+        "seconds": 10.914389400015352,
+        "organic_count": 10,
+        "error": ""
+      },
+      {
+        "ok": true,
+        "seconds": 12.071213000017451,
+        "organic_count": 9,
+        "error": ""
+      },
+      {
+        "ok": true,
+        "seconds": 11.085183999995934,
+        "organic_count": 9,
+        "error": ""
+      },
+      {
+        "ok": true,
+        "seconds": 10.884908400010318,
+        "organic_count": 10,
+        "error": ""
+      },
+      {
+        "ok": true,
+        "seconds": 7.702209899987793,
+        "organic_count": 10,
+        "error": ""
+      },
+      {
+        "ok": true,
+        "seconds": 12.04557429999113,
+        "organic_count": 9,
+        "error": ""
+      },
+      {
+        "ok": true,
+        "seconds": 10.603475899988553,
+        "organic_count": 9,
+        "error": ""
+      }
+    ]
+  },
+  {
+    "name": "requests_bs4__no_proxy",
+    "runs": [
+      {
+        "ok": false,
+        "seconds": 1.048726600012742,
+        "organic_count": 0,
+        "error": "RuntimeError: http 429"
+      },
+      {
+        "ok": false,
+        "seconds": 1.181721100001596,
+        "organic_count": 0,
+        "error": "RuntimeError: http 429"
+      },
+      {
+        "ok": false,
+        "seconds": 0.9957031999947503,
+        "organic_count": 0,
+        "error": "RuntimeError: http 429"
+      },
+      {
+        "ok": false,
+        "seconds": 0.9139816999959294,
+        "organic_count": 0,
+        "error": "RuntimeError: http 429"
+      },
+      {
+        "ok": false,
+        "seconds": 1.0474706999957561,
+        "organic_count": 0,
+        "error": "RuntimeError: http 429"
+      },
+      {
+        "ok": false,
+        "seconds": 1.1116518000198994,
+        "organic_count": 0,
+        "error": "RuntimeError: http 429"
+      },
+      {
+        "ok": false,
+        "seconds": 1.1222542999894358,
+        "organic_count": 0,
+        "error": "RuntimeError: http 429"
+      },
+      {
+        "ok": false,
+        "seconds": 1.0885887000185903,
+        "organic_count": 0,
+        "error": "RuntimeError: http 429"
+      },
+      {
+        "ok": false,
+        "seconds": 1.2058311000000685,
+        "organic_count": 0,
+        "error": "RuntimeError: http 429"
+      },
+      {
+        "ok": false,
+        "seconds": 0.9895074000232853,
+        "organic_count": 0,
+        "error": "RuntimeError: http 429"
+      }
+    ]
+  },
+  {
+    "name": "requests_bs4__http",
+    "runs": []
+  },
+  {
+    "name": "requests_bs4__socks5",
+    "runs": []
+  },
+  {
+    "name": "playwright_basic__no_proxy",
+    "runs": [
+      {
+        "ok": false,
+        "seconds": 9.910452099982649,
+        "organic_count": 0,
+        "error": "BlockedError: captcha / sorry page"
+      },
+      {
+        "ok": false,
+        "seconds": 10.154226600017864,
+        "organic_count": 0,
+        "error": "BlockedError: captcha / sorry page"
+      },
+      {
+        "ok": false,
+        "seconds": 10.27674410000327,
+        "organic_count": 0,
+        "error": "BlockedError: captcha / sorry page"
+      },
+      {
+        "ok": false,
+        "seconds": 10.205347700015409,
+        "organic_count": 0,
+        "error": "BlockedError: captcha / sorry page"
+      },
+      {
+        "ok": false,
+        "seconds": 10.269355700002052,
+        "organic_count": 0,
+        "error": "BlockedError: captcha / sorry page"
+      },
+      {
+        "ok": false,
+        "seconds": 10.029664899979252,
+        "organic_count": 0,
+        "error": "BlockedError: captcha / sorry page"
+      },
+      {
+        "ok": false,
+        "seconds": 10.115033100009896,
+        "organic_count": 0,
+        "error": "BlockedError: captcha / sorry page"
+      },
+      {
+        "ok": false,
+        "seconds": 10.022322800010443,
+        "organic_count": 0,
+        "error": "BlockedError: captcha / sorry page"
+      },
+      {
+        "ok": false,
+        "seconds": 9.981161799980327,
+        "organic_count": 0,
+        "error": "BlockedError: captcha / sorry page"
+      },
+      {
+        "ok": false,
+        "seconds": 9.921562700008508,
+        "organic_count": 0,
+        "error": "BlockedError: captcha / sorry page"
+      }
+    ]
+  },
+  {
+    "name": "playwright_basic__http",
+    "runs": []
+  },
+  {
+    "name": "playwright_basic__socks5",
+    "runs": []
+  },
+  {
+    "name": "playwright_stealth__no_proxy",
+    "runs": [
+      {
+        "ok": false,
+        "seconds": 10.062683699972695,
+        "organic_count": 0,
+        "error": "BlockedError: captcha / sorry page"
+      },
+      {
+        "ok": false,
+        "seconds": 10.253845200000796,
+        "organic_count": 0,
+        "error": "BlockedError: captcha / sorry page"
+      },
+      {
+        "ok": false,
+        "seconds": 10.290391499991529,
+        "organic_count": 0,
+        "error": "BlockedError: captcha / sorry page"
+      },
+      {
+        "ok": false,
+        "seconds": 10.196441100008087,
+        "organic_count": 0,
+        "error": "BlockedError: captcha / sorry page"
+      },
+      {
+        "ok": false,
+        "seconds": 11.10104290000163,
+        "organic_count": 0,
+        "error": "BlockedError: captcha / sorry page"
+      },
+      {
+        "ok": false,
+        "seconds": 10.135353799996665,
+        "organic_count": 0,
+        "error": "BlockedError: captcha / sorry page"
+      },
+      {
+        "ok": false,
+        "seconds": 10.287580499978503,
+        "organic_count": 0,
+        "error": "BlockedError: captcha / sorry page"
+      },
+      {
+        "ok": false,
+        "seconds": 10.11521369998809,
+        "organic_count": 0,
+        "error": "BlockedError: captcha / sorry page"
+      },
+      {
+        "ok": false,
+        "seconds": 10.086726699984865,
+        "organic_count": 0,
+        "error": "BlockedError: captcha / sorry page"
+      },
+      {
+        "ok": false,
+        "seconds": 10.455964299995685,
+        "organic_count": 0,
+        "error": "BlockedError: captcha / sorry page"
+      }
+    ]
+  },
+  {
+    "name": "playwright_stealth__http",
+    "runs": []
+  },
+  {
+    "name": "playwright_stealth__socks5",
+    "runs": []
+  }
+]

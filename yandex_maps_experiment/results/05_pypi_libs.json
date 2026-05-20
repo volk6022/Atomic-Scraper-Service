@@ -1,0 +1,72 @@
+{
+  "approach": "PyPI / GitHub library survey (no live run)",
+  "success": true,
+  "captcha_detected": false,
+  "http_status": null,
+  "items_collected": 0,
+  "fields_per_item": [
+    "yandex_maps_reviews_parser",
+    "ymrp"
+  ],
+  "egress_ip": null,
+  "duration_s": 0.71,
+  "notes": "Both libraries are dominated by Approach 4 (Playwright headless + XHR intercept + RU residential proxy). YMRP needs a visible browser; arsenyvolodko's lib needs a paid apikey for name lookup and Selenium Chrome for reviews, returning only (rating, text).",
+  "sample": [
+    {
+      "library_survey": {
+        "ymrp": {
+          "installed": true,
+          "version": "0.6.0 (PyPI)",
+          "engine": "Playwright (sync)",
+          "headless": "False — hard-coded",
+          "proxy_support": false,
+          "stealth": false,
+          "fields_per_review": [
+            "rating",
+            "text",
+            "author_handle",
+            "date (partial)"
+          ],
+          "useful_classes": [
+            "YandexMapParser",
+            "YandexMapReviewsParser",
+            "YandexMapProductsAndServicesParser"
+          ],
+          "method_excerpt": "    def get_reviews_html_content(self, url: str) -> str:\n        \"\"\"\n        Retrieve HTML content of reviews from Yandex Maps page.\n\n        Args:\n            url: URL of the Yandex Maps business page.\n\n        Returns:\n            HTML content string of the reviews section.\n\n        Note:\n            Performs browser automation to:\n            1. Load all available reviews\n            2. Expand all review texts\n            3. Return the complete HTML\n        \"\"\"\n        with sync_playwright() as playwright:\n            browser = playwright.chromium.launch(headless=False)\n            page = b",
+          "limits": [
+            "headless=False — opens a visible Chrome window",
+            "no proxy / no UA override",
+            "scrolls full page until no new reviews — slow",
+            "no built-in pagination by date"
+          ]
+        },
+        "yandex_maps_reviews_parser": {
+          "installed": true,
+          "source": "git+https://github.com/arsenyvolodko/yandex-maps-reviews-parser",
+          "version": "0.1.0",
+          "engine": "Selenium (visible Chrome) + bs4",
+          "api_token_baked_in": false,
+          "lookup_by_name_works": false,
+          "lookup_by_name_reason": "consts.YANDEX_MAPS_API_TOKEN is empty; requires paid Yandex apikey",
+          "fields_per_review": [
+            "rating",
+            "text"
+          ],
+          "methods": [
+            "BeautifulSoup",
+            "Review",
+            "YandexMapsReviewsParser"
+          ],
+          "limits": [
+            "needs apikey for get_reviews_by_organisation_name()",
+            "opens visible Chrome via selenium.webdriver.Chrome()",
+            "no proxy support",
+            "extracts only (rating, text) per review"
+          ]
+        }
+      }
+    }
+  ],
+  "error": null,
+  "started_at": "2026-05-18T09:46:29.435399+00:00"
+}
