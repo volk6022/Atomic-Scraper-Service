@@ -6,8 +6,8 @@ High-throughput atomic scraping and stateful interactive browser sessions with L
 
 - **Stateless Scraper**: Fast atomic scraping and Google search transformation (Serper-compatible).
 - **Stateful Sessions**: Interactive browser sessions via DSL over WebSockets with Taskiq Actors.
-- **AI Integration**: Omni-Parser for UI grounding (SoM approach) and Jina Reader for structured markdown extraction.
-- **Resource Management**: Automatic 10-minute inactivity timeout for stateful sessions.
+- **AI Integration**: Omni-Parser for UI grounding (SoM approach) and local HTML→Markdown conversion (`/html-to-md`).
+- **Resource Management**: Inactivity timeout for stateful sessions via `SESSION_INACTIVITY_TIMEOUT` (default 600 s; dev `docker-compose.override.yml` sets 1800 s).
 - **Modular Design**: Clean architecture with layers for API, Domain, Infrastructure, and Actions.
 - **Docker Production Ready**: Dockerfile with Playwright, docker-compose with api/worker/redis, health endpoint.
 - **Anti-Bot Evasion**: Stealth browser pool with User-Agent rotation, proxy integration, human-like interactions.
@@ -21,8 +21,8 @@ High-throughput atomic scraping and stateful interactive browser sessions with L
 - **Language**: Python 3.11+
 - **Framework**: FastAPI
 - **Async Logic**: Playwright, Taskiq (Redis Broker)
-- **AI Tools**: Flexible OpenAI-compatible configuration (LM Studio, OpenAI, etc.), Jina Reader V2, Omni-Parser
-- **Infrastructure**: Redis (Pub/Sub and Task Queue), Docker
+- **AI Tools**: Flexible OpenAI-compatible configuration (LM Studio, OpenAI, etc.) with two logical endpoints (`EXTRACTION_*` and `ORCHESTRATION_*`), Omni-Parser, optional Jina/Reader-LM as the extraction model.
+- **Infrastructure**: Redis (Pub/Sub, Taskiq broker and KV store), SearXNG (search backend), Docker
 
 ## [Project Structure](STRUCTURE.md)
 
@@ -63,7 +63,12 @@ EXTRACTION_MODEL_NAME=jina-reader-lm
 ORCHESTRATION_API_BASE=https://api.openai.com/v1
 ORCHESTRATION_API_KEY=sk-...
 ORCHESTRATION_MODEL_NAME=gpt-4o
+
+REDIS_URL=redis://localhost:6379/0     # Taskiq broker + pub/sub + KV
+SESSION_INACTIVITY_TIMEOUT=600         # seconds; dev override sets 1800
 ```
+
+Full settings list lives in `src/core/config.py` (`pydantic-settings`).
 
 ### Proxy Configuration (optional)
 
@@ -84,7 +89,8 @@ docker compose up -d
 
 # Check health
 curl http://localhost:8000/healthz
-# {"status":"healthy","redis":"connected","browser_pool":"ready"}
+# {"status":"healthy", "timestamp":"...", "services":{...}}
+# Note: handler always returns 200; the unhealthy/degraded → 503 branch is not implemented today.
 ```
 
 > `proxies.txt` is automatically bind-mounted into the container if it exists.
@@ -108,8 +114,21 @@ All endpoints except `/healthz` require the header `X-API-Key: <API_KEY>`.
 
 ```
 GET /healthz
-→ {"status": "healthy"|"degraded", "redis": "connected"|"error", "browser_pool": "ready"|"degraded"}
+→ 200 {"status": "healthy", "timestamp": "...", "services": {...}}
 ```
+
+Probes Redis ping + `pool_manager`. Currently always returns 200 (the 503/`degraded` branch documented in spec is not yet wired — see `docs/codebase-report/20-spec-vs-reality.md`, C-09).
+
+### Stateless Atomic Endpoints
+
+```
+POST /scraper      {"url": "...", ...}                   # Playwright one-shot page fetch
+POST /serper       {"q": "...", "num": 10}               # SERP via SearXNG (Serper-compatible shape)
+POST /omni-parse   {"base64_image": "...", "prompt": ""} # OmniParser vision call (via LLM facade)
+POST /html-to-md   {"html": "...", ...}                  # local HTML → Markdown / text
+```
+
+> The historical `/jina-extract` endpoint from earlier specs is **not implemented** — it was replaced by `/html-to-md` (local conversion via `content_cleaner`).
 
 ### Yandex Maps Extraction
 
@@ -145,9 +164,9 @@ Content is truncated to ≤ 500 words. Raw HTML is stripped.
 POST /api/v1/research/run
 {
   "query": "research topic",
-  "mode": "quick" | "balanced" | "deep"  // default: "balanced"
+  "mode": "speed" | "balanced" | "quality"   // default: "balanced"
 }
-→ {"task_id": "...", "status": "pending", "message": "Research task queued"}
+→ 202 {"task_id": "...", "status": "pending", "message": "Research task queued"}
 
 GET /api/v1/research/status/{task_id}
 → {"task_id": "...", "status": "completed"|"running"|"failed", "result": {...}, ...}

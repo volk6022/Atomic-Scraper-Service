@@ -101,7 +101,26 @@
       "Bash(python -c \"import json,sys; m=json.load\\(sys.stdin\\); print\\('uptime:', m['uptime_s']\\); print\\('pool:', m['pool']\\); print\\('probe:', m['probe']\\)\")",
       "Bash(git mv *)",
       "Bash(uv sync *)",
-      "Bash(git stash *)"
+      "Bash(git stash *)",
+      "Bash(ls docs/codebase-report)",
+      "Bash(mkdir -p docs/codebase-report)",
+      "Bash(cd C:/Users/bhunp/Documents/auto-monitor-ml-cv && uv run python tools/ask_local_llm.py --prompt \"Опиши LLMFacade: какие методы публичны, какие провайдеры за ним, как роутится extraction vs orchestration \\(через переменные EXTRACTION_API_BASE/MODEL_NAME и ORCHESTRATION_API_BASE/MODEL_NAME\\), какие prompts/system messages используются, как структурируется output \\(JSON/Pydantic\\), retry/timeout стратегия. Также опиши openai_client: что это за обёртка над OpenAI-compatible API, какие endpoints \\(chat/completions?\\), какие параметры \\(temperature, max_tokens\\), error handling.\" --max-tokens 6000 repos/Atomic-Scraper-Service/src/infrastructure/external_api/facade.py repos/Atomic-Scraper-Service/src/infrastructure/external_api/clients/openai_client.py repos/Atomic-Scraper-Service/src/infrastructure/external_api/clients/__init__.py repos/Atomic-Scraper-Service/src/infrastructure/external_api/__init__.py)",
+      "Bash(ls docs/)",
+      "Bash(kill -0 %bqlphkbm9)",
+      "Bash(pm2 list *)",
+      "Bash(findstr :6379)",
+      "Bash(netsh interface *)",
+      "Bash(findstr \"6379\")",
+      "Bash(docker rm *)",
+      "Bash(docker run *)",
+      "Bash(pm2 start *)",
+      "Bash(curl -s -m 5 http://localhost:8000/healthz)",
+      "Bash(pm2 logs *)",
+      "Bash(curl -s -m 10 http://localhost:8000/healthz)",
+      "Bash(findstr \"LISTENING\")",
+      "Bash(findstr \":8000\")",
+      "Bash(curl -sv -m 5 http://127.0.0.1:8000/healthz)",
+      "Bash(curl -s -m 5 http://127.0.0.1:8000/healthz)"
     ]
   }
 }

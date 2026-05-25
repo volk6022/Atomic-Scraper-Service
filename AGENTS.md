@@ -22,7 +22,7 @@ This document defines the agentic roles and coordination strategies for the Smar
 ## Coordination Protocol
 
 - **State Transitions**: Sessions transition from `STARTING` to `ACTIVE` upon WebSocket connection.
-- **Inactivity Monitoring**: A background cleanup worker monitors `last_active` timestamps and terminates idle sessions after 10 minutes.
+- **Inactivity Monitoring**: A background cleanup worker monitors `last_active` timestamps. `SESSION_INACTIVITY_TIMEOUT` is currently set to **1800 s** in `docker-compose.override.yml` (spec 009 FR-007 / constitution III still call for 600 s — known drift, see `docs/codebase-report/20-spec-vs-reality.md` C-03).
 - **Command Loop**:
     1. Client sends DSL Command via WebSocket.
     2. API Gateway publishes command to Redis.
@@ -54,27 +54,36 @@ Last updated: 2026-05-12
 ```text
 src/
 ├── api/
-│   ├── routers/           # stateless.py, sessions.py, health.py, yandex_maps.py, enrichment.py
-│   ├── middleware/        # rate_limit.py (per-domain token bucket), auth.py (X-API-Key)
+│   ├── routers/           # health.py, stateless.py, sessions.py, yandex_maps.py, enrichment.py, research.py
+│   ├── middleware/        # __init__.py, rate_limit.py (per-domain token bucket on Host header)
+│   ├── websockets/        # handler.py, manager.py (no auth on /ws/{session_id})
+│   ├── auth.py            # X-API-Key dependency (NOTE: lives directly in src/api/, not src/api/middleware/)
 │   └── main.py
 ├── domain/
-│   ├── models/            # requests.py, dsl.py, business_card.py, enriched_content.py
+│   ├── models/            # requests.py, dsl.py, enriched_content.py, errors.py,
+│   │                      # research.py, rate_limit_rule.py, yandex_organization.py, yandex_review.py
 │   ├── utils/             # content_cleaner.py
 │   └── registry/          # action_registry.py
 ├── infrastructure/
-│   ├── browser/           # pool_manager.py, stealth_pool.py, user_agent_pool.py, proxy_provider.py
+│   ├── browser/           # pool_manager.py, stealth_pool.py, user_agent_pool.py, proxy_provider.py, session_manager.py
 │   ├── rate_limiter/      # token_bucket.py
-│   └── external_api/      # facade.py, clients/
+│   ├── external_api/      # facade.py, searxng_client.py, clients/openai_client.py
+│   ├── queue/             # broker.py, session_actor.py, cleanup_worker.py, workers.py, research_task.py
+│   └── tasks/             # research_store.py
 ├── actions/
-│   ├── research/          # nodes.py, tools.py, modes.py, state.py, graph.py (LangGraph agent)
+│   ├── research/          # graph.py, nodes.py, tools.py, modes.py, state.py, llm_utils.py (LangGraph agent)
+│   ├── __init__.py        # side-effect imports of submodules to trigger registry decorators
 │   ├── navigation.py, interaction.py, extraction.py, yandex_maps.py, site_enricher.py
-└── core/                  # config.py, logging.py
+├── core/                  # config.py (pydantic-settings), logging.py (stdlib)
+└── mcp_server.py          # FastMCP stdio server exposing REST endpoints as MCP tools
 tests/
-├── unit/
-├── contract/
-├── integration/
-└── e2e/
+├── unit/                  # ~76 functions in 10 files (30 in research/)
+├── contract/              # 10 files, ~14 endpoints via ASGITransport
+├── integration/           # 11 files; structural + in-process FastAPI + fake-Playwright
+└── e2e/                   # 5 files / 23 tests; only 2 hit live localhost:8000
 ```
+
+NOTE: `src/actions/base.py` and `src/actions/ai_actions.py` are referenced in older `STRUCTURE.md` but do **not** exist — DSL actions are bare async functions, not classes (see `docs/codebase-report/07-actions-basic.md`). Likewise `jina_client.py`, `omni_client.py`, `business_card.py` referenced in legacy docs are absent.
 
 ## Commands
 
@@ -116,15 +125,22 @@ All protected endpoints require `X-API-Key: <API_KEY>` header. Default value: `d
 | Endpoint | Auth | Description |
 |----------|------|-------------|
 | `GET /healthz` | No | Health check (Redis + browser pool status) |
-| `POST /api/v1/yandex-maps/extract` | Yes | Extract business data from Yandex Maps |
+| `POST /scraper` | Yes | Atomic Playwright scrape via shared pool |
+| `POST /serper` | Yes | Serper-compatible search (backed by **SearXNG**, not Playwright→Google) |
+| `POST /omni-parse` | Yes | OmniParser UI grounding via LLMFacade |
+| `POST /html-to-md` | Yes | HTML → Markdown conversion (replaces legacy `/jina-extract`) |
+| `POST /api/v1/yandex-maps/extract` | Yes | Extract organizations from Yandex Maps |
+| `POST /api/v1/yandex-maps/reviews` | Yes | Fetch reviews for a Yandex business OID |
 | `POST /api/v1/enrich` | Yes | Extract clean text from company websites |
-| `POST /api/v1/research/run` | Yes | Start research task (LangGraph agent) |
+| `POST /api/v1/research/run` | Yes | Start research task (LangGraph agent), returns 202 |
 | `GET /api/v1/research/status/{task_id}` | Yes | Get research task status |
-| `GET /api/v1/research/stream/{task_id}` | Yes | Stream research progress (SSE) |
-| `POST /sessions` | Yes | Create browser session |
-| `POST /sessions/{id}/command` | Yes | Execute DSL command |
+| `GET /api/v1/research/stream/{task_id}` | Yes | SSE stream of research progress (`POLL_INTERVAL=2s`, `SSE_TIMEOUT=1800s`) |
+| `POST /sessions` | Yes | Create browser session (enqueues `run_session_actor.kiq`) |
+| `POST /sessions/{id}/command` | Yes | Publish DSL command on Redis `cmd:{id}`, wait ≤60 s on `res:{id}` |
 | `DELETE /sessions/{id}` | Yes | Delete browser session |
-| `WS /ws/{session_id}` | — | WebSocket for interactive sessions |
+| `WS /ws/{session_id}` | **none** | WebSocket bridge to Redis pub/sub — **no auth, no JSON validation** (see report 02 / C-06) |
+
+Notes: auth dependency raises `HTTP 403` (spec 011 expects 401 — drift C-07). Source: `docs/codebase-report/01-api-routers.md`.
 
 ## Proxy Configuration
 
