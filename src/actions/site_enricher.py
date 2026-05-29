@@ -11,7 +11,8 @@ from src.domain.utils.content_cleaner import (
     truncate_content,
 )
 from src.infrastructure.browser.user_agent_pool import UserAgentPool
-from src.infrastructure.browser.pool_manager import BrowserPoolManager
+from src.infrastructure.browser.pool_manager import pool_manager
+from src.infrastructure.browser.proxy_provider import proxy_provider
 from src.core.logging import get_logger
 
 logger = get_logger(__name__)
@@ -19,7 +20,7 @@ logger = get_logger(__name__)
 
 class SiteEnrichAction:
     def __init__(self):
-        self.pool_manager = BrowserPoolManager()
+        self.pool_manager = pool_manager
         self.user_agent_pool = UserAgentPool()
         self.max_words = 500
 
@@ -29,11 +30,19 @@ class SiteEnrichAction:
         crawl_about: bool = False,
         crawl_services: bool = False,
     ) -> EnrichedContent:
-        logger.info(f"Starting site enrichment for: {url}")
-
+        proxy = proxy_provider.get_proxy() or None
         user_agent = self.user_agent_pool.get_user_agent()
+        logger.info(
+            "Starting site enrichment for: %s (proxy=%s)",
+            url, proxy["server"] if proxy else None,
+        )
+
         context = await self.pool_manager.create_context(
-            user_agent=user_agent, stealth=True
+            user_agent=user_agent,
+            stealth=True,
+            proxy=proxy,
+            locale="ru-RU",
+            timezone_id="Europe/Moscow",
         )
 
         pages_crawled = [url]
@@ -42,7 +51,7 @@ class SiteEnrichAction:
         try:
             page = await context.new_page()
 
-            await page.goto(url, wait_until="networkidle", timeout=30000)
+            await page.goto(url, wait_until="domcontentloaded", timeout=15000)
             await asyncio.sleep(random.uniform(0.5, 1.5))
 
             main_content = await self._extract_main_content(page)
@@ -54,7 +63,7 @@ class SiteEnrichAction:
                 if about_url and about_url != url:
                     try:
                         await page.goto(
-                            about_url, wait_until="networkidle", timeout=15000
+                            about_url, wait_until="domcontentloaded", timeout=10000
                         )
                         await asyncio.sleep(random.uniform(0.3, 0.8))
                         about_content = await self._extract_main_content(page)
@@ -69,7 +78,7 @@ class SiteEnrichAction:
                 if services_url and services_url not in pages_crawled:
                     try:
                         await page.goto(
-                            services_url, wait_until="networkidle", timeout=15000
+                            services_url, wait_until="domcontentloaded", timeout=10000
                         )
                         await asyncio.sleep(random.uniform(0.3, 0.8))
                         services_content = await self._extract_main_content(page)

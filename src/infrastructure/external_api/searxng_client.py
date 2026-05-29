@@ -59,12 +59,16 @@ class SearXngSearchClient:
         self._min_organic = min_organic
         self._client = httpx.AsyncClient(timeout=timeout, headers=DEFAULT_HEADERS)
 
-    async def search(self, request: SearchRequest) -> SearchResponse:
+    async def search(
+        self,
+        request: SearchRequest,
+        language: str | None = None,
+    ) -> SearchResponse:
         last_err: Exception | None = None
         attempts = self._max_retries + 1  # 1 первая + N retry
         for attempt in range(1, attempts + 1):
             try:
-                organic = await self._fetch_once(request.q, request.num)
+                organic = await self._fetch_once(request.q, request.num, language)
                 if len(organic) >= self._min_organic:
                     logger.info(
                         "SearXNG search ok q=%r attempt=%d organic=%d",
@@ -99,11 +103,19 @@ class SearXngSearchClient:
             f"SearXNG search failed after {attempts} attempts: {last_err}"
         )
 
-    async def _fetch_once(self, query: str, num: int) -> list[SearchResult]:
+    async def _fetch_once(
+        self,
+        query: str,
+        num: int,
+        language: str | None = None,
+    ) -> list[SearchResult]:
         params: dict[str, Any] = {
             "q": query,
             "format": "json",
-            "language": "en",
+            # SearXNG accepts "all" or a BCP-47-ish code ("en", "ru", "ru-RU").
+            # We pass the bare base language ("ru" not "ru-RU") since SearXNG's
+            # engine map keys are short codes; "all" is the safe default.
+            "language": (language or "en").split("-")[0].lower() if language else "en",
         }
         resp = await self._client.get(f"{self._base_url}/search", params=params)
         if resp.status_code >= 400:

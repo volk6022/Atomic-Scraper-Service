@@ -132,23 +132,22 @@ class TestResearchStatusEndpoint:
                 "result": {
                     "query": "What is AI?",
                     "mode": "balanced",
-                    "answer_markdown": "AI is [1] artificial intelligence.",
-                    "citations": [
-                        {"url": "https://example.com", "title": "AI", "snippet": "..."}
+                    "answer_markdown": "AI is artificial intelligence.",
+                    "structured_output": None,
+                    "sources": [
+                        {"url": "https://example.com", "what_it_provided": "overview"}
                     ],
-                    "facts": [
-                        {
-                            "claim": "AI is intelligence",
-                            "confidence": 0.9,
-                            "source_url": "https://example.com",
-                        }
-                    ],
+                    "critic": {"score": 9.0, "verdict": "pass", "feedback": "ok"},
                     "stats": {
-                        "iterations": 5,
-                        "urls_visited": 12,
+                        "turns": 5,
+                        "tool_calls": {"web_serp": 3, "web_scrape": 4, "submit_answer": 1},
+                        "tokens": {"grand_total": 42000},
                         "elapsed_seconds": 184.5,
                         "mode_used": "balanced",
-                        "completed_normally": True,
+                        "submit_attempts": 1,
+                        "compactions": 0,
+                        "target_language": "en",
+                        "had_output_schema": False,
                     },
                 },
                 "created_at": "2026-05-11T12:00:00Z",
@@ -169,9 +168,10 @@ class TestResearchStatusEndpoint:
         assert data["status"] == "completed"
         assert "result" in data
         assert "answer_markdown" in data["result"]
-        assert "citations" in data["result"]
-        assert "facts" in data["result"]
+        assert "sources" in data["result"]
+        assert "critic" in data["result"]
         assert "stats" in data["result"]
+        assert data["result"]["stats"]["had_output_schema"] is False
 
     @pytest.mark.asyncio
     async def test_get_status_fake_id_returns_404(self, app_with_research):

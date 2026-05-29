@@ -1,4 +1,4 @@
-"""Taskiq task that executes the LangGraph research agent."""
+"""Taskiq task that executes the flat-loop research agent."""
 
 import logging
 from datetime import datetime, timezone
@@ -14,8 +14,7 @@ def _now_iso() -> str:
 
 @broker.task
 async def execute_research_task(task_id: str):
-    from src.actions.research.graph import build_graph
-    from src.actions.research.state import create_initial_state
+    from src.actions.research.agent import run_research
     from src.infrastructure.tasks.research_store import get_task, set_task
 
     logger.info("Starting research task: %s", task_id)
@@ -28,23 +27,22 @@ async def execute_research_task(task_id: str):
 
     mode = task_data.get("mode", "balanced")
     query = task_data.get("query", "")
+    target_language = task_data.get("language", "en")
+    output_schema = task_data.get("output_schema")
 
     try:
-        graph = build_graph(mode)
-        initial_state = create_initial_state(query, mode)
-
-        result = await graph.ainvoke(
-            initial_state, config={"configurable": {"thread_id": task_id}}
+        final_report = await run_research(
+            query,
+            mode=mode,
+            language=target_language,
+            output_schema=output_schema,
+            max_turns=task_data.get("max_iters"),
+            max_tokens=task_data.get("max_tokens"),
         )
-
-        final_report = result.get("final_report")
-        if not final_report:
-            raise RuntimeError("Graph finished without a final_report — writer_node bug?")
 
         set_task(task_id, {
             "status": "completed",
             "phase": "completed",
-            "iteration": result.get("iteration", 0),
             "result": final_report,
             "updated_at": _now_iso(),
         })

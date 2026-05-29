@@ -44,7 +44,7 @@ class BrowserPoolManager:
         self,
         proxy: Optional[str] = None,
         user_agent: Optional[str] = None,
-        stealth: bool = False,
+        stealth: bool = True,
         headless: bool = True,
         viewport: Optional[Dict[str, int]] = None,
         **kwargs,

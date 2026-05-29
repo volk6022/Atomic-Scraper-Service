@@ -1,56 +1,91 @@
-"""Domain models for Research Agent feature"""
+"""Domain models for the Research Agent feature.
 
-from typing import Literal, Optional
-from pydantic import BaseModel, Field, HttpUrl
+The output side (``ResearchReport`` / ``Source`` / ``ResearchStats``) mirrors the
+flat-loop agent in ``src/actions/research/agent.py``. ``ResearchRequest`` is kept
+generic — schemas and language are caller-supplied, the service stays domain-free.
+"""
+
+from typing import Any, Literal, Optional
+
+from pydantic import BaseModel, Field
 
 
 ResearchMode = Literal["speed", "balanced", "quality"]
 
 
-class Citation(BaseModel):
-    """A cited source in the research report"""
+class Source(BaseModel):
+    """A source the agent actually fetched.
 
-    url: HttpUrl
-    title: str
-    snippet: str
+    ``url`` is a plain string (not ``HttpUrl``) on purpose — real-world URLs the
+    agent scrapes are sometimes imperfect (trailing junk, IDN, ``yandex.ru/maps``
+    fragments) and we do not want pydantic validation to drop an otherwise-valid
+    citation.
+    """
 
-
-class Fact(BaseModel):
-    """An extracted factual claim from a source"""
-
-    claim: str
-    source_url: HttpUrl
-    confidence: float = Field(ge=0.0, le=1.0)
+    url: str
+    what_it_provided: str = ""
 
 
 class ResearchStats(BaseModel):
-    """Execution statistics for a research task"""
+    """Execution statistics for a research run."""
 
-    iterations: int
-    urls_visited: int
-    elapsed_seconds: float
-    mode_used: str
-    beast_mode_triggered: bool = False
+    turns: int = 0
+    tool_calls: dict[str, int] = Field(default_factory=dict)
+    tokens: dict[str, Any] = Field(default_factory=dict)
+    elapsed_seconds: float = 0.0
+    mode_used: str = "balanced"
+    submit_attempts: int = 0
+    compactions: int = 0
+    target_language: Optional[str] = None
+    had_output_schema: bool = False
 
 
 class ResearchReport(BaseModel):
-    """The final research report output"""
+    """The final research report.
+
+    Exactly one of ``answer_markdown`` (free-form mode) or ``structured_output``
+    (schema mode) carries the payload; the other stays at its empty default.
+    """
 
     query: str
     mode: str
-    answer_markdown: str
-    citations: list[Citation] = Field(default_factory=list)
-    facts: list[Fact] = Field(default_factory=list)
+    answer_markdown: str = ""
+    structured_output: Optional[dict[str, Any]] = None
+    sources: list[Source] = Field(default_factory=list)
+    critic: Optional[dict[str, Any]] = None
     stats: ResearchStats
+    # Compact slice of the internal trace for debugging UI.
+    trace_summary: Optional[dict[str, Any]] = None
 
 
 class ResearchRequest(BaseModel):
-    """User request to start a research task"""
+    """User request to start a research task.
 
-    query: str = Field(..., min_length=3, max_length=2000)
+    ``output_schema`` lets callers ask the agent to fill a domain-specific JSON
+    Schema rather than produce free-form markdown. The ``/research`` endpoint
+    stays generic — schemas live in the caller, not the service.
+
+    ``language`` is a BCP-47-ish code propagated into:
+        - the agent's prompts (write queries / answers in this language)
+        - SearXNG's ``language`` parameter (biases SERP toward that language)
+    """
+
+    # Phase 6: caller can inject context (e.g. Yandex.Maps reviews snippets) into
+    # the query — raised from 2000 → 8000 chars to fit a small review block.
+    query: str = Field(..., min_length=3, max_length=8000)
     mode: ResearchMode = "balanced"
     max_iters: Optional[int] = Field(default=None, ge=1, le=50)
     max_tokens: Optional[int] = Field(default=None, ge=1000, le=2_000_000)
+    output_schema: Optional[dict[str, Any]] = Field(
+        default=None,
+        description="Optional JSON Schema for structured-output mode.",
+    )
+    language: str = Field(
+        default="en",
+        min_length=2,
+        max_length=10,
+        description="BCP-47 language code (e.g. 'ru', 'en'). Routed into prompts + SearXNG.",
+    )
 
 
 class ResearchTaskStatus(BaseModel):

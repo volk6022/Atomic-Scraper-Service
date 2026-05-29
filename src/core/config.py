@@ -40,6 +40,26 @@ class Settings(BaseSettings):
     SEARXNG_RETRY_DELAY: float = 0.5
     SEARXNG_MIN_ORGANIC: int = 1        # минимум organic для счёта «успех» (иначе retry)
 
+    # Research Agent (flat-loop, simple_agent_v2.1 port)
+    # Defaults mirror the production v2.1 values from the batch run. Tunable via .env.
+    RESEARCH_COMPACT_TRIGGER_TOKENS: int = 50_000   # auto-compaction trigger (отд. от mode token_budget)
+    RESEARCH_MAX_COMPACTIONS: int = 3
+    RESEARCH_SOFT_ELIDE_AFTER_TURNS: int = 4
+    RESEARCH_REFRASER_EVERY_N_SERPS: int = 15
+    RESEARCH_DOMAIN_FAIL_THRESHOLD: int = 3
+    RESEARCH_LLM_TIMEOUT_S: float = 180.0
+    RESEARCH_SCRAPE_BUDGET_CHARS: int = 3500
+    RESEARCH_CRITIC_PASS_SCORE: float = 8.5
+    RESEARCH_MAX_SUBMIT_REJECTS: int = 2
+    RESEARCH_DEFAULT_LANGUAGE: str = "ru"
+    RESEARCH_DEFAULT_SERP_K: int = 6
+    # CSV of domains never auto-blocked even after repeated scrape failures (key infra).
+    RESEARCH_DOMAINS_NEVER_BLOCK: str = (
+        "yandex.ru,yandex.com,2gis.ru,hh.ru,spb.hh.ru,superjob.ru,vk.com,"
+        "t.me,telegram.me,rusprofile.ru,fparf.ru,checko.ru,zoon.ru"
+    )
+    RESEARCH_PROMPTS_PATH: str = "src/actions/research/research_agent_prompts.yaml"
+
     model_config = SettingsConfigDict(env_file=".env")
 
 

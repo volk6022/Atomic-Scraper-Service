@@ -65,6 +65,8 @@ async def run_research(
         "task_id": task_id,
         "query": request.query,
         "mode": request.mode,
+        "language": request.language,
+        "output_schema": request.output_schema,
         "status": "running",
         "phase": "starting",
         "iteration": 0,

@@ -30,7 +30,7 @@ from src.domain.models.dsl import CommandType
 from src.domain.models.yandex_organization import YandexOrganization
 from src.domain.models.yandex_review import YandexReview
 from src.domain.registry.action_registry import action_registry
-from src.infrastructure.browser.pool_manager import BrowserPoolManager
+from src.infrastructure.browser.pool_manager import pool_manager
 from src.infrastructure.browser.proxy_provider import proxy_provider
 from src.infrastructure.browser.user_agent_pool import UserAgentPool
 
@@ -96,7 +96,7 @@ class YandexMapsExtractAction:
     """Discovery: text-query search inside a region → list[YandexOrganization]."""
 
     def __init__(self) -> None:
-        self.pool_manager = BrowserPoolManager()
+        self.pool_manager = pool_manager
         self.user_agent_pool = UserAgentPool()
         self.scroll_limit = 25
         self.scroll_pause_ms = 900
@@ -267,7 +267,7 @@ class YandexMapsReviewsAction:
     """Reviews: observe `fetchReviews` URL, replay via same browser session."""
 
     def __init__(self) -> None:
-        self.pool_manager = BrowserPoolManager()
+        self.pool_manager = pool_manager
         self.user_agent_pool = UserAgentPool()
         self.scroll_iterations = 5
         self.scroll_pause_ms = 1200
