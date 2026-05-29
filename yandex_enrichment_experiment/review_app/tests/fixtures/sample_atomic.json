@@ -1,0 +1,94 @@
+{
+  "oid": "1000341388",
+  "title": "Адвокат Фремм",
+  "task_id": "1f3a9b2c-4d5e-6f7g-8h9i-0j1k2l3m4n5o",
+  "query": "Организация: Адвокат Фремм. категории: Адвокаты, юридические услуги, бухгалтерские услуги",
+  "elapsed_s": 285.3,
+  "status": "completed",
+  "created_at": "2026-05-30T10:00:00Z",
+  "updated_at": "2026-05-30T10:04:45Z",
+  "progress": null,
+  "result": {
+    "query": "Организация: Адвокат Фремм. категории: Адвокаты, юридические услуги, бухгалтерские услуги",
+    "mode": "quality",
+    "answer_markdown": "",
+    "structured_output": {
+      "what_they_do": "Юридическая фирма",
+      "scale_indicators": [
+        "с 1993 года"
+      ],
+      "tech_stack": [],
+      "vacancies": [],
+      "social": {
+        "vk": [
+          "https://vk.com/abfremm"
+        ],
+        "telegram": [],
+        "instagram": [],
+        "youtube": [],
+        "linkedin": [],
+        "habr": []
+      },
+      "contacts": {
+        "phones": [
+          {
+            "number": "+7 (812) 575-80-80",
+            "context": "Я.Карты"
+          }
+        ],
+        "emails": [],
+        "websites": [
+          "https://www.fremm.ru/"
+        ]
+      },
+      "yandex_maps": {
+        "rating": 4.9,
+        "reviews_count": 20,
+        "reviews_sample": [],
+        "hours": ""
+      },
+      "problems_signals": [],
+      "sources": [
+        {
+          "url": "https://www.fremm.ru/",
+          "what_it_provided": "сайт"
+        }
+      ]
+    },
+    "sources": [
+      {
+        "url": "https://www.fremm.ru/",
+        "what_it_provided": "сайт"
+      }
+    ],
+    "critic": {
+      "score": 9.0,
+      "verdict": "pass",
+      "missing": [],
+      "wrong": [],
+      "feedback": "OK"
+    },
+    "stats": {
+      "turns": 8,
+      "tool_calls": {
+        "web_serp": 5,
+        "web_scrape": 7,
+        "submit": 1
+      },
+      "tokens": {
+        "prompt": 50000,
+        "completion": 3000,
+        "grand_total": 53000
+      },
+      "elapsed_seconds": 285.3,
+      "mode_used": "quality",
+      "submit_attempts": 1,
+      "compactions": 0,
+      "target_language": "ru",
+      "had_output_schema": true
+    },
+    "trace_summary": {
+      "iterations": 8
+    }
+  }
+}
