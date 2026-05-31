@@ -41,13 +41,11 @@ This document defines the agentic roles and coordination strategies for the Smar
 Last updated: 2026-05-12
 
 ## Active Technologies
-- Python 3.12 + FastAPI, Taskiq, Playwright, Redis, Pydantic v2, LangGraph, LangChain (011-auto-research-agent)
-- Redis (task queues), in-memory with 24-hour retention (per spec) (011-auto-research-agent)
-- Python 3.12 + FastAPI, Playwright, Taskiq, Redis, Pydantic v2, httpx, LangGraph, LangChain (013-fix-impl)
-- Redis (task queues), in-memory task store (24h retention) (013-fix-impl)
-
-- Python 3.12, FastAPI, Taskiq (Redis broker), Playwright, Redis, Pydantic v2, OpenAI-compatible API, HTTPX
+- Python 3.12, FastAPI, Taskiq (Redis broker), Playwright, Redis, Pydantic v2, httpx, OpenAI-compatible API, PyYAML
 - `uv` for dependency management and running scripts
+- Research agent: flat tool-calling loop (`openai.AsyncOpenAI.chat.completions` with `tool_choice="auto"`), no LangGraph
+- LangGraph / LangChain dependencies remain in `pyproject.toml` for now but are unused by the research subsystem
+- Redis (task queue + KV) with 24h retention; mapped to host port **16379** by docker-compose to keep the dev port from clashing with other local Redis instances
 
 ## Project Structure
 
@@ -71,7 +69,8 @@ src/
 │   ├── queue/             # broker.py, session_actor.py, cleanup_worker.py, workers.py, research_task.py
 │   └── tasks/             # research_store.py
 ├── actions/
-│   ├── research/          # graph.py, nodes.py, tools.py, modes.py, state.py, llm_utils.py (LangGraph agent)
+│   ├── research/          # agent.py (run_research, flat loop), tools.py, modes.py,
+│   │                      # research_agent_prompts.yaml (all prompts), llm_utils.py
 │   ├── __init__.py        # side-effect imports of submodules to trigger registry decorators
 │   ├── navigation.py, interaction.py, extraction.py, yandex_maps.py, site_enricher.py
 ├── core/                  # config.py (pydantic-settings), logging.py (stdlib)
@@ -132,7 +131,7 @@ All protected endpoints require `X-API-Key: <API_KEY>` header. Default value: `d
 | `POST /api/v1/yandex-maps/extract` | Yes | Extract organizations from Yandex Maps |
 | `POST /api/v1/yandex-maps/reviews` | Yes | Fetch reviews for a Yandex business OID |
 | `POST /api/v1/enrich` | Yes | Extract clean text from company websites |
-| `POST /api/v1/research/run` | Yes | Start research task (LangGraph agent), returns 202 |
+| `POST /api/v1/research/run` | Yes | Start research task (flat-loop agent), returns 202; body supports `query`, `mode`, `language`, optional `output_schema`, `max_iters`, `max_tokens` |
 | `GET /api/v1/research/status/{task_id}` | Yes | Get research task status |
 | `GET /api/v1/research/stream/{task_id}` | Yes | SSE stream of research progress (`POLL_INTERVAL=2s`, `SSE_TIMEOUT=1800s`) |
 | `POST /sessions` | Yes | Create browser session (enqueues `run_session_actor.kiq`) |
@@ -190,8 +189,20 @@ Register new actions in two places:
 The 2 live E2E tests (`test_enrichment_returns_clean_text`, `test_yandex_maps_endpoint_returns_businesses`) require `docker compose up`. The Yandex Maps test validates the API stack and response schema — actual businesses require residential proxies.
 
 ## Recent Changes
-- 013-fix-impl: Added Python 3.12 + FastAPI, Playwright, Taskiq, Redis, Pydantic v2, httpx, LangGraph, LangChain
-- 011-auto-research-agent: Added Python 3.12 + FastAPI, Taskiq, Playwright, Redis, Pydantic v2, LangGraph, LangChain
+
+### 2026-05-29 — Research Agent rewrite
+- Replaced the 9-node LangGraph research agent (`graph.py`/`nodes.py`/`state.py`,
+  removed) with a flat tool-calling loop in `src/actions/research/agent.py:run_research`.
+- Two output modes: free-form markdown (`submit_answer`) or caller-supplied JSON
+  Schema (`submit_result`). Critic-gate on submit (`RESEARCH_CRITIC_PASS_SCORE`,
+  default 8.5), force-accept after `RESEARCH_MAX_SUBMIT_REJECTS` (default 2).
+- All numeric knobs moved into `Settings.RESEARCH_*` (env-overridable); all prompts
+  into `src/actions/research/research_agent_prompts.yaml`.
+- `ResearchReport` redesigned: `answer_markdown`, `structured_output`, `sources`,
+  `critic`, expanded `ResearchStats`. `Citation`/`Fact` removed.
+- `tools.py` stripped of `@tool` decorator + `extract_facts*` helpers.
+- `OpenAICompatibleClient` gained multi-turn `chat()` method.
+- Docker-compose Redis now maps **host port 16379** to match `.env`.
 
 ### 2026-05-07
 - Fixed `Dockerfile`: `playwright install` → `uv run playwright install --with-deps chromium`

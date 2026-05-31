@@ -22,7 +22,7 @@ It is the bridge that lets an LLM client drive both stateless one-shot endpoints
 | `jina_extract` | `html, extraction_schema=None` | `POST /jina-extract` | HTML→JSON via Jina/Reader |
 | `yandex_maps_extract` | `category, lat, lng, radius=1000` | `POST /api/v1/yandex-maps/extract` | data-extraction pipeline |
 | `enrich_website` | `url, crawl_about=False, crawl_services=False` | `POST /api/v1/enrich` | site enrichment |
-| `research_run` | `query, mode="balanced"` | `POST /api/v1/research/run` | spawns LangGraph research task |
+| `research_run` | `query, mode="balanced"` | `POST /api/v1/research/run` | enqueues a flat-loop research task (`run_research`); the underlying `/research/run` body also accepts `language`, `output_schema`, `max_iters`, `max_tokens`, but the current MCP wrapper does not forward them |
 | `research_status` | `task_id` | `GET /api/v1/research/status/{id}` | poll |
 | `research_stream` | `task_id` | `GET /api/v1/research/stream/{id}` | SSE/streaming endpoint |
 | `create_session` | — | `POST /sessions` | returns `session_id` to client |
@@ -64,7 +64,7 @@ flowchart LR
     Mcp -- httpx + X-API-Key --> Api[FastAPI /api/* and /sessions/*]
     Api --> Routers[routers: scraper / serper / sessions / research / enrich]
     Routers --> Actions[actions + browser pool]
-    Routers --> Research[research LangGraph]
+    Routers --> Research[research flat-loop agent<br/>run_research]
 
     subgraph helpers[Root helpers - Windows]
         Kill[kill_mcp.py - wmic taskkill]

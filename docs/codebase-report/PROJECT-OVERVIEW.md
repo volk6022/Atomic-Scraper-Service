@@ -5,7 +5,7 @@
 
 ## 1. Что это за сервис
 
-Backend-сервис для веб-скрейпинга и автономного research'а. Построен на FastAPI + Playwright + Redis (Taskiq) и реализует **два контекста** (constitution I): **stateless** — атомарные HTTP-эндпоинты, использующие общий браузерный пул и возвращающие результат синхронно; и **stateful** — долгоживущие интерактивные DSL-сессии (`POST /sessions` + WebSocket / Redis pub/sub), где каждый `session_id` обслуживается отдельным Taskiq-актёром с собственным Playwright-контекстом. Поверх скрейпинговых примитивов поднят **LangGraph Research Agent** (9 нод, режимы speed/balanced/quality), доступный через `POST /api/v1/research/run`. Параллельно живёт MCP-сервер (`src/mcp_server.py` на FastMCP, stdio), который экспонирует все REST-эндпоинты как MCP-tools для Claude Desktop / OpenCode.
+Backend-сервис для веб-скрейпинга и автономного research'а. Построен на FastAPI + Playwright + Redis (Taskiq) и реализует **два контекста** (constitution I): **stateless** — атомарные HTTP-эндпоинты, использующие общий браузерный пул и возвращающие результат синхронно; и **stateful** — долгоживущие интерактивные DSL-сессии (`POST /sessions` + WebSocket / Redis pub/sub), где каждый `session_id` обслуживается отдельным Taskiq-актёром с собственным Playwright-контекстом. Поверх скрейпинговых примитивов поднят **Research Agent** (`src/actions/research/agent.py:run_research`) — плоский tool-calling loop (`chat.completions` с `tool_choice="auto"`, три тулзы: `web_serp`/`web_scrape`/динамический submit), с critic-gate на сабмите и двумя режимами вывода (free-form markdown или caller-supplied JSON Schema). Доступен через `POST /api/v1/research/run`. Параллельно живёт MCP-сервер (`src/mcp_server.py` на FastMCP, stdio), который экспонирует все REST-эндпоинты как MCP-tools для Claude Desktop / OpenCode.
 
 ## 2. Слои и их ответственность
 
@@ -13,7 +13,7 @@ Clean Architecture с однонаправленной зависимостью 
 
 - **API** (`src/api/`) — `routers/` (7 HTTP + WS handler), `middleware/rate_limit.py`, `auth.py`, `main.py` (FastAPI app + lifespan). Тонкий слой: парсинг Pydantic, делегирование в Actions / Infra, ставит задачи в Taskiq. → см. `01-api-routers.md`, `02-api-websockets.md`, `03-api-middleware.md`, `04-api-bootstrap.md`.
 - **Domain** (`src/domain/`) — `models/` (Pydantic-DTO для REST + DSL + Research + Yandex), `registry/action_registry.py` (singleton map `CommandType → Callable`), `utils/content_cleaner.py` (HTML→text + truncation на 500 слов для FR-007). → см. `05-domain-models.md`, `06-domain-utils-registry.md`.
-- **Actions** (`src/actions/`) — async-функции-handlers DSL (navigation/interaction/extraction), плюс вертикальные actions `yandex_maps.py` и `site_enricher.py`, плюс подсистема `research/` (graph, nodes, modes, state, tools). → см. `07-actions-basic.md`, `08-actions-extractors.md`, `13-15-research-*.md`.
+- **Actions** (`src/actions/`) — async-функции-handlers DSL (navigation/interaction/extraction), плюс вертикальные actions `yandex_maps.py` и `site_enricher.py`, плюс подсистема `research/` (`agent.py` — flat-loop `run_research`, `tools.py` — `web_search`/`scrape_url`, `modes.py`, `research_agent_prompts.yaml`, `llm_utils.py`). → см. `07-actions-basic.md`, `08-actions-extractors.md`, `13-research-graph-state.md`, `14-research-nodes.md` (deprecated stub), `15-research-tools.md`.
 - **Infrastructure** (`src/infrastructure/`) — `browser/` (Playwright pool, stealth, proxy, UA, session_manager), `external_api/` (`LLMFacade` + OpenAI-compatible client + SearXNG client), `queue/` (Taskiq broker, session_actor, cleanup_worker, research_task), `rate_limiter/token_bucket.py` (fixed-window на Redis), `tasks/research_store.py`. → см. `09-infra-browser.md`, `10-infra-external-api.md`, `11-infra-queue.md`, `12-infra-rate-limit-core.md`.
 - **Core** (`src/core/`) — `config.py` (`pydantic-settings`, читает `.env`) и `logging.py` (stdlib `logging`, без structlog). → см. `12-infra-rate-limit-core.md`.
 
@@ -37,9 +37,9 @@ Clean Architecture с однонаправленной зависимостью 
 | `EnrichedContent` | `src/domain/models/enriched_content.py` | `SiteEnrichAction`; валидатор `word_count <= 600` |
 | `Command` / `CommandType` / `InteractiveSession` | `src/domain/models/dsl.py` | WS handler, `session_actor`, `action_registry` |
 | `RateLimitRule` | `src/domain/models/rate_limit_rule.py` | `RateLimitMiddleware`, `TokenBucket` |
-| `ResearchRequest` / `ResearchReport` / `Citation` / `Fact` / `ResearchStats` | `src/domain/models/research.py` | `/api/v1/research/*`, research_task, writer_node |
+| `ResearchRequest` / `ResearchReport` / `Source` / `ResearchStats` | `src/domain/models/research.py` | `/api/v1/research/*`, `research_task`, `run_research` |
 | `ResearchTaskStatus` / `ResearchTaskCreateResponse` | `src/domain/models/research.py` | `/api/v1/research/run|status` |
-| `ResearchState` (TypedDict) | `src/actions/research/state.py` | LangGraph state channel (не в `domain/`) |
+| `AgentState` (dataclass, local) | `src/actions/research/agent.py` | внутри одного вызова `run_research`; не persisted, не Pydantic |
 | `RedisUnavailableError` | `src/domain/models/errors.py` | sessions router, WS manager |
 
 Источник — `05-domain-models.md`. Отсутствуют упомянутые в `STRUCTURE.md` `business_card.py` и в `013-fix-impl/data-model.md` `LLMExtractRequest` (см. отчёт 20, C-05/M-11).
@@ -162,29 +162,45 @@ flowchart LR
 
 Из отчёта 11: воркер-команда в `ecosystem.config.js` (PM2) грузит `broker + workers + session_actor + cleanup_worker + research_task`. `docker-compose.override.yml` грузит `session_actor + cleanup_worker + workers`. Базовый `docker-compose.yml` ссылается на несуществующий `src.infrastructure.queue.tasks` — расхождение (отчёт 20, C-08). Redis выполняет одновременно три роли (Taskiq backend, pub/sub, KV store), общий URL, без namespacing.
 
-## 8. Research Agent (LangGraph)
+## 8. Research Agent (flat tool-calling loop)
+
+> Заменил LangGraph-реализацию 2026-05-29. Подробности — отчёты
+> `13-research-graph-state.md` (актуальная архитектура), `14-research-nodes.md`
+> (заглушка с описанием того, что было), `15-research-tools.md` (две тулзы).
 
 ```mermaid
-stateDiagram-v2
-    [*] --> classify
-    classify --> plan
-    plan --> search
-    search --> rank_dedupe
-    rank_dedupe --> scrape
-    scrape --> extract_facts
-    extract_facts --> reflect
-    reflect --> plan: should_continue=true (gaps>0 AND iter<max AND stall<2 AND !beast_mode)
-    reflect --> answer: should_continue=false (beast_mode OR iter>=max OR stall>=2 OR gaps==0)
-    answer --> writer
-    writer --> [*]
+flowchart TD
+    Start([POST /api/v1/research/run]) --> Queue[Taskiq → execute_research_task]
+    Queue --> Run[run_research query, mode, language,<br/>output_schema, max_turns, max_tokens]
+    Run --> Loop{turn ≤ max_turns<br/>and elapsed ≤ deadline?}
+    Loop -- no --> Force[force-accept last proposed<br/>or honest empty]
+    Loop -- yes --> Chat[client.chat<br/>tool_choice=auto<br/>tools: web_serp, web_scrape, submit_*]
+    Chat --> Big{prompt_tokens ≥<br/>COMPACT_TRIGGER?}
+    Big -- yes --> Compact[compact_context]
+    Compact --> Loop
+    Big -- no --> Disp{tool call name?}
+    Disp -- web_serp --> WS[tools.web_search SearXNG<br/>+ optional refraser<br/>+ _blocked_domains]
+    Disp -- web_scrape --> Scrape[tools.scrape_url SiteEnrichAction<br/>+ goal_conditioned_extract]
+    Disp -- submit_* --> Critic[critic_call → score/verdict]
+    Critic -->|pass / force_accept| Done[accepted = true]
+    Critic -->|reject| Refr[refraser_call → new angles]
+    WS --> Loop
+    Scrape --> Loop
+    Refr --> Loop
+    Done --> Report[ResearchReport-shaped dict → Redis store]
+    Force --> Report
 ```
 
-Из отчётов 13/14/15:
-- 9 нод (`classify, plan, search, rank_dedupe, scrape, extract_facts, reflect, answer, writer`) в `src/actions/research/nodes.py`, граф собирается в `graph.py` с `MemorySaver()` (пересоздаётся на каждый `build_graph()` — checkpoints не переживают рестарт воркера, M-14).
-- 3 режима (`modes.py`): `speed` (max_iters=2, search_k=3, token_budget=30K, deadline=120 s), `balanced` (6/5/100K/300 s), `quality` (25/8/1M/1200 s).
-- Hard loop-safety триггеры конституции X(b): **3 из 4 реально работают** — deadline (`time.time() > deadline_ts`), stall (`stall_counter >= 2`), iteration cap (`iteration >= max_iters`). **`tokens_used` нигде не инкрементируется** → 85%-token-budget beast-mode мёртв (отчёт 20, C-02).
-- Tools (constitution X(c), PASS): `web_search` → SearXNG singleton, `scrape_url` → прямой вызов `SiteEnrichAction().execute()` (минует API-middleware), `extract_facts` (regex fallback) + `extract_facts_llm` (LLM helper, не `@tool`).
-- LLM — `get_orchestration_client()` (LM Studio, `qwen3.5-9b-claude-4.6-opus-reasoning-distilled`), `strip_reasoning` + `extract_json` для парсинга `<think>`-блоков.
+Ключевые точки (отчёты 13/15):
+- Один процессный цикл, не граф. На каждом ходу модель сама решает, какую тулзу позвать, через `tool_choice="auto"`. Никаких `MemorySaver`, нод и роутера.
+- **Два режима вывода** через динамически собираемую терминальную тулзу: `submit_answer(answer, sources)` → `answer_markdown`, либо `submit_result(result, sources)` где `result` ограничен caller'ской JSON Schema → `structured_output`.
+- **Critic-gate**: на каждом сабмите ауxiliary LLM ставит балл и `verdict`; при `score < RESEARCH_CRITIC_PASS_SCORE` (по умолчанию 8.5) сабмит отбрасывается, агенту возвращается feedback + новые угол поиска от refraser'а. После `RESEARCH_MAX_SUBMIT_REJECTS` (по умолчанию 2) следующий сабмит force-accept'ится.
+- **Hygiene**: `soft_elide` (старые `web_scrape` tool-results заменяются маркером после N ходов), `compact_context` (триггер по `RESEARCH_COMPACT_TRIGGER_TOKENS=50k`, до `RESEARCH_MAX_COMPACTIONS=3` сжатий), `goal_conditioned_extract` (regex-трим скрапа до `RESEARCH_SCRAPE_BUDGET_CHARS=3500` вокруг ключевых слов запроса/схемы и контактных regex).
+- **Loop-safety**: `max_turns` (per-mode preset + caller override), wall-clock `deadline`, кумулятивный `token_budget` (prompt + completion), domain-fail tracking с whitelist `RESEARCH_DOMAINS_NEVER_BLOCK`.
+- **3 режима** (`modes.py`): `speed` (`max_turns=8`, `search_k=3`, `token_budget=30K`, `deadline=120s`), `balanced` (15/5/100K/300s), `quality` (25/8/1M/1200s).
+- **Все константы** — в `Settings.RESEARCH_*` (env-overridable), **все промпты** — в `src/actions/research/research_agent_prompts.yaml`. Ни одной hardcoded-цифры или строки промпта в `agent.py`.
+- LLM — `get_orchestration_client()` → `OpenAICompatibleClient.chat()` (метод добавлен 2026-05-29; multi-turn, с `tools`/`tool_choice`/`timeout`). По умолчанию `qwen3.5-9b-claude-4.6-opus-reasoning-distilled` через локальный llama-server.
+- Tools (constitution X(c), PASS): `web_search` → SearXNG singleton (language-aware), `scrape_url` → прямой `SiteEnrichAction().execute()` (минует API-middleware). `extract_facts*` удалены вместе с LangGraph-нодами.
 
 ## 9. Внешние зависимости
 
@@ -200,7 +216,7 @@ stateDiagram-v2
 
 - **unit/** — ~76 функций в 10 файлах. Основная масса (~30) на `research/*` (`test_nodes.py`, `test_modes.py`, `test_state_transitions.py`). Покрыты: `ActionRegistry`/`CommandType`, `content_cleaner`, `RateLimitRule`/middleware shape, `StealthPool`/`UserAgentPool` (только existence), `LLMFacade` ABC, session cleanup. Глубокие пробелы: WebSocket-хендлер, `extraction.py`/`interaction.py`/`yandex_maps.py`/`site_enricher.py`, `pool_manager`, `proxy_provider`, `tools.py`, MCP-сервер. Глобальный `tests/conftest.py` мокает Redis autouse.
 - **contract/** — 10 файлов, ~14 эндпоинтов через `httpx.AsyncClient + ASGITransport`. Все защищённые эндпоинты покрыты на 200/403/422 + критичные ветки (503 на Redis-fail, 429 для research, captcha 503 для Yandex). **WS `/ws/{session_id}` не покрыт**. Пути контракт-тестов соответствуют коду, а не спекам 010 (`/api/v1/yandex-maps/extract` vs spec `/scrape/yandex-maps`).
-- **integration/** — 11 файлов. Структурные (`test_docker_compose.py` парсит YAML), in-process FastAPI (`test_auth.py`, `test_session_redis_failure.py`), fake-Playwright (`test_proxy_integration.py`, `test_yandex_extraction.py`), `LangGraph build` (`test_research_graph.py`). Реальный Playwright не запускается ни в одном.
+- **integration/** — 11 файлов. Структурные (`test_docker_compose.py` парсит YAML), in-process FastAPI (`test_auth.py`, `test_session_redis_failure.py`), fake-Playwright (`test_proxy_integration.py`, `test_yandex_extraction.py`), flat-loop research-agent smoke (`test_research_agent.py` — заменил `test_research_graph.py` 2026-05-29). Реальный Playwright не запускается ни в одном.
 - **e2e/** — 5 файлов, всего 23 теста. Из них **только 2 реально стучатся в `localhost:8000`**: `test_site_enrichment_flow::test_enrichment_returns_clean_text` и `test_yandex_maps_full_flow::test_yandex_maps_endpoint_returns_businesses` (последний требует residential-proxy в `proxies.txt`). Остальные — ASGITransport in-process.
 - **MCP-сервер** — тестов нет вообще.
 
@@ -209,7 +225,7 @@ stateDiagram-v2
 **Из `20-spec-vs-reality.md`**: 9 CRITICAL, 16 MAJOR, 17 MINOR, 6 INFO. Хедлайны:
 
 1. **C-01 Rate-limit middleware ключуется по `Host` входящего запроса** → правило `*.yandex.*` никогда не матчится против целевого URL из тела запроса. FR-009/SC-005 не работают в проде.
-2. **C-02 `tokens_used` никогда не инкрементируется** → 85%-token-budget beast-mode мёртв; 1 из 4 hard-constraints конституции X(b) — dead code.
+2. ~~**C-02 `tokens_used` никогда не инкрементируется** → 85%-token-budget beast-mode мёртв; 1 из 4 hard-constraints конституции X(b) — dead code.~~ **Снят 2026-05-29**: вместе с LangGraph-агентом удалён и сам `tokens_used`/`beast_mode`. Новый flat-loop агент агрегирует `prompt_tokens`+`completion_tokens` через `OpenAICompatibleClient.chat().usage` и инфорсит кумулятивный `preset.token_budget` как hard wall в основном цикле (доп. см. отчёт 13). Loop-safety: deadline + max_turns + token_budget + critic-gate.
 3. **C-03 `SESSION_INACTIVITY_TIMEOUT=1800`** в `docker-compose.override.yml` vs 600 s в spec 009 FR-007 / конституции III / AGENTS.md.
 4. **C-04 `/serper` — это SearXNG, не Playwright→Google**; spec 013 FR-001/FR-002 устарел.
 5. **C-05 `/jina-extract` удалён**, заменён на `/html-to-md`. MCP-tool `jina_extract` и `session_extract_jina` ведут на несуществующие URL → 404. STRUCTURE.md/AGENTS.md/web_interactions.md ссылаются на отсутствующие `jina_client.py`/`omni_client.py`/`ai_actions.py`.

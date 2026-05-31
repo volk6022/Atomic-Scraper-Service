@@ -22,7 +22,7 @@ Tests touching this slice (file names only, not opened):
 - `tests/unit/test_llm_facade.py`
 - `tests/contract/test_searxng_search.py`
 - `tests/integration/test_search_client.py`
-- `tests/integration/test_research_graph.py` (uses facade indirectly)
+- `tests/integration/test_research_agent.py` (uses facade indirectly via the flat-loop agent; replaced `test_research_graph.py` on 2026-05-29)
 - `tests/contract/test_research_endpoint.py` (uses facade indirectly)
 
 ## Purpose & responsibilities
@@ -137,8 +137,8 @@ DSL action / research node
 Callers identified from prior reports / context:
 
 - `src/actions/site_enricher.py` → `LLMFacade` (extraction role)
-- `src/actions/research/nodes.py` → `LLMFacade` (orchestration role)
-- `src/actions/research/tools.py` → `search_client.search()` via `@tool web_search`
+- `src/actions/research/agent.py` → `LLMFacade` (orchestration role) — uses the new multi-turn `chat()` method for the main loop and the auxiliary critic/refraser/compact calls
+- `src/actions/research/tools.py` → `search_client.search()` via plain async `web_search` (no `@tool` decorator as of 2026-05-29)
 - `src/api/routers/stateless.py` → `search_client.search()` via `POST /serper`
 
 ## Mermaid diagram
@@ -175,8 +175,8 @@ flowchart LR
   search client.
 - `tests/integration/test_search_client.py` — integration test
   against (likely mocked) SearXNG.
-- Indirect coverage through research-graph and `/serper`-endpoint
-  tests (`tests/integration/test_research_graph.py`,
+- Indirect coverage through the flat-loop research agent smoke and the
+  `/serper`-endpoint tests (`tests/integration/test_research_agent.py`,
   `tests/contract/test_research_endpoint.py`).
 
 ## Open questions / smells
@@ -195,9 +195,12 @@ flowchart LR
   single-GPU LM Studio backend will serialise both roles. (Compare
   CLAUDE.md note about `--concurrency 1` for single-GPU endpoints.)
 - **No retry / timeout on the LLM path:** facade and openai_client
-  rely on `AsyncOpenAI` defaults; no `tenacity`, no explicit timeout,
-  no circuit breaker. Loud failures will propagate into LangGraph
-  nodes.
+  rely on `AsyncOpenAI` defaults (120 s connect, 2 retries); no
+  `tenacity`, no circuit breaker. The new `chat()` method accepts an
+  optional per-call `timeout` (the flat-loop research agent passes
+  `settings.RESEARCH_LLM_TIMEOUT_S=180.0`); the older `generate*`
+  methods still use client defaults. Loud failures still propagate
+  straight into the research loop.
 - **`extract()` has no schema validation:** silently falls back to
   `{"raw_response": text}` on JSON parse failure, which downstream
   code may or may not handle. No Pydantic / `response_format=json_object`

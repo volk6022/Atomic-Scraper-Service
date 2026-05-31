@@ -22,7 +22,7 @@ The `domain/models` slice owns all Pydantic v2 data contracts that cross the bou
 2. **DSL primitives** (`Command`, `CommandType`, `InteractiveSession`) consumed by the session actor + Action Registry.
 3. **Sub-models** mirroring upstream raw payloads (Yandex Maps organizations, reviews) so the rest of the codebase can treat upstream JSON as typed objects with `extra="allow"`.
 4. **Domain rules** (`RateLimitRule` with wildcard / regex matching, `EnrichedContent` with the 600-word truncation invariant).
-5. **Research Agent contracts** — request, citation, fact, stats, report, task-status — used by the LangGraph subsystem and the `/research` router.
+5. **Research Agent contracts** — request, source, stats, report, task-status — used by the flat-loop research agent (`src/actions/research/agent.py:run_research`) and the `/research` router.
 
 ## Key classes / functions
 
@@ -102,15 +102,21 @@ Models (all `BaseModel`):
 
 | Model | Fields |
 |-------|--------|
-| `Citation` | `url: HttpUrl`, `title: str`, `snippet: str` |
-| `Fact` | `claim: str`, `source_url: HttpUrl`, `confidence: float` (`ge=0.0, le=1.0`) |
-| `ResearchStats` | `iterations: int`, `urls_visited: int`, `elapsed_seconds: float`, `mode_used: str`, `beast_mode_triggered: bool=False` |
-| `ResearchReport` | `query: str`, `mode: str`, `answer_markdown: str`, `citations: list[Citation]=[]`, `facts: list[Fact]=[]`, `stats: ResearchStats` |
-| `ResearchRequest` | `query: str` (`min_length=3, max_length=2000`), `mode: ResearchMode="balanced"`, `max_iters: Optional[int]` (`ge=1, le=50`), `max_tokens: Optional[int]` (`ge=1000, le=2_000_000`) |
+| `Source` | `url: str`, `what_it_provided: str = ""` — plain string URL (not `HttpUrl`) so imperfect real-world URLs the scraper actually fetched are not dropped by validation |
+| `ResearchStats` | `turns: int=0`, `tool_calls: dict[str,int]={}`, `tokens: dict[str,Any]={}`, `elapsed_seconds: float=0.0`, `mode_used: str="balanced"`, `submit_attempts: int=0`, `compactions: int=0`, `target_language: Optional[str]=None`, `had_output_schema: bool=False` |
+| `ResearchReport` | `query: str`, `mode: str`, `answer_markdown: str=""`, `structured_output: Optional[dict]=None`, `sources: list[Source]=[]`, `critic: Optional[dict]=None`, `stats: ResearchStats`, `trace_summary: Optional[dict]=None` — exactly one of `answer_markdown` (free-form) / `structured_output` (schema mode) carries the payload |
+| `ResearchRequest` | `query: str` (`min_length=3, max_length=8000`), `mode: ResearchMode="balanced"`, `max_iters: Optional[int]` (`ge=1, le=50`), `max_tokens: Optional[int]` (`ge=1000, le=2_000_000`), `output_schema: Optional[dict]=None`, `language: str="en"` (`min_length=2, max_length=10`) |
 | `ResearchTaskStatus` | `task_id: str`, `status: Literal["pending","running","completed","failed"]`, `progress: Optional[dict]`, `result: Optional[ResearchReport]`, `created_at: str`, `updated_at: Optional[str]` |
 | `ResearchTaskCreateResponse` | `task_id: str`, `status: str="pending"`, `message: str="Research task queued"` |
 
-LangGraph runtime state (`ResearchState`) is **not** in this module — it lives elsewhere (likely `src/research/state.py`), even though `011-auto-research-agent/data-model.md` lists it next to these classes.
+There is **no** persistent runtime state object any more — the flat-loop agent
+(`src/actions/research/agent.py`) keeps `AgentState` as a local dataclass for the
+duration of one `run_research` call. The pre-2026-05-29 LangGraph `ResearchState`
+TypedDict was deleted together with `graph.py`/`nodes.py`/`state.py`.
+
+Removed in the 2026-05-29 rewrite: `Citation(url: HttpUrl, title, snippet)`,
+`Fact(claim, source_url: HttpUrl, confidence)`. They were replaced by the single
+soft `Source` row above and a `critic` blob.
 
 ## Data flow within slice
 
@@ -118,7 +124,7 @@ LangGraph runtime state (`ResearchState`) is **not** in this module — it lives
 |-----------|-------|------------|
 | API request | `ScrapeRequest`, `SearchRequest`, `OmniParseRequest`, `HtmlToMdRequest`, `YandexMapsExtractRequest`, `YandexMapsReviewsRequest`, `EnrichRequest`, `ResearchRequest` | `api/routers/*` |
 | API response | `ScrapeResponse`, `SearchResponse` (+`SearchResult`), `YandexMapsExtractResponse`, `YandexMapsReviewsResponse`, `EnrichResponse`, `ResearchReport`, `ResearchTaskStatus`, `ResearchTaskCreateResponse` | `api/routers/*` |
-| Internal DTO | `YandexOrganization` (+ all `Yandex*` sub-models), `YandexReview` (+ sub-models), `EnrichedContent`, `Citation`, `Fact`, `ResearchStats`, `Command`, `InteractiveSession` | actions, infrastructure, websocket layer |
+| Internal DTO | `YandexOrganization` (+ all `Yandex*` sub-models), `YandexReview` (+ sub-models), `EnrichedContent`, `Source`, `ResearchStats`, `Command`, `InteractiveSession` | actions, infrastructure, websocket layer |
 | Domain rule | `RateLimitRule` | `api/middleware/rate_limit.py`, `infrastructure/rate_limiter/token_bucket.py` |
 | Exception | `RedisUnavailableError` | session/router error handling |
 
@@ -127,7 +133,7 @@ Persistence: nothing in this slice is an ORM model. `InteractiveSession` is pers
 Composition graph:
 - `YandexMapsExtractResponse` ← `list[YandexOrganization]` which transitively composes every `Yandex*` sub-model from `yandex_organization.py`.
 - `YandexMapsReviewsResponse` ← `list[YandexReview]` ← `YandexReviewAuthor / YandexBusinessComment / YandexReviewReactions / YandexReviewPhoto`.
-- `ResearchReport` ← `list[Citation]`, `list[Fact]`, `ResearchStats`.
+- `ResearchReport` ← `list[Source]`, `ResearchStats`, optional `critic: dict` blob, optional `trace_summary: dict`.
 - `ResearchTaskStatus` ← `Optional[ResearchReport]`.
 
 ## Mermaid diagram(s)
@@ -223,31 +229,33 @@ classDiagram
         +ResearchMode mode
         +Optional~int~ max_iters
         +Optional~int~ max_tokens
+        +Optional~dict~ output_schema
+        +str language
     }
     class ResearchReport {
         +str query
         +str mode
         +str answer_markdown
-        +list~Citation~ citations
-        +list~Fact~ facts
+        +Optional~dict~ structured_output
+        +list~Source~ sources
+        +Optional~dict~ critic
         +ResearchStats stats
+        +Optional~dict~ trace_summary
     }
-    class Citation {
-        +HttpUrl url
-        +str title
-        +str snippet
-    }
-    class Fact {
-        +str claim
-        +HttpUrl source_url
-        +float confidence
+    class Source {
+        +str url
+        +str what_it_provided
     }
     class ResearchStats {
-        +int iterations
-        +int urls_visited
+        +int turns
+        +dict tool_calls
+        +dict tokens
         +float elapsed_seconds
         +str mode_used
-        +bool beast_mode_triggered
+        +int submit_attempts
+        +int compactions
+        +Optional~str~ target_language
+        +bool had_output_schema
     }
     class ResearchTaskStatus {
         +str task_id
@@ -262,8 +270,7 @@ classDiagram
         +str status
         +str message
     }
-    ResearchReport --> Citation
-    ResearchReport --> Fact
+    ResearchReport --> Source
     ResearchReport --> ResearchStats
     ResearchTaskStatus --> ResearchReport
 ```
@@ -284,18 +291,18 @@ No dedicated `tests/unit/test_models.py` exists. The models are exercised indire
 - `tests/unit/test_rate_limiter.py` — likely instantiates `RateLimitRule` (pattern + `matches_domain` semantics).
 - `tests/unit/test_content_cleaner.py`, `tests/integration/test_content_cleaning.py`, `tests/integration/test_content_convert.py`, `tests/e2e/test_site_enrichment_flow.py` — touch `EnrichedContent` invariants (600-word cap, truncation flag).
 - `tests/integration/test_yandex_extraction.py`, `tests/e2e/test_yandex_maps_full_flow.py` — exercise full `YandexOrganization`/`YandexReview` payloads.
-- `tests/unit/research/test_state_transitions.py`, `tests/unit/research/test_nodes.py`, `tests/unit/research/test_modes.py`, `tests/integration/test_research_graph.py` — exercise `ResearchRequest`/`ResearchReport`/`Citation`/`Fact` (state machine lives in `src/research/`).
+- `tests/unit/research/test_modes.py`, `tests/integration/test_research_agent.py`, `tests/contract/test_research_endpoint.py` — exercise `ResearchRequest`/`ResearchReport`/`Source`. The 2026-05-29 rewrite deleted `test_state_transitions.py`/`test_nodes.py`/`test_research_graph.py` together with the LangGraph code they covered.
 - `tests/unit/test_actions.py` — uses `Command` / `CommandType`.
 
 ## Open questions / smells
 
 1. **Spec drift — `LLMExtractRequest` vs `HtmlToMdRequest`.** `specs/013-fix-impl/data-model.md` documents a renamed model `LLMExtractRequest(html, extraction_schema, prompt)`, but the live code exposes `HtmlToMdRequest(html, format, extraction_schema)` — the `prompt` field is missing and there is an extra `format` field. The contract test is `tests/contract/test_html_to_md.py` (also a different name).
-2. **Spec drift — `ResearchRequest.max_iterations` vs `max_iters`.** Spec uses `max_iterations` / `max_tokens` (with cap 20). Code uses `max_iters` / `max_tokens` (cap 50, token cap 2 000 000 vs spec 32 000). Clients written against the spec will break.
+2. **Spec drift — `ResearchRequest.max_iterations` vs `max_iters`.** Spec uses `max_iterations` / `max_tokens` (with cap 20). Code uses `max_iters` / `max_tokens` (cap 50, token cap 2 000 000 vs spec 32 000) — and after the 2026-05-29 rewrite `max_iters` is forwarded into the flat-loop agent as `max_turns`. Clients written against the spec will break.
 3. **No `business_card.py`.** `STRUCTURE.md` and `010-scraper-mlcv-prep` references talk about a `business_card.py` model; instead two files (`yandex_organization.py`, `yandex_review.py`) carry that data with much richer schemas than the spec's flat `{name, address, phone, website, geo}` shape.
 4. **Empty `__init__.py`** — no curated public surface; importers reach into individual modules, which makes refactor cost higher and obscures which models are "domain API" vs internal.
 5. **`Command.params` is `Dict[str, Any]`** — no typed per-action payload classes (e.g. `GotoParams`, `YandexMapsExtractParams`). Validation happens ad-hoc inside each `actions/*.py`, so DSL command typing is effectively unenforced at the domain layer.
 6. **`EnrichedContent.validate_word_count` hard-codes `600`** but `truncated` is a free boolean — nothing enforces that `truncated=True` whenever the source text *would* have exceeded the cap; the invariant relies on producer discipline in `actions/site_enricher.py`.
 7. **`extra="allow"`** on every Yandex sub-model means unknown upstream fields are silently retained — convenient, but they bypass any future schema-tightening attempts and can leak through to the API response.
-8. **`ResearchState` (LangGraph TypedDict) is documented in `011-auto-research-agent/data-model.md` as a domain entity**, but the file is not under `src/domain/models/` — it lives in the research subsystem. The split is fine, but the spec should reflect it.
+8. **`ResearchState` (LangGraph TypedDict) was removed entirely on 2026-05-29.** Spec 011 data-model still documents it as a domain entity — historical only. The flat-loop agent uses a local `AgentState` dataclass inside `src/actions/research/agent.py` for the duration of a single `run_research` call.
 9. **`ScrapeResponse.id` default uses `uuid.uuid4()` at class-definition time, not per-instance** (a known Pydantic gotcha if written as `= str(uuid.uuid4())` rather than `default_factory=lambda: str(uuid.uuid4())`). Worth verifying — every response would otherwise share the same id. (Could not read the file directly to confirm; flagged as risk.)
 10. **`TaskStatus` enum exists but is only used by `ScrapeResponse`** — `ResearchTaskStatus.status` re-declares the same concept as a `Literal[...]`, and `InteractiveSession.status` uses a plain `str`. Three different status vocabularies live side-by-side.

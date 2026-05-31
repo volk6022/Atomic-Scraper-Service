@@ -7,7 +7,7 @@
 - `src/infrastructure/queue/session_actor.py` — stateful Playwright session actor + Redis pub/sub command loop.
 - `src/infrastructure/queue/cleanup_worker.py` — idle-session reaper.
 - `src/infrastructure/queue/workers.py` — placeholder/general Taskiq tasks.
-- `src/infrastructure/queue/research_task.py` — long-running LangGraph research task driver.
+- `src/infrastructure/queue/research_task.py` — long-running research task driver (delegates to `src/actions/research/agent.py:run_research`).
 
 Cross-referenced: `STRUCTURE.md`, `docker-compose.yml`, `docker-compose.override.yml`, `ecosystem.config.js`, `specs/009-smart-scraping-llm-api/spec.md` (US2/US3 — interactive sessions + 10-min inactivity), `specs/011-auto-research-agent/spec.md` (research queue + concurrency cap).
 
@@ -24,7 +24,7 @@ Concretely it owns:
 1. The Taskiq broker (Redis-backed list queue, queue name `atomic_scraper_tasks`).
 2. A **stateful actor pattern** where each session is one Taskiq task that owns a Playwright context and pumps a Redis pub/sub command channel.
 3. A **cleanup worker** that walks `session_manager.sessions` and closes idle contexts.
-4. A **research task entrypoint** that drives a LangGraph and persists progress/result via `ResearchTaskStore`.
+4. A **research task entrypoint** that delegates to `run_research` (flat-loop agent) and persists the resulting `ResearchReport` via `ResearchTaskStore`.
 
 ## Key classes / functions
 
@@ -66,13 +66,12 @@ Concretely it owns:
 ### research_task (`research_task.py`)
 
 - Taskiq task: `execute_research_task(task_id: str)`.
-- Flow:
-  1. `get_task(task_id)` from `src.infrastructure.tasks.research_store` → pulls `query`, `mode` (default `"balanced"`).
-  2. `graph = build_graph(mode)` from `src.actions.research.graph`; `initial_state = create_initial_state(query, mode)`.
-  3. `await graph.ainvoke(initial_state, config={"configurable": {"thread_id": task_id}})`.
-  4. On success: `set_task(task_id, {status: "completed", result: ...})`.
-  5. On exception: `logger.exception(...)` + `set_task(task_id, {status: "failed", error: str(e)})`.
-- The endpoint `POST /api/v1/research/run` enqueues via `execute_research_task.kiq(task_id)`; `GET /research/status/{task_id}` polls the store.
+- Flow (post 2026-05-29 rewrite — no LangGraph any more):
+  1. `get_task(task_id)` from `src.infrastructure.tasks.research_store` → pulls `query`, `mode` (default `"balanced"`), `language`, `output_schema`, `max_iters`, `max_tokens`.
+  2. `await run_research(query, mode=mode, language=target_language, output_schema=output_schema, max_turns=task_data.get("max_iters"), max_tokens=task_data.get("max_tokens"))` from `src.actions.research.agent`.
+  3. On success: `set_task(task_id, {status: "completed", phase: "completed", result: <ResearchReport-shaped dict>})`.
+  4. On exception: `logger.exception(...)` + `set_task(task_id, {status: "failed", error: str(e)})`.
+- The endpoint `POST /api/v1/research/run` enqueues via `execute_research_task.kiq(task_id)`; `GET /research/status/{task_id}` polls the store; `GET /research/stream/{task_id}` polls the store + emits SSE.
 
 ## Data flow within slice
 
@@ -142,13 +141,11 @@ flowchart LR
     Caller -->|execute_research_task.kiq task_id| Q[Taskiq Redis queue<br/>atomic_scraper_tasks]
     Q --> W[Taskiq Worker]
     W --> ETR[execute_research_task task_id]
-    ETR --> GET[get_task task_id<br/>-> query, mode]
-    GET --> Build[build_graph mode]
-    Build --> Init[create_initial_state query, mode]
-    Init --> Inv[graph.ainvoke state<br/>thread_id=task_id]
-    Inv --> Nodes[LangGraph nodes:<br/>classify / plan / search /<br/>rank_dedupe / scrape /<br/>extract_facts / reflect /<br/>answer / writer]
-    Nodes --> OK{success?}
-    OK -- yes --> Done[(set_task status=completed,<br/>result=report)]
+    ETR --> GET[get_task task_id<br/>-> query, mode, language,<br/>output_schema, max_iters,<br/>max_tokens]
+    GET --> Run[await run_research ... <br/>flat-loop agent in<br/>src/actions/research/agent.py]
+    Run --> Loop[chat.completions tool_choice=auto<br/>tools: web_serp, web_scrape, submit<br/>+ critic-gate + soft-elide + auto-compact]
+    Loop --> OK{success?}
+    OK -- yes --> Done[(set_task status=completed,<br/>result=ResearchReport-shaped dict)]
     OK -- no --> Fail[(set_task status=failed,<br/>error=str e)]
     Poll[GET /research/status/task_id] --> Store2[(ResearchTaskStore)]
     Done --> Store2
@@ -167,7 +164,7 @@ flowchart LR
     API <-->|kiq / publish / store| Redis
     Worker <-->|dequeue / subscribe| Redis
     Worker --> PW[Playwright contexts<br/>via pool_manager]
-    Worker --> LG[LangGraph + external_api/facade<br/>for research tasks]
+    Worker --> RA[run_research flat-loop +<br/>external_api/facade.chat for<br/>research tasks]
 ```
 
 ## External dependencies
@@ -178,14 +175,14 @@ flowchart LR
 - **`domain/registry/action_registry`** + `domain/models/dsl.CommandType` — command dispatch table.
 - **`infrastructure/browser/session_manager`** — last-seen tracking consumed by the cleanup worker.
 - **`infrastructure/tasks/research_store`** (`get_task`, `set_task`) — persistence for research task lifecycle.
-- **`actions/research/graph.build_graph`** + `actions/research/state.create_initial_state` — LangGraph runtime for research.
+- **`actions/research/agent.run_research`** — flat tool-calling loop driving the research task (replaces the pre-2026-05-29 `graph.build_graph` + `state.create_initial_state` LangGraph wiring).
 - **`core/config.settings`** — `REDIS_URL`, `SESSION_INACTIVITY_TIMEOUT`, etc.
 
 ## Tests covering this slice
 
 - `tests/unit/test_cleanup.py` — exercises cleanup-worker / session-manager interaction.
 - `tests/contract/test_research_endpoint.py` — contract for POST `/research/run` and GET `/research/status/{task_id}`, indirectly covers `execute_research_task` enqueue + store contract.
-- `tests/integration/test_research_graph.py` — end-to-end graph traversal that the task driver delegates to.
+- `tests/integration/test_research_agent.py` — drives `run_research` end-to-end with a fake `OpenAICompatibleClient` + stubbed `web_search`/`scrape_url`; asserts the dict parses into `ResearchReport`. Replaces the deleted `test_research_graph.py`.
 - **Gaps**: no dedicated test for `session_actor.run_session_actor` (Redis pub/sub loop, inactivity timeout), no direct test for `broker.py`, no test for `workers.py`.
 
 ## Open questions / smells

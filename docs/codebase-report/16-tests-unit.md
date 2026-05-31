@@ -11,11 +11,11 @@
 | `tests/unit/test_llm_facade.py` | 1 | `LLMFacade` ABC cannot be instantiated |
 | `tests/unit/test_rate_limiter.py` | 9 | TokenBucket / RateLimitRule / RateLimitMiddleware sanity |
 | `tests/unit/test_stealth_browser.py` | 14 | StealthPool, UserAgentPool, HumanEmulator surface checks |
-| `tests/unit/research/test_modes.py` | 10 | ResearchMode presets (speed/balanced/quality) + user overrides |
-| `tests/unit/research/test_nodes.py` | 10 | LangGraph nodes (classify/plan/search/dedupe/scrape/answer + beast-mode triggers) |
-| `tests/unit/research/test_state_transitions.py` | 10 | Graph routing predicates + graph.compile() for each mode |
+| `tests/unit/research/test_modes.py` | ~3 | `ModePreset` values (speed/balanced/quality), error on unknown mode |
 
-Total: ~76 test functions across 10 files. No local `conftest.py` under `tests/unit/` — the global `tests/conftest.py` provides two autouse fixtures (`mock_redis`, `reset_research_store`) that apply here too.
+`tests/unit/research/test_nodes.py` and `tests/unit/research/test_state_transitions.py` were **deleted on 2026-05-29** together with `src/actions/research/{graph,nodes,state}.py`. The flat-loop agent (`agent.py`) is exercised end-to-end by `tests/integration/test_research_agent.py` (see report 18) rather than by per-function unit tests.
+
+Total: ~50 unit test functions across 8 files. No local `conftest.py` under `tests/unit/` — the global `tests/conftest.py` provides two autouse fixtures (`mock_redis`, `reset_research_store`) that apply here too.
 
 ## Purpose & responsibilities
 
@@ -27,7 +27,7 @@ Unit suite is the lightest tier — no Docker, no real Redis, no real Playwright
 4. **Rate-limit primitives** — module/model import sanity, domain glob matching (`*.yandex.*`), middleware init from settings.
 5. **Stealth browser surface** — that `StealthPool`, `UserAgentPool`, `HumanEmulator` expose the expected methods and option flags (headless, no-sandbox, viewport, locale, ≥5 UAs, platform filter).
 6. **Session lifecycle** — single test that fakes a stale `last_active` and asserts the cleanup worker prunes the session after the 10-min timeout.
-7. **Research agent core** — most substantive group. Covers mode presets (max_iterations, search_k, token budgets), every node function with a fake LLM/search client, all routing predicates of the LangGraph, and that the graph compiles for all three modes.
+7. **Research agent presets** — only the three `ModePreset` values + `get_mode_preset` error path. The pre-2026-05-29 LangGraph node/state unit tests are gone with the LangGraph code; the new flat-loop agent is covered by an integration smoke (`tests/integration/test_research_agent.py`, report 18).
 
 Effectively a smoke + invariant suite — no end-to-end execution paths, mostly "module exists / method exists / preset value is X / predicate routes correctly".
 
@@ -54,16 +54,10 @@ Effectively a smoke + invariant suite — no end-to-end execution paths, mostly 
 - `test_clients_separation` — reads settings and verifies that the extraction client and the orchestration client are distinct objects with distinct `model_name` / `base_url`.
 
 ### Research modes (`research/test_modes.py`)
-- Hardcoded preset values: speed → `max_iters=2`, `search_k=3`; balanced → 6/5; quality → 25/8. User overrides for `max_iterations` and `max_tokens` and bounds-validation.
+- Hardcoded preset values: speed → `max_turns=8`, `search_k=3`; balanced → 15/5; quality → 25/8. Asserts `token_budget > 0` and `deadline > 0` for every mode; `get_mode_preset("nonsense")` raises `ValueError`.
 
-### Research nodes (`research/test_nodes.py`) — the only file with real mocking
-- `monkeypatch` replaces `facade.get_orchestration_client` with a `_FakeClient` returning canned JSON.
-- `monkeypatch` replaces `search_client.search` with a `fake_search`.
-- `patch` wraps `scrape_url` with an `AsyncMock`.
-- Tests: classifier returns query type; planner emits gaps; search returns candidates; dedupe drops visited URLs; stall counter increments when 0 new results; beast-mode triggers at 85% token budget, at deadline, and at stall-threshold; scrape marks URL visited; `answer` node always returns output.
-
-### Research graph (`research/test_state_transitions.py`)
-- Pure predicate tests on the routing functions: continue when gaps remain and not beast-mode, stop when gaps empty / beast-mode / max iterations / stall threshold, `answer` transitions to `writer`. Plus `graph.compile()` succeeds for all three modes and `REQUIRED_NODES` are wired.
+### Research nodes / state transitions — **REMOVED 2026-05-29**
+Deleted together with the LangGraph code they covered. The flat-loop agent is exercised end-to-end by `tests/integration/test_research_agent.py` — a fake `OpenAICompatibleClient` plus stubbed `web_search`/`scrape_url` drive both free-form and schema modes and assert the returned dict parses into `ResearchReport`.
 
 ## Coverage map (модуль → тесты)
 
@@ -81,27 +75,26 @@ Effectively a smoke + invariant suite — no end-to-end execution paths, mostly 
 | `src/api/middleware/rate_limit.py` | `tests/unit/test_rate_limiter.py` | has `dispatch`, initialises from settings |
 | `src/infrastructure/browser/stealth_pool.py` (`StealthPool`, `HumanEmulator`) | `tests/unit/test_stealth_browser.py` | launch/close/create_context methods exist, launch options include `--no-sandbox`, context has viewport + `en-US` locale, `human_emulation_enabled` flag, HumanEmulator surface |
 | `src/infrastructure/browser/user_agent_pool.py` | `tests/unit/test_stealth_browser.py` | `get_random_ua()` returns string, ≥5 UAs, platform filter |
-| `src/actions/research/modes.py` + `state.py` | `tests/unit/research/test_modes.py` | preset constants (max_iters, search_k, max_tokens), user override, bounds |
-| `src/actions/research/nodes.py` | `tests/unit/research/test_nodes.py` | classify, plan, search, dedupe, scrape, answer, beast-mode triggers (budget/deadline/stall) |
-| `src/actions/research/graph.py` | `tests/unit/research/test_state_transitions.py` | routing predicates, compile for speed/balanced/quality, `REQUIRED_NODES` |
+| `src/actions/research/modes.py` | `tests/unit/research/test_modes.py` | preset values (`max_turns`, `search_k`), positive `token_budget`/`deadline`, error on unknown mode |
+| `src/actions/research/agent.py` | `tests/integration/test_research_agent.py` (report 18) | end-to-end smoke with fake LLM client + stubbed tools — no per-function unit tests |
 
 ## External dependencies (what's mocked)
 
 - **Redis** — global `tests/conftest.py::mock_redis` (autouse) patches `redis.asyncio.Redis.from_url` and `redis.asyncio.client.Redis.from_url` with a `MagicMock` whose `ping`/`publish`/`close`/`pubsub.listen` are AsyncMocks; sync `redis.Redis.from_url` is forced to raise `ConnectionError` so `research_store` falls back to its per-process in-memory dict (cleared before/after each test by `reset_research_store`).
-- **LLM** — in `test_nodes.py`, `facade.get_orchestration_client` is monkeypatched to a `_FakeClient` returning canned JSON; no httpx traffic.
-- **Web search** — `search_client.search` monkeypatched with a `fake_search`.
+- **LLM** — the research agent's LLM access (`facade.get_orchestration_client`) is monkeypatched to a `_FakeClient` only in the integration smoke (`tests/integration/test_research_agent.py`); the unit suite no longer does so since the pre-2026-05-29 `test_nodes.py` was deleted.
+- **Web search** — `web_search` is monkeypatched with a stub in the research-agent integration smoke; no unit-tier coverage.
 - **Playwright** — not launched anywhere in the unit suite. `test_actions.py` passes a `MagicMock` `page` with `AsyncMock`'d `goto`/`evaluate`. `test_stealth_browser.py` only inspects class/method existence and option dictionaries.
-- **scrape_url** — patched with `AsyncMock` in `test_nodes.py`.
+- **scrape_url** — stubbed in `tests/integration/test_research_agent.py`; the unit suite does not exercise it.
 
 ## Mermaid diagram
 
 ```mermaid
-pie title Unit test functions by area
-    "research/* (graph+nodes+modes)" : 30
+pie title Unit test functions by area (post 2026-05-29)
     "stealth_browser" : 14
     "actions + registry" : 12
     "rate_limiter" : 9
     "content_cleaner" : 8
+    "research/test_modes" : 3
     "cleanup + clients + llm_facade" : 3
 ```
 

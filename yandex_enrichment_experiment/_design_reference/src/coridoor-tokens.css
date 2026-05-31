@@ -1,0 +1,187 @@
+/* ============================================================
+   CORIDOOR Design System — Colors & Typography
+   ============================================================ */
+
+@font-face {
+  font-family: "Roboto Condensed";
+  src: url("fonts/RobotoCondensed-VariableFont_wght.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 100 900;
+}
+
+@font-face {
+  font-family: "Roboto Condensed";
+  src: url("fonts/RobotoCondensed-Italic-VariableFont_wght.ttf") format("truetype");
+  font-style: italic;
+  font-weight: 100 900;
+}
+
+/* ============================================================
+   COLOR TOKENS — Base
+   ============================================================ */
+:root {
+  /* Backgrounds */
+  --color-bg-primary:     rgb(16, 8, 8);     /* Warm near-black — main slide bg */
+  --color-bg-deep:        rgb(0, 0, 0);      /* Pure black — accent bg */
+  --color-bg-dark:        rgb(14, 3, 3);     /* Dark warm black — variant */
+  --color-bg-light:       rgb(255, 255, 255);/* White — inverted slides */
+
+  /* Text */
+  --color-text-primary:   rgb(255, 255, 255);/* White — primary body */
+  --color-text-secondary: rgb(217, 217, 217);/* Light grey — labels, secondary */
+  --color-text-dark:      rgb(16, 8, 8);     /* Near-black — on light bg */
+  --color-text-muted:     rgb(120, 120, 120);/* Muted — annotations */
+
+  /* Old Identity (legacy / accent reference) */
+  --color-accent-olive:   rgb(160, 170, 125);/* Olive/khaki — old door panel */
+  --color-accent-red:     rgb(160, 30, 30);  /* Deep red — old door frame */
+
+  /* Functional */
+  --color-border:         rgba(217, 217, 217, 0.2); /* Subtle divider */
+  --color-overlay:        rgba(16, 8, 8, 0.75);     /* Dark overlay */
+}
+
+/* ============================================================
+   SEMANTIC COLOR VARS
+   ============================================================ */
+:root {
+  --bg:           var(--color-bg-primary);
+  --bg-alt:       var(--color-bg-deep);
+  --fg:           var(--color-text-primary);
+  --fg-2:         var(--color-text-secondary);
+  --fg-on-light:  var(--color-text-dark);
+  --accent:       var(--color-text-secondary);  /* Grey accent */
+  --accent-warm:  var(--color-accent-red);
+  --accent-olive: var(--color-accent-olive);
+  --border:       var(--color-border);
+}
+
+/* ============================================================
+   TYPOGRAPHY TOKENS
+   ============================================================ */
+:root {
+  --font-primary: "Roboto Condensed", "Arial Narrow", sans-serif;
+
+  /* Weights */
+  --fw-regular:   400;
+  --fw-medium:    500;
+  --fw-bold:      700;
+
+  /* Sizes — slide scale (1920×1080 base) */
+  --text-hero:    96px;   /* Positioning statements, brand name on hero slides */
+  --text-title:   64px;   /* Slide title / subtitle */
+  --text-body:    48px;   /* Body copy, bullets */
+  --text-label:   40px;   /* Section labels, captions */
+
+  /* Sizes — UI / web scale */
+  --text-display: 3rem;
+  --text-heading: 2rem;
+  --text-subhead: 1.5rem;
+  --text-ui:      1rem;
+  --text-small:   0.875rem;
+  --text-xs:      0.75rem;
+
+  /* Line heights */
+  --lh-tight:     1.0;    /* Used throughout in deck */
+  --lh-body:      1.25;
+  --lh-loose:     1.5;
+
+  /* Letter spacing */
+  --ls-normal:    0;
+  --ls-wide:      0.05em;
+  --ls-caps:      0.08em;  /* For ALL CAPS labels */
+}
+
+/* ============================================================
+   SEMANTIC TYPE STYLES
+   ============================================================ */
+:root {
+  /* Hero / brand name */
+  --type-hero:    var(--fw-medium) var(--text-hero)/var(--lh-tight) var(--font-primary);
+  /* Slide title */
+  --type-title:   var(--fw-regular) var(--text-title)/var(--lh-tight) var(--font-primary);
+  /* Body copy */
+  --type-body:    var(--fw-regular) var(--text-body)/var(--lh-tight) var(--font-primary);
+  /* Section label */
+  --type-label:   var(--fw-regular) var(--text-label)/var(--lh-tight) var(--font-primary);
+  /* UI display heading */
+  --type-display: var(--fw-medium) var(--text-display)/var(--lh-tight) var(--font-primary);
+  /* UI heading */
+  --type-heading: var(--fw-regular) var(--text-heading)/var(--lh-tight) var(--font-primary);
+  /* UI subhead */
+  --type-subhead: var(--fw-regular) var(--text-subhead)/var(--lh-body) var(--font-primary);
+  /* UI body */
+  --type-ui:      var(--fw-regular) var(--text-ui)/var(--lh-body) var(--font-primary);
+  /* Small / caption */
+  --type-small:   var(--fw-regular) var(--text-small)/var(--lh-loose) var(--font-primary);
+}
+
+/* ============================================================
+   SPACING & LAYOUT TOKENS
+   ============================================================ */
+:root {
+  --space-1:  4px;
+  --space-2:  8px;
+  --space-3:  12px;
+  --space-4:  16px;
+  --space-5:  24px;
+  --space-6:  32px;
+  --space-7:  48px;
+  --space-8:  64px;
+  --space-9:  96px;
+  --space-10: 128px;
+
+  /* Slide layout */
+  --slide-margin-x:      260px;  /* Inner content margin (slides) */
+  --slide-label-x:       117px;  /* Section label x position */
+  --slide-label-y:       82px;   /* Section label y position */
+  --slide-content-y:     216px;  /* Body content top y position */
+
+  /* Radii */
+  --radius-none:  0;
+  --radius-sm:    2px;
+  --radius-md:    4px;
+  --radius-lg:    8px;
+
+  /* Shadows */
+  --shadow-none:  none;
+  --shadow-sm:    0 1px 3px rgba(0,0,0,0.5);
+  --shadow-md:    0 4px 12px rgba(0,0,0,0.6);
+  --shadow-lg:    0 8px 32px rgba(0,0,0,0.8);
+}
+
+/* ============================================================
+   BASE RESET (optional convenience)
+   ============================================================ */
+.coridoor-base {
+  font-family: var(--font-primary);
+  background-color: var(--bg);
+  color: var(--fg);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.coridoor-label {
+  font-family: var(--font-primary);
+  font-weight: var(--fw-regular);
+  font-size: var(--text-label);
+  line-height: var(--lh-tight);
+  color: var(--fg-2);
+  letter-spacing: var(--ls-normal);
+}
+
+.coridoor-body {
+  font-family: var(--font-primary);
+  font-weight: var(--fw-regular);
+  font-size: var(--text-body);
+  line-height: var(--lh-tight);
+  color: var(--fg);
+}
+
+.coridoor-hero {
+  font-family: var(--font-primary);
+  font-weight: var(--fw-medium);
+  font-size: var(--text-hero);
+  line-height: var(--lh-tight);
+  color: var(--fg);
+}

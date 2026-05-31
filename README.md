@@ -13,7 +13,7 @@ High-throughput atomic scraping and stateful interactive browser sessions with L
 - **Anti-Bot Evasion**: Stealth browser pool with User-Agent rotation, proxy integration, human-like interactions.
 - **Yandex Maps Extraction**: Extract structured business data (name, address, phone, website, geo coordinates).
 - **Site Content Enrichment**: Extract clean text from company websites with optional about/services page crawling.
-- **Research Agent**: Autonomous AI research using LangGraph with web search, scraping, and structured report generation.
+- **Research Agent**: Autonomous AI research as a flat tool-calling loop (`chat.completions` with `tool_choice="auto"`), two output modes (free-form markdown or caller-supplied JSON Schema), critic-gate on submit, generic — no domain logic in the service.
 - **Per-Domain Rate Limiting**: Redis-based token bucket (30/hour for `*.yandex.*`, 1000/hour fallback).
 
 ## Tech Stack
@@ -60,15 +60,23 @@ EXTRACTION_API_BASE=http://localhost:1234/v1
 EXTRACTION_API_KEY=lm-studio
 EXTRACTION_MODEL_NAME=jina-reader-lm
 
-ORCHESTRATION_API_BASE=https://api.openai.com/v1
-ORCHESTRATION_API_KEY=sk-...
-ORCHESTRATION_MODEL_NAME=gpt-4o
+ORCHESTRATION_API_BASE=http://localhost:20022/v1/   # local llama.cpp / vLLM / LM Studio
+ORCHESTRATION_API_KEY=lm-studio
+ORCHESTRATION_MODEL_NAME=qwen3.5-9b-claude-4.6-opus-reasoning-distilled
 
-REDIS_URL=redis://localhost:6379/0     # Taskiq broker + pub/sub + KV
+REDIS_URL=redis://localhost:16379      # Taskiq broker + pub/sub + KV; docker-compose maps host 16379 → container 6379
 SESSION_INACTIVITY_TIMEOUT=600         # seconds; dev override sets 1800
+
+# Optional — Research Agent tuning (defaults match production v2.1):
+# RESEARCH_COMPACT_TRIGGER_TOKENS=50000
+# RESEARCH_CRITIC_PASS_SCORE=8.5
+# RESEARCH_MAX_SUBMIT_REJECTS=2
+# RESEARCH_DEFAULT_LANGUAGE=ru
+# RESEARCH_PROMPTS_PATH=src/actions/research/research_agent_prompts.yaml
 ```
 
-Full settings list lives in `src/core/config.py` (`pydantic-settings`).
+Full settings list lives in `src/core/config.py` (`pydantic-settings`); the full
+optional `RESEARCH_*` block is documented in `.env.example`.
 
 ### Proxy Configuration (optional)
 
@@ -163,19 +171,52 @@ Content is truncated to ≤ 500 words. Raw HTML is stripped.
 ```
 POST /api/v1/research/run
 {
-  "query": "research topic",
-  "mode": "speed" | "balanced" | "quality"   // default: "balanced"
+  "query": "research topic",                  // 3-8000 chars
+  "mode": "speed" | "balanced" | "quality",   // default: "balanced"
+  "language": "ru" | "en" | ...,              // BCP-47-ish hint; routed into prompts + SearXNG
+  "max_iters": 15,                            // optional override of preset.max_turns (1-50)
+  "max_tokens": 100000,                       // optional override of preset.token_budget (1k-2M)
+  "output_schema": {...}                      // optional JSON Schema → structured-output mode
 }
 → 202 {"task_id": "...", "status": "pending", "message": "Research task queued"}
 
 GET /api/v1/research/status/{task_id}
-→ {"task_id": "...", "status": "completed"|"running"|"failed", "result": {...}, ...}
+→ {"task_id": "...", "status": "completed"|"running"|"failed", "result": ResearchReport, ...}
 
 GET /api/v1/research/stream/{task_id}
 → text/event-stream with progress events
 ```
 
-The Research Agent uses LangGraph to iteratively search, scrape, and synthesize information into a structured report.
+The agent is a **flat tool-calling loop** (`src/actions/research/agent.py:run_research`).
+It exposes three tools to the LLM — `web_serp` (SearXNG), `web_scrape` (Playwright via
+`SiteEnrichAction`), and a dynamic terminal submit — and lets the model decide what to
+call (`tool_choice="auto"`). A second LLM acts as **critic** on submit: low scores get
+rejected with feedback, force-accepted after `RESEARCH_MAX_SUBMIT_REJECTS`.
+
+`ResearchReport` shape (free-form mode fills `answer_markdown`; schema mode fills
+`structured_output`; the other stays at its empty default):
+
+```json
+{
+  "query": "...",
+  "mode": "balanced",
+  "answer_markdown": "<markdown>",
+  "structured_output": null,
+  "sources": [{"url": "https://...", "what_it_provided": "..."}],
+  "critic": {"score": 9.0, "verdict": "pass", "feedback": "..."},
+  "stats": {
+    "turns": 4, "tool_calls": {"web_serp": 1, "web_scrape": 2, "submit_answer": 1},
+    "tokens": {"main": {...}, "aux": {...}, "grand_total": 7644},
+    "elapsed_seconds": 51.4, "mode_used": "balanced",
+    "submit_attempts": 1, "compactions": 0,
+    "target_language": "en", "had_output_schema": false
+  },
+  "trace_summary": {...}
+}
+```
+
+All numeric knobs are in `src/core/config.py` (`RESEARCH_*` settings, overridable via
+`.env`) and all prompts in `src/actions/research/research_agent_prompts.yaml`.
 
 ### Rate Limiting
 

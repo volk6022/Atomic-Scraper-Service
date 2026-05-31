@@ -11,7 +11,7 @@
 - `tests/integration/test_content_cleaning.py`
 - `tests/integration/test_proxy_integration.py`
 - `tests/integration/test_auth.py`
-- `tests/integration/test_research_graph.py`
+- `tests/integration/test_research_agent.py` (replaced `test_research_graph.py` on 2026-05-29 — drives the new flat-loop `run_research` with a fake LLM client)
 - `tests/integration/test_search_client.py`
 - `tests/integration/test_yandex_extraction.py`
 
@@ -53,7 +53,7 @@ Two tests are genuinely live: they require `uvicorn` (or `docker compose up`) li
 | HTML cleaning (scripts/styles/comments) | `test_content_cleaning.py` | Hardcoded strings → `clean_html_content()` — instant |
 | `BrowserPoolManager.create_context` proxy wiring | `test_proxy_integration.py` | Patches `async_playwright`, `AsyncMock` browser/context — asserts proxy passed as `{"server": url}`; also reads `docker-compose.yml` for mount volumes |
 | `X-API-Key` auth across enrich/sessions/research | `test_auth.py` | ASGITransport in-process; mocks `run_session_actor.kiq`; asserts 403 missing/invalid key, 200/500/503 with key, 200 on public `/healthz`, `/docs` |
-| LangGraph build for 3 modes | `test_research_graph.py` | Direct `build_graph(mode)` calls for "speed"/"balanced"/"quality" — asserts non-None graph object |
+| Flat-loop `run_research` smoke (free-form + schema) | `test_research_agent.py` | Monkeypatches `get_orchestration_client` to a `_FakeClient` and `web_search`/`scrape_url` to stubs; walks a scripted `serp → scrape → submit` cycle; asserts the returned dict parses into `ResearchReport`. Replaces the deleted `test_research_graph.py`. |
 | `SearchClient` (SearXNG) | `test_search_client.py` | `AsyncMock` on `client._client.get`; verifies JSON parsing, URL dedup, retry on 502/empty responses |
 | Yandex Maps XHR interception & parsing | `test_yandex_extraction.py` | Fake Playwright `page` (with `page.on('response', cb)` simulator), `_make_response_mock()` factory; patches `pool_manager.create_context`, `proxy_provider.get_proxy`, `asyncio.sleep`; asserts OID dedup, captcha detection |
 
@@ -80,7 +80,7 @@ Everything else is structural or in-process:
 - **Pure config / file reads (~3 tests):** `test_docker_compose.py`, `test_docker_deployment.py`,
   the docker-compose mount check inside `test_proxy_integration.py`.
 - **Pure utility (~ a dozen):** `test_content_convert.py`, `test_content_cleaning.py`,
-  `test_research_graph.py`, `test_timeout.py`.
+  `test_research_agent.py`, `test_timeout.py`.
 - **ASGITransport in-process FastAPI:** `test_auth.py`, `test_auth_flow.py`,
   `test_rate_limiting_flow.py`, `test_session_redis_failure.py`, the structural
   cases in `test_site_enrichment_flow.py` and `test_yandex_maps_full_flow.py`.
@@ -96,7 +96,7 @@ Everything else is structural or in-process:
 | **httpx** | Used as a real client only in the 2 live e2e tests (with `localhost:8000`). Elsewhere either via `AsyncClient(transport=ASGITransport(app=app))` (in-process) or with `client._client.get` patched (`test_search_client.py`). |
 | **Docker** | Read-only — files like `docker-compose.yml` and `Dockerfile` are parsed as YAML/text in `test_docker_compose.py` and `test_docker_deployment.py`. No container is started by the test suite. |
 | **Internet / yandex.ru** | Reached only by `test_yandex_maps_full_flow.py::test_yandex_maps_endpoint_returns_businesses` (through the live API on :8000 → real Yandex Maps). |
-| **LangGraph / LangChain** | `test_research_graph.py` calls `build_graph()` directly; no LLM calls. |
+| **Flat-loop research agent** | `test_research_agent.py` injects a `_FakeClient` for `OpenAICompatibleClient.chat`; no real LLM, no LangGraph (the LangGraph implementation was removed on 2026-05-29). |
 | **LLM endpoints** (OpenAI-compatible) | Not exercised by the integration/e2e suite. |
 
 ## Open questions / smells

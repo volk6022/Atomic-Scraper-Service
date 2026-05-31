@@ -1,5 +1,12 @@
 # Spec vs Reality Reconcile
 
+> **Update 2026-05-29**: the research agent (`src/actions/research/{graph,nodes,state}.py`)
+> was replaced by a flat tool-calling loop in `src/actions/research/agent.py:run_research`.
+> Several items below are now resolved or moot; the originals are kept for history with a
+> strikethrough + note. Net result: **C-02 closed**, **M-05/M-06 partially resolved**,
+> **M-14 moot (no checkpointer to restart-protect any more)**, **MN-07 partially closed**,
+> **Constitution X status raised**. Full details next to each item.
+
 ## Executive summary
 
 Cross-checking specs 009/010/011/013, the constitution v1.5.0, and manifests (README/AGENTS/STRUCTURE/web_interactions) against reports 01–19 yields **9 CRITICAL, 16 MAJOR, 17 MINOR, 6 INFO** discrepancies. Headline problems:
@@ -30,11 +37,9 @@ Plus widespread doc drift: STRUCTURE.md/AGENTS.md reference files that do not ex
 **Impact**: FR-009 / SC-005 unenforceable in production; all clients sharing the same API host compete for a single bucket; `*.yandex.*` pattern essentially dead.
 **Recommendation**: Either parse target URL out of payload in middleware (per-route adapter) or invoke `TokenBucket.consume(domain)` explicitly from `yandex_maps.py` / `enrichment.py` / `site_enricher.py` before issuing the outbound Playwright request.
 
-#### C-02: `tokens_used` is never incremented → constitution X(b) only 3/4 enforced
-**Source spec**: constitution X(b), spec 011 FR-008, US3 acceptance scenarios.
-**Reality (reports 13, 14)**: `ResearchState.tokens_used` initialised to 0 in `mode_to_initial_state`; no node, no LLM client wrapper, no `usage.total_tokens` aggregation increments it. Beast-mode by 85% token budget is dead branch in `reflect_node`. Wall-clock deadline + `stall_counter` work.
-**Impact**: A user submitting `max_tokens=1000` will never see beast-mode for budget reasons; long quality-mode runs (`token_budget=1_000_000`) can spend through huge LLM quotas without the safety brake the constitution mandates.
-**Recommendation**: Capture `response.usage.total_tokens` inside `OpenAICompatibleClient.generate`, add `tokens_used += ...` in `extract_facts_node` / `answer_node` / `plan_node`, and re-enable the 85% threshold check.
+#### C-02: ~~`tokens_used` is never incremented → constitution X(b) only 3/4 enforced~~ — **RESOLVED 2026-05-29**
+**Original**: `ResearchState.tokens_used` was dead; beast-mode by 85% token budget never fired.
+**Resolution**: The LangGraph agent (and `ResearchState`/`beast_mode` with it) was removed. The replacement flat-loop agent (`src/actions/research/agent.py`) captures `prompt_tokens` + `completion_tokens` from every `OpenAICompatibleClient.chat()` call (main loop and auxiliary critic/refraser/compact calls accumulated separately), and the main loop enforces a cumulative `preset.token_budget` (or caller-supplied `max_tokens`) as a hard exit wall. Loop-safety is now: `max_turns` (per-mode preset + caller override), wall-clock `deadline`, cumulative token cap, critic-gate + force-accept after N rejects, plus context-hygiene knobs (`soft_elide`, `compact_context`). Constitution X(b) is satisfied in spirit — the "85% threshold" is no longer the right shape because there is no beast-mode-then-finish branch; the model is forced to wrap up via the critic + token wall instead.
 
 #### C-03: Session inactivity timeout: spec 600 s vs deployed 1800 s
 **Source spec**: `specs/009/spec.md` FR-007 ("10 minutes of inactivity"); constitution III; AGENTS.md repeats "10 minutes".
@@ -103,12 +108,12 @@ Plus widespread doc drift: STRUCTURE.md/AGENTS.md reference files that do not ex
 
 #### M-05: Research `max_iterations` vs `max_iters` naming drift
 **spec 011 contracts/api.md**: `max_iterations` (1-20), `max_tokens` (1000-32000); data-model identical.
-**Reality (reports 05, 13)**: `ResearchRequest` uses `max_iters` (1-50), `max_tokens` (1000-2_000_000). Override bounds intentionally raised on 2026-05-20 to fit `quality` preset (`max_iters=25`, `token_budget=1_000_000`).
-**Impact**: Clients following 011 contract get 422 on `max_iterations` field name; numeric bounds no longer match spec.
+**Reality (reports 05, 13)**: `ResearchRequest` uses `max_iters` (1-50), `max_tokens` (1000-2_000_000). Override bounds raised on 2026-05-20 to fit `quality` preset (`max_iters=25`, `token_budget=1_000_000`). After 2026-05-29 `max_iters` is forwarded into the flat-loop agent as `max_turns` (semantic match — LLM turns rather than graph iterations).
+**Impact**: Clients following 011 contract get 422 on `max_iterations` field name; numeric bounds no longer match spec. Spec 011 needs an amendment to `max_iters`/`max_turns` semantics.
 
 #### M-06: Mode preset numbers drift from spec 011 data-model
 **spec 011 data-model**: speed=2 iters/4K tokens, balanced=5/8K, quality=10/16K.
-**Reality (report 13)**: speed=2/30K, balanced=6/100K, quality=25/1M.
+**Reality (report 13)**: speed=`max_turns=8`/30K, balanced=15/100K, quality=25/1M. (`max_turns` replaced `max_iters` in `ModePreset` on 2026-05-29 — speed bumped from 2 because LLM turns in a flat loop are not 1:1 with graph iterations.)
 **Impact**: SC-002/003/004 latency targets may still hold but token budgets are 100× spec; cost projections wrong; constitution X(a) "iteration limits, search breadth, scrape concurrency, token budgets per mode" is satisfied numerically but spec is stale.
 
 #### M-07: AI actions `click_omni` and `extract_jina` declared but unimplemented
@@ -142,13 +147,12 @@ Plus widespread doc drift: STRUCTURE.md/AGENTS.md reference files that do not ex
 
 #### M-13: No SSE schema validation; `/research/stream` events do not match spec
 **Source**: spec 011 contracts/api.md "Event Stream" lists `node_entered`, `node_exited`, `progress`, `completed` events.
-**Reality (reports 01, 14, 17)**: `emit_node_event` uses `logging.info` (not structlog), `task_id` is not propagated → store updates only twice (start/end), so `/status` shows `phase=starting, iteration=0` until `completed`. Contract test only checks `Content-Type: text/event-stream`, not event shapes.
-**Impact**: FR-021 ("structured log records at each graph-node boundary") unmet; US4 streaming functionally degraded.
+**Reality after 2026-05-29**: there are no nodes any more, so `node_entered`/`node_exited` events are not just unimplemented — they are no longer meaningful. The flat-loop agent (`run_research`) writes the task store only on completion, so SSE clients see `running → completed` with no intermediate progress. The deeper deficit (granular progress, structlog, task-id propagation) is still open and should be re-spec'd against the new agent shape.
+**Impact**: US4 streaming functionally degraded; spec 011 event vocabulary stale.
 
-#### M-14: `MemorySaver` recreated per `build_graph()`, no Redis-backed checkpoint
-**Source**: spec 011 FR-014 ("Completed reports retrievable for a reasonable period"); SC-005 ("100% produce a final report ... regardless of errors").
-**Reality (report 13)**: `MemorySaver()` is instantiated inside `build_graph()` on every call → checkpoints lost across worker restarts. Task store has 24-hour TTL but no in-flight checkpoint survival.
-**Impact**: Worker restart mid-research = task lost (status `failed`), violating SC-005 in pathological cases.
+#### M-14: ~~`MemorySaver` recreated per `build_graph()`, no Redis-backed checkpoint~~ — **MOOT 2026-05-29**
+**Original**: `MemorySaver()` was instantiated inside `build_graph()` on every call, so LangGraph checkpoints did not survive a worker restart.
+**Resolution**: there is no LangGraph and no `MemorySaver` any more. The flat-loop agent has no in-flight checkpoint at all — a worker restart mid-research still kills the task. SC-005 ("100% produce a final report regardless of errors") is therefore *worse* than before in the worker-restart edge case (we no longer even pretend to checkpoint), better in every other case (no Redis-backed checkpoint to maintain). If durable resumption matters, the right move now is task-level retry policy + persistence of the message history in Redis, not a graph checkpointer.
 
 #### M-15: Cleanup worker is not scheduled and does not actively kill actors
 **Source**: spec 009 FR-007, SC-002 (100% within 60 s).
@@ -162,9 +166,9 @@ Plus widespread doc drift: STRUCTURE.md/AGENTS.md reference files that do not ex
 
 ### MINOR
 
-#### MN-01: STRUCTURE.md lists files that do not exist
+#### MN-01: STRUCTURE.md lists files that do not exist — **PARTIALLY ADDRESSED 2026-05-29**
 **Reality**: No `src/api/middleware/auth.py` (real path: `src/api/auth.py`). No `src/actions/base.py`. No `src/actions/ai_actions.py`. No `src/domain/models/business_card.py`. No `src/infrastructure/external_api/jina_client.py`. No `src/infrastructure/external_api/omni_client.py`. (Reports 03, 05, 07, 10.)
-**Recommendation**: Rewrite STRUCTURE.md tree to match actual `src/` layout (incl. `src/actions/research/{graph,nodes,modes,state,tools,llm_utils}.py`).
+**Recommendation**: Rewrite STRUCTURE.md tree to match actual `src/` layout. The research subsystem block was refreshed on 2026-05-29 to list `agent.py / tools.py / modes.py / research_agent_prompts.yaml / llm_utils.py` and drop the deleted `graph.py / nodes.py / state.py`; the other phantom files above are still listed.
 
 #### MN-02: AGENTS.md test counts stale
 **AGENTS.md "Test Suite Status (2026-05-07)"**: unit=17, contract=28, integration=31, e2e=23, total=99 passed.
@@ -183,8 +187,8 @@ Same root as C-06.
 #### MN-06: AGENTS.md says proxies "rotated randomly per Yandex Maps request" — confirmed, but no sticky-per-domain
 Spec 010 edge case "Proxy Failure: ... attempt with an alternative proxy or fall back to direct connection" is not implemented (report 09: no blacklist, no retry, no hot-reload).
 
-#### MN-07: STRUCTURE.md does not mention `src/actions/research/`, `src/api/routers/research.py`, `src/infrastructure/tasks/`, `src/infrastructure/queue/research_task.py`, `src/mcp_server.py`
-Spec 011 added all of these; STRUCTURE.md is pre-011.
+#### MN-07: STRUCTURE.md `src/actions/research/`, `src/api/routers/research.py`, `src/infrastructure/tasks/`, `src/infrastructure/queue/research_task.py`, `src/mcp_server.py` — **PARTIALLY ADDRESSED 2026-05-29**
+Spec 011 added all of these; STRUCTURE.md was pre-011. As of 2026-05-29 STRUCTURE.md now lists `src/actions/research/` with its current files (`agent.py`, `tools.py`, `modes.py`, `research_agent_prompts.yaml`, `llm_utils.py`). The router/task/MCP entries are still missing.
 
 #### MN-08: `.env.example` drift
 **Reality (report 12)**: `SEARXNG_*`, `REDIS_HOST`, `REDIS_PORT`, `MAX_CONCURRENT_RESEARCH_TASKS` exist in `Settings` but missing from `.env.example`; `RATE_LIMIT_*` commented out.
@@ -250,12 +254,12 @@ Documented in AGENTS.md (report 18). Not a bug; flag as `requires_proxies` marke
 | VII. Backend-Only Focus | OK | No frontend code observed. |
 | VIII. Production Deployment Readiness | PARTIAL | Dockerfile + compose + healthcheck present (reports 04, 18) but `/healthz` lacks 503 path (C-09); compose worker module drift (C-08); CORS unset; lifespan startup empty (report 04). |
 | IX. Anti-Bot Detection Mitigation | PARTIAL | Stealth recipe + UA pool + proxy file all present (report 09) but rate-limit domain source is wrong (C-01); no sticky-per-domain proxy (MN-06); UA pool small/aging (MN-16); CAPTCHA = hard fail with no retry (report 08). |
-| X. Autonomous Research Agent | PARTIAL | Three modes, LangGraph, polling endpoints, SSE stream all present (reports 13, 14). 4 hard loop-safety constraints — **3 of 4 fully enforced** (deadline, stall, iter cap); **token budget 85% trigger is dead code** (C-02). Tool reuse OK (in-house SearXNG, SiteEnricher, LLMFacade — report 15). FR-022 Yandex-only-on-request: tool not implemented in `tools.py` (info, not a bug). |
+| X. Autonomous Research Agent | OK (re-evaluated 2026-05-29) | Three modes, flat-loop agent, polling endpoints, SSE stream all present (report 13). Loop-safety: `max_turns` (per-mode + caller override) + wall-clock `deadline` + cumulative token cap + critic-gate + force-accept after N rejects. Tool reuse OK (in-house SearXNG + SiteEnricher + LLM facade `chat()`, report 15). Spec 011's "node_entered/node_exited" SSE vocabulary is stale (M-13). `FR-022` Yandex-only-on-request: still N/A in `tools.py` (info, not a bug). LangGraph-era C-02 (dead `tokens_used`) and M-14 (no checkpointer) are no longer applicable. |
 
 ## Top 10 actionable items (приоритизировано)
 
 1. **Fix rate-limit domain source (C-01).** Move `consume()` call to `yandex_maps.py` / `enrichment.py` / `site_enricher.py` actions, keyed on the outbound URL host, OR have middleware parse target URL from payload for known routes.
-2. **Wire `tokens_used` (C-02).** Capture `response.usage.total_tokens` in `OpenAICompatibleClient.generate`, accumulate via state in nodes that call the LLM (`classify`, `plan`, `extract_facts_llm`, `answer`). Restores constitution X(b).
+2. ~~**Wire `tokens_used` (C-02).**~~ **Done 2026-05-29** via the flat-loop rewrite — usage is captured from `OpenAICompatibleClient.chat().usage` and a cumulative token cap is enforced in the main loop. No further action required.
 3. **Pick one inactivity timeout (C-03).** Patch `docker-compose.override.yml` to `SESSION_INACTIVITY_TIMEOUT=600` to match spec/AGENTS, or amend FR-007/AGENTS to 1800 and bump constitution III.
 4. **Standardise auth code on 401 (C-07).** Fix `auth.py`, rename misleading test, add contract assertions.
 5. **Repair `docker-compose.yml` worker command (C-08).** Drop non-existent `src.infrastructure.queue.tasks`, add `research_task`. Verify `docker compose up` from clean clone.
