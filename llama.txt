@@ -1,0 +1,1 @@
+"C:\Users\bhunp\work-software\llama-cpp\llama-server.exe" -m "C:\Users\bhunp\.lmstudio\models\Jackrong\Qwen3.5-9B-Claude-4.6-Opus-Reasoning-Distilled-GGUF\Qwen3.5-9B.Q4_K_S.gguf" --host 0.0.0.0 --port 20022 -ngl 99 -fa on -ctk q4_0 -ctv q4_0 -c 200000 -np 4 -cb -b 2048 -ub 512 --metrics
