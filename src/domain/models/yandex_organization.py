@@ -244,9 +244,16 @@ class YandexOrganization(BaseModel):
 
         title = item.get("title") or item.get("shortTitle") or item.get("name") or ""
 
+        # seoname: top-level preferred; fall back to chain.seoname (SSR format)
+        seoname = item.get("seoname") or ""
+        if not seoname:
+            chain = item.get("chain")
+            if isinstance(chain, dict):
+                seoname = chain.get("seoname") or ""
+
         return cls(
             oid=oid,
-            seoname=str(item.get("seoname") or ""),
+            seoname=str(seoname),
             title=str(title),
             permalink=item.get("permalink") or item.get("uri"),
             address=item.get("address"),

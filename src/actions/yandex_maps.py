@@ -22,11 +22,17 @@ from __future__ import annotations
 import asyncio
 import json
 import logging
+import re
+import time
+from datetime import datetime, timedelta, timezone
 from typing import Any, Optional
 from urllib.parse import quote
 
+import httpx
+
 from src.core.logging import get_logger
 from src.domain.models.dsl import CommandType
+from src.domain.models.yandex_card import YandexOrgCard
 from src.domain.models.yandex_organization import YandexOrganization
 from src.domain.models.yandex_review import YandexReview
 from src.domain.registry.action_registry import action_registry
@@ -92,6 +98,137 @@ def _is_business_item(it: Any) -> bool:
     )
 
 
+# --- httpx SSR helpers (no browser) -----------------------------------------
+#
+# Yandex server-renders the first page of search results and the reviews list
+# into a large inline <script> JSON blob. Pure httpx + SSR parsing is ~7x cheaper
+# than a browser and far more stable than fetchReviews observe-and-replay (see
+# parse-yandex-economy-experiment/). These helpers power the reviews and card
+# actions; the browser path is kept only as a captcha fallback.
+
+_SCRIPT_RE = re.compile(r"<script[^>]*>(.*?)</script>", re.S)
+_HTTP_HEADERS = {
+    "User-Agent": (
+        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
+        "(KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+    ),
+    "Accept": "text/html",
+    "Accept-Language": "ru-RU,ru;q=0.9",
+    "Accept-Encoding": "gzip, deflate, br",
+}
+
+
+# In-process dead-proxy memory: ports that just connect-failed are skipped for a
+# TTL so traffic concentrates on the currently-live subset of the pool. Entries
+# expire (the pool is rotating-residential and ports recover).
+_DEAD_PROXIES: dict[str, float] = {}
+_DEAD_TTL_S = 60.0  # ports rotate live/dead; re-try a benched port fairly soon
+
+
+def _build_proxy_url(p: dict) -> str:
+    server = p["server"]  # e.g. "http://host:port"
+    if p.get("username") and "://" in server:
+        scheme, rest = server.split("://", 1)
+        return f"{scheme}://{p['username']}:{p['password']}@{rest}"
+    return server
+
+
+def _mark_proxy_dead(url: Optional[str]) -> None:
+    if url:
+        _DEAD_PROXIES[url] = time.monotonic() + _DEAD_TTL_S
+
+
+def _httpx_proxy() -> Optional[str]:
+    """Next proxy URL from the rotating pool, skipping recently-dead ones."""
+    n = max(1, len(getattr(proxy_provider, "_proxies", []) or [1]))
+    now = time.monotonic()
+    fallback: Optional[str] = None
+    for _ in range(n):
+        p = proxy_provider.get_proxy()
+        if not p:
+            return None
+        url = _build_proxy_url(p)
+        fallback = url
+        if _DEAD_PROXIES.get(url, 0.0) <= now:
+            return url
+    return fallback  # whole pool flagged dead — try one anyway
+
+
+def _big_blob(html: str) -> Optional[dict]:
+    """Return the largest inline <script> JSON object (the SSR state blob)."""
+    for m in _SCRIPT_RE.finditer(html):
+        t = m.group(1).strip()
+        if len(t) < 20_000:
+            continue
+        try:
+            return json.loads(t)
+        except Exception:
+            try:
+                return json.loads(t[t.find("{"):])
+            except Exception:
+                continue
+    return None
+
+
+def _ssr_first_item(blob: Optional[dict]) -> Optional[dict]:
+    """`stack[0].results.items[0]` — the focal org on a card/reviews page."""
+    try:
+        return blob["stack"][0]["results"]["items"][0]  # type: ignore[index]
+    except Exception:
+        return None
+
+
+_HTTP_TIMEOUT = httpx.Timeout(connect=4.0, read=20.0, write=20.0, pool=20.0)
+
+
+async def _one_get(url: str, proxy: Optional[str]) -> str:
+    """Single proxied GET. Returns HTML, or raises (captcha / connect / read)."""
+    async with httpx.AsyncClient(
+        proxy=proxy, headers=_HTTP_HEADERS, timeout=_HTTP_TIMEOUT, follow_redirects=True
+    ) as client:
+        resp = await client.get(url)
+    html = resp.text
+    low = html.lower()
+    if "smartcaptcha" in low or "showcaptcha" in low:
+        raise YandexCaptchaError(f"captcha on {url[:120]}")
+    if len(html) < 50_000:  # SSR pages are ~600 KB; a short body == proxy error page
+        raise RuntimeError(f"short body ({len(html)}B) — likely proxy error page")
+    return html
+
+
+async def _http_get_html(url: str, *, tries: int = 20) -> str:
+    """GET a Yandex SSR page, rotating proxies SEQUENTIALLY one at a time.
+
+    The puls-proxy pool is concurrency-capped — firing many proxies at once trips
+    the cap and turns live ports into timeouts. Sequential with a short connect
+    timeout is both reliable and cheap: dead/unprovisioned ports are abandoned in
+    ~5 s, live ports answer in ~4-5 s.
+    """
+    last_exc: Optional[Exception] = None
+    for _ in range(tries):
+        proxy = _httpx_proxy()
+        try:
+            return await _one_get(url, proxy)
+        except YandexCaptchaError:
+            raise
+        except (httpx.ConnectError, httpx.ConnectTimeout) as exc:
+            # Port not accepting connections → bench it; keep slow-but-live ports.
+            _mark_proxy_dead(proxy)
+            last_exc = exc
+        except Exception as exc:  # noqa: BLE001 — read timeout / short body; just rotate
+            last_exc = exc
+    raise RuntimeError(f"httpx GET failed after {tries} proxies: {last_exc}")
+
+
+def _parse_review_dt(value: Any) -> Optional[datetime]:
+    if not value:
+        return None
+    try:
+        return datetime.fromisoformat(str(value).replace("Z", "+00:00"))
+    except Exception:
+        return None
+
+
 class YandexMapsExtractAction:
     """Discovery: text-query search inside a region → list[YandexOrganization]."""
 
@@ -109,6 +246,8 @@ class YandexMapsExtractAction:
         city_slug: str = "saint-petersburg",
         target_count: int = 40,
         include_raw: bool = True,
+        ll_lat: Optional[float] = None,
+        ll_lon: Optional[float] = None,
     ) -> list[YandexOrganization]:
         proxy = proxy_provider.get_proxy() or None
         user_agent = self.user_agent_pool.get_user_agent()
@@ -149,9 +288,9 @@ class YandexMapsExtractAction:
             page = await context.new_page()
             page.on("response", on_response)
 
-            url = (
-                f"https://yandex.ru/maps/{region_id}/{city_slug}/search/{quote(query, safe='')}/"
-            )
+            url = f"https://yandex.ru/maps/{region_id}/{city_slug}/search/{quote(query, safe='')}/"
+            if ll_lat is not None and ll_lon is not None:
+                url += f"?ll={ll_lon},{ll_lat}&z=17"
             try:
                 await page.goto(url, wait_until="domcontentloaded", timeout=60_000)
             except Exception as exc:
@@ -169,6 +308,11 @@ class YandexMapsExtractAction:
             except Exception as exc:
                 logger.warning("results panel never appeared: %s", exc)
 
+            # Extract SSR-rendered first page of results (Yandex switched from
+            # pure XHR to server-side rendering the initial batch in a <script>
+            # tag; pagination still fires XHR /maps/api/search on scroll).
+            ssr_items = await self._extract_ssr_items(page)
+
             await self._scroll_until(page, target_count)
 
             # Drain pending body reads before closing the context (else
@@ -182,12 +326,51 @@ class YandexMapsExtractAction:
             except Exception:
                 pass
 
+        # Merge SSR items (initial page) with XHR items (pagination scrolls).
+        # SSR items are injected as a synthetic "captured" response so the same
+        # _parse_captured code path handles dedup.
+        if ssr_items:
+            captured.insert(0, {"url": "ssr://initial", "status": 200,
+                                 "body": json.dumps({"items": ssr_items})})
+
         orgs = self._parse_captured(captured, include_raw=include_raw)
         logger.info(
-            "yandex_maps.extract: captured=%d unique_orgs=%d",
-            len(captured), len(orgs),
+            "yandex_maps.extract: ssr=%d captured=%d unique_orgs=%d",
+            len(ssr_items), len(captured), len(orgs),
         )
         return orgs
+
+    async def _extract_ssr_items(self, page) -> list[dict[str, Any]]:
+        """Extract the initial search results from the SSR JSON embedded in <script>.
+
+        Yandex Maps now renders the first page of results server-side: the data
+        lives in the largest <script> block as
+        ``{stack: [{results: {items: [...]}}]}``.
+        Pagination still uses the old /maps/api/search XHR (handled elsewhere).
+        """
+        try:
+            scripts = await page.query_selector_all("script")
+            for s in scripts:
+                text = await s.inner_text()
+                if len(text) < 100_000:
+                    continue
+                try:
+                    data = json.loads(text)
+                except Exception:
+                    continue
+                stack = data.get("stack")
+                if not isinstance(stack, list) or not stack:
+                    continue
+                results = stack[0].get("results") if isinstance(stack[0], dict) else None
+                if not isinstance(results, dict):
+                    continue
+                items = results.get("items")
+                if isinstance(items, list):
+                    logger.debug("ssr_extract: found %d items in script tag", len(items))
+                    return items
+        except Exception as exc:
+            logger.debug("ssr_extract failed: %s", exc)
+        return []
 
     async def _scroll_until(self, page, target_count: int) -> None:
         """DOM-scroll until either target reached or the list stops growing."""
@@ -263,8 +446,39 @@ class YandexMapsExtractAction:
         return orgs
 
 
+class YandexMapsCardAction:
+    """Card: fetch the rich org page via httpx SSR → YandexOrgCard.
+
+    The card page carries `socialLinks` (with @-handles), `description`, full
+    phones and `ratingData` that the search results omit — the primary
+    deterministic source of social-DM channels for outreach.
+    """
+
+    async def execute(
+        self,
+        business_oid: str,
+        seoname: str,
+        include_raw: bool = False,
+    ) -> YandexOrgCard:
+        url = f"https://yandex.ru/maps/org/{seoname}/{business_oid}/"
+        logger.info("yandex_maps.card: oid=%s seoname=%s", business_oid, seoname)
+        html = await _http_get_html(url)
+        item = _ssr_first_item(_big_blob(html))
+        if not item:
+            raise RuntimeError(f"card SSR item not found for oid={business_oid}")
+        card = YandexOrgCard.from_card_item(
+            item, oid=business_oid, seoname=seoname, keep_raw=include_raw
+        )
+        logger.info(
+            "yandex_maps.card: oid=%s social=%d phones=%d descr=%s",
+            business_oid, len(card.social_links), len(card.phones),
+            bool(card.description),
+        )
+        return card
+
+
 class YandexMapsReviewsAction:
-    """Reviews: observe `fetchReviews` URL, replay via same browser session."""
+    """Reviews: httpx SSR `?page=N&ranking=…` pagination (browser = captcha fallback)."""
 
     def __init__(self) -> None:
         self.pool_manager = pool_manager
@@ -276,11 +490,78 @@ class YandexMapsReviewsAction:
         self,
         business_oid: str,
         seoname: str,
+        max_count: int = 50,
+        ranking: str = "by_time",
+        since_months: Optional[int] = None,
+        include_raw: bool = True,
+    ) -> list[YandexReview]:
+        """httpx SSR pagination: GET /reviews/?page=N&ranking=…; stop on date/cap."""
+        cutoff = (
+            datetime.now(timezone.utc) - timedelta(days=since_months * 30.4)
+            if since_months else None
+        )
+        base = f"https://yandex.ru/maps/org/{seoname}/{business_oid}/reviews/"
+        logger.info(
+            "yandex_maps.reviews(ssr): oid=%s seoname=%s max=%s ranking=%s since_months=%s",
+            business_oid, seoname, max_count, ranking, since_months,
+        )
+        collected: list[dict[str, Any]] = []
+        seen_ids: set[str] = set()
+        stop = False
+        for page in range(1, 13):  # SSR depth limit ~12 pages (~600 reviews)
+            try:
+                html = await _http_get_html(base + f"?page={page}&ranking={ranking}")
+            except YandexCaptchaError:
+                logger.warning("reviews httpx hit captcha; falling back to browser")
+                return await self._execute_browser(
+                    business_oid, seoname, count=max_count, ranking=ranking,
+                    pages=max(1, (max_count + 49) // 50), include_raw=include_raw,
+                )
+            item = _ssr_first_item(_big_blob(html))
+            revs = (item or {}).get("reviewResults", {}).get("reviews") if item else None
+            if not revs:
+                break
+            page_window = 0
+            for rv in revs:
+                if not isinstance(rv, dict):
+                    continue
+                rid = str(rv.get("reviewId") or rv.get("id") or rv.get("publicId") or "")
+                if not rid or rid in seen_ids:
+                    continue
+                if cutoff is not None:
+                    d = _parse_review_dt(rv.get("updatedTime"))
+                    if d is not None:
+                        if d < cutoff:
+                            continue
+                        page_window += 1
+                seen_ids.add(rid)
+                collected.append(rv)
+                if len(collected) >= max_count:
+                    stop = True
+                    break
+            if stop:
+                break
+            # stop once a whole page is entirely outside the date window
+            if cutoff is not None and page_window == 0:
+                break
+            await asyncio.sleep(0.4)
+
+        reviews = self._dedup_reviews(collected, include_raw=include_raw)
+        logger.info(
+            "yandex_maps.reviews(ssr): oid=%s collected=%d", business_oid, len(reviews),
+        )
+        return reviews
+
+    async def _execute_browser(
+        self,
+        business_oid: str,
+        seoname: str,
         count: int = 50,
         ranking: str = "by_time",
         pages: int = 1,
         include_raw: bool = True,
     ) -> list[YandexReview]:
+        """Legacy browser observe-and-replay path; used only as captcha fallback."""
         proxy = proxy_provider.get_proxy() or None
         user_agent = self.user_agent_pool.get_user_agent()
         logger.info(

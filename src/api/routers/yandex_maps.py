@@ -9,11 +9,14 @@ from fastapi import APIRouter, Depends, HTTPException
 
 from src.actions.yandex_maps import (
     YandexCaptchaError,
+    YandexMapsCardAction,
     YandexMapsExtractAction,
     YandexMapsReviewsAction,
 )
 from src.api.auth import get_api_key
 from src.domain.models.requests import (
+    YandexMapsCardRequest,
+    YandexMapsCardResponse,
     YandexMapsExtractRequest,
     YandexMapsExtractResponse,
     YandexMapsReviewsRequest,
@@ -39,6 +42,8 @@ async def extract_organizations(request: YandexMapsExtractRequest) -> YandexMaps
             city_slug=request.city_slug,
             target_count=request.target_count,
             include_raw=request.include_raw,
+            ll_lat=request.ll_lat,
+            ll_lon=request.ll_lon,
         )
     except YandexCaptchaError as exc:
         raise HTTPException(status_code=503, detail=f"yandex captcha: {exc}") from exc
@@ -55,20 +60,20 @@ async def extract_organizations(request: YandexMapsExtractRequest) -> YandexMaps
 
 @router.post("/reviews", response_model=YandexMapsReviewsResponse)
 async def fetch_reviews(request: YandexMapsReviewsRequest) -> YandexMapsReviewsResponse:
-    """Fetch reviews for a single organization via observation-and-replay.
+    """Fetch reviews for a single organization via httpx SSR pagination.
 
-    Launches a browser session against the org's `/reviews/` page, observes the
-    actual `fetchReviews` XHR URLs the SPA fires, and replays them in the same
-    session so cookies and CSRF token are honoured automatically.
+    GETs the org's `/reviews/?page=N&ranking=…` pages and parses the SSR-embedded
+    `reviewResults.reviews` (50/page, no browser/CSRF). Stops on `since_months`
+    date window or `max_count`. Falls back to the browser only on captcha.
     """
     try:
         action = YandexMapsReviewsAction()
         reviews = await action.execute(
             business_oid=request.business_oid,
             seoname=request.seoname,
-            count=request.count,
+            max_count=request.max_count,
             ranking=request.ranking,
-            pages=request.pages,
+            since_months=request.since_months,
             include_raw=request.include_raw,
         )
     except YandexCaptchaError as exc:
@@ -81,3 +86,26 @@ async def fetch_reviews(request: YandexMapsReviewsRequest) -> YandexMapsReviewsR
         total=len(reviews),
         business_oid=request.business_oid,
     )
+
+
+@router.post("/card", response_model=YandexMapsCardResponse)
+async def fetch_card(request: YandexMapsCardRequest) -> YandexMapsCardResponse:
+    """Fetch the rich org CARD via httpx SSR.
+
+    Returns `socialLinks` (VK/Telegram/WhatsApp with handles), `description`,
+    full phones, hours and rating — the deterministic source of social-DM
+    channels that the search results omit.
+    """
+    try:
+        action = YandexMapsCardAction()
+        card = await action.execute(
+            business_oid=request.business_oid,
+            seoname=request.seoname,
+            include_raw=request.include_raw,
+        )
+    except YandexCaptchaError as exc:
+        raise HTTPException(status_code=503, detail=f"yandex captcha: {exc}") from exc
+    except Exception as exc:  # noqa: BLE001
+        raise HTTPException(status_code=500, detail=str(exc)) from exc
+
+    return YandexMapsCardResponse(card=card, business_oid=request.business_oid)

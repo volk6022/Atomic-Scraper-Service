@@ -1,0 +1,114 @@
+{
+  "N": 517,
+  "status": {
+    "?": 517
+  },
+  "nonempty_card": 500,
+  "nonempty_card_pct": 96.7,
+  "no_submit_attempt": 13,
+  "submit_attempts_dist": {
+    "0": 13,
+    "1": 478,
+    "2": 21,
+    "3": 5
+  },
+  "tools": {
+    "web_serp": {
+      "mean": 8.8,
+      "median": 8,
+      "min": 1,
+      "max": 30
+    },
+    "web_scrape": {
+      "mean": 11.5,
+      "median": 10,
+      "min": 0,
+      "max": 59
+    },
+    "submit": {
+      "mean": 1.0,
+      "median": 1,
+      "min": 0,
+      "max": 3
+    },
+    "serp_total": 4550,
+    "scrape_total": 5942,
+    "serp_per_scrape_ratio": {
+      "mean": 1.0,
+      "median": 0.7692307692307693,
+      "min": 0.075,
+      "max": 10.0
+    }
+  },
+  "duplicate_queries": {
+    "mean_dup_frac": 0.008,
+    "researches_with_>=30%_dups": 1
+  },
+  "critic_score": {
+    "mean": 8.9,
+    "median": 9.0,
+    "min": 6.5,
+    "max": 9.6
+  },
+  "turns": {
+    "mean": 10.2,
+    "median": 10,
+    "min": 2,
+    "max": 25
+  },
+  "elapsed_s": {
+    "mean": 306.8,
+    "median": 285.6,
+    "min": 11.5,
+    "max": 1201.5
+  },
+  "tokens_grand_total": {
+    "mean": 60407.4,
+    "median": 50056,
+    "min": 4262,
+    "max": 330565
+  },
+  "compactions": {
+    "mean": 0,
+    "median": 0,
+    "min": 0,
+    "max": 0
+  },
+  "refraser_runs": {
+    "mean": 0.1,
+    "median": 0,
+    "min": 0,
+    "max": 4
+  },
+  "field_fill_rate_pct": {
+    "what_they_do": 96.7,
+    "scale_indicators": 96.5,
+    "tech_stack": 45.3,
+    "vacancies": 60.0,
+    "social": 80.9,
+    "phones": 95.6,
+    "emails": 15.5,
+    "websites": 80.7,
+    "problems_signals": 15.9,
+    "sources": 96.5,
+    "ym_filled": 95.6
+  },
+  "contacts": {
+    "with_email": 80,
+    "with_email_pct": 15.5,
+    "with_phone": 494,
+    "only_phone_no_email": 414,
+    "only_phone_pct": 80.1,
+    "with_social": 418,
+    "with_social_pct": 80.9,
+    "no_contact_at_all": 22,
+    "social_by_platform": {
+      "vk": 398,
+      "telegram": 140,
+      "instagram": 204,
+      "youtube": 31,
+      "linkedin": 5,
+      "habr": 7
+    }
+  }
+}

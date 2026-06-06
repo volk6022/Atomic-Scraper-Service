@@ -332,10 +332,16 @@ def soft_elide(messages: list[dict], current_turn: int, after_turns: int) -> int
 
 # --- state ------------------------------------------------------------------
 
+def _norm_query(q: str) -> str:
+    """Normalize a SERP query for duplicate detection (case/punct/space-insensitive)."""
+    return _WS_RE.sub(" ", re.sub(r"[^\w\s]", " ", q.lower(), flags=re.UNICODE)).strip()
+
+
 @dataclass
 class AgentState:
     serp_call_count: int = 0
     queries_history: list[str] = field(default_factory=list)
+    serp_seen: set[str] = field(default_factory=set)
     visited_urls: set[str] = field(default_factory=set)
     domain_fail_count: dict[str, int] = field(default_factory=dict)
     compaction_count: int = 0
@@ -556,6 +562,50 @@ async def _run_web_scrape(
     }
 
 
+async def _forced_submit(
+    client: Any,
+    messages: list[dict],
+    submit_name: str,
+    output_schema: dict | None,
+    usage: dict,
+    timeout: float,
+) -> dict | None:
+    """Last-resort submission when the loop ended without the model ever calling
+    submit (it looped on searches). Pins the submit tool so the model must emit a
+    final result from the gathered context. Returns parsed args, or None."""
+    tools, _ = build_tools(output_schema)
+    submit_tool = [t for t in tools if t["function"]["name"] == submit_name]
+    force_msg = {
+        "role": "user",
+        "content": (
+            f"You are out of turns. Call {submit_name} NOW using everything you have "
+            "gathered above. Fill every field you have evidence for; leave unknown "
+            "fields empty or null. Do not search or scrape further."
+        ),
+    }
+    try:
+        resp = await client.chat(
+            messages=_strip_meta(messages) + [force_msg],
+            tools=submit_tool,
+            tool_choice={"type": "function", "function": {"name": submit_name}},
+            timeout=timeout,
+        )
+    except Exception as e:  # noqa: BLE001
+        logger.warning("forced submit failed: %r", e)
+        return None
+    u = resp.get("usage") or {}
+    usage["prompt"] += u.get("prompt_tokens", 0) or 0
+    usage["completion"] += u.get("completion_tokens", 0) or 0
+    for tc in resp.get("tool_calls") or []:
+        if tc.get("name") == submit_name:
+            try:
+                parsed = json.loads(tc.get("arguments") or "{}")
+                return parsed if isinstance(parsed, dict) else None
+            except Exception:
+                return None
+    return None
+
+
 # --- main entry point -------------------------------------------------------
 
 async def run_research(
@@ -712,25 +762,54 @@ async def run_research(
                 k = int(args.get("k") or default_k)
                 state.queries_history.append(q)
                 state.serp_call_count += 1
-                result = await _run_web_serp(q, k, language)
+                norm = _norm_query(q)
+                if norm and norm in state.serp_seen:
+                    # Anti-loop guard: identical search already executed. Don't
+                    # re-run it — push toward scraping a found URL or submitting.
+                    result = {
+                        "query": q,
+                        "duplicate": True,
+                        "results": [],
+                        "note": (
+                            "You already ran this exact search. Do NOT repeat queries. "
+                            "Either web_scrape one of the URLs you already found "
+                            "(contacts live on the site, not in snippets), try a clearly "
+                            f"different query, or call {submit_name} now with what you have."
+                        ),
+                        "recent_queries": state.queries_history[-8:],
+                    }
+                else:
+                    if norm:
+                        state.serp_seen.add(norm)
+                    result = await _run_web_serp(q, k, language)
 
-                blocked = sorted(
-                    d for d, c in state.domain_fail_count.items() if c >= fail_threshold
-                )
-                if blocked:
-                    result["_blocked_domains"] = blocked
-
-                if refraser_every and state.serp_call_count % refraser_every == 0:
-                    refraser_runs += 1
-                    ref = await refraser_call(
-                        client, prompts=prompts, language=language, query=query,
-                        queries_history=state.queries_history,
-                        visited_urls=state.visited_urls,
-                        usage=aux_usage, timeout=llm_timeout,
+                    blocked = sorted(
+                        d for d, c in state.domain_fail_count.items() if c >= fail_threshold
                     )
-                    if ref.get("new_angles"):
-                        result["_supervisor_hint"] = ref
-                        trace.append({"turn": turn, "role": "refraser", "angles": ref["new_angles"]})
+                    if blocked:
+                        result["_blocked_domains"] = blocked
+
+                    # Nudge toward scraping when over-searching: emails/phones live
+                    # on the actual pages, not in SERP snippets.
+                    scrapes = tool_call_count.get("web_scrape", 0)
+                    if state.serp_call_count >= 4 and scrapes * 2 < state.serp_call_count:
+                        result["_scrape_reminder"] = (
+                            f"You've searched {state.serp_call_count}× but scraped only "
+                            f"{scrapes} page(s). Emails and phone numbers live on the actual "
+                            "site/contact pages — web_scrape the most promising URLs now."
+                        )
+
+                    if refraser_every and state.serp_call_count % refraser_every == 0:
+                        refraser_runs += 1
+                        ref = await refraser_call(
+                            client, prompts=prompts, language=language, query=query,
+                            queries_history=state.queries_history,
+                            visited_urls=state.visited_urls,
+                            usage=aux_usage, timeout=llm_timeout,
+                        )
+                        if ref.get("new_angles"):
+                            result["_supervisor_hint"] = ref
+                            trace.append({"turn": turn, "role": "refraser", "angles": ref["new_angles"]})
 
             elif name == "web_scrape":
                 url = str(args.get("url", ""))
@@ -843,6 +922,27 @@ async def run_research(
         if main_usage["prompt"] + main_usage["completion"] >= token_cap:
             trace.append({"turn": turn, "role": "note", "content": "token cap reached"})
             break
+
+    # Salvage: if the LLM never produced a submission (looped on searches until the
+    # cap), force one final structured submission from the gathered context instead
+    # of returning an empty card.
+    schema_empty = output_schema is not None and last_structured is None
+    free_empty = output_schema is None and not last_answer
+    if not accepted and (schema_empty or free_empty):
+        forced = await _forced_submit(
+            client, messages, submit_name, output_schema, main_usage, llm_timeout
+        )
+        if forced is not None:
+            state.submit_attempts += 1
+            if output_schema is None:
+                last_answer = str(forced.get("answer") or "")
+                last_sources = sanitize_sources(forced.get("sources"))
+            else:
+                ro = forced.get("result")
+                last_structured = ro if isinstance(ro, dict) else None
+                last_sources = sanitize_sources(forced.get("sources"))
+            trace.append({"turn": "post", "role": "forced_submit",
+                          "ok": bool(last_structured) or bool(last_answer)})
 
     # Force-accept the last proposal if the loop ended without a clean pass.
     if not accepted:

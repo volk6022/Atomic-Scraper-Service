@@ -151,6 +151,27 @@ ORG_CARD_SCHEMA: dict[str, Any] = {
 }
 
 
+# Категории, для которых tech_stack осмыслен. Для остальных (кафе, пекарни,
+# салоны…) поле убираем из схемы — анализ 517 показал schema_gap у 141 орг
+# (tech_stack массово пуст и нерелевантен).
+TECH_CATEGORY_HINTS = (
+    "it", "айти", "разработк", "программн", "софт", "software", "веб", "web",
+    "digital", "диджитал", "интернет", "телеком", "хостинг", "стартап",
+    "маркетинг", "реклам", "агентств", "студия", "дизайн", "сайт", "приложен",
+    "data", "ai", "ml", "saas", "кибербез", "интегратор", "1с", "crm",
+)
+
+
+def build_org_card_schema(categories: list[str]) -> dict:
+    """Схема карточки под конкретную орг: tech_stack только для tech/digital."""
+    import copy
+    schema = copy.deepcopy(ORG_CARD_SCHEMA)
+    cats = " ".join(str(c) for c in (categories or [])).lower()
+    if not any(h in cats for h in TECH_CATEGORY_HINTS):
+        schema["properties"].pop("tech_stack", None)
+    return schema
+
+
 def load_reviews_snippets(oid: str, max_snippets: int = 8) -> list[str]:
     """Return up to N short review texts from cached data/reviews/{oid}.json.
 
@@ -219,24 +240,36 @@ def build_query(org: dict[str, Any]) -> str:
             + "\n".join(f"- {s}" for s in review_snippets)
         )
 
+    cats_lower = cats.lower()
+    tech_line = ""
+    if any(h in cats_lower for h in TECH_CATEGORY_HINTS):
+        tech_line = "- используемые технологии / стек (только если это IT/digital-компания)\n"
+
     return (
         f"{context}.\n\n"
-        f"Собери карточку организации. Найди:\n"
+        f"Собери карточку организации. ПРИОРИТЕТ — найти канал для связи в соцсетях, "
+        f"т.к. основной способ выхода на такие организации это личное сообщение (DM) "
+        f"в соцсети, а не email и не звонок.\n\n"
+        f"Найди:\n"
+        f"- СОЦСЕТИ организации (VK, Telegram, Instagram, в т.ч. ссылку на активный "
+        f"профиль/группу и @-хэндл/ник для DM). Это самое важное.\n"
         f"- что компания делает (короткое описание услуг/продуктов)\n"
-        f"- индикаторы масштаба (число локаций, сотрудников, годовой оборот, если есть)\n"
-        f"- используемые технологии / стек (если упоминаются)\n"
-        f"- открытые вакансии (hh.ru, superjob.ru, карьерные страницы)\n"
-        f"- соцсети (VK, Telegram, Instagram, YouTube, LinkedIn, Habr)\n"
-        f"- контакты (телефоны и email с контекстом — отдел / роль)\n"
         f"- все сайты компании (основной + лендинги + проектные)\n"
-        f"- сигналы проблем (жалобы клиентов, ручные процессы, упоминаемые pain points)\n\n"
-        f"Используй карточку Я.Карт и отзывы как первичный источник, дальше иди по сайтам и соцсетям. "
-        f"Не выдумывай данные — если поля нет, оставь пустым."
+        f"- контакты: email (с контекстом — отдел/роль) и телефоны; помечай, если "
+        f"телефон мобильный\n"
+        f"- индикаторы масштаба (число локаций/филиалов, сотрудников, оборот, если есть)\n"
+        f"- открытые вакансии (hh.ru, superjob.ru, карьерные страницы)\n"
+        f"{tech_line}"
+        f"- сигналы проблем (жалобы клиентов из отзывов, ручные процессы, pain points)\n\n"
+        f"Используй карточку Я.Карт и отзывы как первичный источник, дальше иди по "
+        f"сайтам и СОЦСЕТЯМ — обязательно открой найденные соцсети скрейпом, чтобы "
+        f"достать контактные данные/хэндл. Не выдумывай — если поля нет, оставь пустым."
         f"{reviews_block}"
     )
 
 
-async def run_research(client: httpx.AsyncClient, query: str) -> str | None:
+async def run_research(client: httpx.AsyncClient, query: str,
+                       output_schema: dict | None = None) -> str | None:
     """Запустить задачу, вернуть task_id или None при ошибке.
 
     Передаём ``language="ru"`` и ``output_schema=ORG_CARD_SCHEMA`` — это
@@ -252,7 +285,7 @@ async def run_research(client: httpx.AsyncClient, query: str) -> str | None:
                 "query": query,
                 "mode": MODE,
                 "language": LANGUAGE,
-                "output_schema": ORG_CARD_SCHEMA,
+                "output_schema": output_schema if output_schema is not None else ORG_CARD_SCHEMA,
             },
             timeout=30.0,
         )
@@ -328,7 +361,9 @@ async def process_org(
         t0 = time.time()
 
         query = build_query(org)
-        task_id = await run_research(client, query)
+        org_cats = [c.get("name", "") for c in (org.get("categories") or [])]
+        schema = build_org_card_schema(org_cats)
+        task_id = await run_research(client, query, output_schema=schema)
         if not task_id:
             return
 

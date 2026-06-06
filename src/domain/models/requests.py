@@ -4,6 +4,7 @@ import uuid
 
 from pydantic import BaseModel, Field, HttpUrl
 
+from src.domain.models.yandex_card import YandexOrgCard
 from src.domain.models.yandex_organization import YandexOrganization
 from src.domain.models.yandex_review import YandexReview
 
@@ -83,6 +84,12 @@ class YandexMapsExtractRequest(BaseModel):
     include_raw: bool = Field(
         True, description="Whether to include the upstream `raw` JSON per org in the response"
     )
+    ll_lat: Optional[float] = Field(
+        None, ge=-90.0, le=90.0, description="Map center latitude — scopes search to this location via ?ll="
+    )
+    ll_lon: Optional[float] = Field(
+        None, ge=-180.0, le=180.0, description="Map center longitude — scopes search to this location via ?ll="
+    )
 
 
 class YandexMapsExtractResponse(BaseModel):
@@ -93,19 +100,38 @@ class YandexMapsExtractResponse(BaseModel):
 
 
 class YandexMapsReviewsRequest(BaseModel):
-    """Fetch reviews for a single organization via `fetchReviews` replay."""
+    """Fetch reviews for a single organization via httpx SSR `?page=N` pagination.
+
+    SSR delivers 50 reviews/page (no browser, no CSRF). `since_months` stops once
+    reviews are older than the window; `max_count` caps the total.
+    """
 
     business_oid: str = Field(..., pattern=r"^\d+$", description="Yandex business id")
     seoname: str = Field(..., min_length=1, max_length=200, description="URL slug")
-    count: int = Field(50, ge=1, le=200, description="Reviews per page (Yandex internal cap ~50)")
+    max_count: int = Field(50, ge=1, le=300, description="Max reviews to collect (SSR depth ~600)")
     ranking: Literal["by_time", "by_rating"] = "by_time"
-    pages: int = Field(1, ge=1, le=10, description="Number of scroll-driven pages to collect")
+    since_months: Optional[int] = Field(
+        None, ge=1, le=60, description="Only keep reviews newer than N months (None = no date filter)"
+    )
     include_raw: bool = Field(True, description="Whether to keep the upstream raw JSON per review")
 
 
 class YandexMapsReviewsResponse(BaseModel):
     reviews: list[YandexReview]
     total: int
+    business_oid: str
+
+
+class YandexMapsCardRequest(BaseModel):
+    """Fetch the rich org CARD (socialLinks/description/hours) via httpx SSR."""
+
+    business_oid: str = Field(..., pattern=r"^\d+$", description="Yandex business id")
+    seoname: str = Field(..., min_length=1, max_length=200, description="URL slug")
+    include_raw: bool = Field(False, description="Whether to keep the upstream raw card JSON")
+
+
+class YandexMapsCardResponse(BaseModel):
+    card: YandexOrgCard
     business_oid: str
 
 

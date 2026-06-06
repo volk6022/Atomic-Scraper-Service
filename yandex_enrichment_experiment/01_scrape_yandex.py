@@ -1,10 +1,15 @@
-"""Парсинг организаций Яндекс.Карт в радиусе вокруг точки.
+"""Парсинг организаций Яндекс.Карт сеткой вокруг заданной точки.
 
-Точка: 59°54'57"N 30°19'49"E = (59.91583, 30.33028)
-Радиус: 2000 м
+Точка: 59.914403, 30.327319
+Радиус: 2500 м
+Сетка: шаг 200 м, нахлёст 20 м → эффективный шаг 180 м
 
-Идёт по списку категорий, собирает organizations, дедуплицирует по `oid`,
-фильтрует по haversine distance ≤ радиуса.
+Для каждой ячейки сетки × каждой категории делается запрос к API
+с ll={lon},{lat}&z=17, что фокусирует поиск на данной ячейке.
+Результаты дедуплицируются по oid и фильтруются haversine ≤ 2500 м.
+
+Кэш: data/raw_grid/g{idx:05d}_{category}.json — скрипт можно прерывать
+и запускать заново, уже обработанные ячейки пропускаются.
 """
 
 from __future__ import annotations
@@ -26,12 +31,17 @@ except Exception:
 API_URL = "http://localhost:8000/api/v1/yandex-maps/extract"
 API_KEY = "default_internal_key"
 
-CENTER_LAT = 59.91583
-CENTER_LON = 30.33028
-RADIUS_M = 2500.0  # bumped from 2000 → ~600 unique orgs expected
+CENTER_LAT = 59.914403
+CENTER_LON = 30.327319
+RADIUS_M = 2500.0
 
-# Широкий набор категорий для покрытия большинства организаций в районе.
-# Дубликаты дедуплицируются по oid в финальном списке.
+GRID_STEP_M = 200.0      # размер ячейки сетки, метры
+GRID_OVERLAP_M = 20.0    # нахлёст между соседними ячейками, метры
+EFFECTIVE_STEP_M = GRID_STEP_M - GRID_OVERLAP_M  # = 180 м
+
+# target_count меньше 100 — ищем в малой области, >30 орг на ячейку редко
+GRID_TARGET_COUNT = 30
+
 CATEGORIES = [
     "кафе",
     "ресторан",
@@ -61,14 +71,12 @@ CATEGORIES = [
 ]
 
 DATA_DIR = Path(__file__).parent / "data"
-RAW_DIR = DATA_DIR / "raw"
-REVIEWS_DIR = DATA_DIR / "reviews"
+RAW_GRID_DIR = DATA_DIR / "raw_grid"
 
+REVIEWS_DIR = DATA_DIR / "reviews"
 REVIEWS_API_URL = "http://localhost:8000/api/v1/yandex-maps/reviews"
-# Phase 6a: skip orgs with too few reviews — review collection is cheap but not
-# free (one Chromium session per call); orgs with 0-1 reviews don't help signal.
 REVIEWS_MIN_COUNT = 2
-REVIEWS_PAGES = 1   # 1 page ~= up to 50 reviews; enough for "reviews_sample"
+REVIEWS_PAGES = 1
 
 
 def haversine_m(lat1: float, lon1: float, lat2: float, lon2: float) -> float:
@@ -81,15 +89,57 @@ def haversine_m(lat1: float, lon1: float, lat2: float, lon2: float) -> float:
     return 2 * R * math.asin(math.sqrt(a))
 
 
-def fetch_reviews_for_org(
-    client: httpx.Client, oid: str, seoname: str, count: int = 50
-) -> dict[str, Any]:
-    """Fetch reviews for one org via /api/v1/yandex-maps/reviews.
+def generate_grid_points(
+    center_lat: float, center_lon: float, radius_m: float, step_m: float
+) -> list[tuple[float, float]]:
+    """Вернуть точки регулярной сетки внутри круга заданного радиуса.
 
-    Returns the raw response dict; errors are returned as
-    ``{"error": "...", "reviews": []}`` so caller can persist a sentinel and
-    avoid re-attempting forever.
+    Шаг задаётся в метрах и переводится в градусы с учётом широты центра.
+    Точки сортируются по расстоянию от центра (ближние обрабатываются первыми).
     """
+    lat_step = step_m / 111320.0
+    lon_step = step_m / (111320.0 * math.cos(math.radians(center_lat)))
+
+    n_steps = math.ceil(radius_m / step_m) + 1
+
+    points: list[tuple[float, float]] = []
+    for i in range(-n_steps, n_steps + 1):
+        for j in range(-n_steps, n_steps + 1):
+            lat = center_lat + i * lat_step
+            lon = center_lon + j * lon_step
+            if haversine_m(center_lat, center_lon, lat, lon) <= radius_m:
+                points.append((lat, lon))
+
+    points.sort(key=lambda p: haversine_m(center_lat, center_lon, p[0], p[1]))
+    return points
+
+
+def scrape_grid_cell(
+    client: httpx.Client, query: str, lat: float, lon: float
+) -> dict[str, Any]:
+    """Запрос к /extract с географической привязкой (ll=lon,lat&z=17)."""
+    resp = client.post(
+        API_URL,
+        headers={"X-API-Key": API_KEY, "Content-Type": "application/json"},
+        json={
+            "query": query,
+            "region_id": 2,
+            "city_slug": "saint-petersburg",
+            "target_count": GRID_TARGET_COUNT,
+            "include_raw": False,
+            "ll_lat": lat,
+            "ll_lon": lon,
+        },
+        timeout=180.0,
+    )
+    if resp.status_code != 200:
+        return {"error": resp.text[:300], "status": resp.status_code, "organizations": []}
+    return resp.json()
+
+
+def fetch_reviews_for_org(
+    client: httpx.Client, oid: str, seoname: str
+) -> dict[str, Any]:
     try:
         resp = client.post(
             REVIEWS_API_URL,
@@ -97,7 +147,7 @@ def fetch_reviews_for_org(
             json={
                 "business_oid": oid,
                 "seoname": seoname,
-                "count": count,
+                "count": 50,
                 "ranking": "by_time",
                 "pages": REVIEWS_PAGES,
                 "include_raw": False,
@@ -112,22 +162,15 @@ def fetch_reviews_for_org(
 
 
 def collect_reviews_for_all(organizations: list[dict[str, Any]]) -> None:
-    """For each org with sufficient review count, fetch and cache reviews.
-
-    Idempotent — skips orgs whose JSON file already exists.
-    """
+    """Сбор отзывов для всех организаций. Идемпотентен."""
     REVIEWS_DIR.mkdir(parents=True, exist_ok=True)
     total = len(organizations)
-    collected = 0
-    skipped_cached = 0
-    skipped_few = 0
-    failed = 0
+    collected = skipped_cached = skipped_few = failed = 0
 
     with httpx.Client() as client:
         for idx, org in enumerate(organizations, 1):
             oid = org.get("oid")
             seoname = org.get("seoname")
-            title = org.get("title", "?")
             if not oid or not seoname:
                 continue
             rcount = org.get("reviewsCount") or 0
@@ -136,7 +179,6 @@ def collect_reviews_for_all(organizations: list[dict[str, Any]]) -> None:
                 skipped_cached += 1
                 continue
             if rcount < REVIEWS_MIN_COUNT:
-                # write empty sentinel so we don't re-check
                 with target_path.open("w", encoding="utf-8") as f:
                     json.dump(
                         {"oid": oid, "seoname": seoname, "skipped_low_count": True,
@@ -145,8 +187,11 @@ def collect_reviews_for_all(organizations: list[dict[str, Any]]) -> None:
                     )
                 skipped_few += 1
                 continue
-            print(f"  [{idx:3d}/{total}] reviews '{title[:40]}' (count~{rcount})...",
-                  end=" ", flush=True)
+            print(
+                f"  [{idx:3d}/{total}] reviews '{org.get('title', '?')[:40]}' "
+                f"(count~{rcount})...",
+                end=" ", flush=True,
+            )
             t0 = time.time()
             payload = fetch_reviews_for_org(client, oid, seoname)
             elapsed = time.time() - t0
@@ -161,134 +206,145 @@ def collect_reviews_for_all(organizations: list[dict[str, Any]]) -> None:
                           f, ensure_ascii=False, indent=2)
 
     print()
-    print(f"[+] Reviews: collected={collected}, cached={skipped_cached}, "
-          f"low-count-skipped={skipped_few}, failed={failed}")
-
-
-def scrape_category(client: httpx.Client, query: str) -> dict[str, Any]:
-    """Сделать один запрос к /extract."""
-    resp = client.post(
-        API_URL,
-        headers={"X-API-Key": API_KEY, "Content-Type": "application/json"},
-        json={
-            "query": query,
-            "region_id": 2,
-            "city_slug": "saint-petersburg",
-            "target_count": 100,
-            "include_raw": False,
-        },
-        timeout=180.0,
-    )
-    if resp.status_code != 200:
-        return {"error": resp.text[:300], "status": resp.status_code, "organizations": []}
-    return resp.json()
+    print(f"[+] Отзывы: собрано={collected}, кэш={skipped_cached}, "
+          f"мало отзывов={skipped_few}, ошибки={failed}")
 
 
 def main() -> int:
     import os
 
-    # COLLECT_REVIEWS=1 → only run review collection over already-cached orgs.
-    # COLLECT_REVIEWS=0 (default) → just (re)build organizations.json as before.
-    # COLLECT_REVIEWS=both → do both (extract organizations, then collect reviews).
     mode = os.getenv("COLLECT_REVIEWS", "0").lower()
     reviews_only = mode in ("1", "only", "yes", "true")
     do_reviews = reviews_only or mode in ("both", "all")
 
     if reviews_only:
-        # Load existing organizations.json and just collect reviews.
         out_path = DATA_DIR / "organizations.json"
         if not out_path.exists():
-            print(f"[!] {out_path} missing — run with COLLECT_REVIEWS=0 first.")
+            print(f"[!] {out_path} missing — сначала запустите без COLLECT_REVIEWS")
             return 1
         with out_path.open("r", encoding="utf-8") as f:
             summary = json.load(f)
         organizations = summary.get("organizations", [])
-        print(f"[*] Reviews-only mode: {len(organizations)} orgs from cache")
+        print(f"[*] Режим отзывов: {len(organizations)} орг из кэша")
         collect_reviews_for_all(organizations)
         return 0
 
-    RAW_DIR.mkdir(parents=True, exist_ok=True)
+    # ── Генерация сетки ───────────────────────────────────────────────────────
+    grid_points = generate_grid_points(CENTER_LAT, CENTER_LON, RADIUS_M, EFFECTIVE_STEP_M)
 
-    print(f"[*] Center: ({CENTER_LAT}, {CENTER_LON}) radius={RADIUS_M}m")
-    print(f"[*] Categories: {len(CATEGORIES)}")
+    total_calls = len(grid_points) * len(CATEGORIES)
+    est_hours = total_calls * 30 / 3600
+
+    print(f"[*] Центр: ({CENTER_LAT}, {CENTER_LON}), радиус={RADIUS_M:.0f}м")
+    print(f"[*] Сетка: шаг={GRID_STEP_M:.0f}м, нахлёст={GRID_OVERLAP_M:.0f}м "
+          f"→ эффективный шаг={EFFECTIVE_STEP_M:.0f}м")
+    print(f"[*] Точек в сетке: {len(grid_points)}")
+    print(f"[*] Категорий: {len(CATEGORIES)}")
+    print(f"[*] Всего запросов: {total_calls}")
+    print(f"[*] Оценка времени (~30с/запрос): {est_hours:.1f}ч")
     print()
 
-    all_orgs: dict[str, dict[str, Any]] = {}  # oid -> org
+    RAW_GRID_DIR.mkdir(parents=True, exist_ok=True)
+
+    all_orgs: dict[str, dict[str, Any]] = {}
+    call_idx = 0
+    cached_count = 0
+    t_start = time.time()
 
     with httpx.Client() as client:
-        for idx, cat in enumerate(CATEGORIES, 1):
-            slug = cat.replace(" ", "_")
-            raw_path = RAW_DIR / f"{slug}.json"
+        for g_idx, (g_lat, g_lon) in enumerate(grid_points):
+            for cat in CATEGORIES:
+                call_idx += 1
+                slug = cat.replace(" ", "_")
+                cache_path = RAW_GRID_DIR / f"g{g_idx:05d}_{slug}.json"
 
-            if raw_path.exists():
-                print(f"[{idx:2d}/{len(CATEGORIES)}] {cat!r} — cached, loading")
-                with raw_path.open("r", encoding="utf-8") as f:
-                    payload = json.load(f)
-            else:
-                print(f"[{idx:2d}/{len(CATEGORIES)}] {cat!r} — fetching...", end=" ", flush=True)
-                t0 = time.time()
-                try:
-                    payload = scrape_category(client, cat)
-                except Exception as e:
-                    print(f"FAIL: {e}")
-                    payload = {"error": str(e), "organizations": []}
-                elapsed = time.time() - t0
-                print(f"got {len(payload.get('organizations', []))} orgs in {elapsed:.1f}s")
-                with raw_path.open("w", encoding="utf-8") as f:
-                    json.dump(payload, f, ensure_ascii=False, indent=2)
+                if cache_path.exists():
+                    with cache_path.open("r", encoding="utf-8") as f:
+                        payload = json.load(f)
+                    cached_count += 1
+                else:
+                    # ETA на основе реально сделанных запросов
+                    done_live = call_idx - cached_count
+                    eta_str = ""
+                    if done_live > 1:
+                        elapsed_total = time.time() - t_start
+                        rate = elapsed_total / done_live
+                        remaining = total_calls - call_idx
+                        eta_h = remaining * rate / 3600
+                        eta_str = f" ETA≈{eta_h:.1f}ч"
 
-            for org in payload.get("organizations", []) or []:
-                oid = org.get("oid")
-                if not oid:
-                    continue
-                coords = org.get("coordinates")
-                if not coords:
-                    continue
-                lat = coords.get("lat")
-                lon = coords.get("lon")
-                if lat is None or lon is None:
-                    continue
-                dist = haversine_m(CENTER_LAT, CENTER_LON, lat, lon)
-                if dist > RADIUS_M:
-                    continue
-                if oid in all_orgs:
-                    # уже есть; дополним категориями, если приехал из другого запроса
-                    existing_cats = all_orgs[oid].get("_search_queries", [])
-                    if cat not in existing_cats:
-                        existing_cats.append(cat)
-                        all_orgs[oid]["_search_queries"] = existing_cats
-                    continue
-                org["_distance_m"] = round(dist, 1)
-                org["_search_queries"] = [cat]
-                all_orgs[oid] = org
+                    print(
+                        f"[{call_idx:6d}/{total_calls}] g{g_idx:05d} "
+                        f"({g_lat:.5f},{g_lon:.5f}) {cat!r}...{eta_str}",
+                        end=" ", flush=True,
+                    )
+                    t0 = time.time()
+                    try:
+                        payload = scrape_grid_cell(client, cat, g_lat, g_lon)
+                    except Exception as e:
+                        print(f"FAIL: {e}")
+                        payload = {"error": str(e), "organizations": []}
+                    elapsed = time.time() - t0
+                    n = len(payload.get("organizations", []) or [])
+                    print(f"got {n} in {elapsed:.1f}с")
 
-    # сохранить итог
-    out_path = DATA_DIR / "organizations.json"
+                    with cache_path.open("w", encoding="utf-8") as f:
+                        json.dump(payload, f, ensure_ascii=False, indent=2)
+
+                # Агрегация
+                for org in payload.get("organizations", []) or []:
+                    oid = org.get("oid")
+                    if not oid:
+                        continue
+                    coords = org.get("coordinates") or {}
+                    olat = coords.get("lat")
+                    olon = coords.get("lon")
+                    if olat is None or olon is None:
+                        continue
+                    dist = haversine_m(CENTER_LAT, CENTER_LON, olat, olon)
+                    if dist > RADIUS_M:
+                        continue
+                    if oid not in all_orgs:
+                        org["_distance_m"] = round(dist, 1)
+                        org["_grid_point"] = [g_idx, round(g_lat, 6), round(g_lon, 6)]
+                        org["_search_queries"] = [cat]
+                        all_orgs[oid] = org
+                    else:
+                        sq = all_orgs[oid].setdefault("_search_queries", [])
+                        if cat not in sq:
+                            sq.append(cat)
+
+    # ── Сохранение итога ─────────────────────────────────────────────────────
     organizations = sorted(all_orgs.values(), key=lambda o: o.get("_distance_m", 0))
     summary = {
         "center": {"lat": CENTER_LAT, "lon": CENTER_LON},
         "radius_m": RADIUS_M,
+        "grid_step_m": GRID_STEP_M,
+        "grid_overlap_m": GRID_OVERLAP_M,
+        "effective_step_m": EFFECTIVE_STEP_M,
+        "grid_points_total": len(grid_points),
         "categories_queried": CATEGORIES,
         "total_unique": len(organizations),
         "organizations": organizations,
     }
+    out_path = DATA_DIR / "organizations.json"
     with out_path.open("w", encoding="utf-8") as f:
         json.dump(summary, f, ensure_ascii=False, indent=2)
 
+    total_elapsed = time.time() - t_start
     print()
-    print(f"[+] Done. Unique orgs in {RADIUS_M}m radius: {len(organizations)}")
-    print(f"[+] Saved to: {out_path}")
-
-    # топ-10 для отчёта
+    print(f"[+] Готово. Уникальных орг в {RADIUS_M:.0f}м: {len(organizations)}")
+    print(f"[+] Время: {total_elapsed / 3600:.2f}ч")
+    print(f"[+] Сохранено: {out_path}")
     print()
-    print("Sample (first 10):")
+    print("Первые 10:")
     for o in organizations[:10]:
         cats = ", ".join(c.get("name", "?") for c in (o.get("categories") or [])[:2])
-        print(f"  - {o['title'][:50]:50s} | {cats[:40]:40s} | {o.get('_distance_m'):.0f}m")
+        print(f"  - {o['title'][:50]:50s} | {cats[:40]:40s} | {o.get('_distance_m'):.0f}м")
 
     if do_reviews:
         print()
-        print("[*] COLLECT_REVIEWS=both — fetching reviews for each org...")
+        print("[*] COLLECT_REVIEWS=both — собираем отзывы...")
         collect_reviews_for_all(organizations)
 
     return 0
