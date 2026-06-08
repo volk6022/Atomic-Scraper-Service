@@ -36,7 +36,7 @@ class Settings(BaseSettings):
     # См. infra/searxng/ для docker-compose и settings.yml.
     SEARXNG_BASE_URL: str = "http://localhost:8080"
     SEARXNG_TIMEOUT: float = 30.0       # общий http-timeout клиента
-    SEARXNG_MAX_RETRIES: int = 2        # +1 первая попытка = всего 3 attempts
+    SEARXNG_MAX_RETRIES: int = 3        # +1 первая попытка = всего 4 attempts
     SEARXNG_RETRY_DELAY: float = 0.5
     SEARXNG_MIN_ORGANIC: int = 1        # минимум organic для счёта «успех» (иначе retry)
 

@@ -154,28 +154,53 @@ def _httpx_proxy() -> Optional[str]:
     return fallback  # whole pool flagged dead — try one anyway
 
 
-def _big_blob(html: str) -> Optional[dict]:
-    """Return the largest inline <script> JSON object (the SSR state blob)."""
+def _iter_big_blobs(html: str):
+    """Yield every parseable inline <script> JSON object above ~20 KB.
+
+    A Yandex page embeds several large scripts and the results blob is not always
+    the first one, so callers scan all of them for the path they need.
+    """
     for m in _SCRIPT_RE.finditer(html):
         t = m.group(1).strip()
         if len(t) < 20_000:
             continue
         try:
-            return json.loads(t)
+            yield json.loads(t)
         except Exception:
             try:
-                return json.loads(t[t.find("{"):])
+                yield json.loads(t[t.find("{"):])
             except Exception:
                 continue
+
+
+def _big_blob(html: str) -> Optional[dict]:
+    """First large inline <script> JSON (any caller that just needs the state)."""
+    for blob in _iter_big_blobs(html):
+        return blob
     return None
 
 
-def _ssr_first_item(blob: Optional[dict]) -> Optional[dict]:
-    """`stack[0].results.items[0]` — the focal org on a card/reviews page."""
-    try:
-        return blob["stack"][0]["results"]["items"][0]  # type: ignore[index]
-    except Exception:
-        return None
+def _ssr_items_from_html(html: str) -> list[dict]:
+    """`stack[0].results.items` from whichever big blob actually carries it."""
+    for blob in _iter_big_blobs(html):
+        try:
+            items = blob["stack"][0]["results"]["items"]
+        except Exception:
+            continue
+        if isinstance(items, list) and items:
+            return items
+    return []
+
+
+def _ssr_first_item(html: str) -> Optional[dict]:
+    """First `stack[0].results.items[0]` — the focal org on a card/reviews page."""
+    items = _ssr_items_from_html(html)
+    return items[0] if items else None
+
+
+def _ssr_search_items(html: str) -> list[dict]:
+    """SSR-rendered first page of search results (scans all large blobs)."""
+    return _ssr_items_from_html(html)
 
 
 _HTTP_TIMEOUT = httpx.Timeout(connect=4.0, read=20.0, write=20.0, pool=20.0)
@@ -240,6 +265,54 @@ class YandexMapsExtractAction:
         self.captured_response_timeout = 10.0
 
     async def execute(
+        self,
+        query: str,
+        region_id: int = 2,
+        city_slug: str = "saint-petersburg",
+        target_count: int = 40,
+        include_raw: bool = True,
+        ll_lat: Optional[float] = None,
+        ll_lon: Optional[float] = None,
+    ) -> list[YandexOrganization]:
+        """httpx SSR-first discovery; browser fallback on captcha/short-body.
+
+        Yandex SSR-renders the first ~25 results into the page's inline JSON. For
+        a tile-based grid (small radius per query) that first page is the whole
+        answer, so a single httpx GET replaces a full browser session (~7x cheaper
+        and dodges ERR_PROXY_AUTH_UNSUPPORTED). The browser path (with DOM scroll)
+        is kept for captcha and for queries that need pagination past the SSR page.
+        """
+        search_url = (
+            f"https://yandex.ru/maps/{region_id}/{city_slug}/search/"
+            f"{quote(query, safe='')}/"
+        )
+        if ll_lat is not None and ll_lon is not None:
+            search_url += f"?ll={ll_lon},{ll_lat}&z=17"
+        try:
+            html = await _http_get_html(search_url)
+            items = _ssr_search_items(html)
+            if items:
+                orgs = self._parse_captured(
+                    [{"url": "ssr://httpx", "status": 200,
+                      "body": json.dumps({"items": items})}],
+                    include_raw=include_raw,
+                )
+                logger.info(
+                    "yandex_maps.extract(httpx-ssr): query=%r ssr_items=%d orgs=%d",
+                    query, len(items), len(orgs),
+                )
+                return orgs
+            logger.info("extract httpx-ssr: no items for %r — browser fallback", query)
+        except YandexCaptchaError:
+            logger.warning("extract httpx-ssr captcha for %r — browser fallback", query)
+        except Exception as exc:  # noqa: BLE001 — fall back to the browser path
+            logger.warning("extract httpx-ssr failed for %r (%s) — browser fallback",
+                           query, exc)
+        return await self._execute_browser(
+            query, region_id, city_slug, target_count, include_raw, ll_lat, ll_lon,
+        )
+
+    async def _execute_browser(
         self,
         query: str,
         region_id: int = 2,
@@ -463,7 +536,7 @@ class YandexMapsCardAction:
         url = f"https://yandex.ru/maps/org/{seoname}/{business_oid}/"
         logger.info("yandex_maps.card: oid=%s seoname=%s", business_oid, seoname)
         html = await _http_get_html(url)
-        item = _ssr_first_item(_big_blob(html))
+        item = _ssr_first_item(html)
         if not item:
             raise RuntimeError(f"card SSR item not found for oid={business_oid}")
         card = YandexOrgCard.from_card_item(
@@ -517,7 +590,7 @@ class YandexMapsReviewsAction:
                     business_oid, seoname, count=max_count, ranking=ranking,
                     pages=max(1, (max_count + 49) // 50), include_raw=include_raw,
                 )
-            item = _ssr_first_item(_big_blob(html))
+            item = _ssr_first_item(html)
             revs = (item or {}).get("reviewResults", {}).get("reviews") if item else None
             if not revs:
                 break

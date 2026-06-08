@@ -33,11 +33,19 @@ API_KEY = "default_internal_key"
 
 CENTER_LAT = 59.914403
 CENTER_LON = 30.327319
-RADIUS_M = 2500.0
+RADIUS_M = 750.0
 
-GRID_STEP_M = 200.0      # размер ячейки сетки, метры
-GRID_OVERLAP_M = 20.0    # нахлёст между соседними ячейками, метры
-EFFECTIVE_STEP_M = GRID_STEP_M - GRID_OVERLAP_M  # = 180 м
+GRID_STEP_M = 250.0      # размер ячейки сетки, метры
+GRID_OVERLAP_M = 25.0    # нахлёст между соседними ячейками, метры
+EFFECTIVE_STEP_M = GRID_STEP_M - GRID_OVERLAP_M  # = 225 м
+
+# Отзывы: окно по времени (последние N месяцев) и потолок числа отзывов на орг.
+REVIEWS_SINCE_MONTHS = 6
+REVIEWS_MAX_COUNT = 50
+
+# Сетевые ретраи (на 1 больше «было 0»): всего ATTEMPTS попыток на запрос.
+NET_ATTEMPTS = 3
+NET_RETRY_DELAY_S = 1.5
 
 # target_count меньше 100 — ищем в малой области, >30 орг на ячейку редко
 GRID_TARGET_COUNT = 30
@@ -70,13 +78,14 @@ CATEGORIES = [
     "суши",
 ]
 
-DATA_DIR = Path(__file__).parent / "data"
+import os
+
+DATA_DIR = Path(os.environ.get("YA_DATA_DIR") or (Path(__file__).parent / "data"))
 RAW_GRID_DIR = DATA_DIR / "raw_grid"
 
 REVIEWS_DIR = DATA_DIR / "reviews"
 REVIEWS_API_URL = "http://localhost:8000/api/v1/yandex-maps/reviews"
 REVIEWS_MIN_COUNT = 2
-REVIEWS_PAGES = 1
 
 
 def haversine_m(lat1: float, lon1: float, lat2: float, lon2: float) -> float:
@@ -114,14 +123,37 @@ def generate_grid_points(
     return points
 
 
+def _post_with_retry(
+    client: httpx.Client, url: str, payload: dict, empty_key: str
+) -> dict[str, Any]:
+    """POST with NET_ATTEMPTS retries; returns parsed JSON or an error dict."""
+    last: dict[str, Any] = {"error": "no attempts", empty_key: []}
+    for attempt in range(1, NET_ATTEMPTS + 1):
+        try:
+            resp = client.post(
+                url,
+                headers={"X-API-Key": API_KEY, "Content-Type": "application/json"},
+                json=payload,
+                timeout=180.0,
+            )
+        except Exception as e:  # noqa: BLE001 — retry transient network errors
+            last = {"error": str(e), empty_key: []}
+        else:
+            if resp.status_code == 200:
+                return resp.json()
+            last = {"error": resp.text[:300], "status": resp.status_code, empty_key: []}
+        if attempt < NET_ATTEMPTS:
+            time.sleep(NET_RETRY_DELAY_S)
+    return last
+
+
 def scrape_grid_cell(
     client: httpx.Client, query: str, lat: float, lon: float
 ) -> dict[str, Any]:
     """Запрос к /extract с географической привязкой (ll=lon,lat&z=17)."""
-    resp = client.post(
-        API_URL,
-        headers={"X-API-Key": API_KEY, "Content-Type": "application/json"},
-        json={
+    return _post_with_retry(
+        client, API_URL,
+        {
             "query": query,
             "region_id": 2,
             "city_slug": "saint-petersburg",
@@ -130,35 +162,25 @@ def scrape_grid_cell(
             "ll_lat": lat,
             "ll_lon": lon,
         },
-        timeout=180.0,
+        empty_key="organizations",
     )
-    if resp.status_code != 200:
-        return {"error": resp.text[:300], "status": resp.status_code, "organizations": []}
-    return resp.json()
 
 
 def fetch_reviews_for_org(
     client: httpx.Client, oid: str, seoname: str
 ) -> dict[str, Any]:
-    try:
-        resp = client.post(
-            REVIEWS_API_URL,
-            headers={"X-API-Key": API_KEY, "Content-Type": "application/json"},
-            json={
-                "business_oid": oid,
-                "seoname": seoname,
-                "count": 50,
-                "ranking": "by_time",
-                "pages": REVIEWS_PAGES,
-                "include_raw": False,
-            },
-            timeout=180.0,
-        )
-    except Exception as e:
-        return {"error": str(e), "reviews": []}
-    if resp.status_code != 200:
-        return {"error": resp.text[:300], "status": resp.status_code, "reviews": []}
-    return resp.json()
+    return _post_with_retry(
+        client, REVIEWS_API_URL,
+        {
+            "business_oid": oid,
+            "seoname": seoname,
+            "max_count": REVIEWS_MAX_COUNT,
+            "ranking": "by_time",
+            "since_months": REVIEWS_SINCE_MONTHS,
+            "include_raw": False,
+        },
+        empty_key="reviews",
+    )
 
 
 def collect_reviews_for_all(organizations: list[dict[str, Any]]) -> None:

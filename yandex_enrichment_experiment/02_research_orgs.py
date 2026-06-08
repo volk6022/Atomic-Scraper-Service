@@ -26,6 +26,15 @@ from typing import Any
 
 import httpx
 
+# Make the service package importable when run as a standalone script.
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+from src.actions.research.org_schemas import build_schema  # noqa: E402
+from src.actions.research.org_taxonomy import (  # noqa: E402
+    classify_archetype,
+    classify_size,
+    wants_legal_entity,
+)
+
 try:
     sys.stdout.reconfigure(encoding="utf-8")
 except Exception:
@@ -39,9 +48,9 @@ CONCURRENCY = int(os.environ.get("CONCURRENCY", "3"))
 POLL_INTERVAL_S = 20
 POLL_MAX_S = 1800  # 30 мин на одну орг в quality mode
 
-DATA_DIR = Path(__file__).parent / "data"
+DATA_DIR = Path(os.environ.get("YA_DATA_DIR") or (Path(__file__).parent / "data"))
 ORGS_FILE = DATA_DIR / "organizations_dedup.json"
-RESEARCH_DIR = DATA_DIR / "research"
+RESEARCH_DIR = Path(os.environ.get("YA_RESEARCH_DIR") or (DATA_DIR / "research"))
 REVIEWS_DIR = DATA_DIR / "reviews"
 SUMMARY_FILE = DATA_DIR / "research_summary.json"
 
@@ -162,14 +171,15 @@ TECH_CATEGORY_HINTS = (
 )
 
 
-def build_org_card_schema(categories: list[str]) -> dict:
-    """Схема карточки под конкретную орг: tech_stack только для tech/digital."""
-    import copy
-    schema = copy.deepcopy(ORG_CARD_SCHEMA)
-    cats = " ".join(str(c) for c in (categories or [])).lower()
-    if not any(h in cats for h in TECH_CATEGORY_HINTS):
-        schema["properties"].pop("tech_stack", None)
-    return schema
+def build_org_card_schema(categories: list[str], branch_count: int = 1) -> dict:
+    """Type-aware schema (Workstream A+C): base + archetype deep-dive + legal entity.
+
+    Delegates to src.actions.research.org_schemas.build_schema. tech_stack стал
+    условным там же; здесь добавляются типовые поля (law→practice_areas,
+    med→n_doctors/specializations, …) и legal_entity (ИНН/ОГРН) для релевантных
+    типов.
+    """
+    return build_schema(categories, branch_count=branch_count)
 
 
 def load_reviews_snippets(oid: str, max_snippets: int = 8) -> list[str]:
@@ -203,13 +213,54 @@ def load_reviews_snippets(oid: str, max_snippets: int = 8) -> list[str]:
     return snippets
 
 
+# Workstream A: per-archetype "internal kitchen" research targets. One line that
+# tells the agent what type-specific facts to chase (filled into deep_dive).
+TYPE_TARGETS: dict[str, str] = {
+    "law": "юридическую СПЕЦИАЛИЗАЦИЮ и категории споров, знаковые/публичные дела, "
+           "число юристов/адвокатов, членство в адвокатской палате",
+    "med": "медицинские СПЕЦИАЛИЗАЦИИ, число врачей и центров/филиалов, "
+           "ДМС-партнёров, лицензии, ключевое оборудование",
+    "food_retail": "кухню/формат, средний чек, вместимость (посадку), агрегаторы "
+                   "доставки (Яндекс.Еда, Delivery Club), ближайших конкурентов",
+    "shop": "ассортиментную специализацию, ключевые бренды/поставщиков, наличие "
+            "сети, корпоративные предложения",
+    "auto": "перечень услуг, обслуживаемые марки авто, предложения для "
+            "корпоративных автопарков",
+    "repair": "перечень услуг, сроки выполнения, наличие корпоративных договоров "
+              "(отели/офисы/рестораны)",
+    "beauty": "услуги, число мастеров, ценовой сегмент (премиум/эконом)",
+    "fitness": "формат клуба, типы абонементов, групповые программы",
+    "finance": "услуги, лицензии, клиентские сегменты (B2B/B2C)",
+    "realty": "сегменты (жилая/коммерческая/аренда), число агентов",
+    "print": "перечень услуг, оборудование, работу с корпоративными заказами",
+    "edu": "образовательные программы, возрастные группы",
+}
+
+
+def type_specific_block(archetype: str) -> str:
+    """Archetype deep-dive + (Workstream C) registry targeting lines for the query."""
+    lines = []
+    tgt = TYPE_TARGETS.get(archetype)
+    if tgt:
+        lines.append(f"- УГЛУБИСЬ во внутреннюю специфику ({archetype}): {tgt}. "
+                     f"Запиши в deep_dive.")
+    if wants_legal_entity(archetype):
+        lines.append(
+            "- ЮРЛИЦО И РЕЕСТРЫ: найди ИНН, ОГРН, юр. название, год основания, "
+            "число сотрудников и оборот — ПРОВЕРЬ rusprofile.ru, checko.ru, "
+            "list-org.com (ищи по названию + город/адрес или телефон). "
+            "Запиши в legal_entity."
+        )
+    return ("\n" + "\n".join(lines)) if lines else ""
+
+
 def build_query(org: dict[str, Any]) -> str:
     """Generic resume-INDEPENDENT enrichment query.
 
     Asks the research agent to collect what we'd otherwise have to scrape by
     hand: sites, socials, vacancies, contacts, Yandex.Maps card. The schema
-    (ORG_CARD_SCHEMA) is what forces the LLM to fill specific fields; this
-    query just provides org context + the known review signal.
+    (build_org_card_schema) forces the LLM to fill specific fields; this query
+    provides org context, the known review signal, and type-specific targets.
     """
     title = org.get("title", "")
     cats_list = [c.get("name", "") for c in (org.get("categories") or [])]
@@ -245,6 +296,17 @@ def build_query(org: dict[str, Any]) -> str:
     if any(h in cats_lower for h in TECH_CATEGORY_HINTS):
         tech_line = "- используемые технологии / стек (только если это IT/digital-компания)\n"
 
+    # Workstream A+C: deterministic archetype → type-specific + registry targets.
+    archetype = classify_archetype(cats_list)
+    size = classify_size(branch_count=org.get("branch_count", 1) or 1)
+    type_block = type_specific_block(archetype)
+    size_hint = ""
+    if size in ("mid", "chain"):
+        size_hint = (
+            f"\n(Это похоже на {'сеть/мульти-филиал' if size == 'chain' else 'средний'} "
+            f"бизнес — ищи также юрлицо/ИНН головной компании и ЛПР.)"
+        )
+
     return (
         f"{context}.\n\n"
         f"Собери карточку организации. ПРИОРИТЕТ — найти канал для связи в соцсетях, "
@@ -260,11 +322,12 @@ def build_query(org: dict[str, Any]) -> str:
         f"- индикаторы масштаба (число локаций/филиалов, сотрудников, оборот, если есть)\n"
         f"- открытые вакансии (hh.ru, superjob.ru, карьерные страницы)\n"
         f"{tech_line}"
-        f"- сигналы проблем (жалобы клиентов из отзывов, ручные процессы, pain points)\n\n"
+        f"- сигналы проблем (жалобы клиентов из отзывов, ручные процессы, pain points)"
+        f"{type_block}\n\n"
         f"Используй карточку Я.Карт и отзывы как первичный источник, дальше иди по "
         f"сайтам и СОЦСЕТЯМ — обязательно открой найденные соцсети скрейпом, чтобы "
         f"достать контактные данные/хэндл. Не выдумывай — если поля нет, оставь пустым."
-        f"{reviews_block}"
+        f"{size_hint}{reviews_block}"
     )
 
 
@@ -277,25 +340,33 @@ async def run_research(client: httpx.AsyncClient, query: str,
     заполнит ORG_CARD_SCHEMA через response_format=json_schema, а не выдаст
     свободный markdown.
     """
-    try:
-        resp = await client.post(
-            f"{API_BASE}/api/v1/research/run",
-            headers={"X-API-Key": API_KEY, "Content-Type": "application/json"},
-            json={
-                "query": query,
-                "mode": MODE,
-                "language": LANGUAGE,
-                "output_schema": output_schema if output_schema is not None else ORG_CARD_SCHEMA,
-            },
-            timeout=30.0,
-        )
-    except Exception as e:
-        print(f"    ! run error: {e}")
-        return None
-    if resp.status_code not in (200, 202):
-        print(f"    ! run failed: {resp.status_code} {resp.text[:200]}")
-        return None
-    return resp.json().get("task_id")
+    body = {
+        "query": query,
+        "mode": MODE,
+        "language": LANGUAGE,
+        "output_schema": output_schema if output_schema is not None else ORG_CARD_SCHEMA,
+    }
+    attempts = 3  # был 1 → +1 ретрай и запас на flaky-сеть
+    for attempt in range(1, attempts + 1):
+        try:
+            resp = await client.post(
+                f"{API_BASE}/api/v1/research/run",
+                headers={"X-API-Key": API_KEY, "Content-Type": "application/json"},
+                json=body,
+                timeout=30.0,
+            )
+        except Exception as e:
+            print(f"    ! run error (attempt {attempt}/{attempts}): {e}")
+            if attempt < attempts:
+                await asyncio.sleep(2.0)
+            continue
+        if resp.status_code in (200, 202):
+            return resp.json().get("task_id")
+        print(f"    ! run failed (attempt {attempt}/{attempts}): "
+              f"{resp.status_code} {resp.text[:200]}")
+        if attempt < attempts:
+            await asyncio.sleep(2.0)
+    return None
 
 
 async def poll_status(client: httpx.AsyncClient, task_id: str) -> dict[str, Any] | None:
@@ -362,7 +433,7 @@ async def process_org(
 
         query = build_query(org)
         org_cats = [c.get("name", "") for c in (org.get("categories") or [])]
-        schema = build_org_card_schema(org_cats)
+        schema = build_org_card_schema(org_cats, branch_count=org.get("branch_count", 1) or 1)
         task_id = await run_research(client, query, output_schema=schema)
         if not task_id:
             return

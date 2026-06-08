@@ -15,6 +15,7 @@
 from __future__ import annotations
 
 import json
+import os
 import re
 import sys
 from collections import defaultdict
@@ -26,7 +27,7 @@ try:
 except Exception:
     pass
 
-DATA_DIR = Path(__file__).parent / "data"
+DATA_DIR = Path(os.environ.get("YA_DATA_DIR") or (Path(__file__).parent / "data"))
 IN_PATH = DATA_DIR / "organizations.json"
 OUT_PATH = DATA_DIR / "organizations_dedup.json"
 

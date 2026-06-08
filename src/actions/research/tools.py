@@ -39,19 +39,27 @@ async def web_search(query: str, k: int = 5, language: str | None = None) -> lis
         return []
 
 
-async def scrape_url(url: str) -> dict:
-    """Scrape a URL via SiteEnrichAction and return cleaned text."""
+async def scrape_url(url: str, *, attempts: int = 2) -> dict:
+    """Scrape a URL via SiteEnrichAction and return cleaned text.
+
+    Retries on failure (default 2 attempts) — each ``SiteEnrichAction()`` picks a
+    fresh rotating proxy, so a flaky/dead proxy on the first try is routed around.
+    """
     from src.actions.site_enricher import SiteEnrichAction
 
-    action = SiteEnrichAction()
-    try:
-        result = await action.execute(url)
-        return {
-            "url": url,
-            "text": result.text,
-            "word_count": len(result.text.split()),
-            "success": True,
-        }
-    except Exception as e:
-        logger.warning("scrape_url failed %s: %s", url, e)
-        return {"url": url, "error": str(e), "success": False}
+    last_err: Exception | None = None
+    for attempt in range(1, attempts + 1):
+        action = SiteEnrichAction()
+        try:
+            result = await action.execute(url)
+            return {
+                "url": url,
+                "text": result.text,
+                "word_count": len(result.text.split()),
+                "success": True,
+            }
+        except Exception as e:  # noqa: BLE001 — retry transient proxy/nav failures
+            last_err = e
+            logger.warning("scrape_url attempt %d/%d failed %s: %s",
+                           attempt, attempts, url, e)
+    return {"url": url, "error": str(last_err), "success": False}
