@@ -40,11 +40,41 @@ async def web_search(query: str, k: int = 5, language: str | None = None) -> lis
 
 
 async def scrape_url(url: str, *, attempts: int = 2) -> dict:
-    """Scrape a URL via SiteEnrichAction and return cleaned text.
+    """Scrape a URL and return cleaned text.
 
-    Retries on failure (default 2 attempts) — each ``SiteEnrichAction()`` picks a
-    fresh rotating proxy, so a flaky/dead proxy on the first try is routed around.
+    Routing (cheapest viable method wins; see ``optimize-scrape/FINDINGS.md``):
+      1. Instagram → login-walled, never render: return a light @-handle stub.
+      2. Allowlisted SSR domains → proxied httpx GET (~15-40x fewer bytes than a
+         browser, equal content). Falls back to the browser if httpx fails/blocks.
+      3. Everything else → Playwright browser via ``SiteEnrichAction`` (with
+         in-browser resource-blocking), retried across fresh rotating proxies.
     """
+    from src.actions.research.http_fetch import (
+        host_in_allowlist,
+        httpx_ssr_fetch,
+        instagram_handle,
+        is_instagram,
+    )
+    from src.domain.utils.content_cleaner import count_words, html_to_text
+
+    # 1. Instagram: login-wall — return the handle from the URL, don't render.
+    if is_instagram(url):
+        handle = instagram_handle(url)
+        text = f"Instagram profile @{handle}" if handle else "Instagram (login-walled; no public content)"
+        return {"url": url, "text": text, "word_count": len(text.split()),
+                "success": True, "method": "instagram_stub"}
+
+    # 2. httpx-SSR fast-path for allowlisted server-rendered domains.
+    if host_in_allowlist(url):
+        try:
+            html = await httpx_ssr_fetch(url)
+            text = html_to_text(html)[:30000]  # let goal-extract pick from the full page
+            return {"url": url, "text": text, "word_count": count_words(text),
+                    "success": True, "method": "httpx_ssr"}
+        except Exception as e:  # noqa: BLE001 — fall back to the browser path
+            logger.warning("httpx_ssr fast-path failed for %s (%s) — browser fallback", url, e)
+
+    # 3. Browser path (heavy SPAs, org sites, social profiles).
     from src.actions.site_enricher import SiteEnrichAction
 
     last_err: Exception | None = None
@@ -57,6 +87,7 @@ async def scrape_url(url: str, *, attempts: int = 2) -> dict:
                 "text": result.text,
                 "word_count": len(result.text.split()),
                 "success": True,
+                "method": "browser",
             }
         except Exception as e:  # noqa: BLE001 — retry transient proxy/nav failures
             last_err = e

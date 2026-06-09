@@ -344,6 +344,7 @@ class AgentState:
     serp_seen: set[str] = field(default_factory=set)
     visited_urls: set[str] = field(default_factory=set)
     domain_fail_count: dict[str, int] = field(default_factory=dict)
+    domain_visit_count: dict[str, int] = field(default_factory=dict)
     compaction_count: int = 0
     submit_attempts: int = 0
 
@@ -644,6 +645,7 @@ async def run_research(
     elide_after = settings.RESEARCH_SOFT_ELIDE_AFTER_TURNS
     refraser_every = settings.RESEARCH_REFRASER_EVERY_N_SERPS
     fail_threshold = settings.RESEARCH_DOMAIN_FAIL_THRESHOLD
+    domain_visit_cap = settings.RESEARCH_SCRAPE_DOMAIN_VISIT_CAP
     llm_timeout = settings.RESEARCH_LLM_TIMEOUT_S
     scrape_budget = settings.RESEARCH_SCRAPE_BUDGET_CHARS
     pass_score = settings.RESEARCH_CRITIC_PASS_SCORE
@@ -823,12 +825,29 @@ async def run_research(
 
             elif name == "web_scrape":
                 url = str(args.get("url", ""))
-                state.visited_urls.add(url)
-                result = await _run_web_scrape(url, keywords, scrape_budget)
-                if not result.get("ok"):
-                    dom = urlparse(url).netloc
-                    if dom and dom not in never_block:
-                        state.domain_fail_count[dom] = state.domain_fail_count.get(dom, 0) + 1
+                dom = urlparse(url).netloc
+                if url in state.visited_urls:
+                    # URL-dedup: don't pay to fetch the exact same page twice.
+                    result = {
+                        "url": url, "duplicate": True, "text": "",
+                        "note": ("You already scraped this exact URL. Use what you have, "
+                                 "or scrape a DIFFERENT page/source."),
+                    }
+                elif dom and state.domain_visit_count.get(dom, 0) >= domain_visit_cap:
+                    # Per-domain cap: stop burrowing one site (×5-9 in old runs).
+                    result = {
+                        "url": url, "capped": True, "text": "",
+                        "note": (f"Domain {dom} is exhausted ({domain_visit_cap} pages already "
+                                 "scraped this run). Move to a different domain/source."),
+                    }
+                else:
+                    state.visited_urls.add(url)
+                    if dom:
+                        state.domain_visit_count[dom] = state.domain_visit_count.get(dom, 0) + 1
+                    result = await _run_web_scrape(url, keywords, scrape_budget)
+                    if not result.get("ok"):
+                        if dom and dom not in never_block:
+                            state.domain_fail_count[dom] = state.domain_fail_count.get(dom, 0) + 1
 
             elif name == submit_name:
                 state.submit_attempts += 1

@@ -58,6 +58,21 @@ class Settings(BaseSettings):
         "yandex.ru,yandex.com,2gis.ru,hh.ru,spb.hh.ru,superjob.ru,vk.com,"
         "t.me,telegram.me,rusprofile.ru,fparf.ru,checko.ru,zoon.ru"
     )
+    # Scrape-cost optimization (see optimize-scrape/FINDINGS.md + scale_test/).
+    # Domains whose server-rendered HTML carries the content → fetch via httpx
+    # (gzip, no browser) instead of Playwright. Verified at scale: 90-100% content
+    # success, 15-40x fewer bytes. VK/2gis deliberately EXCLUDED (return stubs).
+    RESEARCH_HTTPX_SSR_ALLOWLIST: str = (
+        "t.me,telegram.me,hh.ru,zoon.ru,prodoctorov.ru,rusprofile.ru,"
+        "rubrikator.org,orgzz.ru,spravker.ru"
+    )
+    # Per-domain scrape cap PER ORG run — stops the agent burrowing one site ×5-9.
+    RESEARCH_SCRAPE_DOMAIN_VISIT_CAP: int = 3
+    # In-browser resource blocking (abort image/media/font) on the Playwright path.
+    RESEARCH_BROWSER_BLOCK_RESOURCES: bool = True
+    # Hosts where resource-blocking backfires (anti-bot serves a heavy challenge) —
+    # skip blocking for these social SPAs.
+    RESEARCH_BROWSER_BLOCK_SKIP_DOMAINS: str = "vk.com,instagram.com,facebook.com,ok.ru"
     RESEARCH_PROMPTS_PATH: str = "src/actions/research/research_agent_prompts.yaml"
 
     model_config = SettingsConfigDict(env_file=".env")

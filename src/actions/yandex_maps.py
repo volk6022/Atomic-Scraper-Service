@@ -114,7 +114,9 @@ _HTTP_HEADERS = {
     ),
     "Accept": "text/html",
     "Accept-Language": "ru-RU,ru;q=0.9",
-    "Accept-Encoding": "gzip, deflate, br",
+    # NB: no brotli — the runtime lacks a brotli decoder, so a `br` response would
+    # decode to garbage, fail JSON parse and trigger an expensive browser fallback.
+    "Accept-Encoding": "gzip, deflate",
 }
 
 
