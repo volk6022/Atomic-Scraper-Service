@@ -1,0 +1,40 @@
+Произошла ошибка. Попробуйте перезагрузить страницу.
+
+Мы используем файлы cookie, чтобы обеспечивать правильную работу нашего веб-сайта и анализировать сетевой трафик.
+Правила использования файлов cookie
+Мы используем файлы cookie. Правила использования файлов cookie
+Понятно
+
+Ищу работу
+
+Ищу работу
+
+Ищу работу
+
+Ищу сотрудника
+
+Ищу работу
+
+Ищу сотрудника
+
+Сервисы
+
+Помощь
+
+Ещё
+
+Санкт-Петербург
+
+Войти
+
+Войти
+
+Создать резюме
+
+Группа компаний ЭРКАФАРМ
+
+3,9
+
+233 отзыва
+
+{"renderRestriction":{"breakpoint":null,"magritteBreakpoint":null,"force":false,"renderRestriction":false},"redirectConfig":{"strictMode":true,"topLevelDomain":"hh.ru","permittedHosts":["hh.ru","hr.zarplata.ru","api.zarplata.ru","zarplata.ru","talantix.ru","career.ru","joblist.ru","livehh.ru","hh.ua","hh.kz","headhunter.com.kz","hh.by","planetahr.ru","ka.hh.ru","educat.ru","educat.kz","jobs.tut.by","rabota.tut.by","job.tut.by","free-lance.ru","jobs.day.az","hh1.az","profile.tut.by","swa.mail.ru","hhid.ru","headhunter.kg","hh.uz","headhunter.ge","rabota.by","jcat.ru","rating-kube.kube.37b.io","dreamjob.ru"],"permittedAppSchemes":["hh","jtb","hhios","hhapp","hhempios","jtbios","jtbapp","jtbempios","jdazios","jdazapp","zpandroid","zpios","zpapp"]},"advantages":[{"id":"1","name":"Своевременная оплата труда"},{"id":"2","name":"Удобное расположение работы"},{"id":"3","name":"Удаленная работа"},{"id":"4","name":"Наличие кухни, места для обеда"},{"id":"5","name":"Медицинское страхование"},{"id":"6","name":"Оплата больничного"},{"id":"7","name":"Гибкий рабочий график"},{"id":"8","name":"Компенсация питания"},{"id":"9","name":"Оплата транспортных расходов"},{"id":"10","name":"Корпоративный транспорт"},{"id":"11","name":"Профессиональное обучение"},{"id":"12","name":"Место для парковки"},{"id":"13","name":"Оплата мобильной связи"},{"id":"14","name":"Система наставничества"},{"id":"15","name":"Корпоративные мероприятия"}],"hasVerifiedPhone":false,"reviewPossibility":{"employer":{"canReview":true},"interview":{"canReview":false}},"interviewDictionaries":{"locations":[{"id":"1","name":"По телефону"},{"id":"2","name":"По видеосвязи"},{"id":"3","name":"В офисе"}],"durations":[{"id":"ONE_WEEK_OR_LESS","name":"Меньше недели"},{"id":"TWO_WEEKS","name":"Две недели"},{"id":"THREE_WEEKS","name":"Больше двух недель"},{"id":"FOUR_WEEKS_OR_MORE","name":"Больше месяца"}],"components":[{"id":"1","name":"Рекомендации с прошлой работы"},{"id":"2","name":"Обсуждение опыта работы"},{"id":"3","name":"Оценка профессиональных навыков"},{"id":"4","name":"Оценка навыков презентации"},{"id":"5","name":"Психологический тест"},{"id":"6","name":"Уровень владения иностранным языком"},{"id":"7","name":"Проверка службой безопасности"}],"complexities":[{"id":"1","name":"Легко"},{"id":"2","name":"Нормально"},{"id":"3","name":"Сложно"}],"stagesCounts":[{"id":"ONE","name":"Один"},{"id":"TWO","name":"Два"},{"id":"THREE","name":"Три"},{"id":"FOUR","name":"Четыре"},{"id":"FIVE_OR_MORE","name":"Больше четырёх"}],"jobConditions":[{"id":"1","name":"Зарплата"},{"id":"2","name":"Описание обязанностей"},{"id":"3","name":"Требуемый опыт"},{"id":"4","name":"Соцпакет"},{"id":"5","name":"Описание условий работы"},{"id":"6","name":"Расположение офиса"}]},"employerReviews":{"employerDjId":"109240","recommendationsPercent":74,"totalRating":"3.9","ratings":[{"id":"WORKPLACE","value":"4.1"},{"id":"TEAM","value":"4.4"},{"id":"MANAGEMENT","value":"4"},{"id":"CAREER","value":"3.5"},{"id":"REST_RECOVERY","value":"3.6"},{"id":"SALARY","value":"3.7"}],"advantages":[{"id":"1","name":"Своевременная оплата труда","count":183},{"id":"6","name":"Оплата больничного","count":153},{"id":"2","name":"Удобное расположение работы","count":149},{"id":"4","name":"Наличие кухни, места для обеда","count":112},{"id":"11","name":"Профессиональное обучение","count":104},{"id":"7","name":"Гибкий рабочий график","count":78},{"id":"5","name":"Медицинское страхование","count":69},{"id":"14","name":"Система наставничества","count":42},{"id":"15","name":"Корпоративные мероприятия","count":41},{"id":"3","name":"Удаленная работа","count":28},{"id":"9","name":"Оплата транспортных расходов","count":23},{"id":"12","name":"Место для парковки","count":12},{"id":"13","name":"Оплата мобильной связи","count":9},{"id":"10","name":"Корпоративный транспорт","count":5},{"id":"8","name":"Компенсация питания","count":1}],"reviewsCount":233,"reviews":[{"id":"3389429","target":"PREVIOUS_EMPLOYER","position":"Фармацевт","employmentDuration":{"id":"1","name":"Меньше года"},"area":"Санкт-Петербург","areaId":2,"totalRating":"5","ratings":[{"id":"WORKPLACE","value":"5"},{"id":"TEAM","value":"5"},{"id":"MANAGEMENT","value":"5"},{"id":"CAREER","value":"5"},{"id":"REST_RECOVERY","value":"5"},{"id":"SALARY","value":"5"}],"pros":"Хорошая компания.условия работы комфортные.все условия трудового договора выполняются .оплата производится вовремя и в полной мере.","cons":"Всё нормально. У меня нет претензий.","advantages":[{"id":"1","name":"Своевременная оплата труда"},{"id":"2","name":"Удобное расположение работы"},{"id":"6","name":"Оплата больничного"},{"id":"11","name":"Профессиональное обучение"},{"id":"14","name":"Система наставничества"}],"recommendToFriend":"YES","creationTime":"2025-02-10T08:11:47Z","status":{"id":1,"name":"Опубликован"},"feedback":{"creationTime":"2025-06-09T15:49:57Z","text":"Здравствуйте! Спасибо вам за отличную оценку!\n\nМы высоко ценим наших сотрудников и рады, что вы оценили условия труда и своевременные выплаты.\n\nЖелаем вам успехов в будущей карьере!\n\nС уважением, команда ЭРКАФАРМ"},"pinned":true}],"reviewsWithoutFeedbackCount":1,"reviewsWithoutFeedback":[{"id":"4711568","target":"PREVIOUS_EMPLOYER","position":"Консультант по лечебной косметике","employmentDuration":{"id":"1","name":"Меньше года"},"area":"Санкт-Петербург","areaId":2,"totalRating":"2.3","ratings":[{"id":"WORKPLACE","value":"3"},{"id":"TEAM","value":"2"},{"id":"MANAGEMENT","value":"3"},{"id":"CAREER","value":"2"},{"id":"REST_RECOVERY","value":"2"},{"id":"SALARY","value":"2"}],"pros":"Сразу оформили на работу. Помогли оформить медицинскую книжку. Оформление быстрое в офисе.","cons":"Увеличение зарплаты, хорошие отношение к сотрудникам, удобное место для отдыха в обед.","recommendToFriend":"NO","creationTime":"2026-06-01T16:49:37Z","status":{"id":1,"name":"Опубликован"},"pinned":false}],"negativeReviewsCount":22,"negativeReviews":[{"id":"4349189","target":"PREVIOUS_EMPLOYER","position":"Сборщик","employmentDuration":{"id":"1","name":"Меньше года"},"area":"Москва","areaId":1,"totalRating":"1.8","ratings":[{"id":"WORKPLACE","value":"3"},{"id":"TEAM","value":"3"},{"id":"MANAGEMENT","value":"1"},{"id":"CAREER","value":"2"},{"id":"REST_RECOVERY","value":"1"},{"id":"SALARY","value":"1"}],"pros":"Выдают форму для работы, оплачивают мед книжку, дарят балы на нг","cons":"Включить в рабочий день обед, не увольнять людей без предупреждения. Покупать для персонала чай и кофе.Поставить кулер с водой за счет компании.","recommendToFriend":"NO","creationTime":"2026-01-14T14:51:42Z","status":{"id":1,"name":"Опубликован"},"feedback":{"creationTime":"2026-01-27T09:23:24Z","text":"Уважаемый сотрудник!\n\nБлагодарим вас за отзыв и за то, что поделились своим опытом работы в нашей компании. Мы ценим каждое мнение — оно помогает нам совершенствовать рабочие процессы и создавать комфортные условия для коллектива.\n\nМы рады, что вы отметили положительные моменты:\n\nпредоставление рабочей формы;\n\nкомпенсацию расходов на медицинскую книжку;\n\nновогодние бонусы для сотрудников.\n\nВаши предложения будут внимательно рассмотрены. Спасибо, что помогаете нам становиться лучше!\n\nС уважением, отдел персонала ГК \"Эркафарм\"."},"pinned":false},{"id":"4287565","target":"CURRENT_EMPLOYER","position":"Работник склада","employmentDuration":{"id":"1","name":"Меньше года"},"area":"Санкт-Петербург","areaId":2,"totalRating":"1.7","ratings":[{"id":"WORKPLACE","value":"2"},{"id":"TEAM","value":"3"},{"id":"MANAGEMENT","value":"1"},{"id":"CAREER","value

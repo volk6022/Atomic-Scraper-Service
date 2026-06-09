@@ -1,0 +1,513 @@
+[
+  {
+    "domain": "t.me",
+    "url": "https://t.me/maximumauto",
+    "httpx": {
+      "ok": true,
+      "status": 200,
+      "wire_bytes": 13552,
+      "html_bytes": 52916,
+      "words": 324,
+      "elapsed": 37.5,
+      "rewritten": "https://t.me/s/maximumauto",
+      "phone": true,
+      "handle": false,
+      "blocked": false
+    },
+    "browser_block": {
+      "ok": false,
+      "error": "Page.goto: net::ERR_TUNNEL_CONNECTION_FAILED at https://t.me/maximumauto\nCall log:\n  - navigating to \"https://t.me/maximumauto\", waiting until \"domcontentloaded"
+    },
+    "browser_full": {
+      "ok": true,
+      "wire_bytes": 167345,
+      "blocked_reqs": 0,
+      "html_bytes": 11634,
+      "words": 46,
+      "elapsed": 3.0,
+      "phone": false,
+      "handle": false,
+      "blocked": false
+    }
+  },
+  {
+    "domain": "t.me",
+    "url": "https://t.me/Parikmakherskaya1",
+    "httpx": {
+      "ok": false,
+      "error": "502 NO_HOST_CONNECTION",
+      "elapsed": 134.8
+    },
+    "browser_block": {
+      "ok": true,
+      "wire_bytes": 6303,
+      "blocked_reqs": 4,
+      "html_bytes": 11028,
+      "words": 23,
+      "elapsed": 3.6,
+      "phone": false,
+      "handle": true,
+      "blocked": false
+    },
+    "browser_full": {
+      "ok": true,
+      "wire_bytes": 204227,
+      "blocked_reqs": 0,
+      "html_bytes": 11020,
+      "words": 21,
+      "elapsed": 2.8,
+      "phone": false,
+      "handle": true,
+      "blocked": false
+    }
+  },
+  {
+    "domain": "vk.com",
+    "url": "https://vk.com/club32063264",
+    "httpx": {
+      "ok": true,
+      "status": 200,
+      "wire_bytes": 59848,
+      "html_bytes": 394604,
+      "words": 22,
+      "elapsed": 5.0,
+      "rewritten": "https://m.vk.com/club32063264",
+      "phone": false,
+      "handle": false,
+      "blocked": false
+    },
+    "browser_block": {
+      "ok": true,
+      "wire_bytes": 3052861,
+      "blocked_reqs": 17,
+      "html_bytes": 168589,
+      "words": 6,
+      "elapsed": 3.0,
+      "phone": false,
+      "handle": false,
+      "blocked": true
+    },
+    "browser_full": {
+      "ok": true,
+      "wire_bytes": 134183,
+      "blocked_reqs": 0,
+      "html_bytes": 121269,
+      "words": 0,
+      "elapsed": 3.4,
+      "phone": false,
+      "handle": false,
+      "blocked": true
+    }
+  },
+  {
+    "domain": "vk.com",
+    "url": "https://vk.com/public194067229",
+    "httpx": {
+      "ok": true,
+      "status": 200,
+      "wire_bytes": 59837,
+      "html_bytes": 394544,
+      "words": 22,
+      "elapsed": 1.0,
+      "rewritten": "https://m.vk.com/public194067229",
+      "phone": false,
+      "handle": false,
+      "blocked": false
+    },
+    "browser_block": {
+      "ok": true,
+      "wire_bytes": 3042969,
+      "blocked_reqs": 18,
+      "html_bytes": 228225,
+      "words": 6,
+      "elapsed": 3.2,
+      "phone": false,
+      "handle": false,
+      "blocked": true
+    },
+    "browser_full": {
+      "ok": true,
+      "wire_bytes": 313565,
+      "blocked_reqs": 0,
+      "html_bytes": 181036,
+      "words": 0,
+      "elapsed": 2.5,
+      "phone": false,
+      "handle": false,
+      "blocked": true
+    }
+  },
+  {
+    "domain": "instagram.com",
+    "url": "https://www.instagram.com/pobokalam.spb/",
+    "httpx": {
+      "ok": false,
+      "error": "",
+      "elapsed": 94.5
+    },
+    "browser_block": {
+      "ok": true,
+      "wire_bytes": 2326931,
+      "blocked_reqs": 2,
+      "html_bytes": 868534,
+      "words": 0,
+      "elapsed": 2.5,
+      "phone": false,
+      "handle": false,
+      "blocked": true
+    },
+    "browser_full": {
+      "ok": true,
+      "wire_bytes": 147861,
+      "blocked_reqs": 0,
+      "html_bytes": 887825,
+      "words": 0,
+      "elapsed": 10.8,
+      "phone": false,
+      "handle": false,
+      "blocked": true
+    }
+  },
+  {
+    "domain": "2gis.ru",
+    "url": "https://2gis.ru/spb/firm/5348552838715575",
+    "httpx": {
+      "ok": true,
+      "status": 200,
+      "wire_bytes": 4335,
+      "html_bytes": 7930,
+      "words": 521,
+      "elapsed": 2.3,
+      "rewritten": null,
+      "phone": false,
+      "handle": false,
+      "blocked": false
+    },
+    "browser_block": {
+      "ok": true,
+      "wire_bytes": 6058,
+      "blocked_reqs": 5,
+      "html_bytes": 11414,
+      "words": 114,
+      "elapsed": 6.2,
+      "phone": false,
+      "handle": false,
+      "blocked": false
+    },
+    "browser_full": {
+      "ok": true,
+      "wire_bytes": 96008,
+      "blocked_reqs": 0,
+      "html_bytes": 12134,
+      "words": 251,
+      "elapsed": 3.9,
+      "phone": false,
+      "handle": false,
+      "blocked": false
+    }
+  },
+  {
+    "domain": "zoon.ru",
+    "url": "https://zoon.ru/spb/restaurants/restoran_po_bokalam_na_klinskom_prospekte/",
+    "httpx": {
+      "ok": true,
+      "status": 200,
+      "wire_bytes": 62034,
+      "html_bytes": 112396,
+      "words": 6460,
+      "elapsed": 0.9,
+      "rewritten": null,
+      "phone": false,
+      "handle": true,
+      "blocked": false
+    },
+    "browser_block": {
+      "ok": true,
+      "wire_bytes": 565311,
+      "blocked_reqs": 26,
+      "html_bytes": 403705,
+      "words": 1816,
+      "elapsed": 2.9,
+      "phone": true,
+      "handle": true,
+      "blocked": true
+    },
+    "browser_full": {
+      "ok": true,
+      "wire_bytes": 1797579,
+      "blocked_reqs": 0,
+      "html_bytes": 349135,
+      "words": 1816,
+      "elapsed": 3.4,
+      "phone": true,
+      "handle": true,
+      "blocked": true
+    }
+  },
+  {
+    "domain": "zoon.ru",
+    "url": "https://zoon.ru/spb/education/shkola_no5/",
+    "httpx": {
+      "ok": true,
+      "status": 200,
+      "wire_bytes": 44433,
+      "html_bytes": 80651,
+      "words": 4285,
+      "elapsed": 12.1,
+      "rewritten": null,
+      "phone": false,
+      "handle": false,
+      "blocked": false
+    },
+    "browser_block": {
+      "ok": true,
+      "wire_bytes": 540063,
+      "blocked_reqs": 18,
+      "html_bytes": 231740,
+      "words": 1331,
+      "elapsed": 3.0,
+      "phone": true,
+      "handle": true,
+      "blocked": true
+    },
+    "browser_full": {
+      "ok": true,
+      "wire_bytes": 911353,
+      "blocked_reqs": 0,
+      "html_bytes": 229386,
+      "words": 1331,
+      "elapsed": 5.1,
+      "phone": true,
+      "handle": true,
+      "blocked": true
+    }
+  },
+  {
+    "domain": "spb.hh.ru",
+    "url": "https://spb.hh.ru/employer/224317",
+    "httpx": {
+      "ok": true,
+      "status": 200,
+      "wire_bytes": 233937,
+      "html_bytes": 1127136,
+      "words": 49146,
+      "elapsed": 6.4,
+      "rewritten": null,
+      "phone": true,
+      "handle": true,
+      "blocked": true
+    },
+    "browser_block": {
+      "ok": true,
+      "wire_bytes": 2462635,
+      "blocked_reqs": 87,
+      "html_bytes": 1759474,
+      "words": 49286,
+      "elapsed": 4.0,
+      "phone": true,
+      "handle": true,
+      "blocked": true
+    },
+    "browser_full": {
+      "ok": true,
+      "wire_bytes": 4426898,
+      "blocked_reqs": 0,
+      "html_bytes": 1766345,
+      "words": 49313,
+      "elapsed": 4.6,
+      "phone": true,
+      "handle": true,
+      "blocked": true
+    }
+  },
+  {
+    "domain": "prodoctorov.ru",
+    "url": "https://prodoctorov.ru/spb/lpu/61561-stomatologiya-doktora-budovskogo/",
+    "httpx": {
+      "ok": true,
+      "status": 200,
+      "wire_bytes": 44586,
+      "html_bytes": 234798,
+      "words": 3524,
+      "elapsed": 1.3,
+      "rewritten": null,
+      "phone": true,
+      "handle": false,
+      "blocked": false
+    },
+    "browser_block": {
+      "ok": true,
+      "wire_bytes": 913076,
+      "blocked_reqs": 35,
+      "html_bytes": 307344,
+      "words": 4074,
+      "elapsed": 3.3,
+      "phone": true,
+      "handle": false,
+      "blocked": false
+    },
+    "browser_full": {
+      "ok": true,
+      "wire_bytes": 1876475,
+      "blocked_reqs": 0,
+      "html_bytes": 308319,
+      "words": 4074,
+      "elapsed": 3.4,
+      "phone": true,
+      "handle": false,
+      "blocked": false
+    }
+  },
+  {
+    "domain": "rusprofile.ru",
+    "url": "https://www.rusprofile.ru/id/2556112",
+    "httpx": {
+      "ok": true,
+      "status": 200,
+      "wire_bytes": 53707,
+      "html_bytes": 234595,
+      "words": 2532,
+      "elapsed": 2.0,
+      "rewritten": null,
+      "phone": true,
+      "handle": false,
+      "blocked": true
+    },
+    "browser_block": {
+      "ok": true,
+      "wire_bytes": 962923,
+      "blocked_reqs": 7,
+      "html_bytes": 252629,
+      "words": 1830,
+      "elapsed": 2.5,
+      "phone": true,
+      "handle": false,
+      "blocked": true
+    },
+    "browser_full": {
+      "ok": true,
+      "wire_bytes": 901667,
+      "blocked_reqs": 0,
+      "html_bytes": 246340,
+      "words": 1830,
+      "elapsed": 10.8,
+      "phone": true,
+      "handle": false,
+      "blocked": true
+    }
+  },
+  {
+    "domain": "rubrikator.org",
+    "url": "https://rubrikator.org/russia/saint-petersburg/parikmaherskaya-no1",
+    "httpx": {
+      "ok": true,
+      "status": 200,
+      "wire_bytes": 24287,
+      "html_bytes": 43912,
+      "words": 2373,
+      "elapsed": 0.7,
+      "rewritten": null,
+      "phone": false,
+      "handle": true,
+      "blocked": false
+    },
+    "browser_block": {
+      "ok": true,
+      "wire_bytes": 685084,
+      "blocked_reqs": 8,
+      "html_bytes": 148867,
+      "words": 887,
+      "elapsed": 2.4,
+      "phone": true,
+      "handle": false,
+      "blocked": false
+    },
+    "browser_full": {
+      "ok": true,
+      "wire_bytes": 784056,
+      "blocked_reqs": 0,
+      "html_bytes": 138625,
+      "words": 885,
+      "elapsed": 2.7,
+      "phone": true,
+      "handle": false,
+      "blocked": false
+    }
+  },
+  {
+    "domain": "orgzz.ru",
+    "url": "https://orgzz.ru/spb/co/produktovyy_magazin/5523403",
+    "httpx": {
+      "ok": true,
+      "status": 200,
+      "wire_bytes": 5543,
+      "html_bytes": 19855,
+      "words": 232,
+      "elapsed": 0.6,
+      "rewritten": null,
+      "phone": false,
+      "handle": false,
+      "blocked": false
+    },
+    "browser_block": {
+      "ok": true,
+      "wire_bytes": 56218,
+      "blocked_reqs": 1,
+      "html_bytes": 20287,
+      "words": 232,
+      "elapsed": 3.8,
+      "phone": false,
+      "handle": false,
+      "blocked": false
+    },
+    "browser_full": {
+      "ok": true,
+      "wire_bytes": 64311,
+      "blocked_reqs": 0,
+      "html_bytes": 20287,
+      "words": 232,
+      "elapsed": 7.0,
+      "phone": false,
+      "handle": false,
+      "blocked": false
+    }
+  },
+  {
+    "domain": "spb.spravker.ru",
+    "url": "https://spb.spravker.ru/medtsentryi-i-kliniki/say-me.htm",
+    "httpx": {
+      "ok": true,
+      "status": 200,
+      "wire_bytes": 20894,
+      "html_bytes": 37836,
+      "words": 2358,
+      "elapsed": 1.4,
+      "rewritten": null,
+      "phone": false,
+      "handle": true,
+      "blocked": false
+    },
+    "browser_block": {
+      "ok": true,
+      "wire_bytes": 328983,
+      "blocked_reqs": 5,
+      "html_bytes": 249706,
+      "words": 1839,
+      "elapsed": 7.0,
+      "phone": true,
+      "handle": false,
+      "blocked": true
+    },
+    "browser_full": {
+      "ok": true,
+      "wire_bytes": 509297,
+      "blocked_reqs": 0,
+      "html_bytes": 260450,
+      "words": 1843,
+      "elapsed": 10.4,
+      "phone": true,
+      "handle": false,
+      "blocked": true
+    }
+  }
+]
