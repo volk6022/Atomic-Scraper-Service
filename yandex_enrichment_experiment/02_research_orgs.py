@@ -237,20 +237,37 @@ TYPE_TARGETS: dict[str, str] = {
 }
 
 
+# Workstream D: archetypes where legal entity is NICE-TO-HAVE, not worth a hunt.
+# law = bar associations / individual advokats often have no single ООО → the
+# A+C run showed law eats the biggest token tail with poor INN yield (Лигал Лайн:
+# +192k tokens, 0 INN). Soften: 1 cheap try, then move on.
+SOFT_LEGAL_ARCHETYPES = frozenset({"law"})
+
+
 def type_specific_block(archetype: str) -> str:
-    """Archetype deep-dive + (Workstream C) registry targeting lines for the query."""
+    """Archetype deep-dive + (Workstream C/D) capped registry targeting for the query."""
     lines = []
     tgt = TYPE_TARGETS.get(archetype)
     if tgt:
         lines.append(f"- УГЛУБИСЬ во внутреннюю специфику ({archetype}): {tgt}. "
                      f"Запиши в deep_dive.")
     if wants_legal_entity(archetype):
-        lines.append(
-            "- ЮРЛИЦО И РЕЕСТРЫ: найди ИНН, ОГРН, юр. название, год основания, "
-            "число сотрудников и оборот — ПРОВЕРЬ rusprofile.ru, checko.ru, "
-            "list-org.com (ищи по названию + город/адрес или телефон). "
-            "Запиши в legal_entity."
-        )
+        if archetype in SOFT_LEGAL_ARCHETYPES:
+            lines.append(
+                "- ЮРЛИЦО (по возможности): если ИНН/ОГРН легко всплывает в "
+                "rusprofile/checko/list-org — запиши в legal_entity. НЕ трать на это "
+                "больше 1 поиска и НЕ зацикливайся: у адвокатских образований часто "
+                "нет единого юрлица. Для этого типа важнее practice_areas/notable_cases, "
+                "чем ИНН."
+            )
+        else:
+            lines.append(
+                "- ЮРЛИЦО И РЕЕСТРЫ: найди ИНН, ОГРН, юр. название, год основания, "
+                "число сотрудников и оборот — проверь rusprofile.ru/checko.ru/list-org.com "
+                "(по названию + город/адрес или телефон). ЛИМИТ: не более 2 целевых "
+                "запросов на реестры; если ИНН не всплыл — двигайся дальше, не "
+                "зацикливайся. Запиши в legal_entity."
+            )
     return ("\n" + "\n".join(lines)) if lines else ""
 
 
