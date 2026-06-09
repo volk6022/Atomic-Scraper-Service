@@ -40,7 +40,7 @@ critic_system: |
   submit. Evaluate it against the user's request.
 
   Output strict JSON:
-  {"score": <0-10 float>, "missing": ["<aspect>", ...], "wrong": ["<short desc>", ...], "feedback": "<≤200 char actionable advice>", "verdict": "pass"|"reject"}
+  {"score": <0-10 float>, "depth_score": <0-10 float>, "missing": ["<aspect>", ...], "wrong": ["<short desc>", ...], "feedback": "<≤200 char actionable advice>", "verdict": "pass"|"reject"}
 
   Scoring rubric (be CALIBRATED, not harsh):
   - 10: fully answers the request; well grounded; diverse credible sources.
@@ -54,9 +54,22 @@ critic_system: |
   - If the result asserts facts not supported by any fetched source → lower the score.
   - If sources contain non-URL entries or invented URLs → verdict="reject".
 
+  Research DEPTH (depth_score, calibrate to what the REQUEST explicitly asks):
+  - If the request names specific INTERNAL facts (specialization/profile, scale/size,
+    legal entity / registry, client problems, type-specific details such as a clinic's
+    doctors or a cafe's average check) and the result carries only SURFACE info
+    (name, phone, address, generic blurb) while those facts are realistically findable
+    → depth_score low (≤5), add the missing internals to "missing", dock score 1-2 pts.
+  - Do NOT penalize depth genuinely unavailable: a micro business with no web footprint,
+    or a field the request did NOT ask for. Absence is a fault ONLY when the request
+    asked AND the web likely has it. depth_score high (≥8) when the type-specific asks
+    are addressed — even if some are honestly "not found" after a real attempt.
+  - Social/DM channels (VK, Telegram, Instagram handle) are PRIMARY for outreach: if
+    the request stresses them and they're absent but the org clearly has socials → missing.
+
   Set verdict="pass" if score ≥ {pass_score} OR the only gaps are genuinely
   unavailable on the web. Set verdict="reject" if score < {pass_score} AND the
-  missing pieces are realistically findable on the web.
+  missing pieces (incl. findable depth) are realistically findable on the web.
 
   No prose outside the JSON.
 
@@ -67,7 +80,10 @@ refraser_system: |
   Rules:
   - Each angle is a short query (≤5 words) in language: {language}, suitable for SearXNG.
   - Do NOT repeat or rephrase the agent's prior queries.
-  - Aim at coverage gaps implied by the request.
+  - If KNOWN GAPS are provided, aim your angles DIRECTLY at filling them (prioritize
+    these over generic widening) — e.g. a gap "ИНН/юр-лицо" → angle "<org> rusprofile",
+    a gap "specialization" → angle "<org> услуги направления".
+  - Otherwise aim at coverage gaps implied by the request.
   - Output strict JSON: {"new_angles": ["...", "...", "..."], "reason": "<≤25 words>"}
   - No prose outside the JSON.
 
@@ -111,6 +127,7 @@ templates:
     QUERIES SO FAR ({queries_count}):
     {queries_block}
     VISITED URL DOMAINS: {domains}
+    KNOWN GAPS (from critic — target these first): {gaps_block}
     Propose 2-3 NEW angles. Return JSON only.
 
   compact_user: |

@@ -401,6 +401,7 @@ async def critic_call(
     except Exception as e:  # fail open — don't block on critic outage
         return {
             "score": 10.0,
+            "depth_score": 10.0,
             "missing": [],
             "wrong": [],
             "feedback": f"critic unreachable: {type(e).__name__}",
@@ -410,14 +411,17 @@ async def critic_call(
     if not p:
         return {
             "score": 7.0,
+            "depth_score": 7.0,
             "missing": [],
             "wrong": [],
             "feedback": "critic returned non-JSON; passing",
             "verdict": "pass",
         }
     try:
+        score = float(p.get("score", 7.0))
         return {
-            "score": float(p.get("score", 7.0)),
+            "score": score,
+            "depth_score": float(p.get("depth_score", score)),
             "missing": [str(x)[:80] for x in (p.get("missing") or [])][:8],
             "wrong": [str(x)[:120] for x in (p.get("wrong") or [])][:5],
             "feedback": str(p.get("feedback", ""))[:300],
@@ -426,6 +430,7 @@ async def critic_call(
     except Exception:
         return {
             "score": 7.0,
+            "depth_score": 7.0,
             "missing": [],
             "wrong": [],
             "feedback": "critic parse fail; passing",
@@ -443,15 +448,19 @@ async def refraser_call(
     visited_urls: set[str],
     usage: dict,
     timeout: float,
+    missing_gaps: list[str] | None = None,
 ) -> dict:
     system = _render(prompts["refraser_system"], language=language)
     domains = sorted({urlparse(u).netloc for u in visited_urls})[:20]
+    gaps = [g for g in (missing_gaps or []) if g][:6]
+    gaps_block = ", ".join(gaps) if gaps else "(none provided)"
     user = _render(
         prompts["templates"]["refraser_user"],
         query=query,
         queries_count=len(queries_history),
         queries_block="  - " + "\n  - ".join(queries_history[-12:]),
         domains=domains,
+        gaps_block=gaps_block,
     )
     try:
         content = await _chat_text(
@@ -806,6 +815,7 @@ async def run_research(
                             queries_history=state.queries_history,
                             visited_urls=state.visited_urls,
                             usage=aux_usage, timeout=llm_timeout,
+                            missing_gaps=(last_critic or {}).get("missing"),
                         )
                         if ref.get("new_angles"):
                             result["_supervisor_hint"] = ref
@@ -848,7 +858,8 @@ async def run_research(
                 last_critic = critic
                 trace.append({
                     "turn": turn, "role": "critic",
-                    "score": critic["score"], "verdict": critic["verdict"],
+                    "score": critic["score"], "depth_score": critic.get("depth_score"),
+                    "verdict": critic["verdict"],
                     "missing": critic["missing"], "wrong": critic["wrong"],
                     "feedback": critic["feedback"],
                 })
@@ -875,6 +886,7 @@ async def run_research(
                         queries_history=state.queries_history,
                         visited_urls=state.visited_urls,
                         usage=aux_usage, timeout=llm_timeout,
+                        missing_gaps=critic["missing"],
                     )
                     refraser_runs += 1
                     result = {
