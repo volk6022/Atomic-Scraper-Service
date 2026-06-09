@@ -1,0 +1,1483 @@
+{
+  "summary": {
+    "site": "rubrikator.org",
+    "n_requests": 100,
+    "unique_urls": 20,
+    "request_success_rate": 0.9,
+    "content_success_rate": 0.9,
+    "total_wire_bytes": 2112907,
+    "total_wire_mb": 2.02,
+    "avg_bytes_per_ok": 22781,
+    "p50_bytes_ok": 22039,
+    "p95_bytes_ok": 33544,
+    "avg_attempts": 1.83,
+    "avg_latency_s": 51.67,
+    "status_dist": {
+      "200": 90,
+      "404": 10
+    },
+    "elapsed_s": 104.8
+  },
+  "records": [
+    {
+      "url": "https://rubrikator.org/russia/saint-petersburg/plezir",
+      "fetched": null,
+      "wire_bytes": 23404,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 0.9,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://rubrikator.org/russia/saint-petersburg/spetskialnaya-korrektsionnaya-obscheobrazovatelnaya-shkola-no5-dlya-obuchayuschihsya-109599",
+      "fetched": null,
+      "wire_bytes": 8025,
+      "attempts": 6,
+      "ok": false,
+      "content_ok": false,
+      "status": 404,
+      "latency_s": 8.16,
+      "error": "ConnectTimeout: "
+    },
+    {
+      "url": "https://rubrikator.org/russia/saint-petersburg/parikmaherskaya-no1",
+      "fetched": null,
+      "wire_bytes": 25116,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 0.76,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://rubrikator.org/russia/saint-petersburg/detskiy-sad-no154",
+      "fetched": null,
+      "wire_bytes": 23327,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 0.64,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://rubrikator.org/russia/saint-petersburg/omoda-maksimum-obvodnyi-cxu",
+      "fetched": null,
+      "wire_bytes": 22039,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 1.32,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://rubrikator.org/russia/saint-petersburg/dentideal",
+      "fetched": null,
+      "wire_bytes": 21583,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 1.26,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://rubrikator.org/russia/saint-petersburg/beer-house",
+      "fetched": null,
+      "wire_bytes": 21696,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 1.42,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://rubrikator.org/russia/saint-petersburg/real-dent",
+      "fetched": null,
+      "wire_bytes": 22177,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 6.97,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://rubrikator.org/russia/saint-petersburg/shveinyi-ceh-aleksandry",
+      "fetched": null,
+      "wire_bytes": 21048,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 1.99,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://rubrikator.org/russia/saint-petersburg/dobryi-pekar",
+      "fetched": null,
+      "wire_bytes": 21295,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 9.35,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://rubrikator.org/russia/saint-petersburg/pervaya-medicinskaya-klinika",
+      "fetched": null,
+      "wire_bytes": 23126,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 2.91,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://rubrikator.org/russia/saint-petersburg/prodovolstvenniy-magazin-na-bronnitskoj",
+      "fetched": null,
+      "wire_bytes": 6420,
+      "attempts": 6,
+      "ok": false,
+      "content_ok": false,
+      "status": 404,
+      "latency_s": 21.5,
+      "error": "status=404 len=4185"
+    },
+    {
+      "url": "https://rubrikator.org/russia/saint-petersburg/maksimum-vw2",
+      "fetched": null,
+      "wire_bytes": 22104,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 8.25,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://rubrikator.org/russia/saint-petersburg/muzhskoi-portnoi-oleg",
+      "fetched": null,
+      "wire_bytes": 21561,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 14.68,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://rubrikator.org/russia/saint-petersburg/dolgoletie",
+      "fetched": null,
+      "wire_bytes": 21562,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 15.04,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://rubrikator.org/russia/saint-petersburg/pervaya-advokatskaya-kontora",
+      "fetched": null,
+      "wire_bytes": 21400,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 14.75,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://rubrikator.org/russia/saint-petersburg/neptun",
+      "fetched": null,
+      "wire_bytes": 23559,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 15.38,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://rubrikator.org/russia/saint-petersburg/neptun-2",
+      "fetched": null,
+      "wire_bytes": 20543,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 15.5,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://rubrikator.org/items/magazin-udachnyi-rossiya_19535",
+      "fetched": null,
+      "wire_bytes": 33544,
+      "attempts": 3,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 26.01,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://rubrikator.org/russia/saint-petersburg/ferma-4",
+      "fetched": null,
+      "wire_bytes": 20979,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 21.22,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://rubrikator.org/russia/saint-petersburg/plezir",
+      "fetched": null,
+      "wire_bytes": 23404,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 16.2,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://rubrikator.org/russia/saint-petersburg/spetskialnaya-korrektsionnaya-obscheobrazovatelnaya-shkola-no5-dlya-obuchayuschihsya-109599",
+      "fetched": null,
+      "wire_bytes": 4815,
+      "attempts": 6,
+      "ok": false,
+      "content_ok": false,
+      "status": 404,
+      "latency_s": 33.19,
+      "error": "ConnectTimeout: "
+    },
+    {
+      "url": "https://rubrikator.org/russia/saint-petersburg/parikmaherskaya-no1",
+      "fetched": null,
+      "wire_bytes": 25116,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 22.02,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://rubrikator.org/russia/saint-petersburg/detskiy-sad-no154",
+      "fetched": null,
+      "wire_bytes": 23327,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 22.26,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://rubrikator.org/russia/saint-petersburg/omoda-maksimum-obvodnyi-cxu",
+      "fetched": null,
+      "wire_bytes": 22039,
+      "attempts": 4,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 37.99,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://rubrikator.org/russia/saint-petersburg/dentideal",
+      "fetched": null,
+      "wire_bytes": 21583,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 22.99,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://rubrikator.org/russia/saint-petersburg/beer-house",
+      "fetched": null,
+      "wire_bytes": 21696,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 23.68,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://rubrikator.org/russia/saint-petersburg/real-dent",
+      "fetched": null,
+      "wire_bytes": 22177,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 24.44,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://rubrikator.org/russia/saint-petersburg/shveinyi-ceh-aleksandry",
+      "fetched": null,
+      "wire_bytes": 21048,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 25.16,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://rubrikator.org/russia/saint-petersburg/dobryi-pekar",
+      "fetched": null,
+      "wire_bytes": 21294,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 26.07,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://rubrikator.org/russia/saint-petersburg/pervaya-medicinskaya-klinika",
+      "fetched": null,
+      "wire_bytes": 23126,
+      "attempts": 4,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 41.85,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://rubrikator.org/russia/saint-petersburg/prodovolstvenniy-magazin-na-bronnitskoj",
+      "fetched": null,
+      "wire_bytes": 8025,
+      "attempts": 6,
+      "ok": false,
+      "content_ok": false,
+      "status": 404,
+      "latency_s": 36.02,
+      "error": "status=404 len=4185"
+    },
+    {
+      "url": "https://rubrikator.org/russia/saint-petersburg/maksimum-vw2",
+      "fetched": null,
+      "wire_bytes": 22104,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 34.0,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://rubrikator.org/russia/saint-petersburg/muzhskoi-portnoi-oleg",
+      "fetched": null,
+      "wire_bytes": 21561,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 39.68,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://rubrikator.org/russia/saint-petersburg/dolgoletie",
+      "fetched": null,
+      "wire_bytes": 21562,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 36.68,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://rubrikator.org/russia/saint-petersburg/pervaya-advokatskaya-kontora",
+      "fetched": null,
+      "wire_bytes": 21400,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 37.66,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://rubrikator.org/russia/saint-petersburg/neptun",
+      "fetched": null,
+      "wire_bytes": 23559,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 38.4,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://rubrikator.org/russia/saint-petersburg/neptun-2",
+      "fetched": null,
+      "wire_bytes": 20543,
+      "attempts": 3,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 49.19,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://rubrikator.org/items/magazin-udachnyi-rossiya_19535",
+      "fetched": null,
+      "wire_bytes": 33544,
+      "attempts": 5,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 59.32,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://rubrikator.org/russia/saint-petersburg/ferma-4",
+      "fetched": null,
+      "wire_bytes": 20979,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 40.47,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://rubrikator.org/russia/saint-petersburg/plezir",
+      "fetched": null,
+      "wire_bytes": 23404,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 41.01,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://rubrikator.org/russia/saint-petersburg/spetskialnaya-korrektsionnaya-obscheobrazovatelnaya-shkola-no5-dlya-obuchayuschihsya-109599",
+      "fetched": null,
+      "wire_bytes": 6420,
+      "attempts": 6,
+      "ok": false,
+      "content_ok": false,
+      "status": 404,
+      "latency_s": 53.37,
+      "error": "ConnectTimeout: "
+    },
+    {
+      "url": "https://rubrikator.org/russia/saint-petersburg/parikmaherskaya-no1",
+      "fetched": null,
+      "wire_bytes": 25116,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 42.98,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://rubrikator.org/russia/saint-petersburg/detskiy-sad-no154",
+      "fetched": null,
+      "wire_bytes": 23327,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 43.55,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://rubrikator.org/russia/saint-petersburg/omoda-maksimum-obvodnyi-cxu",
+      "fetched": null,
+      "wire_bytes": 22039,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 44.04,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://rubrikator.org/russia/saint-petersburg/dentideal",
+      "fetched": null,
+      "wire_bytes": 21583,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 44.54,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://rubrikator.org/russia/saint-petersburg/beer-house",
+      "fetched": null,
+      "wire_bytes": 21696,
+      "attempts": 3,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 55.47,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://rubrikator.org/russia/saint-petersburg/real-dent",
+      "fetched": null,
+      "wire_bytes": 22177,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 49.93,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://rubrikator.org/russia/saint-petersburg/shveinyi-ceh-aleksandry",
+      "fetched": null,
+      "wire_bytes": 21048,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 55.6,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://rubrikator.org/russia/saint-petersburg/dobryi-pekar",
+      "fetched": null,
+      "wire_bytes": 21294,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 54.03,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://rubrikator.org/russia/saint-petersburg/pervaya-medicinskaya-klinika",
+      "fetched": null,
+      "wire_bytes": 23126,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 54.63,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://rubrikator.org/russia/saint-petersburg/prodovolstvenniy-magazin-na-bronnitskoj",
+      "fetched": null,
+      "wire_bytes": 6420,
+      "attempts": 6,
+      "ok": false,
+      "content_ok": false,
+      "status": 404,
+      "latency_s": 67.23,
+      "error": "ConnectTimeout: "
+    },
+    {
+      "url": "https://rubrikator.org/russia/saint-petersburg/maksimum-vw2",
+      "fetched": null,
+      "wire_bytes": 22104,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 56.11,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://rubrikator.org/russia/saint-petersburg/muzhskoi-portnoi-oleg",
+      "fetched": null,
+      "wire_bytes": 21561,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 56.25,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://rubrikator.org/russia/saint-petersburg/dolgoletie",
+      "fetched": null,
+      "wire_bytes": 21562,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 56.84,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://rubrikator.org/russia/saint-petersburg/pervaya-advokatskaya-kontora",
+      "fetched": null,
+      "wire_bytes": 21400,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 56.78,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://rubrikator.org/russia/saint-petersburg/neptun",
+      "fetched": null,
+      "wire_bytes": 23559,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 57.45,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://rubrikator.org/russia/saint-petersburg/neptun-2",
+      "fetched": null,
+      "wire_bytes": 20543,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 57.5,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://rubrikator.org/items/magazin-udachnyi-rossiya_19535",
+      "fetched": null,
+      "wire_bytes": 33544,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 58.22,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://rubrikator.org/russia/saint-petersburg/ferma-4",
+      "fetched": null,
+      "wire_bytes": 20979,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 58.17,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://rubrikator.org/russia/saint-petersburg/plezir",
+      "fetched": null,
+      "wire_bytes": 23404,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 58.73,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://rubrikator.org/russia/saint-petersburg/spetskialnaya-korrektsionnaya-obscheobrazovatelnaya-shkola-no5-dlya-obuchayuschihsya-109599",
+      "fetched": null,
+      "wire_bytes": 6420,
+      "attempts": 6,
+      "ok": false,
+      "content_ok": false,
+      "status": 404,
+      "latency_s": 78.07,
+      "error": "status=404 len=4185"
+    },
+    {
+      "url": "https://rubrikator.org/russia/saint-petersburg/parikmaherskaya-no1",
+      "fetched": null,
+      "wire_bytes": 25116,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 64.53,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://rubrikator.org/russia/saint-petersburg/detskiy-sad-no154",
+      "fetched": null,
+      "wire_bytes": 23327,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 59.97,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://rubrikator.org/russia/saint-petersburg/omoda-maksimum-obvodnyi-cxu",
+      "fetched": null,
+      "wire_bytes": 22039,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 65.65,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://rubrikator.org/russia/saint-petersburg/dentideal",
+      "fetched": null,
+      "wire_bytes": 21583,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 65.41,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://rubrikator.org/russia/saint-petersburg/beer-house",
+      "fetched": null,
+      "wire_bytes": 21696,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 66.27,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://rubrikator.org/russia/saint-petersburg/real-dent",
+      "fetched": null,
+      "wire_bytes": 22177,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 66.22,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://rubrikator.org/russia/saint-petersburg/shveinyi-ceh-aleksandry",
+      "fetched": null,
+      "wire_bytes": 21048,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 67.09,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://rubrikator.org/russia/saint-petersburg/dobryi-pekar",
+      "fetched": null,
+      "wire_bytes": 21294,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 66.84,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://rubrikator.org/russia/saint-petersburg/pervaya-medicinskaya-klinika",
+      "fetched": null,
+      "wire_bytes": 23126,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 72.7,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://rubrikator.org/russia/saint-petersburg/prodovolstvenniy-magazin-na-bronnitskoj",
+      "fetched": null,
+      "wire_bytes": 4815,
+      "attempts": 6,
+      "ok": false,
+      "content_ok": false,
+      "status": 404,
+      "latency_s": 84.23,
+      "error": "status=404 len=4185"
+    },
+    {
+      "url": "https://rubrikator.org/russia/saint-petersburg/maksimum-vw2",
+      "fetched": null,
+      "wire_bytes": 22104,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 67.83,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://rubrikator.org/russia/saint-petersburg/muzhskoi-portnoi-oleg",
+      "fetched": null,
+      "wire_bytes": 21561,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 68.45,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://rubrikator.org/russia/saint-petersburg/dolgoletie",
+      "fetched": null,
+      "wire_bytes": 21562,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 69.2,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://rubrikator.org/russia/saint-petersburg/pervaya-advokatskaya-kontora",
+      "fetched": null,
+      "wire_bytes": 21400,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 74.92,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://rubrikator.org/russia/saint-petersburg/neptun",
+      "fetched": null,
+      "wire_bytes": 23559,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 73.36,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://rubrikator.org/russia/saint-petersburg/neptun-2",
+      "fetched": null,
+      "wire_bytes": 20543,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 73.99,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://rubrikator.org/items/magazin-udachnyi-rossiya_19535",
+      "fetched": null,
+      "wire_bytes": 33544,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 81.42,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://rubrikator.org/russia/saint-petersburg/ferma-4",
+      "fetched": null,
+      "wire_bytes": 20979,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 82.3,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://rubrikator.org/russia/saint-petersburg/plezir",
+      "fetched": null,
+      "wire_bytes": 23405,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 80.42,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://rubrikator.org/russia/saint-petersburg/spetskialnaya-korrektsionnaya-obscheobrazovatelnaya-shkola-no5-dlya-obuchayuschihsya-109599",
+      "fetched": null,
+      "wire_bytes": 4815,
+      "attempts": 6,
+      "ok": false,
+      "content_ok": false,
+      "status": 404,
+      "latency_s": 97.44,
+      "error": "ConnectTimeout: "
+    },
+    {
+      "url": "https://rubrikator.org/russia/saint-petersburg/parikmaherskaya-no1",
+      "fetched": null,
+      "wire_bytes": 25116,
+      "attempts": 3,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 91.53,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://rubrikator.org/russia/saint-petersburg/detskiy-sad-no154",
+      "fetched": null,
+      "wire_bytes": 23327,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 83.33,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://rubrikator.org/russia/saint-petersburg/omoda-maksimum-obvodnyi-cxu",
+      "fetched": null,
+      "wire_bytes": 22039,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 84.37,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://rubrikator.org/russia/saint-petersburg/dentideal",
+      "fetched": null,
+      "wire_bytes": 21583,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 85.42,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://rubrikator.org/russia/saint-petersburg/beer-house",
+      "fetched": null,
+      "wire_bytes": 21696,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 84.98,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://rubrikator.org/russia/saint-petersburg/real-dent",
+      "fetched": null,
+      "wire_bytes": 22178,
+      "attempts": 3,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 94.15,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://rubrikator.org/russia/saint-petersburg/shveinyi-ceh-aleksandry",
+      "fetched": null,
+      "wire_bytes": 21046,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 86.31,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://rubrikator.org/russia/saint-petersburg/dobryi-pekar",
+      "fetched": null,
+      "wire_bytes": 21294,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 87.4,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://rubrikator.org/russia/saint-petersburg/pervaya-medicinskaya-klinika",
+      "fetched": null,
+      "wire_bytes": 23126,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 93.26,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://rubrikator.org/russia/saint-petersburg/prodovolstvenniy-magazin-na-bronnitskoj",
+      "fetched": null,
+      "wire_bytes": 6420,
+      "attempts": 6,
+      "ok": false,
+      "content_ok": false,
+      "status": 404,
+      "latency_s": 104.56,
+      "error": "status=404 len=4185"
+    },
+    {
+      "url": "https://rubrikator.org/russia/saint-petersburg/maksimum-vw2",
+      "fetched": null,
+      "wire_bytes": 22104,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 94.21,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://rubrikator.org/russia/saint-petersburg/muzhskoi-portnoi-oleg",
+      "fetched": null,
+      "wire_bytes": 21562,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 95.15,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://rubrikator.org/russia/saint-petersburg/dolgoletie",
+      "fetched": null,
+      "wire_bytes": 21562,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 95.11,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://rubrikator.org/russia/saint-petersburg/pervaya-advokatskaya-kontora",
+      "fetched": null,
+      "wire_bytes": 21400,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 95.84,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://rubrikator.org/russia/saint-petersburg/neptun",
+      "fetched": null,
+      "wire_bytes": 23559,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 95.95,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://rubrikator.org/russia/saint-petersburg/neptun-2",
+      "fetched": null,
+      "wire_bytes": 20543,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 96.91,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://rubrikator.org/items/magazin-udachnyi-rossiya_19535",
+      "fetched": null,
+      "wire_bytes": 33544,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 96.65,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://rubrikator.org/russia/saint-petersburg/ferma-4",
+      "fetched": null,
+      "wire_bytes": 20979,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 97.85,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    }
+  ]
+}

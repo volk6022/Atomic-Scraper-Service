@@ -1,0 +1,1622 @@
+{
+  "summary": {
+    "site": "prodoctorov.ru",
+    "n_requests": 100,
+    "unique_urls": 16,
+    "request_success_rate": 1.0,
+    "content_success_rate": 1.0,
+    "total_wire_bytes": 3738812,
+    "total_wire_mb": 3.57,
+    "avg_bytes_per_ok": 37388,
+    "p50_bytes_ok": 31964,
+    "p95_bytes_ok": 105463,
+    "avg_attempts": 1.4,
+    "avg_latency_s": 46.62,
+    "status_dist": {
+      "200": 100
+    },
+    "elapsed_s": 104.6
+  },
+  "records": [
+    {
+      "url": "https://prodoctorov.ru/spb/lpu/22805-medicinskiy-centr-liana/",
+      "fetched": null,
+      "wire_bytes": 31197,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 1.71,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_doctors": true,
+        "has_desc": true
+      }
+    },
+    {
+      "url": "https://prodoctorov.ru/spb/lpu/74303-per-foshar/",
+      "fetched": null,
+      "wire_bytes": 26625,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 1.46,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_doctors": true,
+        "has_desc": true
+      }
+    },
+    {
+      "url": "https://prodoctorov.ru/spb/lpu/61561-stomatologiya-doktora-budovskogo/",
+      "fetched": null,
+      "wire_bytes": 44589,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 1.53,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_doctors": true,
+        "has_desc": true
+      }
+    },
+    {
+      "url": "https://prodoctorov.ru/spb/lpu/61561-stomatologiya-doktora-budovskogo/otzivi/",
+      "fetched": null,
+      "wire_bytes": 105465,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 6.61,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_doctors": true,
+        "has_desc": true
+      }
+    },
+    {
+      "url": "https://prodoctorov.ru/spb/lpu/37463-real-dent/",
+      "fetched": null,
+      "wire_bytes": 16821,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 2.88,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_doctors": true,
+        "has_desc": true
+      }
+    },
+    {
+      "url": "https://prodoctorov.ru/spb/lpu/39682-moy-zubnoy-na-podolskoy/",
+      "fetched": null,
+      "wire_bytes": 31993,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 3.23,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_doctors": true,
+        "has_desc": true
+      }
+    },
+    {
+      "url": "https://prodoctorov.ru/spb/lpu/89092-klinika-osteopatii-doktora-nazarova-na-podolskoy/",
+      "fetched": null,
+      "wire_bytes": 37568,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 2.81,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_doctors": true,
+        "has_desc": true
+      }
+    },
+    {
+      "url": "https://prodoctorov.ru/spb/lpu/110869-stomatologiya-belveder/",
+      "fetched": null,
+      "wire_bytes": 19662,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 3.88,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_doctors": true,
+        "has_desc": true
+      }
+    },
+    {
+      "url": "https://prodoctorov.ru/spb/lpu/61802-pervaya-medicinskaya-klinika/",
+      "fetched": null,
+      "wire_bytes": 32514,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 4.56,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_doctors": true,
+        "has_desc": true
+      }
+    },
+    {
+      "url": "https://prodoctorov.ru/spb/lpu/96101-say-me/",
+      "fetched": null,
+      "wire_bytes": 20001,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 4.81,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_doctors": true,
+        "has_desc": true
+      }
+    },
+    {
+      "url": "https://prodoctorov.ru/spb/lpu/94620-lyubizub/",
+      "fetched": null,
+      "wire_bytes": 36875,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 5.99,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_doctors": true,
+        "has_desc": true
+      }
+    },
+    {
+      "url": "https://prodoctorov.ru/spb/lpu/84066-stomatologiya-mihaylovskaya-klinika/",
+      "fetched": null,
+      "wire_bytes": 32730,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 5.92,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_doctors": true,
+        "has_desc": true
+      }
+    },
+    {
+      "url": "https://prodoctorov.ru/spb/lpu/98363-zubnoy-centr-na-podolskoy/",
+      "fetched": null,
+      "wire_bytes": 27256,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 6.04,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_doctors": true,
+        "has_desc": true
+      }
+    },
+    {
+      "url": "https://prodoctorov.ru/spb/lpu/43052-dolgoletie-na-bronnickoy/otzivi/",
+      "fetched": null,
+      "wire_bytes": 69616,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 12.57,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_doctors": true,
+        "has_desc": true
+      }
+    },
+    {
+      "url": "https://prodoctorov.ru/spb/lpu/78198-sinofarm/",
+      "fetched": null,
+      "wire_bytes": 29213,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 7.03,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_doctors": true,
+        "has_desc": true
+      }
+    },
+    {
+      "url": "https://prodoctorov.ru/spb/vrach/1078592-ignatenko/",
+      "fetched": null,
+      "wire_bytes": 26436,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 13.34,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_doctors": true,
+        "has_desc": true
+      }
+    },
+    {
+      "url": "https://prodoctorov.ru/spb/lpu/22805-medicinskiy-centr-liana/",
+      "fetched": null,
+      "wire_bytes": 31185,
+      "attempts": 3,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 18.21,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_doctors": true,
+        "has_desc": true
+      }
+    },
+    {
+      "url": "https://prodoctorov.ru/spb/lpu/74303-per-foshar/",
+      "fetched": null,
+      "wire_bytes": 26626,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 13.26,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_doctors": true,
+        "has_desc": true
+      }
+    },
+    {
+      "url": "https://prodoctorov.ru/spb/lpu/61561-stomatologiya-doktora-budovskogo/",
+      "fetched": null,
+      "wire_bytes": 44571,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 14.16,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_doctors": true,
+        "has_desc": true
+      }
+    },
+    {
+      "url": "https://prodoctorov.ru/spb/lpu/61561-stomatologiya-doktora-budovskogo/otzivi/",
+      "fetched": null,
+      "wire_bytes": 105460,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 19.77,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_doctors": true,
+        "has_desc": true
+      }
+    },
+    {
+      "url": "https://prodoctorov.ru/spb/lpu/37463-real-dent/",
+      "fetched": null,
+      "wire_bytes": 16821,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 14.59,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_doctors": true,
+        "has_desc": true
+      }
+    },
+    {
+      "url": "https://prodoctorov.ru/spb/lpu/39682-moy-zubnoy-na-podolskoy/",
+      "fetched": null,
+      "wire_bytes": 31994,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 15.34,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_doctors": true,
+        "has_desc": true
+      }
+    },
+    {
+      "url": "https://prodoctorov.ru/spb/lpu/89092-klinika-osteopatii-doktora-nazarova-na-podolskoy/",
+      "fetched": null,
+      "wire_bytes": 37544,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 16.35,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_doctors": true,
+        "has_desc": true
+      }
+    },
+    {
+      "url": "https://prodoctorov.ru/spb/lpu/110869-stomatologiya-belveder/",
+      "fetched": null,
+      "wire_bytes": 19673,
+      "attempts": 3,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 26.87,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_doctors": true,
+        "has_desc": true
+      }
+    },
+    {
+      "url": "https://prodoctorov.ru/spb/lpu/61802-pervaya-medicinskaya-klinika/",
+      "fetched": null,
+      "wire_bytes": 32512,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 17.87,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_doctors": true,
+        "has_desc": true
+      }
+    },
+    {
+      "url": "https://prodoctorov.ru/spb/lpu/96101-say-me/",
+      "fetched": null,
+      "wire_bytes": 19997,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 19.06,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_doctors": true,
+        "has_desc": true
+      }
+    },
+    {
+      "url": "https://prodoctorov.ru/spb/lpu/94620-lyubizub/",
+      "fetched": null,
+      "wire_bytes": 36867,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 24.66,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_doctors": true,
+        "has_desc": true
+      }
+    },
+    {
+      "url": "https://prodoctorov.ru/spb/lpu/84066-stomatologiya-mihaylovskaya-klinika/",
+      "fetched": null,
+      "wire_bytes": 32749,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 20.82,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_doctors": true,
+        "has_desc": true
+      }
+    },
+    {
+      "url": "https://prodoctorov.ru/spb/lpu/98363-zubnoy-centr-na-podolskoy/",
+      "fetched": null,
+      "wire_bytes": 27251,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 21.08,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_doctors": true,
+        "has_desc": true
+      }
+    },
+    {
+      "url": "https://prodoctorov.ru/spb/lpu/43052-dolgoletie-na-bronnickoy/otzivi/",
+      "fetched": null,
+      "wire_bytes": 69612,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 22.81,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_doctors": true,
+        "has_desc": true
+      }
+    },
+    {
+      "url": "https://prodoctorov.ru/spb/lpu/78198-sinofarm/",
+      "fetched": null,
+      "wire_bytes": 29211,
+      "attempts": 5,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 43.08,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_doctors": true,
+        "has_desc": true
+      }
+    },
+    {
+      "url": "https://prodoctorov.ru/spb/vrach/1078592-ignatenko/",
+      "fetched": null,
+      "wire_bytes": 26432,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 29.65,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_doctors": true,
+        "has_desc": true
+      }
+    },
+    {
+      "url": "https://prodoctorov.ru/spb/lpu/22805-medicinskiy-centr-liana/",
+      "fetched": null,
+      "wire_bytes": 31175,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 25.94,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_doctors": true,
+        "has_desc": true
+      }
+    },
+    {
+      "url": "https://prodoctorov.ru/spb/lpu/74303-per-foshar/",
+      "fetched": null,
+      "wire_bytes": 26619,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 32.59,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_doctors": true,
+        "has_desc": true
+      }
+    },
+    {
+      "url": "https://prodoctorov.ru/spb/lpu/61561-stomatologiya-doktora-budovskogo/",
+      "fetched": null,
+      "wire_bytes": 44582,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 33.27,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_doctors": true,
+        "has_desc": true
+      }
+    },
+    {
+      "url": "https://prodoctorov.ru/spb/lpu/61561-stomatologiya-doktora-budovskogo/otzivi/",
+      "fetched": null,
+      "wire_bytes": 105467,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 31.2,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_doctors": true,
+        "has_desc": true
+      }
+    },
+    {
+      "url": "https://prodoctorov.ru/spb/lpu/37463-real-dent/",
+      "fetched": null,
+      "wire_bytes": 16822,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 32.75,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_doctors": true,
+        "has_desc": true
+      }
+    },
+    {
+      "url": "https://prodoctorov.ru/spb/lpu/39682-moy-zubnoy-na-podolskoy/",
+      "fetched": null,
+      "wire_bytes": 32012,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 33.96,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_doctors": true,
+        "has_desc": true
+      }
+    },
+    {
+      "url": "https://prodoctorov.ru/spb/lpu/89092-klinika-osteopatii-doktora-nazarova-na-podolskoy/",
+      "fetched": null,
+      "wire_bytes": 37513,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 34.31,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_doctors": true,
+        "has_desc": true
+      }
+    },
+    {
+      "url": "https://prodoctorov.ru/spb/lpu/110869-stomatologiya-belveder/",
+      "fetched": null,
+      "wire_bytes": 19665,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 40.93,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_doctors": true,
+        "has_desc": true
+      }
+    },
+    {
+      "url": "https://prodoctorov.ru/spb/lpu/61802-pervaya-medicinskaya-klinika/",
+      "fetched": null,
+      "wire_bytes": 32510,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 35.32,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_doctors": true,
+        "has_desc": true
+      }
+    },
+    {
+      "url": "https://prodoctorov.ru/spb/lpu/96101-say-me/",
+      "fetched": null,
+      "wire_bytes": 19998,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 36.07,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_doctors": true,
+        "has_desc": true
+      }
+    },
+    {
+      "url": "https://prodoctorov.ru/spb/lpu/94620-lyubizub/",
+      "fetched": null,
+      "wire_bytes": 36794,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 37.88,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_doctors": true,
+        "has_desc": true
+      }
+    },
+    {
+      "url": "https://prodoctorov.ru/spb/lpu/84066-stomatologiya-mihaylovskaya-klinika/",
+      "fetched": null,
+      "wire_bytes": 32753,
+      "attempts": 3,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 48.98,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_doctors": true,
+        "has_desc": true
+      }
+    },
+    {
+      "url": "https://prodoctorov.ru/spb/lpu/98363-zubnoy-centr-na-podolskoy/",
+      "fetched": null,
+      "wire_bytes": 27250,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 40.87,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_doctors": true,
+        "has_desc": true
+      }
+    },
+    {
+      "url": "https://prodoctorov.ru/spb/lpu/43052-dolgoletie-na-bronnickoy/otzivi/",
+      "fetched": null,
+      "wire_bytes": 69616,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 43.0,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_doctors": true,
+        "has_desc": true
+      }
+    },
+    {
+      "url": "https://prodoctorov.ru/spb/lpu/78198-sinofarm/",
+      "fetched": null,
+      "wire_bytes": 29219,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 43.56,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_doctors": true,
+        "has_desc": true
+      }
+    },
+    {
+      "url": "https://prodoctorov.ru/spb/vrach/1078592-ignatenko/",
+      "fetched": null,
+      "wire_bytes": 26399,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 49.97,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_doctors": true,
+        "has_desc": true
+      }
+    },
+    {
+      "url": "https://prodoctorov.ru/spb/lpu/22805-medicinskiy-centr-liana/",
+      "fetched": null,
+      "wire_bytes": 31196,
+      "attempts": 3,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 54.55,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_doctors": true,
+        "has_desc": true
+      }
+    },
+    {
+      "url": "https://prodoctorov.ru/spb/lpu/74303-per-foshar/",
+      "fetched": null,
+      "wire_bytes": 26616,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 44.83,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_doctors": true,
+        "has_desc": true
+      }
+    },
+    {
+      "url": "https://prodoctorov.ru/spb/lpu/61561-stomatologiya-doktora-budovskogo/",
+      "fetched": null,
+      "wire_bytes": 44569,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 51.5,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_doctors": true,
+        "has_desc": true
+      }
+    },
+    {
+      "url": "https://prodoctorov.ru/spb/lpu/61561-stomatologiya-doktora-budovskogo/otzivi/",
+      "fetched": null,
+      "wire_bytes": 105466,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 50.96,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_doctors": true,
+        "has_desc": true
+      }
+    },
+    {
+      "url": "https://prodoctorov.ru/spb/lpu/37463-real-dent/",
+      "fetched": null,
+      "wire_bytes": 16827,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 50.89,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_doctors": true,
+        "has_desc": true
+      }
+    },
+    {
+      "url": "https://prodoctorov.ru/spb/lpu/39682-moy-zubnoy-na-podolskoy/",
+      "fetched": null,
+      "wire_bytes": 31964,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 52.17,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_doctors": true,
+        "has_desc": true
+      }
+    },
+    {
+      "url": "https://prodoctorov.ru/spb/lpu/89092-klinika-osteopatii-doktora-nazarova-na-podolskoy/",
+      "fetched": null,
+      "wire_bytes": 37552,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 52.39,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_doctors": true,
+        "has_desc": true
+      }
+    },
+    {
+      "url": "https://prodoctorov.ru/spb/lpu/110869-stomatologiya-belveder/",
+      "fetched": null,
+      "wire_bytes": 19673,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 52.49,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_doctors": true,
+        "has_desc": true
+      }
+    },
+    {
+      "url": "https://prodoctorov.ru/spb/lpu/61802-pervaya-medicinskaya-klinika/",
+      "fetched": null,
+      "wire_bytes": 32501,
+      "attempts": 3,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 63.49,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_doctors": true,
+        "has_desc": true
+      }
+    },
+    {
+      "url": "https://prodoctorov.ru/spb/lpu/96101-say-me/",
+      "fetched": null,
+      "wire_bytes": 20014,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 59.2,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_doctors": true,
+        "has_desc": true
+      }
+    },
+    {
+      "url": "https://prodoctorov.ru/spb/lpu/94620-lyubizub/",
+      "fetched": null,
+      "wire_bytes": 36863,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 53.72,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_doctors": true,
+        "has_desc": true
+      }
+    },
+    {
+      "url": "https://prodoctorov.ru/spb/lpu/84066-stomatologiya-mihaylovskaya-klinika/",
+      "fetched": null,
+      "wire_bytes": 32732,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 60.12,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_doctors": true,
+        "has_desc": true
+      }
+    },
+    {
+      "url": "https://prodoctorov.ru/spb/lpu/98363-zubnoy-centr-na-podolskoy/",
+      "fetched": null,
+      "wire_bytes": 27267,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 60.74,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_doctors": true,
+        "has_desc": true
+      }
+    },
+    {
+      "url": "https://prodoctorov.ru/spb/lpu/43052-dolgoletie-na-bronnickoy/otzivi/",
+      "fetched": null,
+      "wire_bytes": 69611,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 60.99,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_doctors": true,
+        "has_desc": true
+      }
+    },
+    {
+      "url": "https://prodoctorov.ru/spb/lpu/78198-sinofarm/",
+      "fetched": null,
+      "wire_bytes": 29216,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 61.46,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_doctors": true,
+        "has_desc": true
+      }
+    },
+    {
+      "url": "https://prodoctorov.ru/spb/vrach/1078592-ignatenko/",
+      "fetched": null,
+      "wire_bytes": 26437,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 62.39,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_doctors": true,
+        "has_desc": true
+      }
+    },
+    {
+      "url": "https://prodoctorov.ru/spb/lpu/22805-medicinskiy-centr-liana/",
+      "fetched": null,
+      "wire_bytes": 31199,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 62.28,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_doctors": true,
+        "has_desc": true
+      }
+    },
+    {
+      "url": "https://prodoctorov.ru/spb/lpu/74303-per-foshar/",
+      "fetched": null,
+      "wire_bytes": 26635,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 67.59,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_doctors": true,
+        "has_desc": true
+      }
+    },
+    {
+      "url": "https://prodoctorov.ru/spb/lpu/61561-stomatologiya-doktora-budovskogo/",
+      "fetched": null,
+      "wire_bytes": 44586,
+      "attempts": 3,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 73.68,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_doctors": true,
+        "has_desc": true
+      }
+    },
+    {
+      "url": "https://prodoctorov.ru/spb/lpu/61561-stomatologiya-doktora-budovskogo/otzivi/",
+      "fetched": null,
+      "wire_bytes": 105463,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 63.93,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_doctors": true,
+        "has_desc": true
+      }
+    },
+    {
+      "url": "https://prodoctorov.ru/spb/lpu/37463-real-dent/",
+      "fetched": null,
+      "wire_bytes": 16767,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 64.57,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_doctors": true,
+        "has_desc": true
+      }
+    },
+    {
+      "url": "https://prodoctorov.ru/spb/lpu/39682-moy-zubnoy-na-podolskoy/",
+      "fetched": null,
+      "wire_bytes": 32005,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 65.28,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_doctors": true,
+        "has_desc": true
+      }
+    },
+    {
+      "url": "https://prodoctorov.ru/spb/lpu/89092-klinika-osteopatii-doktora-nazarova-na-podolskoy/",
+      "fetched": null,
+      "wire_bytes": 37564,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 65.76,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_doctors": true,
+        "has_desc": true
+      }
+    },
+    {
+      "url": "https://prodoctorov.ru/spb/lpu/110869-stomatologiya-belveder/",
+      "fetched": null,
+      "wire_bytes": 19679,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 66.41,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_doctors": true,
+        "has_desc": true
+      }
+    },
+    {
+      "url": "https://prodoctorov.ru/spb/lpu/61802-pervaya-medicinskaya-klinika/",
+      "fetched": null,
+      "wire_bytes": 32504,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 67.04,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_doctors": true,
+        "has_desc": true
+      }
+    },
+    {
+      "url": "https://prodoctorov.ru/spb/lpu/96101-say-me/",
+      "fetched": null,
+      "wire_bytes": 20006,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 67.49,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_doctors": true,
+        "has_desc": true
+      }
+    },
+    {
+      "url": "https://prodoctorov.ru/spb/lpu/94620-lyubizub/",
+      "fetched": null,
+      "wire_bytes": 36867,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 73.5,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_doctors": true,
+        "has_desc": true
+      }
+    },
+    {
+      "url": "https://prodoctorov.ru/spb/lpu/84066-stomatologiya-mihaylovskaya-klinika/",
+      "fetched": null,
+      "wire_bytes": 32734,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 73.74,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_doctors": true,
+        "has_desc": true
+      }
+    },
+    {
+      "url": "https://prodoctorov.ru/spb/lpu/98363-zubnoy-centr-na-podolskoy/",
+      "fetched": null,
+      "wire_bytes": 27252,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 69.48,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_doctors": true,
+        "has_desc": true
+      }
+    },
+    {
+      "url": "https://prodoctorov.ru/spb/lpu/43052-dolgoletie-na-bronnickoy/otzivi/",
+      "fetched": null,
+      "wire_bytes": 69614,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 70.75,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_doctors": true,
+        "has_desc": true
+      }
+    },
+    {
+      "url": "https://prodoctorov.ru/spb/lpu/78198-sinofarm/",
+      "fetched": null,
+      "wire_bytes": 29202,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 77.07,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_doctors": true,
+        "has_desc": true
+      }
+    },
+    {
+      "url": "https://prodoctorov.ru/spb/vrach/1078592-ignatenko/",
+      "fetched": null,
+      "wire_bytes": 26403,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 74.98,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_doctors": true,
+        "has_desc": true
+      }
+    },
+    {
+      "url": "https://prodoctorov.ru/spb/lpu/22805-medicinskiy-centr-liana/",
+      "fetched": null,
+      "wire_bytes": 31183,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 75.07,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_doctors": true,
+        "has_desc": true
+      }
+    },
+    {
+      "url": "https://prodoctorov.ru/spb/lpu/74303-per-foshar/",
+      "fetched": null,
+      "wire_bytes": 26634,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 74.87,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_doctors": true,
+        "has_desc": true
+      }
+    },
+    {
+      "url": "https://prodoctorov.ru/spb/lpu/61561-stomatologiya-doktora-budovskogo/",
+      "fetched": null,
+      "wire_bytes": 44568,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 75.92,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_doctors": true,
+        "has_desc": true
+      }
+    },
+    {
+      "url": "https://prodoctorov.ru/spb/lpu/61561-stomatologiya-doktora-budovskogo/otzivi/",
+      "fetched": null,
+      "wire_bytes": 105458,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 76.36,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_doctors": true,
+        "has_desc": true
+      }
+    },
+    {
+      "url": "https://prodoctorov.ru/spb/lpu/37463-real-dent/",
+      "fetched": null,
+      "wire_bytes": 16826,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 81.19,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_doctors": true,
+        "has_desc": true
+      }
+    },
+    {
+      "url": "https://prodoctorov.ru/spb/lpu/39682-moy-zubnoy-na-podolskoy/",
+      "fetched": null,
+      "wire_bytes": 31997,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 77.01,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_doctors": true,
+        "has_desc": true
+      }
+    },
+    {
+      "url": "https://prodoctorov.ru/spb/lpu/89092-klinika-osteopatii-doktora-nazarova-na-podolskoy/",
+      "fetched": null,
+      "wire_bytes": 37517,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 77.57,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_doctors": true,
+        "has_desc": true
+      }
+    },
+    {
+      "url": "https://prodoctorov.ru/spb/lpu/110869-stomatologiya-belveder/",
+      "fetched": null,
+      "wire_bytes": 19666,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 78.22,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_doctors": true,
+        "has_desc": true
+      }
+    },
+    {
+      "url": "https://prodoctorov.ru/spb/lpu/61802-pervaya-medicinskaya-klinika/",
+      "fetched": null,
+      "wire_bytes": 32510,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 79.4,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_doctors": true,
+        "has_desc": true
+      }
+    },
+    {
+      "url": "https://prodoctorov.ru/spb/lpu/96101-say-me/",
+      "fetched": null,
+      "wire_bytes": 19997,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 83.66,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_doctors": true,
+        "has_desc": true
+      }
+    },
+    {
+      "url": "https://prodoctorov.ru/spb/lpu/94620-lyubizub/",
+      "fetched": null,
+      "wire_bytes": 36874,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 84.54,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_doctors": true,
+        "has_desc": true
+      }
+    },
+    {
+      "url": "https://prodoctorov.ru/spb/lpu/84066-stomatologiya-mihaylovskaya-klinika/",
+      "fetched": null,
+      "wire_bytes": 32735,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 80.85,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_doctors": true,
+        "has_desc": true
+      }
+    },
+    {
+      "url": "https://prodoctorov.ru/spb/lpu/98363-zubnoy-centr-na-podolskoy/",
+      "fetched": null,
+      "wire_bytes": 27246,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 82.58,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_doctors": true,
+        "has_desc": true
+      }
+    },
+    {
+      "url": "https://prodoctorov.ru/spb/lpu/43052-dolgoletie-na-bronnickoy/otzivi/",
+      "fetched": null,
+      "wire_bytes": 69614,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 83.0,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_doctors": true,
+        "has_desc": true
+      }
+    },
+    {
+      "url": "https://prodoctorov.ru/spb/lpu/78198-sinofarm/",
+      "fetched": null,
+      "wire_bytes": 29224,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 83.51,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_doctors": true,
+        "has_desc": true
+      }
+    },
+    {
+      "url": "https://prodoctorov.ru/spb/vrach/1078592-ignatenko/",
+      "fetched": null,
+      "wire_bytes": 26441,
+      "attempts": 5,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 104.42,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_doctors": true,
+        "has_desc": true
+      }
+    },
+    {
+      "url": "https://prodoctorov.ru/spb/lpu/22805-medicinskiy-centr-liana/",
+      "fetched": null,
+      "wire_bytes": 31181,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 90.06,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_doctors": true,
+        "has_desc": true
+      }
+    },
+    {
+      "url": "https://prodoctorov.ru/spb/lpu/74303-per-foshar/",
+      "fetched": null,
+      "wire_bytes": 26648,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 84.76,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_doctors": true,
+        "has_desc": true
+      }
+    },
+    {
+      "url": "https://prodoctorov.ru/spb/lpu/61561-stomatologiya-doktora-budovskogo/",
+      "fetched": null,
+      "wire_bytes": 44578,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 85.44,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_doctors": true,
+        "has_desc": true
+      }
+    },
+    {
+      "url": "https://prodoctorov.ru/spb/lpu/61561-stomatologiya-doktora-budovskogo/otzivi/",
+      "fetched": null,
+      "wire_bytes": 105471,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 86.04,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_doctors": true,
+        "has_desc": true
+      }
+    }
+  ]
+}

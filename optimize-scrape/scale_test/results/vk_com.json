@@ -1,0 +1,1522 @@
+{
+  "summary": {
+    "site": "vk.com",
+    "n_requests": 100,
+    "unique_urls": 20,
+    "request_success_rate": 1.0,
+    "content_success_rate": 0.0,
+    "total_wire_bytes": 5983290,
+    "total_wire_mb": 5.71,
+    "avg_bytes_per_ok": 59832,
+    "p50_bytes_ok": 59834,
+    "p95_bytes_ok": 59842,
+    "avg_attempts": 1.38,
+    "avg_latency_s": 40.79,
+    "status_dist": {
+      "200": 100
+    },
+    "elapsed_s": 87.3
+  },
+  "records": [
+    {
+      "url": "https://vk.com/club198414923",
+      "fetched": "https://m.vk.com/club198414923",
+      "wire_bytes": 59830,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 3.28,
+      "error": null,
+      "signals": {
+        "is_outdated_stub": true,
+        "phone": true
+      }
+    },
+    {
+      "url": "https://vk.com/detsad114ptz",
+      "fetched": "https://m.vk.com/detsad114ptz",
+      "wire_bytes": 59832,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 1.11,
+      "error": null,
+      "signals": {
+        "is_outdated_stub": true,
+        "phone": true
+      }
+    },
+    {
+      "url": "https://vk.com/public194067229",
+      "fetched": "https://m.vk.com/public194067229",
+      "wire_bytes": 59831,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 5.99,
+      "error": null,
+      "signals": {
+        "is_outdated_stub": true,
+        "phone": true
+      }
+    },
+    {
+      "url": "https://vk.com/public205404978",
+      "fetched": "https://m.vk.com/public205404978",
+      "wire_bytes": 59837,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 0.95,
+      "error": null,
+      "signals": {
+        "is_outdated_stub": true,
+        "phone": true
+      }
+    },
+    {
+      "url": "https://vk.com/club32063264",
+      "fetched": "https://m.vk.com/club32063264",
+      "wire_bytes": 59830,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 3.24,
+      "error": null,
+      "signals": {
+        "is_outdated_stub": true,
+        "phone": true
+      }
+    },
+    {
+      "url": "https://vk.com/gbdou114",
+      "fetched": "https://m.vk.com/gbdou114",
+      "wire_bytes": 59834,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 1.91,
+      "error": null,
+      "signals": {
+        "is_outdated_stub": true,
+        "phone": true
+      }
+    },
+    {
+      "url": "https://vk.com/search?query=д%20с%20114%20Санкт-Петербург",
+      "fetched": "https://m.vk.com/search",
+      "wire_bytes": 59830,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 2.7,
+      "error": null,
+      "signals": {
+        "is_outdated_stub": true,
+        "phone": true
+      }
+    },
+    {
+      "url": "https://vk.com/club205402851",
+      "fetched": "https://m.vk.com/club205402851",
+      "wire_bytes": 59828,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 3.56,
+      "error": null,
+      "signals": {
+        "is_outdated_stub": true,
+        "phone": true
+      }
+    },
+    {
+      "url": "https://vk.com/club205402851?offset=0",
+      "fetched": "https://m.vk.com/club205402851",
+      "wire_bytes": 59831,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 4.35,
+      "error": null,
+      "signals": {
+        "is_outdated_stub": true,
+        "phone": true
+      }
+    },
+    {
+      "url": "https://vk.com/spborange",
+      "fetched": "https://m.vk.com/spborange",
+      "wire_bytes": 59834,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 4.84,
+      "error": null,
+      "signals": {
+        "is_outdated_stub": true,
+        "phone": true
+      }
+    },
+    {
+      "url": "https://vk.com/liana_med",
+      "fetched": "https://m.vk.com/liana_med",
+      "wire_bytes": 59822,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 9.62,
+      "error": null,
+      "signals": {
+        "is_outdated_stub": true,
+        "phone": true
+      }
+    },
+    {
+      "url": "https://vk.com/maximumautotop",
+      "fetched": "https://m.vk.com/maximumautotop",
+      "wire_bytes": 59839,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 5.26,
+      "error": null,
+      "signals": {
+        "is_outdated_stub": true,
+        "phone": true
+      }
+    },
+    {
+      "url": "https://vk.com/spb_maximum",
+      "fetched": "https://m.vk.com/spb_maximum",
+      "wire_bytes": 59831,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 12.01,
+      "error": null,
+      "signals": {
+        "is_outdated_stub": true,
+        "phone": true
+      }
+    },
+    {
+      "url": "https://vk.com/parikmaherspb1",
+      "fetched": "https://m.vk.com/parikmaherspb1",
+      "wire_bytes": 59824,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 6.12,
+      "error": null,
+      "signals": {
+        "is_outdated_stub": true,
+        "phone": true
+      }
+    },
+    {
+      "url": "https://vk.com/wall-230909424_1548",
+      "fetched": "https://m.vk.com/wall-230909424_1548",
+      "wire_bytes": 59831,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 7.21,
+      "error": null,
+      "signals": {
+        "is_outdated_stub": true,
+        "phone": true
+      }
+    },
+    {
+      "url": "https://vk.com/public205402965",
+      "fetched": "https://m.vk.com/public205402965",
+      "wire_bytes": 59832,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 7.03,
+      "error": null,
+      "signals": {
+        "is_outdated_stub": true,
+        "phone": true
+      }
+    },
+    {
+      "url": "https://vk.com/public205402965?z=wall-205402965_43",
+      "fetched": "https://m.vk.com/public205402965",
+      "wire_bytes": 59827,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 12.97,
+      "error": null,
+      "signals": {
+        "is_outdated_stub": true,
+        "phone": true
+      }
+    },
+    {
+      "url": "https://m.vk.com/club6935656",
+      "fetched": null,
+      "wire_bytes": 59838,
+      "attempts": 5,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 28.34,
+      "error": null,
+      "signals": {
+        "is_outdated_stub": true,
+        "phone": true
+      }
+    },
+    {
+      "url": "https://vk.com/club6935656",
+      "fetched": "https://m.vk.com/club6935656",
+      "wire_bytes": 59824,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 10.7,
+      "error": null,
+      "signals": {
+        "is_outdated_stub": true,
+        "phone": true
+      }
+    },
+    {
+      "url": "https://vk.com/mens_suit",
+      "fetched": "https://m.vk.com/mens_suit",
+      "wire_bytes": 59832,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 11.87,
+      "error": null,
+      "signals": {
+        "is_outdated_stub": true,
+        "phone": true
+      }
+    },
+    {
+      "url": "https://vk.com/club198414923",
+      "fetched": "https://m.vk.com/club198414923",
+      "wire_bytes": 59826,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 17.88,
+      "error": null,
+      "signals": {
+        "is_outdated_stub": true,
+        "phone": true
+      }
+    },
+    {
+      "url": "https://vk.com/detsad114ptz",
+      "fetched": "https://m.vk.com/detsad114ptz",
+      "wire_bytes": 59831,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 13.04,
+      "error": null,
+      "signals": {
+        "is_outdated_stub": true,
+        "phone": true
+      }
+    },
+    {
+      "url": "https://vk.com/public194067229",
+      "fetched": "https://m.vk.com/public194067229",
+      "wire_bytes": 59837,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 13.84,
+      "error": null,
+      "signals": {
+        "is_outdated_stub": true,
+        "phone": true
+      }
+    },
+    {
+      "url": "https://vk.com/public205404978",
+      "fetched": "https://m.vk.com/public205404978",
+      "wire_bytes": 59826,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 13.93,
+      "error": null,
+      "signals": {
+        "is_outdated_stub": true,
+        "phone": true
+      }
+    },
+    {
+      "url": "https://vk.com/club32063264",
+      "fetched": "https://m.vk.com/club32063264",
+      "wire_bytes": 59835,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 14.74,
+      "error": null,
+      "signals": {
+        "is_outdated_stub": true,
+        "phone": true
+      }
+    },
+    {
+      "url": "https://vk.com/gbdou114",
+      "fetched": "https://m.vk.com/gbdou114",
+      "wire_bytes": 59828,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 14.84,
+      "error": null,
+      "signals": {
+        "is_outdated_stub": true,
+        "phone": true
+      }
+    },
+    {
+      "url": "https://vk.com/search?query=д%20с%20114%20Санкт-Петербург",
+      "fetched": "https://m.vk.com/search",
+      "wire_bytes": 59834,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 23.68,
+      "error": null,
+      "signals": {
+        "is_outdated_stub": true,
+        "phone": true
+      }
+    },
+    {
+      "url": "https://vk.com/club205402851",
+      "fetched": "https://m.vk.com/club205402851",
+      "wire_bytes": 59840,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 20.74,
+      "error": null,
+      "signals": {
+        "is_outdated_stub": true,
+        "phone": true
+      }
+    },
+    {
+      "url": "https://vk.com/club205402851?offset=0",
+      "fetched": "https://m.vk.com/club205402851",
+      "wire_bytes": 59824,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 18.73,
+      "error": null,
+      "signals": {
+        "is_outdated_stub": true,
+        "phone": true
+      }
+    },
+    {
+      "url": "https://vk.com/spborange",
+      "fetched": "https://m.vk.com/spborange",
+      "wire_bytes": 59835,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 19.62,
+      "error": null,
+      "signals": {
+        "is_outdated_stub": true,
+        "phone": true
+      }
+    },
+    {
+      "url": "https://vk.com/liana_med",
+      "fetched": "https://m.vk.com/liana_med",
+      "wire_bytes": 59839,
+      "attempts": 3,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 30.59,
+      "error": null,
+      "signals": {
+        "is_outdated_stub": true,
+        "phone": true
+      }
+    },
+    {
+      "url": "https://vk.com/maximumautotop",
+      "fetched": "https://m.vk.com/maximumautotop",
+      "wire_bytes": 59838,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 21.7,
+      "error": null,
+      "signals": {
+        "is_outdated_stub": true,
+        "phone": true
+      }
+    },
+    {
+      "url": "https://vk.com/spb_maximum",
+      "fetched": "https://m.vk.com/spb_maximum",
+      "wire_bytes": 59831,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 24.92,
+      "error": null,
+      "signals": {
+        "is_outdated_stub": true,
+        "phone": true
+      }
+    },
+    {
+      "url": "https://vk.com/parikmaherspb1",
+      "fetched": "https://m.vk.com/parikmaherspb1",
+      "wire_bytes": 59838,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 25.02,
+      "error": null,
+      "signals": {
+        "is_outdated_stub": true,
+        "phone": true
+      }
+    },
+    {
+      "url": "https://vk.com/wall-230909424_1548",
+      "fetched": "https://m.vk.com/wall-230909424_1548",
+      "wire_bytes": 59851,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 25.86,
+      "error": null,
+      "signals": {
+        "is_outdated_stub": true,
+        "phone": true
+      }
+    },
+    {
+      "url": "https://vk.com/public205402965",
+      "fetched": "https://m.vk.com/public205402965",
+      "wire_bytes": 59842,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 25.92,
+      "error": null,
+      "signals": {
+        "is_outdated_stub": true,
+        "phone": true
+      }
+    },
+    {
+      "url": "https://vk.com/public205402965?z=wall-205402965_43",
+      "fetched": "https://m.vk.com/public205402965",
+      "wire_bytes": 59841,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 26.81,
+      "error": null,
+      "signals": {
+        "is_outdated_stub": true,
+        "phone": true
+      }
+    },
+    {
+      "url": "https://m.vk.com/club6935656",
+      "fetched": null,
+      "wire_bytes": 59834,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 26.74,
+      "error": null,
+      "signals": {
+        "is_outdated_stub": true,
+        "phone": true
+      }
+    },
+    {
+      "url": "https://vk.com/club6935656",
+      "fetched": "https://m.vk.com/club6935656",
+      "wire_bytes": 59839,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 27.62,
+      "error": null,
+      "signals": {
+        "is_outdated_stub": true,
+        "phone": true
+      }
+    },
+    {
+      "url": "https://vk.com/mens_suit",
+      "fetched": "https://m.vk.com/mens_suit",
+      "wire_bytes": 59831,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 27.68,
+      "error": null,
+      "signals": {
+        "is_outdated_stub": true,
+        "phone": true
+      }
+    },
+    {
+      "url": "https://vk.com/club198414923",
+      "fetched": "https://m.vk.com/club198414923",
+      "wire_bytes": 59840,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 28.62,
+      "error": null,
+      "signals": {
+        "is_outdated_stub": true,
+        "phone": true
+      }
+    },
+    {
+      "url": "https://vk.com/detsad114ptz",
+      "fetched": "https://m.vk.com/detsad114ptz",
+      "wire_bytes": 59835,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 35.44,
+      "error": null,
+      "signals": {
+        "is_outdated_stub": true,
+        "phone": true
+      }
+    },
+    {
+      "url": "https://vk.com/public194067229",
+      "fetched": "https://m.vk.com/public194067229",
+      "wire_bytes": 59840,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 29.28,
+      "error": null,
+      "signals": {
+        "is_outdated_stub": true,
+        "phone": true
+      }
+    },
+    {
+      "url": "https://vk.com/public205404978",
+      "fetched": "https://m.vk.com/public205404978",
+      "wire_bytes": 59834,
+      "attempts": 6,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 54.93,
+      "error": null,
+      "signals": {
+        "is_outdated_stub": true,
+        "phone": true
+      }
+    },
+    {
+      "url": "https://vk.com/club32063264",
+      "fetched": "https://m.vk.com/club32063264",
+      "wire_bytes": 59841,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 30.08,
+      "error": null,
+      "signals": {
+        "is_outdated_stub": true,
+        "phone": true
+      }
+    },
+    {
+      "url": "https://vk.com/gbdou114",
+      "fetched": "https://m.vk.com/gbdou114",
+      "wire_bytes": 59838,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 30.91,
+      "error": null,
+      "signals": {
+        "is_outdated_stub": true,
+        "phone": true
+      }
+    },
+    {
+      "url": "https://vk.com/search?query=д%20с%20114%20Санкт-Петербург",
+      "fetched": "https://m.vk.com/search",
+      "wire_bytes": 59828,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 38.44,
+      "error": null,
+      "signals": {
+        "is_outdated_stub": true,
+        "phone": true
+      }
+    },
+    {
+      "url": "https://vk.com/club205402851",
+      "fetched": "https://m.vk.com/club205402851",
+      "wire_bytes": 59834,
+      "attempts": 3,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 42.11,
+      "error": null,
+      "signals": {
+        "is_outdated_stub": true,
+        "phone": true
+      }
+    },
+    {
+      "url": "https://vk.com/club205402851?offset=0",
+      "fetched": "https://m.vk.com/club205402851",
+      "wire_bytes": 59823,
+      "attempts": 3,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 48.22,
+      "error": null,
+      "signals": {
+        "is_outdated_stub": true,
+        "phone": true
+      }
+    },
+    {
+      "url": "https://vk.com/spborange",
+      "fetched": "https://m.vk.com/spborange",
+      "wire_bytes": 59828,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 39.53,
+      "error": null,
+      "signals": {
+        "is_outdated_stub": true,
+        "phone": true
+      }
+    },
+    {
+      "url": "https://vk.com/liana_med",
+      "fetched": "https://m.vk.com/liana_med",
+      "wire_bytes": 59839,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 41.19,
+      "error": null,
+      "signals": {
+        "is_outdated_stub": true,
+        "phone": true
+      }
+    },
+    {
+      "url": "https://vk.com/maximumautotop",
+      "fetched": "https://m.vk.com/maximumautotop",
+      "wire_bytes": 59838,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 44.09,
+      "error": null,
+      "signals": {
+        "is_outdated_stub": true,
+        "phone": true
+      }
+    },
+    {
+      "url": "https://vk.com/spb_maximum",
+      "fetched": "https://m.vk.com/spb_maximum",
+      "wire_bytes": 59822,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 44.82,
+      "error": null,
+      "signals": {
+        "is_outdated_stub": true,
+        "phone": true
+      }
+    },
+    {
+      "url": "https://vk.com/parikmaherspb1",
+      "fetched": "https://m.vk.com/parikmaherspb1",
+      "wire_bytes": 59836,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 46.93,
+      "error": null,
+      "signals": {
+        "is_outdated_stub": true,
+        "phone": true
+      }
+    },
+    {
+      "url": "https://vk.com/wall-230909424_1548",
+      "fetched": "https://m.vk.com/wall-230909424_1548",
+      "wire_bytes": 59840,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 45.99,
+      "error": null,
+      "signals": {
+        "is_outdated_stub": true,
+        "phone": true
+      }
+    },
+    {
+      "url": "https://vk.com/public205402965",
+      "fetched": "https://m.vk.com/public205402965",
+      "wire_bytes": 59837,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 46.86,
+      "error": null,
+      "signals": {
+        "is_outdated_stub": true,
+        "phone": true
+      }
+    },
+    {
+      "url": "https://vk.com/public205402965?z=wall-205402965_43",
+      "fetched": "https://m.vk.com/public205402965",
+      "wire_bytes": 59833,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 47.9,
+      "error": null,
+      "signals": {
+        "is_outdated_stub": true,
+        "phone": true
+      }
+    },
+    {
+      "url": "https://m.vk.com/club6935656",
+      "fetched": null,
+      "wire_bytes": 59830,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 49.56,
+      "error": null,
+      "signals": {
+        "is_outdated_stub": true,
+        "phone": true
+      }
+    },
+    {
+      "url": "https://vk.com/club6935656",
+      "fetched": "https://m.vk.com/club6935656",
+      "wire_bytes": 59832,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 53.95,
+      "error": null,
+      "signals": {
+        "is_outdated_stub": true,
+        "phone": true
+      }
+    },
+    {
+      "url": "https://vk.com/mens_suit",
+      "fetched": "https://m.vk.com/mens_suit",
+      "wire_bytes": 59828,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 49.1,
+      "error": null,
+      "signals": {
+        "is_outdated_stub": true,
+        "phone": true
+      }
+    },
+    {
+      "url": "https://vk.com/club198414923",
+      "fetched": "https://m.vk.com/club198414923",
+      "wire_bytes": 59825,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 49.98,
+      "error": null,
+      "signals": {
+        "is_outdated_stub": true,
+        "phone": true
+      }
+    },
+    {
+      "url": "https://vk.com/detsad114ptz",
+      "fetched": "https://m.vk.com/detsad114ptz",
+      "wire_bytes": 59826,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 55.48,
+      "error": null,
+      "signals": {
+        "is_outdated_stub": true,
+        "phone": true
+      }
+    },
+    {
+      "url": "https://vk.com/public194067229",
+      "fetched": "https://m.vk.com/public194067229",
+      "wire_bytes": 59823,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 50.87,
+      "error": null,
+      "signals": {
+        "is_outdated_stub": true,
+        "phone": true
+      }
+    },
+    {
+      "url": "https://vk.com/public205404978",
+      "fetched": "https://m.vk.com/public205404978",
+      "wire_bytes": 59842,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 51.87,
+      "error": null,
+      "signals": {
+        "is_outdated_stub": true,
+        "phone": true
+      }
+    },
+    {
+      "url": "https://vk.com/club32063264",
+      "fetched": "https://m.vk.com/club32063264",
+      "wire_bytes": 59825,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 54.53,
+      "error": null,
+      "signals": {
+        "is_outdated_stub": true,
+        "phone": true
+      }
+    },
+    {
+      "url": "https://vk.com/gbdou114",
+      "fetched": "https://m.vk.com/gbdou114",
+      "wire_bytes": 59824,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 54.81,
+      "error": null,
+      "signals": {
+        "is_outdated_stub": true,
+        "phone": true
+      }
+    },
+    {
+      "url": "https://vk.com/search?query=д%20с%20114%20Санкт-Петербург",
+      "fetched": "https://m.vk.com/search",
+      "wire_bytes": 59818,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 60.49,
+      "error": null,
+      "signals": {
+        "is_outdated_stub": true,
+        "phone": true
+      }
+    },
+    {
+      "url": "https://vk.com/club205402851",
+      "fetched": "https://m.vk.com/club205402851",
+      "wire_bytes": 59834,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 55.72,
+      "error": null,
+      "signals": {
+        "is_outdated_stub": true,
+        "phone": true
+      }
+    },
+    {
+      "url": "https://vk.com/club205402851?offset=0",
+      "fetched": "https://m.vk.com/club205402851",
+      "wire_bytes": 59830,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 55.77,
+      "error": null,
+      "signals": {
+        "is_outdated_stub": true,
+        "phone": true
+      }
+    },
+    {
+      "url": "https://vk.com/spborange",
+      "fetched": "https://m.vk.com/spborange",
+      "wire_bytes": 59834,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 61.53,
+      "error": null,
+      "signals": {
+        "is_outdated_stub": true,
+        "phone": true
+      }
+    },
+    {
+      "url": "https://vk.com/liana_med",
+      "fetched": "https://m.vk.com/liana_med",
+      "wire_bytes": 59830,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 56.57,
+      "error": null,
+      "signals": {
+        "is_outdated_stub": true,
+        "phone": true
+      }
+    },
+    {
+      "url": "https://vk.com/maximumautotop",
+      "fetched": "https://m.vk.com/maximumautotop",
+      "wire_bytes": 59838,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 61.72,
+      "error": null,
+      "signals": {
+        "is_outdated_stub": true,
+        "phone": true
+      }
+    },
+    {
+      "url": "https://vk.com/spb_maximum",
+      "fetched": "https://m.vk.com/spb_maximum",
+      "wire_bytes": 59827,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 57.75,
+      "error": null,
+      "signals": {
+        "is_outdated_stub": true,
+        "phone": true
+      }
+    },
+    {
+      "url": "https://vk.com/parikmaherspb1",
+      "fetched": "https://m.vk.com/parikmaherspb1",
+      "wire_bytes": 59838,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 58.76,
+      "error": null,
+      "signals": {
+        "is_outdated_stub": true,
+        "phone": true
+      }
+    },
+    {
+      "url": "https://vk.com/wall-230909424_1548",
+      "fetched": "https://m.vk.com/wall-230909424_1548",
+      "wire_bytes": 59848,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 59.74,
+      "error": null,
+      "signals": {
+        "is_outdated_stub": true,
+        "phone": true
+      }
+    },
+    {
+      "url": "https://vk.com/public205402965",
+      "fetched": "https://m.vk.com/public205402965",
+      "wire_bytes": 59837,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 60.63,
+      "error": null,
+      "signals": {
+        "is_outdated_stub": true,
+        "phone": true
+      }
+    },
+    {
+      "url": "https://vk.com/public205402965?z=wall-205402965_43",
+      "fetched": "https://m.vk.com/public205402965",
+      "wire_bytes": 59837,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 70.06,
+      "error": null,
+      "signals": {
+        "is_outdated_stub": true,
+        "phone": true
+      }
+    },
+    {
+      "url": "https://m.vk.com/club6935656",
+      "fetched": null,
+      "wire_bytes": 59825,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 61.47,
+      "error": null,
+      "signals": {
+        "is_outdated_stub": true,
+        "phone": true
+      }
+    },
+    {
+      "url": "https://vk.com/club6935656",
+      "fetched": "https://m.vk.com/club6935656",
+      "wire_bytes": 59828,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 67.53,
+      "error": null,
+      "signals": {
+        "is_outdated_stub": true,
+        "phone": true
+      }
+    },
+    {
+      "url": "https://vk.com/mens_suit",
+      "fetched": "https://m.vk.com/mens_suit",
+      "wire_bytes": 59837,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 67.47,
+      "error": null,
+      "signals": {
+        "is_outdated_stub": true,
+        "phone": true
+      }
+    },
+    {
+      "url": "https://vk.com/club198414923",
+      "fetched": "https://m.vk.com/club198414923",
+      "wire_bytes": 59826,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 62.63,
+      "error": null,
+      "signals": {
+        "is_outdated_stub": true,
+        "phone": true
+      }
+    },
+    {
+      "url": "https://vk.com/detsad114ptz",
+      "fetched": "https://m.vk.com/detsad114ptz",
+      "wire_bytes": 59833,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 63.52,
+      "error": null,
+      "signals": {
+        "is_outdated_stub": true,
+        "phone": true
+      }
+    },
+    {
+      "url": "https://vk.com/public194067229",
+      "fetched": "https://m.vk.com/public194067229",
+      "wire_bytes": 59839,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 67.7,
+      "error": null,
+      "signals": {
+        "is_outdated_stub": true,
+        "phone": true
+      }
+    },
+    {
+      "url": "https://vk.com/public205404978",
+      "fetched": "https://m.vk.com/public205404978",
+      "wire_bytes": 59849,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 73.11,
+      "error": null,
+      "signals": {
+        "is_outdated_stub": true,
+        "phone": true
+      }
+    },
+    {
+      "url": "https://vk.com/club32063264",
+      "fetched": "https://m.vk.com/club32063264",
+      "wire_bytes": 59837,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 68.35,
+      "error": null,
+      "signals": {
+        "is_outdated_stub": true,
+        "phone": true
+      }
+    },
+    {
+      "url": "https://vk.com/gbdou114",
+      "fetched": "https://m.vk.com/gbdou114",
+      "wire_bytes": 59821,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 73.71,
+      "error": null,
+      "signals": {
+        "is_outdated_stub": true,
+        "phone": true
+      }
+    },
+    {
+      "url": "https://vk.com/search?query=д%20с%20114%20Санкт-Петербург",
+      "fetched": "https://m.vk.com/search",
+      "wire_bytes": 59823,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 69.23,
+      "error": null,
+      "signals": {
+        "is_outdated_stub": true,
+        "phone": true
+      }
+    },
+    {
+      "url": "https://vk.com/club205402851",
+      "fetched": "https://m.vk.com/club205402851",
+      "wire_bytes": 59839,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 75.13,
+      "error": null,
+      "signals": {
+        "is_outdated_stub": true,
+        "phone": true
+      }
+    },
+    {
+      "url": "https://vk.com/club205402851?offset=0",
+      "fetched": "https://m.vk.com/club205402851",
+      "wire_bytes": 59829,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 70.97,
+      "error": null,
+      "signals": {
+        "is_outdated_stub": true,
+        "phone": true
+      }
+    },
+    {
+      "url": "https://vk.com/spborange",
+      "fetched": "https://m.vk.com/spborange",
+      "wire_bytes": 59835,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 76.75,
+      "error": null,
+      "signals": {
+        "is_outdated_stub": true,
+        "phone": true
+      }
+    },
+    {
+      "url": "https://vk.com/liana_med",
+      "fetched": "https://m.vk.com/liana_med",
+      "wire_bytes": 59835,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 74.09,
+      "error": null,
+      "signals": {
+        "is_outdated_stub": true,
+        "phone": true
+      }
+    },
+    {
+      "url": "https://vk.com/maximumautotop",
+      "fetched": "https://m.vk.com/maximumautotop",
+      "wire_bytes": 59833,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 74.53,
+      "error": null,
+      "signals": {
+        "is_outdated_stub": true,
+        "phone": true
+      }
+    },
+    {
+      "url": "https://vk.com/spb_maximum",
+      "fetched": "https://m.vk.com/spb_maximum",
+      "wire_bytes": 59836,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 74.91,
+      "error": null,
+      "signals": {
+        "is_outdated_stub": true,
+        "phone": true
+      }
+    },
+    {
+      "url": "https://vk.com/parikmaherspb1",
+      "fetched": "https://m.vk.com/parikmaherspb1",
+      "wire_bytes": 59837,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 75.51,
+      "error": null,
+      "signals": {
+        "is_outdated_stub": true,
+        "phone": true
+      }
+    },
+    {
+      "url": "https://vk.com/wall-230909424_1548",
+      "fetched": "https://m.vk.com/wall-230909424_1548",
+      "wire_bytes": 59844,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 75.9,
+      "error": null,
+      "signals": {
+        "is_outdated_stub": true,
+        "phone": true
+      }
+    },
+    {
+      "url": "https://vk.com/public205402965",
+      "fetched": "https://m.vk.com/public205402965",
+      "wire_bytes": 59827,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 76.01,
+      "error": null,
+      "signals": {
+        "is_outdated_stub": true,
+        "phone": true
+      }
+    },
+    {
+      "url": "https://vk.com/public205402965?z=wall-205402965_43",
+      "fetched": "https://m.vk.com/public205402965",
+      "wire_bytes": 59838,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 81.8,
+      "error": null,
+      "signals": {
+        "is_outdated_stub": true,
+        "phone": true
+      }
+    },
+    {
+      "url": "https://m.vk.com/club6935656",
+      "fetched": null,
+      "wire_bytes": 59836,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 82.25,
+      "error": null,
+      "signals": {
+        "is_outdated_stub": true,
+        "phone": true
+      }
+    },
+    {
+      "url": "https://vk.com/club6935656",
+      "fetched": "https://m.vk.com/club6935656",
+      "wire_bytes": 59824,
+      "attempts": 3,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 87.06,
+      "error": null,
+      "signals": {
+        "is_outdated_stub": true,
+        "phone": true
+      }
+    },
+    {
+      "url": "https://vk.com/mens_suit",
+      "fetched": "https://m.vk.com/mens_suit",
+      "wire_bytes": 59830,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 77.81,
+      "error": null,
+      "signals": {
+        "is_outdated_stub": true,
+        "phone": true
+      }
+    }
+  ]
+}

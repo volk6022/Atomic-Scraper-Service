@@ -1,0 +1,1522 @@
+{
+  "summary": {
+    "site": "spravker.ru",
+    "n_requests": 100,
+    "unique_urls": 18,
+    "request_success_rate": 1.0,
+    "content_success_rate": 1.0,
+    "total_wire_bytes": 3817619,
+    "total_wire_mb": 3.64,
+    "avg_bytes_per_ok": 38176,
+    "p50_bytes_ok": 29095,
+    "p95_bytes_ok": 151928,
+    "avg_attempts": 1.23,
+    "avg_latency_s": 34.51,
+    "status_dist": {
+      "200": 100
+    },
+    "elapsed_s": 71.1
+  },
+  "records": [
+    {
+      "url": "https://spb.spravker.ru/massazhnyie-salony/newray.htm",
+      "fetched": null,
+      "wire_bytes": 39007,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 1.52,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://spb.spravker.ru/org/grand-prix-for-eyes.htm",
+      "fetched": null,
+      "wire_bytes": 32123,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 2.42,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://spb.spravker.ru/atele-po-poshivu-odezhdy/atele-i-khimchistka.htm",
+      "fetched": null,
+      "wire_bytes": 27783,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 1.0,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://spb.spravker.ru/konditerskie-magazinyi/nasha-pekarnia-8.htm",
+      "fetched": null,
+      "wire_bytes": 26519,
+      "attempts": 3,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 11.22,
+      "error": null,
+      "signals": {
+        "phone": false,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://spb.spravker.ru/medtsentryi-i-kliniki/say-me.htm",
+      "fetched": null,
+      "wire_bytes": 151928,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 1.91,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://spb.spravker.ru/himchistki/lotos-138.htm",
+      "fetched": null,
+      "wire_bytes": 27406,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 2.15,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://spb.spravker.ru/shkoly/specialnaja-korrekcionnaja-shkola-no-5.htm",
+      "fetched": null,
+      "wire_bytes": 27591,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 7.8,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://spb.spravker.ru/konsaltingovye-uslugi/liogkii-start-1.htm",
+      "fetched": null,
+      "wire_bytes": 29060,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 3.32,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://spb.spravker.ru/magaziny-tsvetov/chetyre-sezona78.htm",
+      "fetched": null,
+      "wire_bytes": 27026,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 3.03,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://spb.spravker.ru/org/aj-broker-servis1.htm",
+      "fetched": null,
+      "wire_bytes": 35851,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 3.68,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://spb.spravker.ru/restoranyi/restoran-gruzinskoj-kuhni-chito-gvrito5.htm",
+      "fetched": null,
+      "wire_bytes": 29338,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 4.17,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://spb.spravker.ru/advokaty/sankt-peterburgskaya-gorodskaya-kollegiya-advokatov-advokatskaya-konsultatsiya-14.htm",
+      "fetched": null,
+      "wire_bytes": 29095,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 4.74,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://spb.spravker.ru/shkoly/shkola-srednego-obschego-obrazovanija-no-306.htm",
+      "fetched": null,
+      "wire_bytes": 29722,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 5.3,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://spb.spravker.ru/chain/lavka-khlebosolov/",
+      "fetched": null,
+      "wire_bytes": 27987,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 5.36,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://spb.spravker.ru/org/advokat-briya-a-d.htm",
+      "fetched": null,
+      "wire_bytes": 40163,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 6.12,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://spb.spravker.ru/advokaty/agat-2.htm",
+      "fetched": null,
+      "wire_bytes": 40187,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 13.56,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://spb.spravker.ru/medtsentryi-i-kliniki/sinofarm-2.htm",
+      "fetched": null,
+      "wire_bytes": 30935,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 6.9,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://spb.spravker.ru/org/pervaya-prachechnaya-himchistka-dlya-biznesa.htm",
+      "fetched": null,
+      "wire_bytes": 26944,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 7.89,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://spb.spravker.ru/massazhnyie-salony/newray.htm",
+      "fetched": null,
+      "wire_bytes": 39007,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 11.66,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://spb.spravker.ru/org/grand-prix-for-eyes.htm",
+      "fetched": null,
+      "wire_bytes": 32123,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 8.77,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://spb.spravker.ru/atele-po-poshivu-odezhdy/atele-i-khimchistka.htm",
+      "fetched": null,
+      "wire_bytes": 27783,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 9.41,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://spb.spravker.ru/konditerskie-magazinyi/nasha-pekarnia-8.htm",
+      "fetched": null,
+      "wire_bytes": 26519,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 12.46,
+      "error": null,
+      "signals": {
+        "phone": false,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://spb.spravker.ru/medtsentryi-i-kliniki/say-me.htm",
+      "fetched": null,
+      "wire_bytes": 151928,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 12.09,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://spb.spravker.ru/himchistki/lotos-138.htm",
+      "fetched": null,
+      "wire_bytes": 27406,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 14.76,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://spb.spravker.ru/shkoly/specialnaja-korrekcionnaja-shkola-no-5.htm",
+      "fetched": null,
+      "wire_bytes": 27591,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 13.14,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://spb.spravker.ru/konsaltingovye-uslugi/liogkii-start-1.htm",
+      "fetched": null,
+      "wire_bytes": 29060,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 13.24,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://spb.spravker.ru/magaziny-tsvetov/chetyre-sezona78.htm",
+      "fetched": null,
+      "wire_bytes": 27026,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 14.08,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://spb.spravker.ru/org/aj-broker-servis1.htm",
+      "fetched": null,
+      "wire_bytes": 35851,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 16.34,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://spb.spravker.ru/restoranyi/restoran-gruzinskoj-kuhni-chito-gvrito5.htm",
+      "fetched": null,
+      "wire_bytes": 29338,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 14.4,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://spb.spravker.ru/advokaty/sankt-peterburgskaya-gorodskaya-kollegiya-advokatov-advokatskaya-konsultatsiya-14.htm",
+      "fetched": null,
+      "wire_bytes": 29095,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 14.92,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://spb.spravker.ru/shkoly/shkola-srednego-obschego-obrazovanija-no-306.htm",
+      "fetched": null,
+      "wire_bytes": 29722,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 15.26,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://spb.spravker.ru/chain/lavka-khlebosolov/",
+      "fetched": null,
+      "wire_bytes": 27987,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 18.75,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://spb.spravker.ru/org/advokat-briya-a-d.htm",
+      "fetched": null,
+      "wire_bytes": 40163,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 21.67,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://spb.spravker.ru/advokaty/agat-2.htm",
+      "fetched": null,
+      "wire_bytes": 40187,
+      "attempts": 4,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 31.52,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://spb.spravker.ru/medtsentryi-i-kliniki/sinofarm-2.htm",
+      "fetched": null,
+      "wire_bytes": 30935,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 17.17,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://spb.spravker.ru/org/pervaya-prachechnaya-himchistka-dlya-biznesa.htm",
+      "fetched": null,
+      "wire_bytes": 26944,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 20.18,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://spb.spravker.ru/massazhnyie-salony/newray.htm",
+      "fetched": null,
+      "wire_bytes": 39007,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 22.11,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://spb.spravker.ru/org/grand-prix-for-eyes.htm",
+      "fetched": null,
+      "wire_bytes": 32123,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 21.47,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://spb.spravker.ru/atele-po-poshivu-odezhdy/atele-i-khimchistka.htm",
+      "fetched": null,
+      "wire_bytes": 27783,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 22.34,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://spb.spravker.ru/konditerskie-magazinyi/nasha-pekarnia-8.htm",
+      "fetched": null,
+      "wire_bytes": 26519,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 27.78,
+      "error": null,
+      "signals": {
+        "phone": false,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://spb.spravker.ru/medtsentryi-i-kliniki/say-me.htm",
+      "fetched": null,
+      "wire_bytes": 151928,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 25.72,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://spb.spravker.ru/himchistki/lotos-138.htm",
+      "fetched": null,
+      "wire_bytes": 27406,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 23.71,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://spb.spravker.ru/shkoly/specialnaja-korrekcionnaja-shkola-no-5.htm",
+      "fetched": null,
+      "wire_bytes": 27591,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 24.68,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://spb.spravker.ru/konsaltingovye-uslugi/liogkii-start-1.htm",
+      "fetched": null,
+      "wire_bytes": 29060,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 30.53,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://spb.spravker.ru/magaziny-tsvetov/chetyre-sezona78.htm",
+      "fetched": null,
+      "wire_bytes": 27026,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 34.93,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://spb.spravker.ru/org/aj-broker-servis1.htm",
+      "fetched": null,
+      "wire_bytes": 35851,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 30.89,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://spb.spravker.ru/restoranyi/restoran-gruzinskoj-kuhni-chito-gvrito5.htm",
+      "fetched": null,
+      "wire_bytes": 29338,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 31.39,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://spb.spravker.ru/advokaty/sankt-peterburgskaya-gorodskaya-kollegiya-advokatov-advokatskaya-konsultatsiya-14.htm",
+      "fetched": null,
+      "wire_bytes": 29095,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 36.57,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://spb.spravker.ru/shkoly/shkola-srednego-obschego-obrazovanija-no-306.htm",
+      "fetched": null,
+      "wire_bytes": 29722,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 34.46,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://spb.spravker.ru/chain/lavka-khlebosolov/",
+      "fetched": null,
+      "wire_bytes": 27987,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 32.25,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://spb.spravker.ru/org/advokat-briya-a-d.htm",
+      "fetched": null,
+      "wire_bytes": 40163,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 33.33,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://spb.spravker.ru/advokaty/agat-2.htm",
+      "fetched": null,
+      "wire_bytes": 40187,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 34.23,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://spb.spravker.ru/medtsentryi-i-kliniki/sinofarm-2.htm",
+      "fetched": null,
+      "wire_bytes": 30935,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 35.18,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://spb.spravker.ru/org/pervaya-prachechnaya-himchistka-dlya-biznesa.htm",
+      "fetched": null,
+      "wire_bytes": 26944,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 37.72,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://spb.spravker.ru/massazhnyie-salony/newray.htm",
+      "fetched": null,
+      "wire_bytes": 39007,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 38.71,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://spb.spravker.ru/org/grand-prix-for-eyes.htm",
+      "fetched": null,
+      "wire_bytes": 32123,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 36.08,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://spb.spravker.ru/atele-po-poshivu-odezhdy/atele-i-khimchistka.htm",
+      "fetched": null,
+      "wire_bytes": 27783,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 37.22,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://spb.spravker.ru/konditerskie-magazinyi/nasha-pekarnia-8.htm",
+      "fetched": null,
+      "wire_bytes": 26519,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 38.21,
+      "error": null,
+      "signals": {
+        "phone": false,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://spb.spravker.ru/medtsentryi-i-kliniki/say-me.htm",
+      "fetched": null,
+      "wire_bytes": 151928,
+      "attempts": 4,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 53.63,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://spb.spravker.ru/himchistki/lotos-138.htm",
+      "fetched": null,
+      "wire_bytes": 27406,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 40.83,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://spb.spravker.ru/shkoly/specialnaja-korrekcionnaja-shkola-no-5.htm",
+      "fetched": null,
+      "wire_bytes": 27591,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 42.06,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://spb.spravker.ru/konsaltingovye-uslugi/liogkii-start-1.htm",
+      "fetched": null,
+      "wire_bytes": 29060,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 45.0,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://spb.spravker.ru/magaziny-tsvetov/chetyre-sezona78.htm",
+      "fetched": null,
+      "wire_bytes": 27026,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 46.66,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://spb.spravker.ru/org/aj-broker-servis1.htm",
+      "fetched": null,
+      "wire_bytes": 35851,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 42.96,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://spb.spravker.ru/restoranyi/restoran-gruzinskoj-kuhni-chito-gvrito5.htm",
+      "fetched": null,
+      "wire_bytes": 29338,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 46.16,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://spb.spravker.ru/advokaty/sankt-peterburgskaya-gorodskaya-kollegiya-advokatov-advokatskaya-konsultatsiya-14.htm",
+      "fetched": null,
+      "wire_bytes": 29095,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 47.19,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://spb.spravker.ru/shkoly/shkola-srednego-obschego-obrazovanija-no-306.htm",
+      "fetched": null,
+      "wire_bytes": 29722,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 52.32,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://spb.spravker.ru/chain/lavka-khlebosolov/",
+      "fetched": null,
+      "wire_bytes": 27987,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 52.62,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://spb.spravker.ru/org/advokat-briya-a-d.htm",
+      "fetched": null,
+      "wire_bytes": 40163,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 53.56,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://spb.spravker.ru/advokaty/agat-2.htm",
+      "fetched": null,
+      "wire_bytes": 40187,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 54.21,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://spb.spravker.ru/medtsentryi-i-kliniki/sinofarm-2.htm",
+      "fetched": null,
+      "wire_bytes": 30935,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 53.51,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://spb.spravker.ru/org/pervaya-prachechnaya-himchistka-dlya-biznesa.htm",
+      "fetched": null,
+      "wire_bytes": 26944,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 54.27,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://spb.spravker.ru/massazhnyie-salony/newray.htm",
+      "fetched": null,
+      "wire_bytes": 39007,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 54.85,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://spb.spravker.ru/org/grand-prix-for-eyes.htm",
+      "fetched": null,
+      "wire_bytes": 32123,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 54.5,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://spb.spravker.ru/atele-po-poshivu-odezhdy/atele-i-khimchistka.htm",
+      "fetched": null,
+      "wire_bytes": 27783,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 55.03,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://spb.spravker.ru/konditerskie-magazinyi/nasha-pekarnia-8.htm",
+      "fetched": null,
+      "wire_bytes": 26519,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 55.16,
+      "error": null,
+      "signals": {
+        "phone": false,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://spb.spravker.ru/medtsentryi-i-kliniki/say-me.htm",
+      "fetched": null,
+      "wire_bytes": 151928,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 56.46,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://spb.spravker.ru/himchistki/lotos-138.htm",
+      "fetched": null,
+      "wire_bytes": 27406,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 55.65,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://spb.spravker.ru/shkoly/specialnaja-korrekcionnaja-shkola-no-5.htm",
+      "fetched": null,
+      "wire_bytes": 27591,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 55.77,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://spb.spravker.ru/konsaltingovye-uslugi/liogkii-start-1.htm",
+      "fetched": null,
+      "wire_bytes": 29060,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 55.99,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://spb.spravker.ru/magaziny-tsvetov/chetyre-sezona78.htm",
+      "fetched": null,
+      "wire_bytes": 27026,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 61.55,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://spb.spravker.ru/org/aj-broker-servis1.htm",
+      "fetched": null,
+      "wire_bytes": 35851,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 60.18,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://spb.spravker.ru/restoranyi/restoran-gruzinskoj-kuhni-chito-gvrito5.htm",
+      "fetched": null,
+      "wire_bytes": 29338,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 56.87,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://spb.spravker.ru/advokaty/sankt-peterburgskaya-gorodskaya-kollegiya-advokatov-advokatskaya-konsultatsiya-14.htm",
+      "fetched": null,
+      "wire_bytes": 29095,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 57.43,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://spb.spravker.ru/shkoly/shkola-srednego-obschego-obrazovanija-no-306.htm",
+      "fetched": null,
+      "wire_bytes": 29722,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 58.06,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://spb.spravker.ru/chain/lavka-khlebosolov/",
+      "fetched": null,
+      "wire_bytes": 27987,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 59.66,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://spb.spravker.ru/org/advokat-briya-a-d.htm",
+      "fetched": null,
+      "wire_bytes": 40163,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 59.05,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://spb.spravker.ru/advokaty/agat-2.htm",
+      "fetched": null,
+      "wire_bytes": 40187,
+      "attempts": 3,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 69.99,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://spb.spravker.ru/medtsentryi-i-kliniki/sinofarm-2.htm",
+      "fetched": null,
+      "wire_bytes": 30935,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 61.49,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://spb.spravker.ru/org/pervaya-prachechnaya-himchistka-dlya-biznesa.htm",
+      "fetched": null,
+      "wire_bytes": 26944,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 61.4,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://spb.spravker.ru/massazhnyie-salony/newray.htm",
+      "fetched": null,
+      "wire_bytes": 39007,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 62.52,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://spb.spravker.ru/org/grand-prix-for-eyes.htm",
+      "fetched": null,
+      "wire_bytes": 32123,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 62.37,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://spb.spravker.ru/atele-po-poshivu-odezhdy/atele-i-khimchistka.htm",
+      "fetched": null,
+      "wire_bytes": 27783,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 64.99,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://spb.spravker.ru/konditerskie-magazinyi/nasha-pekarnia-8.htm",
+      "fetched": null,
+      "wire_bytes": 26519,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 63.29,
+      "error": null,
+      "signals": {
+        "phone": false,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://spb.spravker.ru/medtsentryi-i-kliniki/say-me.htm",
+      "fetched": null,
+      "wire_bytes": 151928,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 63.79,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://spb.spravker.ru/himchistki/lotos-138.htm",
+      "fetched": null,
+      "wire_bytes": 27406,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 69.51,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://spb.spravker.ru/shkoly/specialnaja-korrekcionnaja-shkola-no-5.htm",
+      "fetched": null,
+      "wire_bytes": 27591,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 65.16,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://spb.spravker.ru/konsaltingovye-uslugi/liogkii-start-1.htm",
+      "fetched": null,
+      "wire_bytes": 29060,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 70.86,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://spb.spravker.ru/magaziny-tsvetov/chetyre-sezona78.htm",
+      "fetched": null,
+      "wire_bytes": 27026,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 66.28,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    },
+    {
+      "url": "https://spb.spravker.ru/org/aj-broker-servis1.htm",
+      "fetched": null,
+      "wire_bytes": 35851,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 67.1,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true
+      }
+    }
+  ]
+}

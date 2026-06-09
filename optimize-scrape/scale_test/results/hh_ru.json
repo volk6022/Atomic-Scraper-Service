@@ -1,0 +1,1503 @@
+{
+  "summary": {
+    "site": "hh.ru",
+    "n_requests": 100,
+    "unique_urls": 20,
+    "request_success_rate": 0.95,
+    "content_success_rate": 0.95,
+    "total_wire_bytes": 17987873,
+    "total_wire_mb": 17.15,
+    "avg_bytes_per_ok": 170919,
+    "p50_bytes_ok": 154531,
+    "p95_bytes_ok": 307567,
+    "avg_attempts": 1.53,
+    "avg_latency_s": 51.63,
+    "status_dist": {
+      "200": 95,
+      "404": 5
+    },
+    "elapsed_s": 102.3
+  },
+  "records": [
+    {
+      "url": "https://spb.hh.ru/employer/2250309",
+      "fetched": null,
+      "wire_bytes": 158244,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 1.89,
+      "error": null,
+      "signals": {
+        "has_company": true,
+        "has_vacancies": true
+      }
+    },
+    {
+      "url": "https://spb.hh.ru/employer/10159153",
+      "fetched": null,
+      "wire_bytes": 150795,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 6.5,
+      "error": null,
+      "signals": {
+        "has_company": true,
+        "has_vacancies": true
+      }
+    },
+    {
+      "url": "https://hh.ru/employer/4394",
+      "fetched": null,
+      "wire_bytes": 214948,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 6.52,
+      "error": null,
+      "signals": {
+        "has_company": true,
+        "has_vacancies": true
+      }
+    },
+    {
+      "url": "https://spb.hh.ru/employer/4957933",
+      "fetched": null,
+      "wire_bytes": 151746,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 7.53,
+      "error": null,
+      "signals": {
+        "has_company": true,
+        "has_vacancies": true
+      }
+    },
+    {
+      "url": "https://hh.ru/employer/2746",
+      "fetched": null,
+      "wire_bytes": 307701,
+      "attempts": 3,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 20.34,
+      "error": null,
+      "signals": {
+        "has_company": true,
+        "has_vacancies": true
+      }
+    },
+    {
+      "url": "https://spb.hh.ru/employer/224317",
+      "fetched": null,
+      "wire_bytes": 233905,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 8.06,
+      "error": null,
+      "signals": {
+        "has_company": true,
+        "has_vacancies": true
+      }
+    },
+    {
+      "url": "https://spb.hh.ru/employer/1385894",
+      "fetched": null,
+      "wire_bytes": 152422,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 12.93,
+      "error": null,
+      "signals": {
+        "has_company": true,
+        "has_vacancies": true
+      }
+    },
+    {
+      "url": "https://spb.hh.ru/vacancy/133967666",
+      "fetched": null,
+      "wire_bytes": 149042,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 8.5,
+      "error": null,
+      "signals": {
+        "has_company": true,
+        "has_vacancies": true
+      }
+    },
+    {
+      "url": "https://hh.ru/employer/12703355",
+      "fetched": null,
+      "wire_bytes": 456759,
+      "attempts": 6,
+      "ok": false,
+      "content_ok": false,
+      "status": 404,
+      "latency_s": 15.11,
+      "error": "status=404 len=277552"
+    },
+    {
+      "url": "https://spb.hh.ru/vacancy/131866503",
+      "fetched": null,
+      "wire_bytes": 144139,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 11.2,
+      "error": null,
+      "signals": {
+        "has_company": true,
+        "has_vacancies": true
+      }
+    },
+    {
+      "url": "https://hh.ru/employer/3920320",
+      "fetched": null,
+      "wire_bytes": 165815,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 17.85,
+      "error": null,
+      "signals": {
+        "has_company": true,
+        "has_vacancies": true
+      }
+    },
+    {
+      "url": "https://spb.hh.ru/employer/4828962",
+      "fetched": null,
+      "wire_bytes": 155687,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 19.02,
+      "error": null,
+      "signals": {
+        "has_company": true,
+        "has_vacancies": true
+      }
+    },
+    {
+      "url": "https://spb.hh.ru/employer/114223",
+      "fetched": null,
+      "wire_bytes": 185030,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 17.7,
+      "error": null,
+      "signals": {
+        "has_company": true,
+        "has_vacancies": true
+      }
+    },
+    {
+      "url": "https://spb.hh.ru/vacancy/131612616",
+      "fetched": null,
+      "wire_bytes": 145331,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 18.9,
+      "error": null,
+      "signals": {
+        "has_company": true,
+        "has_vacancies": true
+      }
+    },
+    {
+      "url": "https://spb.hh.ru/employer/2951816",
+      "fetched": null,
+      "wire_bytes": 154543,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 19.17,
+      "error": null,
+      "signals": {
+        "has_company": true,
+        "has_vacancies": true
+      }
+    },
+    {
+      "url": "https://spb.hh.ru/employer/166874",
+      "fetched": null,
+      "wire_bytes": 164194,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 20.48,
+      "error": null,
+      "signals": {
+        "has_company": true,
+        "has_vacancies": true
+      }
+    },
+    {
+      "url": "https://spb.hh.ru/employer/2400231",
+      "fetched": null,
+      "wire_bytes": 167650,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 21.36,
+      "error": null,
+      "signals": {
+        "has_company": true,
+        "has_vacancies": true
+      }
+    },
+    {
+      "url": "https://spb.hh.ru/employer/5318998",
+      "fetched": null,
+      "wire_bytes": 150871,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 20.41,
+      "error": null,
+      "signals": {
+        "has_company": true,
+        "has_vacancies": true
+      }
+    },
+    {
+      "url": "https://spb.hh.ru/employer/5853870",
+      "fetched": null,
+      "wire_bytes": 152779,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 21.43,
+      "error": null,
+      "signals": {
+        "has_company": true,
+        "has_vacancies": true
+      }
+    },
+    {
+      "url": "https://hh.ru/employer/4582287",
+      "fetched": null,
+      "wire_bytes": 152777,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 21.86,
+      "error": null,
+      "signals": {
+        "has_company": true,
+        "has_vacancies": true
+      }
+    },
+    {
+      "url": "https://spb.hh.ru/employer/2250309",
+      "fetched": null,
+      "wire_bytes": 158258,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 21.57,
+      "error": null,
+      "signals": {
+        "has_company": true,
+        "has_vacancies": true
+      }
+    },
+    {
+      "url": "https://spb.hh.ru/employer/10159153",
+      "fetched": null,
+      "wire_bytes": 150767,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 22.67,
+      "error": null,
+      "signals": {
+        "has_company": true,
+        "has_vacancies": true
+      }
+    },
+    {
+      "url": "https://hh.ru/employer/4394",
+      "fetched": null,
+      "wire_bytes": 214886,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 28.17,
+      "error": null,
+      "signals": {
+        "has_company": true,
+        "has_vacancies": true
+      }
+    },
+    {
+      "url": "https://spb.hh.ru/employer/4957933",
+      "fetched": null,
+      "wire_bytes": 151767,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 23.4,
+      "error": null,
+      "signals": {
+        "has_company": true,
+        "has_vacancies": true
+      }
+    },
+    {
+      "url": "https://hh.ru/employer/2746",
+      "fetched": null,
+      "wire_bytes": 307856,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 31.11,
+      "error": null,
+      "signals": {
+        "has_company": true,
+        "has_vacancies": true
+      }
+    },
+    {
+      "url": "https://spb.hh.ru/employer/224317",
+      "fetched": null,
+      "wire_bytes": 233929,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 24.33,
+      "error": null,
+      "signals": {
+        "has_company": true,
+        "has_vacancies": true
+      }
+    },
+    {
+      "url": "https://spb.hh.ru/employer/1385894",
+      "fetched": null,
+      "wire_bytes": 152432,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 24.64,
+      "error": null,
+      "signals": {
+        "has_company": true,
+        "has_vacancies": true
+      }
+    },
+    {
+      "url": "https://spb.hh.ru/vacancy/133967666",
+      "fetched": null,
+      "wire_bytes": 149043,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 25.37,
+      "error": null,
+      "signals": {
+        "has_company": true,
+        "has_vacancies": true
+      }
+    },
+    {
+      "url": "https://hh.ru/employer/12703355",
+      "fetched": null,
+      "wire_bytes": 304502,
+      "attempts": 6,
+      "ok": false,
+      "content_ok": false,
+      "status": 404,
+      "latency_s": 41.38,
+      "error": "ConnectTimeout: "
+    },
+    {
+      "url": "https://spb.hh.ru/vacancy/131866503",
+      "fetched": null,
+      "wire_bytes": 144144,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 26.37,
+      "error": null,
+      "signals": {
+        "has_company": true,
+        "has_vacancies": true
+      }
+    },
+    {
+      "url": "https://hh.ru/employer/3920320",
+      "fetched": null,
+      "wire_bytes": 165868,
+      "attempts": 3,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 39.24,
+      "error": null,
+      "signals": {
+        "has_company": true,
+        "has_vacancies": true
+      }
+    },
+    {
+      "url": "https://spb.hh.ru/employer/4828962",
+      "fetched": null,
+      "wire_bytes": 155715,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 30.19,
+      "error": null,
+      "signals": {
+        "has_company": true,
+        "has_vacancies": true
+      }
+    },
+    {
+      "url": "https://spb.hh.ru/employer/114223",
+      "fetched": null,
+      "wire_bytes": 185034,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 31.55,
+      "error": null,
+      "signals": {
+        "has_company": true,
+        "has_vacancies": true
+      }
+    },
+    {
+      "url": "https://spb.hh.ru/vacancy/131612616",
+      "fetched": null,
+      "wire_bytes": 145326,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 32.89,
+      "error": null,
+      "signals": {
+        "has_company": true,
+        "has_vacancies": true
+      }
+    },
+    {
+      "url": "https://spb.hh.ru/employer/2951816",
+      "fetched": null,
+      "wire_bytes": 154565,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 32.68,
+      "error": null,
+      "signals": {
+        "has_company": true,
+        "has_vacancies": true
+      }
+    },
+    {
+      "url": "https://spb.hh.ru/employer/166874",
+      "fetched": null,
+      "wire_bytes": 164201,
+      "attempts": 3,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 44.4,
+      "error": null,
+      "signals": {
+        "has_company": true,
+        "has_vacancies": true
+      }
+    },
+    {
+      "url": "https://spb.hh.ru/employer/2400231",
+      "fetched": null,
+      "wire_bytes": 167654,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 34.05,
+      "error": null,
+      "signals": {
+        "has_company": true,
+        "has_vacancies": true
+      }
+    },
+    {
+      "url": "https://spb.hh.ru/employer/5318998",
+      "fetched": null,
+      "wire_bytes": 150863,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 40.88,
+      "error": null,
+      "signals": {
+        "has_company": true,
+        "has_vacancies": true
+      }
+    },
+    {
+      "url": "https://spb.hh.ru/employer/5853870",
+      "fetched": null,
+      "wire_bytes": 152757,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 45.27,
+      "error": null,
+      "signals": {
+        "has_company": true,
+        "has_vacancies": true
+      }
+    },
+    {
+      "url": "https://hh.ru/employer/4582287",
+      "fetched": null,
+      "wire_bytes": 152860,
+      "attempts": 4,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 58.56,
+      "error": null,
+      "signals": {
+        "has_company": true,
+        "has_vacancies": true
+      }
+    },
+    {
+      "url": "https://spb.hh.ru/employer/2250309",
+      "fetched": null,
+      "wire_bytes": 158256,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 42.54,
+      "error": null,
+      "signals": {
+        "has_company": true,
+        "has_vacancies": true
+      }
+    },
+    {
+      "url": "https://spb.hh.ru/employer/10159153",
+      "fetched": null,
+      "wire_bytes": 150783,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 44.16,
+      "error": null,
+      "signals": {
+        "has_company": true,
+        "has_vacancies": true
+      }
+    },
+    {
+      "url": "https://hh.ru/employer/4394",
+      "fetched": null,
+      "wire_bytes": 214982,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 45.92,
+      "error": null,
+      "signals": {
+        "has_company": true,
+        "has_vacancies": true
+      }
+    },
+    {
+      "url": "https://spb.hh.ru/employer/4957933",
+      "fetched": null,
+      "wire_bytes": 151762,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 45.66,
+      "error": null,
+      "signals": {
+        "has_company": true,
+        "has_vacancies": true
+      }
+    },
+    {
+      "url": "https://hh.ru/employer/2746",
+      "fetched": null,
+      "wire_bytes": 307637,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 47.18,
+      "error": null,
+      "signals": {
+        "has_company": true,
+        "has_vacancies": true
+      }
+    },
+    {
+      "url": "https://spb.hh.ru/employer/224317",
+      "fetched": null,
+      "wire_bytes": 233947,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 46.87,
+      "error": null,
+      "signals": {
+        "has_company": true,
+        "has_vacancies": true
+      }
+    },
+    {
+      "url": "https://spb.hh.ru/employer/1385894",
+      "fetched": null,
+      "wire_bytes": 152429,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 47.71,
+      "error": null,
+      "signals": {
+        "has_company": true,
+        "has_vacancies": true
+      }
+    },
+    {
+      "url": "https://spb.hh.ru/vacancy/133967666",
+      "fetched": null,
+      "wire_bytes": 149065,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 47.94,
+      "error": null,
+      "signals": {
+        "has_company": true,
+        "has_vacancies": true
+      }
+    },
+    {
+      "url": "https://hh.ru/employer/12703355",
+      "fetched": null,
+      "wire_bytes": 456665,
+      "attempts": 6,
+      "ok": false,
+      "content_ok": false,
+      "status": 404,
+      "latency_s": 58.85,
+      "error": "status=404 len=276992"
+    },
+    {
+      "url": "https://spb.hh.ru/vacancy/131866503",
+      "fetched": null,
+      "wire_bytes": 144149,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 48.95,
+      "error": null,
+      "signals": {
+        "has_company": true,
+        "has_vacancies": true
+      }
+    },
+    {
+      "url": "https://hh.ru/employer/3920320",
+      "fetched": null,
+      "wire_bytes": 165763,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 49.43,
+      "error": null,
+      "signals": {
+        "has_company": true,
+        "has_vacancies": true
+      }
+    },
+    {
+      "url": "https://spb.hh.ru/employer/4828962",
+      "fetched": null,
+      "wire_bytes": 155707,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 50.73,
+      "error": null,
+      "signals": {
+        "has_company": true,
+        "has_vacancies": true
+      }
+    },
+    {
+      "url": "https://spb.hh.ru/employer/114223",
+      "fetched": null,
+      "wire_bytes": 185004,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 50.99,
+      "error": null,
+      "signals": {
+        "has_company": true,
+        "has_vacancies": true
+      }
+    },
+    {
+      "url": "https://spb.hh.ru/vacancy/131612616",
+      "fetched": null,
+      "wire_bytes": 145293,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 52.11,
+      "error": null,
+      "signals": {
+        "has_company": true,
+        "has_vacancies": true
+      }
+    },
+    {
+      "url": "https://spb.hh.ru/employer/2951816",
+      "fetched": null,
+      "wire_bytes": 154539,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 52.35,
+      "error": null,
+      "signals": {
+        "has_company": true,
+        "has_vacancies": true
+      }
+    },
+    {
+      "url": "https://spb.hh.ru/employer/166874",
+      "fetched": null,
+      "wire_bytes": 164237,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 53.52,
+      "error": null,
+      "signals": {
+        "has_company": true,
+        "has_vacancies": true
+      }
+    },
+    {
+      "url": "https://spb.hh.ru/employer/2400231",
+      "fetched": null,
+      "wire_bytes": 167659,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 58.5,
+      "error": null,
+      "signals": {
+        "has_company": true,
+        "has_vacancies": true
+      }
+    },
+    {
+      "url": "https://spb.hh.ru/employer/5318998",
+      "fetched": null,
+      "wire_bytes": 150902,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 54.77,
+      "error": null,
+      "signals": {
+        "has_company": true,
+        "has_vacancies": true
+      }
+    },
+    {
+      "url": "https://spb.hh.ru/employer/5853870",
+      "fetched": null,
+      "wire_bytes": 152777,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 61.19,
+      "error": null,
+      "signals": {
+        "has_company": true,
+        "has_vacancies": true
+      }
+    },
+    {
+      "url": "https://hh.ru/employer/4582287",
+      "fetched": null,
+      "wire_bytes": 152868,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 65.27,
+      "error": null,
+      "signals": {
+        "has_company": true,
+        "has_vacancies": true
+      }
+    },
+    {
+      "url": "https://spb.hh.ru/employer/2250309",
+      "fetched": null,
+      "wire_bytes": 158258,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 59.95,
+      "error": null,
+      "signals": {
+        "has_company": true,
+        "has_vacancies": true
+      }
+    },
+    {
+      "url": "https://spb.hh.ru/employer/10159153",
+      "fetched": null,
+      "wire_bytes": 150748,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 60.26,
+      "error": null,
+      "signals": {
+        "has_company": true,
+        "has_vacancies": true
+      }
+    },
+    {
+      "url": "https://hh.ru/employer/4394",
+      "fetched": null,
+      "wire_bytes": 214933,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 66.86,
+      "error": null,
+      "signals": {
+        "has_company": true,
+        "has_vacancies": true
+      }
+    },
+    {
+      "url": "https://spb.hh.ru/employer/4957933",
+      "fetched": null,
+      "wire_bytes": 151761,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 61.38,
+      "error": null,
+      "signals": {
+        "has_company": true,
+        "has_vacancies": true
+      }
+    },
+    {
+      "url": "https://hh.ru/employer/2746",
+      "fetched": null,
+      "wire_bytes": 307794,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 63.31,
+      "error": null,
+      "signals": {
+        "has_company": true,
+        "has_vacancies": true
+      }
+    },
+    {
+      "url": "https://spb.hh.ru/employer/224317",
+      "fetched": null,
+      "wire_bytes": 233915,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 63.08,
+      "error": null,
+      "signals": {
+        "has_company": true,
+        "has_vacancies": true
+      }
+    },
+    {
+      "url": "https://spb.hh.ru/employer/1385894",
+      "fetched": null,
+      "wire_bytes": 152413,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 64.35,
+      "error": null,
+      "signals": {
+        "has_company": true,
+        "has_vacancies": true
+      }
+    },
+    {
+      "url": "https://spb.hh.ru/vacancy/133967666",
+      "fetched": null,
+      "wire_bytes": 149046,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 64.41,
+      "error": null,
+      "signals": {
+        "has_company": true,
+        "has_vacancies": true
+      }
+    },
+    {
+      "url": "https://hh.ru/employer/12703355",
+      "fetched": null,
+      "wire_bytes": 304309,
+      "attempts": 6,
+      "ok": false,
+      "content_ok": false,
+      "status": 404,
+      "latency_s": 84.29,
+      "error": "status=404 len=276872"
+    },
+    {
+      "url": "https://spb.hh.ru/vacancy/131866503",
+      "fetched": null,
+      "wire_bytes": 144157,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 65.66,
+      "error": null,
+      "signals": {
+        "has_company": true,
+        "has_vacancies": true
+      }
+    },
+    {
+      "url": "https://hh.ru/employer/3920320",
+      "fetched": null,
+      "wire_bytes": 165854,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 69.36,
+      "error": null,
+      "signals": {
+        "has_company": true,
+        "has_vacancies": true
+      }
+    },
+    {
+      "url": "https://spb.hh.ru/employer/4828962",
+      "fetched": null,
+      "wire_bytes": 155713,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 67.36,
+      "error": null,
+      "signals": {
+        "has_company": true,
+        "has_vacancies": true
+      }
+    },
+    {
+      "url": "https://spb.hh.ru/employer/114223",
+      "fetched": null,
+      "wire_bytes": 185017,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 69.06,
+      "error": null,
+      "signals": {
+        "has_company": true,
+        "has_vacancies": true
+      }
+    },
+    {
+      "url": "https://spb.hh.ru/vacancy/131612616",
+      "fetched": null,
+      "wire_bytes": 145297,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 70.36,
+      "error": null,
+      "signals": {
+        "has_company": true,
+        "has_vacancies": true
+      }
+    },
+    {
+      "url": "https://spb.hh.ru/employer/2951816",
+      "fetched": null,
+      "wire_bytes": 154531,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 70.44,
+      "error": null,
+      "signals": {
+        "has_company": true,
+        "has_vacancies": true
+      }
+    },
+    {
+      "url": "https://spb.hh.ru/employer/166874",
+      "fetched": null,
+      "wire_bytes": 135308,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 74.0,
+      "error": null,
+      "signals": {
+        "has_company": true,
+        "has_vacancies": true
+      }
+    },
+    {
+      "url": "https://spb.hh.ru/employer/2400231",
+      "fetched": null,
+      "wire_bytes": 167661,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 76.78,
+      "error": null,
+      "signals": {
+        "has_company": true,
+        "has_vacancies": true
+      }
+    },
+    {
+      "url": "https://spb.hh.ru/employer/5318998",
+      "fetched": null,
+      "wire_bytes": 128531,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 74.37,
+      "error": null,
+      "signals": {
+        "has_company": true,
+        "has_vacancies": true
+      }
+    },
+    {
+      "url": "https://spb.hh.ru/employer/5853870",
+      "fetched": null,
+      "wire_bytes": 152769,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 75.73,
+      "error": null,
+      "signals": {
+        "has_company": true,
+        "has_vacancies": true
+      }
+    },
+    {
+      "url": "https://hh.ru/employer/4582287",
+      "fetched": null,
+      "wire_bytes": 152764,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 80.98,
+      "error": null,
+      "signals": {
+        "has_company": true,
+        "has_vacancies": true
+      }
+    },
+    {
+      "url": "https://spb.hh.ru/employer/2250309",
+      "fetched": null,
+      "wire_bytes": 158250,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 77.78,
+      "error": null,
+      "signals": {
+        "has_company": true,
+        "has_vacancies": true
+      }
+    },
+    {
+      "url": "https://spb.hh.ru/employer/10159153",
+      "fetched": null,
+      "wire_bytes": 150762,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 78.9,
+      "error": null,
+      "signals": {
+        "has_company": true,
+        "has_vacancies": true
+      }
+    },
+    {
+      "url": "https://hh.ru/employer/4394",
+      "fetched": null,
+      "wire_bytes": 215086,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 81.25,
+      "error": null,
+      "signals": {
+        "has_company": true,
+        "has_vacancies": true
+      }
+    },
+    {
+      "url": "https://spb.hh.ru/employer/4957933",
+      "fetched": null,
+      "wire_bytes": 151800,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 79.8,
+      "error": null,
+      "signals": {
+        "has_company": true,
+        "has_vacancies": true
+      }
+    },
+    {
+      "url": "https://hh.ru/employer/2746",
+      "fetched": null,
+      "wire_bytes": 307567,
+      "attempts": 3,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 91.65,
+      "error": null,
+      "signals": {
+        "has_company": true,
+        "has_vacancies": true
+      }
+    },
+    {
+      "url": "https://spb.hh.ru/employer/224317",
+      "fetched": null,
+      "wire_bytes": 233924,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 82.54,
+      "error": null,
+      "signals": {
+        "has_company": true,
+        "has_vacancies": true
+      }
+    },
+    {
+      "url": "https://spb.hh.ru/employer/1385894",
+      "fetched": null,
+      "wire_bytes": 152434,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 82.74,
+      "error": null,
+      "signals": {
+        "has_company": true,
+        "has_vacancies": true
+      }
+    },
+    {
+      "url": "https://spb.hh.ru/vacancy/133967666",
+      "fetched": null,
+      "wire_bytes": 149069,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 88.68,
+      "error": null,
+      "signals": {
+        "has_company": true,
+        "has_vacancies": true
+      }
+    },
+    {
+      "url": "https://hh.ru/employer/12703355",
+      "fetched": null,
+      "wire_bytes": 228310,
+      "attempts": 6,
+      "ok": false,
+      "content_ok": false,
+      "status": 404,
+      "latency_s": 101.95,
+      "error": "status=404 len=277692"
+    },
+    {
+      "url": "https://spb.hh.ru/vacancy/131866503",
+      "fetched": null,
+      "wire_bytes": 144145,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 86.95,
+      "error": null,
+      "signals": {
+        "has_company": true,
+        "has_vacancies": true
+      }
+    },
+    {
+      "url": "https://hh.ru/employer/3920320",
+      "fetched": null,
+      "wire_bytes": 165766,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 92.82,
+      "error": null,
+      "signals": {
+        "has_company": true,
+        "has_vacancies": true
+      }
+    },
+    {
+      "url": "https://spb.hh.ru/employer/4828962",
+      "fetched": null,
+      "wire_bytes": 155697,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 92.55,
+      "error": null,
+      "signals": {
+        "has_company": true,
+        "has_vacancies": true
+      }
+    },
+    {
+      "url": "https://spb.hh.ru/employer/114223",
+      "fetched": null,
+      "wire_bytes": 184988,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 93.58,
+      "error": null,
+      "signals": {
+        "has_company": true,
+        "has_vacancies": true
+      }
+    },
+    {
+      "url": "https://spb.hh.ru/vacancy/131612616",
+      "fetched": null,
+      "wire_bytes": 145300,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 93.39,
+      "error": null,
+      "signals": {
+        "has_company": true,
+        "has_vacancies": true
+      }
+    },
+    {
+      "url": "https://spb.hh.ru/employer/2951816",
+      "fetched": null,
+      "wire_bytes": 154521,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 94.77,
+      "error": null,
+      "signals": {
+        "has_company": true,
+        "has_vacancies": true
+      }
+    },
+    {
+      "url": "https://spb.hh.ru/employer/166874",
+      "fetched": null,
+      "wire_bytes": 164205,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 94.37,
+      "error": null,
+      "signals": {
+        "has_company": true,
+        "has_vacancies": true
+      }
+    },
+    {
+      "url": "https://spb.hh.ru/employer/2400231",
+      "fetched": null,
+      "wire_bytes": 167639,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 94.47,
+      "error": null,
+      "signals": {
+        "has_company": true,
+        "has_vacancies": true
+      }
+    },
+    {
+      "url": "https://spb.hh.ru/employer/5318998",
+      "fetched": null,
+      "wire_bytes": 150869,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 95.79,
+      "error": null,
+      "signals": {
+        "has_company": true,
+        "has_vacancies": true
+      }
+    },
+    {
+      "url": "https://spb.hh.ru/employer/5853870",
+      "fetched": null,
+      "wire_bytes": 152753,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 95.52,
+      "error": null,
+      "signals": {
+        "has_company": true,
+        "has_vacancies": true
+      }
+    },
+    {
+      "url": "https://hh.ru/employer/4582287",
+      "fetched": null,
+      "wire_bytes": 152780,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 101.58,
+      "error": null,
+      "signals": {
+        "has_company": true,
+        "has_vacancies": true
+      }
+    }
+  ]
+}
