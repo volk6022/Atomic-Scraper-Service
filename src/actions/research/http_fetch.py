@@ -96,16 +96,26 @@ def rewrite_url(url: str) -> str:
     return url
 
 
-async def httpx_ssr_fetch(url: str, *, tries: int = 6, min_len: int = 1500) -> str:
+async def httpx_ssr_fetch(
+    url: str, *, tries: int = 6, min_len: int = 1500, stats_out: dict | None = None
+) -> str:
     """Proxied gzip GET of an SSR page; returns HTML or raises.
 
     Rotates proxies sequentially (dead-port aware). Treats a 200 shorter than
-    ``min_len`` as a proxy error page and rotates on.
+    ``min_len`` as a proxy error page and rotates on. When ``stats_out`` is
+    given, fills ``{"tries": N, "failed_s": X}`` — attempts used and seconds
+    burnt in non-final attempts (≈ proxy-rotation waste).
     """
+    import time as _time
+
     target = rewrite_url(url)
     last: str | None = None
+    used = 0
+    failed_s = 0.0
     for _ in range(tries):
+        used += 1
         proxy = _httpx_proxy()
+        t0 = _time.monotonic()
         try:
             async with httpx.AsyncClient(
                 proxy=proxy, headers=_HEADERS, timeout=_TIMEOUT, follow_redirects=True
@@ -113,11 +123,17 @@ async def httpx_ssr_fetch(url: str, *, tries: int = 6, min_len: int = 1500) -> s
                 resp = await client.get(target)
             html = resp.text
             if resp.status_code == 200 and len(html) >= min_len:
+                if stats_out is not None:
+                    stats_out.update(tries=used, failed_s=round(failed_s, 2))
                 return html
+            failed_s += _time.monotonic() - t0
             last = f"status={resp.status_code} len={len(html)}"
         except Exception as exc:  # noqa: BLE001 — rotate on any transport error
+            failed_s += _time.monotonic() - t0
             last = f"{type(exc).__name__}: {str(exc)[:80]}"
             low = last.lower()
             if any(s in low for s in ("connect", "timeout", "proxy", "tunnel", "reset")):
                 _mark_proxy_dead(proxy)
+    if stats_out is not None:
+        stats_out.update(tries=used, failed_s=round(failed_s, 2))
     raise RuntimeError(f"httpx_ssr_fetch failed for {target}: {last}")

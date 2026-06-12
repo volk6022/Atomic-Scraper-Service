@@ -352,12 +352,32 @@ class AgentState:
 # --- auxiliary LLM calls ----------------------------------------------------
 
 async def _chat_text(
-    client: Any, messages: list[dict], usage: dict, timeout: float
+    client: Any,
+    messages: list[dict],
+    usage: dict,
+    timeout: float,
+    *,
+    perf: list[dict] | None = None,
+    kind: str = "aux",
+    turn: Any = None,
 ) -> str:
-    resp = await client.chat(messages=messages, timeout=timeout)
+    t0 = time.monotonic()
+    try:
+        resp = await client.chat(messages=messages, timeout=timeout)
+    except Exception:
+        # failed calls still cost wall time (API timeouts, internal retries)
+        if perf is not None:
+            perf.append({"kind": kind, "turn": turn, "error": True,
+                         "s": round(time.monotonic() - t0, 2)})
+        raise
     u = resp.get("usage") or {}
-    usage["prompt"] += u.get("prompt_tokens", 0) or 0
-    usage["completion"] += u.get("completion_tokens", 0) or 0
+    pt = u.get("prompt_tokens", 0) or 0
+    ct = u.get("completion_tokens", 0) or 0
+    usage["prompt"] += pt
+    usage["completion"] += ct
+    if perf is not None:
+        perf.append({"kind": kind, "turn": turn, "prompt": pt, "completion": ct,
+                     "s": round(time.monotonic() - t0, 2)})
     return resp.get("content", "") or ""
 
 
@@ -383,6 +403,8 @@ async def critic_call(
     pass_score: float,
     usage: dict,
     timeout: float,
+    perf: list[dict] | None = None,
+    turn: Any = None,
 ) -> dict:
     system = _render(prompts["critic_system"], pass_score=pass_score)
     user = _render(
@@ -398,6 +420,7 @@ async def critic_call(
             [{"role": "system", "content": system}, {"role": "user", "content": user}],
             usage,
             timeout,
+            perf=perf, kind="critic", turn=turn,
         )
     except Exception as e:  # fail open — don't block on critic outage
         return {
@@ -450,6 +473,8 @@ async def refraser_call(
     usage: dict,
     timeout: float,
     missing_gaps: list[str] | None = None,
+    perf: list[dict] | None = None,
+    turn: Any = None,
 ) -> dict:
     system = _render(prompts["refraser_system"], language=language)
     domains = sorted({urlparse(u).netloc for u in visited_urls})[:20]
@@ -469,6 +494,7 @@ async def refraser_call(
             [{"role": "system", "content": system}, {"role": "user", "content": user}],
             usage,
             timeout,
+            perf=perf, kind="refraser", turn=turn,
         )
     except Exception as e:
         return {"new_angles": [], "reason": f"refraser error: {type(e).__name__}"}
@@ -488,6 +514,8 @@ async def compact_context(
     max_compactions: int,
     usage: dict,
     timeout: float,
+    perf: list[dict] | None = None,
+    turn: Any = None,
 ) -> list[dict]:
     blob_parts: list[str] = []
     for m in messages:
@@ -519,6 +547,7 @@ async def compact_context(
             [{"role": "system", "content": system}, {"role": "user", "content": user}],
             usage,
             timeout,
+            perf=perf, kind="compact", turn=turn,
         )
     except Exception:
         return messages
@@ -560,7 +589,8 @@ async def _run_web_scrape(
 ) -> dict:
     res = await scrape_url(url)
     if not res.get("success"):
-        return {"url": url, "error": res.get("error", "scrape failed"), "text": "", "ok": False}
+        return {"url": url, "error": res.get("error", "scrape failed"), "text": "",
+                "ok": False, "_perf": res.get("perf")}
     full = html_to_text(res.get("text") or "")
     extract = goal_conditioned_extract(full, keywords, budget=budget)
     return {
@@ -569,6 +599,7 @@ async def _run_web_scrape(
         "length": len(full),
         "extract_chars": len(extract),
         "ok": True,
+        "_perf": res.get("perf"),
     }
 
 
@@ -579,6 +610,7 @@ async def _forced_submit(
     output_schema: dict | None,
     usage: dict,
     timeout: float,
+    perf: list[dict] | None = None,
 ) -> dict | None:
     """Last-resort submission when the loop ended without the model ever calling
     submit (it looped on searches). Pins the submit tool so the model must emit a
@@ -593,6 +625,7 @@ async def _forced_submit(
             "fields empty or null. Do not search or scrape further."
         ),
     }
+    t0 = time.monotonic()
     try:
         resp = await client.chat(
             messages=_strip_meta(messages) + [force_msg],
@@ -601,11 +634,19 @@ async def _forced_submit(
             timeout=timeout,
         )
     except Exception as e:  # noqa: BLE001
+        if perf is not None:
+            perf.append({"kind": "forced_submit", "turn": "post", "error": True,
+                         "s": round(time.monotonic() - t0, 2)})
         logger.warning("forced submit failed: %r", e)
         return None
     u = resp.get("usage") or {}
     usage["prompt"] += u.get("prompt_tokens", 0) or 0
     usage["completion"] += u.get("completion_tokens", 0) or 0
+    if perf is not None:
+        perf.append({"kind": "forced_submit", "turn": "post",
+                     "prompt": u.get("prompt_tokens", 0) or 0,
+                     "completion": u.get("completion_tokens", 0) or 0,
+                     "s": round(time.monotonic() - t0, 2)})
     for tc in resp.get("tool_calls") or []:
         if tc.get("name") == submit_name:
             try:
@@ -678,6 +719,8 @@ async def run_research(
     tool_call_count: dict[str, int] = {}
     refraser_runs = 0
     turns_done = 0
+    perf_llm: list[dict] = []   # per LLM call: kind, turn, prompt/completion tokens, s
+    perf_tools: list[dict] = []  # per tool call: name, turn, s, ok, method, waste
 
     # accepted / last-proposed result holders
     accepted = False
@@ -701,6 +744,7 @@ async def run_research(
         if elided:
             trace.append({"turn": turn, "role": "soft_compact", "elided": elided})
 
+        t_llm = time.monotonic()
         try:
             resp = await client.chat(
                 messages=_strip_meta(messages),
@@ -709,6 +753,8 @@ async def run_research(
                 timeout=llm_timeout,
             )
         except Exception as e:
+            perf_llm.append({"kind": "main", "turn": turn, "error": True,
+                             "s": round(time.monotonic() - t_llm, 2)})
             trace.append({"turn": turn, "role": "error", "content": f"main LLM failed: {e!r}"[:500]})
             break
         turns_done += 1
@@ -719,6 +765,8 @@ async def run_research(
         main_usage["prompt"] += pt
         main_usage["completion"] += ct
         main_usage["last_prompt"] = pt
+        perf_llm.append({"kind": "main", "turn": turn, "prompt": pt, "completion": ct,
+                         "s": round(time.monotonic() - t_llm, 2)})
 
         tcs = resp.get("tool_calls") or []
         asst_rec: dict = {"role": "assistant", "content": resp.get("content", "") or ""}
@@ -751,6 +799,7 @@ async def run_research(
                 client, messages, state,
                 prompts=prompts, max_compactions=max_compactions,
                 usage=aux_usage, timeout=llm_timeout,
+                perf=perf_llm, turn=turn,
             )
             continue
 
@@ -792,7 +841,14 @@ async def run_research(
                 else:
                     if norm:
                         state.serp_seen.add(norm)
+                    t_tool = time.monotonic()
                     result = await _run_web_serp(q, k, language)
+                    perf_tools.append({
+                        "name": "web_serp", "turn": turn,
+                        "s": round(time.monotonic() - t_tool, 2),
+                        "ok": "error" not in result,
+                        "n_results": result.get("count", 0),
+                    })
 
                     blocked = sorted(
                         d for d, c in state.domain_fail_count.items() if c >= fail_threshold
@@ -818,6 +874,7 @@ async def run_research(
                             visited_urls=state.visited_urls,
                             usage=aux_usage, timeout=llm_timeout,
                             missing_gaps=(last_critic or {}).get("missing"),
+                            perf=perf_llm, turn=turn,
                         )
                         if ref.get("new_angles"):
                             result["_supervisor_hint"] = ref
@@ -844,7 +901,20 @@ async def run_research(
                     state.visited_urls.add(url)
                     if dom:
                         state.domain_visit_count[dom] = state.domain_visit_count.get(dom, 0) + 1
+                    t_tool = time.monotonic()
                     result = await _run_web_scrape(url, keywords, scrape_budget)
+                    sperf = result.pop("_perf", None) or {}
+                    perf_tools.append({
+                        "name": "web_scrape", "turn": turn,
+                        "s": round(time.monotonic() - t_tool, 2),
+                        "ok": bool(result.get("ok")),
+                        "host": dom,
+                        "method": sperf.get("method"),
+                        "attempts": sperf.get("attempts"),
+                        "failed_s": sperf.get("failed_s"),
+                        "proxy_waste_s": sperf.get("proxy_waste_s"),
+                        "proxies": sperf.get("proxies"),
+                    })
                     if not result.get("ok"):
                         if dom and dom not in never_block:
                             state.domain_fail_count[dom] = state.domain_fail_count.get(dom, 0) + 1
@@ -873,6 +943,7 @@ async def run_research(
                     queries_made=len(state.queries_history),
                     urls_visited=len(state.visited_urls),
                     pass_score=pass_score, usage=aux_usage, timeout=llm_timeout,
+                    perf=perf_llm, turn=turn,
                 )
                 last_critic = critic
                 trace.append({
@@ -906,6 +977,7 @@ async def run_research(
                         visited_urls=state.visited_urls,
                         usage=aux_usage, timeout=llm_timeout,
                         missing_gaps=critic["missing"],
+                        perf=perf_llm, turn=turn,
                     )
                     refraser_runs += 1
                     result = {
@@ -947,6 +1019,7 @@ async def run_research(
                 client, messages, state,
                 prompts=prompts, max_compactions=max_compactions,
                 usage=aux_usage, timeout=llm_timeout,
+                perf=perf_llm, turn=turn,
             )
 
         # Cost wall — force exit after the token cap.
@@ -961,7 +1034,8 @@ async def run_research(
     free_empty = output_schema is None and not last_answer
     if not accepted and (schema_empty or free_empty):
         forced = await _forced_submit(
-            client, messages, submit_name, output_schema, main_usage, llm_timeout
+            client, messages, submit_name, output_schema, main_usage, llm_timeout,
+            perf=perf_llm,
         )
         if forced is not None:
             state.submit_attempts += 1
@@ -985,6 +1059,37 @@ async def run_research(
 
     total_elapsed = time.time() - started
     critic_events = [t for t in trace if t.get("role") == "critic"]
+
+    def _llm_s(kind: str) -> float:
+        return round(sum(r["s"] for r in perf_llm if r["kind"] == kind), 1)
+
+    llm_total_s = round(sum(r["s"] for r in perf_llm), 1)
+    serp_s = round(sum(r["s"] for r in perf_tools if r["name"] == "web_serp"), 1)
+    scrape_s = round(sum(r["s"] for r in perf_tools if r["name"] == "web_scrape"), 1)
+    scrape_failed_s = round(
+        sum(r.get("failed_s") or 0 for r in perf_tools if r["name"] == "web_scrape"), 1
+    )
+    proxy_waste_s = round(
+        sum(r.get("proxy_waste_s") or 0 for r in perf_tools if r["name"] == "web_scrape"), 1
+    )
+    accounted_s = round(llm_total_s + serp_s + scrape_s, 1)
+    perf_totals = {
+        "elapsed_s": round(total_elapsed, 1),
+        "llm_s": llm_total_s,
+        "llm_main_s": _llm_s("main"),
+        "llm_critic_s": _llm_s("critic"),
+        "llm_refraser_s": _llm_s("refraser"),
+        "llm_compact_s": _llm_s("compact"),
+        "llm_forced_submit_s": _llm_s("forced_submit"),
+        "llm_failed_calls": sum(1 for r in perf_llm if r.get("error")),
+        "llm_failed_s": round(sum(r["s"] for r in perf_llm if r.get("error")), 1),
+        "serp_s": serp_s,
+        "scrape_s": scrape_s,
+        "scrape_failed_s": scrape_failed_s,
+        "scrape_proxy_waste_s": proxy_waste_s,
+        "accounted_s": accounted_s,
+        "unaccounted_s": round(total_elapsed - accounted_s, 1),
+    }
 
     return {
         "query": query,
@@ -1010,6 +1115,11 @@ async def run_research(
             "compactions": state.compaction_count,
             "target_language": language,
             "had_output_schema": output_schema is not None,
+            "perf": {
+                "totals": perf_totals,
+                "llm_calls": perf_llm,
+                "tool_calls": perf_tools,
+            },
         },
         "trace_summary": {
             "queries_history": state.queries_history,

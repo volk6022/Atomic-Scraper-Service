@@ -49,10 +49,12 @@ class SiteEnrichAction:
         crawl_services: bool = False,
     ) -> EnrichedContent:
         proxy = proxy_provider.get_proxy() or None
+        # exposed for callers (scrape_url perf telemetry: per-port attribution)
+        self.last_proxy = proxy["server"] if proxy else None
         user_agent = self.user_agent_pool.get_user_agent()
         logger.info(
             "Starting site enrichment for: %s (proxy=%s)",
-            url, proxy["server"] if proxy else None,
+            url, self.last_proxy,
         )
 
         context = await self.pool_manager.create_context(
