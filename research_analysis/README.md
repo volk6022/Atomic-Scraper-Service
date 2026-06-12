@@ -1,4 +1,12 @@
-# W2+W3 — анализ 517 ресёрчей (итерация 1)
+# W2+W3 — анализ ресёрчей
+
+**Итерация 2 (2026-06-12): 3-зонный прогон 300 орг нового сервис-агента** —
+`stats_3zones.py` / `analyze_research_3zones.py` / `summarize_3zones.py`
+(адаптация под формат result.structured_output/stats/trace_summary; + deep_dive,
+legal_entity, depth_score). Итоги: `REPORT_3zones.md`, `results/*_3zones*`.
+Главное против 517: email 15.5→40%, ИНН 4→26%, problems_signals 16→81%.
+
+# Итерация 1 — анализ 517 ресёрчей
 
 Цель: понять проблемы агента и проставить флаги (мультифилиал/гос/контакт) на
 существующих 517 ресёрчах. Источник: `yandex_enrichment_experiment/data_backup.zip`.

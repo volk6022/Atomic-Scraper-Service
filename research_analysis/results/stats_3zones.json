@@ -1,0 +1,220 @@
+{
+  "N": 300,
+  "zones": {
+    "optikov": 100,
+    "petrogradka": 100,
+    "kirovsky": 100
+  },
+  "status": {
+    "completed": 300
+  },
+  "accepted_by_critic": 218,
+  "nonempty_card": 280,
+  "nonempty_card_pct": 93.3,
+  "submit_attempts_dist": {
+    "0": 20,
+    "1": 242,
+    "2": 25,
+    "3": 13
+  },
+  "tools": {
+    "web_serp": {
+      "mean": 11.2,
+      "median": 10.0,
+      "min": 2,
+      "max": 36
+    },
+    "web_scrape": {
+      "mean": 9.3,
+      "median": 9.0,
+      "min": 3,
+      "max": 29
+    },
+    "serp_total": 3367,
+    "scrape_total": 2797,
+    "serp_per_scrape_ratio": {
+      "mean": 1.3,
+      "median": 1.1,
+      "min": 0.3,
+      "max": 7.3
+    }
+  },
+  "duplicate_queries": {
+    "mean_dup_frac": 0.009,
+    "researches_with_>=30%_dups": 0
+  },
+  "critic_score": {
+    "mean": 7.5,
+    "median": 7.5,
+    "min": 2.5,
+    "max": 9.1
+  },
+  "depth_score": {
+    "mean": 6.2,
+    "median": 6.5,
+    "min": 2.0,
+    "max": 8.5
+  },
+  "turns": {
+    "mean": 11.7,
+    "median": 10.0,
+    "min": 4,
+    "max": 25
+  },
+  "elapsed_s": {
+    "mean": 597.8,
+    "median": 439.4,
+    "min": 132.4,
+    "max": 1798.7
+  },
+  "tokens_grand_total": {
+    "mean": 102043.9,
+    "median": 83737.0,
+    "min": 15395,
+    "max": 356044
+  },
+  "compactions": {
+    "dist": {
+      "0": 293,
+      "1": 7
+    },
+    "mean": 0.0,
+    "median": 0.0,
+    "min": 0,
+    "max": 1
+  },
+  "refraser_runs": {
+    "mean": 0.5,
+    "median": 0.0,
+    "min": 0,
+    "max": 4
+  },
+  "field_fill_rate_pct": {
+    "what_they_do": 93.3,
+    "scale_indicators": 92.0,
+    "vacancies": 51.3,
+    "social": 86.7,
+    "phones": 77.7,
+    "emails": 40.3,
+    "websites": 77.3,
+    "problems_signals": 81.3,
+    "sources": 76.0,
+    "ym_filled": 92.0,
+    "deep_dive_filled": 71.0,
+    "inn_found": 26.0,
+    "legal_filled": 29.0
+  },
+  "contacts": {
+    "with_email": 121,
+    "with_email_pct": 40.3,
+    "with_phone": 233,
+    "only_phone_no_email": 143,
+    "only_phone_pct": 47.7,
+    "with_social": 260,
+    "with_social_pct": 86.7,
+    "no_contact_at_all": 22,
+    "social_by_platform": {
+      "vk": 341,
+      "telegram": 49,
+      "instagram": 171,
+      "youtube": 21,
+      "linkedin": 0,
+      "habr": 3
+    }
+  },
+  "per_zone": {
+    "optikov": {
+      "n": 100,
+      "email_pct": 36.0,
+      "social_pct": 81.0,
+      "inn_pct": 19.0,
+      "deep_dive_pct": 61.0,
+      "critic_score": {
+        "mean": 7.3,
+        "median": 7.5,
+        "min": 2.5,
+        "max": 8.5
+      },
+      "depth_score": {
+        "mean": 6.1,
+        "median": 6.5,
+        "min": 2.0,
+        "max": 8.0
+      },
+      "elapsed_s": {
+        "mean": 941.4,
+        "median": 780.3,
+        "min": 194.0,
+        "max": 1798.7
+      },
+      "tokens": {
+        "mean": 101944,
+        "median": 88934.0,
+        "min": 28075,
+        "max": 308669
+      }
+    },
+    "petrogradka": {
+      "n": 100,
+      "email_pct": 49.0,
+      "social_pct": 94.0,
+      "inn_pct": 28.0,
+      "deep_dive_pct": 76.0,
+      "critic_score": {
+        "mean": 7.5,
+        "median": 7.5,
+        "min": 4.5,
+        "max": 9.1
+      },
+      "depth_score": {
+        "mean": 6.2,
+        "median": 6.5,
+        "min": 2.0,
+        "max": 8.5
+      },
+      "elapsed_s": {
+        "mean": 409.3,
+        "median": 364.2,
+        "min": 161.3,
+        "max": 1000.7
+      },
+      "tokens": {
+        "mean": 100992.7,
+        "median": 77038.5,
+        "min": 27418,
+        "max": 356044
+      }
+    },
+    "kirovsky": {
+      "n": 100,
+      "email_pct": 36.0,
+      "social_pct": 85.0,
+      "inn_pct": 31.0,
+      "deep_dive_pct": 76.0,
+      "critic_score": {
+        "mean": 7.6,
+        "median": 7.8,
+        "min": 4.0,
+        "max": 9.0
+      },
+      "depth_score": {
+        "mean": 6.3,
+        "median": 6.5,
+        "min": 3.0,
+        "max": 8.5
+      },
+      "elapsed_s": {
+        "mean": 442.8,
+        "median": 388.1,
+        "min": 132.4,
+        "max": 1142.3
+      },
+      "tokens": {
+        "mean": 103195.1,
+        "median": 82386.5,
+        "min": 15395,
+        "max": 310447
+      }
+    }
+  }
+}

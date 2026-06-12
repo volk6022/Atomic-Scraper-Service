@@ -1,0 +1,163 @@
+{
+  "analyzed": 300,
+  "overall": {
+    "partial": 218,
+    "good": 72,
+    "poor": 10
+  },
+  "overall_by_zone": {
+    "petrogradka": {
+      "partial": 72,
+      "good": 27,
+      "poor": 1
+    },
+    "kirovsky": {
+      "partial": 65,
+      "good": 29,
+      "poor": 6
+    },
+    "optikov": {
+      "partial": 81,
+      "good": 16,
+      "poor": 3
+    }
+  },
+  "contact_quality": {
+    "landline": 31,
+    "mobile_only": 174,
+    "email": 93,
+    "none": 1,
+    "email | landline": 1
+  },
+  "depth_assessment": {
+    "поверхностно": 293,
+    "глубоко": 7
+  },
+  "top_root_cause_tags": [
+    [
+      "schema_gap",
+      235
+    ],
+    [
+      "sparse_web_presence",
+      211
+    ],
+    [
+      "no_email_anywhere",
+      118
+    ],
+    [
+      "registry_unreachable",
+      60
+    ],
+    [
+      "only_mobile_phone",
+      59
+    ],
+    [
+      "over_search",
+      59
+    ],
+    [
+      "no_website",
+      48
+    ],
+    [
+      "serp_weak",
+      44
+    ],
+    [
+      "scrape_blocked",
+      29
+    ],
+    [
+      "other",
+      1
+    ],
+    [
+      "blocked_domains",
+      1
+    ],
+    [
+      "no_website_phone",
+      1
+    ],
+    [
+      "is_chain_or_brand",
+      1
+    ]
+  ],
+  "top_missing_fields": [
+    [
+      "legal_entity.employee_count",
+      145
+    ],
+    [
+      "contacts.emails",
+      142
+    ],
+    [
+      "legal_entity.revenue",
+      140
+    ],
+    [
+      "legal_entity.ogrn",
+      113
+    ],
+    [
+      "legal_entity.inn",
+      106
+    ],
+    [
+      "legal_entity.founded_year",
+      101
+    ],
+    [
+      "social.instagram",
+      83
+    ],
+    [
+      "legal_entity.registered_name",
+      70
+    ],
+    [
+      "vacancies",
+      60
+    ],
+    [
+      "contacts.websites",
+      40
+    ],
+    [
+      "contacts.phones",
+      35
+    ],
+    [
+      "sources",
+      33
+    ],
+    [
+      "legal_entity",
+      31
+    ],
+    [
+      "social.telegram",
+      23
+    ],
+    [
+      "deep_dive",
+      21
+    ]
+  ],
+  "problem_severity": {
+    "high": 259,
+    "med": 395,
+    "low": 389,
+    "medium": 5
+  },
+  "counts": {
+    "multi_branch": 135,
+    "government": 29,
+    "chains_brands": 113
+  }
+}
