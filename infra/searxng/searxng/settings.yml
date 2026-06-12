@@ -43,10 +43,13 @@ ui:
   query_in_title: false
   default_theme: simple
 
-# Pool из 20 puls socks5 (10 ru + 10 pl), sessttl.10 = sticky на 10 минут.
-# SearXNG ротирует upstream proxy round-robin'ом. Retry-loop в клиенте
-# (src/infrastructure/external_api/searxng_client.py) использует это:
-# повторная попытка → новый IP из пула.
+# Per-request ротация через puls rotation-порт 823 (http). Каждый запрос —
+# новый exit-IP: бан/мёртвый IP не залипает (sticky-пул 11000-11009 раньше
+# держал выжженный IP 10 минут, и все ретраи били в него же). Замер
+# 2026-06-12: ротация 7/10 живых (7 уникальных IP), sticky 5/10.
+# ru+pl чередуются round-robin'ом; ретраи клиента
+# (src/infrastructure/external_api/searxng_client.py) добивают остальное.
+# Sticky-порты 11000-11099 остаются целиком скраперу (proxies.txt).
 outgoing:
   request_timeout: 8.0
   max_request_timeout: 12.0
@@ -57,30 +60,16 @@ outgoing:
   extra_proxy_timeout: 5
   proxies:
     all://:
-      - socks5h://efea0cd216087051c2e6__cr.ru;sessttl.10:fc6a3125b4c606fa@np.puls-proxy.com:11000
-      - socks5h://efea0cd216087051c2e6__cr.ru;sessttl.10:fc6a3125b4c606fa@np.puls-proxy.com:11001
-      - socks5h://efea0cd216087051c2e6__cr.ru;sessttl.10:fc6a3125b4c606fa@np.puls-proxy.com:11002
-      - socks5h://efea0cd216087051c2e6__cr.ru;sessttl.10:fc6a3125b4c606fa@np.puls-proxy.com:11003
-      - socks5h://efea0cd216087051c2e6__cr.ru;sessttl.10:fc6a3125b4c606fa@np.puls-proxy.com:11004
-      - socks5h://efea0cd216087051c2e6__cr.ru;sessttl.10:fc6a3125b4c606fa@np.puls-proxy.com:11005
-      - socks5h://efea0cd216087051c2e6__cr.ru;sessttl.10:fc6a3125b4c606fa@np.puls-proxy.com:11006
-      - socks5h://efea0cd216087051c2e6__cr.ru;sessttl.10:fc6a3125b4c606fa@np.puls-proxy.com:11007
-      - socks5h://efea0cd216087051c2e6__cr.ru;sessttl.10:fc6a3125b4c606fa@np.puls-proxy.com:11008
-      - socks5h://efea0cd216087051c2e6__cr.ru;sessttl.10:fc6a3125b4c606fa@np.puls-proxy.com:11009
-      - socks5h://efea0cd216087051c2e6__cr.pl;sessttl.10:fc6a3125b4c606fa@np.puls-proxy.com:11000
-      - socks5h://efea0cd216087051c2e6__cr.pl;sessttl.10:fc6a3125b4c606fa@np.puls-proxy.com:11001
-      - socks5h://efea0cd216087051c2e6__cr.pl;sessttl.10:fc6a3125b4c606fa@np.puls-proxy.com:11002
-      - socks5h://efea0cd216087051c2e6__cr.pl;sessttl.10:fc6a3125b4c606fa@np.puls-proxy.com:11003
-      - socks5h://efea0cd216087051c2e6__cr.pl;sessttl.10:fc6a3125b4c606fa@np.puls-proxy.com:11004
-      - socks5h://efea0cd216087051c2e6__cr.pl;sessttl.10:fc6a3125b4c606fa@np.puls-proxy.com:11005
-      - socks5h://efea0cd216087051c2e6__cr.pl;sessttl.10:fc6a3125b4c606fa@np.puls-proxy.com:11006
-      - socks5h://efea0cd216087051c2e6__cr.pl;sessttl.10:fc6a3125b4c606fa@np.puls-proxy.com:11007
-      - socks5h://efea0cd216087051c2e6__cr.pl;sessttl.10:fc6a3125b4c606fa@np.puls-proxy.com:11008
-      - socks5h://efea0cd216087051c2e6__cr.pl;sessttl.10:fc6a3125b4c606fa@np.puls-proxy.com:11009
+      - http://efea0cd216087051c2e6__cr.ru:fc6a3125b4c606fa@np.puls-proxy.com:823
+      - http://efea0cd216087051c2e6__cr.pl:fc6a3125b4c606fa@np.puls-proxy.com:823
 
 # Явно выключаем заведомо-плохие/онион-движки, чтобы они не тянули
 # request_timeout впустую перед попаданием в suspended.
+# yandex включён (по умолчанию выключен): наши запросы русскоязычные,
+# через ru-ротацию он потенциально самый результативный движок.
 engines:
+  - name: yandex
+    disabled: false
   - name: brave
     disabled: true
   - name: startpage
