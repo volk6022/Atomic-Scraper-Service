@@ -38,6 +38,8 @@ class ResearchStats(BaseModel):
     compactions: int = 0
     target_language: Optional[str] = None
     had_output_schema: bool = False
+    # Per-call perf telemetry (llm_calls / tool_calls / totals) from the agent.
+    perf: Optional[dict[str, Any]] = None
 
 
 class ResearchReport(BaseModel):
