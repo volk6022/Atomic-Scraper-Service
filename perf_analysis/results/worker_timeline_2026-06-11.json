@@ -1,0 +1,151 @@
+{
+  "window": [
+    "2026-06-11 11:18:33",
+    "2026-06-11 23:59:55"
+  ],
+  "active_attributed_s": 127940.0,
+  "idle_excluded_s": 0.0,
+  "buckets_s": {
+    "llm": 57729.0,
+    "llm_retry_wait": 48433.0,
+    "serp": 14250.0,
+    "scrape_browser": 6634.0,
+    "scrape_httpx": 882.0,
+    "dispatch": 12.0
+  },
+  "buckets_pct_of_active": {
+    "llm": "45.1%",
+    "llm_retry_wait": "37.9%",
+    "serp": "11.1%",
+    "scrape_browser": "5.2%",
+    "scrape_httpx": "0.7%",
+    "dispatch": "0.0%"
+  },
+  "counts": {
+    "llm": 1381,
+    "serp": 2221,
+    "enrich_start": 1068,
+    "scrape_browser": 1174,
+    "scrape_httpx": 147,
+    "llm_retry_wait": 257
+  },
+  "serp": {
+    "ok": 895,
+    "empty_retries": 1369,
+    "wall_med_s": 8.0,
+    "wall_mean_s": 6.1
+  },
+  "llm": {
+    "n": 1381,
+    "wall_med_s": 26.0,
+    "wall_mean_s": 41.8,
+    "wall_p90_s": 100.0
+  },
+  "scrape_browser": {
+    "ok_n": 735,
+    "ok_med_s": 4.0,
+    "fail_n": 439,
+    "fail_med_s": 8.0,
+    "fail_time_s": 2915.0
+  },
+  "scrape_httpx": {
+    "n": 147,
+    "med_s": 3.0
+  },
+  "ports_top_fail": {
+    "11029": {
+      "fail": 7,
+      "proxy": 7,
+      "ok": 4
+    },
+    "11047": {
+      "ok": 5,
+      "fail": 7,
+      "proxy": 7
+    },
+    "11061": {
+      "ok": 5,
+      "fail": 7,
+      "proxy": 7
+    },
+    "11009": {
+      "fail": 6,
+      "proxy": 6,
+      "ok": 6
+    },
+    "11062": {
+      "fail": 6,
+      "proxy": 6,
+      "ok": 7
+    },
+    "11077": {
+      "ok": 7,
+      "fail": 6,
+      "other": 1,
+      "proxy": 5
+    },
+    "11078": {
+      "fail": 6,
+      "proxy": 5,
+      "other": 1,
+      "ok": 6
+    },
+    "11088": {
+      "fail": 6,
+      "proxy": 6,
+      "ok": 3
+    },
+    "11005": {
+      "fail": 5,
+      "proxy": 5,
+      "ok": 6
+    },
+    "11010": {
+      "fail": 5,
+      "proxy": 5,
+      "ok": 8
+    },
+    "11011": {
+      "fail": 5,
+      "proxy": 5,
+      "ok": 7
+    },
+    "11015": {
+      "ok": 7,
+      "fail": 5,
+      "proxy": 5
+    },
+    "11023": {
+      "ok": 6,
+      "fail": 5,
+      "proxy": 5
+    },
+    "11052": {
+      "ok": 5,
+      "fail": 5,
+      "proxy": 5
+    },
+    "11053": {
+      "ok": 6,
+      "fail": 5,
+      "proxy": 5
+    }
+  },
+  "ports_time_top": {
+    "11008": 106.0,
+    "11015": 104.0,
+    "11014": 98.0,
+    "11055": 96.0,
+    "11007": 95.0,
+    "11006": 90.0,
+    "11061": 89.0,
+    "11062": 88.0,
+    "11003": 87.0,
+    "11078": 87.0,
+    "11077": 84.0,
+    "11085": 84.0,
+    "11009": 83.0,
+    "11074": 83.0,
+    "11027": 82.0
+  }
+}
