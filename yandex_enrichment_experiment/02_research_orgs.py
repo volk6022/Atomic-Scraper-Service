@@ -46,7 +46,7 @@ MODE = "quality"  # speed | balanced | quality
 
 CONCURRENCY = int(os.environ.get("CONCURRENCY", "3"))
 POLL_INTERVAL_S = 20
-POLL_MAX_S = 1800  # 30 мин на одну орг в quality mode
+POLL_MAX_S = int(os.environ.get("POLL_MAX_S", "3600"))  # 60 мин/орг (env-override); поднят с 1800 из-за деградации прокси
 
 DATA_DIR = Path(os.environ.get("YA_DATA_DIR") or (Path(__file__).parent / "data"))
 ORGS_FILE = DATA_DIR / "organizations_dedup.json"
@@ -313,6 +313,17 @@ def build_query(org: dict[str, Any]) -> str:
     if any(h in cats_lower for h in TECH_CATEGORY_HINTS):
         tech_line = "- используемые технологии / стек (только если это IT/digital-компания)\n"
 
+    # Temporary machine constraint: Telegram is unreachable from this host right now.
+    # Tell the agent to skip t.me entirely (record the handle if seen, but don't fetch).
+    no_tg_line = ""
+    if os.environ.get("NO_TELEGRAM", "0").lower() in ("1", "yes", "true"):
+        no_tg_line = (
+            "\n\nВАЖНО: Telegram (t.me) сейчас НЕДОСТУПЕН с этой машины. НЕ ищи Telegram "
+            "и НЕ открывай ссылки t.me — они не загрузятся и только потратят попытки. Если "
+            "встретишь Telegram-ник/ссылку в выдаче или карточке Я.Карт — просто запиши "
+            "@-хэндл как есть в соцсети, но НЕ пытайся его скрейпить. Делай упор на VK и сайты."
+        )
+
     # Workstream A+C: deterministic archetype → type-specific + registry targets.
     archetype = classify_archetype(cats_list)
     size = classify_size(branch_count=org.get("branch_count", 1) or 1)
@@ -344,7 +355,7 @@ def build_query(org: dict[str, Any]) -> str:
         f"Используй карточку Я.Карт и отзывы как первичный источник, дальше иди по "
         f"сайтам и СОЦСЕТЯМ — обязательно открой найденные соцсети скрейпом, чтобы "
         f"достать контактные данные/хэндл. Не выдумывай — если поля нет, оставь пустым."
-        f"{size_hint}{reviews_block}"
+        f"{size_hint}{no_tg_line}{reviews_block}"
     )
 
 

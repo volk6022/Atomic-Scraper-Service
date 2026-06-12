@@ -14,8 +14,10 @@
 
 from __future__ import annotations
 
+import asyncio
 import json
 import math
+import os
 import sys
 import time
 from pathlib import Path
@@ -31,9 +33,11 @@ except Exception:
 API_URL = "http://localhost:8000/api/v1/yandex-maps/extract"
 API_KEY = "default_internal_key"
 
-CENTER_LAT = 59.914403
-CENTER_LON = 30.327319
-RADIUS_M = 750.0
+# Center/radius are overridable via env (YA_CENTER_LAT/LON, YA_RADIUS_M) so the
+# same script drives multiple geo-batches without edits. Defaults = original 750m run.
+CENTER_LAT = float(os.environ.get("YA_CENTER_LAT") or 59.914403)
+CENTER_LON = float(os.environ.get("YA_CENTER_LON") or 30.327319)
+RADIUS_M = float(os.environ.get("YA_RADIUS_M") or 750.0)
 
 GRID_STEP_M = 250.0      # размер ячейки сетки, метры
 GRID_OVERLAP_M = 25.0    # нахлёст между соседними ячейками, метры
@@ -232,6 +236,182 @@ def collect_reviews_for_all(organizations: list[dict[str, Any]]) -> None:
           f"мало отзывов={skipped_few}, ошибки={failed}")
 
 
+def _cell_cache_path(g_idx: int, cat: str):
+    return RAW_GRID_DIR / f"g{g_idx:05d}_{cat.replace(' ', '_')}.json"
+
+
+async def _apost_with_retry(
+    aclient: "httpx.AsyncClient", url: str, payload: dict, empty_key: str
+) -> dict[str, Any]:
+    """Async POST with NET_ATTEMPTS retries; returns parsed JSON or an error dict."""
+    last: dict[str, Any] = {"error": "no attempts", empty_key: []}
+    for attempt in range(1, NET_ATTEMPTS + 1):
+        try:
+            resp = await aclient.post(
+                url,
+                headers={"X-API-Key": API_KEY, "Content-Type": "application/json"},
+                json=payload,
+                timeout=180.0,
+            )
+        except Exception as e:  # noqa: BLE001 — retry transient network errors
+            last = {"error": str(e), empty_key: []}
+        else:
+            if resp.status_code == 200:
+                return resp.json()
+            last = {"error": resp.text[:300], "status": resp.status_code, empty_key: []}
+        if attempt < NET_ATTEMPTS:
+            await asyncio.sleep(NET_RETRY_DELAY_S)
+    return last
+
+
+async def scrape_grid_concurrent(
+    grid_points: list[tuple[float, float]], categories: list[str], concurrency: int
+) -> None:
+    """Fill the raw_grid cache concurrently (semaphore-bounded). Idempotent.
+
+    IMPORTANT: only SUCCESSFUL cells are cached. A cell that errors (incl. proxy
+    quota/auth failures) is left uncached so a resume re-fetches it — no permanent
+    coverage holes. Aggregation reads the cache afterwards.
+    """
+    todo = [
+        (gi, lat, lon, cat)
+        for gi, (lat, lon) in enumerate(grid_points)
+        for cat in categories
+        if not _cell_cache_path(gi, cat).exists()
+    ]
+    total = len(todo)
+    cached_already = len(grid_points) * len(categories) - total
+    print(f"[*] Concurrent: {concurrency} parallel · {total} cells to fetch "
+          f"({cached_already} already cached)")
+    if not total:
+        return
+
+    sem = asyncio.Semaphore(concurrency)
+    done = ok = fail = 0
+    t0 = time.time()
+
+    async with httpx.AsyncClient() as aclient:
+        async def worker(gi: int, lat: float, lon: float, cat: str) -> None:
+            nonlocal done, ok, fail
+            async with sem:
+                payload = await _apost_with_retry(
+                    aclient, API_URL,
+                    {"query": cat, "region_id": 2, "city_slug": "saint-petersburg",
+                     "target_count": GRID_TARGET_COUNT, "include_raw": False,
+                     "ll_lat": lat, "ll_lon": lon},
+                    empty_key="organizations",
+                )
+            if "error" not in payload:
+                with _cell_cache_path(gi, cat).open("w", encoding="utf-8") as f:
+                    json.dump(payload, f, ensure_ascii=False, indent=2)
+                ok += 1
+            else:
+                fail += 1  # not cached → retried on resume
+            done += 1
+            if done % 50 == 0 or done == total:
+                rate = done / max(0.1, time.time() - t0)
+                eta_h = (total - done) / rate / 3600
+                print(f"  [{done:6d}/{total}] ok={ok} fail={fail} "
+                      f"{rate:.1f} cells/s ETA≈{eta_h:.1f}ч", flush=True)
+
+        await asyncio.gather(*(worker(*t) for t in todo))
+
+    print(f"[+] Concurrent scrape done: ok={ok} fail={fail} (failed cells will "
+          f"re-fetch on a resume run)")
+
+
+def aggregate_from_cache(
+    grid_points: list[tuple[float, float]], categories: list[str]
+) -> list[dict[str, Any]]:
+    """Build the unique-org list by reading every cached cell (haversine-filtered)."""
+    all_orgs: dict[str, dict[str, Any]] = {}
+    for g_idx, (g_lat, g_lon) in enumerate(grid_points):
+        for cat in categories:
+            cache_path = _cell_cache_path(g_idx, cat)
+            if not cache_path.exists():
+                continue
+            with cache_path.open("r", encoding="utf-8") as f:
+                payload = json.load(f)
+            for org in payload.get("organizations", []) or []:
+                oid = org.get("oid")
+                if not oid:
+                    continue
+                coords = org.get("coordinates") or {}
+                olat, olon = coords.get("lat"), coords.get("lon")
+                if olat is None or olon is None:
+                    continue
+                dist = haversine_m(CENTER_LAT, CENTER_LON, olat, olon)
+                if dist > RADIUS_M:
+                    continue
+                if oid not in all_orgs:
+                    org["_distance_m"] = round(dist, 1)
+                    org["_grid_point"] = [g_idx, round(g_lat, 6), round(g_lon, 6)]
+                    org["_search_queries"] = [cat]
+                    all_orgs[oid] = org
+                else:
+                    sq = all_orgs[oid].setdefault("_search_queries", [])
+                    if cat not in sq:
+                        sq.append(cat)
+    return sorted(all_orgs.values(), key=lambda o: o.get("_distance_m", 0))
+
+
+async def collect_reviews_concurrent(
+    organizations: list[dict[str, Any]], concurrency: int
+) -> None:
+    """Concurrent review collection (semaphore-bounded). Idempotent; caches per oid.
+
+    Low-count orgs are stub-cached; successful fetches are cached; errors are NOT
+    cached (re-fetched on resume)."""
+    REVIEWS_DIR.mkdir(parents=True, exist_ok=True)
+    todo = []
+    for org in organizations:
+        oid, seoname = org.get("oid"), org.get("seoname")
+        if not oid or not seoname:
+            continue
+        path = REVIEWS_DIR / f"{oid}.json"
+        if path.exists():
+            continue
+        if (org.get("reviewsCount") or 0) < REVIEWS_MIN_COUNT:
+            with path.open("w", encoding="utf-8") as f:
+                json.dump({"oid": oid, "seoname": seoname, "skipped_low_count": True,
+                           "reviewsCount": org.get("reviewsCount") or 0, "reviews": []},
+                          f, ensure_ascii=False, indent=2)
+            continue
+        todo.append((oid, seoname, org.get("title", "?")))
+    total = len(todo)
+    print(f"[*] Concurrent reviews: {concurrency} parallel · {total} orgs to fetch")
+    if not total:
+        return
+    sem = asyncio.Semaphore(concurrency)
+    done = ok = fail = 0
+    t0 = time.time()
+    async with httpx.AsyncClient() as aclient:
+        async def worker(oid: str, seoname: str, title: str) -> None:
+            nonlocal done, ok, fail
+            async with sem:
+                payload = await _apost_with_retry(
+                    aclient, REVIEWS_API_URL,
+                    {"business_oid": oid, "seoname": seoname,
+                     "max_count": REVIEWS_MAX_COUNT, "ranking": "by_time",
+                     "since_months": REVIEWS_SINCE_MONTHS, "include_raw": False},
+                    empty_key="reviews",
+                )
+            if "error" not in payload:
+                with (REVIEWS_DIR / f"{oid}.json").open("w", encoding="utf-8") as f:
+                    json.dump({"oid": oid, "seoname": seoname, **payload},
+                              f, ensure_ascii=False, indent=2)
+                ok += 1
+            else:
+                fail += 1
+            done += 1
+            if done % 50 == 0 or done == total:
+                rate = done / max(0.1, time.time() - t0)
+                print(f"  [reviews {done:5d}/{total}] ok={ok} fail={fail} "
+                      f"{rate:.1f}/s", flush=True)
+        await asyncio.gather(*(worker(*t) for t in todo))
+    print(f"[+] Concurrent reviews done: ok={ok} fail={fail}")
+
+
 def main() -> int:
     import os
 
@@ -248,7 +428,11 @@ def main() -> int:
             summary = json.load(f)
         organizations = summary.get("organizations", [])
         print(f"[*] Режим отзывов: {len(organizations)} орг из кэша")
-        collect_reviews_for_all(organizations)
+        rev_conc = int(os.environ.get("GRID_CONCURRENCY", "1"))
+        if rev_conc > 1:
+            asyncio.run(collect_reviews_concurrent(organizations, rev_conc))
+        else:
+            collect_reviews_for_all(organizations)
         return 0
 
     # ── Генерация сетки ───────────────────────────────────────────────────────
@@ -267,6 +451,29 @@ def main() -> int:
     print()
 
     RAW_GRID_DIR.mkdir(parents=True, exist_ok=True)
+
+    # ── Concurrent path (GRID_CONCURRENCY>1): fetch cache in parallel, then aggregate ──
+    grid_concurrency = int(os.environ.get("GRID_CONCURRENCY", "1"))
+    if grid_concurrency > 1:
+        t_start = time.time()
+        asyncio.run(scrape_grid_concurrent(grid_points, CATEGORIES, grid_concurrency))
+        organizations = aggregate_from_cache(grid_points, CATEGORIES)
+        summary = {
+            "center": {"lat": CENTER_LAT, "lon": CENTER_LON}, "radius_m": RADIUS_M,
+            "grid_step_m": GRID_STEP_M, "grid_overlap_m": GRID_OVERLAP_M,
+            "effective_step_m": EFFECTIVE_STEP_M, "grid_points_total": len(grid_points),
+            "categories_queried": CATEGORIES, "total_unique": len(organizations),
+            "organizations": organizations,
+        }
+        out_path = DATA_DIR / "organizations.json"
+        with out_path.open("w", encoding="utf-8") as f:
+            json.dump(summary, f, ensure_ascii=False, indent=2)
+        print(f"\n[+] Готово (concurrent). Уникальных орг в {RADIUS_M:.0f}м: "
+              f"{len(organizations)} · {(time.time() - t_start) / 3600:.2f}ч · {out_path}")
+        if do_reviews:
+            print("\n[*] COLLECT_REVIEWS — собираем отзывы (concurrent)...")
+            asyncio.run(collect_reviews_concurrent(organizations, grid_concurrency))
+        return 0
 
     all_orgs: dict[str, dict[str, Any]] = {}
     call_idx = 0
