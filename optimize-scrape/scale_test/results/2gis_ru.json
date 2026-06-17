@@ -1,0 +1,1522 @@
+{
+  "summary": {
+    "site": "2gis.ru",
+    "n_requests": 100,
+    "unique_urls": 20,
+    "request_success_rate": 1.0,
+    "content_success_rate": 0.0,
+    "total_wire_bytes": 402784,
+    "total_wire_mb": 0.38,
+    "avg_bytes_per_ok": 4027,
+    "p50_bytes_ok": 4024,
+    "p95_bytes_ok": 4057,
+    "avg_attempts": 1.34,
+    "avg_latency_s": 58.08,
+    "status_dist": {
+      "200": 100
+    },
+    "elapsed_s": 107.2
+  },
+  "records": [
+    {
+      "url": "https://2gis.ru/spb/firm/5348552838715575",
+      "fetched": null,
+      "wire_bytes": 4023,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 11.6,
+      "error": null,
+      "signals": {
+        "is_interstitial": true,
+        "phone": true
+      }
+    },
+    {
+      "url": "https://2gis.ru/spb/firm/5348552838715575/tab/reviews",
+      "fetched": null,
+      "wire_bytes": 4033,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 1.59,
+      "error": null,
+      "signals": {
+        "is_interstitial": true,
+        "phone": true
+      }
+    },
+    {
+      "url": "https://2gis.ru/spb/firm/70000001006140500",
+      "fetched": null,
+      "wire_bytes": 4020,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 4.07,
+      "error": null,
+      "signals": {
+        "is_interstitial": true,
+        "phone": false
+      }
+    },
+    {
+      "url": "https://2gis.ru/spb/firm/5348552838662965",
+      "fetched": null,
+      "wire_bytes": 4021,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 6.5,
+      "error": null,
+      "signals": {
+        "is_interstitial": true,
+        "phone": true
+      }
+    },
+    {
+      "url": "https://2gis.ru/spb/firm/70000001025632279",
+      "fetched": null,
+      "wire_bytes": 4023,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 17.24,
+      "error": null,
+      "signals": {
+        "is_interstitial": true,
+        "phone": false
+      }
+    },
+    {
+      "url": "https://2gis.ru/spb/firm/70000001020367129",
+      "fetched": null,
+      "wire_bytes": 4024,
+      "attempts": 4,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 21.28,
+      "error": null,
+      "signals": {
+        "is_interstitial": true,
+        "phone": false
+      }
+    },
+    {
+      "url": "https://2gis.ru/spb/firm/5348552838790587/tab/vacancies",
+      "fetched": null,
+      "wire_bytes": 4036,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 7.84,
+      "error": null,
+      "signals": {
+        "is_interstitial": true,
+        "phone": true
+      }
+    },
+    {
+      "url": "https://2gis.ru/spb/firm/70000001051222025",
+      "fetched": null,
+      "wire_bytes": 4022,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 17.08,
+      "error": null,
+      "signals": {
+        "is_interstitial": true,
+        "phone": false
+      }
+    },
+    {
+      "url": "https://2gis.ru/spb/firm/70000001023677835",
+      "fetched": null,
+      "wire_bytes": 4022,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 22.47,
+      "error": null,
+      "signals": {
+        "is_interstitial": true,
+        "phone": false
+      }
+    },
+    {
+      "url": "https://2gis.ru/spb/firm/5348552840033418/tab/reviews",
+      "fetched": null,
+      "wire_bytes": 4033,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 19.18,
+      "error": null,
+      "signals": {
+        "is_interstitial": true,
+        "phone": true
+      }
+    },
+    {
+      "url": "https://2gis.ru/moscow/firm/4504127916852726",
+      "fetched": null,
+      "wire_bytes": 4026,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 20.39,
+      "error": null,
+      "signals": {
+        "is_interstitial": true,
+        "phone": false
+      }
+    },
+    {
+      "url": "https://2gis.ru/spb/firm/5348552838674421",
+      "fetched": null,
+      "wire_bytes": 4023,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 20.75,
+      "error": null,
+      "signals": {
+        "is_interstitial": true,
+        "phone": true
+      }
+    },
+    {
+      "url": "https://2gis.ru/spb/firm/5348552840590591",
+      "fetched": null,
+      "wire_bytes": 4025,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 22.42,
+      "error": null,
+      "signals": {
+        "is_interstitial": true,
+        "phone": true
+      }
+    },
+    {
+      "url": "https://2gis.ru/spb/firm/5348552838674435",
+      "fetched": null,
+      "wire_bytes": 4026,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 29.3,
+      "error": null,
+      "signals": {
+        "is_interstitial": true,
+        "phone": true
+      }
+    },
+    {
+      "url": "https://2gis.ru/spb/search/%D0%90%D1%82%D0%B5%D0%BB%D1%8C%D0%B5%20%D1%85%D0%B8%D0%BC%D1%87%D0%B8%D1%81%D1%82%D0%BA%D0%B0",
+      "fetched": null,
+      "wire_bytes": 4060,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 27.79,
+      "error": null,
+      "signals": {
+        "is_interstitial": true,
+        "phone": false
+      }
+    },
+    {
+      "url": "https://2gis.ru/spb/firm/70000001047596507",
+      "fetched": null,
+      "wire_bytes": 4021,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 23.5,
+      "error": null,
+      "signals": {
+        "is_interstitial": true,
+        "phone": false
+      }
+    },
+    {
+      "url": "https://2gis.ru/spb/firm/70000001066391677",
+      "fetched": null,
+      "wire_bytes": 4025,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 31.39,
+      "error": null,
+      "signals": {
+        "is_interstitial": true,
+        "phone": false
+      }
+    },
+    {
+      "url": "https://2gis.ru/spb/firm/70000001026744215/tab/info",
+      "fetched": null,
+      "wire_bytes": 4029,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 26.4,
+      "error": null,
+      "signals": {
+        "is_interstitial": true,
+        "phone": false
+      }
+    },
+    {
+      "url": "https://2gis.ru/spb/firm/70000001026744215/tab/reviews",
+      "fetched": null,
+      "wire_bytes": 4031,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 27.85,
+      "error": null,
+      "signals": {
+        "is_interstitial": true,
+        "phone": false
+      }
+    },
+    {
+      "url": "https://2gis.ru/spb/firm/70000001027389434",
+      "fetched": null,
+      "wire_bytes": 4024,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 29.5,
+      "error": null,
+      "signals": {
+        "is_interstitial": true,
+        "phone": false
+      }
+    },
+    {
+      "url": "https://2gis.ru/spb/firm/5348552838715575",
+      "fetched": null,
+      "wire_bytes": 4024,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 29.23,
+      "error": null,
+      "signals": {
+        "is_interstitial": true,
+        "phone": true
+      }
+    },
+    {
+      "url": "https://2gis.ru/spb/firm/5348552838715575/tab/reviews",
+      "fetched": null,
+      "wire_bytes": 4035,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 32.47,
+      "error": null,
+      "signals": {
+        "is_interstitial": true,
+        "phone": true
+      }
+    },
+    {
+      "url": "https://2gis.ru/spb/firm/70000001006140500",
+      "fetched": null,
+      "wire_bytes": 4023,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 30.34,
+      "error": null,
+      "signals": {
+        "is_interstitial": true,
+        "phone": false
+      }
+    },
+    {
+      "url": "https://2gis.ru/spb/firm/5348552838662965",
+      "fetched": null,
+      "wire_bytes": 4025,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 31.67,
+      "error": null,
+      "signals": {
+        "is_interstitial": true,
+        "phone": true
+      }
+    },
+    {
+      "url": "https://2gis.ru/spb/firm/70000001025632279",
+      "fetched": null,
+      "wire_bytes": 4023,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 34.2,
+      "error": null,
+      "signals": {
+        "is_interstitial": true,
+        "phone": false
+      }
+    },
+    {
+      "url": "https://2gis.ru/spb/firm/70000001020367129",
+      "fetched": null,
+      "wire_bytes": 4024,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 32.53,
+      "error": null,
+      "signals": {
+        "is_interstitial": true,
+        "phone": false
+      }
+    },
+    {
+      "url": "https://2gis.ru/spb/firm/5348552838790587/tab/vacancies",
+      "fetched": null,
+      "wire_bytes": 4039,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 33.38,
+      "error": null,
+      "signals": {
+        "is_interstitial": true,
+        "phone": true
+      }
+    },
+    {
+      "url": "https://2gis.ru/spb/firm/70000001051222025",
+      "fetched": null,
+      "wire_bytes": 4022,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 35.87,
+      "error": null,
+      "signals": {
+        "is_interstitial": true,
+        "phone": false
+      }
+    },
+    {
+      "url": "https://2gis.ru/spb/firm/70000001023677835",
+      "fetched": null,
+      "wire_bytes": 4020,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 34.59,
+      "error": null,
+      "signals": {
+        "is_interstitial": true,
+        "phone": false
+      }
+    },
+    {
+      "url": "https://2gis.ru/spb/firm/5348552840033418/tab/reviews",
+      "fetched": null,
+      "wire_bytes": 4035,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 35.75,
+      "error": null,
+      "signals": {
+        "is_interstitial": true,
+        "phone": true
+      }
+    },
+    {
+      "url": "https://2gis.ru/moscow/firm/4504127916852726",
+      "fetched": null,
+      "wire_bytes": 4023,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 35.81,
+      "error": null,
+      "signals": {
+        "is_interstitial": true,
+        "phone": false
+      }
+    },
+    {
+      "url": "https://2gis.ru/spb/firm/5348552838674421",
+      "fetched": null,
+      "wire_bytes": 4027,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 40.22,
+      "error": null,
+      "signals": {
+        "is_interstitial": true,
+        "phone": true
+      }
+    },
+    {
+      "url": "https://2gis.ru/spb/firm/5348552840590591",
+      "fetched": null,
+      "wire_bytes": 4025,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 42.98,
+      "error": null,
+      "signals": {
+        "is_interstitial": true,
+        "phone": true
+      }
+    },
+    {
+      "url": "https://2gis.ru/spb/firm/5348552838674435",
+      "fetched": null,
+      "wire_bytes": 4022,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 37.25,
+      "error": null,
+      "signals": {
+        "is_interstitial": true,
+        "phone": true
+      }
+    },
+    {
+      "url": "https://2gis.ru/spb/search/%D0%90%D1%82%D0%B5%D0%BB%D1%8C%D0%B5%20%D1%85%D0%B8%D0%BC%D1%87%D0%B8%D1%81%D1%82%D0%BA%D0%B0",
+      "fetched": null,
+      "wire_bytes": 4057,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 39.14,
+      "error": null,
+      "signals": {
+        "is_interstitial": true,
+        "phone": false
+      }
+    },
+    {
+      "url": "https://2gis.ru/spb/firm/70000001047596507",
+      "fetched": null,
+      "wire_bytes": 4025,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 43.63,
+      "error": null,
+      "signals": {
+        "is_interstitial": true,
+        "phone": true
+      }
+    },
+    {
+      "url": "https://2gis.ru/spb/firm/70000001066391677",
+      "fetched": null,
+      "wire_bytes": 4026,
+      "attempts": 4,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 56.51,
+      "error": null,
+      "signals": {
+        "is_interstitial": true,
+        "phone": false
+      }
+    },
+    {
+      "url": "https://2gis.ru/spb/firm/70000001026744215/tab/info",
+      "fetched": null,
+      "wire_bytes": 4028,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 41.68,
+      "error": null,
+      "signals": {
+        "is_interstitial": true,
+        "phone": false
+      }
+    },
+    {
+      "url": "https://2gis.ru/spb/firm/70000001026744215/tab/reviews",
+      "fetched": null,
+      "wire_bytes": 4033,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 48.62,
+      "error": null,
+      "signals": {
+        "is_interstitial": true,
+        "phone": false
+      }
+    },
+    {
+      "url": "https://2gis.ru/spb/firm/70000001027389434",
+      "fetched": null,
+      "wire_bytes": 4024,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 49.42,
+      "error": null,
+      "signals": {
+        "is_interstitial": true,
+        "phone": false
+      }
+    },
+    {
+      "url": "https://2gis.ru/spb/firm/5348552838715575",
+      "fetched": null,
+      "wire_bytes": 4024,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 44.83,
+      "error": null,
+      "signals": {
+        "is_interstitial": true,
+        "phone": true
+      }
+    },
+    {
+      "url": "https://2gis.ru/spb/firm/5348552838715575/tab/reviews",
+      "fetched": null,
+      "wire_bytes": 4034,
+      "attempts": 6,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 71.33,
+      "error": null,
+      "signals": {
+        "is_interstitial": true,
+        "phone": true
+      }
+    },
+    {
+      "url": "https://2gis.ru/spb/firm/70000001006140500",
+      "fetched": null,
+      "wire_bytes": 4021,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 49.84,
+      "error": null,
+      "signals": {
+        "is_interstitial": true,
+        "phone": false
+      }
+    },
+    {
+      "url": "https://2gis.ru/spb/firm/5348552838662965",
+      "fetched": null,
+      "wire_bytes": 4024,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 50.82,
+      "error": null,
+      "signals": {
+        "is_interstitial": true,
+        "phone": true
+      }
+    },
+    {
+      "url": "https://2gis.ru/spb/firm/70000001025632279",
+      "fetched": null,
+      "wire_bytes": 4023,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 57.11,
+      "error": null,
+      "signals": {
+        "is_interstitial": true,
+        "phone": false
+      }
+    },
+    {
+      "url": "https://2gis.ru/spb/firm/70000001020367129",
+      "fetched": null,
+      "wire_bytes": 4023,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 52.49,
+      "error": null,
+      "signals": {
+        "is_interstitial": true,
+        "phone": false
+      }
+    },
+    {
+      "url": "https://2gis.ru/spb/firm/5348552838790587/tab/vacancies",
+      "fetched": null,
+      "wire_bytes": 4041,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 55.73,
+      "error": null,
+      "signals": {
+        "is_interstitial": true,
+        "phone": true
+      }
+    },
+    {
+      "url": "https://2gis.ru/spb/firm/70000001051222025",
+      "fetched": null,
+      "wire_bytes": 4021,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 60.5,
+      "error": null,
+      "signals": {
+        "is_interstitial": true,
+        "phone": false
+      }
+    },
+    {
+      "url": "https://2gis.ru/spb/firm/70000001023677835",
+      "fetched": null,
+      "wire_bytes": 4022,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 57.67,
+      "error": null,
+      "signals": {
+        "is_interstitial": true,
+        "phone": false
+      }
+    },
+    {
+      "url": "https://2gis.ru/spb/firm/5348552840033418/tab/reviews",
+      "fetched": null,
+      "wire_bytes": 4036,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 58.57,
+      "error": null,
+      "signals": {
+        "is_interstitial": true,
+        "phone": true
+      }
+    },
+    {
+      "url": "https://2gis.ru/moscow/firm/4504127916852726",
+      "fetched": null,
+      "wire_bytes": 4026,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 58.99,
+      "error": null,
+      "signals": {
+        "is_interstitial": true,
+        "phone": false
+      }
+    },
+    {
+      "url": "https://2gis.ru/spb/firm/5348552838674421",
+      "fetched": null,
+      "wire_bytes": 4026,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 59.95,
+      "error": null,
+      "signals": {
+        "is_interstitial": true,
+        "phone": true
+      }
+    },
+    {
+      "url": "https://2gis.ru/spb/firm/5348552840590591",
+      "fetched": null,
+      "wire_bytes": 4023,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 60.56,
+      "error": null,
+      "signals": {
+        "is_interstitial": true,
+        "phone": true
+      }
+    },
+    {
+      "url": "https://2gis.ru/spb/firm/5348552838674435",
+      "fetched": null,
+      "wire_bytes": 4024,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 61.29,
+      "error": null,
+      "signals": {
+        "is_interstitial": true,
+        "phone": true
+      }
+    },
+    {
+      "url": "https://2gis.ru/spb/search/%D0%90%D1%82%D0%B5%D0%BB%D1%8C%D0%B5%20%D1%85%D0%B8%D0%BC%D1%87%D0%B8%D1%81%D1%82%D0%BA%D0%B0",
+      "fetched": null,
+      "wire_bytes": 4062,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 67.12,
+      "error": null,
+      "signals": {
+        "is_interstitial": true,
+        "phone": false
+      }
+    },
+    {
+      "url": "https://2gis.ru/spb/firm/70000001047596507",
+      "fetched": null,
+      "wire_bytes": 4022,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 61.86,
+      "error": null,
+      "signals": {
+        "is_interstitial": true,
+        "phone": false
+      }
+    },
+    {
+      "url": "https://2gis.ru/spb/firm/70000001066391677",
+      "fetched": null,
+      "wire_bytes": 4021,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 62.84,
+      "error": null,
+      "signals": {
+        "is_interstitial": true,
+        "phone": false
+      }
+    },
+    {
+      "url": "https://2gis.ru/spb/firm/70000001026744215/tab/info",
+      "fetched": null,
+      "wire_bytes": 4030,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 69.08,
+      "error": null,
+      "signals": {
+        "is_interstitial": true,
+        "phone": false
+      }
+    },
+    {
+      "url": "https://2gis.ru/spb/firm/70000001026744215/tab/reviews",
+      "fetched": null,
+      "wire_bytes": 4030,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 64.04,
+      "error": null,
+      "signals": {
+        "is_interstitial": true,
+        "phone": false
+      }
+    },
+    {
+      "url": "https://2gis.ru/spb/firm/70000001027389434",
+      "fetched": null,
+      "wire_bytes": 4022,
+      "attempts": 3,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 76.24,
+      "error": null,
+      "signals": {
+        "is_interstitial": true,
+        "phone": false
+      }
+    },
+    {
+      "url": "https://2gis.ru/spb/firm/5348552838715575",
+      "fetched": null,
+      "wire_bytes": 4024,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 73.98,
+      "error": null,
+      "signals": {
+        "is_interstitial": true,
+        "phone": true
+      }
+    },
+    {
+      "url": "https://2gis.ru/spb/firm/5348552838715575/tab/reviews",
+      "fetched": null,
+      "wire_bytes": 4036,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 70.27,
+      "error": null,
+      "signals": {
+        "is_interstitial": true,
+        "phone": true
+      }
+    },
+    {
+      "url": "https://2gis.ru/spb/firm/70000001006140500",
+      "fetched": null,
+      "wire_bytes": 4020,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 71.92,
+      "error": null,
+      "signals": {
+        "is_interstitial": true,
+        "phone": false
+      }
+    },
+    {
+      "url": "https://2gis.ru/spb/firm/5348552838662965",
+      "fetched": null,
+      "wire_bytes": 4027,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 72.55,
+      "error": null,
+      "signals": {
+        "is_interstitial": true,
+        "phone": true
+      }
+    },
+    {
+      "url": "https://2gis.ru/spb/firm/70000001025632279",
+      "fetched": null,
+      "wire_bytes": 4021,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 73.45,
+      "error": null,
+      "signals": {
+        "is_interstitial": true,
+        "phone": false
+      }
+    },
+    {
+      "url": "https://2gis.ru/spb/firm/70000001020367129",
+      "fetched": null,
+      "wire_bytes": 4023,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 73.71,
+      "error": null,
+      "signals": {
+        "is_interstitial": true,
+        "phone": false
+      }
+    },
+    {
+      "url": "https://2gis.ru/spb/firm/5348552838790587/tab/vacancies",
+      "fetched": null,
+      "wire_bytes": 4039,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 74.82,
+      "error": null,
+      "signals": {
+        "is_interstitial": true,
+        "phone": true
+      }
+    },
+    {
+      "url": "https://2gis.ru/spb/firm/70000001051222025",
+      "fetched": null,
+      "wire_bytes": 4022,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 79.97,
+      "error": null,
+      "signals": {
+        "is_interstitial": true,
+        "phone": false
+      }
+    },
+    {
+      "url": "https://2gis.ru/spb/firm/70000001023677835",
+      "fetched": null,
+      "wire_bytes": 4022,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 75.5,
+      "error": null,
+      "signals": {
+        "is_interstitial": true,
+        "phone": false
+      }
+    },
+    {
+      "url": "https://2gis.ru/spb/firm/5348552840033418/tab/reviews",
+      "fetched": null,
+      "wire_bytes": 4032,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 76.41,
+      "error": null,
+      "signals": {
+        "is_interstitial": true,
+        "phone": true
+      }
+    },
+    {
+      "url": "https://2gis.ru/moscow/firm/4504127916852726",
+      "fetched": null,
+      "wire_bytes": 4026,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 82.12,
+      "error": null,
+      "signals": {
+        "is_interstitial": true,
+        "phone": false
+      }
+    },
+    {
+      "url": "https://2gis.ru/spb/firm/5348552838674421",
+      "fetched": null,
+      "wire_bytes": 4027,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 78.02,
+      "error": null,
+      "signals": {
+        "is_interstitial": true,
+        "phone": true
+      }
+    },
+    {
+      "url": "https://2gis.ru/spb/firm/5348552840590591",
+      "fetched": null,
+      "wire_bytes": 4024,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 78.08,
+      "error": null,
+      "signals": {
+        "is_interstitial": true,
+        "phone": true
+      }
+    },
+    {
+      "url": "https://2gis.ru/spb/firm/5348552838674435",
+      "fetched": null,
+      "wire_bytes": 4024,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 79.36,
+      "error": null,
+      "signals": {
+        "is_interstitial": true,
+        "phone": true
+      }
+    },
+    {
+      "url": "https://2gis.ru/spb/search/%D0%90%D1%82%D0%B5%D0%BB%D1%8C%D0%B5%20%D1%85%D0%B8%D0%BC%D1%87%D0%B8%D1%81%D1%82%D0%BA%D0%B0",
+      "fetched": null,
+      "wire_bytes": 4061,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 84.62,
+      "error": null,
+      "signals": {
+        "is_interstitial": true,
+        "phone": false
+      }
+    },
+    {
+      "url": "https://2gis.ru/spb/firm/70000001047596507",
+      "fetched": null,
+      "wire_bytes": 4023,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 80.62,
+      "error": null,
+      "signals": {
+        "is_interstitial": true,
+        "phone": false
+      }
+    },
+    {
+      "url": "https://2gis.ru/spb/firm/70000001066391677",
+      "fetched": null,
+      "wire_bytes": 4023,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 87.98,
+      "error": null,
+      "signals": {
+        "is_interstitial": true,
+        "phone": false
+      }
+    },
+    {
+      "url": "https://2gis.ru/spb/firm/70000001026744215/tab/info",
+      "fetched": null,
+      "wire_bytes": 4030,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 81.87,
+      "error": null,
+      "signals": {
+        "is_interstitial": true,
+        "phone": false
+      }
+    },
+    {
+      "url": "https://2gis.ru/spb/firm/70000001026744215/tab/reviews",
+      "fetched": null,
+      "wire_bytes": 4033,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 83.19,
+      "error": null,
+      "signals": {
+        "is_interstitial": true,
+        "phone": false
+      }
+    },
+    {
+      "url": "https://2gis.ru/spb/firm/70000001027389434",
+      "fetched": null,
+      "wire_bytes": 4022,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 83.93,
+      "error": null,
+      "signals": {
+        "is_interstitial": true,
+        "phone": false
+      }
+    },
+    {
+      "url": "https://2gis.ru/spb/firm/5348552838715575",
+      "fetched": null,
+      "wire_bytes": 4025,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 84.73,
+      "error": null,
+      "signals": {
+        "is_interstitial": true,
+        "phone": true
+      }
+    },
+    {
+      "url": "https://2gis.ru/spb/firm/5348552838715575/tab/reviews",
+      "fetched": null,
+      "wire_bytes": 4036,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 85.22,
+      "error": null,
+      "signals": {
+        "is_interstitial": true,
+        "phone": true
+      }
+    },
+    {
+      "url": "https://2gis.ru/spb/firm/70000001006140500",
+      "fetched": null,
+      "wire_bytes": 4021,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 85.55,
+      "error": null,
+      "signals": {
+        "is_interstitial": true,
+        "phone": false
+      }
+    },
+    {
+      "url": "https://2gis.ru/spb/firm/5348552838662965",
+      "fetched": null,
+      "wire_bytes": 4024,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 88.24,
+      "error": null,
+      "signals": {
+        "is_interstitial": true,
+        "phone": true
+      }
+    },
+    {
+      "url": "https://2gis.ru/spb/firm/70000001025632279",
+      "fetched": null,
+      "wire_bytes": 4023,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 92.6,
+      "error": null,
+      "signals": {
+        "is_interstitial": true,
+        "phone": false
+      }
+    },
+    {
+      "url": "https://2gis.ru/spb/firm/70000001020367129",
+      "fetched": null,
+      "wire_bytes": 4024,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 87.17,
+      "error": null,
+      "signals": {
+        "is_interstitial": true,
+        "phone": false
+      }
+    },
+    {
+      "url": "https://2gis.ru/spb/firm/5348552838790587/tab/vacancies",
+      "fetched": null,
+      "wire_bytes": 4040,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 89.89,
+      "error": null,
+      "signals": {
+        "is_interstitial": true,
+        "phone": true
+      }
+    },
+    {
+      "url": "https://2gis.ru/spb/firm/70000001051222025",
+      "fetched": null,
+      "wire_bytes": 4023,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 95.04,
+      "error": null,
+      "signals": {
+        "is_interstitial": true,
+        "phone": false
+      }
+    },
+    {
+      "url": "https://2gis.ru/spb/firm/70000001023677835",
+      "fetched": null,
+      "wire_bytes": 4025,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 91.35,
+      "error": null,
+      "signals": {
+        "is_interstitial": true,
+        "phone": false
+      }
+    },
+    {
+      "url": "https://2gis.ru/spb/firm/5348552840033418/tab/reviews",
+      "fetched": null,
+      "wire_bytes": 4033,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 96.17,
+      "error": null,
+      "signals": {
+        "is_interstitial": true,
+        "phone": true
+      }
+    },
+    {
+      "url": "https://2gis.ru/moscow/firm/4504127916852726",
+      "fetched": null,
+      "wire_bytes": 4026,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 94.93,
+      "error": null,
+      "signals": {
+        "is_interstitial": true,
+        "phone": false
+      }
+    },
+    {
+      "url": "https://2gis.ru/spb/firm/5348552838674421",
+      "fetched": null,
+      "wire_bytes": 4026,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 95.72,
+      "error": null,
+      "signals": {
+        "is_interstitial": true,
+        "phone": true
+      }
+    },
+    {
+      "url": "https://2gis.ru/spb/firm/5348552840590591",
+      "fetched": null,
+      "wire_bytes": 4023,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 95.88,
+      "error": null,
+      "signals": {
+        "is_interstitial": true,
+        "phone": true
+      }
+    },
+    {
+      "url": "https://2gis.ru/spb/firm/5348552838674435",
+      "fetched": null,
+      "wire_bytes": 4022,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 96.26,
+      "error": null,
+      "signals": {
+        "is_interstitial": true,
+        "phone": true
+      }
+    },
+    {
+      "url": "https://2gis.ru/spb/search/%D0%90%D1%82%D0%B5%D0%BB%D1%8C%D0%B5%20%D1%85%D0%B8%D0%BC%D1%87%D0%B8%D1%81%D1%82%D0%BA%D0%B0",
+      "fetched": null,
+      "wire_bytes": 4059,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 99.02,
+      "error": null,
+      "signals": {
+        "is_interstitial": true,
+        "phone": false
+      }
+    },
+    {
+      "url": "https://2gis.ru/spb/firm/70000001047596507",
+      "fetched": null,
+      "wire_bytes": 4021,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 102.65,
+      "error": null,
+      "signals": {
+        "is_interstitial": true,
+        "phone": false
+      }
+    },
+    {
+      "url": "https://2gis.ru/spb/firm/70000001066391677",
+      "fetched": null,
+      "wire_bytes": 4023,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 97.57,
+      "error": null,
+      "signals": {
+        "is_interstitial": true,
+        "phone": false
+      }
+    },
+    {
+      "url": "https://2gis.ru/spb/firm/70000001026744215/tab/info",
+      "fetched": null,
+      "wire_bytes": 4032,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 104.05,
+      "error": null,
+      "signals": {
+        "is_interstitial": true,
+        "phone": false
+      }
+    },
+    {
+      "url": "https://2gis.ru/spb/firm/70000001026744215/tab/reviews",
+      "fetched": null,
+      "wire_bytes": 4033,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 106.97,
+      "error": null,
+      "signals": {
+        "is_interstitial": true,
+        "phone": false
+      }
+    },
+    {
+      "url": "https://2gis.ru/spb/firm/70000001027389434",
+      "fetched": null,
+      "wire_bytes": 4024,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": false,
+      "status": 200,
+      "latency_s": 101.97,
+      "error": null,
+      "signals": {
+        "is_interstitial": true,
+        "phone": false
+      }
+    }
+  ]
+}

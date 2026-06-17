@@ -1,0 +1,197 @@
+[
+  {
+    "name": "requests_bs4__no_proxy",
+    "runs": [
+      {
+        "ok": false,
+        "seconds": 1.0442634999926668,
+        "organic_count": 0,
+        "error": "RuntimeError: http 429"
+      },
+      {
+        "ok": false,
+        "seconds": 0.955654500023229,
+        "organic_count": 0,
+        "error": "RuntimeError: http 429"
+      },
+      {
+        "ok": false,
+        "seconds": 0.9285162000160199,
+        "organic_count": 0,
+        "error": "RuntimeError: http 429"
+      },
+      {
+        "ok": false,
+        "seconds": 1.2021512000064831,
+        "organic_count": 0,
+        "error": "RuntimeError: http 429"
+      },
+      {
+        "ok": false,
+        "seconds": 0.9476996999874245,
+        "organic_count": 0,
+        "error": "RuntimeError: http 429"
+      },
+      {
+        "ok": false,
+        "seconds": 0.9605758000107016,
+        "organic_count": 0,
+        "error": "RuntimeError: http 429"
+      },
+      {
+        "ok": false,
+        "seconds": 1.0511988000071142,
+        "organic_count": 0,
+        "error": "RuntimeError: http 429"
+      },
+      {
+        "ok": false,
+        "seconds": 1.0944648000004236,
+        "organic_count": 0,
+        "error": "RuntimeError: http 429"
+      },
+      {
+        "ok": false,
+        "seconds": 1.1690929000033066,
+        "organic_count": 0,
+        "error": "RuntimeError: http 429"
+      },
+      {
+        "ok": false,
+        "seconds": 1.1985252999875229,
+        "organic_count": 0,
+        "error": "RuntimeError: http 429"
+      }
+    ]
+  },
+  {
+    "name": "playwright_basic__no_proxy",
+    "runs": [
+      {
+        "ok": false,
+        "seconds": 12.418705799995223,
+        "organic_count": 0,
+        "error": "BlockedError: captcha / sorry page"
+      },
+      {
+        "ok": false,
+        "seconds": 10.243698300007964,
+        "organic_count": 0,
+        "error": "BlockedError: captcha / sorry page"
+      },
+      {
+        "ok": false,
+        "seconds": 9.97898250000435,
+        "organic_count": 0,
+        "error": "BlockedError: captcha / sorry page"
+      },
+      {
+        "ok": false,
+        "seconds": 10.092310000007274,
+        "organic_count": 0,
+        "error": "BlockedError: captcha / sorry page"
+      },
+      {
+        "ok": false,
+        "seconds": 9.91555450001033,
+        "organic_count": 0,
+        "error": "BlockedError: captcha / sorry page"
+      },
+      {
+        "ok": false,
+        "seconds": 10.05381749998196,
+        "organic_count": 0,
+        "error": "BlockedError: captcha / sorry page"
+      },
+      {
+        "ok": false,
+        "seconds": 10.234958100016229,
+        "organic_count": 0,
+        "error": "BlockedError: captcha / sorry page"
+      },
+      {
+        "ok": false,
+        "seconds": 10.242286199994851,
+        "organic_count": 0,
+        "error": "BlockedError: captcha / sorry page"
+      },
+      {
+        "ok": false,
+        "seconds": 10.14387379999971,
+        "organic_count": 0,
+        "error": "BlockedError: captcha / sorry page"
+      },
+      {
+        "ok": false,
+        "seconds": 10.156697099999292,
+        "organic_count": 0,
+        "error": "BlockedError: captcha / sorry page"
+      }
+    ]
+  },
+  {
+    "name": "playwright_stealth__no_proxy",
+    "runs": [
+      {
+        "ok": false,
+        "seconds": 10.049595199991018,
+        "organic_count": 0,
+        "error": "BlockedError: captcha / sorry page"
+      },
+      {
+        "ok": false,
+        "seconds": 10.13412650002283,
+        "organic_count": 0,
+        "error": "BlockedError: captcha / sorry page"
+      },
+      {
+        "ok": false,
+        "seconds": 10.150359599996591,
+        "organic_count": 0,
+        "error": "BlockedError: captcha / sorry page"
+      },
+      {
+        "ok": false,
+        "seconds": 10.059407100023236,
+        "organic_count": 0,
+        "error": "BlockedError: captcha / sorry page"
+      },
+      {
+        "ok": false,
+        "seconds": 10.057086299988441,
+        "organic_count": 0,
+        "error": "BlockedError: captcha / sorry page"
+      },
+      {
+        "ok": false,
+        "seconds": 10.312838499987265,
+        "organic_count": 0,
+        "error": "BlockedError: captcha / sorry page"
+      },
+      {
+        "ok": false,
+        "seconds": 10.275914399971953,
+        "organic_count": 0,
+        "error": "BlockedError: captcha / sorry page"
+      },
+      {
+        "ok": false,
+        "seconds": 10.06947570000193,
+        "organic_count": 0,
+        "error": "BlockedError: captcha / sorry page"
+      },
+      {
+        "ok": false,
+        "seconds": 10.080070100026205,
+        "organic_count": 0,
+        "error": "BlockedError: captcha / sorry page"
+      },
+      {
+        "ok": false,
+        "seconds": 10.257508100010455,
+        "organic_count": 0,
+        "error": "BlockedError: captcha / sorry page"
+      }
+    ]
+  }
+]

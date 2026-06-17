@@ -5,33 +5,39 @@ from src.domain.models.requests import (
     SearchRequest,
     SearchResponse,
     OmniParseRequest,
-    JinaExtractRequest,
+    HtmlToMdRequest,
     TaskStatus,
+)
+from src.domain.utils.content_cleaner import (
+    clean_html_content,
+    html_to_text,
+    html_to_markdown,
 )
 from src.infrastructure.browser.pool_manager import pool_manager
 from src.infrastructure.external_api.search_client import search_client
-from src.infrastructure.external_api.facade import (
-    get_extraction_client,
-    get_orchestration_client,
-)
+from src.infrastructure.external_api.facade import get_orchestration_client
 from src.api.auth import get_api_key
-import uuid
 
 router = APIRouter(dependencies=[Depends(get_api_key)])
-extraction_client = get_extraction_client()
 orchestration_client = get_orchestration_client()
 
 
 @router.post("/scraper", response_model=ScrapeResponse)
 async def scrape(request: ScrapeRequest):
     try:
-        context = await pool_manager.create_context(
-            proxy={"server": request.proxy} if request.proxy else None
-        )
+        context = await pool_manager.create_context(proxy=request.proxy, headless=True)
         page = await context.new_page()
         await page.goto(str(request.url), wait_until=request.wait_until)  # type: ignore
         content = await page.content()
         await context.close()
+
+        if request.output_format == "markdown":
+            content = html_to_markdown(content)
+        elif request.output_format == "text":
+            content = html_to_text(content)
+        elif request.clean_html:
+            content = clean_html_content(content)
+
         return ScrapeResponse(
             url=str(request.url), content=content, status=TaskStatus.SUCCESS
         )
@@ -55,10 +61,10 @@ async def omni_parse(request: OmniParseRequest):
     return {"raw_analysis": result}
 
 
-@router.post("/jina-extract")
-async def jina_extract(request: JinaExtractRequest):
-    # Use extraction client (e.g., Jina Reader LM)
-    result = await extraction_client.extract(
-        content=request.html, schema=request.extraction_schema or {}
-    )
-    return {"extracted_data": result}
+@router.post("/html-to-md")
+async def html_to_md(request: HtmlToMdRequest):
+    if request.format == "markdown":
+        content = html_to_markdown(request.html)
+    else:
+        content = html_to_text(request.html)
+    return {"content": content}

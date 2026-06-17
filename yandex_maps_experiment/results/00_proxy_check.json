@@ -1,0 +1,33 @@
+{
+  "approach": "proxy sanity",
+  "success": false,
+  "captcha_detected": false,
+  "http_status": null,
+  "items_collected": 0,
+  "fields_per_item": [],
+  "egress_ip": "84.22.142.138",
+  "duration_s": 55.58,
+  "notes": "4/6 successful; 1 unique IP; geo=Russia/Krasnoyarsk/Igra-Service LLC",
+  "sample": [
+    {
+      "ip": "84.22.142.138"
+    },
+    {
+      "ip": "84.22.142.138"
+    },
+    {
+      "ip": null
+    },
+    {
+      "ip": "84.22.142.138"
+    },
+    {
+      "ip": null
+    },
+    {
+      "ip": "84.22.142.138"
+    }
+  ],
+  "error": null,
+  "started_at": "2026-05-17T08:06:42.242727+00:00"
+}

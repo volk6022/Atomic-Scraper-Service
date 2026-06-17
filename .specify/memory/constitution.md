@@ -1,18 +1,16 @@
 <!--
 Sync Impact Report
-Version change: 1.3.0 → 1.4.0
+Version change: 1.4.0 → 1.5.0
 List of modified principles:
-  - Added: VIII. Production Deployment Readiness
-  - Added: IX. Anti-Bot Detection Mitigation
+  - None renamed
 Added sections:
-  - VIII. Production Deployment Readiness (Core Principles)
-  - IX. Anti-Bot Detection Mitigation (Core Principles)
+  - X. Autonomous Research Agent (Core Principles)
 Removed sections:
   - None
 Templates requiring updates:
   - ✅ updated: .specify/templates/plan-template.md (Constitution Check section)
-  - ⚠ pending: .specify/templates/spec-template.md (TDD already enforced, no changes needed)
-  - ⚠ pending: .specify/templates/tasks-template.md (no changes needed)
+  - ✅ updated: .specify/templates/tasks-template.md (principle count I-VI → I-X)
+  - ⚠ pending: .specify/templates/spec-template.md (no changes needed, FR references are generic)
 Follow-up TODOs:
   - TODO(RATIFICATION_DATE): Original adoption date unknown - remains from v1.3.0
 -->
@@ -47,6 +45,15 @@ The system MUST be production-ready with containerization support. This includes
 ### IX. Anti-Bot Detection Mitigation
 The system MUST provide capabilities to mitigate anti-bot detection when scraping target websites. This includes: (a) stealth browser capabilities such as User-Agent rotation and human-like interaction patterns; (b) integrated proxy pool support that can be optionally applied to requests; (c) per-domain rate limiting with configurable limits (e.g., default 30/hour for `*.yandex.*` domains). These capabilities enable the service to collect data from sites with anti-bot protections without immediate blocking.
 
+### X. Autonomous Research Agent
+The system MUST support autonomous research via a LangGraph-based agent that orchestrates multi-step web research using the service's own scraping primitives as tools. The agent MUST:
+
+(a) Support multiple research modes (speed/balanced/quality) with configurable iteration limits, search breadth, scrape concurrency, and token budgets per mode.
+(b) Enforce hard loop-safety constraints — token budget threshold (≥85% triggers beast-mode answer), iteration cap, wall-clock deadline, and URL stall detection — guaranteeing a final answer is always produced, never aborted mid-flight.
+(c) Reuse the service's existing scraping capabilities (web search via stateless scraper, URL scraping via SiteEnrichAction, fact extraction via LLMFacade) as LangChain tools without adding external third-party search APIs.
+(d) Execute asynchronously via the existing Taskiq worker, exposed through polling-based `/api/v1/research/run` (POST → 202 with task_id) and `/api/v1/research/status/{task_id}` (GET) endpoints, with optional SSE event streaming.
+(e) Produce structured output: a markdown report with inline `[n]` citations, extracted facts with confidence scores, visited URLs, and execution statistics.
+
 ## Technical Constraints
 - **Concurrency**: Use `asyncio` for I/O bound tasks (Network, Playwright) and separate processes (Taskiq) for isolation.
 - **Data Exchange**: Use Redis Pub/Sub for real-time command/result routing between FastAPI and Stateful Actors.
@@ -69,4 +76,4 @@ This Constitution is the primary authority for architectural and procedural deci
 
 **Compliance**: All PRs MUST be reviewed against this constitution. Automated linting and type-checking (mypy/ruff) are mandatory for all contributions.
 
-**Version**: 1.4.0 | **Ratified**: TODO(RATIFICATION_DATE) | **Last Amended**: 2026-05-01
+**Version**: 1.5.0 | **Ratified**: TODO(RATIFICATION_DATE) | **Last Amended**: 2026-05-11

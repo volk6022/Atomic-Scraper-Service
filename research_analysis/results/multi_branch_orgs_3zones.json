@@ -1,0 +1,677 @@
+[
+  {
+    "oid": "1007862824",
+    "name": "Хеликс",
+    "zone": "petrogradka"
+  },
+  {
+    "oid": "1019058243",
+    "name": "1 Формула",
+    "zone": "optikov"
+  },
+  {
+    "oid": "101920355824",
+    "name": "Банк ВТБ",
+    "zone": "optikov"
+  },
+  {
+    "oid": "1020498450",
+    "name": "Средняя общеобразовательная школа № 501, корпус № 2",
+    "zone": "kirovsky"
+  },
+  {
+    "oid": "1021774314",
+    "name": "СберБанк",
+    "zone": "petrogradka"
+  },
+  {
+    "oid": "1024024969",
+    "name": "ПетроАптека",
+    "zone": "petrogradka"
+  },
+  {
+    "oid": "1029265764",
+    "name": "ВашЪ ДантистЪ",
+    "zone": "petrogradka"
+  },
+  {
+    "oid": "1030196182",
+    "name": "Интан",
+    "zone": "petrogradka"
+  },
+  {
+    "oid": "1035622366",
+    "name": "Детский сад № 2",
+    "zone": "petrogradka"
+  },
+  {
+    "oid": "105393933854",
+    "name": "Северный бастион",
+    "zone": "petrogradka"
+  },
+  {
+    "oid": "1056564015",
+    "name": "Озерки",
+    "zone": "petrogradka"
+  },
+  {
+    "oid": "1058190345",
+    "name": "Петербургские аптеки",
+    "zone": "kirovsky"
+  },
+  {
+    "oid": "1068462899",
+    "name": "Дом мебели из сосны",
+    "zone": "kirovsky"
+  },
+  {
+    "oid": "1094563910",
+    "name": "Невский правовой центр",
+    "zone": "petrogradka"
+  },
+  {
+    "oid": "1096696561",
+    "name": "Невис",
+    "zone": "kirovsky"
+  },
+  {
+    "oid": "1102050053",
+    "name": "Capsulahair",
+    "zone": "petrogradka"
+  },
+  {
+    "oid": "1103256509",
+    "name": "Эксклюзив",
+    "zone": "optikov"
+  },
+  {
+    "oid": "1103516688",
+    "name": "ВетСеть",
+    "zone": "kirovsky"
+  },
+  {
+    "oid": "1108426025",
+    "name": "Стартер",
+    "zone": "optikov"
+  },
+  {
+    "oid": "1112971108",
+    "name": "СберБанк",
+    "zone": "kirovsky"
+  },
+  {
+    "oid": "1113636096",
+    "name": "Мама Рома",
+    "zone": "kirovsky"
+  },
+  {
+    "oid": "111970710864",
+    "name": "5box",
+    "zone": "optikov"
+  },
+  {
+    "oid": "112345293688",
+    "name": "Клиника биоакустической коррекции",
+    "zone": "petrogradka"
+  },
+  {
+    "oid": "116211902596",
+    "name": "Магнит",
+    "zone": "petrogradka"
+  },
+  {
+    "oid": "1168584773",
+    "name": "Счастье",
+    "zone": "petrogradka"
+  },
+  {
+    "oid": "1201911837",
+    "name": "Супер Лента",
+    "zone": "kirovsky"
+  },
+  {
+    "oid": "1204486741",
+    "name": "Apetta",
+    "zone": "optikov"
+  },
+  {
+    "oid": "1233546896",
+    "name": "Trifit",
+    "zone": "petrogradka"
+  },
+  {
+    "oid": "1242458876",
+    "name": "Гипер Лента",
+    "zone": "optikov"
+  },
+  {
+    "oid": "124919159076",
+    "name": "Буше",
+    "zone": "petrogradka"
+  },
+  {
+    "oid": "12681595267",
+    "name": "Bao-Box",
+    "zone": "optikov"
+  },
+  {
+    "oid": "127234116686",
+    "name": "Цветочный город",
+    "zone": "optikov"
+  },
+  {
+    "oid": "1288806170",
+    "name": "Мирос",
+    "zone": "petrogradka"
+  },
+  {
+    "oid": "1288815309",
+    "name": "А-Айсберг",
+    "zone": "optikov"
+  },
+  {
+    "oid": "134133687292",
+    "name": "Британские пекарни",
+    "zone": "petrogradka"
+  },
+  {
+    "oid": "1342002008",
+    "name": "Мой Зубной",
+    "zone": "kirovsky"
+  },
+  {
+    "oid": "1345074983",
+    "name": "Пятёрочка",
+    "zone": "kirovsky"
+  },
+  {
+    "oid": "1379212880",
+    "name": "Теремок",
+    "zone": "petrogradka"
+  },
+  {
+    "oid": "138239592591",
+    "name": "Кембриджская Международная школа, кампус",
+    "zone": "optikov"
+  },
+  {
+    "oid": "138945235042",
+    "name": "Cocos Lounge",
+    "zone": "petrogradka"
+  },
+  {
+    "oid": "1408122476",
+    "name": "Карапузы сад",
+    "zone": "optikov"
+  },
+  {
+    "oid": "141740335830",
+    "name": "Paul Mitchell",
+    "zone": "optikov"
+  },
+  {
+    "oid": "142016337058",
+    "name": "Здравсити",
+    "zone": "petrogradka"
+  },
+  {
+    "oid": "142135553655",
+    "name": "Красное&Белое",
+    "zone": "optikov"
+  },
+  {
+    "oid": "151006267886",
+    "name": "Британские пекарни",
+    "zone": "kirovsky"
+  },
+  {
+    "oid": "152472106671",
+    "name": "Апрель",
+    "zone": "kirovsky"
+  },
+  {
+    "oid": "152648113014",
+    "name": "Атлант",
+    "zone": "kirovsky"
+  },
+  {
+    "oid": "15512674480",
+    "name": "Неофарм",
+    "zone": "petrogradka"
+  },
+  {
+    "oid": "1581915162",
+    "name": "Дикси",
+    "zone": "kirovsky"
+  },
+  {
+    "oid": "1582579562",
+    "name": "Детская стоматологическая поликлиника № 4, стоматологическое отделение № 2",
+    "zone": "kirovsky"
+  },
+  {
+    "oid": "16219166010",
+    "name": "Ketch Up",
+    "zone": "petrogradka"
+  },
+  {
+    "oid": "166618933989",
+    "name": "Stretch me",
+    "zone": "petrogradka"
+  },
+  {
+    "oid": "166880184805",
+    "name": "YogiRoom",
+    "zone": "optikov"
+  },
+  {
+    "oid": "168161406828",
+    "name": "ZakaNail",
+    "zone": "petrogradka"
+  },
+  {
+    "oid": "168649361395",
+    "name": "Альфа-Банк",
+    "zone": "petrogradka"
+  },
+  {
+    "oid": "169862774619",
+    "name": "Теремок",
+    "zone": "optikov"
+  },
+  {
+    "oid": "170320280158",
+    "name": "Mytimefitness",
+    "zone": "optikov"
+  },
+  {
+    "oid": "1733606097",
+    "name": "Технолог",
+    "zone": "kirovsky"
+  },
+  {
+    "oid": "174010590029",
+    "name": "Chang",
+    "zone": "petrogradka"
+  },
+  {
+    "oid": "1752331585",
+    "name": "Булочная Ф. Вольчека",
+    "zone": "kirovsky"
+  },
+  {
+    "oid": "175610467168",
+    "name": "Вологодские продукты",
+    "zone": "kirovsky"
+  },
+  {
+    "oid": "175922537273",
+    "name": "Здравсити",
+    "zone": "kirovsky"
+  },
+  {
+    "oid": "178034162536",
+    "name": "Брынза",
+    "zone": "kirovsky"
+  },
+  {
+    "oid": "178333091792",
+    "name": "О'кей",
+    "zone": "optikov"
+  },
+  {
+    "oid": "179927505294",
+    "name": "Городские пекарни",
+    "zone": "optikov"
+  },
+  {
+    "oid": "181628541038",
+    "name": "Gut",
+    "zone": "optikov"
+  },
+  {
+    "oid": "182702622637",
+    "name": "Вита Экспресс",
+    "zone": "kirovsky"
+  },
+  {
+    "oid": "1847605798",
+    "name": "ГрандФлора",
+    "zone": "kirovsky"
+  },
+  {
+    "oid": "186800639002",
+    "name": "Лотос",
+    "zone": "kirovsky"
+  },
+  {
+    "oid": "190578127259",
+    "name": "Цех85",
+    "zone": "optikov"
+  },
+  {
+    "oid": "197083468970",
+    "name": "Красное&Белое",
+    "zone": "kirovsky"
+  },
+  {
+    "oid": "201252751598",
+    "name": "Бэби-клуб",
+    "zone": "optikov"
+  },
+  {
+    "oid": "202108160383",
+    "name": "Алоэ",
+    "zone": "kirovsky"
+  },
+  {
+    "oid": "202190526927",
+    "name": "Хлебница",
+    "zone": "kirovsky"
+  },
+  {
+    "oid": "203896296697",
+    "name": "Петербургские аптеки",
+    "zone": "optikov"
+  },
+  {
+    "oid": "20715916154",
+    "name": "ВкусВилл",
+    "zone": "optikov"
+  },
+  {
+    "oid": "208004214083",
+    "name": "Суши-Маркет",
+    "zone": "optikov"
+  },
+  {
+    "oid": "213574965219",
+    "name": "Пятёрочка",
+    "zone": "optikov"
+  },
+  {
+    "oid": "21414430342",
+    "name": "Копицентр",
+    "zone": "petrogradka"
+  },
+  {
+    "oid": "218400049930",
+    "name": "Школа 655",
+    "zone": "optikov"
+  },
+  {
+    "oid": "218459592518",
+    "name": "Газпромбанк",
+    "zone": "petrogradka"
+  },
+  {
+    "oid": "220852536594",
+    "name": "Blumen Bar",
+    "zone": "petrogradka"
+  },
+  {
+    "oid": "222040571208",
+    "name": "Градусы",
+    "zone": "kirovsky"
+  },
+  {
+    "oid": "223678190474",
+    "name": "В7",
+    "zone": "petrogradka"
+  },
+  {
+    "oid": "223883650087",
+    "name": "СУШИ СЕТ",
+    "zone": "optikov"
+  },
+  {
+    "oid": "226614281260",
+    "name": "Планета здоровья",
+    "zone": "petrogradka"
+  },
+  {
+    "oid": "229286434415",
+    "name": "DDX Fitness",
+    "zone": "petrogradka"
+  },
+  {
+    "oid": "229431874499",
+    "name": "Хлебник",
+    "zone": "petrogradka"
+  },
+  {
+    "oid": "230945876772",
+    "name": "Докторслон.ру",
+    "zone": "petrogradka"
+  },
+  {
+    "oid": "231647609772",
+    "name": "Wonderfit",
+    "zone": "petrogradka"
+  },
+  {
+    "oid": "232456222985",
+    "name": "Вайт",
+    "zone": "optikov"
+  },
+  {
+    "oid": "234205947724",
+    "name": "Вита Экспресс",
+    "zone": "optikov"
+  },
+  {
+    "oid": "234534849611",
+    "name": "ВкусВилл",
+    "zone": "kirovsky"
+  },
+  {
+    "oid": "234808751525",
+    "name": "Ермолино",
+    "zone": "kirovsky"
+  },
+  {
+    "oid": "234992187422",
+    "name": "BlackWood",
+    "zone": "petrogradka"
+  },
+  {
+    "oid": "236158678707",
+    "name": "NailLounge",
+    "zone": "optikov"
+  },
+  {
+    "oid": "239924309678",
+    "name": "Первая Юридическая Компания",
+    "zone": "kirovsky"
+  },
+  {
+    "oid": "240446119232",
+    "name": "ПхалиХинкали",
+    "zone": "optikov"
+  },
+  {
+    "oid": "241857724291",
+    "name": "Магнит",
+    "zone": "optikov"
+  },
+  {
+    "oid": "25217262936",
+    "name": "Совкомбанк",
+    "zone": "kirovsky"
+  },
+  {
+    "oid": "26239780572",
+    "name": "Girlie",
+    "zone": "petrogradka"
+  },
+  {
+    "oid": "27558128173",
+    "name": "ЦирюльникЪ",
+    "zone": "petrogradka"
+  },
+  {
+    "oid": "29237007231",
+    "name": "Персона дент",
+    "zone": "petrogradka"
+  },
+  {
+    "oid": "31713549733",
+    "name": "Процвет",
+    "zone": "petrogradka"
+  },
+  {
+    "oid": "32532517761",
+    "name": "Теремок кондитерская",
+    "zone": "optikov"
+  },
+  {
+    "oid": "32681835070",
+    "name": "Мишка Bakery",
+    "zone": "optikov"
+  },
+  {
+    "oid": "33854648209",
+    "name": "Мадам ВИ",
+    "zone": "petrogradka"
+  },
+  {
+    "oid": "37299906271",
+    "name": "Lili Flowers",
+    "zone": "petrogradka"
+  },
+  {
+    "oid": "40533790148",
+    "name": "Prachka.com",
+    "zone": "kirovsky"
+  },
+  {
+    "oid": "41661002540",
+    "name": "Гурман",
+    "zone": "optikov"
+  },
+  {
+    "oid": "46535684511",
+    "name": "Хеликс",
+    "zone": "kirovsky"
+  },
+  {
+    "oid": "47154037481",
+    "name": "СтоВеста",
+    "zone": "optikov"
+  },
+  {
+    "oid": "49930288669",
+    "name": "Калачи",
+    "zone": "petrogradka"
+  },
+  {
+    "oid": "52485230873",
+    "name": "Gaijin",
+    "zone": "optikov"
+  },
+  {
+    "oid": "6285699797",
+    "name": "Civil",
+    "zone": "petrogradka"
+  },
+  {
+    "oid": "63807773758",
+    "name": "АптекаПлюс",
+    "zone": "kirovsky"
+  },
+  {
+    "oid": "67390429493",
+    "name": "Камкомбанк",
+    "zone": "petrogradka"
+  },
+  {
+    "oid": "70322085208",
+    "name": "Салон штор",
+    "zone": "optikov"
+  },
+  {
+    "oid": "73831279579",
+    "name": "Vintage Flowers",
+    "zone": "kirovsky"
+  },
+  {
+    "oid": "78119503927",
+    "name": "Beer House",
+    "zone": "petrogradka"
+  },
+  {
+    "oid": "78249692625",
+    "name": "Булочная Ф. Вольчека",
+    "zone": "petrogradka"
+  },
+  {
+    "oid": "79080220095",
+    "name": "Копирка",
+    "zone": "petrogradka"
+  },
+  {
+    "oid": "80195353455",
+    "name": "ЦирюльникЪ",
+    "zone": "kirovsky"
+  },
+  {
+    "oid": "80285398333",
+    "name": "Озерки",
+    "zone": "optikov"
+  },
+  {
+    "oid": "8041672948",
+    "name": "ВкусВилл",
+    "zone": "petrogradka"
+  },
+  {
+    "oid": "80772902919",
+    "name": "Пилки",
+    "zone": "kirovsky"
+  },
+  {
+    "oid": "82328466041",
+    "name": "ЛюдиЛюбят",
+    "zone": "kirovsky"
+  },
+  {
+    "oid": "83287398918",
+    "name": "Ремесленник",
+    "zone": "optikov"
+  },
+  {
+    "oid": "83740001976",
+    "name": "Апрель",
+    "zone": "optikov"
+  },
+  {
+    "oid": "85723615069",
+    "name": "На Фитнес",
+    "zone": "optikov"
+  },
+  {
+    "oid": "87680766907",
+    "name": "Горздрав",
+    "zone": "kirovsky"
+  },
+  {
+    "oid": "89041870586",
+    "name": "Аква чистка",
+    "zone": "petrogradka"
+  },
+  {
+    "oid": "92938407201",
+    "name": "Па-де-ша",
+    "zone": "petrogradka"
+  },
+  {
+    "oid": "93265505808",
+    "name": "Магнит",
+    "zone": "kirovsky"
+  },
+  {
+    "oid": "97909714294",
+    "name": "Магнит Аптека",
+    "zone": "kirovsky"
+  }
+]

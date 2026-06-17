@@ -1,0 +1,1611 @@
+[
+  {
+    "oid": "1006124216",
+    "title": "Детский сад № 114",
+    "urls": [
+      {
+        "url": "https://114.dou.spb.ru/",
+        "host": "114.dou.spb.ru",
+        "old": {
+          "ok": true,
+          "wire": 2889524,
+          "words": 500,
+          "method": "browser"
+        },
+        "new": {
+          "ok": true,
+          "wire": 1434996,
+          "words": 974,
+          "method": "browser+block"
+        }
+      },
+      {
+        "url": "https://dou114.adm-edu.ru/",
+        "host": "dou114.adm-edu.ru",
+        "old": {
+          "ok": true,
+          "wire": 2886763,
+          "words": 57,
+          "method": "browser"
+        },
+        "new": {
+          "ok": true,
+          "wire": 260450,
+          "words": 57,
+          "method": "browser+block"
+        }
+      },
+      {
+        "url": "https://dou114.adm-edu.ru/kontakty/",
+        "host": "dou114.adm-edu.ru",
+        "old": {
+          "ok": true,
+          "wire": 934455,
+          "words": 96,
+          "method": "browser"
+        },
+        "new": {
+          "ok": true,
+          "wire": 896206,
+          "words": 96,
+          "method": "browser+block"
+        }
+      },
+      {
+        "url": "https://ds114.admiral.gov.spb.ru/",
+        "host": "ds114.admiral.gov.spb.ru",
+        "old": {
+          "ok": false,
+          "wire": 0,
+          "words": 0,
+          "method": "browser",
+          "error": "Error: Page.goto: net::ERR_TUNNEL_CONNECTION_FAILED at https://ds11"
+        },
+        "new": {
+          "ok": false,
+          "wire": 0,
+          "words": 0,
+          "method": "browser",
+          "error": "Error: Page.goto: net::ERR_TUNNEL_CONNECTION_FAILED at https://ds11"
+        }
+      },
+      {
+        "url": "https://ds114gr12.orgs.biz/",
+        "host": "ds114gr12.orgs.biz",
+        "old": {
+          "ok": true,
+          "wire": 455013,
+          "words": 296,
+          "method": "browser"
+        },
+        "new": {
+          "ok": true,
+          "wire": 84306,
+          "words": 296,
+          "method": "browser+block"
+        }
+      },
+      {
+        "url": "https://gbdou114.ru/",
+        "host": "gbdou114.ru",
+        "old": {
+          "ok": false,
+          "wire": 0,
+          "words": 0,
+          "method": "browser",
+          "error": "Error: Page.goto: net::ERR_SSL_UNRECOGNIZED_NAME_ALERT at https://g"
+        },
+        "new": {
+          "ok": false,
+          "wire": 0,
+          "words": 0,
+          "method": "browser",
+          "error": "Error: Page.goto: net::ERR_TIMED_OUT at https://gbdou114.ru/\nCall l"
+        }
+      }
+    ],
+    "old_bytes": 7165755,
+    "new_bytes": 2675958,
+    "old_words": 949,
+    "new_words": 1423
+  },
+  {
+    "oid": "1044912253",
+    "title": "Лиана",
+    "urls": [
+      {
+        "url": "https://2gis.ru/spb/firm/5348552838662965",
+        "host": "2gis.ru",
+        "old": {
+          "ok": true,
+          "wire": 95989,
+          "words": 251,
+          "method": "browser"
+        },
+        "new": {
+          "ok": true,
+          "wire": 5894,
+          "words": 114,
+          "method": "browser+block"
+        }
+      },
+      {
+        "url": "https://apeterburg.com/dt/170750",
+        "host": "apeterburg.com",
+        "old": {
+          "ok": true,
+          "wire": 506956,
+          "words": 524,
+          "method": "browser"
+        },
+        "new": {
+          "ok": true,
+          "wire": 147731,
+          "words": 524,
+          "method": "browser+block"
+        }
+      },
+      {
+        "url": "https://companies.rbc.ru/id/1027810218809-ooo-liana/",
+        "host": "companies.rbc.ru",
+        "old": {
+          "ok": true,
+          "wire": 1885437,
+          "words": 1009,
+          "method": "browser"
+        },
+        "new": {
+          "ok": true,
+          "wire": 1169168,
+          "words": 1008,
+          "method": "browser+block"
+        }
+      },
+      {
+        "url": "https://flexiligner.ru/kliniki/meditsinskiy-tsentr-liana-4165-sankt-peterburg/",
+        "host": "flexiligner.ru",
+        "old": {
+          "ok": true,
+          "wire": 229886,
+          "words": 17,
+          "method": "browser"
+        },
+        "new": {
+          "ok": true,
+          "wire": 749813,
+          "words": 41,
+          "method": "browser+block"
+        }
+      },
+      {
+        "url": "https://gdevrach.com/spb/places/117993",
+        "host": "gdevrach.com",
+        "old": {
+          "ok": true,
+          "wire": 240109,
+          "words": 828,
+          "method": "browser"
+        },
+        "new": {
+          "ok": true,
+          "wire": 643592,
+          "words": 836,
+          "method": "browser+block"
+        }
+      },
+      {
+        "url": "https://lianamed.ru/",
+        "host": "lianamed.ru",
+        "old": {
+          "ok": true,
+          "wire": 536814,
+          "words": 1659,
+          "method": "browser"
+        },
+        "new": {
+          "ok": true,
+          "wire": 111498,
+          "words": 1659,
+          "method": "browser+block"
+        }
+      }
+    ],
+    "old_bytes": 3495191,
+    "new_bytes": 2827696,
+    "old_words": 4288,
+    "new_words": 4182
+  },
+  {
+    "oid": "106518458845",
+    "title": "Creative people",
+    "urls": [
+      {
+        "url": "https://2gis.ru/spb/firm/70000001020367129",
+        "host": "2gis.ru",
+        "old": {
+          "ok": true,
+          "wire": 95665,
+          "words": 114,
+          "method": "browser"
+        },
+        "new": {
+          "ok": true,
+          "wire": 6055,
+          "words": 114,
+          "method": "browser+block"
+        }
+      },
+      {
+        "url": "https://creative-people.clients.site/",
+        "host": "creative-people.clients.site",
+        "old": {
+          "ok": true,
+          "wire": 689693,
+          "words": 324,
+          "method": "browser"
+        },
+        "new": {
+          "ok": true,
+          "wire": 483996,
+          "words": 324,
+          "method": "browser+block"
+        }
+      },
+      {
+        "url": "https://creativepeoplespb.ru/",
+        "host": "creativepeoplespb.ru",
+        "old": {
+          "ok": true,
+          "wire": 3580368,
+          "words": 504,
+          "method": "browser"
+        },
+        "new": {
+          "ok": true,
+          "wire": 2226387,
+          "words": 504,
+          "method": "browser+block"
+        }
+      },
+      {
+        "url": "https://spb.barber.su/place/parikmakherskaya-doston",
+        "host": "spb.barber.su",
+        "old": {
+          "ok": true,
+          "wire": 797514,
+          "words": 759,
+          "method": "browser"
+        },
+        "new": {
+          "ok": true,
+          "wire": 419750,
+          "words": 759,
+          "method": "browser+block"
+        }
+      },
+      {
+        "url": "https://vk.com/creative_people34",
+        "host": "vk.com",
+        "old": {
+          "ok": true,
+          "wire": 441399,
+          "words": 0,
+          "method": "browser"
+        },
+        "new": {
+          "ok": true,
+          "wire": 3255417,
+          "words": 6,
+          "method": "browser"
+        }
+      },
+      {
+        "url": "https://vk.link/creative_people34",
+        "host": "vk.link",
+        "old": {
+          "ok": true,
+          "wire": 264184,
+          "words": 0,
+          "method": "browser"
+        },
+        "new": {
+          "ok": true,
+          "wire": 173911,
+          "words": 0,
+          "method": "browser+block"
+        }
+      }
+    ],
+    "old_bytes": 5868823,
+    "new_bytes": 6565516,
+    "old_words": 1701,
+    "new_words": 1707
+  },
+  {
+    "oid": "1106388808",
+    "title": "Детский сад № 101",
+    "urls": [
+      {
+        "url": "http://gdou101.ru/kontakti/",
+        "host": "gdou101.ru",
+        "old": {
+          "ok": true,
+          "wire": 1462459,
+          "words": 362,
+          "method": "browser"
+        },
+        "new": {
+          "ok": true,
+          "wire": 1095781,
+          "words": 362,
+          "method": "browser+block"
+        }
+      },
+      {
+        "url": "https://dou101spb.kalin.gov.spb.ru/",
+        "host": "dou101spb.kalin.gov.spb.ru",
+        "old": {
+          "ok": false,
+          "wire": 0,
+          "words": 0,
+          "method": "browser",
+          "error": "Error: Page.goto: net::ERR_TUNNEL_CONNECTION_FAILED at https://dou1"
+        },
+        "new": {
+          "ok": false,
+          "wire": 0,
+          "words": 0,
+          "method": "browser",
+          "error": "Error: Page.goto: net::ERR_TUNNEL_CONNECTION_FAILED at https://dou1"
+        }
+      },
+      {
+        "url": "https://ds101spb.nubex.ru/sveden/common/",
+        "host": "ds101spb.nubex.ru",
+        "old": {
+          "ok": true,
+          "wire": 1124981,
+          "words": 473,
+          "method": "browser"
+        },
+        "new": {
+          "ok": true,
+          "wire": 169308,
+          "words": 473,
+          "method": "browser+block"
+        }
+      },
+      {
+        "url": "https://vk.com/club12416780",
+        "host": "vk.com",
+        "old": {
+          "ok": true,
+          "wire": 2234346,
+          "words": 6,
+          "method": "browser"
+        },
+        "new": {
+          "ok": true,
+          "wire": 2057800,
+          "words": 6,
+          "method": "browser"
+        }
+      },
+      {
+        "url": "https://vk.com/detsad101spb",
+        "host": "vk.com",
+        "old": {
+          "ok": true,
+          "wire": 400520,
+          "words": 0,
+          "method": "browser"
+        },
+        "new": {
+          "ok": true,
+          "wire": 3491065,
+          "words": 10,
+          "method": "browser"
+        }
+      },
+      {
+        "url": "https://yandex.ru/maps/org/detskiy_sad_101/1106388808/",
+        "host": "yandex.ru",
+        "old": {
+          "ok": true,
+          "wire": 1191138,
+          "words": 0,
+          "method": "browser"
+        },
+        "new": {
+          "ok": true,
+          "wire": 847373,
+          "words": 0,
+          "method": "browser+block"
+        }
+      }
+    ],
+    "old_bytes": 6413444,
+    "new_bytes": 7661327,
+    "old_words": 841,
+    "new_words": 851
+  },
+  {
+    "oid": "1137477963",
+    "title": "Нимфа",
+    "urls": [
+      {
+        "url": "https://nimfasalon.ru",
+        "host": "nimfasalon.ru",
+        "old": {
+          "ok": true,
+          "wire": 1005365,
+          "words": 333,
+          "method": "browser"
+        },
+        "new": {
+          "ok": true,
+          "wire": 361120,
+          "words": 333,
+          "method": "browser+block"
+        }
+      },
+      {
+        "url": "https://nimfasalon.ru/",
+        "host": "nimfasalon.ru",
+        "old": {
+          "ok": true,
+          "wire": 1645540,
+          "words": 333,
+          "method": "browser"
+        },
+        "new": {
+          "ok": true,
+          "wire": 361153,
+          "words": 333,
+          "method": "browser+block"
+        }
+      },
+      {
+        "url": "https://rting.ru/sankt-peterburg/co/nimfa/2832985",
+        "host": "rting.ru",
+        "old": {
+          "ok": true,
+          "wire": 17033,
+          "words": 358,
+          "method": "browser"
+        },
+        "new": {
+          "ok": true,
+          "wire": 30419,
+          "words": 358,
+          "method": "browser+block"
+        }
+      },
+      {
+        "url": "https://ruscatalog.org/sankt-peterburg/20419-salon-nimfa/",
+        "host": "ruscatalog.org",
+        "old": {
+          "ok": true,
+          "wire": 6475,
+          "words": 35,
+          "method": "browser"
+        },
+        "new": {
+          "ok": true,
+          "wire": 6204,
+          "words": 30,
+          "method": "browser+block"
+        }
+      },
+      {
+        "url": "https://salon-nimfa.ru/",
+        "host": "salon-nimfa.ru",
+        "old": {
+          "ok": true,
+          "wire": 2718632,
+          "words": 7112,
+          "method": "browser"
+        },
+        "new": {
+          "ok": true,
+          "wire": 347984,
+          "words": 7112,
+          "method": "browser+block"
+        }
+      },
+      {
+        "url": "https://tindal.ru/sankt-peterburg/beauty/nimfa-salon-krasoty-na-ulice-demyana-bednogo-28k1",
+        "host": "tindal.ru",
+        "old": {
+          "ok": true,
+          "wire": 5032,
+          "words": 13,
+          "method": "browser"
+        },
+        "new": {
+          "ok": true,
+          "wire": 5312,
+          "words": 13,
+          "method": "browser+block"
+        }
+      }
+    ],
+    "old_bytes": 5398077,
+    "new_bytes": 1112192,
+    "old_words": 8184,
+    "new_words": 8179
+  },
+  {
+    "oid": "1182145161",
+    "title": "Средняя общеобразовательная школа № 306",
+    "urls": [
+      {
+        "url": "https://2gis.ru/spb/firm/5348552838674421",
+        "host": "2gis.ru",
+        "old": {
+          "ok": true,
+          "wire": 95644,
+          "words": 114,
+          "method": "browser"
+        },
+        "new": {
+          "ok": true,
+          "wire": 6407,
+          "words": 251,
+          "method": "browser+block"
+        }
+      },
+      {
+        "url": "https://foedu.ru/leningradskaya-oblast/sankt-peterburg/shkoly/srednyaya-obscheobrazovatelnaya-shkola-306-s-uglublennym-izucheniem-angliyskogo-yazyka-admiralteyskiy-rayona-sankt-peterburga.html",
+        "host": "foedu.ru",
+        "old": {
+          "ok": true,
+          "wire": 1029600,
+          "words": 113,
+          "method": "browser"
+        },
+        "new": {
+          "ok": true,
+          "wire": 552893,
+          "words": 108,
+          "method": "browser+block"
+        }
+      },
+      {
+        "url": "https://org-spb.ru/content/shkola-no-306-0.html",
+        "host": "org-spb.ru",
+        "old": {
+          "ok": false,
+          "wire": 0,
+          "words": 0,
+          "method": "browser",
+          "error": "TimeoutError: Page.goto: Timeout 20000ms exceeded.\nCall log:\n  - navigatin"
+        },
+        "new": {
+          "ok": false,
+          "wire": 0,
+          "words": 0,
+          "method": "browser",
+          "error": "TimeoutError: Page.goto: Timeout 20000ms exceeded.\nCall log:\n  - navigatin"
+        }
+      },
+      {
+        "url": "https://sc306.admiral.gov.spb.ru/1_osnovnie_svedeniya_OU.html",
+        "host": "sc306.admiral.gov.spb.ru",
+        "old": {
+          "ok": false,
+          "wire": 0,
+          "words": 0,
+          "method": "browser",
+          "error": "Error: Page.goto: net::ERR_TUNNEL_CONNECTION_FAILED at https://sc30"
+        },
+        "new": {
+          "ok": false,
+          "wire": 0,
+          "words": 0,
+          "method": "browser",
+          "error": "Error: Page.goto: net::ERR_TUNNEL_CONNECTION_FAILED at https://sc30"
+        }
+      },
+      {
+        "url": "https://sc306.admiral.gov.spb.ru/OER.html",
+        "host": "sc306.admiral.gov.spb.ru",
+        "old": {
+          "ok": false,
+          "wire": 0,
+          "words": 0,
+          "method": "browser",
+          "error": "Error: Page.goto: net::ERR_TUNNEL_CONNECTION_FAILED at https://sc30"
+        },
+        "new": {
+          "ok": false,
+          "wire": 0,
+          "words": 0,
+          "method": "browser",
+          "error": "Error: Page.goto: net::ERR_TUNNEL_CONNECTION_FAILED at https://sc30"
+        }
+      },
+      {
+        "url": "https://schoolotzyv.ru/schools/9-russia/173-sankt-peterburg/93230-shkola-306",
+        "host": "schoolotzyv.ru",
+        "old": {
+          "ok": false,
+          "wire": 0,
+          "words": 0,
+          "method": "browser",
+          "error": "TimeoutError: Page.goto: Timeout 20000ms exceeded.\nCall log:\n  - navigatin"
+        },
+        "new": {
+          "ok": true,
+          "wire": 253182,
+          "words": 2186,
+          "method": "browser+block"
+        }
+      }
+    ],
+    "old_bytes": 1125244,
+    "new_bytes": 812482,
+    "old_words": 227,
+    "new_words": 2545
+  },
+  {
+    "oid": "1215561514",
+    "title": "Мисо",
+    "urls": [
+      {
+        "url": "https://afisha.ru/spb/restaurant/miso-259634/",
+        "host": "afisha.ru",
+        "old": {
+          "ok": true,
+          "wire": 781040,
+          "words": 15,
+          "method": "browser"
+        },
+        "new": {
+          "ok": true,
+          "wire": 1260746,
+          "words": 0,
+          "method": "browser+block"
+        }
+      },
+      {
+        "url": "https://misospb.ru/",
+        "host": "misospb.ru",
+        "old": {
+          "ok": true,
+          "wire": 550511,
+          "words": 360,
+          "method": "browser"
+        },
+        "new": {
+          "ok": true,
+          "wire": 279719,
+          "words": 297,
+          "method": "browser+block"
+        }
+      },
+      {
+        "url": "https://tomesto.ru/spb/places/miso-malodetskoselskiy",
+        "host": "tomesto.ru",
+        "old": {
+          "ok": true,
+          "wire": 402356,
+          "words": 1262,
+          "method": "browser"
+        },
+        "new": {
+          "ok": true,
+          "wire": 269898,
+          "words": 1216,
+          "method": "browser+block"
+        }
+      },
+      {
+        "url": "https://vk.com/miso_spb",
+        "host": "vk.com",
+        "old": {
+          "ok": true,
+          "wire": 2026277,
+          "words": 6,
+          "method": "browser"
+        },
+        "new": {
+          "ok": true,
+          "wire": 413308,
+          "words": 0,
+          "method": "browser"
+        }
+      },
+      {
+        "url": "https://yandex.ru/maps/org/miso/1033891979/",
+        "host": "yandex.ru",
+        "old": {
+          "ok": true,
+          "wire": 1804038,
+          "words": 0,
+          "method": "browser"
+        },
+        "new": {
+          "ok": true,
+          "wire": 1656163,
+          "words": 0,
+          "method": "browser+block"
+        }
+      },
+      {
+        "url": "https://yandex.ru/maps/org/miso/1215561514/",
+        "host": "yandex.ru",
+        "old": {
+          "ok": true,
+          "wire": 1273391,
+          "words": 12,
+          "method": "browser"
+        },
+        "new": {
+          "ok": true,
+          "wire": 1242203,
+          "words": 12,
+          "method": "browser+block"
+        }
+      }
+    ],
+    "old_bytes": 6837613,
+    "new_bytes": 5122037,
+    "old_words": 1655,
+    "new_words": 1525
+  },
+  {
+    "oid": "1265167754",
+    "title": "Буше",
+    "urls": [
+      {
+        "url": "https://bushe.ru/",
+        "host": "bushe.ru",
+        "old": {
+          "ok": true,
+          "wire": 109358,
+          "words": 238,
+          "method": "browser"
+        },
+        "new": {
+          "ok": true,
+          "wire": 105539,
+          "words": 238,
+          "method": "browser+block"
+        }
+      },
+      {
+        "url": "https://bushe.ru/contacts",
+        "host": "bushe.ru",
+        "old": {
+          "ok": true,
+          "wire": 165605,
+          "words": 111,
+          "method": "browser"
+        },
+        "new": {
+          "ok": true,
+          "wire": 660561,
+          "words": 117,
+          "method": "browser+block"
+        }
+      },
+      {
+        "url": "https://careers.bushe.ru/",
+        "host": "careers.bushe.ru",
+        "old": {
+          "ok": true,
+          "wire": 1852599,
+          "words": 1249,
+          "method": "browser"
+        },
+        "new": {
+          "ok": true,
+          "wire": 312366,
+          "words": 1249,
+          "method": "browser+block"
+        }
+      },
+      {
+        "url": "https://russpass.ru/restaurant/63ca596f4ddfad493ca3dd67",
+        "host": "russpass.ru",
+        "old": {
+          "ok": true,
+          "wire": 2175424,
+          "words": 162,
+          "method": "browser"
+        },
+        "new": {
+          "ok": true,
+          "wire": 1734822,
+          "words": 145,
+          "method": "browser+block"
+        }
+      },
+      {
+        "url": "https://spb.hh.ru/employer/114223",
+        "host": "spb.hh.ru",
+        "old": {
+          "ok": true,
+          "wire": 2439513,
+          "words": 48747,
+          "method": "browser"
+        },
+        "new": {
+          "ok": true,
+          "wire": 185013,
+          "words": 4080,
+          "method": "httpx"
+        }
+      },
+      {
+        "url": "https://vk.com/bushe.bakery",
+        "host": "vk.com",
+        "old": {
+          "ok": true,
+          "wire": 2005412,
+          "words": 6,
+          "method": "browser"
+        },
+        "new": {
+          "ok": true,
+          "wire": 400600,
+          "words": 0,
+          "method": "browser"
+        }
+      }
+    ],
+    "old_bytes": 8747911,
+    "new_bytes": 3398901,
+    "old_words": 50513,
+    "new_words": 5829
+  },
+  {
+    "oid": "1319358295",
+    "title": "Общеобразовательная школа № 522",
+    "urls": [
+      {
+        "url": "https://apeterburg.com/school/178050",
+        "host": "apeterburg.com",
+        "old": {
+          "ok": true,
+          "wire": 404000,
+          "words": 338,
+          "method": "browser"
+        },
+        "new": {
+          "ok": true,
+          "wire": 458887,
+          "words": 338,
+          "method": "browser+block"
+        }
+      },
+      {
+        "url": "https://school522.ru/624-rezhim-raboty-shkoly",
+        "host": "school522.ru",
+        "old": {
+          "ok": true,
+          "wire": 547260,
+          "words": 117,
+          "method": "browser"
+        },
+        "new": {
+          "ok": true,
+          "wire": 112746,
+          "words": 117,
+          "method": "browser+block"
+        }
+      },
+      {
+        "url": "https://school522.ru/kontakty",
+        "host": "school522.ru",
+        "old": {
+          "ok": true,
+          "wire": 450274,
+          "words": 124,
+          "method": "browser"
+        },
+        "new": {
+          "ok": true,
+          "wire": 146960,
+          "words": 124,
+          "method": "browser+block"
+        }
+      },
+      {
+        "url": "https://school522.ru/osnovnye-svedeniya",
+        "host": "school522.ru",
+        "old": {
+          "ok": true,
+          "wire": 423901,
+          "words": 879,
+          "method": "browser"
+        },
+        "new": {
+          "ok": true,
+          "wire": 116978,
+          "words": 879,
+          "method": "browser+block"
+        }
+      },
+      {
+        "url": "https://school522.ru/pedagogicheskij-sostav/143-svedeniya-og-pedagogicheskikh-rabotnikakh",
+        "host": "school522.ru",
+        "old": {
+          "ok": true,
+          "wire": 131509,
+          "words": 772,
+          "method": "browser"
+        },
+        "new": {
+          "ok": true,
+          "wire": 116384,
+          "words": 772,
+          "method": "browser+block"
+        }
+      },
+      {
+        "url": "https://sh522.admiral.gov.spb.ru/homepage",
+        "host": "sh522.admiral.gov.spb.ru",
+        "old": {
+          "ok": false,
+          "wire": 0,
+          "words": 0,
+          "method": "browser",
+          "error": "Error: Page.goto: net::ERR_TUNNEL_CONNECTION_FAILED at https://sh52"
+        },
+        "new": {
+          "ok": false,
+          "wire": 0,
+          "words": 0,
+          "method": "browser",
+          "error": "Error: Page.goto: net::ERR_TUNNEL_CONNECTION_FAILED at https://sh52"
+        }
+      }
+    ],
+    "old_bytes": 1956944,
+    "new_bytes": 951955,
+    "old_words": 2230,
+    "new_words": 2230
+  },
+  {
+    "oid": "158917372106",
+    "title": "Теремок",
+    "urls": [
+      {
+        "url": "https://hh.ru/employer/27879",
+        "host": "hh.ru",
+        "old": {
+          "ok": true,
+          "wire": 5189772,
+          "words": 50512,
+          "method": "browser"
+        },
+        "new": {
+          "ok": true,
+          "wire": 235151,
+          "words": 4021,
+          "method": "httpx"
+        }
+      },
+      {
+        "url": "https://rabota.teremok.ru/vacancies/",
+        "host": "rabota.teremok.ru",
+        "old": {
+          "ok": true,
+          "wire": 1839876,
+          "words": 204,
+          "method": "browser"
+        },
+        "new": {
+          "ok": true,
+          "wire": 1128417,
+          "words": 204,
+          "method": "browser+block"
+        }
+      },
+      {
+        "url": "https://teremok.ru/",
+        "host": "teremok.ru",
+        "old": {
+          "ok": true,
+          "wire": 8861678,
+          "words": 761,
+          "method": "browser"
+        },
+        "new": {
+          "ok": true,
+          "wire": 1941935,
+          "words": 761,
+          "method": "browser+block"
+        }
+      },
+      {
+        "url": "https://teremok.ru/contacts",
+        "host": "teremok.ru",
+        "old": {
+          "ok": true,
+          "wire": 2781420,
+          "words": 353,
+          "method": "browser"
+        },
+        "new": {
+          "ok": true,
+          "wire": 2135340,
+          "words": 353,
+          "method": "browser+block"
+        }
+      },
+      {
+        "url": "https://teremok.ru/contacts/",
+        "host": "teremok.ru",
+        "old": {
+          "ok": true,
+          "wire": 3774175,
+          "words": 360,
+          "method": "browser"
+        },
+        "new": {
+          "ok": true,
+          "wire": 2131435,
+          "words": 353,
+          "method": "browser+block"
+        }
+      },
+      {
+        "url": "https://teremok.ru/places/",
+        "host": "teremok.ru",
+        "old": {
+          "ok": true,
+          "wire": 2167500,
+          "words": 92,
+          "method": "browser"
+        },
+        "new": {
+          "ok": true,
+          "wire": 2807062,
+          "words": 92,
+          "method": "browser+block"
+        }
+      }
+    ],
+    "old_bytes": 24614421,
+    "new_bytes": 10379340,
+    "old_words": 52282,
+    "new_words": 5784
+  },
+  {
+    "oid": "170227066353",
+    "title": "Ассоль",
+    "urls": [
+      {
+        "url": "https://2gis.ru/spb/firm/70000001026744215/tab/info",
+        "host": "2gis.ru",
+        "old": {
+          "ok": true,
+          "wire": 95997,
+          "words": 251,
+          "method": "browser"
+        },
+        "new": {
+          "ok": true,
+          "wire": 6423,
+          "words": 251,
+          "method": "browser+block"
+        }
+      },
+      {
+        "url": "https://2gis.ru/spb/firm/70000001026744215/tab/reviews",
+        "host": "2gis.ru",
+        "old": {
+          "ok": true,
+          "wire": 95654,
+          "words": 114,
+          "method": "browser"
+        },
+        "new": {
+          "ok": true,
+          "wire": 5913,
+          "words": 114,
+          "method": "browser+block"
+        }
+      },
+      {
+        "url": "https://assol.org/welcome1",
+        "host": "assol.org",
+        "old": {
+          "ok": true,
+          "wire": 269574,
+          "words": 1369,
+          "method": "browser"
+        },
+        "new": {
+          "ok": true,
+          "wire": 210264,
+          "words": 1367,
+          "method": "browser+block"
+        }
+      },
+      {
+        "url": "https://nmcro.ru/procee/remont-odezdy/assol-sankt-peterburg-podolskaa-ulica-18/",
+        "host": "nmcro.ru",
+        "old": {
+          "ok": true,
+          "wire": 445,
+          "words": 22,
+          "method": "browser"
+        },
+        "new": {
+          "ok": true,
+          "wire": 445,
+          "words": 22,
+          "method": "browser+block"
+        }
+      },
+      {
+        "url": "https://sankt-peterburg.spravmer.ru/atele-assol-sankt-peterburg/",
+        "host": "sankt-peterburg.spravmer.ru",
+        "old": {
+          "ok": true,
+          "wire": 534894,
+          "words": 202,
+          "method": "browser"
+        },
+        "new": {
+          "ok": true,
+          "wire": 78128,
+          "words": 201,
+          "method": "browser+block"
+        }
+      },
+      {
+        "url": "https://spb.damspravku.ru/1413302-atelie_po_remontu_odezhdy_i_mehovyh_izdeliy-company",
+        "host": "spb.damspravku.ru",
+        "old": {
+          "ok": true,
+          "wire": 157652,
+          "words": 88,
+          "method": "browser"
+        },
+        "new": {
+          "ok": true,
+          "wire": 614955,
+          "words": 88,
+          "method": "browser+block"
+        }
+      }
+    ],
+    "old_bytes": 1154216,
+    "new_bytes": 916128,
+    "old_words": 2046,
+    "new_words": 2043
+  },
+  {
+    "oid": "197122468748",
+    "title": "Цветочная Точка Сборки",
+    "urls": [
+      {
+        "url": "https://2gis.ru/spb/firm/70000001046828546",
+        "host": "2gis.ru",
+        "old": {
+          "ok": true,
+          "wire": 95628,
+          "words": 114,
+          "method": "browser"
+        },
+        "new": {
+          "ok": true,
+          "wire": 6054,
+          "words": 114,
+          "method": "browser+block"
+        }
+      },
+      {
+        "url": "https://dom-buketov.ru/komp/tsvetochnaya-tochka-sborki-sankt-peterburg/",
+        "host": "dom-buketov.ru",
+        "old": {
+          "ok": true,
+          "wire": 1069,
+          "words": 13,
+          "method": "browser"
+        },
+        "new": {
+          "ok": true,
+          "wire": 1069,
+          "words": 13,
+          "method": "browser+block"
+        }
+      },
+      {
+        "url": "https://flowwow.com/shop/tochka-sborki-cvetochnaya/",
+        "host": "flowwow.com",
+        "old": {
+          "ok": false,
+          "wire": 0,
+          "words": 0,
+          "method": "browser",
+          "error": "Error: Page.content: Unable to retrieve content because the page is"
+        },
+        "new": {
+          "ok": true,
+          "wire": 1174,
+          "words": 0,
+          "method": "browser+block"
+        }
+      },
+      {
+        "url": "https://m.vk.com/ts_cvetochnaya",
+        "host": "m.vk.com",
+        "old": {
+          "ok": true,
+          "wire": 3306762,
+          "words": 362,
+          "method": "browser"
+        },
+        "new": {
+          "ok": true,
+          "wire": 3271018,
+          "words": 362,
+          "method": "browser"
+        }
+      },
+      {
+        "url": "https://orgzz.ru/spb/co/tochka_sborki_cvetochnaya/2419861",
+        "host": "orgzz.ru",
+        "old": {
+          "ok": true,
+          "wire": 65115,
+          "words": 302,
+          "method": "browser"
+        },
+        "new": {
+          "ok": true,
+          "wire": 6597,
+          "words": 302,
+          "method": "httpx"
+        }
+      },
+      {
+        "url": "https://spb.hh.ru/employer/5993171",
+        "host": "spb.hh.ru",
+        "old": {
+          "ok": true,
+          "wire": 2375906,
+          "words": 40344,
+          "method": "browser"
+        },
+        "new": {
+          "ok": true,
+          "wire": 152315,
+          "words": 3046,
+          "method": "httpx"
+        }
+      }
+    ],
+    "old_bytes": 5844480,
+    "new_bytes": 3438227,
+    "old_words": 41135,
+    "new_words": 3837
+  },
+  {
+    "oid": "226625281936",
+    "title": "Пышечная пирожковая",
+    "urls": [
+      {
+        "url": "https://2gis.ru/spb/firm/70000001017331016",
+        "host": "2gis.ru",
+        "old": {
+          "ok": true,
+          "wire": 95628,
+          "words": 114,
+          "method": "browser"
+        },
+        "new": {
+          "ok": true,
+          "wire": 6403,
+          "words": 251,
+          "method": "browser+block"
+        }
+      },
+      {
+        "url": "https://emdigital.ru/instagram?account=paaattthyland",
+        "host": "emdigital.ru",
+        "old": {
+          "ok": true,
+          "wire": 6082294,
+          "words": 528,
+          "method": "browser"
+        },
+        "new": {
+          "ok": true,
+          "wire": 508971,
+          "words": 528,
+          "method": "browser+block"
+        }
+      },
+      {
+        "url": "https://irecommend.ru/content/pyshlandiya-rossiya-sankt-peterburg",
+        "host": "irecommend.ru",
+        "old": {
+          "ok": true,
+          "wire": 452081,
+          "words": 842,
+          "method": "browser"
+        },
+        "new": {
+          "ok": true,
+          "wire": 268256,
+          "words": 842,
+          "method": "browser+block"
+        }
+      },
+      {
+        "url": "https://orgzz.ru/spb/co/pyshlandiya/2306696",
+        "host": "orgzz.ru",
+        "old": {
+          "ok": true,
+          "wire": 64640,
+          "words": 291,
+          "method": "browser"
+        },
+        "new": {
+          "ok": true,
+          "wire": 5836,
+          "words": 291,
+          "method": "httpx"
+        }
+      },
+      {
+        "url": "https://restaurantguru.ru/Pyshlandiya-Saint-Petersburg",
+        "host": "restaurantguru.ru",
+        "old": {
+          "ok": true,
+          "wire": 1783593,
+          "words": 601,
+          "method": "browser"
+        },
+        "new": {
+          "ok": true,
+          "wire": 507333,
+          "words": 601,
+          "method": "browser+block"
+        }
+      },
+      {
+        "url": "https://spb.flamp.ru/firm/pyshlandiya_pyshechnaya_pirozhkovaya-70000001017331016",
+        "host": "spb.flamp.ru",
+        "old": {
+          "ok": true,
+          "wire": 1525,
+          "words": 39,
+          "method": "browser"
+        },
+        "new": {
+          "ok": true,
+          "wire": 250409,
+          "words": 0,
+          "method": "browser+block"
+        }
+      }
+    ],
+    "old_bytes": 8479761,
+    "new_bytes": 1547208,
+    "old_words": 2415,
+    "new_words": 2513
+  },
+  {
+    "oid": "243497934939",
+    "title": "ЛюбиЗуб",
+    "urls": [
+      {
+        "url": "https://lubizub.ru/",
+        "host": "lubizub.ru",
+        "old": {
+          "ok": true,
+          "wire": 2858318,
+          "words": 2882,
+          "method": "browser"
+        },
+        "new": {
+          "ok": true,
+          "wire": 407650,
+          "words": 2882,
+          "method": "browser+block"
+        }
+      },
+      {
+        "url": "https://prodoctorov.ru/spb/lpu/94620-lyubizub/",
+        "host": "prodoctorov.ru",
+        "old": {
+          "ok": true,
+          "wire": 1297438,
+          "words": 2473,
+          "method": "browser"
+        },
+        "new": {
+          "ok": true,
+          "wire": 36885,
+          "words": 2307,
+          "method": "httpx"
+        }
+      },
+      {
+        "url": "https://rusprofile.ru/id/11734733",
+        "host": "rusprofile.ru",
+        "old": {
+          "ok": true,
+          "wire": 807883,
+          "words": 1563,
+          "method": "browser"
+        },
+        "new": {
+          "ok": true,
+          "wire": 45871,
+          "words": 1816,
+          "method": "httpx"
+        }
+      },
+      {
+        "url": "https://spb.hh.ru/employer/10551634",
+        "host": "spb.hh.ru",
+        "old": {
+          "ok": true,
+          "wire": 2561452,
+          "words": 40316,
+          "method": "browser"
+        },
+        "new": {
+          "ok": true,
+          "wire": 150859,
+          "words": 3043,
+          "method": "httpx"
+        }
+      },
+      {
+        "url": "https://spb.infodoctor.ru/klinika/card-stomatologiya-lyubizub",
+        "host": "spb.infodoctor.ru",
+        "old": {
+          "ok": true,
+          "wire": 903188,
+          "words": 730,
+          "method": "browser"
+        },
+        "new": {
+          "ok": true,
+          "wire": 220084,
+          "words": 742,
+          "method": "browser+block"
+        }
+      },
+      {
+        "url": "https://vk.com/lubizub",
+        "host": "vk.com",
+        "old": {
+          "ok": true,
+          "wire": 2064660,
+          "words": 6,
+          "method": "browser"
+        },
+        "new": {
+          "ok": true,
+          "wire": 214132,
+          "words": 0,
+          "method": "browser"
+        }
+      }
+    ],
+    "old_bytes": 10492939,
+    "new_bytes": 1075481,
+    "old_words": 47970,
+    "new_words": 10790
+  },
+  {
+    "oid": "43104332987",
+    "title": "Бакерай",
+    "urls": [
+      {
+        "url": "https://2gis.ru/spb/firm/5348553839089942",
+        "host": "2gis.ru",
+        "old": {
+          "ok": true,
+          "wire": 95637,
+          "words": 114,
+          "method": "browser"
+        },
+        "new": {
+          "ok": true,
+          "wire": 6055,
+          "words": 114,
+          "method": "browser+block"
+        }
+      },
+      {
+        "url": "https://likengo.ru/spb/places/eda/kafe-i-restorany/bakeray-85816.html",
+        "host": "likengo.ru",
+        "old": {
+          "ok": true,
+          "wire": 2281785,
+          "words": 547,
+          "method": "browser"
+        },
+        "new": {
+          "ok": true,
+          "wire": 1567450,
+          "words": 547,
+          "method": "browser+block"
+        }
+      },
+      {
+        "url": "https://peterburg.2rus.org/pekarnya_bakeray/",
+        "host": "peterburg.2rus.org",
+        "old": {
+          "ok": true,
+          "wire": 37367,
+          "words": 178,
+          "method": "browser"
+        },
+        "new": {
+          "ok": true,
+          "wire": 394777,
+          "words": 178,
+          "method": "browser+block"
+        }
+      },
+      {
+        "url": "https://topfoodcity.ru/restorany/bakeraj-kafe-pekarnya/",
+        "host": "topfoodcity.ru",
+        "old": {
+          "ok": false,
+          "wire": 0,
+          "words": 0,
+          "method": "browser",
+          "error": "Error: Page.goto: net::ERR_TUNNEL_CONNECTION_FAILED at https://topf"
+        },
+        "new": {
+          "ok": false,
+          "wire": 0,
+          "words": 0,
+          "method": "browser",
+          "error": "Error: Page.goto: net::ERR_TIMED_OUT at https://topfoodcity.ru/rest"
+        }
+      },
+      {
+        "url": "https://vk.com/bakerai",
+        "host": "vk.com",
+        "old": {
+          "ok": true,
+          "wire": 3253130,
+          "words": 6,
+          "method": "browser"
+        },
+        "new": {
+          "ok": true,
+          "wire": 94930,
+          "words": 0,
+          "method": "browser"
+        }
+      },
+      {
+        "url": "https://www.instagram.com/bakerai.bakery",
+        "host": "instagram.com",
+        "old": {
+          "ok": false,
+          "wire": 0,
+          "words": 0,
+          "method": "browser",
+          "error": "TimeoutError: Page.goto: Timeout 20000ms exceeded.\nCall log:\n  - navigatin"
+        },
+        "new": {
+          "ok": true,
+          "wire": 0,
+          "words": 2,
+          "method": "ig_stub"
+        }
+      }
+    ],
+    "old_bytes": 5667919,
+    "new_bytes": 2063212,
+    "old_words": 845,
+    "new_words": 841
+  }
+]

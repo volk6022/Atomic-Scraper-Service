@@ -53,14 +53,18 @@ src/
 │       ├── session_actor.py       # Isolated browser session actor
 │       └── cleanup_worker.py      # Background session cleanup task
 │
-├── actions/                       # [Actions Layer] DSL Implementation logic
-│   ├── base.py                    # Base action definition
+├── actions/                       # [Actions Layer] DSL handlers + verticals
 │   ├── navigation.py              # Browser navigation actions (goto, scroll)
 │   ├── interaction.py             # UI interaction actions (click, fill)
 │   ├── extraction.py              # Data extraction actions (screenshot, DOM)
-│   ├── ai_actions.py              # AI-enhanced actions (Omni-click, Jina-extract)
 │   ├── yandex_maps.py             # Yandex Maps extraction action (FR-006)
-│   └── site_enricher.py           # Site content enrichment action (FR-007)
+│   ├── site_enricher.py           # Site content enrichment action (FR-007)
+│   └── research/                  # Autonomous Research Agent (flat-loop)
+│       ├── agent.py               # run_research entry point, AgentState, main loop
+│       ├── tools.py               # web_search (SearXNG) + scrape_url (SiteEnrichAction)
+│       ├── modes.py               # ModePreset + PRESETS (speed/balanced/quality)
+│       ├── research_agent_prompts.yaml  # all prompts (system/critic/refraser/compact + templates)
+│       └── llm_utils.py           # strip_reasoning, extract_json
 │
 ├── core/                          # [Cross-cutting] Configuration & Utils
 │   ├── config.py                  # Pydantic settings management

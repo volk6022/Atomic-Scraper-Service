@@ -1,0 +1,67 @@
+[
+  {
+    "name": "searxng_local",
+    "runs": [
+      {
+        "ok": true,
+        "seconds": 3.8928831000230275,
+        "organic_count": 10,
+        "error": ""
+      },
+      {
+        "ok": true,
+        "seconds": 3.0851838999951724,
+        "organic_count": 10,
+        "error": ""
+      },
+      {
+        "ok": true,
+        "seconds": 6.66139180000755,
+        "organic_count": 10,
+        "error": ""
+      },
+      {
+        "ok": true,
+        "seconds": 3.3360961000144016,
+        "organic_count": 10,
+        "error": ""
+      },
+      {
+        "ok": true,
+        "seconds": 3.0401959999871906,
+        "organic_count": 10,
+        "error": ""
+      },
+      {
+        "ok": true,
+        "seconds": 5.510651700024027,
+        "organic_count": 10,
+        "error": ""
+      },
+      {
+        "ok": true,
+        "seconds": 7.040096799988532,
+        "organic_count": 9,
+        "error": ""
+      },
+      {
+        "ok": false,
+        "seconds": 7.053287400020054,
+        "organic_count": 0,
+        "error": ""
+      },
+      {
+        "ok": false,
+        "seconds": 7.0487223000091035,
+        "organic_count": 0,
+        "error": ""
+      },
+      {
+        "ok": true,
+        "seconds": 4.018489200010663,
+        "organic_count": 9,
+        "error": ""
+      }
+    ]
+  }
+]

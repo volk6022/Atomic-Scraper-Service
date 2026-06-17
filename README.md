@@ -6,13 +6,14 @@ High-throughput atomic scraping and stateful interactive browser sessions with L
 
 - **Stateless Scraper**: Fast atomic scraping and Google search transformation (Serper-compatible).
 - **Stateful Sessions**: Interactive browser sessions via DSL over WebSockets with Taskiq Actors.
-- **AI Integration**: Omni-Parser for UI grounding (SoM approach) and Jina Reader for structured markdown extraction.
-- **Resource Management**: Automatic 10-minute inactivity timeout for stateful sessions.
+- **AI Integration**: Omni-Parser for UI grounding (SoM approach) and local HTML→Markdown conversion (`/html-to-md`).
+- **Resource Management**: Inactivity timeout for stateful sessions via `SESSION_INACTIVITY_TIMEOUT` (default 600 s; dev `docker-compose.override.yml` sets 1800 s).
 - **Modular Design**: Clean architecture with layers for API, Domain, Infrastructure, and Actions.
 - **Docker Production Ready**: Dockerfile with Playwright, docker-compose with api/worker/redis, health endpoint.
 - **Anti-Bot Evasion**: Stealth browser pool with User-Agent rotation, proxy integration, human-like interactions.
 - **Yandex Maps Extraction**: Extract structured business data (name, address, phone, website, geo coordinates).
 - **Site Content Enrichment**: Extract clean text from company websites with optional about/services page crawling.
+- **Research Agent**: Autonomous AI research as a flat tool-calling loop (`chat.completions` with `tool_choice="auto"`), two output modes (free-form markdown or caller-supplied JSON Schema), critic-gate on submit, generic — no domain logic in the service.
 - **Per-Domain Rate Limiting**: Redis-based token bucket (30/hour for `*.yandex.*`, 1000/hour fallback).
 
 ## Tech Stack
@@ -20,8 +21,8 @@ High-throughput atomic scraping and stateful interactive browser sessions with L
 - **Language**: Python 3.11+
 - **Framework**: FastAPI
 - **Async Logic**: Playwright, Taskiq (Redis Broker)
-- **AI Tools**: Flexible OpenAI-compatible configuration (LM Studio, OpenAI, etc.), Jina Reader V2, Omni-Parser
-- **Infrastructure**: Redis (Pub/Sub and Task Queue), Docker
+- **AI Tools**: Flexible OpenAI-compatible configuration (LM Studio, OpenAI, etc.) with two logical endpoints (`EXTRACTION_*` and `ORCHESTRATION_*`), Omni-Parser, optional Jina/Reader-LM as the extraction model.
+- **Infrastructure**: Redis (Pub/Sub, Taskiq broker and KV store), SearXNG (search backend), Docker
 
 ## [Project Structure](STRUCTURE.md)
 
@@ -59,10 +60,23 @@ EXTRACTION_API_BASE=http://localhost:1234/v1
 EXTRACTION_API_KEY=lm-studio
 EXTRACTION_MODEL_NAME=jina-reader-lm
 
-ORCHESTRATION_API_BASE=https://api.openai.com/v1
-ORCHESTRATION_API_KEY=sk-...
-ORCHESTRATION_MODEL_NAME=gpt-4o
+ORCHESTRATION_API_BASE=http://localhost:20022/v1/   # local llama.cpp / vLLM / LM Studio
+ORCHESTRATION_API_KEY=lm-studio
+ORCHESTRATION_MODEL_NAME=qwen3.5-9b-claude-4.6-opus-reasoning-distilled
+
+REDIS_URL=redis://localhost:16379      # Taskiq broker + pub/sub + KV; docker-compose maps host 16379 → container 6379
+SESSION_INACTIVITY_TIMEOUT=600         # seconds; dev override sets 1800
+
+# Optional — Research Agent tuning (defaults match production v2.1):
+# RESEARCH_COMPACT_TRIGGER_TOKENS=50000
+# RESEARCH_CRITIC_PASS_SCORE=8.5
+# RESEARCH_MAX_SUBMIT_REJECTS=2
+# RESEARCH_DEFAULT_LANGUAGE=ru
+# RESEARCH_PROMPTS_PATH=src/actions/research/research_agent_prompts.yaml
 ```
+
+Full settings list lives in `src/core/config.py` (`pydantic-settings`); the full
+optional `RESEARCH_*` block is documented in `.env.example`.
 
 ### Proxy Configuration (optional)
 
@@ -83,7 +97,8 @@ docker compose up -d
 
 # Check health
 curl http://localhost:8000/healthz
-# {"status":"healthy","redis":"connected","browser_pool":"ready"}
+# {"status":"healthy", "timestamp":"...", "services":{...}}
+# Note: handler always returns 200; the unhealthy/degraded → 503 branch is not implemented today.
 ```
 
 > `proxies.txt` is automatically bind-mounted into the container if it exists.
@@ -107,8 +122,21 @@ All endpoints except `/healthz` require the header `X-API-Key: <API_KEY>`.
 
 ```
 GET /healthz
-→ {"status": "healthy"|"degraded", "redis": "connected"|"error", "browser_pool": "ready"|"degraded"}
+→ 200 {"status": "healthy", "timestamp": "...", "services": {...}}
 ```
+
+Probes Redis ping + `pool_manager`. Currently always returns 200 (the 503/`degraded` branch documented in spec is not yet wired — see `docs/codebase-report/20-spec-vs-reality.md`, C-09).
+
+### Stateless Atomic Endpoints
+
+```
+POST /scraper      {"url": "...", ...}                   # Playwright one-shot page fetch
+POST /serper       {"q": "...", "num": 10}               # SERP via SearXNG (Serper-compatible shape)
+POST /omni-parse   {"base64_image": "...", "prompt": ""} # OmniParser vision call (via LLM facade)
+POST /html-to-md   {"html": "...", ...}                  # local HTML → Markdown / text
+```
+
+> The historical `/jina-extract` endpoint from earlier specs is **not implemented** — it was replaced by `/html-to-md` (local conversion via `content_cleaner`).
 
 ### Yandex Maps Extraction
 
@@ -137,6 +165,58 @@ POST /api/v1/enrich
 ```
 
 Content is truncated to ≤ 500 words. Raw HTML is stripped.
+
+### Research Agent
+
+```
+POST /api/v1/research/run
+{
+  "query": "research topic",                  // 3-8000 chars
+  "mode": "speed" | "balanced" | "quality",   // default: "balanced"
+  "language": "ru" | "en" | ...,              // BCP-47-ish hint; routed into prompts + SearXNG
+  "max_iters": 15,                            // optional override of preset.max_turns (1-50)
+  "max_tokens": 100000,                       // optional override of preset.token_budget (1k-2M)
+  "output_schema": {...}                      // optional JSON Schema → structured-output mode
+}
+→ 202 {"task_id": "...", "status": "pending", "message": "Research task queued"}
+
+GET /api/v1/research/status/{task_id}
+→ {"task_id": "...", "status": "completed"|"running"|"failed", "result": ResearchReport, ...}
+
+GET /api/v1/research/stream/{task_id}
+→ text/event-stream with progress events
+```
+
+The agent is a **flat tool-calling loop** (`src/actions/research/agent.py:run_research`).
+It exposes three tools to the LLM — `web_serp` (SearXNG), `web_scrape` (Playwright via
+`SiteEnrichAction`), and a dynamic terminal submit — and lets the model decide what to
+call (`tool_choice="auto"`). A second LLM acts as **critic** on submit: low scores get
+rejected with feedback, force-accepted after `RESEARCH_MAX_SUBMIT_REJECTS`.
+
+`ResearchReport` shape (free-form mode fills `answer_markdown`; schema mode fills
+`structured_output`; the other stays at its empty default):
+
+```json
+{
+  "query": "...",
+  "mode": "balanced",
+  "answer_markdown": "<markdown>",
+  "structured_output": null,
+  "sources": [{"url": "https://...", "what_it_provided": "..."}],
+  "critic": {"score": 9.0, "verdict": "pass", "feedback": "..."},
+  "stats": {
+    "turns": 4, "tool_calls": {"web_serp": 1, "web_scrape": 2, "submit_answer": 1},
+    "tokens": {"main": {...}, "aux": {...}, "grand_total": 7644},
+    "elapsed_seconds": 51.4, "mode_used": "balanced",
+    "submit_attempts": 1, "compactions": 0,
+    "target_language": "en", "had_output_schema": false
+  },
+  "trace_summary": {...}
+}
+```
+
+All numeric knobs are in `src/core/config.py` (`RESEARCH_*` settings, overridable via
+`.env`) and all prompts in `src/actions/research/research_agent_prompts.yaml`.
 
 ### Rate Limiting
 
@@ -213,6 +293,8 @@ uv run python -m src.mcp_server
 ### Available Tools
 
 - **Stateless**: `scrape`, `search`, `omni_parse`, `jina_extract`
+- **Data Extraction**: `yandex_maps_extract`, `enrich_website`
+- **Research Agent**: `research_run`, `research_status`, `research_stream`
 - **Session Management**: `create_session`, `delete_session`
 - **Interactive (DSL)**: `session_goto`, `session_scroll`, `session_click`, `session_type`, `session_screenshot`, `session_click_omni`, `session_extract_jina`
 

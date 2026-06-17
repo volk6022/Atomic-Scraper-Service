@@ -1,0 +1,152 @@
+{
+  "approach": "fetchReviews replay (browser session)",
+  "success": true,
+  "captcha_detected": false,
+  "http_status": null,
+  "items_collected": 50,
+  "fields_per_item": [
+    "author",
+    "businessComment",
+    "businessId",
+    "photos",
+    "rating",
+    "reactions",
+    "reviewId",
+    "text",
+    "textLanguage",
+    "textTranslations",
+    "updatedTime",
+    "videos"
+  ],
+  "egress_ip": null,
+  "duration_s": 43.24,
+  "notes": "target oid=82071161567; pages=2; per_page=50",
+  "sample": [
+    {
+      "businessComment": {
+        "text": "Спасибо за ваш отклик",
+        "updatedTime": "2026-04-29T10:47:19.316Z"
+      },
+      "reviewId": "Y2uI6pYCxMQ4m4uKsxEHRjPGRfPTYvsqZ",
+      "businessId": "82071161567",
+      "author": {
+        "name": "Анастасия Б.",
+        "avatarUrl": "https://avatars.mds.yandex.net/get-yapic/27274/TS2ElU2qSjIPKgATtMf1FcUv0-1/{size}",
+        "professionLevel": "Знаток города 5 уровня",
+        "rtb": "Знаток города 5 уровня",
+        "rtbType": "PROFESSION",
+        "publicId": "h6gm252m3de8eqc3844u8bajhg",
+        "achievements": [],
+        "professions": [],
+        "isSubscribed": false
+      },
+      "text": "обратилась за заменой ретейнера. Усатова Анастасия Сергеевна выполнила работу быстро и качественно. Также дала рекомендации насчет второго ретейнера. очень довольна! ",
+      "textLanguage": "ru",
+      "textTranslations": {
+        "tr": "Tutucuyu değiştirmek için başvurdum. Usatova Anastasia Sergeevna işi hızlı ve verimli bir şekilde yaptı. Ayrıca ikinci tutucu hakkında tavsiyelerde bulundu. çok memnunum! "
+      },
+      "rating": 5,
+      "updatedTime": "2026-04-23T08:25:51.093Z",
+      "reactions": {
+        "likes": 0,
+        "dislikes": 0,
+        "userReaction": "NONE"
+      },
+      "photos": [],
+      "videos": []
+    },
+    {
+      "businessComment": {
+        "text": "Спасибо за такой отзыв",
+        "updatedTime": "2026-03-19T15:23:08.319Z"
+      },
+      "reviewId": "y4J215KpeI5xR8srbuxIzI2DnivhVr59B",
+      "businessId": "82071161567",
+      "author": {
+        "name": "Марина А.",
+        "avatarUrl": "https://avatars.mds.yandex.net/get-yapic/20749/OQO9WfGXjPVV9Pcr59J0XMMN0-1/{size}",
+        "professionLevel": "Знаток города 7 уровня",
+        "rtb": "Знаток города 7 уровня",
+        "rtbType": "PROFESSION",
+        "publicId": "p8ygqemzehnbfj4fc3uz1e09qr",
+        "achievements": [],
+        "professions": [],
+        "isSubscribed": false
+      },
+      "text": "Очень приятная клиника, приветливый и улыбчивый персонал\nВ главную очередь хочу поблагодарить Эльвиру за ее труд, отзывчивость и всегда прекрасное настроение) ",
+      "textLanguage": "ru",
+      "textTranslations": {
+        "tr": "Çok hoş bir klinik, güler yüzlü ve güler yüzlü personel\nÖncelikle Elvira'ya çalışmaları, duyarlılığı ve her zaman harika ruh hali için teşekkür etmek istiyorum) "
+      },
+      "rating": 5,
+      "updatedTime": "2026-03-18T06:35:45.334Z",
+      "reactions": {
+        "likes": 0,
+        "dislikes": 0,
+        "userReaction": "NONE"
+      },
+      "photos": [
+        {
+          "type": "photo",
+          "id": "18785127_2a0000019cffa851da627aae6c8ca183f1e8",
+          "businessId": "82071161567",
+          "urlTemplate": "https://avatars.mds.yandex.net/get-altay/18785127/2a0000019cffa851da627aae6c8ca183f1e8/{size}",
+          "createdTime": 1773815749167,
+          "moderation": {
+            "status": "ACCEPTED"
+          },
+          "showReactions": true,
+          "reactions": {
+            "likes": 0,
+            "dislikes": 0,
+            "userReaction": "NONE"
+          },
+          "copyright": {
+            "name": "Марина А.",
+            "publicId": "p8ygqemzehnbfj4fc3uz1e09qr",
+            "imageUrlTemplate": "https://avatars.mds.yandex.net/get-yapic/20749/OQO9WfGXjPVV9Pcr59J0XMMN0-1/{size}",
+            "updateTime": 1773815749167,
+            "hasPublicProfile": true,
+            "isSubscribed": false
+          }
+        }
+      ],
+      "videos": []
+    },
+    {
+      "businessComment": {
+        "text": "Спасибо за оценку",
+        "updatedTime": "2026-01-27T13:30:54.650Z"
+      },
+      "reviewId": "jXE_52MSaqsC3yVMqV5cYfqE-bUvj1HY",
+      "businessId": "82071161567",
+      "author": {
+        "name": "Личный",
+        "avatarUrl": "https://avatars.mds.yandex.net/get-yapic/29310/0o-6/{size}",
+        "professionLevel": "Знаток города 8 уровня",
+        "rtb": "Знаток города 8 уровня",
+        "rtbType": "PROFESSION",
+        "publicId": "z01eetejeayrgt25vcz7j6vgdm",
+        "achievements": [],
+        "professions": [],
+        "isSubscribed": false
+      },
+      "text": "Несколько раз была на приеме у доктора Гонгелевой. Все очень нравится, доктор все подробно объясняет, уделяет много внимания и времени. \nПомимо лечения отлично делает чистки. \nРекомендую всем)",
+      "textLanguage": "ru",
+      "textTranslations": {
+        "tr": "Birkaç kez Doktor Gongeleva'nın randevusuna gittim. Her şeyi çok beğendim, doktor her şeyi ayrıntılı olarak açıklıyor, çok dikkat ve zaman ayırıyor. \nTedaviye ek olarak mükemmel temizlik yapar. \nHerkese tavsiye ederim)"
+      },
+      "rating": 5,
+      "updatedTime": "2026-01-17T07:31:06.725Z",
+      "reactions": {
+        "likes": 0,
+        "dislikes": 0,
+        "userReaction": "NONE"
+      },
+      "photos": [],
+      "videos": []
+    }
+  ],
+  "error": null,
+  "started_at": "2026-05-18T09:50:37.995947+00:00"
+}

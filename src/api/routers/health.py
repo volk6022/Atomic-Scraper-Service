@@ -4,7 +4,7 @@ T006-T008: Create /healthz endpoint with Redis and browser pool checks.
 """
 
 from fastapi import APIRouter
-from redis import Redis
+from redis.asyncio import Redis
 from pydantic import BaseModel
 
 from src.core.config import settings
@@ -34,11 +34,14 @@ async def health_check() -> HealthResponse:
             socket_timeout=2,
             socket_connect_timeout=2,
         )
-        if redis_client.ping():
+        try:
+            await redis_client.ping()
             redis_status = "connected"
-        else:
-            redis_status = "failed"
+        except Exception as e:
+            redis_status = f"failed: {str(e)[:40]}"
             overall_status = "degraded"
+        finally:
+            await redis_client.aclose()
     except Exception as e:
         redis_status = f"unavailable: {str(e)[:50]}"
         overall_status = "degraded"

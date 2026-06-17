@@ -142,7 +142,7 @@ async def session_goto(session_id: str, url: str) -> str:
 
 @mcp.tool()
 async def session_scroll(
-    session_id: str, direction: str = "down", amount: int = 500
+    session_id: str, direction: str = "down", amount: int = 400
 ) -> str:
     """Scroll the page in an active session."""
     result = await send_command(
@@ -197,6 +197,102 @@ async def session_extract_jina(
         {"type": "extract_jina", "params": {"extraction_schema": extraction_schema}},
     )
     return json.dumps(result, indent=2)
+
+
+@mcp.tool()
+async def yandex_maps_extract(
+    category: str, lat: float, lng: float, radius: int = 1000
+) -> str:
+    """
+    Extract business data from Yandex Maps.
+    :param category: Business category (e.g., "restaurants", "cafes", "hotels").
+    :param lat: Latitude of search center (-90 to 90).
+    :param lng: Longitude of search center (-180 to 180).
+    :param radius: Search radius in meters (100-5000).
+    """
+    async with httpx.AsyncClient(timeout=90.0) as client:
+        resp = await client.post(
+            f"{BASE_URL}/api/v1/yandex-maps/extract",
+            headers=HEADERS,
+            json={
+                "category": category,
+                "center": {"lat": lat, "lng": lng},
+                "radius": radius,
+            },
+        )
+        resp.raise_for_status()
+        return json.dumps(resp.json(), indent=2)
+
+
+@mcp.tool()
+async def enrich_website(
+    url: str, crawl_about: bool = False, crawl_services: bool = False
+) -> str:
+    """
+    Extract clean text content from a company website.
+    :param url: The URL of the website to enrich.
+    :param crawl_about: Whether to crawl the /about page for additional content.
+    :param crawl_services: Whether to crawl the /services page for additional content.
+    """
+    async with httpx.AsyncClient(timeout=60.0) as client:
+        resp = await client.post(
+            f"{BASE_URL}/api/v1/enrich",
+            headers=HEADERS,
+            json={
+                "url": url,
+                "crawl_about": crawl_about,
+                "crawl_services": crawl_services,
+            },
+        )
+        resp.raise_for_status()
+        return json.dumps(resp.json(), indent=2)
+
+
+@mcp.tool()
+async def research_run(query: str, mode: str = "balanced") -> str:
+    """
+    Start a research task using the AI agent.
+    :param query: Research question or topic.
+    :param mode: Research mode - "speed" (fast), "balanced" (default), "quality" (deep).
+    """
+    async with httpx.AsyncClient(timeout=30.0) as client:
+        resp = await client.post(
+            f"{BASE_URL}/api/v1/research/run",
+            headers=HEADERS,
+            json={"query": query, "mode": mode},
+        )
+        resp.raise_for_status()
+        return json.dumps(resp.json(), indent=2)
+
+
+@mcp.tool()
+async def research_status(task_id: str) -> str:
+    """
+    Get the status of a research task.
+    :param task_id: The task ID returned from research_run.
+    """
+    async with httpx.AsyncClient(timeout=30.0) as client:
+        resp = await client.get(
+            f"{BASE_URL}/api/v1/research/status/{task_id}",
+            headers=HEADERS,
+        )
+        resp.raise_for_status()
+        return json.dumps(resp.json(), indent=2)
+
+
+@mcp.tool()
+async def research_stream(task_id: str) -> str:
+    """
+    Stream progress events from a research task (SSE).
+    :param task_id: The task ID returned from research_run.
+    """
+    async with httpx.AsyncClient(timeout=120.0) as client:
+        resp = await client.get(
+            f"{BASE_URL}/api/v1/research/stream/{task_id}",
+            headers=HEADERS,
+        )
+        resp.raise_for_status()
+        return resp.text
 
 
 if __name__ == "__main__":

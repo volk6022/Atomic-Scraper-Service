@@ -1,0 +1,1589 @@
+{
+  "summary": {
+    "site": "rusprofile.ru",
+    "n_requests": 100,
+    "unique_urls": 15,
+    "request_success_rate": 0.93,
+    "content_success_rate": 0.93,
+    "total_wire_bytes": 4566564,
+    "total_wire_mb": 4.36,
+    "avg_bytes_per_ok": 46434,
+    "p50_bytes_ok": 46491,
+    "p95_bytes_ok": 53721,
+    "avg_attempts": 1.73,
+    "avg_latency_s": 57.79,
+    "status_dist": {
+      "200": 93,
+      "404": 6,
+      "None": 1
+    },
+    "elapsed_s": 135.9
+  },
+  "records": [
+    {
+      "url": "https://www.rusprofile.ru/id/1237800010854",
+      "fetched": null,
+      "wire_bytes": 44179,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 1.75,
+      "error": null,
+      "signals": {
+        "has_ogrn": true,
+        "has_inn": true,
+        "has_director": true
+      }
+    },
+    {
+      "url": "https://www.rusprofile.ru/id/2556112",
+      "fetched": null,
+      "wire_bytes": 53690,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 1.07,
+      "error": null,
+      "signals": {
+        "has_ogrn": true,
+        "has_inn": true,
+        "has_director": true
+      }
+    },
+    {
+      "url": "https://www.rusprofile.ru/id/7030413",
+      "fetched": null,
+      "wire_bytes": 53721,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 6.98,
+      "error": null,
+      "signals": {
+        "has_ogrn": true,
+        "has_inn": true,
+        "has_director": true
+      }
+    },
+    {
+      "url": "https://www.rusprofile.ru/id/2328525",
+      "fetched": null,
+      "wire_bytes": 44113,
+      "attempts": 3,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 11.65,
+      "error": null,
+      "signals": {
+        "has_ogrn": true,
+        "has_inn": true,
+        "has_director": true
+      }
+    },
+    {
+      "url": "https://www.rusprofile.ru/id/2839146",
+      "fetched": null,
+      "wire_bytes": 46514,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 1.8,
+      "error": null,
+      "signals": {
+        "has_ogrn": true,
+        "has_inn": true,
+        "has_director": true
+      }
+    },
+    {
+      "url": "https://www.rusprofile.ru/id/3670954",
+      "fetched": null,
+      "wire_bytes": 44526,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 3.13,
+      "error": null,
+      "signals": {
+        "has_ogrn": true,
+        "has_inn": true,
+        "has_director": true
+      }
+    },
+    {
+      "url": "https://www.rusprofile.ru/id/4062061",
+      "fetched": null,
+      "wire_bytes": 50303,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 2.68,
+      "error": null,
+      "signals": {
+        "has_ogrn": true,
+        "has_inn": true,
+        "has_director": true
+      }
+    },
+    {
+      "url": "https://rusprofile.ru/id/11734733",
+      "fetched": null,
+      "wire_bytes": 45866,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 13.85,
+      "error": null,
+      "signals": {
+        "has_ogrn": true,
+        "has_inn": true,
+        "has_director": true
+      }
+    },
+    {
+      "url": "https://www.rusprofile.ru/id/3188883",
+      "fetched": null,
+      "wire_bytes": 47003,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 5.48,
+      "error": null,
+      "signals": {
+        "has_ogrn": true,
+        "has_inn": true,
+        "has_director": true
+      }
+    },
+    {
+      "url": "https://www.rusprofile.ru/id/1399328",
+      "fetched": null,
+      "wire_bytes": 40047,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 8.1,
+      "error": null,
+      "signals": {
+        "has_ogrn": true,
+        "has_inn": true,
+        "has_director": true
+      }
+    },
+    {
+      "url": "https://rusprofile.ru/sberbank",
+      "fetched": null,
+      "wire_bytes": 30994,
+      "attempts": 6,
+      "ok": false,
+      "content_ok": false,
+      "status": 404,
+      "latency_s": 33.46,
+      "error": "status=404 len=51444"
+    },
+    {
+      "url": "https://rusprofile.ru/id/7397570",
+      "fetched": null,
+      "wire_bytes": 49838,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 9.82,
+      "error": null,
+      "signals": {
+        "has_ogrn": true,
+        "has_inn": true,
+        "has_director": true
+      }
+    },
+    {
+      "url": "https://www.rusprofile.ru/id/7175834",
+      "fetched": null,
+      "wire_bytes": 34408,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 10.73,
+      "error": null,
+      "signals": {
+        "has_ogrn": true,
+        "has_inn": true,
+        "has_director": true
+      }
+    },
+    {
+      "url": "https://www.rusprofile.ru/id/11734733",
+      "fetched": null,
+      "wire_bytes": 45880,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 12.3,
+      "error": null,
+      "signals": {
+        "has_ogrn": true,
+        "has_inn": true,
+        "has_director": true
+      }
+    },
+    {
+      "url": "https://www.rusprofile.ru/id/10504627",
+      "fetched": null,
+      "wire_bytes": 44500,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 14.01,
+      "error": null,
+      "signals": {
+        "has_ogrn": true,
+        "has_inn": true,
+        "has_director": true
+      }
+    },
+    {
+      "url": "https://www.rusprofile.ru/id/1237800010854",
+      "fetched": null,
+      "wire_bytes": 42792,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 18.74,
+      "error": null,
+      "signals": {
+        "has_ogrn": true,
+        "has_inn": true,
+        "has_director": true
+      }
+    },
+    {
+      "url": "https://www.rusprofile.ru/id/2556112",
+      "fetched": null,
+      "wire_bytes": 53680,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 14.7,
+      "error": null,
+      "signals": {
+        "has_ogrn": true,
+        "has_inn": true,
+        "has_director": true
+      }
+    },
+    {
+      "url": "https://www.rusprofile.ru/id/7030413",
+      "fetched": null,
+      "wire_bytes": 53727,
+      "attempts": 3,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 25.15,
+      "error": null,
+      "signals": {
+        "has_ogrn": true,
+        "has_inn": true,
+        "has_director": true
+      }
+    },
+    {
+      "url": "https://www.rusprofile.ru/id/2328525",
+      "fetched": null,
+      "wire_bytes": 46416,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 21.81,
+      "error": null,
+      "signals": {
+        "has_ogrn": true,
+        "has_inn": true,
+        "has_director": true
+      }
+    },
+    {
+      "url": "https://www.rusprofile.ru/id/2839146",
+      "fetched": null,
+      "wire_bytes": 34608,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 20.29,
+      "error": null,
+      "signals": {
+        "has_ogrn": true,
+        "has_inn": true,
+        "has_director": true
+      }
+    },
+    {
+      "url": "https://www.rusprofile.ru/id/3670954",
+      "fetched": null,
+      "wire_bytes": 47747,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 21.39,
+      "error": null,
+      "signals": {
+        "has_ogrn": true,
+        "has_inn": true,
+        "has_director": true
+      }
+    },
+    {
+      "url": "https://www.rusprofile.ru/id/4062061",
+      "fetched": null,
+      "wire_bytes": 50291,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 27.54,
+      "error": null,
+      "signals": {
+        "has_ogrn": true,
+        "has_inn": true,
+        "has_director": true
+      }
+    },
+    {
+      "url": "https://rusprofile.ru/id/11734733",
+      "fetched": null,
+      "wire_bytes": 45854,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 28.54,
+      "error": null,
+      "signals": {
+        "has_ogrn": true,
+        "has_inn": true,
+        "has_director": true
+      }
+    },
+    {
+      "url": "https://www.rusprofile.ru/id/3188883",
+      "fetched": null,
+      "wire_bytes": 42323,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 27.4,
+      "error": null,
+      "signals": {
+        "has_ogrn": true,
+        "has_inn": true,
+        "has_director": true
+      }
+    },
+    {
+      "url": "https://www.rusprofile.ru/id/1399328",
+      "fetched": null,
+      "wire_bytes": 49709,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 28.4,
+      "error": null,
+      "signals": {
+        "has_ogrn": true,
+        "has_inn": true,
+        "has_director": true
+      }
+    },
+    {
+      "url": "https://rusprofile.ru/sberbank",
+      "fetched": null,
+      "wire_bytes": 46490,
+      "attempts": 6,
+      "ok": false,
+      "content_ok": false,
+      "status": 404,
+      "latency_s": 49.32,
+      "error": "status=404 len=51444"
+    },
+    {
+      "url": "https://rusprofile.ru/id/7397570",
+      "fetched": null,
+      "wire_bytes": 49845,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 29.84,
+      "error": null,
+      "signals": {
+        "has_ogrn": true,
+        "has_inn": true,
+        "has_director": true
+      }
+    },
+    {
+      "url": "https://www.rusprofile.ru/id/7175834",
+      "fetched": null,
+      "wire_bytes": 34408,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 29.36,
+      "error": null,
+      "signals": {
+        "has_ogrn": true,
+        "has_inn": true,
+        "has_director": true
+      }
+    },
+    {
+      "url": "https://www.rusprofile.ru/id/11734733",
+      "fetched": null,
+      "wire_bytes": 45863,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 30.51,
+      "error": null,
+      "signals": {
+        "has_ogrn": true,
+        "has_inn": true,
+        "has_director": true
+      }
+    },
+    {
+      "url": "https://www.rusprofile.ru/id/10504627",
+      "fetched": null,
+      "wire_bytes": 44454,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 30.84,
+      "error": null,
+      "signals": {
+        "has_ogrn": true,
+        "has_inn": true,
+        "has_director": true
+      }
+    },
+    {
+      "url": "https://www.rusprofile.ru/id/1237800010854",
+      "fetched": null,
+      "wire_bytes": 42813,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 36.28,
+      "error": null,
+      "signals": {
+        "has_ogrn": true,
+        "has_inn": true,
+        "has_director": true
+      }
+    },
+    {
+      "url": "https://www.rusprofile.ru/id/2556112",
+      "fetched": null,
+      "wire_bytes": 53660,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 31.89,
+      "error": null,
+      "signals": {
+        "has_ogrn": true,
+        "has_inn": true,
+        "has_director": true
+      }
+    },
+    {
+      "url": "https://www.rusprofile.ru/id/7030413",
+      "fetched": null,
+      "wire_bytes": 53704,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 32.87,
+      "error": null,
+      "signals": {
+        "has_ogrn": true,
+        "has_inn": true,
+        "has_director": true
+      }
+    },
+    {
+      "url": "https://www.rusprofile.ru/id/2328525",
+      "fetched": null,
+      "wire_bytes": 46339,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 33.95,
+      "error": null,
+      "signals": {
+        "has_ogrn": true,
+        "has_inn": true,
+        "has_director": true
+      }
+    },
+    {
+      "url": "https://www.rusprofile.ru/id/2839146",
+      "fetched": null,
+      "wire_bytes": 46510,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 34.2,
+      "error": null,
+      "signals": {
+        "has_ogrn": true,
+        "has_inn": true,
+        "has_director": true
+      }
+    },
+    {
+      "url": "https://www.rusprofile.ru/id/3670954",
+      "fetched": null,
+      "wire_bytes": 47715,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 44.55,
+      "error": null,
+      "signals": {
+        "has_ogrn": true,
+        "has_inn": true,
+        "has_director": true
+      }
+    },
+    {
+      "url": "https://www.rusprofile.ru/id/4062061",
+      "fetched": null,
+      "wire_bytes": 50291,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 34.94,
+      "error": null,
+      "signals": {
+        "has_ogrn": true,
+        "has_inn": true,
+        "has_director": true
+      }
+    },
+    {
+      "url": "https://rusprofile.ru/id/11734733",
+      "fetched": null,
+      "wire_bytes": 45861,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 36.62,
+      "error": null,
+      "signals": {
+        "has_ogrn": true,
+        "has_inn": true,
+        "has_director": true
+      }
+    },
+    {
+      "url": "https://www.rusprofile.ru/id/3188883",
+      "fetched": null,
+      "wire_bytes": 47010,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 37.02,
+      "error": null,
+      "signals": {
+        "has_ogrn": true,
+        "has_inn": true,
+        "has_director": true
+      }
+    },
+    {
+      "url": "https://www.rusprofile.ru/id/1399328",
+      "fetched": null,
+      "wire_bytes": 49702,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 42.68,
+      "error": null,
+      "signals": {
+        "has_ogrn": true,
+        "has_inn": true,
+        "has_director": true
+      }
+    },
+    {
+      "url": "https://rusprofile.ru/sberbank",
+      "fetched": null,
+      "wire_bytes": 46659,
+      "attempts": 6,
+      "ok": false,
+      "content_ok": false,
+      "status": 404,
+      "latency_s": 53.89,
+      "error": "status=404 len=51444"
+    },
+    {
+      "url": "https://rusprofile.ru/id/7397570",
+      "fetched": null,
+      "wire_bytes": 49781,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 47.06,
+      "error": null,
+      "signals": {
+        "has_ogrn": true,
+        "has_inn": true,
+        "has_director": true
+      }
+    },
+    {
+      "url": "https://www.rusprofile.ru/id/7175834",
+      "fetched": null,
+      "wire_bytes": 34404,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 46.3,
+      "error": null,
+      "signals": {
+        "has_ogrn": true,
+        "has_inn": true,
+        "has_director": true
+      }
+    },
+    {
+      "url": "https://www.rusprofile.ru/id/11734733",
+      "fetched": null,
+      "wire_bytes": 45841,
+      "attempts": 3,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 57.32,
+      "error": null,
+      "signals": {
+        "has_ogrn": true,
+        "has_inn": true,
+        "has_director": true
+      }
+    },
+    {
+      "url": "https://www.rusprofile.ru/id/10504627",
+      "fetched": null,
+      "wire_bytes": 44515,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 47.78,
+      "error": null,
+      "signals": {
+        "has_ogrn": true,
+        "has_inn": true,
+        "has_director": true
+      }
+    },
+    {
+      "url": "https://www.rusprofile.ru/id/1237800010854",
+      "fetched": null,
+      "wire_bytes": 42790,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 48.52,
+      "error": null,
+      "signals": {
+        "has_ogrn": true,
+        "has_inn": true,
+        "has_director": true
+      }
+    },
+    {
+      "url": "https://www.rusprofile.ru/id/2556112",
+      "fetched": null,
+      "wire_bytes": 53860,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 50.81,
+      "error": null,
+      "signals": {
+        "has_ogrn": true,
+        "has_inn": true,
+        "has_director": true
+      }
+    },
+    {
+      "url": "https://www.rusprofile.ru/id/7030413",
+      "fetched": null,
+      "wire_bytes": 53774,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 55.38,
+      "error": null,
+      "signals": {
+        "has_ogrn": true,
+        "has_inn": true,
+        "has_director": true
+      }
+    },
+    {
+      "url": "https://www.rusprofile.ru/id/2328525",
+      "fetched": null,
+      "wire_bytes": 46375,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 52.33,
+      "error": null,
+      "signals": {
+        "has_ogrn": true,
+        "has_inn": true,
+        "has_director": true
+      }
+    },
+    {
+      "url": "https://www.rusprofile.ru/id/2839146",
+      "fetched": null,
+      "wire_bytes": 46532,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 53.79,
+      "error": null,
+      "signals": {
+        "has_ogrn": true,
+        "has_inn": true,
+        "has_director": true
+      }
+    },
+    {
+      "url": "https://www.rusprofile.ru/id/3670954",
+      "fetched": null,
+      "wire_bytes": 42584,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 60.14,
+      "error": null,
+      "signals": {
+        "has_ogrn": true,
+        "has_inn": true,
+        "has_director": true
+      }
+    },
+    {
+      "url": "https://www.rusprofile.ru/id/4062061",
+      "fetched": null,
+      "wire_bytes": 50363,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 55.33,
+      "error": null,
+      "signals": {
+        "has_ogrn": true,
+        "has_inn": true,
+        "has_director": true
+      }
+    },
+    {
+      "url": "https://rusprofile.ru/id/11734733",
+      "fetched": null,
+      "wire_bytes": 45997,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 59.12,
+      "error": null,
+      "signals": {
+        "has_ogrn": true,
+        "has_inn": true,
+        "has_director": true
+      }
+    },
+    {
+      "url": "https://www.rusprofile.ru/id/3188883",
+      "fetched": null,
+      "wire_bytes": 47018,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 56.73,
+      "error": null,
+      "signals": {
+        "has_ogrn": true,
+        "has_inn": true,
+        "has_director": true
+      }
+    },
+    {
+      "url": "https://www.rusprofile.ru/id/1399328",
+      "fetched": null,
+      "wire_bytes": 49684,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 57.66,
+      "error": null,
+      "signals": {
+        "has_ogrn": true,
+        "has_inn": true,
+        "has_director": true
+      }
+    },
+    {
+      "url": "https://rusprofile.ru/sberbank",
+      "fetched": null,
+      "wire_bytes": 15496,
+      "attempts": 6,
+      "ok": false,
+      "content_ok": false,
+      "status": 404,
+      "latency_s": 85.58,
+      "error": "ConnectTimeout: "
+    },
+    {
+      "url": "https://rusprofile.ru/id/7397570",
+      "fetched": null,
+      "wire_bytes": 49794,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 59.27,
+      "error": null,
+      "signals": {
+        "has_ogrn": true,
+        "has_inn": true,
+        "has_director": true
+      }
+    },
+    {
+      "url": "https://www.rusprofile.ru/id/7175834",
+      "fetched": null,
+      "wire_bytes": 34431,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 60.38,
+      "error": null,
+      "signals": {
+        "has_ogrn": true,
+        "has_inn": true,
+        "has_director": true
+      }
+    },
+    {
+      "url": "https://www.rusprofile.ru/id/11734733",
+      "fetched": null,
+      "wire_bytes": 45939,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 60.24,
+      "error": null,
+      "signals": {
+        "has_ogrn": true,
+        "has_inn": true,
+        "has_director": true
+      }
+    },
+    {
+      "url": "https://www.rusprofile.ru/id/10504627",
+      "fetched": null,
+      "wire_bytes": 44506,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 67.15,
+      "error": null,
+      "signals": {
+        "has_ogrn": true,
+        "has_inn": true,
+        "has_director": true
+      }
+    },
+    {
+      "url": "https://www.rusprofile.ru/id/1237800010854",
+      "fetched": null,
+      "wire_bytes": 44604,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 66.16,
+      "error": null,
+      "signals": {
+        "has_ogrn": true,
+        "has_inn": true,
+        "has_director": true
+      }
+    },
+    {
+      "url": "https://www.rusprofile.ru/id/2556112",
+      "fetched": null,
+      "wire_bytes": 45037,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 61.21,
+      "error": null,
+      "signals": {
+        "has_ogrn": true,
+        "has_inn": true,
+        "has_director": true
+      }
+    },
+    {
+      "url": "https://www.rusprofile.ru/id/7030413",
+      "fetched": null,
+      "wire_bytes": 53711,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 67.39,
+      "error": null,
+      "signals": {
+        "has_ogrn": true,
+        "has_inn": true,
+        "has_director": true
+      }
+    },
+    {
+      "url": "https://www.rusprofile.ru/id/2328525",
+      "fetched": null,
+      "wire_bytes": 46366,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 67.22,
+      "error": null,
+      "signals": {
+        "has_ogrn": true,
+        "has_inn": true,
+        "has_director": true
+      }
+    },
+    {
+      "url": "https://www.rusprofile.ru/id/2839146",
+      "fetched": null,
+      "wire_bytes": 46491,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 68.43,
+      "error": null,
+      "signals": {
+        "has_ogrn": true,
+        "has_inn": true,
+        "has_director": true
+      }
+    },
+    {
+      "url": "https://www.rusprofile.ru/id/3670954",
+      "fetched": null,
+      "wire_bytes": 47744,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 68.12,
+      "error": null,
+      "signals": {
+        "has_ogrn": true,
+        "has_inn": true,
+        "has_director": true
+      }
+    },
+    {
+      "url": "https://www.rusprofile.ru/id/4062061",
+      "fetched": null,
+      "wire_bytes": 50305,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 68.72,
+      "error": null,
+      "signals": {
+        "has_ogrn": true,
+        "has_inn": true,
+        "has_director": true
+      }
+    },
+    {
+      "url": "https://rusprofile.ru/id/11734733",
+      "fetched": null,
+      "wire_bytes": 45849,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 74.81,
+      "error": null,
+      "signals": {
+        "has_ogrn": true,
+        "has_inn": true,
+        "has_director": true
+      }
+    },
+    {
+      "url": "https://www.rusprofile.ru/id/3188883",
+      "fetched": null,
+      "wire_bytes": 46981,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 69.62,
+      "error": null,
+      "signals": {
+        "has_ogrn": true,
+        "has_inn": true,
+        "has_director": true
+      }
+    },
+    {
+      "url": "https://www.rusprofile.ru/id/1399328",
+      "fetched": null,
+      "wire_bytes": 41967,
+      "attempts": 3,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 89.31,
+      "error": null,
+      "signals": {
+        "has_ogrn": true,
+        "has_inn": true,
+        "has_director": true
+      }
+    },
+    {
+      "url": "https://rusprofile.ru/sberbank",
+      "fetched": null,
+      "wire_bytes": 30996,
+      "attempts": 6,
+      "ok": false,
+      "content_ok": false,
+      "status": 404,
+      "latency_s": 92.97,
+      "error": "ConnectTimeout: "
+    },
+    {
+      "url": "https://rusprofile.ru/id/7397570",
+      "fetched": null,
+      "wire_bytes": 49796,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 75.93,
+      "error": null,
+      "signals": {
+        "has_ogrn": true,
+        "has_inn": true,
+        "has_director": true
+      }
+    },
+    {
+      "url": "https://www.rusprofile.ru/id/7175834",
+      "fetched": null,
+      "wire_bytes": 34408,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 76.67,
+      "error": null,
+      "signals": {
+        "has_ogrn": true,
+        "has_inn": true,
+        "has_director": true
+      }
+    },
+    {
+      "url": "https://www.rusprofile.ru/id/11734733",
+      "fetched": null,
+      "wire_bytes": 45920,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 84.3,
+      "error": null,
+      "signals": {
+        "has_ogrn": true,
+        "has_inn": true,
+        "has_director": true
+      }
+    },
+    {
+      "url": "https://www.rusprofile.ru/id/10504627",
+      "fetched": null,
+      "wire_bytes": 44402,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 90.61,
+      "error": null,
+      "signals": {
+        "has_ogrn": true,
+        "has_inn": true,
+        "has_director": true
+      }
+    },
+    {
+      "url": "https://www.rusprofile.ru/id/1237800010854",
+      "fetched": null,
+      "wire_bytes": 42828,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 87.69,
+      "error": null,
+      "signals": {
+        "has_ogrn": true,
+        "has_inn": true,
+        "has_director": true
+      }
+    },
+    {
+      "url": "https://www.rusprofile.ru/id/2556112",
+      "fetched": null,
+      "wire_bytes": 53659,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 88.62,
+      "error": null,
+      "signals": {
+        "has_ogrn": true,
+        "has_inn": true,
+        "has_director": true
+      }
+    },
+    {
+      "url": "https://www.rusprofile.ru/id/7030413",
+      "fetched": null,
+      "wire_bytes": 53813,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 90.16,
+      "error": null,
+      "signals": {
+        "has_ogrn": true,
+        "has_inn": true,
+        "has_director": true
+      }
+    },
+    {
+      "url": "https://www.rusprofile.ru/id/2328525",
+      "fetched": null,
+      "wire_bytes": 46332,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 95.16,
+      "error": null,
+      "signals": {
+        "has_ogrn": true,
+        "has_inn": true,
+        "has_director": true
+      }
+    },
+    {
+      "url": "https://www.rusprofile.ru/id/2839146",
+      "fetched": null,
+      "wire_bytes": 46514,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 91.29,
+      "error": null,
+      "signals": {
+        "has_ogrn": true,
+        "has_inn": true,
+        "has_director": true
+      }
+    },
+    {
+      "url": "https://www.rusprofile.ru/id/3670954",
+      "fetched": null,
+      "wire_bytes": 47767,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 96.82,
+      "error": null,
+      "signals": {
+        "has_ogrn": true,
+        "has_inn": true,
+        "has_director": true
+      }
+    },
+    {
+      "url": "https://www.rusprofile.ru/id/4062061",
+      "fetched": null,
+      "wire_bytes": 50338,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 97.65,
+      "error": null,
+      "signals": {
+        "has_ogrn": true,
+        "has_inn": true,
+        "has_director": true
+      }
+    },
+    {
+      "url": "https://rusprofile.ru/id/11734733",
+      "fetched": null,
+      "wire_bytes": 45886,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 96.27,
+      "error": null,
+      "signals": {
+        "has_ogrn": true,
+        "has_inn": true,
+        "has_director": true
+      }
+    },
+    {
+      "url": "https://www.rusprofile.ru/id/3188883",
+      "fetched": null,
+      "wire_bytes": 46991,
+      "attempts": 3,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 106.24,
+      "error": null,
+      "signals": {
+        "has_ogrn": true,
+        "has_inn": true,
+        "has_director": true
+      }
+    },
+    {
+      "url": "https://www.rusprofile.ru/id/1399328",
+      "fetched": null,
+      "wire_bytes": 49724,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 102.9,
+      "error": null,
+      "signals": {
+        "has_ogrn": true,
+        "has_inn": true,
+        "has_director": true
+      }
+    },
+    {
+      "url": "https://rusprofile.ru/sberbank",
+      "fetched": null,
+      "wire_bytes": 77483,
+      "attempts": 6,
+      "ok": false,
+      "content_ok": false,
+      "status": 404,
+      "latency_s": 111.02,
+      "error": "status=404 len=51444"
+    },
+    {
+      "url": "https://rusprofile.ru/id/7397570",
+      "fetched": null,
+      "wire_bytes": 49806,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 104.26,
+      "error": null,
+      "signals": {
+        "has_ogrn": true,
+        "has_inn": true,
+        "has_director": true
+      }
+    },
+    {
+      "url": "https://www.rusprofile.ru/id/7175834",
+      "fetched": null,
+      "wire_bytes": 34482,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 103.74,
+      "error": null,
+      "signals": {
+        "has_ogrn": true,
+        "has_inn": true,
+        "has_director": true
+      }
+    },
+    {
+      "url": "https://www.rusprofile.ru/id/11734733",
+      "fetched": null,
+      "wire_bytes": 45844,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 104.6,
+      "error": null,
+      "signals": {
+        "has_ogrn": true,
+        "has_inn": true,
+        "has_director": true
+      }
+    },
+    {
+      "url": "https://www.rusprofile.ru/id/10504627",
+      "fetched": null,
+      "wire_bytes": 44469,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 105.03,
+      "error": null,
+      "signals": {
+        "has_ogrn": true,
+        "has_inn": true,
+        "has_director": true
+      }
+    },
+    {
+      "url": "https://www.rusprofile.ru/id/1237800010854",
+      "fetched": null,
+      "wire_bytes": 42824,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 105.34,
+      "error": null,
+      "signals": {
+        "has_ogrn": true,
+        "has_inn": true,
+        "has_director": true
+      }
+    },
+    {
+      "url": "https://www.rusprofile.ru/id/2556112",
+      "fetched": null,
+      "wire_bytes": 53716,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 105.81,
+      "error": null,
+      "signals": {
+        "has_ogrn": true,
+        "has_inn": true,
+        "has_director": true
+      }
+    },
+    {
+      "url": "https://www.rusprofile.ru/id/7030413",
+      "fetched": null,
+      "wire_bytes": 0,
+      "attempts": 6,
+      "ok": false,
+      "content_ok": false,
+      "status": null,
+      "latency_s": 135.69,
+      "error": "ConnectTimeout: "
+    },
+    {
+      "url": "https://www.rusprofile.ru/id/2328525",
+      "fetched": null,
+      "wire_bytes": 46311,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 106.77,
+      "error": null,
+      "signals": {
+        "has_ogrn": true,
+        "has_inn": true,
+        "has_director": true
+      }
+    },
+    {
+      "url": "https://www.rusprofile.ru/id/2839146",
+      "fetched": null,
+      "wire_bytes": 46587,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 107.18,
+      "error": null,
+      "signals": {
+        "has_ogrn": true,
+        "has_inn": true,
+        "has_director": true
+      }
+    },
+    {
+      "url": "https://www.rusprofile.ru/id/3670954",
+      "fetched": null,
+      "wire_bytes": 47737,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 107.47,
+      "error": null,
+      "signals": {
+        "has_ogrn": true,
+        "has_inn": true,
+        "has_director": true
+      }
+    },
+    {
+      "url": "https://www.rusprofile.ru/id/4062061",
+      "fetched": null,
+      "wire_bytes": 50289,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 107.96,
+      "error": null,
+      "signals": {
+        "has_ogrn": true,
+        "has_inn": true,
+        "has_director": true
+      }
+    },
+    {
+      "url": "https://rusprofile.ru/id/11734733",
+      "fetched": null,
+      "wire_bytes": 34138,
+      "attempts": 4,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 128.95,
+      "error": null,
+      "signals": {
+        "has_ogrn": true,
+        "has_inn": true,
+        "has_director": true
+      }
+    },
+    {
+      "url": "https://www.rusprofile.ru/id/3188883",
+      "fetched": null,
+      "wire_bytes": 47011,
+      "attempts": 3,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 118.88,
+      "error": null,
+      "signals": {
+        "has_ogrn": true,
+        "has_inn": true,
+        "has_director": true
+      }
+    },
+    {
+      "url": "https://www.rusprofile.ru/id/1399328",
+      "fetched": null,
+      "wire_bytes": 49701,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 112.05,
+      "error": null,
+      "signals": {
+        "has_ogrn": true,
+        "has_inn": true,
+        "has_director": true
+      }
+    }
+  ]
+}

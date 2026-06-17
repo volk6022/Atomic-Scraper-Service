@@ -1,0 +1,652 @@
+[
+  {
+    "query": "What is artificial intelligence",
+    "runs": [
+      {
+        "ok": true,
+        "seconds": 7.08150120000937,
+        "organic_count": 9,
+        "error": ""
+      },
+      {
+        "ok": true,
+        "seconds": 7.084457200020552,
+        "organic_count": 9,
+        "error": ""
+      },
+      {
+        "ok": true,
+        "seconds": 3.6911419999960344,
+        "organic_count": 10,
+        "error": ""
+      },
+      {
+        "ok": true,
+        "seconds": 4.770348499994725,
+        "organic_count": 10,
+        "error": ""
+      },
+      {
+        "ok": true,
+        "seconds": 7.063362299988512,
+        "organic_count": 9,
+        "error": ""
+      },
+      {
+        "ok": false,
+        "seconds": 7.071942500013392,
+        "organic_count": 0,
+        "error": ""
+      },
+      {
+        "ok": false,
+        "seconds": 7.032674400019459,
+        "organic_count": 0,
+        "error": ""
+      },
+      {
+        "ok": true,
+        "seconds": 3.339302600012161,
+        "organic_count": 9,
+        "error": ""
+      },
+      {
+        "ok": true,
+        "seconds": 7.062549499998568,
+        "organic_count": 9,
+        "error": ""
+      },
+      {
+        "ok": false,
+        "seconds": 7.0888479000132065,
+        "organic_count": 0,
+        "error": ""
+      }
+    ]
+  },
+  {
+    "query": "python asyncio tutorial",
+    "runs": [
+      {
+        "ok": true,
+        "seconds": 3.727888699999312,
+        "organic_count": 10,
+        "error": ""
+      },
+      {
+        "ok": true,
+        "seconds": 3.0700179999985266,
+        "organic_count": 10,
+        "error": ""
+      },
+      {
+        "ok": false,
+        "seconds": 4.6769572000193875,
+        "organic_count": 0,
+        "error": ""
+      },
+      {
+        "ok": false,
+        "seconds": 2.964491700025974,
+        "organic_count": 0,
+        "error": ""
+      },
+      {
+        "ok": false,
+        "seconds": 7.056194799981313,
+        "organic_count": 0,
+        "error": ""
+      },
+      {
+        "ok": false,
+        "seconds": 3.0372626000025775,
+        "organic_count": 0,
+        "error": ""
+      },
+      {
+        "ok": true,
+        "seconds": 3.034148400009144,
+        "organic_count": 6,
+        "error": ""
+      },
+      {
+        "ok": false,
+        "seconds": 2.4298460999852978,
+        "organic_count": 0,
+        "error": ""
+      },
+      {
+        "ok": false,
+        "seconds": 2.4312787000089884,
+        "organic_count": 0,
+        "error": ""
+      },
+      {
+        "ok": false,
+        "seconds": 2.675964500027476,
+        "organic_count": 0,
+        "error": ""
+      }
+    ]
+  },
+  {
+    "query": "best coffee shops Saint Petersburg Russia",
+    "runs": [
+      {
+        "ok": false,
+        "seconds": 7.048048099997686,
+        "organic_count": 0,
+        "error": ""
+      },
+      {
+        "ok": false,
+        "seconds": 2.8972950000024866,
+        "organic_count": 0,
+        "error": ""
+      },
+      {
+        "ok": false,
+        "seconds": 3.3876425999915227,
+        "organic_count": 0,
+        "error": ""
+      },
+      {
+        "ok": false,
+        "seconds": 3.125919199985219,
+        "organic_count": 0,
+        "error": ""
+      },
+      {
+        "ok": false,
+        "seconds": 2.704313700000057,
+        "organic_count": 0,
+        "error": ""
+      },
+      {
+        "ok": true,
+        "seconds": 2.9288333999866154,
+        "organic_count": 10,
+        "error": ""
+      },
+      {
+        "ok": false,
+        "seconds": 2.7017590000177734,
+        "organic_count": 0,
+        "error": ""
+      },
+      {
+        "ok": false,
+        "seconds": 7.047842200001469,
+        "organic_count": 0,
+        "error": ""
+      },
+      {
+        "ok": false,
+        "seconds": 2.281454499985557,
+        "organic_count": 0,
+        "error": ""
+      },
+      {
+        "ok": false,
+        "seconds": 4.852309199981391,
+        "organic_count": 0,
+        "error": ""
+      }
+    ]
+  },
+  {
+    "query": "how to bake sourdough bread at home",
+    "runs": [
+      {
+        "ok": false,
+        "seconds": 3.156109400006244,
+        "organic_count": 0,
+        "error": ""
+      },
+      {
+        "ok": false,
+        "seconds": 2.873056299984455,
+        "organic_count": 0,
+        "error": ""
+      },
+      {
+        "ok": false,
+        "seconds": 2.5251529999950435,
+        "organic_count": 0,
+        "error": ""
+      },
+      {
+        "ok": false,
+        "seconds": 2.550038899993524,
+        "organic_count": 0,
+        "error": ""
+      },
+      {
+        "ok": true,
+        "seconds": 2.7981470999948215,
+        "organic_count": 10,
+        "error": ""
+      },
+      {
+        "ok": false,
+        "seconds": 2.5566814999911003,
+        "organic_count": 0,
+        "error": ""
+      },
+      {
+        "ok": false,
+        "seconds": 2.4828749999869615,
+        "organic_count": 0,
+        "error": ""
+      },
+      {
+        "ok": false,
+        "seconds": 2.5160291000211146,
+        "organic_count": 0,
+        "error": ""
+      },
+      {
+        "ok": false,
+        "seconds": 2.442989100003615,
+        "organic_count": 0,
+        "error": ""
+      },
+      {
+        "ok": false,
+        "seconds": 2.477197400003206,
+        "organic_count": 0,
+        "error": ""
+      }
+    ]
+  },
+  {
+    "query": "GDP of Germany 2024",
+    "runs": [
+      {
+        "ok": false,
+        "seconds": 3.6520997999759857,
+        "organic_count": 0,
+        "error": ""
+      },
+      {
+        "ok": false,
+        "seconds": 2.9181431000179145,
+        "organic_count": 0,
+        "error": ""
+      },
+      {
+        "ok": false,
+        "seconds": 2.6715779999794904,
+        "organic_count": 0,
+        "error": ""
+      },
+      {
+        "ok": false,
+        "seconds": 2.603604100004304,
+        "organic_count": 0,
+        "error": ""
+      },
+      {
+        "ok": false,
+        "seconds": 7.056722900015302,
+        "organic_count": 0,
+        "error": ""
+      },
+      {
+        "ok": false,
+        "seconds": 2.9130502000043634,
+        "organic_count": 0,
+        "error": ""
+      },
+      {
+        "ok": false,
+        "seconds": 3.0829583999875467,
+        "organic_count": 0,
+        "error": ""
+      },
+      {
+        "ok": false,
+        "seconds": 2.5839963000034913,
+        "organic_count": 0,
+        "error": ""
+      },
+      {
+        "ok": false,
+        "seconds": 2.5725969999912195,
+        "organic_count": 0,
+        "error": ""
+      },
+      {
+        "ok": false,
+        "seconds": 2.6165700999845285,
+        "organic_count": 0,
+        "error": ""
+      }
+    ]
+  },
+  {
+    "query": "Tesla stock price last 5 years",
+    "runs": [
+      {
+        "ok": false,
+        "seconds": 7.02808429999277,
+        "organic_count": 0,
+        "error": ""
+      },
+      {
+        "ok": false,
+        "seconds": 3.205197000002954,
+        "organic_count": 0,
+        "error": ""
+      },
+      {
+        "ok": false,
+        "seconds": 5.226077400002396,
+        "organic_count": 0,
+        "error": ""
+      },
+      {
+        "ok": true,
+        "seconds": 3.1744274999946356,
+        "organic_count": 10,
+        "error": ""
+      },
+      {
+        "ok": true,
+        "seconds": 2.6586671999830287,
+        "organic_count": 10,
+        "error": ""
+      },
+      {
+        "ok": false,
+        "seconds": 2.507094300002791,
+        "organic_count": 0,
+        "error": ""
+      },
+      {
+        "ok": false,
+        "seconds": 2.460352199996123,
+        "organic_count": 0,
+        "error": ""
+      },
+      {
+        "ok": false,
+        "seconds": 2.4998340000165626,
+        "organic_count": 0,
+        "error": ""
+      },
+      {
+        "ok": false,
+        "seconds": 2.4593735999951605,
+        "organic_count": 0,
+        "error": ""
+      },
+      {
+        "ok": true,
+        "seconds": 2.695552899996983,
+        "organic_count": 10,
+        "error": ""
+      }
+    ]
+  },
+  {
+    "query": "climate change effects 2025",
+    "runs": [
+      {
+        "ok": false,
+        "seconds": 7.310781500011217,
+        "organic_count": 0,
+        "error": ""
+      },
+      {
+        "ok": false,
+        "seconds": 7.123715399997309,
+        "organic_count": 0,
+        "error": ""
+      },
+      {
+        "ok": false,
+        "seconds": 3.0551020999846514,
+        "organic_count": 0,
+        "error": ""
+      },
+      {
+        "ok": false,
+        "seconds": 2.9862701000238303,
+        "organic_count": 0,
+        "error": ""
+      },
+      {
+        "ok": false,
+        "seconds": 2.42225979999057,
+        "organic_count": 0,
+        "error": ""
+      },
+      {
+        "ok": false,
+        "seconds": 2.4281158999947365,
+        "organic_count": 0,
+        "error": ""
+      },
+      {
+        "ok": true,
+        "seconds": 2.785408499999903,
+        "organic_count": 10,
+        "error": ""
+      },
+      {
+        "ok": false,
+        "seconds": 2.485073599993484,
+        "organic_count": 0,
+        "error": ""
+      },
+      {
+        "ok": true,
+        "seconds": 2.686691000009887,
+        "organic_count": 10,
+        "error": ""
+      },
+      {
+        "ok": false,
+        "seconds": 2.4514036000182386,
+        "organic_count": 0,
+        "error": ""
+      }
+    ]
+  },
+  {
+    "query": "best science fiction movies 2024",
+    "runs": [
+      {
+        "ok": false,
+        "seconds": 7.41162549998262,
+        "organic_count": 0,
+        "error": ""
+      },
+      {
+        "ok": false,
+        "seconds": 2.054168300004676,
+        "organic_count": 0,
+        "error": ""
+      },
+      {
+        "ok": false,
+        "seconds": 4.59324220000417,
+        "organic_count": 0,
+        "error": ""
+      },
+      {
+        "ok": false,
+        "seconds": 3.136408599995775,
+        "organic_count": 0,
+        "error": ""
+      },
+      {
+        "ok": true,
+        "seconds": 2.5537177000078373,
+        "organic_count": 9,
+        "error": ""
+      },
+      {
+        "ok": false,
+        "seconds": 2.5044256999972276,
+        "organic_count": 0,
+        "error": ""
+      },
+      {
+        "ok": false,
+        "seconds": 2.512056500010658,
+        "organic_count": 0,
+        "error": ""
+      },
+      {
+        "ok": false,
+        "seconds": 2.497379500011448,
+        "organic_count": 0,
+        "error": ""
+      },
+      {
+        "ok": false,
+        "seconds": 7.2363933000015095,
+        "organic_count": 0,
+        "error": ""
+      },
+      {
+        "ok": false,
+        "seconds": 7.199859699991066,
+        "organic_count": 0,
+        "error": ""
+      }
+    ]
+  },
+  {
+    "query": "buy iPhone 15 Pro Max",
+    "runs": [
+      {
+        "ok": false,
+        "seconds": 7.259036000003107,
+        "organic_count": 0,
+        "error": ""
+      },
+      {
+        "ok": false,
+        "seconds": 3.0484005000034813,
+        "organic_count": 0,
+        "error": ""
+      },
+      {
+        "ok": false,
+        "seconds": 3.039020600001095,
+        "organic_count": 0,
+        "error": ""
+      },
+      {
+        "ok": false,
+        "seconds": 7.250547800009372,
+        "organic_count": 0,
+        "error": ""
+      },
+      {
+        "ok": false,
+        "seconds": 3.0760290999896824,
+        "organic_count": 0,
+        "error": ""
+      },
+      {
+        "ok": false,
+        "seconds": 2.5031549999839626,
+        "organic_count": 0,
+        "error": ""
+      },
+      {
+        "ok": true,
+        "seconds": 5.705068899987964,
+        "organic_count": 10,
+        "error": ""
+      },
+      {
+        "ok": true,
+        "seconds": 2.942381500004558,
+        "organic_count": 10,
+        "error": ""
+      },
+      {
+        "ok": false,
+        "seconds": 2.548885899974266,
+        "organic_count": 0,
+        "error": ""
+      },
+      {
+        "ok": true,
+        "seconds": 2.7115163000125904,
+        "organic_count": 10,
+        "error": ""
+      }
+    ]
+  },
+  {
+    "query": "weather forecast Moscow tomorrow",
+    "runs": [
+      {
+        "ok": false,
+        "seconds": 7.315171299997019,
+        "organic_count": 0,
+        "error": ""
+      },
+      {
+        "ok": false,
+        "seconds": 2.9584259999974165,
+        "organic_count": 0,
+        "error": ""
+      },
+      {
+        "ok": true,
+        "seconds": 3.1776674000138883,
+        "organic_count": 10,
+        "error": ""
+      },
+      {
+        "ok": false,
+        "seconds": 2.521957199991448,
+        "organic_count": 0,
+        "error": ""
+      },
+      {
+        "ok": false,
+        "seconds": 2.4790017000050284,
+        "organic_count": 0,
+        "error": ""
+      },
+      {
+        "ok": false,
+        "seconds": 7.265914800023893,
+        "organic_count": 0,
+        "error": ""
+      },
+      {
+        "ok": false,
+        "seconds": 3.0682538999826647,
+        "organic_count": 0,
+        "error": ""
+      },
+      {
+        "ok": false,
+        "seconds": 7.227683999983128,
+        "organic_count": 0,
+        "error": ""
+      },
+      {
+        "ok": false,
+        "seconds": 7.266832199995406,
+        "organic_count": 0,
+        "error": ""
+      },
+      {
+        "ok": false,
+        "seconds": 7.261583600018639,
+        "organic_count": 0,
+        "error": ""
+      }
+    ]
+  }
+]

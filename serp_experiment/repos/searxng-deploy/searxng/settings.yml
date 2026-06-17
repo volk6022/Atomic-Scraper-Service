@@ -1,0 +1,97 @@
+# SearXNG settings — экспериментальный инстанс для serp_experiment.
+# Минимальный override: включаем JSON API, выключаем limiter, направляем
+# исходящий трафик через резидентный socks5 (puls).
+#
+# После правок: docker compose restart searxng
+
+use_default_settings: true
+
+general:
+  debug: false
+  instance_name: "serp-exp"
+  enable_metrics: true
+
+search:
+  safe_search: 0
+  autocomplete: ""
+  default_lang: "en"
+  ban_time_on_fail: 5
+  max_ban_time_on_fail: 120
+  # !!! критично — JSON API доступен только если перечислен здесь
+  formats:
+    - html
+    - json
+
+server:
+  port: 8080
+  bind_address: "0.0.0.0"
+  base_url: false
+  # шумит на single-user инстансе → выключаем
+  limiter: false
+  public_instance: false
+  secret_key: "serp-exp-do-not-use-in-prod"
+  image_proxy: false
+  http_protocol_version: "1.1"
+  method: "GET"
+
+ui:
+  default_locale: "en"
+  query_in_title: false
+  default_theme: simple
+
+# SearXNG-prod ходит через единственный URL — наш proxy_router на хосте.
+# Router сам управляет пулом из 20 puls socks5, делает health-check'и,
+# фильтрует грязные IP. См. serp_experiment/proxy_router/.
+outgoing:
+  request_timeout: 8.0
+  max_request_timeout: 12.0
+  useragent_suffix: ""
+  pool_connections: 20
+  pool_maxsize: 10
+  enable_http2: false  # отключаем для совместимости с HTTP CONNECT через локальный router
+  extra_proxy_timeout: 5
+  proxies:
+    all://:
+      - http://host.docker.internal:8888
+
+# Baseline-конфиг (закомментирован) — пулл из 20 socks5 напрямую, без router'а.
+# Использовался в прогонах 8-10 (см. REPORT_searxng.md). Раскомментировать для
+# повторного baseline-сравнения. Не забыть убрать router-URL выше.
+#  proxies:
+#    all://:
+#      - socks5h://efea0cd216087051c2e6__cr.ru;sessttl.10:fc6a3125b4c606fa@np.puls-proxy.com:11000
+#      - socks5h://efea0cd216087051c2e6__cr.ru;sessttl.10:fc6a3125b4c606fa@np.puls-proxy.com:11001
+#      - socks5h://efea0cd216087051c2e6__cr.ru;sessttl.10:fc6a3125b4c606fa@np.puls-proxy.com:11002
+#      - socks5h://efea0cd216087051c2e6__cr.ru;sessttl.10:fc6a3125b4c606fa@np.puls-proxy.com:11003
+#      - socks5h://efea0cd216087051c2e6__cr.ru;sessttl.10:fc6a3125b4c606fa@np.puls-proxy.com:11004
+#      - socks5h://efea0cd216087051c2e6__cr.ru;sessttl.10:fc6a3125b4c606fa@np.puls-proxy.com:11005
+#      - socks5h://efea0cd216087051c2e6__cr.ru;sessttl.10:fc6a3125b4c606fa@np.puls-proxy.com:11006
+#      - socks5h://efea0cd216087051c2e6__cr.ru;sessttl.10:fc6a3125b4c606fa@np.puls-proxy.com:11007
+#      - socks5h://efea0cd216087051c2e6__cr.ru;sessttl.10:fc6a3125b4c606fa@np.puls-proxy.com:11008
+#      - socks5h://efea0cd216087051c2e6__cr.ru;sessttl.10:fc6a3125b4c606fa@np.puls-proxy.com:11009
+#      - socks5h://efea0cd216087051c2e6__cr.pl;sessttl.10:fc6a3125b4c606fa@np.puls-proxy.com:11000
+#      - socks5h://efea0cd216087051c2e6__cr.pl;sessttl.10:fc6a3125b4c606fa@np.puls-proxy.com:11001
+#      - socks5h://efea0cd216087051c2e6__cr.pl;sessttl.10:fc6a3125b4c606fa@np.puls-proxy.com:11002
+#      - socks5h://efea0cd216087051c2e6__cr.pl;sessttl.10:fc6a3125b4c606fa@np.puls-proxy.com:11003
+#      - socks5h://efea0cd216087051c2e6__cr.pl;sessttl.10:fc6a3125b4c606fa@np.puls-proxy.com:11004
+#      - socks5h://efea0cd216087051c2e6__cr.pl;sessttl.10:fc6a3125b4c606fa@np.puls-proxy.com:11005
+#      - socks5h://efea0cd216087051c2e6__cr.pl;sessttl.10:fc6a3125b4c606fa@np.puls-proxy.com:11006
+#      - socks5h://efea0cd216087051c2e6__cr.pl;sessttl.10:fc6a3125b4c606fa@np.puls-proxy.com:11007
+#      - socks5h://efea0cd216087051c2e6__cr.pl;sessttl.10:fc6a3125b4c606fa@np.puls-proxy.com:11008
+#      - socks5h://efea0cd216087051c2e6__cr.pl;sessttl.10:fc6a3125b4c606fa@np.puls-proxy.com:11009
+
+# Явно выключаем заведомо-плохие/онион-движки, чтобы они не тянули
+# request_timeout впустую перед попаданием в suspended.
+engines:
+  - name: brave
+    disabled: true
+  - name: startpage
+    disabled: true
+  - name: karmasearch
+    disabled: true
+  - name: karmasearch videos
+    disabled: true
+  - name: ahmia
+    disabled: true
+  - name: torch
+    disabled: true

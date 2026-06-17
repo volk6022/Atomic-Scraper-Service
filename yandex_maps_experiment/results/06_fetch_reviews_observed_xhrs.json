@@ -1,0 +1,32 @@
+[
+  {
+    "url": "https://yandex.ru/maps/api/business/fetchReviews?ajax=1&businessId=82071161567&csrfToken=f1c970de834130b4dd22c098b829b0f300170ed8%3A1779097843&locale=ru_RU&page=2&pageSize=50&ranking=by_relevance_org&reqId=1779097843018123-3110083548-addrs-upper-yp-67&s=3556685284&sessionId=1779097842973508-12749416135139054952-balancer-l7leveler-kubr-yp-vla-76-BAL",
+    "method": "GET",
+    "status": 200,
+    "headers": {
+      "accept": "*/*",
+      "accept-language": "ru-RU",
+      "cookie": "is_gdpr=0; is_gdpr_b=CNr0bBDEhQM=; i=w4RzcCFFvZjMJi0Wasq45t5CZX7TIVRvGhNViGZURrNLqmUvyYOXagwl0OJbGUVDBiWBiB4LLmu8FMKKQpiM8NwqQU0=; yandexuid=9390549521779097842; bh=EkIiTm90OkEtQnJhbmQiO3Y9Ijk5IiwgIkhlYWRsZXNzQ2hyb21lIjt2PSIxNDUiLCAiQ2hyb21pdW0iO3Y9IjE0NSIaBSJ4ODYiIg4iMTQ1LjAuNzYzMi42IioCPzAyAiIiOgkiV2luZG93cyJCBiIxMC4wIkoEIjY0IlJaIk5vdDpBLUJyYW5kIjt2PSI5OS4wLjAuMCIsICJIZWFkbGVzc0Nocm9tZSI7dj0iMTQ1LjAuNzYzMi42IiwgIkNocm9taXVtIjt2PSIxNDUuMC43NjMyLjYiWgI/MGD0wavQBmoe3Mrh/wiS2KGxA5/P4eoD+/rw5w3r//32D/uRz4cI; maps_session_id=1779097842973508-12749416135139054952-balancer-l7leveler-kubr-yp-vla-76-BAL; yandex_expboxes=1534490%2C0%2C7%3B1558596%2C0%2C23%3B1545093%2C0%2C73%3B1545079%2C0%2C34%3B1556454%2C0%2C31%3B1493354%2C0%2C69%3B1502455%2C0%2C11%3B663872%2C0%2C96%3B663859%2C0%2C34%3B1543705%2C0%2C85; _yasc=9vg8bbZX4kNGEXejdU8LceGLJAZjR8Zak+cXEzgPpmcKvIra4q3LDxmE838ASlH8EBeACzuR.MTc3OTA5Nzg0OTE5NQ==",
+      "referer": "https://yandex.ru/maps/org/dental_konfidens/82071161567/reviews/?ll=30.305520%2C59.964273&z=16",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
+      "x-retpath-y": "https://yandex.ru/maps/org/dental_konfidens/82071161567/reviews/?ll=30.305520%2C59.964273&z=16",
+      "device-memory": "8",
+      "dpr": "1",
+      "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+      "sec-ch-ua-arch": "\"x86\"",
+      "sec-ch-ua-bitness": "\"64\"",
+      "sec-ch-ua-full-version": "\"145.0.7632.6\"",
+      "sec-ch-ua-full-version-list": "\"Not:A-Brand\";v=\"99.0.0.0\", \"HeadlessChrome\";v=\"145.0.7632.6\", \"Chromium\";v=\"145.0.7632.6\"",
+      "sec-ch-ua-mobile": "?0",
+      "sec-ch-ua-model": "\"\"",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "sec-ch-ua-platform-version": "\"10.0\"",
+      "sec-ch-ua-wow64": "?0",
+      "sec-ch-viewport-height": "900",
+      "sec-ch-viewport-width": "1440",
+      "viewport-width": "1440"
+    },
+    "body_preview": "{\"data\":{\"reviews\":[{\"businessComment\":{\"text\":\"Спасибо за ваш отклик\",\"updatedTime\":\"2026-04-29T10:47:19.316Z\"},\"reviewId\":\"Y2uI6pYCxMQ4m4uKsxEHRjPGRfPTYvsqZ\",\"businessId\":\"82071161567\",\"author\":{\"name\":\"Анастасия Б.\",\"avatarUrl\":\"https://avatars.mds.yandex.net/get-yapic/27274/TS2ElU2qSjIPKgATtMf1FcUv0-1/{size}\",\"professionLevel\":\"Знаток города 5 уровня\",\"rtb\":\"Знаток города 5 уровня\",\"rtbType\":\"PROFESSION\",\"publicId\":\"h6gm252m3de8eqc3844u8bajhg\",\"achievements\":[],\"professions\":[],\"isSubscribed\":false},\"text\":\"обратилась за заменой ретейнера. Усатова Анастасия Сергеевна выполнила работу быстр",
+    "body_len": 67900
+  }
+]

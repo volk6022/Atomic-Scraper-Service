@@ -1,0 +1,1574 @@
+{
+  "summary": {
+    "site": "zoon.ru",
+    "n_requests": 100,
+    "unique_urls": 20,
+    "request_success_rate": 0.9,
+    "content_success_rate": 0.9,
+    "total_wire_bytes": 6984727,
+    "total_wire_mb": 6.66,
+    "avg_bytes_per_ok": 70903,
+    "p50_bytes_ok": 59700,
+    "p95_bytes_ok": 155634,
+    "avg_attempts": 2.25,
+    "avg_latency_s": 96.08,
+    "status_dist": {
+      "200": 90,
+      "None": 5,
+      "404": 5
+    },
+    "elapsed_s": 193.8
+  },
+  "records": [
+    {
+      "url": "https://zoon.ru/spb/education/shkola_no5/",
+      "fetched": null,
+      "wire_bytes": 54588,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 1.4,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://zoon.ru/spb/law/kompaniya_lyogkij_start/",
+      "fetched": null,
+      "wire_bytes": 56825,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 6.47,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://zoon.ru/spb/beauty/network/parikmaherskie_1_ip_savchenko_lm/",
+      "fetched": null,
+      "wire_bytes": 38681,
+      "attempts": 3,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 11.37,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://zoon.ru/spb/restaurants/restoran_po_bokalam_na_klinskom_prospekte/",
+      "fetched": null,
+      "wire_bytes": 78376,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 1.37,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://zoon.ru/spb/beauty/network/creative_people/",
+      "fetched": null,
+      "wire_bytes": 39891,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 7.43,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://zoon.ru/spb/kindergarten/detskij_sad_151_kombinirovannogo_vida_na_metro_tehnologicheskij_institut_1/",
+      "fetched": null,
+      "wire_bytes": 60209,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 2.03,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://zoon.ru/spb/beauty/massazhnaya_feedback/price/",
+      "fetched": null,
+      "wire_bytes": 0,
+      "attempts": 6,
+      "ok": false,
+      "content_ok": false,
+      "status": null,
+      "latency_s": 33.13,
+      "error": "ConnectTimeout: "
+    },
+    {
+      "url": "https://zoon.ru/spb/beauty/salon_nimfa_na_metro_tehnologicheskij_institut_1/",
+      "fetched": null,
+      "wire_bytes": 155643,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 7.88,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://zoon.ru/spb/beauty/salon_lux_na_serpuhovskoj_ulitse/",
+      "fetched": null,
+      "wire_bytes": 122580,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 8.83,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://zoon.ru/spb/shops/street/bronnitskaya_ulitsa/",
+      "fetched": null,
+      "wire_bytes": 72923,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 8.76,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://zoon.ru/spb/restaurants/network/miso/",
+      "fetched": null,
+      "wire_bytes": 49325,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 9.82,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://zoon.ru/spb/restaurants/restoran_evraziya_na_zagorodnom_prospekte_64/}}}}</name> <arguments>: {</arguments> ",
+      "fetched": null,
+      "wire_bytes": 101844,
+      "attempts": 6,
+      "ok": false,
+      "content_ok": false,
+      "status": 404,
+      "latency_s": 23.61,
+      "error": "status=404 len=104472"
+    },
+    {
+      "url": "https://zoon.ru/spb/shops/supermarket_semishagoff_na_metro_tehnologicheskij_institut_2/",
+      "fetched": null,
+      "wire_bytes": 59728,
+      "attempts": 4,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 27.06,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://zoon.ru/spb/beauty/salon_krasoty_persona_pushkinskaya/",
+      "fetched": null,
+      "wire_bytes": 60311,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 12.48,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://zoon.ru/spb/p-veterinar/elena_vladimirovna_busharova/",
+      "fetched": null,
+      "wire_bytes": 42467,
+      "attempts": 3,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 24.01,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://zoon.ru/spb/vet/veterinarnyj_tsentr_doktora_busharovoj/",
+      "fetched": null,
+      "wire_bytes": 81561,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 25.07,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://zoon.ru/spb/shops/gruzinskaya_pekarnya_dobryj_pekar/",
+      "fetched": null,
+      "wire_bytes": 55327,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 25.69,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://zoon.ru/spb/shops/produktovyj_magazin_na_bronnitskoj_ulitse_37/",
+      "fetched": null,
+      "wire_bytes": 46059,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 26.54,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://zoon.ru/spb/shops/produktovyj_magazin_na_metro_tehnologichij_institut_2/",
+      "fetched": null,
+      "wire_bytes": 106589,
+      "attempts": 4,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 42.79,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://zoon.ru/spb/utility_service/atele_assol/",
+      "fetched": null,
+      "wire_bytes": 58402,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 27.97,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://zoon.ru/spb/education/shkola_no5/",
+      "fetched": null,
+      "wire_bytes": 0,
+      "attempts": 6,
+      "ok": false,
+      "content_ok": false,
+      "status": null,
+      "latency_s": 68.29,
+      "error": "ConnectTimeout: "
+    },
+    {
+      "url": "https://zoon.ru/spb/law/kompaniya_lyogkij_start/",
+      "fetched": null,
+      "wire_bytes": 56810,
+      "attempts": 3,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 44.01,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://zoon.ru/spb/beauty/network/parikmaherskie_1_ip_savchenko_lm/",
+      "fetched": null,
+      "wire_bytes": 38682,
+      "attempts": 3,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 44.6,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://zoon.ru/spb/restaurants/restoran_po_bokalam_na_klinskom_prospekte/",
+      "fetched": null,
+      "wire_bytes": 78364,
+      "attempts": 3,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 59.37,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://zoon.ru/spb/beauty/network/creative_people/",
+      "fetched": null,
+      "wire_bytes": 39898,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 44.8,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://zoon.ru/spb/kindergarten/detskij_sad_151_kombinirovannogo_vida_na_metro_tehnologicheskij_institut_1/",
+      "fetched": null,
+      "wire_bytes": 60191,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 45.52,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://zoon.ru/spb/beauty/massazhnaya_feedback/price/",
+      "fetched": null,
+      "wire_bytes": 115275,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 46.11,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://zoon.ru/spb/beauty/salon_nimfa_na_metro_tehnologicheskij_institut_1/",
+      "fetched": null,
+      "wire_bytes": 155675,
+      "attempts": 3,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 57.04,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://zoon.ru/spb/beauty/salon_lux_na_serpuhovskoj_ulitse/",
+      "fetched": null,
+      "wire_bytes": 122552,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 52.57,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://zoon.ru/spb/shops/street/bronnitskaya_ulitsa/",
+      "fetched": null,
+      "wire_bytes": 72929,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 53.77,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://zoon.ru/spb/restaurants/network/miso/",
+      "fetched": null,
+      "wire_bytes": 49328,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 54.77,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://zoon.ru/spb/restaurants/restoran_evraziya_na_zagorodnom_prospekte_64/}}}}</name> <arguments>: {</arguments> ",
+      "fetched": null,
+      "wire_bytes": 147556,
+      "attempts": 6,
+      "ok": false,
+      "content_ok": false,
+      "status": 404,
+      "latency_s": 68.63,
+      "error": "status=404 len=104480"
+    },
+    {
+      "url": "https://zoon.ru/spb/shops/supermarket_semishagoff_na_metro_tehnologicheskij_institut_2/",
+      "fetched": null,
+      "wire_bytes": 59719,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 64.93,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://zoon.ru/spb/beauty/salon_krasoty_persona_pushkinskaya/",
+      "fetched": null,
+      "wire_bytes": 60299,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 67.4,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://zoon.ru/spb/p-veterinar/elena_vladimirovna_busharova/",
+      "fetched": null,
+      "wire_bytes": 42482,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 70.6,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://zoon.ru/spb/vet/veterinarnyj_tsentr_doktora_busharovoj/",
+      "fetched": null,
+      "wire_bytes": 81583,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 68.39,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://zoon.ru/spb/shops/gruzinskaya_pekarnya_dobryj_pekar/",
+      "fetched": null,
+      "wire_bytes": 55336,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 69.09,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://zoon.ru/spb/shops/produktovyj_magazin_na_bronnitskoj_ulitse_37/",
+      "fetched": null,
+      "wire_bytes": 46080,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 69.23,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://zoon.ru/spb/shops/produktovyj_magazin_na_metro_tehnologichij_institut_2/",
+      "fetched": null,
+      "wire_bytes": 106544,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 69.66,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://zoon.ru/spb/utility_service/atele_assol/",
+      "fetched": null,
+      "wire_bytes": 58421,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 69.86,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://zoon.ru/spb/education/shkola_no5/",
+      "fetched": null,
+      "wire_bytes": 54602,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 69.77,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://zoon.ru/spb/law/kompaniya_lyogkij_start/",
+      "fetched": null,
+      "wire_bytes": 56813,
+      "attempts": 4,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 86.26,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://zoon.ru/spb/beauty/network/parikmaherskie_1_ip_savchenko_lm/",
+      "fetched": null,
+      "wire_bytes": 38677,
+      "attempts": 4,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 85.6,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://zoon.ru/spb/restaurants/restoran_po_bokalam_na_klinskom_prospekte/",
+      "fetched": null,
+      "wire_bytes": 78353,
+      "attempts": 4,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 86.2,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://zoon.ru/spb/beauty/network/creative_people/",
+      "fetched": null,
+      "wire_bytes": 39892,
+      "attempts": 4,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 87.05,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://zoon.ru/spb/kindergarten/detskij_sad_151_kombinirovannogo_vida_na_metro_tehnologicheskij_institut_1/",
+      "fetched": null,
+      "wire_bytes": 60188,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 86.45,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://zoon.ru/spb/beauty/massazhnaya_feedback/price/",
+      "fetched": null,
+      "wire_bytes": 115016,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 87.38,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://zoon.ru/spb/beauty/salon_nimfa_na_metro_tehnologicheskij_institut_1/",
+      "fetched": null,
+      "wire_bytes": 155642,
+      "attempts": 6,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 114.58,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://zoon.ru/spb/beauty/salon_lux_na_serpuhovskoj_ulitse/",
+      "fetched": null,
+      "wire_bytes": 122549,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 87.26,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://zoon.ru/spb/shops/street/bronnitskaya_ulitsa/",
+      "fetched": null,
+      "wire_bytes": 72920,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 88.29,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://zoon.ru/spb/restaurants/network/miso/",
+      "fetched": null,
+      "wire_bytes": 49330,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 88.17,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://zoon.ru/spb/restaurants/restoran_evraziya_na_zagorodnom_prospekte_64/}}}}</name> <arguments>: {</arguments> ",
+      "fetched": null,
+      "wire_bytes": 117986,
+      "attempts": 6,
+      "ok": false,
+      "content_ok": false,
+      "status": 404,
+      "latency_s": 104.97,
+      "error": "ConnectTimeout: "
+    },
+    {
+      "url": "https://zoon.ru/spb/shops/supermarket_semishagoff_na_metro_tehnologicheskij_institut_2/",
+      "fetched": null,
+      "wire_bytes": 59684,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 93.93,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://zoon.ru/spb/beauty/salon_krasoty_persona_pushkinskaya/",
+      "fetched": null,
+      "wire_bytes": 60306,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 89.3,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://zoon.ru/spb/p-veterinar/elena_vladimirovna_busharova/",
+      "fetched": null,
+      "wire_bytes": 42526,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 93.59,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://zoon.ru/spb/vet/veterinarnyj_tsentr_doktora_busharovoj/",
+      "fetched": null,
+      "wire_bytes": 81558,
+      "attempts": 3,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 104.76,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://zoon.ru/spb/shops/gruzinskaya_pekarnya_dobryj_pekar/",
+      "fetched": null,
+      "wire_bytes": 55318,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 94.79,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://zoon.ru/spb/shops/produktovyj_magazin_na_bronnitskoj_ulitse_37/",
+      "fetched": null,
+      "wire_bytes": 46065,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 100.54,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://zoon.ru/spb/shops/produktovyj_magazin_na_metro_tehnologichij_institut_2/",
+      "fetched": null,
+      "wire_bytes": 0,
+      "attempts": 6,
+      "ok": false,
+      "content_ok": false,
+      "status": null,
+      "latency_s": 131.74,
+      "error": "ConnectTimeout: "
+    },
+    {
+      "url": "https://zoon.ru/spb/utility_service/atele_assol/",
+      "fetched": null,
+      "wire_bytes": 58412,
+      "attempts": 5,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 137.83,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://zoon.ru/spb/education/shkola_no5/",
+      "fetched": null,
+      "wire_bytes": 54577,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 105.66,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://zoon.ru/spb/law/kompaniya_lyogkij_start/",
+      "fetched": null,
+      "wire_bytes": 56807,
+      "attempts": 3,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 116.8,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://zoon.ru/spb/beauty/network/parikmaherskie_1_ip_savchenko_lm/",
+      "fetched": null,
+      "wire_bytes": 38679,
+      "attempts": 5,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 135.62,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://zoon.ru/spb/restaurants/restoran_po_bokalam_na_klinskom_prospekte/",
+      "fetched": null,
+      "wire_bytes": 78388,
+      "attempts": 5,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 137.93,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://zoon.ru/spb/beauty/network/creative_people/",
+      "fetched": null,
+      "wire_bytes": 39909,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 134.38,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://zoon.ru/spb/kindergarten/detskij_sad_151_kombinirovannogo_vida_na_metro_tehnologicheskij_institut_1/",
+      "fetched": null,
+      "wire_bytes": 60205,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 140.11,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://zoon.ru/spb/beauty/massazhnaya_feedback/price/",
+      "fetched": null,
+      "wire_bytes": 115237,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 139.85,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://zoon.ru/spb/beauty/salon_nimfa_na_metro_tehnologicheskij_institut_1/",
+      "fetched": null,
+      "wire_bytes": 155658,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 143.73,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://zoon.ru/spb/beauty/salon_lux_na_serpuhovskoj_ulitse/",
+      "fetched": null,
+      "wire_bytes": 122577,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 138.87,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://zoon.ru/spb/shops/street/bronnitskaya_ulitsa/",
+      "fetched": null,
+      "wire_bytes": 72924,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 139.91,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://zoon.ru/spb/restaurants/network/miso/",
+      "fetched": null,
+      "wire_bytes": 49328,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 140.73,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://zoon.ru/spb/restaurants/restoran_evraziya_na_zagorodnom_prospekte_64/}}}}</name> <arguments>: {</arguments> ",
+      "fetched": null,
+      "wire_bytes": 118028,
+      "attempts": 6,
+      "ok": false,
+      "content_ok": false,
+      "status": 404,
+      "latency_s": 153.59,
+      "error": "status=404 len=104454"
+    },
+    {
+      "url": "https://zoon.ru/spb/shops/supermarket_semishagoff_na_metro_tehnologicheskij_institut_2/",
+      "fetched": null,
+      "wire_bytes": 59691,
+      "attempts": 4,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 156.71,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://zoon.ru/spb/beauty/salon_krasoty_persona_pushkinskaya/",
+      "fetched": null,
+      "wire_bytes": 60310,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 141.71,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://zoon.ru/spb/p-veterinar/elena_vladimirovna_busharova/",
+      "fetched": null,
+      "wire_bytes": 42482,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 142.44,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://zoon.ru/spb/vet/veterinarnyj_tsentr_doktora_busharovoj/",
+      "fetched": null,
+      "wire_bytes": 81567,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 143.52,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://zoon.ru/spb/shops/gruzinskaya_pekarnya_dobryj_pekar/",
+      "fetched": null,
+      "wire_bytes": 55326,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 149.75,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://zoon.ru/spb/shops/produktovyj_magazin_na_bronnitskoj_ulitse_37/",
+      "fetched": null,
+      "wire_bytes": 46068,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 144.68,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://zoon.ru/spb/shops/produktovyj_magazin_na_metro_tehnologichij_institut_2/",
+      "fetched": null,
+      "wire_bytes": 106754,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 145.82,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://zoon.ru/spb/utility_service/atele_assol/",
+      "fetched": null,
+      "wire_bytes": 58422,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 146.81,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://zoon.ru/spb/education/shkola_no5/",
+      "fetched": null,
+      "wire_bytes": 54611,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 152.84,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://zoon.ru/spb/law/kompaniya_lyogkij_start/",
+      "fetched": null,
+      "wire_bytes": 56815,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 155.76,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://zoon.ru/spb/beauty/network/parikmaherskie_1_ip_savchenko_lm/",
+      "fetched": null,
+      "wire_bytes": 38692,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 153.68,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://zoon.ru/spb/restaurants/restoran_po_bokalam_na_klinskom_prospekte/",
+      "fetched": null,
+      "wire_bytes": 78354,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 154.84,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://zoon.ru/spb/beauty/network/creative_people/",
+      "fetched": null,
+      "wire_bytes": 39898,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 155.4,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://zoon.ru/spb/kindergarten/detskij_sad_151_kombinirovannogo_vida_na_metro_tehnologicheskij_institut_1/",
+      "fetched": null,
+      "wire_bytes": 60214,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 155.83,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://zoon.ru/spb/beauty/massazhnaya_feedback/price/",
+      "fetched": null,
+      "wire_bytes": 114835,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 156.81,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://zoon.ru/spb/beauty/salon_nimfa_na_metro_tehnologicheskij_institut_1/",
+      "fetched": null,
+      "wire_bytes": 155634,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 157.2,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://zoon.ru/spb/beauty/salon_lux_na_serpuhovskoj_ulitse/",
+      "fetched": null,
+      "wire_bytes": 122527,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 162.08,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://zoon.ru/spb/shops/street/bronnitskaya_ulitsa/",
+      "fetched": null,
+      "wire_bytes": 0,
+      "attempts": 6,
+      "ok": false,
+      "content_ok": false,
+      "status": null,
+      "latency_s": 187.66,
+      "error": "ConnectTimeout: "
+    },
+    {
+      "url": "https://zoon.ru/spb/restaurants/network/miso/",
+      "fetched": null,
+      "wire_bytes": 49345,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 161.57,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://zoon.ru/spb/restaurants/restoran_evraziya_na_zagorodnom_prospekte_64/}}}}</name> <arguments>: {</arguments> ",
+      "fetched": null,
+      "wire_bytes": 118014,
+      "attempts": 6,
+      "ok": false,
+      "content_ok": false,
+      "status": 404,
+      "latency_s": 175.33,
+      "error": "ConnectTimeout: "
+    },
+    {
+      "url": "https://zoon.ru/spb/shops/supermarket_semishagoff_na_metro_tehnologicheskij_institut_2/",
+      "fetched": null,
+      "wire_bytes": 59700,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 162.42,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://zoon.ru/spb/beauty/salon_krasoty_persona_pushkinskaya/",
+      "fetched": null,
+      "wire_bytes": 60313,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 164.26,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://zoon.ru/spb/p-veterinar/elena_vladimirovna_busharova/",
+      "fetched": null,
+      "wire_bytes": 0,
+      "attempts": 6,
+      "ok": false,
+      "content_ok": false,
+      "status": null,
+      "latency_s": 193.59,
+      "error": "ConnectTimeout: "
+    },
+    {
+      "url": "https://zoon.ru/spb/vet/veterinarnyj_tsentr_doktora_busharovoj/",
+      "fetched": null,
+      "wire_bytes": 81564,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 164.84,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://zoon.ru/spb/shops/gruzinskaya_pekarnya_dobryj_pekar/",
+      "fetched": null,
+      "wire_bytes": 55314,
+      "attempts": 5,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 186.31,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://zoon.ru/spb/shops/produktovyj_magazin_na_bronnitskoj_ulitse_37/",
+      "fetched": null,
+      "wire_bytes": 46081,
+      "attempts": 4,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 191.93,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://zoon.ru/spb/shops/produktovyj_magazin_na_metro_tehnologichij_institut_2/",
+      "fetched": null,
+      "wire_bytes": 106568,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 187.61,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://zoon.ru/spb/utility_service/atele_assol/",
+      "fetched": null,
+      "wire_bytes": 58421,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 188.47,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    }
+  ]
+}

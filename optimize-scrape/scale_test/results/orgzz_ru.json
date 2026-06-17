@@ -1,0 +1,1622 @@
+{
+  "summary": {
+    "site": "orgzz.ru",
+    "n_requests": 100,
+    "unique_urls": 19,
+    "request_success_rate": 1.0,
+    "content_success_rate": 1.0,
+    "total_wire_bytes": 613306,
+    "total_wire_mb": 0.58,
+    "avg_bytes_per_ok": 6133,
+    "p50_bytes_ok": 6149,
+    "p95_bytes_ok": 6576,
+    "avg_attempts": 1.28,
+    "avg_latency_s": 36.62,
+    "status_dist": {
+      "200": 100
+    },
+    "elapsed_s": 71.6
+  },
+  "records": [
+    {
+      "url": "https://orgzz.ru/spb/co/srednyaya_obscheobrazovatelnaya_shkola_317/2351042",
+      "fetched": null,
+      "wire_bytes": 5762,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 1.18,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://orgzz.ru/vsevolozhsk/co/semishagoff/2312034",
+      "fetched": null,
+      "wire_bytes": 5706,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 1.82,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://orgzz.ru/spb/co/produktovyy_magazin/5523403",
+      "fetched": null,
+      "wire_bytes": 5543,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 1.01,
+      "error": null,
+      "signals": {
+        "phone": false,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://orgzz.ru/spb/co/tochka_sborki_cvetochnaya/2419861",
+      "fetched": null,
+      "wire_bytes": 6547,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 2.14,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://orgzz.ru/spb/co/flowers_market/2332173",
+      "fetched": null,
+      "wire_bytes": 6545,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 2.45,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://orgzz.ru/spb/co/pyshlandiya/2306696",
+      "fetched": null,
+      "wire_bytes": 5836,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 2.62,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://orgzz.ru/spb/co/hlebnik/4173143",
+      "fetched": null,
+      "wire_bytes": 6021,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 2.93,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://orgzz.ru/spb/co/oranzh/2355913",
+      "fetched": null,
+      "wire_bytes": 6174,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 3.05,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://orgzz.ru/spb/co/sberbank/2367026",
+      "fetched": null,
+      "wire_bytes": 5621,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 3.52,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://orgzz.ru/spb/himchistki/adr/69636/moskovskiy",
+      "fetched": null,
+      "wire_bytes": 6576,
+      "attempts": 3,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 13.97,
+      "error": null,
+      "signals": {
+        "phone": false,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://orgzz.ru/spb/co/onlishkoda/5059065",
+      "fetched": null,
+      "wire_bytes": 6528,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 3.72,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://orgzz.ru/chelyabinsk/co/armeyka_net/5546294",
+      "fetched": null,
+      "wire_bytes": 6428,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 4.09,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://orgzz.ru/spb/co/nasha_pekarnya/2422924",
+      "fetched": null,
+      "wire_bytes": 6149,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 4.41,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://orgzz.ru/spb/co/dobryy_pekar/2291313",
+      "fetched": null,
+      "wire_bytes": 5941,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 4.35,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://orgzz.ru/spb/co/gorzdrav/2429976",
+      "fetched": null,
+      "wire_bytes": 6044,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 4.89,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://orgzz.ru/spb/co/sacivi/2366456",
+      "fetched": null,
+      "wire_bytes": 6498,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 5.69,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://orgzz.ru/spb/co/avtorskaya_stomatologiya/2392881",
+      "fetched": null,
+      "wire_bytes": 6456,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 10.34,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://orgzz.ru/spb/co/atele_individualnogo_poshiva/2382087",
+      "fetched": null,
+      "wire_bytes": 5730,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 5.44,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://orgzz.ru/spb/co/klinika_osteopatii_doktora_nazarova/4258867",
+      "fetched": null,
+      "wire_bytes": 6531,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 13.73,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://orgzz.ru/spb/co/srednyaya_obscheobrazovatelnaya_shkola_317/2351042",
+      "fetched": null,
+      "wire_bytes": 5762,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 11.66,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://orgzz.ru/vsevolozhsk/co/semishagoff/2312034",
+      "fetched": null,
+      "wire_bytes": 5706,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 11.33,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://orgzz.ru/spb/co/produktovyy_magazin/5523403",
+      "fetched": null,
+      "wire_bytes": 5543,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 12.38,
+      "error": null,
+      "signals": {
+        "phone": false,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://orgzz.ru/spb/co/tochka_sborki_cvetochnaya/2419861",
+      "fetched": null,
+      "wire_bytes": 6547,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 14.52,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://orgzz.ru/spb/co/flowers_market/2332173",
+      "fetched": null,
+      "wire_bytes": 6545,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 13.13,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://orgzz.ru/spb/co/pyshlandiya/2306696",
+      "fetched": null,
+      "wire_bytes": 5836,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 16.0,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://orgzz.ru/spb/co/hlebnik/4173143",
+      "fetched": null,
+      "wire_bytes": 6021,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 14.58,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://orgzz.ru/spb/co/oranzh/2355913",
+      "fetched": null,
+      "wire_bytes": 6174,
+      "attempts": 4,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 29.9,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://orgzz.ru/spb/co/sberbank/2367026",
+      "fetched": null,
+      "wire_bytes": 5621,
+      "attempts": 3,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 25.6,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://orgzz.ru/spb/himchistki/adr/69636/moskovskiy",
+      "fetched": null,
+      "wire_bytes": 6576,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 15.44,
+      "error": null,
+      "signals": {
+        "phone": false,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://orgzz.ru/spb/co/onlishkoda/5059065",
+      "fetched": null,
+      "wire_bytes": 6528,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 18.42,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://orgzz.ru/chelyabinsk/co/armeyka_net/5546294",
+      "fetched": null,
+      "wire_bytes": 6428,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 16.93,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://orgzz.ru/spb/co/nasha_pekarnya/2422924",
+      "fetched": null,
+      "wire_bytes": 6149,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 17.74,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://orgzz.ru/spb/co/dobryy_pekar/2291313",
+      "fetched": null,
+      "wire_bytes": 5941,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 20.64,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://orgzz.ru/spb/co/gorzdrav/2429976",
+      "fetched": null,
+      "wire_bytes": 6044,
+      "attempts": 3,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 29.49,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://orgzz.ru/spb/co/sacivi/2366456",
+      "fetched": null,
+      "wire_bytes": 6498,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 22.05,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://orgzz.ru/spb/co/avtorskaya_stomatologiya/2392881",
+      "fetched": null,
+      "wire_bytes": 6456,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 23.01,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://orgzz.ru/spb/co/atele_individualnogo_poshiva/2382087",
+      "fetched": null,
+      "wire_bytes": 5730,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 24.37,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://orgzz.ru/spb/co/klinika_osteopatii_doktora_nazarova/4258867",
+      "fetched": null,
+      "wire_bytes": 6533,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 40.43,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://orgzz.ru/spb/co/srednyaya_obscheobrazovatelnaya_shkola_317/2351042",
+      "fetched": null,
+      "wire_bytes": 5762,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 26.54,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://orgzz.ru/vsevolozhsk/co/semishagoff/2312034",
+      "fetched": null,
+      "wire_bytes": 5706,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 27.47,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://orgzz.ru/spb/co/produktovyy_magazin/5523403",
+      "fetched": null,
+      "wire_bytes": 5543,
+      "attempts": 3,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 38.16,
+      "error": null,
+      "signals": {
+        "phone": false,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://orgzz.ru/spb/co/tochka_sborki_cvetochnaya/2419861",
+      "fetched": null,
+      "wire_bytes": 6547,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 30.47,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://orgzz.ru/spb/co/flowers_market/2332173",
+      "fetched": null,
+      "wire_bytes": 6545,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 35.54,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://orgzz.ru/spb/co/pyshlandiya/2306696",
+      "fetched": null,
+      "wire_bytes": 5836,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 31.37,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://orgzz.ru/spb/co/hlebnik/4173143",
+      "fetched": null,
+      "wire_bytes": 6021,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 41.79,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://orgzz.ru/spb/co/oranzh/2355913",
+      "fetched": null,
+      "wire_bytes": 6174,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 36.26,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://orgzz.ru/spb/co/sberbank/2367026",
+      "fetched": null,
+      "wire_bytes": 5621,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 38.11,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://orgzz.ru/spb/himchistki/adr/69636/moskovskiy",
+      "fetched": null,
+      "wire_bytes": 6576,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 38.87,
+      "error": null,
+      "signals": {
+        "phone": false,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://orgzz.ru/spb/co/onlishkoda/5059065",
+      "fetched": null,
+      "wire_bytes": 6528,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 43.84,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://orgzz.ru/chelyabinsk/co/armeyka_net/5546294",
+      "fetched": null,
+      "wire_bytes": 6432,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 39.45,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://orgzz.ru/spb/co/nasha_pekarnya/2422924",
+      "fetched": null,
+      "wire_bytes": 6149,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 40.14,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://orgzz.ru/spb/co/dobryy_pekar/2291313",
+      "fetched": null,
+      "wire_bytes": 5941,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 43.29,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://orgzz.ru/spb/co/gorzdrav/2429976",
+      "fetched": null,
+      "wire_bytes": 6044,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 46.26,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://orgzz.ru/spb/co/sacivi/2366456",
+      "fetched": null,
+      "wire_bytes": 6498,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 42.57,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://orgzz.ru/spb/co/avtorskaya_stomatologiya/2392881",
+      "fetched": null,
+      "wire_bytes": 6456,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 45.43,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://orgzz.ru/spb/co/atele_individualnogo_poshiva/2382087",
+      "fetched": null,
+      "wire_bytes": 5730,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 43.99,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://orgzz.ru/spb/co/klinika_osteopatii_doktora_nazarova/4258867",
+      "fetched": null,
+      "wire_bytes": 6533,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 44.4,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://orgzz.ru/spb/co/srednyaya_obscheobrazovatelnaya_shkola_317/2351042",
+      "fetched": null,
+      "wire_bytes": 5763,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 44.68,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://orgzz.ru/vsevolozhsk/co/semishagoff/2312034",
+      "fetched": null,
+      "wire_bytes": 5706,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 44.97,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://orgzz.ru/spb/co/produktovyy_magazin/5523403",
+      "fetched": null,
+      "wire_bytes": 5543,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 45.37,
+      "error": null,
+      "signals": {
+        "phone": false,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://orgzz.ru/spb/co/tochka_sborki_cvetochnaya/2419861",
+      "fetched": null,
+      "wire_bytes": 6547,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 45.57,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://orgzz.ru/spb/co/flowers_market/2332173",
+      "fetched": null,
+      "wire_bytes": 6545,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 46.16,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://orgzz.ru/spb/co/pyshlandiya/2306696",
+      "fetched": null,
+      "wire_bytes": 5836,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 51.29,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://orgzz.ru/spb/co/hlebnik/4173143",
+      "fetched": null,
+      "wire_bytes": 6021,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 46.59,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://orgzz.ru/spb/co/oranzh/2355913",
+      "fetched": null,
+      "wire_bytes": 6174,
+      "attempts": 3,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 57.05,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://orgzz.ru/spb/co/sberbank/2367026",
+      "fetched": null,
+      "wire_bytes": 5621,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 54.41,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://orgzz.ru/spb/himchistki/adr/69636/moskovskiy",
+      "fetched": null,
+      "wire_bytes": 6576,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 47.42,
+      "error": null,
+      "signals": {
+        "phone": false,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://orgzz.ru/spb/co/onlishkoda/5059065",
+      "fetched": null,
+      "wire_bytes": 6528,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 55.19,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://orgzz.ru/chelyabinsk/co/armeyka_net/5546294",
+      "fetched": null,
+      "wire_bytes": 6432,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 52.45,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://orgzz.ru/spb/co/nasha_pekarnya/2422924",
+      "fetched": null,
+      "wire_bytes": 6149,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 53.15,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://orgzz.ru/spb/co/dobryy_pekar/2291313",
+      "fetched": null,
+      "wire_bytes": 5941,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 53.79,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://orgzz.ru/spb/co/gorzdrav/2429976",
+      "fetched": null,
+      "wire_bytes": 6044,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 56.35,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://orgzz.ru/spb/co/sacivi/2366456",
+      "fetched": null,
+      "wire_bytes": 6498,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 55.28,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://orgzz.ru/spb/co/avtorskaya_stomatologiya/2392881",
+      "fetched": null,
+      "wire_bytes": 6456,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 55.85,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://orgzz.ru/spb/co/atele_individualnogo_poshiva/2382087",
+      "fetched": null,
+      "wire_bytes": 5730,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 57.81,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://orgzz.ru/spb/co/klinika_osteopatii_doktora_nazarova/4258867",
+      "fetched": null,
+      "wire_bytes": 6533,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 56.68,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://orgzz.ru/spb/co/srednyaya_obscheobrazovatelnaya_shkola_317/2351042",
+      "fetched": null,
+      "wire_bytes": 5763,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 57.21,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://orgzz.ru/vsevolozhsk/co/semishagoff/2312034",
+      "fetched": null,
+      "wire_bytes": 5706,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 57.43,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://orgzz.ru/spb/co/produktovyy_magazin/5523403",
+      "fetched": null,
+      "wire_bytes": 5543,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 58.07,
+      "error": null,
+      "signals": {
+        "phone": false,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://orgzz.ru/spb/co/tochka_sborki_cvetochnaya/2419861",
+      "fetched": null,
+      "wire_bytes": 6547,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 57.95,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://orgzz.ru/spb/co/flowers_market/2332173",
+      "fetched": null,
+      "wire_bytes": 6545,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 58.46,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://orgzz.ru/spb/co/pyshlandiya/2306696",
+      "fetched": null,
+      "wire_bytes": 5836,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 58.5,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://orgzz.ru/spb/co/hlebnik/4173143",
+      "fetched": null,
+      "wire_bytes": 6021,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 58.86,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://orgzz.ru/spb/co/oranzh/2355913",
+      "fetched": null,
+      "wire_bytes": 6174,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 58.73,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://orgzz.ru/spb/co/sberbank/2367026",
+      "fetched": null,
+      "wire_bytes": 5621,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 59.41,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://orgzz.ru/spb/himchistki/adr/69636/moskovskiy",
+      "fetched": null,
+      "wire_bytes": 6576,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 59.32,
+      "error": null,
+      "signals": {
+        "phone": false,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://orgzz.ru/spb/co/onlishkoda/5059065",
+      "fetched": null,
+      "wire_bytes": 6528,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 59.64,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://orgzz.ru/chelyabinsk/co/armeyka_net/5546294",
+      "fetched": null,
+      "wire_bytes": 6432,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 59.75,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://orgzz.ru/spb/co/nasha_pekarnya/2422924",
+      "fetched": null,
+      "wire_bytes": 6149,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 65.45,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://orgzz.ru/spb/co/dobryy_pekar/2291313",
+      "fetched": null,
+      "wire_bytes": 5941,
+      "attempts": 3,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 70.45,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://orgzz.ru/spb/co/gorzdrav/2429976",
+      "fetched": null,
+      "wire_bytes": 6044,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 60.34,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://orgzz.ru/spb/co/sacivi/2366456",
+      "fetched": null,
+      "wire_bytes": 6498,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 60.69,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://orgzz.ru/spb/co/avtorskaya_stomatologiya/2392881",
+      "fetched": null,
+      "wire_bytes": 6456,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 66.18,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://orgzz.ru/spb/co/atele_individualnogo_poshiva/2382087",
+      "fetched": null,
+      "wire_bytes": 5730,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 61.52,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://orgzz.ru/spb/co/klinika_osteopatii_doktora_nazarova/4258867",
+      "fetched": null,
+      "wire_bytes": 6533,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 62.29,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://orgzz.ru/spb/co/srednyaya_obscheobrazovatelnaya_shkola_317/2351042",
+      "fetched": null,
+      "wire_bytes": 5763,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 63.28,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://orgzz.ru/vsevolozhsk/co/semishagoff/2312034",
+      "fetched": null,
+      "wire_bytes": 5706,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 63.97,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://orgzz.ru/spb/co/produktovyy_magazin/5523403",
+      "fetched": null,
+      "wire_bytes": 5543,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 64.81,
+      "error": null,
+      "signals": {
+        "phone": false,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://orgzz.ru/spb/co/tochka_sborki_cvetochnaya/2419861",
+      "fetched": null,
+      "wire_bytes": 6547,
+      "attempts": 1,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 65.58,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    },
+    {
+      "url": "https://orgzz.ru/spb/co/flowers_market/2332173",
+      "fetched": null,
+      "wire_bytes": 6545,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 71.42,
+      "error": null,
+      "signals": {
+        "phone": true,
+        "has_address": true,
+        "has_extra": true
+      }
+    }
+  ]
+}

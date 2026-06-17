@@ -1,0 +1,1677 @@
+[
+  {
+    "businessComment": {
+      "text": "Спасибо за ваш отклик",
+      "updatedTime": "2026-04-29T10:47:19.316Z"
+    },
+    "reviewId": "Y2uI6pYCxMQ4m4uKsxEHRjPGRfPTYvsqZ",
+    "businessId": "82071161567",
+    "author": {
+      "name": "Анастасия Б.",
+      "avatarUrl": "https://avatars.mds.yandex.net/get-yapic/27274/TS2ElU2qSjIPKgATtMf1FcUv0-1/{size}",
+      "professionLevel": "Знаток города 5 уровня",
+      "rtb": "Знаток города 5 уровня",
+      "rtbType": "PROFESSION",
+      "publicId": "h6gm252m3de8eqc3844u8bajhg",
+      "achievements": [],
+      "professions": [],
+      "isSubscribed": false
+    },
+    "text": "обратилась за заменой ретейнера. Усатова Анастасия Сергеевна выполнила работу быстро и качественно. Также дала рекомендации насчет второго ретейнера. очень довольна! ",
+    "textLanguage": "ru",
+    "textTranslations": {
+      "tr": "Tutucuyu değiştirmek için başvurdum. Usatova Anastasia Sergeevna işi hızlı ve verimli bir şekilde yaptı. Ayrıca ikinci tutucu hakkında tavsiyelerde bulundu. çok memnunum! "
+    },
+    "rating": 5,
+    "updatedTime": "2026-04-23T08:25:51.093Z",
+    "reactions": {
+      "likes": 0,
+      "dislikes": 0,
+      "userReaction": "NONE"
+    },
+    "photos": [],
+    "videos": []
+  },
+  {
+    "businessComment": {
+      "text": "Спасибо за такой отзыв",
+      "updatedTime": "2026-03-19T15:23:08.319Z"
+    },
+    "reviewId": "y4J215KpeI5xR8srbuxIzI2DnivhVr59B",
+    "businessId": "82071161567",
+    "author": {
+      "name": "Марина А.",
+      "avatarUrl": "https://avatars.mds.yandex.net/get-yapic/20749/OQO9WfGXjPVV9Pcr59J0XMMN0-1/{size}",
+      "professionLevel": "Знаток города 7 уровня",
+      "rtb": "Знаток города 7 уровня",
+      "rtbType": "PROFESSION",
+      "publicId": "p8ygqemzehnbfj4fc3uz1e09qr",
+      "achievements": [],
+      "professions": [],
+      "isSubscribed": false
+    },
+    "text": "Очень приятная клиника, приветливый и улыбчивый персонал\nВ главную очередь хочу поблагодарить Эльвиру за ее труд, отзывчивость и всегда прекрасное настроение) ",
+    "textLanguage": "ru",
+    "textTranslations": {
+      "tr": "Çok hoş bir klinik, güler yüzlü ve güler yüzlü personel\nÖncelikle Elvira'ya çalışmaları, duyarlılığı ve her zaman harika ruh hali için teşekkür etmek istiyorum) "
+    },
+    "rating": 5,
+    "updatedTime": "2026-03-18T06:35:45.334Z",
+    "reactions": {
+      "likes": 0,
+      "dislikes": 0,
+      "userReaction": "NONE"
+    },
+    "photos": [
+      {
+        "type": "photo",
+        "id": "18785127_2a0000019cffa851da627aae6c8ca183f1e8",
+        "businessId": "82071161567",
+        "urlTemplate": "https://avatars.mds.yandex.net/get-altay/18785127/2a0000019cffa851da627aae6c8ca183f1e8/{size}",
+        "createdTime": 1773815749167,
+        "moderation": {
+          "status": "ACCEPTED"
+        },
+        "showReactions": true,
+        "reactions": {
+          "likes": 0,
+          "dislikes": 0,
+          "userReaction": "NONE"
+        },
+        "copyright": {
+          "name": "Марина А.",
+          "publicId": "p8ygqemzehnbfj4fc3uz1e09qr",
+          "imageUrlTemplate": "https://avatars.mds.yandex.net/get-yapic/20749/OQO9WfGXjPVV9Pcr59J0XMMN0-1/{size}",
+          "updateTime": 1773815749167,
+          "hasPublicProfile": true,
+          "isSubscribed": false
+        }
+      }
+    ],
+    "videos": []
+  },
+  {
+    "businessComment": {
+      "text": "Спасибо за оценку",
+      "updatedTime": "2026-01-27T13:30:54.650Z"
+    },
+    "reviewId": "jXE_52MSaqsC3yVMqV5cYfqE-bUvj1HY",
+    "businessId": "82071161567",
+    "author": {
+      "name": "Личный",
+      "avatarUrl": "https://avatars.mds.yandex.net/get-yapic/29310/0o-6/{size}",
+      "professionLevel": "Знаток города 8 уровня",
+      "rtb": "Знаток города 8 уровня",
+      "rtbType": "PROFESSION",
+      "publicId": "z01eetejeayrgt25vcz7j6vgdm",
+      "achievements": [],
+      "professions": [],
+      "isSubscribed": false
+    },
+    "text": "Несколько раз была на приеме у доктора Гонгелевой. Все очень нравится, доктор все подробно объясняет, уделяет много внимания и времени. \nПомимо лечения отлично делает чистки. \nРекомендую всем)",
+    "textLanguage": "ru",
+    "textTranslations": {
+      "tr": "Birkaç kez Doktor Gongeleva'nın randevusuna gittim. Her şeyi çok beğendim, doktor her şeyi ayrıntılı olarak açıklıyor, çok dikkat ve zaman ayırıyor. \nTedaviye ek olarak mükemmel temizlik yapar. \nHerkese tavsiye ederim)"
+    },
+    "rating": 5,
+    "updatedTime": "2026-01-17T07:31:06.725Z",
+    "reactions": {
+      "likes": 0,
+      "dislikes": 0,
+      "userReaction": "NONE"
+    },
+    "photos": [],
+    "videos": []
+  },
+  {
+    "businessComment": {
+      "text": "Спасибо за приятный отзыв",
+      "updatedTime": "2026-05-06T07:08:30.214Z"
+    },
+    "reviewId": "wGNTN5OeTbrm7AwBBqwGL3KhOVmZP_a1",
+    "businessId": "82071161567",
+    "author": {
+      "name": "Анастасия Аникиева",
+      "avatarUrl": "https://avatars.mds.yandex.net/get-yapic/51381/0f-3/{size}",
+      "professionLevel": "Знаток города 3 уровня",
+      "rtb": "Знаток города 3 уровня",
+      "rtbType": "PROFESSION",
+      "publicId": "6327g3f2mgbkntpjb5t88u625c",
+      "achievements": [],
+      "professions": [],
+      "isSubscribed": false
+    },
+    "text": "Обратилась к доктору Евгению Владимировичу , беспокоила острая боль в области десны, решили проблему быстро, оперативно и безболезненно, дав ценные рекомендации по дальнейшим действиям! спасибо!",
+    "textLanguage": "ru",
+    "textTranslations": {
+      "tr": "Diş eti bölgesindeki akut ağrıdan rahatsız olan Dr. Yevgeny Vladimirovich'e döndüm, sorunu hızlı, hızlı ve acısız bir şekilde çözdüm ve daha fazla eylem için değerli önerilerde bulundum! Teşekkür ederiz!"
+    },
+    "rating": 5,
+    "updatedTime": "2026-05-04T16:33:42.685Z",
+    "reactions": {
+      "likes": 0,
+      "dislikes": 0,
+      "userReaction": "NONE"
+    },
+    "photos": [],
+    "videos": []
+  },
+  {
+    "businessComment": {
+      "text": "Благодарим вас за высокую оценку нашей работы! Мы стремимся сочетать медицинскую точность, стерильность и человеческое отношение, и нам очень приятно, что вы это заметили. Ваше спокойствие и уверенность — наш главный приоритет. Всегда рады помочь вам снова!",
+      "updatedTime": "2025-09-10T15:19:19.952Z"
+    },
+    "reviewId": "TjgxHThS3_rtPg4jqWWbrGB0rxHxrNd",
+    "businessId": "82071161567",
+    "author": {
+      "name": "анастасия волкова",
+      "avatarUrl": "https://avatars.mds.yandex.net/get-yapic/47747/0r-2/{size}",
+      "professionLevel": "Знаток города 5 уровня",
+      "rtb": "Знаток города 5 уровня",
+      "rtbType": "PROFESSION",
+      "publicId": "6g54h4bty7m3auvh0nay20ur54",
+      "achievements": [],
+      "professions": [],
+      "isSubscribed": false
+    },
+    "text": "Процедура прошла максимально бережно и практически безболезненно — я была приятно удивлена внимательностью и тактом врача и ассистента. Особо отметила чистоту кабинета, комфортную обстановку и пунктуальность приёма. После вмешательства мне дали понятные рекомендации по уходу и оставили контакты на случай вопросов.",
+    "textLanguage": "ru",
+    "textTranslations": {
+      "tr": "Prosedür mümkün olduğunca dikkatli ve pratik olarak ağrısızdı — doktorun ve asistanın dikkatine ve inceliğine hoş bir şekilde şaşırdım. Özellikle ofisin temizliğine, rahat ortamına ve resepsiyonun dakikliğine dikkat çekti. Müdahaleden sonra bana bakımla ilgili anlaşılır öneriler verildi ve sorularınız olması durumunda temaslarımı bıraktım."
+    },
+    "rating": 5,
+    "updatedTime": "2025-09-09T16:21:26.845Z",
+    "reactions": {
+      "likes": 0,
+      "dislikes": 0,
+      "userReaction": "NONE"
+    },
+    "photos": [],
+    "videos": []
+  },
+  {
+    "businessComment": {
+      "text": "Спасибо за приятный отклик",
+      "updatedTime": "2025-12-29T12:05:56.376Z"
+    },
+    "reviewId": "T4T4X3sdPInUcNXRUTpW_zUI-R9sV4Sv",
+    "businessId": "82071161567",
+    "author": {
+      "name": "Маргарита Иванова",
+      "avatarUrl": "https://avatars.mds.yandex.net/get-yapic/48449/17wD6Va61Y0A5ucnAstLahUOy4-1/{size}",
+      "professionLevel": "Знаток города 3 уровня",
+      "rtb": "Знаток города 3 уровня",
+      "rtbType": "PROFESSION",
+      "publicId": "vjtbx474c0efy2cubyg4tuvmhg",
+      "achievements": [],
+      "professions": [],
+      "isSubscribed": false
+    },
+    "text": "Обожаю эту клинику, прихожу и сразу настроение поднимается от атмосферы и компетентности врачей. Высокий уровень доверия к специалистам, особенно к ортодонтам, всё держат под контролем и могут найти подход к таким тревожным пациентам как я)",
+    "textLanguage": "ru",
+    "textTranslations": {
+      "tr": "Bu kliniğe bayılıyorum, geliyorum ve ruh hali hemen doktorların atmosferinden ve yetkinliğinden yükseliyor. Uzmanlara, özellikle ortodontistlere yüksek düzeyde güven, her şeyi kontrol altında tutuyor ve benim gibi endişeli hastalara bir yaklaşım bulabiliyor)"
+    },
+    "rating": 5,
+    "updatedTime": "2025-12-27T16:51:05.874Z",
+    "reactions": {
+      "likes": 0,
+      "dislikes": 0,
+      "userReaction": "NONE"
+    },
+    "photos": [],
+    "videos": []
+  },
+  {
+    "businessComment": {
+      "text": "Спасибо за приятный отзыв",
+      "updatedTime": "2026-04-29T10:47:06.515Z"
+    },
+    "reviewId": "H7c4NegJkIvTbY1mpmfDEtcS4f_rs6Giz",
+    "businessId": "82071161567",
+    "author": {
+      "name": "Жанна",
+      "avatarUrl": "https://avatars.mds.yandex.net/get-yapic/25358/0c-8/{size}",
+      "professionLevel": "Знаток города 4 уровня",
+      "rtb": "Знаток города 4 уровня",
+      "rtbType": "PROFESSION",
+      "publicId": "91fdcyqmmx5m9x9e1bj5564gfw",
+      "achievements": [],
+      "professions": [],
+      "isSubscribed": false
+    },
+    "text": "Посетила второй офис клиники на Бармалеева. Такой же  приветливый персонал. Чуткое внимание специалистов. Быстрая работа. На первом месте не деньги, а пациенты и помощь в лечении. Рекомендую.",
+    "textLanguage": "ru",
+    "textTranslations": {
+      "tr": "Barmaleyev'deki kliniğin ikinci ofisini ziyaret ettim. Aynı güler yüzlü personel. Uzmanların hassas ilgisi. Hızlı çalışma. Her şeyden önce para değil, hastalar ve tedavide yardım var. Öneriyorum."
+    },
+    "rating": 5,
+    "updatedTime": "2026-04-25T07:39:46.212Z",
+    "reactions": {
+      "likes": 0,
+      "dislikes": 0,
+      "userReaction": "NONE"
+    },
+    "photos": [],
+    "videos": []
+  },
+  {
+    "businessComment": {
+      "text": "Спасибо за вашу оценку",
+      "updatedTime": "2026-03-11T08:58:36.219Z"
+    },
+    "reviewId": "Sdvhjz-sS1WA5ATYLHanI4wydNFUlC",
+    "businessId": "82071161567",
+    "author": {
+      "name": "Анастасия Б.",
+      "avatarUrl": "https://avatars.mds.yandex.net/get-yapic/36777/0r-6/{size}",
+      "professionLevel": "Знаток города 5 уровня",
+      "rtb": "Знаток города 5 уровня",
+      "rtbType": "PROFESSION",
+      "publicId": "htvjzz6qt4byg8y87gv4cce24w",
+      "achievements": [],
+      "professions": [],
+      "isSubscribed": false
+    },
+    "text": "Была у терапевта Сабины Саббадиновны. Врач подробно ответила на все вопросы, учла нюансы. Понравилось бережное отношение. Чистка прошла быстро и безболезненно. ",
+    "textLanguage": "ru",
+    "textTranslations": {
+      "tr": "Terapist Sabina Sabbadinovna'daydı. Doktor tüm soruları ayrıntılı olarak cevapladı, nüansları dikkate aldı. Dikkatli tavrı beğendim. Temizlik hızlı ve ağrısızdı. "
+    },
+    "rating": 5,
+    "updatedTime": "2026-03-10T08:55:01.616Z",
+    "reactions": {
+      "likes": 0,
+      "dislikes": 0,
+      "userReaction": "NONE"
+    },
+    "photos": [],
+    "videos": []
+  },
+  {
+    "businessComment": {
+      "text": "Спасибо за такой отзыв",
+      "updatedTime": "2026-05-15T13:17:14.828Z"
+    },
+    "reviewId": "7ZwfM6DsYu8jGxqq-0A47iLIpj28mcU",
+    "businessId": "82071161567",
+    "author": {
+      "name": "София У.",
+      "avatarUrl": "https://avatars.mds.yandex.net/get-yapic/26311/0u-1/{size}",
+      "professionLevel": "Знаток города 4 уровня",
+      "rtb": "Знаток города 4 уровня",
+      "rtbType": "PROFESSION",
+      "publicId": "9h3cd4kgk2267k19ya1qcx3270",
+      "achievements": [],
+      "professions": [],
+      "isSubscribed": false
+    },
+    "text": "Рекомендую данную клинику, благодарю за качественную консультацию, эффективный сервис, составление ускоренного плана лечения.\nПерсонал приятный и вежливый, врач внимательна к каждой детали. ",
+    "textLanguage": "ru",
+    "textTranslations": {
+      "tr": "Bu kliniği tavsiye ederim, kaliteli danışmanlık, etkili hizmet, hızlandırılmış bir tedavi planı hazırladığınız için teşekkür ederim.\nPersonel hoş ve kibar, doktor her ayrıntıya özen gösteriyor. "
+    },
+    "rating": 5,
+    "updatedTime": "2026-05-14T09:07:32.759Z",
+    "reactions": {
+      "likes": 0,
+      "dislikes": 0,
+      "userReaction": "NONE"
+    },
+    "photos": [],
+    "videos": []
+  },
+  {
+    "businessComment": {
+      "text": "Спасибо за приятный отклик",
+      "updatedTime": "2026-03-19T15:23:32.810Z"
+    },
+    "reviewId": "2elHoCDL756gJQ8J2_cjOKbV1CI2Gn",
+    "businessId": "82071161567",
+    "author": {
+      "name": "Евгений",
+      "avatarUrl": "https://avatars.mds.yandex.net/get-yapic/59871/lhNJSOafiNBtQGpiSjK4RW96c-1/{size}",
+      "professionLevel": "Знаток города 5 уровня",
+      "rtb": "Знаток города 5 уровня",
+      "rtbType": "PROFESSION",
+      "publicId": "pvk2vj49yfcb7hgm83fhwzy0t0",
+      "achievements": [],
+      "professions": [],
+      "isSubscribed": false
+    },
+    "text": "Сабина Сабаддиновна - прекрасный врач! Жена лечила зубы - я не успел уехать по делам, как пришлось вернуться - все быстро, качественно и от души! Благодарность и верных клиентов!",
+    "textLanguage": "ru",
+    "textTranslations": {
+      "tr": "Sabina Sabaddinovna harika bir doktor! Karım dişlerini tedavi ediyordu - geri dönmek zorunda kaldığım için iş için ayrılmak için zamanım olmadı - her şey hızlı, verimli ve yürekten! Minnettarlık ve sadık müşteriler!"
+    },
+    "rating": 5,
+    "updatedTime": "2026-03-14T15:57:09.982Z",
+    "reactions": {
+      "likes": 0,
+      "dislikes": 0,
+      "userReaction": "NONE"
+    },
+    "photos": [],
+    "videos": []
+  },
+  {
+    "businessComment": {
+      "text": "Дарья, спасибо вам большое за добрые слова и подробный отзыв! 😊 Мы рады, что вы остались довольны визитом, качеством обслуживания и вниманием наших специалистов. Всегда стремимся создавать комфортную и понятную для пациента атмосферу. Будем рады видеть вас снова!\n\n\n\n\n\n\n\n\n\n\n",
+      "updatedTime": "2025-06-30T10:57:54.779Z"
+    },
+    "reviewId": "cgNIT2ComNgPwzsOqR3RSdgEJFW18US",
+    "businessId": "82071161567",
+    "author": {
+      "name": "Дарья",
+      "avatarUrl": "https://avatars.mds.yandex.net/get-yapic/23186/GADdgsSPjPyHPtuOdt7MXxZcR0-1/{size}",
+      "professionLevel": "Знаток города 5 уровня",
+      "rtb": "Знаток города 5 уровня",
+      "rtbType": "PROFESSION",
+      "publicId": "yx6pxge65qea0gvu46hrw43m7g",
+      "achievements": [],
+      "professions": [],
+      "isSubscribed": false
+    },
+    "text": "Осталась очень довольна посещением клиники. Персонал вежливый и внимательный, администраторы оперативно помогают с оформлением. Врач провел тщательный осмотр, доступно объяснил диагноз и составил понятный план лечения. Чувствуется профессионализм и заботливое отношение к клиентам!",
+    "textLanguage": "ru",
+    "textTranslations": {
+      "tr": "Kliniği ziyaret etmekten çok memnun kaldım. Personel kibar ve özenlidir, yöneticiler kayıt konusunda hızlı bir şekilde yardımcı olurlar. Doktor kapsamlı bir muayene yaptı, teşhisi uygun bir şekilde açıkladı ve anlaşılır bir tedavi planı hazırladı. Müşterilere karşı profesyonellik ve özenli bir tutum hissedilir!"
+    },
+    "rating": 5,
+    "updatedTime": "2025-06-28T11:41:33.249Z",
+    "reactions": {
+      "likes": 0,
+      "dislikes": 0,
+      "userReaction": "NONE"
+    },
+    "photos": [],
+    "videos": []
+  },
+  {
+    "businessComment": {
+      "text": "Спасибо за приятный отзыв",
+      "updatedTime": "2026-03-19T15:23:03.927Z"
+    },
+    "reviewId": "YAaprodwGIiNuuGkTPkj1ULijRklLSK",
+    "businessId": "82071161567",
+    "author": {
+      "name": "Сабина Абдуллаева",
+      "avatarUrl": "https://avatars.mds.yandex.net/get-yapic/15430/0b-7/{size}",
+      "professionLevel": "Знаток города 4 уровня",
+      "rtb": "Знаток города 4 уровня",
+      "rtbType": "PROFESSION",
+      "publicId": "zhn3415hjymn4cf3brarhtt6bm",
+      "achievements": [],
+      "professions": [],
+      "isSubscribed": false
+    },
+    "text": "Пришла к ортодонту на бесплатную консультацию, сразу сделали снимок зубов бесплатно, после предоставили консультацию, несколько вариантов лечения, все объяснили на доступном языке, очень приятный компетентный врач, Коган Элина Марковна, спасибо. ",
+    "textLanguage": "ru",
+    "textTranslations": {
+      "tr": "Ortodontiste ücretsiz konsültasyon için geldim, hemen dişlerin fotoğrafını ücretsiz çektiler, sonra konsültasyon sağladılar, birkaç tedavi seçeneği sundular, her şeyi erişilebilir bir dilde açıkladılar, çok hoş, yetkin bir doktor, Kogan Elina Markovna, teşekkür ederim. "
+    },
+    "rating": 5,
+    "updatedTime": "2026-03-18T13:18:59.313Z",
+    "reactions": {
+      "likes": 0,
+      "dislikes": 0,
+      "userReaction": "NONE"
+    },
+    "photos": [],
+    "videos": []
+  },
+  {
+    "businessComment": {
+      "text": "Спасибо за такой отзыв",
+      "updatedTime": "2026-01-30T09:38:42.690Z"
+    },
+    "reviewId": "VqIEbD70l-PT-b5OI_YZwehvQ4ubq2SBZ",
+    "businessId": "82071161567",
+    "author": {
+      "name": "Арина Фёдорова",
+      "avatarUrl": "https://avatars.mds.yandex.net/get-yapic/49368/5QbTOWKPiiCdimyZXwj6yZ1gc-1/{size}",
+      "professionLevel": "Знаток города 2 уровня",
+      "rtb": "Знаток города 2 уровня",
+      "rtbType": "PROFESSION",
+      "publicId": "1cng1ucf9wvx1ctx1pg0cbnzc4",
+      "achievements": [],
+      "professions": [],
+      "isSubscribed": false
+    },
+    "text": "Замечательная клиника! Всё чисто, красиво и самое главное комфотрно. Врач очень доброжелательная, всегда объясняет как и что правильно делать. Лучше клиники не видела ",
+    "textLanguage": "ru",
+    "textTranslations": {
+      "tr": "Harika klinik! Her şey temiz, güzel ve en önemlisi rahat. Doktor çok yardımseverdir, her zaman nasıl ve neyin doğru yapılacağını açıklar. Kliniği daha iyi görmedim "
+    },
+    "rating": 5,
+    "updatedTime": "2026-01-29T21:34:06.660Z",
+    "reactions": {
+      "likes": 0,
+      "dislikes": 0,
+      "userReaction": "NONE"
+    },
+    "photos": [],
+    "videos": []
+  },
+  {
+    "businessComment": {
+      "text": "Спасибо за оценку",
+      "updatedTime": "2026-02-24T14:03:41.354Z"
+    },
+    "reviewId": "7aCI_ejg_nrSSwaO7_5H_M6mP8h0Njf",
+    "businessId": "82071161567",
+    "author": {
+      "name": "Дарья Смирнова",
+      "avatarUrl": "https://avatars.mds.yandex.net/get-yapic/47747/0f-6/{size}",
+      "professionLevel": "Знаток города 4 уровня",
+      "rtb": "Знаток города 4 уровня",
+      "rtbType": "PROFESSION",
+      "publicId": "t1eby75xe8r1bnx0wd527cfhqr",
+      "achievements": [],
+      "professions": [],
+      "isSubscribed": false
+    },
+    "text": "Чудесное место! Прохожу лечение на брекетах уже полгода, комфортное местоположение, приятная атмосфера, чай, кофе. Врач - Анастасия Сергеевна. Спасибо🥹",
+    "textLanguage": "ru",
+    "textTranslations": {
+      "tr": "Harika bir yer! Altı aydır diş teli üzerinde tedavi görüyorum, rahat bir yer, hoş bir atmosfer, çay, kahve. Doktor Anastasia Sergeevna'dır. Eyvallah🥹"
+    },
+    "rating": 5,
+    "updatedTime": "2026-02-21T15:57:31.632Z",
+    "reactions": {
+      "likes": 0,
+      "dislikes": 0,
+      "userReaction": "NONE"
+    },
+    "photos": [],
+    "videos": []
+  },
+  {
+    "businessComment": {
+      "text": "Спасибо за приятный отзыв",
+      "updatedTime": "2025-12-29T12:08:47.081Z"
+    },
+    "reviewId": "YEPRV_GA7BgpjHC2OAR4dqW4Cm9HGb1",
+    "businessId": "82071161567",
+    "author": {
+      "name": "Наталья С.",
+      "avatarUrl": "https://avatars.mds.yandex.net/get-yapic/26311/0t-3/{size}",
+      "professionLevel": "Знаток города 4 уровня",
+      "rtb": "Знаток города 4 уровня",
+      "rtbType": "PROFESSION",
+      "publicId": "jm1049h8avw5c43hmchyarmyxr",
+      "achievements": [],
+      "professions": [],
+      "isSubscribed": false
+    },
+    "text": "Посетила клинику, впечатлил очень вежливый персонал, все рассказали, показали, сделали снимок и провели консультацию. Врач и менеджер подробно объяснили дальнейший план лечения. Мне все понравилось, буду лечиться только здесь)",
+    "textLanguage": "ru",
+    "textTranslations": {
+      "tr": "Kliniği ziyaret ettim, çok kibar personelden etkilendim, herkese anlattılar, gösterdiler, fotoğraf çektiler ve konsültasyonlar yaptılar. Doktor ve yönetici, sonraki tedavi planını ayrıntılı olarak açıkladı. Her şeyi beğendim, sadece burada tedavi göreceğim)"
+    },
+    "rating": 5,
+    "updatedTime": "2025-12-15T13:26:05.935Z",
+    "reactions": {
+      "likes": 0,
+      "dislikes": 0,
+      "userReaction": "NONE"
+    },
+    "photos": [],
+    "videos": []
+  },
+  {
+    "businessComment": {
+      "text": "Спасибо за ваш отклик",
+      "updatedTime": "2025-12-03T12:42:10.300Z"
+    },
+    "reviewId": "bauHkEgbM_T5XG0YU3R9KcLEjBO05Y",
+    "businessId": "82071161567",
+    "author": {
+      "name": "Елена Рябинина",
+      "avatarUrl": "https://avatars.mds.yandex.net/get-yapic/27503/iUgFlaQvfBTu2uwoSstjez2JiTk-1/{size}",
+      "professionLevel": "Знаток города 4 уровня",
+      "rtb": "Знаток города 4 уровня",
+      "rtbType": "PROFESSION",
+      "publicId": "wgvrc70xukp082dywry9q714wc",
+      "achievements": [],
+      "professions": [],
+      "isSubscribed": false
+    },
+    "text": "Хожу уже давно к доктору Сабине Сабаддиновне, она очень аккуратный и заботливый врач, можно быть уверенным, что больно не будет и все пройдёт с комфортом и лёгкостью. Клинику в целом рекомендую, чувствуется забота о пациенте ",
+    "textLanguage": "ru",
+    "textTranslations": {
+      "tr": "Uzun zamandır Dr. Sabine Sabaddinovna'ya gidiyorum, o çok temiz ve sevecen bir doktor, acıtmayacağından ve her şeyin rahat ve kolay bir şekilde geçeceğinden emin olabilirsiniz. Genel olarak kliniği tavsiye ederim, hastaya bakıyorum "
+    },
+    "rating": 5,
+    "updatedTime": "2025-11-23T08:10:06.421Z",
+    "reactions": {
+      "likes": 0,
+      "dislikes": 0,
+      "userReaction": "NONE"
+    },
+    "photos": [],
+    "videos": []
+  },
+  {
+    "businessComment": {
+      "text": "Большое спасибо за такие теплые слова! Мы стараемся для вас и очень рады, что вы оценили и качество лечения, и нашу атмосферу заботы! Передадим благодарность врачу и всему персоналу. Ждем вас на профилактическом приеме!",
+      "updatedTime": "2025-09-10T15:16:49.771Z"
+    },
+    "reviewId": "SgEbYhjGYRc2_0fNMFYwfWoTVjiw5r",
+    "businessId": "82071161567",
+    "author": {
+      "name": "Svetlana S.",
+      "avatarUrl": "https://avatars.mds.yandex.net/get-yapic/26311/0c-2/{size}",
+      "professionLevel": "Знаток города 5 уровня",
+      "rtb": "Знаток города 5 уровня",
+      "rtbType": "PROFESSION",
+      "publicId": "tn7axpzz9vym49jx9pcngxz7d8",
+      "achievements": [],
+      "professions": [],
+      "isSubscribed": false
+    },
+    "text": "Процедура прошла аккуратно и почти без боли благодаря профессионализму врача и современным методам. Кабинет чистый и комфортный, оборудование новое, а атмосфера располагает к спокойствию. Отдельное спасибо за доброжелательное отношение и заботу — это важно, когда волнуешься.",
+    "textLanguage": "ru",
+    "textTranslations": {
+      "tr": "Doktorun profesyonelliği ve modern yöntemler sayesinde prosedür dikkatli ve neredeyse ağrısız geçti. Ofis temiz ve konforlu, ekipman yeni ve atmosfer huzur içinde. Nazik tavrınız ve ilginiz için özel teşekkür ederiz - endişelenirken bu önemlidir."
+    },
+    "rating": 5,
+    "updatedTime": "2025-09-09T15:59:40.282Z",
+    "reactions": {
+      "likes": 0,
+      "dislikes": 0,
+      "userReaction": "NONE"
+    },
+    "photos": [],
+    "videos": []
+  },
+  {
+    "businessComment": {
+      "text": "Спасибо за вашу оценку",
+      "updatedTime": "2026-05-07T12:53:46.954Z"
+    },
+    "reviewId": "hQlwBtQPF2HmxJPCAEYTC3uZhrg4_rK",
+    "businessId": "82071161567",
+    "author": {
+      "name": "Таня К.",
+      "avatarUrl": "https://avatars.mds.yandex.net/get-yapic/34189/SSt6gA3T1Wkr0QXrdNbmevTB0U-1/{size}",
+      "professionLevel": "Знаток города 3 уровня",
+      "rtb": "Знаток города 3 уровня",
+      "rtbType": "PROFESSION",
+      "publicId": "uvfcwn5q471dnuy3egjuke65bw",
+      "achievements": [],
+      "professions": [],
+      "isSubscribed": false
+    },
+    "text": "Отличная клиника! Лечу здесь зубы и устанавливаю брекеты, всегда внимательное отношение, профессиональные врачи и качественный результат. Очень довольна!",
+    "textLanguage": "ru",
+    "textTranslations": {
+      "tr": "Harika klinik! Burada dişlerimi tedavi ediyorum ve diş tellerimi takıyorum, her zaman dikkatli bir tutum, profesyonel doktorlar ve kaliteli bir sonuç. Çok memnunum!"
+    },
+    "rating": 5,
+    "updatedTime": "2026-05-06T14:17:22.833Z",
+    "reactions": {
+      "likes": 0,
+      "dislikes": 0,
+      "userReaction": "NONE"
+    },
+    "photos": [],
+    "videos": []
+  },
+  {
+    "businessComment": {
+      "text": "Татьяна, благодарим вас за тёплый отзыв! Нам очень приятно слышать, что вы остались довольны посещением клиники. Мы стараемся делать всё возможное, чтобы каждый пациент чувствовал себя комфортно и уверенно. Будем рады видеть вас снова и, конечно, благодарим за рекомендации!",
+      "updatedTime": "2025-07-10T08:35:27.334Z"
+    },
+    "reviewId": "3dUMGmVM25KuX1OCdjqKB94Wv9rsML",
+    "businessId": "82071161567",
+    "author": {
+      "name": "Татьяна Якуш",
+      "avatarUrl": "https://avatars.mds.yandex.net/get-yapic/56823/0g-7/{size}",
+      "professionLevel": "Знаток города 5 уровня",
+      "rtb": "Знаток города 5 уровня",
+      "rtbType": "PROFESSION",
+      "publicId": "5878wf880r2mamjfb81x9k7gc8",
+      "achievements": [],
+      "professions": [],
+      "isSubscribed": false
+    },
+    "text": "Очень порадовало удобное расположение. Отношение персонала просто замечательное, врачи внимательные, а общение вежливое и приятное. Клиника современная, уютная. Решили проблему быстро и безболезненно. Спасибо больше. Буду рекомендовать друзьям! ",
+    "textLanguage": "ru",
+    "textTranslations": {
+      "tr": "Elverişli konumdan çok memnun kaldım. Personelin tutumu harika, doktorlar özenli ve iletişim kibar ve hoş. Klinik modern ve rahattır. Sorunu hızlı ve acısız bir şekilde çözdük. Daha çok teşekkür ederim. Arkadaşlarıma tavsiye edeceğim! "
+    },
+    "rating": 5,
+    "updatedTime": "2025-07-08T16:18:54.308Z",
+    "reactions": {
+      "likes": 0,
+      "dislikes": 0,
+      "userReaction": "NONE"
+    },
+    "photos": [],
+    "videos": []
+  },
+  {
+    "businessComment": {
+      "text": "Спасибо за такой отзыв",
+      "updatedTime": "2026-02-19T09:49:49.570Z"
+    },
+    "reviewId": "vC_y8KUvUYzeWjP_1WyRZTwWzNfAZsFq",
+    "businessId": "82071161567",
+    "author": {
+      "name": "Алексей П",
+      "avatarUrl": "https://avatars.mds.yandex.net/get-yapic/45131/FKYy4cNcWri4KEx41kWc9DSOKY4-1/{size}",
+      "professionLevel": "Знаток города 4 уровня",
+      "rtb": "Знаток города 4 уровня",
+      "rtbType": "PROFESSION",
+      "publicId": "1zkydjt28w9pa542tpf3q74xp0",
+      "achievements": [],
+      "professions": [],
+      "isSubscribed": false
+    },
+    "text": "Отличная клиника, все четко, понятно, доступно, мне очень понравилось! Делал коронки на зубы, врач Дмитрий Николаевич профессионал своего дела! ",
+    "textLanguage": "ru",
+    "textTranslations": {
+      "tr": "Mükemmel klinik, her şey açık, anlaşılır, erişilebilir, gerçekten beğendim! Dişlerine kron yaptırdım, doktor Dmitry Nikolaevich işinde profesyonel! "
+    },
+    "rating": 5,
+    "updatedTime": "2026-02-17T18:46:50.037Z",
+    "reactions": {
+      "likes": 0,
+      "dislikes": 0,
+      "userReaction": "NONE"
+    },
+    "photos": [],
+    "videos": []
+  },
+  {
+    "businessComment": {
+      "text": "Спасибо за ваш отклик",
+      "updatedTime": "2025-12-03T12:41:18.093Z"
+    },
+    "reviewId": "xd-QdO9BUI191AnbrhUXHmp8GXQy611",
+    "businessId": "82071161567",
+    "author": {
+      "name": "Дарья Проскалова",
+      "avatarUrl": "https://avatars.mds.yandex.net/get-yapic/27503/0b-3/{size}",
+      "professionLevel": "Знаток города 4 уровня",
+      "rtb": "Знаток города 4 уровня",
+      "rtbType": "PROFESSION",
+      "publicId": "73ud8ya7urdrg3d99ufxqdvp2w",
+      "achievements": [],
+      "professions": [],
+      "isSubscribed": false
+    },
+    "text": "Отличная клиника. Приятное отношение всех сотрудников, уютная обстановка. Сюда не страшно идти лечить зубы). Особенное спасибо Гонгелевой Елене Владимировне, хожу к ней несколько лет и полностью доверяю. ",
+    "textLanguage": "ru",
+    "textTranslations": {
+      "tr": "Harika bir klinik. Tüm çalışanların hoş tutumu, rahat ortamı. Buraya dişlerinizi tedavi etmek için gitmek korkutucu değil). Gongeleva Elena Vladimirovna'ya özel teşekkürler, birkaç yıldır ona gidiyorum ve tamamen güveniyorum. "
+    },
+    "rating": 5,
+    "updatedTime": "2025-11-25T05:50:47.498Z",
+    "reactions": {
+      "likes": 0,
+      "dislikes": 0,
+      "userReaction": "NONE"
+    },
+    "photos": [],
+    "videos": []
+  },
+  {
+    "businessComment": {
+      "text": "Спасибо за приятный отзыв",
+      "updatedTime": "2026-05-04T08:43:25.821Z"
+    },
+    "reviewId": "FVSVCAysilksgWLFx4Txa3waeKNUjkFlb",
+    "businessId": "82071161567",
+    "author": {
+      "name": "Машуля Вертуха",
+      "avatarUrl": "https://avatars.mds.yandex.net/get-yapic/59871/0g-6/{size}",
+      "professionLevel": "Знаток города 4 уровня",
+      "rtb": "Знаток города 4 уровня",
+      "rtbType": "PROFESSION",
+      "publicId": "q95u2ut7ym6kcyev5mm6u5rbrc",
+      "achievements": [],
+      "professions": [],
+      "isSubscribed": false
+    },
+    "text": "Врачи и кураторы любезно объяснили план лечения, рассказали ситуацию с моими зубами, было все предельно понятно, общались вежливо, и мы смогли найти общий язык. Все понравилось, планирую лечиться в этой стоматологии.",
+    "textLanguage": "ru",
+    "textTranslations": {
+      "tr": "Doktorlar ve küratörler tedavi planını nazikçe açıkladılar, durumu dişlerimle anlattılar, her şey çok açıktı, kibarca konuştular ve ortak bir dil bulabildik. Her şeyi beğendim, bu diş hekimliğinde tedavi edilmeyi planlıyorum."
+    },
+    "rating": 5,
+    "updatedTime": "2026-05-03T16:02:00.729Z",
+    "reactions": {
+      "likes": 0,
+      "dislikes": 0,
+      "userReaction": "NONE"
+    },
+    "photos": [],
+    "videos": []
+  },
+  {
+    "businessComment": {
+      "text": "Спасибо за вашу оценку",
+      "updatedTime": "2026-05-04T08:43:20.606Z"
+    },
+    "reviewId": "y-9uq9KklM_peaV8wqgEpbPnSnnkKL",
+    "businessId": "82071161567",
+    "author": {
+      "name": "Евгения Александрова",
+      "avatarUrl": "https://avatars.mds.yandex.net/get-yapic/27503/lBbnYRZmiIxu3dJAcAS027FNjow-1/{size}",
+      "professionLevel": "Знаток города 4 уровня",
+      "rtb": "Знаток города 4 уровня",
+      "rtbType": "PROFESSION",
+      "publicId": "3w7mmp30qpb930gqd22h20p3fg",
+      "achievements": [],
+      "professions": [],
+      "isSubscribed": false
+    },
+    "text": "Прохожу лечение в данной клинике, каждый шаг рассказывают и показывают, составили план лечения. Прекрасные доктора, чисто и уютно, приятно приходить !",
+    "textLanguage": "ru",
+    "textTranslations": {
+      "tr": "Bu klinikte tedaviye giriyorum, her adımı anlatıyorlar ve gösteriyorlar, bir tedavi planı hazırlıyorlar. Güzel doktorlar, temiz ve rahat, gelmek güzel!"
+    },
+    "rating": 5,
+    "updatedTime": "2026-05-03T16:40:00.050Z",
+    "reactions": {
+      "likes": 0,
+      "dislikes": 0,
+      "userReaction": "NONE"
+    },
+    "photos": [],
+    "videos": []
+  },
+  {
+    "businessComment": {
+      "text": "Спасибо за ваш отклик",
+      "updatedTime": "2025-12-29T12:07:09.006Z"
+    },
+    "reviewId": "dTZ0V-nc6RWQYy4rvHGMWkBlNpVwZSv",
+    "businessId": "82071161567",
+    "author": {
+      "name": "Алина",
+      "avatarUrl": "https://avatars.mds.yandex.net/get-yapic/26057/mTGykVcMExDkI33knXIAnlI-1/{size}",
+      "professionLevel": "Знаток города 4 уровня",
+      "rtb": "Знаток города 4 уровня",
+      "rtbType": "PROFESSION",
+      "publicId": "r7xt7fr1gq6emcn16a4cahcjv0",
+      "achievements": [],
+      "professions": [],
+      "isSubscribed": false
+    },
+    "text": "Хожу к Ксении Александровне, очень хороший доктор. Перед началом лечения я очень переживала, обошла много клиник. Ни разу не пожалела что выбрала именно это место, спасибо большое за красивые зубки❤️",
+    "textLanguage": "ru",
+    "textTranslations": {
+      "tr": "Ksenia Alexandrovna'ya gidiyorum, çok iyi bir doktor. Tedaviye başlamadan önce çok endişeliydim, birçok kliniği atladım. Bu özel yeri seçtiğim için hiç pişman olmadım, güzel dişler için çok teşekkür ederim❤️"
+    },
+    "rating": 5,
+    "updatedTime": "2025-12-25T18:22:06.039Z",
+    "reactions": {
+      "likes": 0,
+      "dislikes": 0,
+      "userReaction": "NONE"
+    },
+    "photos": [],
+    "videos": []
+  },
+  {
+    "businessComment": {
+      "text": " Благодарим за столь искренний отзыв и доверие к нашей клинике. Мы рады, что смогли помочь вам сохранить зуб и вернуть уверенность в улыбке! Обязательно передадим вашу благодарность Сабине — её профессионализм и чуткость действительно восхищают. Ждём вас на профилактических осмотрах, чтобы здоровье зубов было под контролем!",
+      "updatedTime": "2025-09-01T11:54:47.621Z"
+    },
+    "reviewId": "X47smNeQ76GFnkMnaXtb7fk8n6W-Gk",
+    "businessId": "82071161567",
+    "author": {
+      "name": "Инкогнито 5898",
+      "avatarUrl": "https://avatars.mds.yandex.net/get-yapic/38663/0b-9/{size}",
+      "professionLevel": "Знаток города 2 уровня",
+      "rtb": "Знаток города 2 уровня",
+      "rtbType": "PROFESSION",
+      "publicId": "by0k5dw10rxz8m5hppwprpz5ec",
+      "achievements": [],
+      "professions": [],
+      "isSubscribed": false
+    },
+    "text": "Дамы и господа! Если вы в поиске клиники, в которой не остаются равнодушными к своим пациентам - то вам сюда!  Поделюсь своим опытом лечения на Бармалеева 12. Сама запустила ситуацию, если бы раньше пришла - гараздо быстрее бы вылечилась. Но как и все - из-за страха не ходила к стоматологу долгое время, пока не заболело... Слава Богу попала в хорошие руки и зуб получилось спасти. Огромное спасибо Сабине за ее старания! Теперь с уверенностью улыбаюсь во все 32)) ",
+    "textLanguage": "ru",
+    "textTranslations": {
+      "tr": "Bayanlar ve baylar! Hastalarınıza kayıtsız kalmadığınız bir klinik arıyorsanız, o zaman buradasınız!  Barmaleyev 12'deki tedavi deneyimimi paylaşacağım. Durumu kendisi başlattı, daha önce gelseydi, çok daha hızlı iyileşirdim. Ama her şey gibi - korkudan hastalanana kadar uzun süre dişçiye gitmedim... Tanrıya şükür iyi ellere düştüm ve dişi kurtarmayı başardım. Sabina'ya çabaları için çok teşekkür ederim! Şimdi her şeye güvenle gülümsüyorum 32)) "
+    },
+    "rating": 5,
+    "updatedTime": "2025-08-29T14:45:40.102Z",
+    "reactions": {
+      "likes": 0,
+      "dislikes": 0,
+      "userReaction": "NONE"
+    },
+    "photos": [],
+    "videos": []
+  },
+  {
+    "businessComment": {
+      "text": "Благодарим вас за такой тёплый и подробный отзыв! \nМы очень рады, что вы оценили внимание наших врачей, качество лечения и заботу о вашем комфорте. Для нас важно, чтобы каждый пациент уходил не только с красивой улыбкой, но и с уверенностью в результате. Желаем здоровья и ждём вас снова!",
+      "updatedTime": "2025-10-28T11:15:15.277Z"
+    },
+    "reviewId": "P49mNFTtNEXcOYBJ29KUOBpOckQdeA",
+    "businessId": "82071161567",
+    "author": {
+      "name": "Анжелика Айрапетян",
+      "avatarUrl": "https://avatars.mds.yandex.net/get-yapic/57243/0o-1/{size}",
+      "professionLevel": "Знаток города 4 уровня",
+      "rtb": "Знаток города 4 уровня",
+      "rtbType": "PROFESSION",
+      "publicId": "14r6n2ttx5mfyt2a4r3nxca5h4",
+      "achievements": [],
+      "professions": [],
+      "isSubscribed": false
+    },
+    "text": "Отличная клиника! Очень внимательные и чуткие врачи. Лечили кариес — всё сделали быстро, аккуратно и абсолютно безболезненно. Отдельное спасибо за подробные рекомендации после приёма.\nТеперь только сюда!",
+    "textLanguage": "ru",
+    "textTranslations": {
+      "tr": "Harika klinik! Çok özenli ve empatik doktorlar. Çürükleri tedavi ettiler — her şeyi hızlı, dikkatli ve kesinlikle ağrısız bir şekilde yaptılar. Kabul sonrası ayrıntılı önerileriniz için özel teşekkürler.\nŞimdi sadece buraya!"
+    },
+    "rating": 5,
+    "updatedTime": "2025-10-22T09:11:39.339Z",
+    "reactions": {
+      "likes": 0,
+      "dislikes": 0,
+      "userReaction": "NONE"
+    },
+    "photos": [],
+    "videos": []
+  },
+  {
+    "businessComment": {
+      "text": "Спасибо за ваш отзыв",
+      "updatedTime": "2026-05-12T13:35:16.066Z"
+    },
+    "reviewId": "lKl00_Hs7gUD1knfD_HiS-H2MBDjju",
+    "businessId": "82071161567",
+    "author": {
+      "name": "ирина",
+      "avatarUrl": "https://avatars.mds.yandex.net/get-yapic/26311/enc-3a925bf042a6583a17d07450df547eac5ef21ce825863fac27733ca2da06fea0/{size}",
+      "professionLevel": "Знаток города 3 уровня",
+      "rtb": "Знаток города 3 уровня",
+      "rtbType": "PROFESSION",
+      "publicId": "n2f4dbq4x4kx0h4uuewn5h1re4",
+      "achievements": [],
+      "professions": [],
+      "isSubscribed": false
+    },
+    "text": "Очень хорошая клиника. Персонал и врачи доброжелательные. Рекомендую! Врач Гонгелева Елена Владимировна профессионал,  спасла зуб, провела все необходимые манипуляции, дала рекомендации! Спасибо большое! ",
+    "textLanguage": "ru",
+    "textTranslations": {
+      "tr": "Çok güzel bir klinik. Personel ve doktorlar yardımseverdir. Tavsiye ederim! Gongeleva'nın doktoru Elena Vladimirovna profesyonel, dişini kurtardı, gerekli tüm manipülasyonları yaptı, önerilerde bulundu! Çok teşekkür ederim! "
+    },
+    "rating": 5,
+    "updatedTime": "2026-05-09T12:49:10.031Z",
+    "reactions": {
+      "likes": 0,
+      "dislikes": 0,
+      "userReaction": "NONE"
+    },
+    "photos": [],
+    "videos": []
+  },
+  {
+    "businessComment": {
+      "text": "Спасибо за ваш отзыв",
+      "updatedTime": "2025-12-03T12:42:30.340Z"
+    },
+    "reviewId": "yIvctnOkNIqhuGb2qEGx2sue8bgtNVo-E",
+    "businessId": "82071161567",
+    "author": {
+      "name": "lyudmila.ivanova1989",
+      "avatarUrl": "https://avatars.mds.yandex.net/get-yapic/45131/0l-6/{size}",
+      "professionLevel": "Знаток города 3 уровня",
+      "rtb": "Знаток города 3 уровня",
+      "rtbType": "PROFESSION",
+      "publicId": "mh75r44tg2601qk63dquwzx9t8",
+      "achievements": [],
+      "professions": [],
+      "isSubscribed": false
+    },
+    "text": "Лечусь сама уже 3 года здесь, привела ребёнка, удалили первый раз зуб. Все прошло успешно! Рекомендую врача Елену! ",
+    "textLanguage": "ru",
+    "textTranslations": {
+      "tr": "Burada 3 yıldır kendim tedavi görüyorum, çocuğu getirdim, ilk kez dişi çıkardım. Her şey başarılı oldu! Doktor Elena'yı tavsiye ederim! "
+    },
+    "rating": 5,
+    "updatedTime": "2025-11-22T11:35:21.677Z",
+    "reactions": {
+      "likes": 1,
+      "dislikes": 0,
+      "userReaction": "NONE"
+    },
+    "photos": [],
+    "videos": []
+  },
+  {
+    "businessComment": {
+      "text": "Спасибо за приятный отзыв",
+      "updatedTime": "2025-12-29T12:08:16.754Z"
+    },
+    "reviewId": "X-O1dC09FlYqLWQA3iBlQMtCvdc_VI",
+    "businessId": "82071161567",
+    "author": {
+      "name": "Александр Г.",
+      "avatarUrl": "https://avatars.mds.yandex.net/get-yapic/50595/mBL0y5t3c7uf3vuh60cbEDPr4U-1/{size}",
+      "professionLevel": "Знаток города 4 уровня",
+      "rtb": "Знаток города 4 уровня",
+      "rtbType": "PROFESSION",
+      "publicId": "9x6xqqwxn7zhxmvu51p8f3q77m",
+      "achievements": [],
+      "professions": [],
+      "isSubscribed": false
+    },
+    "text": "Классная стоматология, лечусь не первый год! Так же поставить и успел снять брекет систему. Очень добрые и вежливые врачи 😊",
+    "textLanguage": "ru",
+    "textTranslations": {
+      "tr": "Harika diş hekimliği, ilk senedir tedavi görmüyorum! Ayrıca sistemi de takıp braketi çıkarmayı başardım. Çok nazik ve kibar doktorlar"
+    },
+    "rating": 5,
+    "updatedTime": "2025-12-19T11:09:26.866Z",
+    "reactions": {
+      "likes": 0,
+      "dislikes": 0,
+      "userReaction": "NONE"
+    },
+    "photos": [],
+    "videos": []
+  },
+  {
+    "businessComment": {
+      "text": "Спасибо за приятный отклик",
+      "updatedTime": "2026-01-27T13:30:51.066Z"
+    },
+    "reviewId": "aREarjo2qmLsrug3s2sc2yv6XEiWFxOn",
+    "businessId": "82071161567",
+    "author": {
+      "name": "Степан Леонтьев",
+      "avatarUrl": "https://avatars.mds.yandex.net/get-yapic/30955/reMiKJp8wVHOZcRFYDjHQMTNRk-1/{size}",
+      "professionLevel": "Знаток города 7 уровня",
+      "rtb": "Знаток города 7 уровня",
+      "rtbType": "PROFESSION",
+      "publicId": "13vdku9m1mrqu7n8n12h78ur4w",
+      "achievements": [],
+      "professions": [],
+      "isSubscribed": false
+    },
+    "text": "Хочу выразить огромную благодарность стоматологической клинике Дентал Конфиденс, в частности Гонгелевой Елене Владимировне, за профессионализм, все сделали в лучшем виде.\nСпасибо большое)",
+    "textLanguage": "ru",
+    "textTranslations": {
+      "tr": "Dental Confidence Diş kliniğine, özellikle Gongeleva Elena Vladimirovna'ya profesyonellik için her şeyi en iyi şekilde yaptıkları için büyük minnettarlığımı ifade etmek istiyorum.\nÇok teşekkür ederim)"
+    },
+    "rating": 5,
+    "updatedTime": "2026-01-17T09:10:49.989Z",
+    "reactions": {
+      "likes": 0,
+      "dislikes": 0,
+      "userReaction": "NONE"
+    },
+    "photos": [],
+    "videos": []
+  },
+  {
+    "businessComment": {
+      "text": "Спасибо за приятный отзыв",
+      "updatedTime": "2025-11-11T13:51:30.767Z"
+    },
+    "reviewId": "TzgH8GEC6bTktEN_HIAV2waGcvjvROM",
+    "businessId": "82071161567",
+    "author": {
+      "name": "Наталья Неманова",
+      "avatarUrl": "https://avatars.mds.yandex.net/get-yapic/59871/0a-4/{size}",
+      "professionLevel": "Знаток города 3 уровня",
+      "rtb": "Знаток города 3 уровня",
+      "rtbType": "PROFESSION",
+      "publicId": "60buc7k9be9eu6t428ruyraq6w",
+      "achievements": [],
+      "professions": [],
+      "isSubscribed": false
+    },
+    "text": "Посещение стоматолога 08.11.2025 (Ансарова С.С.) для осмотра и лечения кариеса. Врач провел процедуру быстро и профессионально. После посещения чувствую себя комфортно, никаких неприятных ощущений нет. Рекомендую клинику и врача всем, кому нужен качественный уход за зубами.",
+    "textLanguage": "ru",
+    "textTranslations": {
+      "tr": "Çürükleri incelemek ve tedavi etmek için 08.11.2025 tarihinde (Ensarov SS) diş hekimine ziyaret. Doktor prosedürü hızlı ve profesyonel bir şekilde gerçekleştirdi. Ziyaretten sonra kendimi rahat hissediyorum, hoş olmayan bir his yok. Kaliteli diş bakımına ihtiyaç duyan herkese kliniği ve doktoru tavsiye ederim."
+    },
+    "rating": 5,
+    "updatedTime": "2025-11-09T11:44:13.435Z",
+    "reactions": {
+      "likes": 1,
+      "dislikes": 0,
+      "userReaction": "NONE"
+    },
+    "photos": [],
+    "videos": []
+  },
+  {
+    "businessComment": {
+      "text": "Благодарим вас за такой тёплый и подробный отзыв! \nМы очень рады, что вы отмечаете чистоту, доброжелательность персонала, современное оборудование и гибкую ценовую политику. Отдельная благодарность за высокую оценку работы доктора Орбелиани — мы гордимся, что в нашей команде есть такие внимательные и профессиональные врачи!\nЖелаем вам крепкого здоровья и ждём на следующих приёмах! ",
+      "updatedTime": "2025-10-06T16:07:23.005Z"
+    },
+    "reviewId": "xaDNWp8lCYs1yvoiKk96WGm8Bext_QP7",
+    "businessId": "82071161567",
+    "author": {
+      "name": "Юлия Косарева",
+      "avatarUrl": "https://avatars.mds.yandex.net/get-yapic/38436/4H6c8M2nfbJ6nvqS8fTt213BaVM-1/{size}",
+      "professionLevel": "Знаток города 5 уровня",
+      "rtb": "Знаток города 5 уровня",
+      "rtbType": "PROFESSION",
+      "publicId": "k3zmwk2xy6dg0e6rhk8ubx4cf0",
+      "achievements": [],
+      "professions": [],
+      "isSubscribed": false
+    },
+    "text": "Чистая клиника, доброжелательное отношение всего персонала, высококачественное оборудование, гибкая система цен на услуги. Есть разные акции. Я регулярно хожу у доктору Орбелиани- очень профессиональный и внимательный врач. Все нравится😊",
+    "textLanguage": "ru",
+    "textTranslations": {
+      "tr": "Temiz klinik, tüm personelin güler yüzlü tutumu, yüksek kaliteli ekipman, esnek hizmet fiyat sistemi. Farklı promosyonlar var. Çok profesyonel ve özenli bir doktor olan Dr. Orbeliani'ye düzenli olarak gidiyorum. Her şeyi beğendim😊"
+    },
+    "rating": 5,
+    "updatedTime": "2025-10-05T08:41:21.052Z",
+    "reactions": {
+      "likes": 1,
+      "dislikes": 0,
+      "userReaction": "NONE"
+    },
+    "photos": [],
+    "videos": []
+  },
+  {
+    "businessComment": {
+      "text": "Благодарим за тёплые слова и высокую оценку! 😊\nМы рады, что вам понравилось оснащение клиники, атмосфера и индивидуальный подход. Обязательно передадим ваши слова команде — для нас это лучшая мотивация!\n\nЖдём вас снова в гости и будем рады заботиться о вашей улыбке 🌟",
+      "updatedTime": "2025-09-08T14:05:10.938Z"
+    },
+    "reviewId": "w4C80jUSDu-OS5qiQ3F5Dc5wdjSp5qXt",
+    "businessId": "82071161567",
+    "author": {
+      "name": "Саша Шелехова",
+      "avatarUrl": "https://avatars.mds.yandex.net/get-yapic/59871/0y-5/{size}",
+      "professionLevel": "Знаток города 3 уровня",
+      "rtb": "Знаток города 3 уровня",
+      "rtbType": "PROFESSION",
+      "publicId": "y1cq4v79zky79eb1trjyxkamr0",
+      "achievements": [],
+      "professions": [],
+      "isSubscribed": false
+    },
+    "text": "Клиника превзошла все ожидания. Сотрудники очень доброжелательные. Порадовало наличие современного оборудования и индивидуальный подход к каждому пациенту.\nВсем, кто ищет хорошего стоматолога, настоятельно рекомендую эту клинику!",
+    "textLanguage": "ru",
+    "textTranslations": {
+      "tr": "Klinik tüm beklentileri aştı. Çalışanlar çok yardımseverdir. Modern ekipmanların mevcudiyeti ve her hastaya bireysel yaklaşım beni memnun etti.\nİyi bir diş hekimi arayan herkese bu kliniği şiddetle tavsiye ederim!"
+    },
+    "rating": 5,
+    "updatedTime": "2025-09-04T16:58:38.482Z",
+    "reactions": {
+      "likes": 1,
+      "dislikes": 0,
+      "userReaction": "NONE"
+    },
+    "photos": [],
+    "videos": []
+  },
+  {
+    "businessComment": {
+      "text": "Благодарим вас за такой тёплый и подробный отзыв! \nМы очень рады, что вы оценили работу нашего персонала, доступность объяснений врачей и современное оснащение клиники. Для нас важно, чтобы каждый пациент чувствовал себя комфортно, уверенно и получал не только качественное лечение, но и эмоциональную поддержку.\nЖдём вас снова и желаем вашей улыбке здоровья и сияния! ",
+      "updatedTime": "2025-10-02T13:31:46.531Z"
+    },
+    "reviewId": "GS3CN4Upz4_-kDpdNt0q6AZ72q9XK83NU",
+    "businessId": "82071161567",
+    "author": {
+      "name": "Виктория Дибиргаджиева",
+      "avatarUrl": "https://avatars.mds.yandex.net/get-yapic/37154/0y-1/{size}",
+      "professionLevel": "Знаток города 3 уровня",
+      "rtb": "Знаток города 3 уровня",
+      "rtbType": "PROFESSION",
+      "publicId": "gaettj9ar9rqdzbwykh51a5198",
+      "achievements": [],
+      "professions": [],
+      "isSubscribed": false
+    },
+    "text": "Персонал на высшем уровне. Врачи подробно объясняют каждую процедуру и отвечают на все вопросы, что действительно помогает снять напряжение. Клиника оборудована новыми технологиями, я очень осталось довольна и с радостью рекомендую.",
+    "textLanguage": "ru",
+    "textTranslations": {
+      "tr": "Personel en üst düzeydedir. Doktorlar her prosedürü ayrıntılı olarak açıklar ve tüm soruları yanıtlar, bu da gerginliği gidermeye gerçekten yardımcı olur. Klinik yeni teknolojilerle donatılmıştır, çok memnun kaldım ve memnuniyetle tavsiye ediyorum."
+    },
+    "rating": 5,
+    "updatedTime": "2025-10-01T12:38:22.129Z",
+    "reactions": {
+      "likes": 0,
+      "dislikes": 0,
+      "userReaction": "NONE"
+    },
+    "photos": [],
+    "videos": []
+  },
+  {
+    "businessComment": {
+      "text": "«Здравствуйте! Спасибо, что написали — нам важно видеть, как нас воспринимают пациенты.\n\nДля начала коротко поясним про названия. Да, УНИ ДЕНТ и Dental confidence — это одна сеть и одна группа компаний. Dental confidence — это специализированное направление внутри сети, фокусирующееся на ортодонтии и имплантации. Поэтому адрес один, а вывески могут отличаться. Никакой скрытности здесь нет, но мы понимаем, что это могло вас смутить, и приносим извинения за то, что заранее не объяснили.\n\nПо поводу консультации. Врач всегда подробно общается с пациентом, чтобы оценить не только клиническую картину, но и ожидания, возможности, пожелания. Словоблудием это называть не совсем точно — это стандартный сбор информации, который нужен для качественного плана лечения. Возможно, вам показалось, что администратор «оценивает сумму», но на самом деле это часть работы: понимать бюджет пациента, чтобы предлагать адекватные варианты. Мы сожалеем, что у вас сложилось иное впечатление.\n\nПо поводу переноса слепка на другую дату. В стоматологии иногда действительно невозможно сделать слепок в тот же день: могут быть технические нюансы, отсутствие нужного материала или времени у врача. Это неудобно, и нам жаль, что так вышло в вашем случае.\n\nПо поводу ожидания врача 40 минут. Приносим извинения за задержку. В приёме врача иногда случаются непредвиденные сложные ситуации у предыдущего пациента, которые требуют больше времени, чем запланировано. Мы понимаем, что ваше время тоже ценно, и сожалеем, что вам пришлось ждать. К сожалению, полностью исключить такие сбои в расписании невозможно, но мы стараемся их минимизировать.\n\nНам искренне жаль, что вы решили аннулировать договор и ушли. Если когда-нибудь захотите дать нам второй шанс — будем рады видеть вас снова и постараемся, чтобы приём прошёл максимально комфортно и по времени, и по содержанию.\n\nСпасибо, что зашли. Здоровья вам и удачи в поиске своей клиники!»",
+      "updatedTime": "2026-04-23T12:48:10.055Z"
+    },
+    "reviewId": "-xI11nM50yiug0JslnJK6ALNwkvIFE",
+    "businessId": "82071161567",
+    "author": {
+      "name": "Андрей Н.",
+      "avatarUrl": "https://avatars.mds.yandex.net/get-yapic/58107/0c-7/{size}",
+      "professionLevel": "Знаток города 6 уровня",
+      "rtb": "Знаток города 6 уровня",
+      "rtbType": "PROFESSION",
+      "publicId": "5w34nh49v4rwqxfzz4rqce3ed0",
+      "achievements": [],
+      "professions": [],
+      "isSubscribed": false
+    },
+    "text": "Очень грамотный администратор, разбирается в стоматологии, психологии и финансах.\nВсё остальное, грамотное ***.\nЯ повёлся на рекламу \"УНИ ДЕНТ\" , найти на карте её не смог.  Оказалось что  Dental confidence и унидент работает под одним адресом. Уже настораживает. Консультация врача - это какое-то словоблудие, чтобы присутствующих администратор мог понять, какую сумму я готов выложить. Дальше выясняется, что нет возможности сейчас сделать слепок, и приём переносится на другую дату. Потом просят согласовать более раннее время приёма. Когда соглашаешься, перестраиваешь свои дела , приезшь, врач опаздывает на 40 минут. Больше ждать не стал, потребовал аннулировать договор. Итог - потерянное зря время и нервы. Считаю что я удачно соскочил. ",
+    "textLanguage": "ru",
+    "textTranslations": {
+      "tr": "Çok yetkin bir yönetici, diş hekimliği, psikoloji ve finans konusunda bilgili.\nDiğer her şey, yetkin bir şekilde yetiştirildi.\n\"UNİ DENT\" reklamına baştan çıkardım, haritada bulamadım.  Dental confidence'ın ve birliğin aynı adres altında çalıştığı ortaya çıktı. Şimdiden endişe verici. Bir doktora danışmak, yöneticinin orada bulunanlara ne kadar ödemeye hazır olduğumu anlayabilmesi için bir tür kelime dağarcığıdır. Ayrıca, şimdi bir döküm yapmanın mümkün olmadığı ve resepsiyonun başka bir tarihe ertelendiği ortaya çıkıyor. Daha sonra daha erken bir kabul saati üzerinde anlaşmaları istenir. Kabul ettiğin zaman işlerini yeniden düzenlersin, geleceksin, doktor 40 dakika gecikecek. Daha fazla beklemedim, sözleşmenin iptal edilmesini talep ettim. Sonuç, boşa harcanan zaman ve sinirlerdir. Bence başarılı bir şekilde atladım. "
+    },
+    "rating": 2,
+    "updatedTime": "2026-04-22T18:37:17.402Z",
+    "reactions": {
+      "likes": 0,
+      "dislikes": 0,
+      "userReaction": "NONE"
+    },
+    "photos": [],
+    "videos": []
+  },
+  {
+    "businessComment": {
+      "text": "«Здравствуйте! Спасибо, что поделились своим опытом. Нам искренне жаль, что визит оставил у вас неприятный осадок, и благодарим, что вы отмечаете вежливость администраторов и доброжелательность врача — это нам особенно ценно.\n\nПо поводу ожидания приема на 40 минут. Приносим извинения за задержку. В ортодонтии иногда случаются сложные клинические случаи у предыдущих пациентов, которые требуют больше времени, чем заложено по расписанию. Это не оправдание, а объяснение — мы понимаем, что ваше время важно, и сожалеем, что вам пришлось ждать.\n\nПо поводу снимка. Наш врач рекомендовал диагностику не из желания навязать услугу, а исходя из стандартов ортодонтического приема — даже при замене ретейнера важно видеть положение корней зубов, чтобы исключить незаметные визуально изменения за 6 лет. Но мы сожалеем, что вам не смогли доступно объяснить необходимость этого шага.\n\nПо поводу коррекции за 500 рублей. Если врач сказала «бесплатно», а затем озвучила стоимость — здесь действительно возникло недопонимание в коммуникации, нам жаль, что так вышло. Мы уточним у врача этот момент, чтобы впредь формулировки были однозначными.\n\nПо поводу ретейнера. Конструкция может расшататься под воздействием повышенной физической нагрузки на зубы (например, привычка грызть твердую пищу, семечки, леденцы, или случайное травмирование жесткой щеткой/зубочисткой). Даже качественно зафиксированный ретейнер не всегда выдерживает такие воздействия. Мы не знаем, было ли что-то подобное в вашем случае, но исключать этого нельзя. Нам жаль, что в вашей ситуации ретейнер прослужил всего 1,5 месяца — это досадное стечение обстоятельств.\n\nМы будем рады видеть вас снова, если вы захотите дать нам шанс. Спасибо, что выбрали нашу клинику. Здоровья вам и ровных улыбок!»",
+      "updatedTime": "2026-04-13T10:43:12.171Z"
+    },
+    "reviewId": "JmRT7T1gsbPQAMskV668YPuhkLB-63c",
+    "businessId": "82071161567",
+    "author": {
+      "name": "li_pailon",
+      "avatarUrl": "https://avatars.mds.yandex.net/get-yapic/36777/ZATukkdFHZZTE5EGXDc80HEkQ-1/{size}",
+      "professionLevel": "Знаток города 5 уровня",
+      "rtb": "Знаток города 5 уровня",
+      "rtbType": "PROFESSION",
+      "publicId": "c6rbdxpuxnya6ram9hn8dk138g",
+      "achievements": [],
+      "professions": [],
+      "isSubscribed": false
+    },
+    "text": "Был у ортодонта чтобы заменили ритейнер на задней части зубов ВЧ. В итоге перед самим приемом врача меня зачем-то настоятельно просили сделать снимок. На мой резонный вопрос \"Зачем?\" мне ответили - \"ну так надо\". \n\nДля понимания сути - ритейнер - это конструкция на задней части зубов, которую ставят после брекетов, чтобы зубы не разъехались\n. \nДля чего мне делать снимок - мне так и не объяснили, аргумент \"Что бы врач мог оценить всю картину\" для меня невалиден, ему нечего там оценивать, просто проволку нужно приклеить да и все. По-сути просто навязывание лишних услуг. Естественно, снимок для ретейнера не нужен, это не лечение брикетами или каппой, ведь он у меня как-то без снимка ранее 6 лет успешно стоял. \n\nСамого приема, к слову, ждал минут на  40 дольше, чем изначально по записи.\n\nАдминистраторы хорошие, чай/кофе предложили, были вежливы, документы для отказа от снимка дали, все было мирно, никто не скандалил \n\nСама врач-ортодонт, имя не помню, по общению живая, общительная. А вот работа некачественная. Сначала ритейнер сильно все царапал. Сразу после установки записала через неделю, сказала, что если что - сделаем коррекцию. Важно: врач сказала, что сделано коррекцию бесплатно \n\nВ итоге без коррекции не обошлось, и стоимость ее оказалась 500р) Вопросов к оплате нет - любой труд нужно оплатить. А вот вопрос зачем вводить в заблуждение - непонятно, тем более во времена неработающего интернета. Вот вдруг не было бы интернета и налички, что тогда?) Да и враньё не люблю \n\nНу и самое важное! К одному зубу ритейнер был плохо приклеен, в итоге проволка пляшет даже от мягкой пищи. Ретейнер теперь нужно ставить заново, потому что из-за этого пришлось в негодность всего за 1.5 месяца, когда предыдущий служил 6 лет\n\nНе советую сюда обращаться. 13 400 за ретейнер в минус ",
+    "textLanguage": "ru",
+    "textTranslations": {
+      "tr": "Dişlerin arkasındaki perakendeciyi HF ile değiştirmek için ortodontist vardı. Sonuç olarak, doktor randevusundan önce bir nedenden dolayı benden fotoğraf çekmem istendi. Makul soruma, \"Neden?\" Bana cevap verdiler - \"eh, öyle olmalı\". \n\nKonuyu anlamak için - perakendeci, dişlerin ayrılmaması için diş tellerinden sonra yerleştirilen dişlerin arkasındaki yapıdır\n. \nNeden fotoğraf çekmem için bana hiç açıklanmadılar, \"Doktorun tüm resmi değerlendirebilmesi için\" argümanı benim için önemsiz değil, orada değerlendirecek hiçbir şeyi yok, sadece telin yapıştırılması gerekiyor ve hepsi bu. Aslında, sadece gereksiz hizmetlerin dayatılması. Doğal olarak, tutucu için bir fotoğrafa gerek yok, bu briket veya ağız koruyucusu ile tedavi edilmiyor, çünkü bir şekilde 6 yıldan önce fotoğrafsız olarak başarıyla durdum. \n\nBu arada resepsiyonun kendisi, başlangıçta kayıttan 40 dakika daha uzun süre bekledi.\n\nYöneticiler iyi, çay / kahve teklif ettiler, kibardılar, fotoğrafı reddetmek için belgeler verdiler, her şey huzurluydu, kimse skandal yaratmadı \n\nDoktorun kendisi ortodontisttir, adını hatırlamıyorum, iletişim açısından canlı, sosyal. Ancak iş kalitesiz. İlk başta, perakendeci her şeyi çok çiziyordu. Kurulumdan hemen sonra bir hafta sonra kaydettim, eğer bir şey olursa düzeltmeyi yapacağımızı söyledim. Önemli: Doktor düzeltmenin ücretsiz yapıldığını söyledi \n\nSonuç olarak, düzeltme yapılmadı ve maliyeti 500 ruble olduğu ortaya çıktı) Ödenecek soru yok - herhangi bir emeğin ödenmesi gerekiyor. Ancak neden yanıltıcı olunacağı sorusu, özellikle internetin çalışmadığı zamanlarda net değildir. Aniden internet ve nakit olmazdı, o zaman ne olacak?) Evet ve yalanları sevmiyorum \n\nPeki, en önemlisi! Perakendeci bir dişe iyi yapıştırılmamıştı, sonuç olarak tel yumuşak yiyeceklerden bile dans ediyor. Tutucuyu şimdi yeniden kurmanız gerekiyor, çünkü bu nedenle, bir öncekinin 6 yıl hizmet verdiği sadece 1.5 ayda kullanılamaz hale gelmek zorunda kaldım\n\nBuraya gelmenizi tavsiye etmiyorum. Eksi tutucu başına 13.400 "
+    },
+    "rating": 1,
+    "updatedTime": "2026-04-09T15:53:53.409Z",
+    "reactions": {
+      "likes": 1,
+      "dislikes": 0,
+      "userReaction": "NONE"
+    },
+    "photos": [],
+    "videos": []
+  },
+  {
+    "businessComment": {
+      "text": "Татьяна, спасибо вам большое за отзыв! Мы рады, что первый шаг к идеальной улыбке оказался комфортным и информативным. Обязательно передадим ваши слова благодарности Александре Евгеньевне — ей будет очень приятно! Желаем вам лёгкого и успешного продолжения лечения 😊",
+      "updatedTime": "2025-07-10T08:36:43.100Z"
+    },
+    "reviewId": "NaFThV0rUYXOI54U6vkEREnmCHiRqEHk",
+    "businessId": "82071161567",
+    "author": {
+      "name": "Татьяна Турова",
+      "avatarUrl": "https://avatars.mds.yandex.net/get-yapic/37154/0t-1/{size}",
+      "professionLevel": "Знаток города 4 уровня",
+      "rtb": "Знаток города 4 уровня",
+      "rtbType": "PROFESSION",
+      "publicId": "3dj1jrtp4c5vhy65wa5mv4d1pw",
+      "achievements": [],
+      "professions": [],
+      "isSubscribed": false
+    },
+    "text": "Все прошли отлично \nБлагодарю Александру Евгеньевну за профессионализм , очень подробно рассказала про все этапы лечения \nВ этот же день провели диагностику и сделали снимки \nПервый шаг на пути к идеальной улыбке сделан , будем ждать результатов 🤞",
+    "textLanguage": "ru",
+    "textTranslations": {
+      "tr": "Herkes mükemmel gitti \nProfesyonelliği için Alexander Evgenievna'ya teşekkür ediyorum, tedavinin tüm aşamaları hakkında çok ayrıntılı bilgi verdim \nAynı gün teşhis koydular ve fotoğraf çektiler \nMükemmel gülümsemeye giden yolda ilk adım atılıyor, sonuçları bekleyeceğiz"
+    },
+    "rating": 5,
+    "updatedTime": "2025-07-06T08:51:39.717Z",
+    "reactions": {
+      "likes": 0,
+      "dislikes": 0,
+      "userReaction": "NONE"
+    },
+    "photos": [],
+    "videos": []
+  },
+  {
+    "businessComment": {
+      "text": "Спасибо за ваш отклик",
+      "updatedTime": "2026-05-14T09:29:37.376Z"
+    },
+    "reviewId": "_YRajBjxvwEeV3fwGzqtq3iXjum0HqDc",
+    "businessId": "82071161567",
+    "author": {
+      "name": "Anna Tubyanskaya",
+      "avatarUrl": "https://avatars.mds.yandex.net/get-yapic/27503/0u-9/{size}",
+      "professionLevel": "Знаток города 5 уровня",
+      "rtb": "Знаток города 5 уровня",
+      "rtbType": "PROFESSION",
+      "publicId": "pezyyrt9p9ha0h277n41udy8x4",
+      "achievements": [],
+      "professions": [],
+      "isSubscribed": false
+    },
+    "text": "Замечательная клиника! Уютная атмосфера, вежливый и заботливый персонал. Быстро и эффективно справились с проблемой. Всем советую 👍",
+    "textLanguage": "ru",
+    "textTranslations": {
+      "tr": "Harika klinik! Rahat bir atmosfer, kibar ve sevecen personel. Sorunla hızlı ve etkili bir şekilde başa çıktık. Herkese tavsiye ederim"
+    },
+    "rating": 5,
+    "updatedTime": "2026-05-13T16:14:20.448Z",
+    "reactions": {
+      "likes": 0,
+      "dislikes": 0,
+      "userReaction": "NONE"
+    },
+    "photos": [],
+    "videos": []
+  },
+  {
+    "businessComment": {
+      "text": "Спасибо за ваш отзыв",
+      "updatedTime": "2026-04-13T10:08:09.483Z"
+    },
+    "reviewId": "Nwg0Tail70xKIP9MhSxDgq7pqoPFB2rVo",
+    "businessId": "82071161567",
+    "author": {
+      "name": "Мария Лизон",
+      "avatarUrl": "https://avatars.mds.yandex.net/get-yapic/37154/0s-8/{size}",
+      "professionLevel": "Знаток города 4 уровня",
+      "rtb": "Знаток города 4 уровня",
+      "rtbType": "PROFESSION",
+      "publicId": "dttdgc32xdm57p8pq5cwc4kfj4",
+      "achievements": [],
+      "professions": [],
+      "isSubscribed": false
+    },
+    "text": "Очень приятный персонал, ортодонт Орбелиани Ксения Александровна очень грамотный специалист, всегда все подскажет и объяснит, к каждому этапу лечения подходит с особой кропотливостью",
+    "textLanguage": "ru",
+    "textTranslations": {
+      "tr": "Çok hoş personel, ortodontist Orbeliani Ksenia Aleksandrovna çok yetkin bir uzman, her zaman size her şeyi söyleyip açıklayacak, tedavinin her aşamasına özel bir özenle uyduğunu açıklayacaktır"
+    },
+    "rating": 5,
+    "updatedTime": "2026-04-05T08:04:49.933Z",
+    "reactions": {
+      "likes": 0,
+      "dislikes": 0,
+      "userReaction": "NONE"
+    },
+    "photos": [],
+    "videos": []
+  },
+  {
+    "businessComment": {
+      "text": "Спасибо за приятный отзыв",
+      "updatedTime": "2026-03-25T08:37:26.639Z"
+    },
+    "reviewId": "f4b5TN1nnfhuEkcDpCIO37dm78FGLd",
+    "businessId": "82071161567",
+    "author": {
+      "name": "Вероника Осипова",
+      "avatarUrl": "https://avatars.mds.yandex.net/get-yapic/37154/0m-5/{size}",
+      "professionLevel": "Знаток города 3 уровня",
+      "rtb": "Знаток города 3 уровня",
+      "rtbType": "PROFESSION",
+      "publicId": "50brcyz6rgcmbk2v9q3qvajcd4",
+      "achievements": [],
+      "professions": [],
+      "isSubscribed": false
+    },
+    "text": "Рекомендую данную клинику.\nЛечила здесь кариес, осталась очень довольна\nОгромную благодарность выражаю доктору Ансаровой Сабине Сабаддиновне.",
+    "textLanguage": "ru",
+    "textTranslations": {
+      "tr": "Bu kliniği tavsiye ederim.\nBuradaki çürükleri tedavi ettim, çok memnun kaldım\nDr. Ensarova Sabina Sabaddinovna'ya büyük teşekkürlerimi sunuyorum."
+    },
+    "rating": 5,
+    "updatedTime": "2026-03-22T02:30:32.391Z",
+    "reactions": {
+      "likes": 0,
+      "dislikes": 0,
+      "userReaction": "NONE"
+    },
+    "photos": [],
+    "videos": []
+  },
+  {
+    "businessComment": {
+      "text": "Татьяна, благодарим вас за тёплые слова и высокую оценку нашей работы 💙\nНам очень приятно, что Вы остались довольны визитом в нашу клинику. Мы всегда стараемся создать комфортные условия и окружить заботой каждого пациента.\nБудем рады видеть Вас снова и всегда готовы помочь по любому вопросу здоровья!",
+      "updatedTime": "2025-08-04T08:13:14.553Z"
+    },
+    "reviewId": "3nbqGPrZfwDW1XsNhSZMZ1SaBUvTvVs",
+    "businessId": "82071161567",
+    "author": {
+      "name": "Татьяна Малышева",
+      "avatarUrl": "https://avatars.mds.yandex.net/get-yapic/27503/0u-9/{size}",
+      "professionLevel": "Знаток города 4 уровня",
+      "rtb": "Знаток города 4 уровня",
+      "rtbType": "PROFESSION",
+      "publicId": "5cn2k1bcgyvvjjzh9guyj5g9wm",
+      "achievements": [],
+      "professions": [],
+      "isSubscribed": false
+    },
+    "text": "хорошая уютная клиника, добрые врачи и администраторы, все хорошо объясняют, остаюсь в этой клинике устанавливать брекет систему,все нравится ;) отношение к клиентам очень теплое🌸",
+    "textLanguage": "ru",
+    "textTranslations": {
+      "tr": "iyi rahat bir klinik, nazik doktorlar ve yöneticiler her şeyi iyi açıklıyorlar, bu klinikte bir braket sistemi kurmaya devam ediyorum, her şeyi seviyorum;) müşterilere karşı tutum çok sıcak🌸"
+    },
+    "rating": 5,
+    "updatedTime": "2025-08-03T13:11:55.344Z",
+    "reactions": {
+      "likes": 0,
+      "dislikes": 0,
+      "userReaction": "NONE"
+    },
+    "photos": [],
+    "videos": []
+  },
+  {
+    "businessComment": {
+      "text": "Светлана, спасибо вам большое за добрые слова! Очень рады, что ваш первый опыт удаления восьмёрок прошёл легко, быстро и безболезненно. Мы всегда стараемся обеспечить максимально комфортное и безопасное лечение. Будем рады видеть вас снова, если понадобится — вы в надёжных руках! 😊",
+      "updatedTime": "2025-06-23T09:47:34.664Z"
+    },
+    "reviewId": "gE2aEJ6gdjYsQdheiNQHMATQ96NbO-Hf",
+    "businessId": "82071161567",
+    "author": {
+      "name": "Мосина Светлана",
+      "avatarUrl": "https://avatars.mds.yandex.net/get-yapic/37154/0t-1/{size}",
+      "professionLevel": "Знаток города 5 уровня",
+      "rtb": "Знаток города 5 уровня",
+      "rtbType": "PROFESSION",
+      "publicId": "1bz12d20p8c87zrpf3kk7yy7e8",
+      "achievements": [],
+      "professions": [],
+      "isSubscribed": false
+    },
+    "text": "Прекрасная клиника с внимательными врачами) Удаляла восьмерки тут в первый раз, сделали все очень качественно, быстро и безболезненно) обязательно сюда вернусь ",
+    "textLanguage": "ru",
+    "textTranslations": {
+      "tr": "Özenli doktorları olan harika bir klinik) Burada ilk defa sekizi çıkardım, her şeyi çok verimli, hızlı ve acısız bir şekilde yaptım) kesinlikle buraya döneceğim "
+    },
+    "rating": 5,
+    "updatedTime": "2025-06-17T12:32:12.078Z",
+    "reactions": {
+      "likes": 0,
+      "dislikes": 0,
+      "userReaction": "NONE"
+    },
+    "photos": [],
+    "videos": []
+  },
+  {
+    "businessComment": {
+      "text": "Алина, благодарим вас за подробный и доброжелательный отзыв! 😊\nОчень приятно, что вы оценили и атмосферу клиники, и работу нашей команды. Особая благодарность за тёплые слова в адрес ортодонта Ксении Орбелиани — обязательно передадим ей вашу рекомендацию!\n\nРады, что вы с нами, и будем стараться радовать вас и дальше качеством и заботой 💫",
+      "updatedTime": "2025-05-15T10:18:18.865Z"
+    },
+    "reviewId": "t5rVk1RCz-ZXatsezVO8kgbtAbhyuy97",
+    "businessId": "82071161567",
+    "author": {
+      "name": "Alina Y.",
+      "avatarUrl": "https://avatars.mds.yandex.net/get-yapic/37154/0y-1/{size}",
+      "professionLevel": "Знаток города 2 уровня",
+      "rtb": "Знаток города 2 уровня",
+      "rtbType": "PROFESSION",
+      "publicId": "1qnp87ztx3d1cjbmcuan4j3tng",
+      "achievements": [],
+      "professions": [],
+      "isSubscribed": false
+    },
+    "text": "Плюсы: отзывчивый персонал, квалифицированные врачи, эстетичная студия, хорошие скидки и программа лояльности\nВ общем мне все нравится\nЕсли собираетесь ставить брекеты, особенно рекомендую ортодонта Ксению Орбелиани - профессионал своего дела\n\nМинусы: нет",
+    "textLanguage": "ru",
+    "textTranslations": {
+      "tr": "Artıları: duyarlı personel, kalifiye doktorlar, estetik açıdan hoş bir stüdyo, iyi indirimler ve sadakat programı\nGenel olarak, her şeyi seviyorum\nDiş teli takacaksanız, özellikle alanında profesyonel olan ortodontist Ksenia Orbeliani'yi tavsiye ederim\n\nEksileri: Hayır"
+    },
+    "rating": 5,
+    "updatedTime": "2025-05-12T10:54:18.058Z",
+    "reactions": {
+      "likes": 0,
+      "dislikes": 0,
+      "userReaction": "NONE"
+    },
+    "photos": [],
+    "videos": []
+  },
+  {
+    "businessComment": {
+      "text": "Большое спасибо за отзыв! 😊 Рады, что даже в экстренной ситуации вы остались довольны качеством лечения и обслуживания. Приятно слышать, что удалось восстановить сложный зуб — наша команда всегда старается найти наилучшее решение для пациента. Спасибо за рекомендацию и доверие! 🦷✨",
+      "updatedTime": "2025-04-10T09:42:49.328Z"
+    },
+    "reviewId": "muvQQcoi46WZonRym3xlqAXN2SGrlZT",
+    "businessId": "82071161567",
+    "author": {
+      "name": "Горьков Сергей",
+      "avatarUrl": "https://avatars.mds.yandex.net/get-yapic/6214067/Tk6e0QgwIvoFok9iCn25uUieKc-1/{size}",
+      "professionLevel": "Знаток города 3 уровня",
+      "rtb": "Знаток города 3 уровня",
+      "rtbType": "PROFESSION",
+      "publicId": "nu1e4pjvp8jja7y8q8u5jjadpm",
+      "achievements": [],
+      "professions": [],
+      "isSubscribed": false
+    },
+    "text": "Откололся зуб, пришлось быстро искать клинику. Выбрал эту, и был приятно удивлён качеством обслуживания. Зуб оказался сложным, но врач смогла его восстановить. Цены тоже вполне себе приемлемые - рекомендую",
+    "textLanguage": "ru",
+    "textTranslations": {
+      "tr": "Diş kırıldı, çabucak bir klinik aramak zorunda kaldım. Bunu seçtim ve hizmetin kalitesine hoş bir şekilde şaşırdım. Dişin zor olduğu ortaya çıktı, ancak doktor onu onarabildi. Fiyatlar da oldukça makul - tavsiye ederim"
+    },
+    "rating": 5,
+    "updatedTime": "2025-04-07T08:07:46.383Z",
+    "reactions": {
+      "likes": 0,
+      "dislikes": 0,
+      "userReaction": "NONE"
+    },
+    "photos": [],
+    "videos": []
+  },
+  {
+    "businessComment": {
+      "text": "Спасибо за ваш отзыв",
+      "updatedTime": "2026-03-03T09:08:38.350Z"
+    },
+    "reviewId": "vhkp3-kIuzOSwL2jCN2pe-7upxylxa",
+    "businessId": "82071161567",
+    "author": {
+      "name": "Мария Стемпаржецкая",
+      "avatarUrl": "https://avatars.mds.yandex.net/get-yapic/28053/enc-b333befc27fe49de4359c04935f0c0923042202df477074cade6787138e9c46d/{size}",
+      "professionLevel": "Знаток города 5 уровня",
+      "rtb": "Знаток города 5 уровня",
+      "rtbType": "PROFESSION",
+      "publicId": "fgn4mfvn07268mh00xz6eja5m0",
+      "achievements": [],
+      "professions": [],
+      "isSubscribed": false
+    },
+    "text": "Очень понравилось посещение данной клиники. Внимательные врачи. Вся диагностика на месте, что удобно. Приятные цены. Хорошо с записью на следующий прием. ",
+    "textLanguage": "ru",
+    "textTranslations": {
+      "tr": "Bu kliniği ziyaret etmekten gerçekten keyif aldım. Özenli doktorlar. Tüm teşhisler yerinde, bu uygun. Güzel fiyatlar. Bir sonraki randevunuz için randevu almakta sorun yok. "
+    },
+    "rating": 5,
+    "updatedTime": "2026-03-02T17:53:49.033Z",
+    "reactions": {
+      "likes": 0,
+      "dislikes": 0,
+      "userReaction": "NONE"
+    },
+    "photos": [],
+    "videos": []
+  },
+  {
+    "businessComment": {
+      "text": "Софья, благодарим вас за тёплые слова и высокую оценку нашей работы 💙\nНам очень приятно, что Вы остались довольны визитом в нашу клинику. Мы всегда стараемся создать комфортные условия и окружить заботой каждого пациента.\nБудем рады видеть Вас снова и всегда готовы помочь по любому вопросу здоровья!",
+      "updatedTime": "2025-08-04T08:12:58.695Z"
+    },
+    "reviewId": "TLrEsVGtzpmnH6KCBFd9cij6Emby4w",
+    "businessId": "82071161567",
+    "author": {
+      "name": "Софья Я.",
+      "avatarUrl": "https://avatars.mds.yandex.net/get-yapic/26311/0c-2/{size}",
+      "professionLevel": "Знаток города 4 уровня",
+      "rtb": "Знаток города 4 уровня",
+      "rtbType": "PROFESSION",
+      "publicId": "k2u7h0v8vqm8tnkwrvvazzjea0",
+      "achievements": [],
+      "professions": [],
+      "isSubscribed": false
+    },
+    "text": "Никогда не думала, что поход к стоматологу может быть таким комфортным. Все сделали безболезненно и профессионально. После приема выдали специальные рекомендации. Теперь буду лечится только здесь!",
+    "textLanguage": "ru",
+    "textTranslations": {
+      "tr": "Dişçiye gitmenin bu kadar rahat olabileceğini hiç düşünmemiştim. Her şeyi acısız ve profesyonelce yaptılar. Kabul edildikten sonra özel öneriler yayınladılar. Şimdi sadece burada tedavi göreceğim!"
+    },
+    "rating": 5,
+    "updatedTime": "2025-08-02T10:28:27.556Z",
+    "reactions": {
+      "likes": 0,
+      "dislikes": 0,
+      "userReaction": "NONE"
+    },
+    "photos": [],
+    "videos": []
+  },
+  {
+    "businessComment": {
+      "text": "Благодарим вас за тёплые слова и высокую оценку нашей работы 💙\nНам очень приятно, что Вы остались довольны визитом в нашу клинику. Мы всегда стараемся создать комфортные условия и окружить заботой каждого пациента.\nБудем рады видеть Вас снова и всегда готовы помочь по любому вопросу здоровья!",
+      "updatedTime": "2025-08-04T08:12:43.940Z"
+    },
+    "reviewId": "EZLB1Bl7Sb_4jIJDwe61AXdtAg418lIPW",
+    "businessId": "82071161567",
+    "author": {
+      "name": "Elina Baliuk",
+      "avatarUrl": "",
+      "professionLevel": "Знаток города 4 уровня",
+      "rtb": "Знаток города 4 уровня",
+      "rtbType": "PROFESSION",
+      "publicId": "2bxg2d6rwj5606yq35f3a0hcv8",
+      "achievements": [],
+      "professions": [],
+      "isSubscribed": false
+    },
+    "text": "Прекрасная клиника! Врачи профессионалы, работу выполняют быстро и безболезненно. Рассказывают обо всех нюансах лечения, о подводных камнях. И радует, такой профессиональный подход за адекватные цены. Однозначно рекомендую клинику!\n",
+    "textLanguage": "ru",
+    "textTranslations": {
+      "tr": "Güzel klinik! Doktorlar profesyoneldir, işi hızlı ve acısız bir şekilde yaparlar. Tedavinin tüm nüanslarından, tuzaklardan bahsediyorlar. Ve yeterli fiyatlar için böyle profesyonel bir yaklaşımın hoşuna gidiyor. Kesinlikle kliniği tavsiye ederim!\n"
+    },
+    "rating": 5,
+    "updatedTime": "2025-08-02T06:11:10.682Z",
+    "reactions": {
+      "likes": 0,
+      "dislikes": 0,
+      "userReaction": "NONE"
+    },
+    "photos": [],
+    "videos": []
+  },
+  {
+    "businessComment": {
+      "text": "Спасибо за вашу оценку",
+      "updatedTime": "2025-11-07T09:29:29.961Z"
+    },
+    "reviewId": "V8_ujcUgvGC9HgXrJAUXLIMFxfm99Mb",
+    "businessId": "82071161567",
+    "author": {
+      "name": "Анастасия Ч.",
+      "avatarUrl": "https://avatars.mds.yandex.net/get-yapic/15430/0b-7/{size}",
+      "professionLevel": "Знаток города 3 уровня",
+      "rtb": "Знаток города 3 уровня",
+      "rtbType": "PROFESSION",
+      "publicId": "zj96gx4j3ddrvpkngwn45kbyr8",
+      "achievements": [],
+      "professions": [],
+      "isSubscribed": false
+    },
+    "text": "Была на приеме у доктора Анасаровой . Доктор все объяснил , показал . Буду продолжать у него лечиться . Клинка чистая и уютная . Админ Анастасия доброжелательная и хорошая.",
+    "textLanguage": "ru",
+    "textTranslations": {
+      "tr": "Dr. Anasarova'nın randevusundaydım. Doktor her şeyi açıkladı, gösterdi. Ona tedavi görmeye devam edeceğim. Bıçak temiz ve rahattır. Yönetici Anastasia yardımsever ve iyidir."
+    },
+    "rating": 5,
+    "updatedTime": "2025-10-30T07:44:45.170Z",
+    "reactions": {
+      "likes": 1,
+      "dislikes": 0,
+      "userReaction": "NONE"
+    },
+    "photos": [],
+    "videos": []
+  },
+  {
+    "businessComment": {
+      "text": "Спасибо за ваш отклик",
+      "updatedTime": "2026-04-13T10:08:48.576Z"
+    },
+    "reviewId": "nXju2wMmEzzgY-0CV196IM1F0rWNr25",
+    "businessId": "82071161567",
+    "author": {
+      "name": "Ольга Магдыч",
+      "avatarUrl": "https://avatars.mds.yandex.net/get-yapic/63032/0k-5/{size}",
+      "professionLevel": "Знаток города 2 уровня",
+      "rtb": "Знаток города 2 уровня",
+      "rtbType": "PROFESSION",
+      "publicId": "6nna9b1hmemna3j566cfjxh5vr",
+      "achievements": [],
+      "professions": [],
+      "isSubscribed": false
+    },
+    "text": "Не раз бывала в клинике, хожу к Деминой. Всё на высшем уровне - чисто, комфортно, доброжелательное отношение персонала и врачей, по ценам довольно демократично. Рекомендую ",
+    "textLanguage": "ru",
+    "textTranslations": {
+      "tr": "Bir kereden fazla kliniğe gittim, Demina'ya gidiyorum. Her şey en üst düzeyde - personelin ve doktorların temiz, rahat, güler yüzlü tutumu, fiyatlara göre oldukça uygun. Öneriyorum "
+    },
+    "rating": 5,
+    "updatedTime": "2026-03-27T17:40:45.959Z",
+    "reactions": {
+      "likes": 0,
+      "dislikes": 0,
+      "userReaction": "NONE"
+    },
+    "photos": [],
+    "videos": []
+  },
+  {
+    "businessComment": {
+      "text": "Спасибо за оценку",
+      "updatedTime": "2026-05-15T13:17:25.148Z"
+    },
+    "reviewId": "qaleKu6XuGhcWbVjI2269BbdUZUYgE",
+    "businessId": "82071161567",
+    "author": {
+      "name": "solnuhhh",
+      "avatarUrl": "https://avatars.mds.yandex.net/get-yapic/36689/03MNFYTGrkPduWKkP9NZ8RGmvr8-1/{size}",
+      "professionLevel": "Знаток города 8 уровня",
+      "rtb": "Знаток города 8 уровня",
+      "rtbType": "PROFESSION",
+      "publicId": "tpru279he6nkxjzt3nyhduvn1w",
+      "achievements": [],
+      "professions": [],
+      "isSubscribed": false
+    },
+    "text": "Благодарю Гонгелеву Елену Владимировну за быструю и комфортную консультацию. Наметили план лечения, будем работать дальше👍",
+    "textLanguage": "ru",
+    "textTranslations": {
+      "tr": "Hızlı ve rahat danışmaları için Gongelev Elena Vladimirovna'ya teşekkür ediyorum. Tedavi planını belirledik, daha fazla çalışacağız"
+    },
+    "rating": 5,
+    "updatedTime": "2026-05-14T07:58:43.929Z",
+    "reactions": {
+      "likes": 0,
+      "dislikes": 0,
+      "userReaction": "NONE"
+    },
+    "photos": [],
+    "videos": []
+  }
+]

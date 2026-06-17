@@ -27,8 +27,26 @@ def mock_redis():
     mock_pubsub.listen = mock_listen
     mock_redis_client.pubsub.return_value = mock_pubsub
 
+    # Force the sync redis client (used by research_store) to look unavailable so
+    # tests fall back to the per-process in-memory dict. Without this, the store
+    # would talk to a real Redis on localhost:6379 and tests would see leftover
+    # tasks from previous runs (e.g. concurrency-limit false positives).
+    def _sync_redis_unavailable(*_a, **_kw):
+        raise ConnectionError("redis mocked away in tests")
+
     with (
         patch("redis.asyncio.Redis.from_url", return_value=mock_redis_client),
         patch("redis.asyncio.client.Redis.from_url", return_value=mock_redis_client),
+        patch("redis.Redis.from_url", side_effect=_sync_redis_unavailable),
     ):
         yield mock_redis_client
+
+
+@pytest.fixture(autouse=True)
+def reset_research_store():
+    """Clear the in-memory research-store fallback before every test."""
+    from src.infrastructure.tasks import research_store as _store
+
+    _store._local_fallback.clear()
+    yield
+    _store._local_fallback.clear()

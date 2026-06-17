@@ -1,0 +1,115 @@
+{
+  "summary": {
+    "site": "t.me",
+    "n_requests": 8,
+    "unique_urls": 20,
+    "request_success_rate": 0.125,
+    "content_success_rate": 0.125,
+    "total_wire_bytes": 13554,
+    "total_wire_mb": 0.01,
+    "avg_bytes_per_ok": 13554,
+    "p50_bytes_ok": 13554,
+    "p95_bytes_ok": 13554,
+    "avg_attempts": 5.5,
+    "avg_latency_s": 103.2,
+    "status_dist": {
+      "None": 7,
+      "200": 1
+    },
+    "elapsed_s": 161.6
+  },
+  "records": [
+    {
+      "url": "https://t.me/detskiysad114",
+      "fetched": "https://t.me/s/detskiysad114",
+      "wire_bytes": 0,
+      "attempts": 6,
+      "ok": false,
+      "content_ok": false,
+      "status": null,
+      "latency_s": 84.46,
+      "error": "ProxyError: 502 NO_HOST_CONNECTION"
+    },
+    {
+      "url": "https://t.me/orange_tmb89108502525",
+      "fetched": "https://t.me/s/orange_tmb89108502525",
+      "wire_bytes": 0,
+      "attempts": 6,
+      "ok": false,
+      "content_ok": false,
+      "status": null,
+      "latency_s": 76.71,
+      "error": "ConnectTimeout: "
+    },
+    {
+      "url": "https://t.me/maximumauto",
+      "fetched": "https://t.me/s/maximumauto",
+      "wire_bytes": 13554,
+      "attempts": 2,
+      "ok": true,
+      "content_ok": true,
+      "status": 200,
+      "latency_s": 19.68,
+      "error": null,
+      "signals": {
+        "has_posts": true,
+        "has_title": true
+      }
+    },
+    {
+      "url": "https://t.me/Parikmakherskaya1",
+      "fetched": "https://t.me/s/Parikmakherskaya1",
+      "wire_bytes": 0,
+      "attempts": 6,
+      "ok": false,
+      "content_ok": false,
+      "status": null,
+      "latency_s": 70.23,
+      "error": "ConnectTimeout: "
+    },
+    {
+      "url": "https://t.me/parihmaherskay1",
+      "fetched": "https://t.me/s/parihmaherskay1",
+      "wire_bytes": 0,
+      "attempts": 6,
+      "ok": false,
+      "content_ok": false,
+      "status": null,
+      "latency_s": 106.1,
+      "error": "ProxyError: 502 NO_HOST_CONNECTION"
+    },
+    {
+      "url": "https://t.me/s/otpbanknews",
+      "fetched": null,
+      "wire_bytes": 0,
+      "attempts": 6,
+      "ok": false,
+      "content_ok": false,
+      "status": null,
+      "latency_s": 153.49,
+      "error": "ProxyError: 502 NO_HOST_CONNECTION"
+    },
+    {
+      "url": "https://t.me/sberbank",
+      "fetched": "https://t.me/s/sberbank",
+      "wire_bytes": 0,
+      "attempts": 6,
+      "ok": false,
+      "content_ok": false,
+      "status": null,
+      "latency_s": 161.21,
+      "error": "ProxyError: 502 NO_HOST_CONNECTION"
+    },
+    {
+      "url": "https://t.me/nimfabeautyshop",
+      "fetched": "https://t.me/s/nimfabeautyshop",
+      "wire_bytes": 0,
+      "attempts": 6,
+      "ok": false,
+      "content_ok": false,
+      "status": null,
+      "latency_s": 153.69,
+      "error": "ConnectTimeout: "
+    }
+  ]
+}

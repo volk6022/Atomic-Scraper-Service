@@ -1,0 +1,80 @@
+{
+  "approach": "Playwright headless + RU residential proxy",
+  "success": true,
+  "captcha_detected": false,
+  "http_status": null,
+  "items_collected": 41,
+  "fields_per_item": [
+    "address",
+    "business_oid",
+    "categories_text",
+    "name",
+    "rating",
+    "reviews_text",
+    "seoname",
+    "url",
+    "working_status"
+  ],
+  "egress_ip": null,
+  "duration_s": 24.2,
+  "notes": "",
+  "sample": [
+    {
+      "name": "Houston",
+      "categories_text": "Стоматологическая клиника",
+      "address": "Кременчугская ул., 9, корп. 2",
+      "rating": "Рейтинг \n5,0",
+      "reviews_text": "390 оценок",
+      "working_status": "Открыто до 21:00",
+      "seoname": "houston",
+      "business_oid": "178860213454",
+      "url": "/maps/org/houston/178860213454/"
+    },
+    {
+      "name": "Диадема",
+      "categories_text": "Стоматологическая клиника",
+      "address": "Крестьянский пер., 5, Синяя вывеска стеклянная дверь",
+      "rating": "Рейтинг \n5,0",
+      "reviews_text": "1175 оценок",
+      "working_status": "Открыто до 21:00",
+      "seoname": "diadema",
+      "business_oid": "69092011893",
+      "url": "/maps/org/diadema/69092011893/"
+    },
+    {
+      "name": "Стоматология Палкинъ",
+      "categories_text": "Стоматологическая клиника",
+      "address": "Бармалеева ул., 2, Метро: Петроградская, Чкаловская, этаж 1",
+      "rating": "Рейтинг \n5,0",
+      "reviews_text": null,
+      "working_status": "Открыто до 21:00",
+      "seoname": "stomatologiya_palkin",
+      "business_oid": "216906433727",
+      "url": "/maps/org/stomatologiya_palkin/216906433727/"
+    },
+    {
+      "name": "ЭмДиСи Дентал",
+      "categories_text": "Стоматологическая клиника",
+      "address": "Малый просп. Васильевского острова, 11",
+      "rating": "Рейтинг \n5,0",
+      "reviews_text": null,
+      "working_status": "Открыто до 21:00",
+      "seoname": "emdisi_dental",
+      "business_oid": "238681452050",
+      "url": "/maps/org/emdisi_dental/238681452050/"
+    },
+    {
+      "name": "Все свои",
+      "categories_text": "Стоматологическая клиника",
+      "address": "ул. Марата, 50",
+      "rating": "Рейтинг \n5,0",
+      "reviews_text": null,
+      "working_status": "Открыто до 22:00",
+      "seoname": "vse_svoi",
+      "business_oid": "1014875040",
+      "url": "/maps/org/vse_svoi/1014875040/"
+    }
+  ],
+  "error": null,
+  "started_at": "2026-05-18T09:40:49.456458+00:00"
+}

@@ -1,25 +1,19 @@
-import httpx
-from src.core.config import settings
-from src.domain.models.requests import SearchRequest, SearchResponse, SearchResult
+"""SearchClient export — backed by SearXNG.
 
+Старый GoogleSearchClient (Playwright-based) удалён: подтверждено прогонами в
+serp_experiment/ что SearXNG-pipeline (VPN + pool 20 socks5 + retries=2) даёт
+~95% success rate без CAPTCHA-проблем Google'а.
 
-class SearchClient:
-    def __init__(self):
-        self.api_key = settings.ORCHESTRATION_API_KEY  # Or Serper key if used
+Этот модуль оставлен как тонкий re-export, чтобы существующие call-site'ы
+(api/routers/stateless.py, actions/research/tools.py) импортировались по
+прежнему пути.
+"""
+from src.infrastructure.external_api.searxng_client import (
+    SearXngSearchClient,
+    search_client,
+)
 
-    async def search(self, request: SearchRequest) -> SearchResponse:
-        # Mocking for now, as per Serper compatibility requirement
-        return SearchResponse(
-            searchParameters={"q": request.q, "type": "search", "engine": "google"},
-            organic=[
-                SearchResult(
-                    title="Example",
-                    link="https://example.com",
-                    snippet="Example snippet",
-                    position=1,
-                )
-            ],
-        )
+# Backward-compatible alias.
+SearchClient = SearXngSearchClient
 
-
-search_client = SearchClient()
+__all__ = ["SearchClient", "SearXngSearchClient", "search_client"]

@@ -1,0 +1,76 @@
+# Шаблон settings.yml для probe-SearXNG.
+# 9003 подставляется proxy_router'ом (см. __main__.generate_probe_configs).
+#
+# Probe-SearXNG ходит ТОЛЬКО на один router-probe-port. Router сам решает,
+# через какого worker'а отправлять traffic с этого port'а (mutable mapping
+# slot_to_worker, см. probe_slots.py).
+#
+# Включаем минимальный набор engines (google + duckduckgo) — это те же, что
+# используются в prod-SearXNG'е, остальные либо отключены, либо нерабочие.
+
+use_default_settings: true
+
+general:
+  debug: false
+  instance_name: "serp-exp-probe"
+  enable_metrics: false
+
+search:
+  safe_search: 0
+  autocomplete: ""
+  default_lang: "en"
+  ban_time_on_fail: 5
+  max_ban_time_on_fail: 60
+  formats:
+    - json
+
+server:
+  port: 8080
+  bind_address: "0.0.0.0"
+  base_url: false
+  limiter: false
+  public_instance: false
+  secret_key: "serp-exp-probe-do-not-use-in-prod"
+  image_proxy: false
+  http_protocol_version: "1.1"
+  method: "GET"
+
+ui:
+  default_locale: "en"
+  default_theme: simple
+
+outgoing:
+  request_timeout: 8.0
+  max_request_timeout: 12.0
+  useragent_suffix: ""
+  pool_connections: 20
+  pool_maxsize: 10
+  enable_http2: true
+  extra_proxy_timeout: 5
+  proxies:
+    all://:
+      - http://host.docker.internal:9003
+
+# Жёстко выключаем все engines кроме google + duckduckgo.
+# Probe — про эти два, остальные банятся / шумят.
+engines:
+  - name: brave
+    disabled: true
+  - name: startpage
+    disabled: true
+  - name: karmasearch
+    disabled: true
+  - name: karmasearch videos
+    disabled: true
+  - name: ahmia
+    disabled: true
+  - name: torch
+    disabled: true
+  - name: mojeek
+    disabled: true
+  - name: qwant
+    disabled: true
+  - name: bing
+    disabled: true
+  - name: yahoo
+    disabled: true
