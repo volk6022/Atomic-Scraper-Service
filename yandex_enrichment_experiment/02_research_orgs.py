@@ -535,6 +535,24 @@ async def amain() -> int:
             except ValueError:
                 pass
 
+    # Production safety: never re-research an org already done in another folder.
+    # EXCLUDE_OIDS_FROM = comma-separated dirs (e.g. the prior `research/`); any
+    # oid with a *.json there is dropped from this batch. Guards against dubles
+    # even if dedup ordering shifts between runs (OFFSET alone is index-based).
+    exclude_dirs = [d.strip() for d in os.environ.get("EXCLUDE_OIDS_FROM", "").split(",") if d.strip()]
+    if exclude_dirs:
+        excluded: set[str] = set()
+        for ed in exclude_dirs:
+            p = Path(ed)
+            if not p.is_absolute():
+                p = DATA_DIR / ed
+            if p.exists():
+                excluded |= {f.stem for f in p.glob("*.json")}
+        before = len(orgs)
+        orgs = [o for o in orgs if str(o.get("oid")) not in excluded]
+        print(f"[*] EXCLUDE_OIDS_FROM: dropped {before - len(orgs)} already-researched "
+              f"orgs ({len(excluded)} oids across {len(exclude_dirs)} dir(s))")
+
     print(f"[*] Loaded {len(orgs)} organizations.")
     print(f"[*] Mode: {MODE}, concurrency: {CONCURRENCY}, poll interval: {POLL_INTERVAL_S}s")
     print()
