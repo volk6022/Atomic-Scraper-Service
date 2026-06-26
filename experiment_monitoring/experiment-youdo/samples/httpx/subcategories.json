@@ -1,0 +1,1748 @@
+[
+  {
+    "id": 231,
+    "category": 16,
+    "code": "accountingservices",
+    "isDefault": false,
+    "name": "Бухгалтерские услуги",
+    "order": 1,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 200,
+    "category": 16777216,
+    "code": "carmaintenance",
+    "isDefault": false,
+    "name": "Техническое обслуживание автомобиля",
+    "order": 1,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 186,
+    "category": 2048,
+    "code": "migrationfurniture",
+    "isDefault": false,
+    "name": "Перевозка вещей, переезды",
+    "order": 1,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 217,
+    "category": 8388608,
+    "code": "russianandliterature",
+    "isDefault": false,
+    "name": "Русский язык и литература",
+    "order": 1,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 1,
+    "category": 16384,
+    "code": "pedestrian",
+    "isDefault": false,
+    "name": "Услуги пешего курьера",
+    "order": 1,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 8,
+    "category": 8192,
+    "code": "housemaid",
+    "isDefault": false,
+    "name": "Поддерживающая уборка",
+    "order": 1,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 20,
+    "category": 65536,
+    "code": "refrigerators",
+    "isDefault": false,
+    "name": "Холодильники и морозильные камеры",
+    "order": 1,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 21,
+    "category": 32768,
+    "code": "repairsmall",
+    "isDefault": false,
+    "name": "Мастер на час",
+    "order": 1,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 30,
+    "category": 262144,
+    "code": "computerrepair",
+    "isDefault": false,
+    "name": "Ремонт компьютеров и ноутбуков",
+    "order": 1,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 39,
+    "category": 1048576,
+    "code": "writing",
+    "isDefault": false,
+    "name": "Работа с текстом, копирайтинг",
+    "order": 1,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 48,
+    "category": 128,
+    "code": "makeup",
+    "isDefault": false,
+    "name": "Услуги косметолога",
+    "order": 1,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 57,
+    "category": 256,
+    "code": "photographers",
+    "isDefault": false,
+    "name": "Фотосъемка",
+    "order": 1,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 55,
+    "category": 131072,
+    "code": "helpatevents",
+    "isDefault": false,
+    "name": "Помощь в проведении мероприятий",
+    "order": 1,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 75,
+    "category": 2097152,
+    "code": "phonesandtablets",
+    "isDefault": false,
+    "name": "Планшеты и телефоны",
+    "order": 1,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 148,
+    "category": 4194304,
+    "code": "entiresite",
+    "isDefault": false,
+    "name": "Сайт под ключ",
+    "order": 1,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 149,
+    "category": 512,
+    "code": "corporateidentity",
+    "isDefault": false,
+    "name": "Фирменный стиль, логотипы, визитки",
+    "order": 1,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 146,
+    "category": 4194304,
+    "code": "appdevelopment",
+    "isDefault": false,
+    "name": "Разработка мобильных приложений",
+    "order": 2,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 152,
+    "category": 512,
+    "code": "bookletsandcards",
+    "isDefault": false,
+    "name": "Полиграфический дизайн",
+    "order": 2,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 112,
+    "category": 2097152,
+    "code": "audio",
+    "isDefault": false,
+    "name": "Аудиотехника и системы",
+    "order": 2,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 122,
+    "category": 8192,
+    "code": "regularhousemaid",
+    "isDefault": false,
+    "name": "Генеральная уборка",
+    "order": 2,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 132,
+    "category": 131072,
+    "code": "promodistribution",
+    "isDefault": false,
+    "name": "Раздача промо-материалов",
+    "order": 2,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 58,
+    "category": 256,
+    "code": "cameramen",
+    "isDefault": false,
+    "name": "Видеосъемка",
+    "order": 2,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 34,
+    "category": 262144,
+    "code": "softwareinstallation",
+    "isDefault": false,
+    "name": "Установка и настройка операц. систем, программ",
+    "order": 2,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 25,
+    "category": 32768,
+    "code": "complexflatrepair",
+    "isDefault": false,
+    "name": "Ремонт под ключ",
+    "order": 2,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 2,
+    "category": 16384,
+    "code": "car",
+    "isDefault": false,
+    "name": "Услуги курьера на легковом авто",
+    "order": 2,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 12,
+    "category": 65536,
+    "code": "washingmachines",
+    "isDefault": false,
+    "name": "Стиральные и сушильные машины",
+    "order": 2,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 218,
+    "category": 8388608,
+    "code": "english",
+    "isDefault": false,
+    "name": "Английский язык",
+    "order": 2,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 201,
+    "category": 16777216,
+    "code": "cardiagnosis",
+    "isDefault": false,
+    "name": "Диагностика и ремонт двигателя, КПП и ходовой части",
+    "order": 2,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 232,
+    "category": 16,
+    "code": "taxconsultants",
+    "isDefault": false,
+    "name": "Консультация специалиста по налогам",
+    "order": 2,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 238,
+    "category": 128,
+    "code": "epilation",
+    "isDefault": false,
+    "name": "Эпиляция",
+    "order": 2,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 247,
+    "category": 1048576,
+    "code": "translationservices",
+    "isDefault": false,
+    "name": "Услуги переводчика",
+    "order": 2,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 239,
+    "category": 128,
+    "code": "eyebrowsandeyelashes",
+    "isDefault": false,
+    "name": "Брови и ресницы",
+    "order": 3,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 233,
+    "category": 16,
+    "code": "notaryservices",
+    "isDefault": false,
+    "name": "Нотариальные услуги",
+    "order": 3,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 251,
+    "category": 256,
+    "code": "audiorecording",
+    "isDefault": false,
+    "name": "Запись аудио",
+    "order": 3,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 202,
+    "category": 16777216,
+    "code": "caraircondition",
+    "isDefault": false,
+    "name": "Обслуживание системы кондиционирования",
+    "order": 3,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 219,
+    "category": 8388608,
+    "code": "french",
+    "isDefault": false,
+    "name": "Французский язык",
+    "order": 3,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 14,
+    "category": 65536,
+    "code": "dishwashers",
+    "isDefault": false,
+    "name": "Посудомоечные машины",
+    "order": 3,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 19,
+    "category": 2097152,
+    "code": "tv",
+    "isDefault": false,
+    "name": "Телевизоры и мониторы",
+    "order": 3,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 37,
+    "category": 1048576,
+    "code": "informationretrieval",
+    "isDefault": false,
+    "name": "Поиск и обработка информации",
+    "order": 3,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 24,
+    "category": 32768,
+    "code": "repairplumbing",
+    "isDefault": false,
+    "name": "Сантехнические работы",
+    "order": 3,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 32,
+    "category": 262144,
+    "code": "antivirus",
+    "isDefault": false,
+    "name": "Удаление вирусов",
+    "order": 3,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 62,
+    "category": 4194304,
+    "code": "webdev",
+    "isDefault": false,
+    "name": "Программирование",
+    "order": 3,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 56,
+    "category": 131072,
+    "code": "secretbuyers",
+    "isDefault": false,
+    "name": "Тайный покупатель",
+    "order": 3,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 124,
+    "category": 16384,
+    "code": "courierbuyanddelivery",
+    "isDefault": false,
+    "name": "Купить и доставить",
+    "order": 3,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 114,
+    "category": 2048,
+    "code": "passengertransportation",
+    "isDefault": false,
+    "name": "Пассажирские перевозки",
+    "order": 3,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 117,
+    "category": 8192,
+    "code": "windowswashing",
+    "isDefault": false,
+    "name": "Мытье окон",
+    "order": 3,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 150,
+    "category": 512,
+    "code": "iconsandillustrations",
+    "isDefault": false,
+    "name": "Иллюстрации, живопись, граффити",
+    "order": 3,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 119,
+    "category": 8192,
+    "code": "garbage",
+    "isDefault": false,
+    "name": "Вынос мусора",
+    "order": 4,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 110,
+    "category": 262144,
+    "code": "internetsetup",
+    "isDefault": false,
+    "name": "Настройка интернета и Wi-Fi",
+    "order": 4,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 116,
+    "category": 2048,
+    "code": "constructionfreight",
+    "isDefault": false,
+    "name": "Строительные грузы и оборудование",
+    "order": 4,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 123,
+    "category": 16384,
+    "code": "expressdelivery",
+    "isDefault": false,
+    "name": "Срочная доставка",
+    "order": 4,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 130,
+    "category": 1048576,
+    "code": "excelpowerpointetc",
+    "isDefault": false,
+    "name": "Работа с числовыми данными",
+    "order": 4,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 135,
+    "category": 131072,
+    "code": "handyman",
+    "isDefault": false,
+    "name": "Разнорабочий",
+    "order": 4,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 139,
+    "category": 16,
+    "code": "documentexecution",
+    "isDefault": false,
+    "name": "Оформление документов",
+    "order": 4,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 61,
+    "category": 512,
+    "code": "design",
+    "isDefault": false,
+    "name": "Дизайн сайтов и приложений",
+    "order": 4,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 63,
+    "category": 4194304,
+    "code": "sitehelpandsupport",
+    "isDefault": false,
+    "name": "Доработка и поддержка сайта",
+    "order": 4,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 59,
+    "category": 256,
+    "code": "photo",
+    "isDefault": false,
+    "name": "Обработка фотографий",
+    "order": 4,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 78,
+    "category": 2097152,
+    "code": "auto",
+    "isDefault": false,
+    "name": "Автомобильная электроника",
+    "order": 4,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 23,
+    "category": 32768,
+    "code": "repairelectric",
+    "isDefault": false,
+    "name": "Электромонтажные работы",
+    "order": 4,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 11,
+    "category": 65536,
+    "code": "kitchenelectrocookers",
+    "isDefault": false,
+    "name": "Электрические плиты и панели",
+    "order": 4,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 220,
+    "category": 8388608,
+    "code": "deutsch",
+    "isDefault": false,
+    "name": "Немецкий язык",
+    "order": 4,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 203,
+    "category": 16777216,
+    "code": "carbody",
+    "isDefault": false,
+    "name": "Кузовной ремонт",
+    "order": 4,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 241,
+    "category": 128,
+    "code": "makeupartistservices",
+    "isDefault": false,
+    "name": "Услуги визажиста",
+    "order": 4,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 240,
+    "category": 128,
+    "code": "tattoosandpiercings",
+    "isDefault": false,
+    "name": "Тату и пирсинг",
+    "order": 5,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 248,
+    "category": 1048576,
+    "code": "preparationofpresentations",
+    "isDefault": false,
+    "name": "Подготовка презентаций",
+    "order": 5,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 234,
+    "category": 16,
+    "code": "servicesoflawyer",
+    "isDefault": false,
+    "name": "Услуги адвоката",
+    "order": 5,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 244,
+    "category": 4194304,
+    "code": "1csupport",
+    "isDefault": false,
+    "name": "Доработка и настройка 1С",
+    "order": 5,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 204,
+    "category": 16777216,
+    "code": "carelectric",
+    "isDefault": false,
+    "name": "Автоэлектрика",
+    "order": 5,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 221,
+    "category": 8388608,
+    "code": "spanish",
+    "isDefault": false,
+    "name": "Испанский язык",
+    "order": 5,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 84,
+    "category": 262144,
+    "code": "hardwarerepair",
+    "isDefault": false,
+    "name": "Ремонт и замена комплектующих",
+    "order": 5,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 80,
+    "category": 32768,
+    "code": "facing",
+    "isDefault": false,
+    "name": "Отделочные работы",
+    "order": 5,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 52,
+    "category": 131072,
+    "code": "promoters",
+    "isDefault": false,
+    "name": "Промоутер",
+    "order": 5,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 125,
+    "category": 16384,
+    "code": "productsdelivery",
+    "isDefault": false,
+    "name": "Доставка продуктов",
+    "order": 5,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 111,
+    "category": 65536,
+    "code": "kitchencookers",
+    "isDefault": false,
+    "name": "Газовые плиты",
+    "order": 5,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 72,
+    "category": 2097152,
+    "code": "optics",
+    "isDefault": false,
+    "name": "Видео/фототехника",
+    "order": 5,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 151,
+    "category": 512,
+    "code": "socialnetworksandbanners",
+    "isDefault": false,
+    "name": "Интернет-баннеры, оформление соц.сетей",
+    "order": 5,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 159,
+    "category": 256,
+    "code": "videoclipscreation",
+    "isDefault": false,
+    "name": "Создание видео под ключ",
+    "order": 5,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 153,
+    "category": 512,
+    "code": "3ddesignandanimation",
+    "isDefault": false,
+    "name": "3d-графика, анимация",
+    "order": 6,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 170,
+    "category": 32768,
+    "code": "ceilings",
+    "isDefault": false,
+    "name": "Потолки",
+    "order": 6,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 115,
+    "category": 2048,
+    "code": "garbagetransportation",
+    "isDefault": false,
+    "name": "Вывоз мусора",
+    "order": 6,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 121,
+    "category": 8192,
+    "code": "clothesrepair",
+    "isDefault": false,
+    "name": "Помощь швеи",
+    "order": 6,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 126,
+    "category": 16384,
+    "code": "restaurantfooddelivery",
+    "isDefault": false,
+    "name": "Доставка еды из ресторанов",
+    "order": 6,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 131,
+    "category": 1048576,
+    "code": "audiovideorecognition",
+    "isDefault": false,
+    "name": "Расшифровка аудио- и видеозаписей",
+    "order": 6,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 144,
+    "category": 16,
+    "code": "companiesregistrar",
+    "isDefault": false,
+    "name": "Регистрация, ликвидация компаний",
+    "order": 6,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 133,
+    "category": 131072,
+    "code": "toastmaster",
+    "isDefault": false,
+    "name": "Тамада, ведущий, аниматор",
+    "order": 6,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 77,
+    "category": 2097152,
+    "code": "games",
+    "isDefault": false,
+    "name": "Игровые приставки",
+    "order": 6,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 15,
+    "category": 65536,
+    "code": "ovens",
+    "isDefault": false,
+    "name": "Духовые шкафы",
+    "order": 6,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 31,
+    "category": 262144,
+    "code": "datarecovery",
+    "isDefault": false,
+    "name": "Восстановление данных",
+    "order": 6,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 43,
+    "category": 128,
+    "code": "heirdressers",
+    "isDefault": false,
+    "name": "Парикмахерские услуги",
+    "order": 6,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 245,
+    "category": 4194304,
+    "code": "creatinglandingpages",
+    "isDefault": false,
+    "name": "Создание лендингов",
+    "order": 6,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 252,
+    "category": 256,
+    "code": "fashionmodel",
+    "isDefault": false,
+    "name": "Модели для съемок",
+    "order": 6,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 215,
+    "category": 16777216,
+    "code": "glassandtinting",
+    "isDefault": false,
+    "name": "Автостекла и тонировка",
+    "order": 6,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 205,
+    "category": 16777216,
+    "code": "tireservice",
+    "isDefault": false,
+    "name": "Шиномонтаж",
+    "order": 7,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 40,
+    "category": 1048576,
+    "code": "advertising",
+    "isDefault": false,
+    "name": "Размещение на рекламных площадках",
+    "order": 7,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 16,
+    "category": 65536,
+    "code": "drawingsout",
+    "isDefault": false,
+    "name": "Вытяжки",
+    "order": 7,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 18,
+    "category": 2097152,
+    "code": "satellitedishes",
+    "isDefault": false,
+    "name": "Спутниковые и эфирные антенны",
+    "order": 7,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 5,
+    "category": 2048,
+    "code": "drivers",
+    "isDefault": false,
+    "name": "Эвакуаторы",
+    "order": 7,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 9,
+    "category": 8192,
+    "code": "cooking",
+    "isDefault": false,
+    "name": "Приготовление еды",
+    "order": 7,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 45,
+    "category": 128,
+    "code": "manicure",
+    "isDefault": false,
+    "name": "Ногтевой сервис",
+    "order": 7,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 60,
+    "category": 256,
+    "code": "video",
+    "isDefault": false,
+    "name": "Монтаж и цветокоррекция видео",
+    "order": 7,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 87,
+    "category": 262144,
+    "code": "printerrepair",
+    "isDefault": false,
+    "name": "Настройка и ремонт оргтехники",
+    "order": 7,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 140,
+    "category": 16,
+    "code": "complaints",
+    "isDefault": false,
+    "name": "Составление и подача жалоб, исков",
+    "order": 7,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 127,
+    "category": 16384,
+    "code": "regularcourier",
+    "isDefault": false,
+    "name": "Курьер на день",
+    "order": 7,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 171,
+    "category": 32768,
+    "code": "floor",
+    "isDefault": false,
+    "name": "Полы",
+    "order": 7,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 147,
+    "category": 4194304,
+    "code": "layout",
+    "isDefault": false,
+    "name": "Верстка",
+    "order": 7,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 155,
+    "category": 512,
+    "code": "presentationdesign",
+    "isDefault": false,
+    "name": "Инфографика, презентации, иконки",
+    "order": 7,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 156,
+    "category": 2048,
+    "code": "intercitytransportation",
+    "isDefault": false,
+    "name": "Междугородные перевозки",
+    "order": 8,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 154,
+    "category": 512,
+    "code": "outdooradvertising",
+    "isDefault": false,
+    "name": "Наружная реклама, стенды, pos-материалы",
+    "order": 8,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 136,
+    "category": 256,
+    "code": "digitization",
+    "isDefault": false,
+    "name": "Оцифровка",
+    "order": 8,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 138,
+    "category": 16,
+    "code": "documentcompilation",
+    "isDefault": false,
+    "name": "Составление и проверка договоров",
+    "order": 8,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 109,
+    "category": 262144,
+    "code": "computertraining",
+    "isDefault": false,
+    "name": "Консультация и обучение",
+    "order": 8,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 104,
+    "category": 16384,
+    "code": "courierother",
+    "isDefault": true,
+    "name": "Другая посылка",
+    "order": 8,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 81,
+    "category": 32768,
+    "code": "tiling",
+    "isDefault": false,
+    "name": "Плиточные работы",
+    "order": 8,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 53,
+    "category": 131072,
+    "code": "models",
+    "isDefault": false,
+    "name": "Промо-модель",
+    "order": 8,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 10,
+    "category": 8192,
+    "code": "clothes",
+    "isDefault": false,
+    "name": "Глажение белья",
+    "order": 8,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 13,
+    "category": 65536,
+    "code": "airconditioner",
+    "isDefault": false,
+    "name": "Климатическая техника",
+    "order": 8,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 44,
+    "category": 128,
+    "code": "masseurs",
+    "isDefault": false,
+    "name": "Массаж",
+    "order": 8,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 206,
+    "category": 16777216,
+    "code": "washanddry",
+    "isDefault": false,
+    "name": "Мойка и химчистка",
+    "order": 8,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 187,
+    "category": 8388608,
+    "code": "foreignlanguages",
+    "isDefault": false,
+    "name": "Другие иностранные языки",
+    "order": 8,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 212,
+    "category": 2097152,
+    "code": "watches",
+    "isDefault": false,
+    "name": "Часы и хронометры",
+    "order": 8,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 249,
+    "category": 1048576,
+    "code": "smm",
+    "isDefault": false,
+    "name": "Помощь SMM-специалиста",
+    "order": 8,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 246,
+    "category": 4194304,
+    "code": "creatingscriptsandbots",
+    "isDefault": false,
+    "name": "Скрипты и боты",
+    "order": 8,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 229,
+    "category": 131072,
+    "code": "merchandisers",
+    "isDefault": false,
+    "name": "Мерчендайзеры",
+    "order": 9,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 222,
+    "category": 8388608,
+    "code": "mathandphysics",
+    "isDefault": false,
+    "name": "Математика и физика",
+    "order": 9,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 22,
+    "category": 32768,
+    "code": "repairfurniture",
+    "isDefault": false,
+    "name": "Сборка и ремонт мебели",
+    "order": 9,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 17,
+    "category": 65536,
+    "code": "waterheaters",
+    "isDefault": false,
+    "name": "Водонагреватели, бойлеры, котлы, колонки",
+    "order": 9,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 49,
+    "category": 128,
+    "code": "stylists",
+    "isDefault": false,
+    "name": "Стилисты и имиджмейкеры",
+    "order": 9,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 64,
+    "category": 1048576,
+    "code": "seo",
+    "isDefault": false,
+    "name": "Реклама и продвижение в интернете",
+    "order": 9,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 79,
+    "category": 16,
+    "code": "legaladvice",
+    "isDefault": false,
+    "name": "Юридическая консультация",
+    "order": 9,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 96,
+    "category": 2097152,
+    "code": "electronicrepairother",
+    "isDefault": true,
+    "name": "Что-то другое",
+    "order": 9,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 108,
+    "category": 4194304,
+    "code": "webdevelopmentother",
+    "isDefault": true,
+    "name": "Что-то другое",
+    "order": 9,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 118,
+    "category": 8192,
+    "code": "carpetandfurniturecleaning",
+    "isDefault": false,
+    "name": "Химчистка",
+    "order": 9,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 157,
+    "category": 2048,
+    "code": "loaderservices",
+    "isDefault": false,
+    "name": "Услуги грузчиков",
+    "order": 9,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 158,
+    "category": 512,
+    "code": "interiordesign",
+    "isDefault": false,
+    "name": "Архитектура, интерьер, ландшафт",
+    "order": 9,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 161,
+    "category": 65536,
+    "code": "sewingmachine",
+    "isDefault": false,
+    "name": "Швейные машины",
+    "order": 10,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 178,
+    "category": 8192,
+    "code": "animalcare",
+    "isDefault": false,
+    "name": "Уход за животными",
+    "order": 10,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 90,
+    "category": 262144,
+    "code": "computerhelpother",
+    "isDefault": true,
+    "name": "Что-то другое",
+    "order": 10,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 100,
+    "category": 256,
+    "code": "photoshopother",
+    "isDefault": true,
+    "name": "Что-то другое",
+    "order": 10,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 26,
+    "category": 32768,
+    "code": "repairdoors",
+    "isDefault": false,
+    "name": "Установка и ремонт дверей, замков",
+    "order": 10,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 38,
+    "category": 1048576,
+    "code": "telephonecalls",
+    "isDefault": false,
+    "name": "Обзвон по базе",
+    "order": 10,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 223,
+    "category": 8388608,
+    "code": "biologyandchemistry",
+    "isDefault": false,
+    "name": "Биология и химия",
+    "order": 10,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 213,
+    "category": 2048,
+    "code": "foodstufftransportation",
+    "isDefault": false,
+    "name": "Перевозка продуктов",
+    "order": 10,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 230,
+    "category": 131072,
+    "code": "picker",
+    "isDefault": false,
+    "name": "Комплектовщики",
+    "order": 10,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 235,
+    "category": 16,
+    "code": "legalsupport",
+    "isDefault": false,
+    "name": "Юридическое сопровождение",
+    "order": 10,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 242,
+    "category": 128,
+    "code": "psychologistsandpsychotherapists",
+    "isDefault": false,
+    "name": "Психологи и психотерапевты",
+    "order": 10,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 255,
+    "category": 512,
+    "code": "fashiondesign",
+    "isDefault": false,
+    "name": "Дизайн одежды",
+    "order": 10,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 243,
+    "category": 128,
+    "code": "nurseservices",
+    "isDefault": false,
+    "name": "Услуги медсестры",
+    "order": 11,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 250,
+    "category": 1048576,
+    "code": "personalassistantservices",
+    "isDefault": false,
+    "name": "Услуги личного помощника",
+    "order": 11,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 236,
+    "category": 16,
+    "code": "tenders",
+    "isDefault": false,
+    "name": "Тендеры",
+    "order": 11,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 214,
+    "category": 2048,
+    "code": "manipulator",
+    "isDefault": false,
+    "name": "Услуги манипулятора",
+    "order": 11,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 224,
+    "category": 8388608,
+    "code": "historyandsocialstudies",
+    "isDefault": false,
+    "name": "История и обществознание",
+    "order": 11,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 209,
+    "category": 16777216,
+    "code": "cartuning",
+    "isDefault": false,
+    "name": "Тюнинг (внешний и внутренний)",
+    "order": 11,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 163,
+    "category": 65536,
+    "code": "cleaners",
+    "isDefault": false,
+    "name": "Пылесосы и очистители",
+    "order": 11,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 101,
+    "category": 512,
+    "code": "designother",
+    "isDefault": true,
+    "name": "Что-то другое",
+    "order": 11,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 179,
+    "category": 8192,
+    "code": "gardening",
+    "isDefault": false,
+    "name": "Работы в саду, огороде, на участке",
+    "order": 11,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 172,
+    "category": 32768,
+    "code": "glazingofbalconies",
+    "isDefault": false,
+    "name": "Окна, остекление, балконы",
+    "order": 11,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 105,
+    "category": 131072,
+    "code": "promoother",
+    "isDefault": true,
+    "name": "Что-то другое",
+    "order": 11,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 107,
+    "category": 1048576,
+    "code": "virtualassistantother",
+    "isDefault": true,
+    "name": "Что-то другое",
+    "order": 12,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 128,
+    "category": 128,
+    "code": "personaltrainer",
+    "isDefault": false,
+    "name": "Персональный тренер",
+    "order": 12,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 173,
+    "category": 32768,
+    "code": "roofingandfacadework",
+    "isDefault": false,
+    "name": "Кровельные и фасадные работы",
+    "order": 12,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 180,
+    "category": 8192,
+    "code": "caregivers",
+    "isDefault": false,
+    "name": "Сиделки",
+    "order": 12,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 102,
+    "category": 2048,
+    "code": "truckingother",
+    "isDefault": true,
+    "name": "Другой груз",
+    "order": 12,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 164,
+    "category": 65536,
+    "code": "ironsandclothingcare",
+    "isDefault": false,
+    "name": "Утюги и уход за одеждой",
+    "order": 12,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 210,
+    "category": 16777216,
+    "code": "roadassistance",
+    "isDefault": false,
+    "name": "Помощь на дороге",
+    "order": 12,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 225,
+    "category": 8388608,
+    "code": "geographyandeconomics",
+    "isDefault": false,
+    "name": "География и экономика",
+    "order": 12,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 237,
+    "category": 16,
+    "code": "hrmanagement",
+    "isDefault": false,
+    "name": "Делопроизводство и работа с кадрами",
+    "order": 12,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 216,
+    "category": 16777216,
+    "code": "moto",
+    "isDefault": false,
+    "name": "Мотосервис",
+    "order": 13,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 226,
+    "category": 8388608,
+    "code": "computerscience",
+    "isDefault": false,
+    "name": "Информатика и программирование",
+    "order": 13,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 98,
+    "category": 16,
+    "code": "legaladviceother",
+    "isDefault": true,
+    "name": "Что-то другое",
+    "order": 13,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 99,
+    "category": 128,
+    "code": "healthandbeautyother",
+    "isDefault": true,
+    "name": "Что-то другое",
+    "order": 13,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 181,
+    "category": 8192,
+    "code": "childminder",
+    "isDefault": false,
+    "name": "Няни",
+    "order": 13,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 174,
+    "category": 32768,
+    "code": "heatingwatersupplysewerage",
+    "isDefault": false,
+    "name": "Отопление, водоснабжение, канализация",
+    "order": 13,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 175,
+    "category": 32768,
+    "code": "insulationwork",
+    "isDefault": false,
+    "name": "Изоляционные работы",
+    "order": 14,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 188,
+    "category": 8388608,
+    "code": "schoolpreparation",
+    "isDefault": false,
+    "name": "Подготовка к школе и младшие классы",
+    "order": 14,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 211,
+    "category": 16777216,
+    "code": "carother",
+    "isDefault": true,
+    "name": "Что-то другое",
+    "order": 14,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 165,
+    "category": 65536,
+    "code": "coffeemachines",
+    "isDefault": false,
+    "name": "Кофемашины",
+    "order": 14,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 254,
+    "category": 8192,
+    "code": "sanitarywork",
+    "isDefault": false,
+    "name": "Санитарные работы",
+    "order": 14,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 166,
+    "category": 65536,
+    "code": "microwaveovens",
+    "isDefault": false,
+    "name": "СВЧ печи",
+    "order": 15,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 195,
+    "category": 8388608,
+    "code": "music",
+    "isDefault": false,
+    "name": "Музыка, танцы, арт",
+    "order": 15,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 176,
+    "category": 32768,
+    "code": "buildinginstallationwork",
+    "isDefault": false,
+    "name": "Строительно-монтажные работы",
+    "order": 15,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 103,
+    "category": 8192,
+    "code": "houseother",
+    "isDefault": true,
+    "name": "Что-то другое",
+    "order": 15,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 82,
+    "category": 32768,
+    "code": "buildingservices",
+    "isDefault": false,
+    "name": "Крупное строительство",
+    "order": 16,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 167,
+    "category": 65536,
+    "code": "smallkitchenappliances",
+    "isDefault": false,
+    "name": "Мелкая кухонная техника",
+    "order": 16,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 193,
+    "category": 8388608,
+    "code": "university",
+    "isDefault": false,
+    "name": "Помощь студентам",
+    "order": 16,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 194,
+    "category": 8388608,
+    "code": "logopedist",
+    "isDefault": false,
+    "name": "Логопеды",
+    "order": 17,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 168,
+    "category": 65536,
+    "code": "bodycare",
+    "isDefault": false,
+    "name": "Уход за телом и здоровьем",
+    "order": 17,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 177,
+    "category": 32768,
+    "code": "securitysystems",
+    "isDefault": false,
+    "name": "Охранные системы",
+    "order": 17,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 169,
+    "category": 65536,
+    "code": "buildingandgardenequipment",
+    "isDefault": false,
+    "name": "Строительная и садовая техника",
+    "order": 18,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 196,
+    "category": 8388608,
+    "code": "sport",
+    "isDefault": false,
+    "name": "Спорт",
+    "order": 18,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 253,
+    "category": 32768,
+    "code": "openinglocks",
+    "isDefault": false,
+    "name": "Вскрытие замков",
+    "order": 18,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 227,
+    "category": 8388608,
+    "code": "carinstructors",
+    "isDefault": false,
+    "name": "Автоинструкторы",
+    "order": 19,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 92,
+    "category": 65536,
+    "code": "techrepairother",
+    "isDefault": true,
+    "name": "Что-то другое",
+    "order": 19,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 197,
+    "category": 8388608,
+    "code": "teachingother",
+    "isDefault": true,
+    "name": "Что-то другое",
+    "order": 22,
+    "sbrCanCreateNewTasks": true
+  },
+  {
+    "id": 83,
+    "category": 32768,
+    "code": "clericalother",
+    "isDefault": true,
+    "name": "Что-то другое",
+    "order": 23,
+    "sbrCanCreateNewTasks": true
+  }
+]

@@ -1,0 +1,282 @@
+=== monitor start 2026-06-18T16:12:26+00:00 | interval=120s | seen(fl)=157 seen(kwork)=23 ===
+--- tick 2026-06-18T16:12:27+00:00 ---
+  [fl] fetched=157 new=0 matched=0
+  [kwork] fetched=23 new=0 matched=0
+--- tick 2026-06-18T16:14:28+00:00 ---
+  [fl] fetched=157 new=0 matched=0
+  [kwork] fetched=23 new=0 matched=0
+--- tick 2026-06-18T16:16:29+00:00 ---
+  [fl] fetched=157 new=0 matched=0
+  [kwork] fetched=23 new=0 matched=0
+--- tick 2026-06-18T16:18:30+00:00 ---
+  [fl] fetched=157 new=0 matched=0
+  [kwork] fetched=23 new=0 matched=0
+--- tick 2026-06-18T16:20:32+00:00 ---
+  [fl] fetched=157 new=0 matched=0
+  [kwork] fetched=23 new=0 matched=0
+--- tick 2026-06-18T16:22:32+00:00 ---
+  [fl] fetched=157 new=1 matched=0
+  [kwork] fetched=23 new=0 matched=0
+--- tick 2026-06-18T16:24:33+00:00 ---
+  [fl] fetched=157 new=0 matched=0
+  [kwork] fetched=23 new=0 matched=0
+--- tick 2026-06-18T16:26:34+00:00 ---
+  [fl] fetched=157 new=0 matched=0
+  [kwork] fetched=23 new=0 matched=0
+--- tick 2026-06-18T16:28:35+00:00 ---
+  [fl] fetched=157 new=0 matched=0
+  [kwork] fetched=23 new=0 matched=0
+--- tick 2026-06-18T16:30:36+00:00 ---
+  [fl] fetched=157 new=0 matched=0
+  [kwork] fetched=23 new=0 matched=0
+--- tick 2026-06-18T16:32:37+00:00 ---
+  [fl] fetched=157 new=0 matched=0
+  [kwork] fetched=23 new=0 matched=0
+--- tick 2026-06-18T16:34:38+00:00 ---
+  [fl] fetched=157 new=0 matched=0
+  [kwork] fetched=23 new=0 matched=0
+--- tick 2026-06-18T16:36:38+00:00 ---
+  [fl] fetched=157 new=0 matched=0
+  [kwork] fetched=23 new=0 matched=0
+--- tick 2026-06-18T16:38:39+00:00 ---
+  [fl] fetched=157 new=0 matched=0
+  [kwork] fetched=23 new=0 matched=0
+--- tick 2026-06-18T16:40:40+00:00 ---
+  [fl] fetched=157 new=0 matched=0
+  >> HIT [kwork] С элементора и астры на чистый код , пиксель в пиксель 7000.00  https://kwork.ru/projects/3192279
+  [kwork] fetched=23 new=1 matched=1
+--- tick 2026-06-18T16:42:41+00:00 ---
+  [fl] fetched=157 new=0 matched=0
+  [kwork] fetched=23 new=0 matched=0
+--- tick 2026-06-18T16:44:42+00:00 ---
+  [fl] fetched=158 new=1 matched=0
+  [kwork] fetched=23 new=1 matched=0
+--- tick 2026-06-18T16:46:43+00:00 ---
+  [fl] fetched=158 new=0 matched=0
+  [kwork] fetched=23 new=0 matched=0
+--- tick 2026-06-18T16:48:43+00:00 ---
+  [fl] fetched=158 new=0 matched=0
+  [kwork] fetched=23 new=0 matched=0
+--- tick 2026-06-18T16:50:44+00:00 ---
+  [fl] fetched=158 new=0 matched=0
+  [kwork] fetched=23 new=1 matched=0
+--- tick 2026-06-18T16:52:45+00:00 ---
+  [fl] fetched=158 new=0 matched=0
+  [kwork] fetched=24 new=1 matched=0
+--- tick 2026-06-18T16:54:46+00:00 ---
+  [fl] fetched=158 new=0 matched=0
+  [kwork] fetched=24 new=0 matched=0
+--- tick 2026-06-18T16:56:47+00:00 ---
+  [fl] fetched=158 new=0 matched=0
+  [kwork] fetched=24 new=0 matched=0
+--- tick 2026-06-18T16:58:48+00:00 ---
+  [fl] fetched=158 new=0 matched=0
+  [kwork] fetched=23 new=0 matched=0
+--- tick 2026-06-18T17:00:49+00:00 ---
+  [fl] fetched=158 new=0 matched=0
+  [kwork] fetched=24 new=1 matched=0
+--- tick 2026-06-18T17:02:49+00:00 ---
+  [fl] fetched=158 new=0 matched=0
+  [kwork] fetched=24 new=0 matched=0
+--- tick 2026-06-18T17:04:50+00:00 ---
+  [fl] fetched=160 new=2 matched=0
+  [kwork] fetched=24 new=0 matched=0
+--- tick 2026-06-18T17:06:51+00:00 ---
+  [fl] fetched=160 new=0 matched=0
+  [kwork] fetched=24 new=0 matched=0
+--- tick 2026-06-18T17:08:52+00:00 ---
+  [fl] fetched=160 new=0 matched=0
+  [kwork] fetched=24 new=0 matched=0
+--- tick 2026-06-18T17:10:53+00:00 ---
+  [fl] fetched=160 new=0 matched=0
+  >> HIT [kwork] Парсер недвижимости + Бот 3000.00  https://kwork.ru/projects/3058260
+  [kwork] fetched=23 new=2 matched=1
+--- tick 2026-06-18T17:12:54+00:00 ---
+  [fl] fetched=160 new=0 matched=0
+  [kwork] fetched=22 new=2 matched=0
+--- tick 2026-06-18T17:14:54+00:00 ---
+  [fl] fetched=160 new=0 matched=0
+  [kwork] fetched=22 new=0 matched=0
+--- tick 2026-06-18T17:16:55+00:00 ---
+  [fl] fetched=160 new=0 matched=0
+  [kwork] fetched=22 new=0 matched=0
+--- tick 2026-06-18T17:18:56+00:00 ---
+  [fl] fetched=160 new=0 matched=0
+  [kwork] fetched=22 new=0 matched=0
+--- tick 2026-06-18T17:20:57+00:00 ---
+  [fl] fetched=160 new=0 matched=0
+  [kwork] fetched=22 new=0 matched=0
+--- tick 2026-06-18T17:22:58+00:00 ---
+  [fl] fetched=160 new=0 matched=0
+  [kwork] fetched=22 new=0 matched=0
+--- tick 2026-06-18T17:24:59+00:00 ---
+  [fl] fetched=160 new=0 matched=0
+  [kwork] fetched=22 new=0 matched=0
+--- tick 2026-06-18T17:27:00+00:00 ---
+  [fl] fetched=160 new=0 matched=0
+  [kwork] fetched=22 new=0 matched=0
+--- tick 2026-06-18T17:29:01+00:00 ---
+  [fl] fetched=160 new=0 matched=0
+  [kwork] fetched=22 new=0 matched=0
+--- tick 2026-06-18T17:31:02+00:00 ---
+  [fl] fetched=160 new=0 matched=0
+  [kwork] fetched=22 new=1 matched=0
+--- tick 2026-06-18T17:33:03+00:00 ---
+  [fl] fetched=160 new=0 matched=0
+  [kwork] fetched=22 new=0 matched=0
+--- tick 2026-06-18T17:35:03+00:00 ---
+  [fl] fetched=160 new=0 matched=0
+  [kwork] fetched=22 new=0 matched=0
+--- tick 2026-06-18T17:37:04+00:00 ---
+  [fl] fetched=160 new=0 matched=0
+  [kwork] fetched=22 new=0 matched=0
+--- tick 2026-06-18T17:39:05+00:00 ---
+  [fl] fetched=160 new=0 matched=0
+  [kwork] fetched=22 new=0 matched=0
+--- tick 2026-06-18T17:41:06+00:00 ---
+  [fl] fetched=160 new=1 matched=0
+  [kwork] fetched=22 new=0 matched=0
+--- tick 2026-06-18T17:43:07+00:00 ---
+  [fl] fetched=160 new=0 matched=0
+  [kwork] fetched=22 new=0 matched=0
+--- tick 2026-06-18T17:45:08+00:00 ---
+  [fl] fetched=160 new=0 matched=0
+  [kwork] fetched=22 new=0 matched=0
+--- tick 2026-06-18T17:47:09+00:00 ---
+  [fl] fetched=160 new=1 matched=0
+  [kwork] fetched=22 new=0 matched=0
+--- tick 2026-06-18T17:49:10+00:00 ---
+  [fl] fetched=159 new=0 matched=0
+  [kwork] fetched=22 new=2 matched=0
+--- tick 2026-06-18T17:51:11+00:00 ---
+  [fl] fetched=159 new=0 matched=0
+  [kwork] fetched=22 new=0 matched=0
+--- tick 2026-06-18T17:53:12+00:00 ---
+  [fl] fetched=159 new=0 matched=0
+  [kwork] fetched=22 new=0 matched=0
+--- tick 2026-06-18T17:55:13+00:00 ---
+  [fl] fetched=159 new=0 matched=0
+  [kwork] fetched=22 new=0 matched=0
+--- tick 2026-06-18T17:57:14+00:00 ---
+  [fl] fetched=159 new=0 matched=0
+  [kwork] fetched=22 new=0 matched=0
+--- tick 2026-06-18T17:59:15+00:00 ---
+  [fl] fetched=159 new=0 matched=0
+  [kwork] fetched=22 new=0 matched=0
+--- tick 2026-06-18T18:01:16+00:00 ---
+  [fl] fetched=159 new=0 matched=0
+  [kwork] fetched=22 new=0 matched=0
+--- tick 2026-06-18T18:03:17+00:00 ---
+  [fl] fetched=159 new=0 matched=0
+  [kwork] fetched=22 new=0 matched=0
+--- tick 2026-06-18T18:05:18+00:00 ---
+  [fl] fetched=159 new=0 matched=0
+  [kwork] fetched=22 new=0 matched=0
+--- tick 2026-06-18T18:07:19+00:00 ---
+  [fl] fetched=159 new=0 matched=0
+  [kwork] fetched=22 new=0 matched=0
+--- tick 2026-06-18T18:09:20+00:00 ---
+  [fl] fetched=159 new=0 matched=0
+  [kwork] fetched=22 new=0 matched=0
+--- tick 2026-06-18T18:11:20+00:00 ---
+  [fl] fetched=158 new=0 matched=0
+  [kwork] fetched=22 new=0 matched=0
+--- tick 2026-06-18T18:13:21+00:00 ---
+  [fl] fetched=158 new=0 matched=0
+  [kwork] fetched=22 new=0 matched=0
+--- tick 2026-06-18T18:15:22+00:00 ---
+  [fl] fetched=158 new=0 matched=0
+  [kwork] fetched=22 new=0 matched=0
+--- tick 2026-06-18T18:17:23+00:00 ---
+  [fl] fetched=158 new=0 matched=0
+  [kwork] fetched=19 new=5 matched=0
+--- tick 2026-06-18T18:19:24+00:00 ---
+  [fl] fetched=158 new=0 matched=0
+  [kwork] fetched=19 new=0 matched=0
+--- tick 2026-06-18T18:21:25+00:00 ---
+  [fl] fetched=158 new=0 matched=0
+  [kwork] fetched=19 new=0 matched=0
+--- tick 2026-06-18T18:23:26+00:00 ---
+  [fl] fetched=158 new=0 matched=0
+  [kwork] fetched=19 new=0 matched=0
+--- tick 2026-06-18T18:25:27+00:00 ---
+  [fl] fetched=158 new=0 matched=0
+  [kwork] fetched=20 new=1 matched=0
+--- tick 2026-06-18T18:27:27+00:00 ---
+  [fl] fetched=159 new=1 matched=0
+  [kwork] fetched=20 new=0 matched=0
+--- tick 2026-06-18T18:29:28+00:00 ---
+  [fl] fetched=159 new=0 matched=0
+  [kwork] fetched=20 new=0 matched=0
+--- tick 2026-06-18T18:31:29+00:00 ---
+  [fl] fetched=159 new=0 matched=0
+  [kwork] fetched=20 new=0 matched=0
+--- tick 2026-06-18T18:33:30+00:00 ---
+  [fl] fetched=159 new=0 matched=0
+  [kwork] fetched=20 new=0 matched=0
+--- tick 2026-06-18T18:35:31+00:00 ---
+  [fl] fetched=159 new=0 matched=0
+  [kwork] fetched=20 new=0 matched=0
+--- tick 2026-06-18T18:37:32+00:00 ---
+  [fl] fetched=159 new=3 matched=0
+  [kwork] fetched=20 new=0 matched=0
+--- tick 2026-06-18T18:39:32+00:00 ---
+  >> HIT [fl] Сделать телеграм бот для отслеживания криптовалюты  (Бюджет: 120  &#83   https://www.fl.ru/projects/5510177/sdelat-telegram-bot-dlya-otslejivaniya-kriptovalyutyi-.html
+  [fl] fetched=158 new=2 matched=1
+  [kwork] fetched=20 new=0 matched=0
+--- tick 2026-06-18T18:41:33+00:00 ---
+  >> HIT [fl] Разработка MVP платформы анонимных обращений с кабинетом специалистов,   https://www.fl.ru/projects/5510172/razrabotka-mvp-platformyi-anonimnyih-obrascheniy-s-kabinetom-spetsialistov-telegram-max-i-oplatoy.html
+  >> HIT [fl] Печать модели на 3D фотополимерном принтере  (для всех)   https://www.fl.ru/projects/5510180/pechat-modeli-na-3d-fotopolimernom-printere-.html
+  [fl] fetched=157 new=5 matched=2
+  [kwork] fetched=20 new=0 matched=0
+--- tick 2026-06-18T18:43:35+00:00 ---
+  [fl] fetched=157 new=0 matched=0
+  [kwork] fetched=20 new=0 matched=0
+--- tick 2026-06-18T18:45:36+00:00 ---
+  [fl] fetched=157 new=0 matched=0
+  [kwork] fetched=20 new=0 matched=0
+--- tick 2026-06-18T18:47:37+00:00 ---
+  [fl] fetched=157 new=0 matched=0
+  [kwork] fetched=20 new=0 matched=0
+--- tick 2026-06-18T18:49:38+00:00 ---
+  [fl] fetched=158 new=0 matched=0
+  [kwork] fetched=19 new=3 matched=0
+--- tick 2026-06-18T18:51:39+00:00 ---
+  [fl] fetched=158 new=0 matched=0
+  [kwork] fetched=19 new=1 matched=0
+--- tick 2026-06-18T18:53:40+00:00 ---
+  [fl] fetched=158 new=0 matched=0
+  [kwork] fetched=19 new=0 matched=0
+--- tick 2026-06-18T18:55:40+00:00 ---
+  [fl] fetched=158 new=0 matched=0
+  [kwork] fetched=19 new=0 matched=0
+--- tick 2026-06-18T18:57:41+00:00 ---
+  [fl] fetched=158 new=0 matched=0
+  [kwork] fetched=19 new=0 matched=0
+--- tick 2026-06-18T18:59:42+00:00 ---
+  [fl] fetched=158 new=0 matched=0
+  [kwork] fetched=19 new=0 matched=0
+--- tick 2026-06-18T19:01:43+00:00 ---
+  [fl] fetched=158 new=0 matched=0
+  [kwork] fetched=19 new=0 matched=0
+--- tick 2026-06-18T19:03:44+00:00 ---
+  [fl] fetched=158 new=0 matched=0
+  [kwork] fetched=19 new=0 matched=0
+--- tick 2026-06-18T19:05:44+00:00 ---
+  [fl] fetched=158 new=0 matched=0
+  [kwork] fetched=19 new=0 matched=0
+--- tick 2026-06-18T19:07:45+00:00 ---
+  [fl] fetched=158 new=0 matched=0
+  [kwork] fetched=19 new=0 matched=0
+--- tick 2026-06-18T19:09:46+00:00 ---
+  [fl] fetched=158 new=0 matched=0
+  [kwork] fetched=19 new=0 matched=0
+--- tick 2026-06-18T19:11:47+00:00 ---
+  [fl] fetched=158 new=0 matched=0
+  [kwork] fetched=19 new=1 matched=0
+--- tick 2026-06-18T19:13:51+00:00 ---
+  [fl] fetched=158 new=0 matched=0
+  [kwork] fetched=19 new=0 matched=0
+--- tick 2026-06-18T19:15:51+00:00 ---
+  [fl] fetched=158 new=0 matched=0
+  [kwork] fetched=19 new=0 matched=0

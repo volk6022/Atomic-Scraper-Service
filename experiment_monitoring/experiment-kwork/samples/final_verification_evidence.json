@@ -1,0 +1,118 @@
+{
+  "date": "2026-06-18",
+  "antibot": {
+    "system": "QRATOR (Russian WAF, not Cloudflare)",
+    "cloudflare": false,
+    "cf_ray_header": false,
+    "turnstile": false,
+    "ddos_guard": false,
+    "js_challenge": false,
+    "verdict": "No anti-bot challenge for anonymous requests. Plain httpx with Chrome UA returns HTTP 200 directly."
+  },
+  "httpx_direct": {
+    "status": 200,
+    "server": "QRATOR",
+    "projects_page_reachable": true,
+    "real_html": true,
+    "verdict": "VERIFIED: httpx direct works without any proxy or Playwright"
+  },
+  "httpx_proxy": {
+    "status": 200,
+    "verdict": "VERIFIED: proxy also works but NOT NEEDED"
+  },
+  "xhr_endpoint": {
+    "url": "https://kwork.ru/projects",
+    "method": "POST",
+    "content_type": "application/x-www-form-urlencoded",
+    "x_requested_with": "XMLHttpRequest",
+    "auth_required": false,
+    "verdict": "VERIFIED ANONYMOUS XHR ENDPOINT",
+    "response_keys": [
+      "data.pagination.data (project list)",
+      "data.pagination.total",
+      "data.pagination.last_page",
+      "data.wants (same list, duplicate)"
+    ],
+    "total_projects": 494,
+    "per_page": 12,
+    "max_pages": 42,
+    "sort": "by date_active DESC (newest active first)",
+    "params": {
+      "c": "category_id filter (e.g. c=41 for Scripts/Bots/Python)",
+      "page": "page number (1-based)"
+    },
+    "sample_response": {
+      "id": 3200355,
+      "name": "ИИ бот для сервиса",
+      "category_id": "41",
+      "description": "Требуется написать бота...",
+      "priceLimit": "500.00",
+      "possiblePriceLimit": 1500,
+      "kwork_count": 0,
+      "date_create": "2026-06-18 15:06:34",
+      "date_active": "...",
+      "date_expire": "..."
+    }
+  },
+  "category_ids": {
+    "11": "PARENT GROUP: Программирование (all dev subcategories)",
+    "37": "Создание сайта (web dev)",
+    "38": "Доработка и настройка сайта (site customization)",
+    "39": "Мобильные приложения (mobile apps)",
+    "40": "Игры (games)",
+    "41": "Скрипты, боты и mini apps — BEST MATCH: Python/ML/parsing/bots (41 projects)",
+    "79": "Верстка (HTML/CSS layouts) — NOT ML/AI (report claim WRONG)",
+    "80": "Десктоп программирование (desktop dev/1C)",
+    "81": "Юзабилити, тесты и помощь",
+    "255": "Сервера и хостинг",
+    "4158119": "Машинное обучение (subcategory of 41, not a standalone filter)",
+    "5548694": "ИИ-агенты (subcategory, same)",
+    "4158112": "ИИ-боты (subcategory, same)",
+    "3934090": "Telegram Mini Apps (subcategory)",
+    "NOTE_cat11_as_filter": "c=11 returns mixed categories (38,37,40,41,80,81) — it is a parent-group filter not a leaf"
+  },
+  "report_claim_corrections": {
+    "cat_11_python": "WRONG — cat 11 is the parent group ID for Программирование, not Python leaf. Using c=11 returns 136 mixed projects across all sub-categories.",
+    "cat_79_ml_ai": "WRONG — cat 79 is Верстка (HTML/CSS layouts). Returns only 3 landing page projects. NOT ML/AI.",
+    "correct_for_python_ml": "Use c=41 (Скрипты, боты и mini apps) — returns Python, parsing, AI bot projects. 41 projects total.",
+    "cloudflare_claim": "WRONG — protection is QRATOR (Russian WAF), not Cloudflare Turnstile.",
+    "httpx_blocked": "WRONG — plain httpx with Chrome UA works directly. No JS challenge."
+  },
+  "project_card_anonymous": {
+    "url_pattern": "https://kwork.ru/projects/{id}/view",
+    "status": 200,
+    "server": "QRATOR",
+    "title_visible": true,
+    "description_visible": true,
+    "priceLimit_visible": true,
+    "possiblePriceLimit_visible": true,
+    "category_id_visible": true,
+    "wantDates_visible": true,
+    "login_required": false,
+    "how": "SSR renders title in <title> and <meta description>; priceLimit/dates in JS data in HTML body",
+    "verdict": "VERIFIED: project card is fully accessible anonymously"
+  },
+  "monitoring_approach": {
+    "recommended": "Plain httpx (no browser needed)",
+    "endpoint": "POST https://kwork.ru/projects",
+    "headers": {
+      "Content-Type": "application/x-www-form-urlencoded",
+      "X-Requested-With": "XMLHttpRequest",
+      "Referer": "https://kwork.ru/projects"
+    },
+    "params": {
+      "c": "41",
+      "page": "1"
+    },
+    "dedup_key": "id (numeric project ID, same as want_id in mobile API)",
+    "cadence": "60-120s",
+    "auth_required": false,
+    "proxy_required": false
+  },
+  "playwright_verdict": {
+    "needed": false,
+    "headless_stealth_works": true,
+    "antibot_bypassed": true,
+    "note": "Playwright is NOT needed since httpx direct works. Stealth Playwright also works (confirmed headless, no proxy needed)."
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "status": 200,
+  "content_type": "application/rss+xml; charset=utf-8",
+  "snippet": "<?xml version='1.0' encoding='utf-8'?>\n<rss version=\"2.0\"><channel><title>HeadHunter Vacancy</title><link>https://hh.ru</link><description>HeadHunter Vacancy</description></channel></rss>",
+  "is_xml": true
+}

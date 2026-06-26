@@ -1,0 +1,131 @@
+{
+  "config": {
+    "headless": true,
+    "proxy": null,
+    "stealth": true,
+    "chrome_ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+  },
+  "search_vacancies_count": 50,
+  "search_vacancies_sample": [
+    {
+      "id": "134281603",
+      "title": "Руководитель проектов по видеонаблюдению",
+      "company": "RUBETEK",
+      "salary": "",
+      "link": "https://hh.ru/vacancy/134281603",
+      "_source": "dom"
+    },
+    {
+      "id": "134280314",
+      "title": "Инженер R&D",
+      "company": "IBS",
+      "salary": "",
+      "link": "https://hh.ru/vacancy/134280314",
+      "_source": "dom"
+    },
+    {
+      "id": "134280304",
+      "title": "Лидер направления по ИТ инфраструктуре производства / Factory IT Infrastructure Lead (Ступино)",
+      "company": "ООО Марс",
+      "salary": "",
+      "link": "https://hh.ru/vacancy/134280304",
+      "_source": "dom"
+    },
+    {
+      "id": "133983095",
+      "title": "Менеджер по маркетингу / Marketing Manager Russia & CIS",
+      "company": "DiagnoCat",
+      "salary": "",
+      "link": "https://hh.ru/vacancy/133983095",
+      "_source": "dom"
+    },
+    {
+      "id": "133370105",
+      "title": "ML-разработчик (CV)",
+      "company": "АНО ЦИСМ",
+      "salary": "",
+      "link": "https://hh.ru/vacancy/133370105",
+      "_source": "dom"
+    },
+    {
+      "id": "133916472",
+      "title": "Технический художник / Technical Artist (Gaussian Splatting)",
+      "company": "ООО НПП МетаСофт Про",
+      "salary": "",
+      "link": "https://hh.ru/vacancy/133916472",
+      "_source": "dom"
+    },
+    {
+      "id": "134272670",
+      "title": "ИТ Бизнес-партнер (Направление бэкофиса)",
+      "company": "ASTERUS (ООО ВХД Менеджмент)",
+      "salary": "",
+      "link": "https://hh.ru/vacancy/134272670",
+      "_source": "dom"
+    },
+    {
+      "id": "134272648",
+      "title": "ИТ Бизнес-партнер (направление Девелопмент)",
+      "company": "ASTERUS (ООО ВХД Менеджмент)",
+      "salary": "",
+      "link": "https://hh.ru/vacancy/134272648",
+      "_source": "dom"
+    },
+    {
+      "id": "134272549",
+      "title": "ИТ Бизнес-партнер (Коммерческое направление)",
+      "company": "ASTERUS (ООО ВХД Менеджмент)",
+      "salary": "",
+      "link": "https://hh.ru/vacancy/134272549",
+      "_source": "dom"
+    },
+    {
+      "id": "134272226",
+      "title": "Product Manager («железо» для кассовых решений)",
+      "company": "Сервис Плюс",
+      "salary": "",
+      "link": "https://hh.ru/vacancy/134272226",
+      "_source": "dom"
+    }
+  ],
+  "vacancy_card": {
+    "title": "ML-разработчик (CV)",
+    "company": "АНО ЦИСМ",
+    "salary": "",
+    "experience": "3–6 лет",
+    "area": "Москва, Библиотека им.Ленина, Охотный ряд, Площадь Революции, Театральная",
+    "publication_date": "17 июня 2026",
+    "description_length": 2192,
+    "description_preview": "Центр изучения и сетевого мониторинга молодёжной среды – аккредитованная IT-компания, созданная по поручению Президента России в 2018 году.\n\nНаша миссия – разработка социально значимых технологических решений для защиты детей и подростков от деструктивного контента в цифровом пространстве. Через создание комплексной мониторинговой системы мы формируем безопасную среду для нового поколения.\n\nМы ищем в команду ML-разработчика, ответственного за разработку CV-моделей для изображений и видео и работы с большими визуально-языковыми моделями (VLM). Мы работаем с колоссальным объёмом графических данных, разрабатываем собственные CV-модели и разрабатываем собственные проекты с использованием компьютерного зрения.\n\nСтек технологий\n\nPyTorch, Torchvision\nUltralytics YOLO, DINOv2, семейство Qwen VL\nML",
+    "key_skills": [],
+    "contacts_shown": false,
+    "contacts_note": "Contacts require login -- data-qa='vacancy-response-question__how_to_contact' redirects to sign-up form"
+  },
+  "employer": {
+    "company_name": "АНО ЦИСМ",
+    "address": "Москва\nГород",
+    "industries": "Информационные технологии, системная интеграция, интернет\nСферы деятельности",
+    "description_length": 1147,
+    "description_preview": "АНО «Центр изучения и сетевого мониторинга молодёжной среды» – аккредитованная IT-компания, учреждённая по поручению Президента России в октябре 2018 года.\n\nДеятельность организации ориентирована на создание IT-разработок, направленных на выявление контента, связанного с суицидальными проявлениями, распространением криминальной субкультуры и другими деструктивными тенденциями в молодёжной цифровой среде.\n\nВ своей деятельности Центр использует все имеющиеся ресурсы: собственная научно-исследовательская база, высококвалифицированные специалисты и современные технологические разработки.\n\nНаши инновационные продукты позволяют автоматизировать процесс мониторинга и контроля воздействия деструктивного контента на молодежную аудиторию, в том числе посредством взаимодействия с информационными сист",
+    "vacancies_tab_text": "Вакансии\n5",
+    "open_vacancies_count": "0"
+  },
+  "order_by_publication_time_works": true,
+  "ddos_guard_bypassed": true,
+  "confirmed_selectors": {
+    "search_title_text": "[data-qa='serp-item__title-text']",
+    "search_title_link": "[data-qa='serp-item__title']",
+    "search_employer_text": "[data-qa='vacancy-serp__vacancy-employer-text']",
+    "search_card": "[data-qa='vacancy-serp__vacancy']",
+    "vacancy_title": "[data-qa='vacancy-title']",
+    "vacancy_company": "[data-qa='vacancy-company-name']",
+    "vacancy_salary": "[data-qa='vacancy-salary']",
+    "vacancy_experience": "[data-qa='vacancy-experience']",
+    "vacancy_description": "[data-qa='vacancy-description']",
+    "vacancy_address": "[data-qa='vacancy-address-with-map']",
+    "vacancy_skills_bloko": "[data-qa='bloko-tag__text']",
+    "employer_name": "[data-qa='company-header-title-name']",
+    "employer_description": "[data-qa='employer-view-widget-description']",
+    "employer_vacancies_tab": "[data-qa='employer-page-tabs-desktop-go-VACANCIES']"
+  }
+}

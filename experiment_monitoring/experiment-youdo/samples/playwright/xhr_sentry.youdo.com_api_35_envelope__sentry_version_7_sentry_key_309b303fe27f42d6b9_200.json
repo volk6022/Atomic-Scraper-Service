@@ -1,0 +1,7 @@
+{
+  "url": "https://sentry.youdo.com/api/35/envelope/?sentry_version=7&sentry_key=309b303fe27f42d6b930ad314cae2800&sentry_client=sentry.javascript.nextjs%2F8.52.0",
+  "status": 200,
+  "body": {
+    "id": "0eeb9ecd447f4d278ad9999d6e5d12f0"
+  }
+}

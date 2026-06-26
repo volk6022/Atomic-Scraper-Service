@@ -1,0 +1,52 @@
+{
+  "timestamp": "2026-06-18T22:36:44",
+  "search_url": "https://www.superjob.ru/vacancy/search/?keywords=Python&sort_by=date_updated&order=desc&page=1",
+  "attempts": [
+    {
+      "method": "httpx_direct",
+      "status": 200,
+      "antibot": {
+        "http_status": 200,
+        "signals": [
+          "cloudflare_detected",
+          "captcha",
+          "robot_check",
+          "vacancy_content_present"
+        ],
+        "blocked": true,
+        "html_length": 931350
+      },
+      "vacancies": []
+    },
+    {
+      "method": "httpx_proxy_1",
+      "proxy_host": "np.puls-proxy.com:11000",
+      "status": -1,
+      "antibot": {
+        "http_status": -1,
+        "signals": [],
+        "blocked": false,
+        "html_length": 47
+      },
+      "vacancies": []
+    },
+    {
+      "method": "httpx_proxy_2",
+      "proxy_host": "np.puls-proxy.com:11001",
+      "status": 200,
+      "antibot": {
+        "http_status": 200,
+        "signals": [
+          "cloudflare_detected",
+          "captcha",
+          "robot_check",
+          "vacancy_content_present"
+        ],
+        "blocked": true,
+        "html_length": 913383
+      },
+      "vacancies": []
+    }
+  ],
+  "best_result": "httpx_direct"
+}

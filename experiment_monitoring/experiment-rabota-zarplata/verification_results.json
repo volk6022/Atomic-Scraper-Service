@@ -1,0 +1,312 @@
+{
+  "rabota": {
+    "site": "rabota",
+    "search_url": "https://www.rabota.ru/vacancy/?keywords=python&sort=Date",
+    "httpx_result": {
+      "status": 200,
+      "body_length": 266226
+    },
+    "playwright_headless_direct": {
+      "url": "https://www.rabota.ru/vacancy/?keywords=python&sort=Date",
+      "title": "Список вакансий | Работа.ру",
+      "html_length": 647505,
+      "anti_bot_signals": [
+        "captcha",
+        "blocked",
+        "robot"
+      ],
+      "xhr_json_endpoints": [
+        "https://kraken.rambler.ru/cnt/v2/",
+        "https://kraken.rambler.ru/cnt/v2/",
+        "https://kraken.rambler.ru/cnt/v2/",
+        "https://kraken.rambler.ru/cnt/v2/",
+        "https://visor.sberbank.ru/get",
+        "https://www.rabota.ru/api-web/v4/landings.json",
+        "https://www.rabota.ru/api-web/v4/companies/promoted.json",
+        "https://visor.sberbank.ru/get?try=1",
+        "https://ad.adriver.ru/cgi-bin/json.cgi?sid=1&ad=719473&bt=55&pid=4425169&bid=12604289&bn=12604289&tuid=1&cfa=1&rnd=788197&loc=https%3A%2F%2Fwww.rabota.ru%2Fvacancy%2F%3Fkeywords%3Dpython%26sort%3DDate&custom=127%3D1%3B129%3D2.13.2%3B308%3D0%3B309%3D0%3B310%3D0",
+        "https://uaas.yandex.ru/v1/exps/?client_id=metrika.2020546&url=https%3A%2F%2Fwww.rabota.ru%2Fvacancy%2F%3Fkeywords%3Dpython%26sort%3DDate&i=&duid=",
+        "https://www.rabota.ru/api-web/v4/vacancies/search/suggest.json",
+        "https://privacy-cs.mail.ru/fp/?id=p_nctMV9Mu4VqyBd2ElZW",
+        "https://mc.yandex.ru/watch/2020546?wmode=7&page-url=https%3A%2F%2Fwww.rabota.ru%2Fvacancy%2F%3Fkeywords%3Dpython%26sort%3DDate&charset=utf-8&uah=che%0A0&browser-info=pv%3A1%3Avf%3Apupr1nz2snmtoqrshzj5yg66c90wv%3Afu%3A0%3Aen%3Autf-8%3Ala%3Aru-RU%3Av%3A2550%3Acn%3A1%3Adp%3A0%3Als%3A394598706164%3Ahid%3A370977997%3Az%3A180%3Ai%3A20260618231841%3Aet%3A1781813922%3Ac%3A1%3Arn%3A334690648%3Arqn%3A1%3Au%3A1781813922255726978%3Aw%3A1366x768%3As%3A1366x768x24%3Ask%3A1%3Afp%3A2400%3Awv%3A2%3Ads%3A3%2C50%2C2250%2C22%2C0%2C0%2C%2C67%2C1%2C%2C%2C%2C2907%3Aco%3A0%3Acpf%3A1%3Antf%3A1%3Ans%3A1781813917993%3Arqnl%3A1%3Ast%3A1781813922%3At%3A%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA%20%D0%B2%D0%B0%D0%BA%D0%B0%D0%BD%D1%81%D0%B8%D0%B9%20%7C%20%D0%A0%D0%B0%D0%B1%D0%BE%D1%82%D0%B0.%D1%80%D1%83&t=clt(916)gdpr(14)clc(0-0-0)rqnt(1)aw(1)rcm(1)cdl(na)eco(42272260)ti(1)",
+        "https://mc.yandex.ru/watch/2020546/1?wmode=7&page-url=https%3A%2F%2Fwww.rabota.ru%2Fvacancy%2F%3Fkeywords%3Dpython%26sort%3DDate&charset=utf-8&uah=che%0A0&browser-info=pv%3A1%3Avf%3Apupr1nz2snmtoqrshzj5yg66c90wv%3Afu%3A0%3Aen%3Autf-8%3Ala%3Aru-RU%3Av%3A2550%3Acn%3A1%3Adp%3A0%3Als%3A394598706164%3Ahid%3A370977997%3Az%3A180%3Ai%3A20260618231841%3Aet%3A1781813922%3Ac%3A1%3Arn%3A334690648%3Arqn%3A1%3Au%3A1781813922255726978%3Aw%3A1366x768%3As%3A1366x768x24%3Ask%3A1%3Afp%3A2400%3Awv%3A2%3Ads%3A3%2C50%2C2250%2C22%2C0%2C0%2C%2C67%2C1%2C%2C%2C%2C2907%3Aco%3A0%3Acpf%3A1%3Antf%3A1%3Ans%3A1781813917993%3Arqnl%3A1%3Ast%3A1781813922%3At%3A%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA%20%D0%B2%D0%B0%D0%BA%D0%B0%D0%BD%D1%81%D0%B8%D0%B9%20%7C%20%D0%A0%D0%B0%D0%B1%D0%BE%D1%82%D0%B0.%D1%80%D1%83&t=clt%28916%29gdpr%2814%29clc%280-0-0%29rqnt%281%29aw%281%29rcm%281%29cdl%28na%29eco%2842272260%29ti%281%29&redirnss=1",
+        "https://mc.yandex.ru/watch/2020546/1?page-url=https%3A%2F%2Fwww.rabota.ru%2Fvacancy%2F%3Fkeywords%3Dpython%26sort%3DDate&charset=utf-8&uah=che%0A0&hidv2=3393905429564358898&hittoken=1781813921_a7f7636050ad8921612fcbba81b920f64efa6f438ca08acc9b3d7bf20500fc96&browser-info=pa%3A1%3Aar%3A1%3Avf%3Apupr1nz2snmtoqrshzj5yg66c90wv%3Afu%3A0%3Aen%3Autf-8%3Ala%3Aru-RU%3Av%3A2550%3Acn%3A1%3Adp%3A1%3Als%3A394598706164%3Ahid%3A370977997%3Az%3A180%3Ai%3A20260618231841%3Aet%3A1781813922%3Ac%3A1%3Arn%3A409899190%3Arqn%3A2%3Au%3A1781813922255726978%3Aw%3A1366x768%3As%3A1366x768x24%3Ask%3A1%3Awv%3A2%3Aco%3A0%3Acpf%3A1%3Antf%3A1%3Ans%3A1781813917993%3Aadb%3A2%3Arqnl%3A1%3Ast%3A1781813922&t=gdpr(14)mc(p-1-g-1-ex-2)clc(0-0-0)rqnt(2)aw(1)rcm(1)ecs(0)cdl(na)eco(42272260)ti(1)",
+        "https://mc.yandex.ru/watch/2020546/1?page-url=goal%3A%2F%2Fwww.rabota.ru%2FMINCIFRA-CERTIFICATE-SNIPPET_SHOW_PAGE&page-ref=https%3A%2F%2Fwww.rabota.ru%2Fvacancy%2F%3Fkeywords%3Dpython%26sort%3DDate&charset=utf-8&uah=che%0A0&hidv2=3393905429564358898&hittoken=1781813921_a7f7636050ad8921612fcbba81b920f64efa6f438ca08acc9b3d7bf20500fc96&browser-info=ar%3A1%3Avf%3Apupr1nz2snmtoqrshzj5yg66c90wv%3Afu%3A3%3Aen%3Autf-8%3Ala%3Aru-RU%3Av%3A2550%3Acn%3A1%3Adp%3A1%3Als%3A394598706164%3Ahid%3A370977997%3Az%3A180%3Ai%3A20260618231841%3Aet%3A1781813922%3Ac%3A1%3Arn%3A967779375%3Arqn%3A3%3Au%3A1781813922255726978%3Aw%3A1366x768%3As%3A1366x768x24%3Ask%3A1%3Awv%3A2%3Aco%3A0%3Acpf%3A1%3Antf%3A1%3Ans%3A1781813917993%3Aadb%3A2%3Arqnl%3A1%3Ast%3A1781813922%3At%3A%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA%20%D0%B2%D0%B0%D0%BA%D0%B0%D0%BD%D1%81%D0%B8%D0%B9%20%7C%20%D0%A0%D0%B0%D0%B1%D0%BE%D1%82%D0%B0.%D1%80%D1%83&t=gdpr(14)mc(p-1-g-1-ex-2)clc(0-0-0)rqnt(3)aw(1)rcm(1)ecs(0)cdl(na)eco(42272260)ti(1)",
+        "https://privacy-cs.mail.ru/fp/?id=p_nctMV9Mu4VqyBd2ElZW",
+        "https://kraken.rambler.ru/cnt/v2/",
+        "https://kraken.rambler.ru/cnt/v2/",
+        "https://visor.sberbank.ru/get"
+      ],
+      "has_next_data": false,
+      "has_initial_state": false,
+      "json_blobs_found": 1,
+      "listing_sample_count": 1,
+      "listing_first": {
+        "title": "Каталог вакансий",
+        "url": "https://www.rabota.ru/vacancy/catalogue/"
+      }
+    },
+    "playwright_headless_proxy": {
+      "url": "https://www.rabota.ru/vacancy/?keywords=python&sort=Date",
+      "title": "Список вакансий | Работа.ру",
+      "html_length": 647308,
+      "anti_bot_signals": [
+        "captcha",
+        "blocked",
+        "robot"
+      ],
+      "xhr_json_endpoints": [
+        "https://kraken.rambler.ru/cnt/v2/",
+        "https://kraken.rambler.ru/cnt/v2/",
+        "https://kraken.rambler.ru/cnt/v2/",
+        "https://kraken.rambler.ru/cnt/v2/",
+        "https://www.rabota.ru/api-web/v4/landings.json",
+        "https://www.rabota.ru/api-web/v4/companies/promoted.json",
+        "https://www.rabota.ru/api-web/v4/vacancies/search/suggest.json",
+        "https://uaas.yandex.ru/v1/exps/?client_id=metrika.2020546&url=https%3A%2F%2Fwww.rabota.ru%2Fvacancy%2F%3Fkeywords%3Dpython%26sort%3DDate&i=&duid=",
+        "https://mc.yandex.ru/watch/2020546?wmode=7&page-url=https%3A%2F%2Fwww.rabota.ru%2Fvacancy%2F%3Fkeywords%3Dpython%26sort%3DDate&charset=utf-8&uah=che%0A0&browser-info=pv%3A1%3Avf%3Apupr1nz2snmtoqrshzj5yg66c90wv%3Afu%3A0%3Aen%3Autf-8%3Ala%3Aru-RU%3Av%3A2550%3Acn%3A1%3Adp%3A0%3Als%3A1539264514836%3Ahid%3A253100597%3Az%3A180%3Ai%3A20260618231908%3Aet%3A1781813949%3Ac%3A1%3Arn%3A367091324%3Arqn%3A1%3Au%3A178181394973587424%3Aw%3A1366x768%3As%3A1366x768x24%3Ask%3A1%3Afp%3A3120%3Awv%3A2%3Ads%3A0%2C937%2C2041%2C84%2C0%2C0%2C%2C52%2C1%2C%2C%2C%2C4600%3Aco%3A0%3Acpf%3A1%3Antf%3A1%3Ans%3A1781813943515%3Arqnl%3A1%3Ast%3A1781813949%3At%3A%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA%20%D0%B2%D0%B0%D0%BA%D0%B0%D0%BD%D1%81%D0%B8%D0%B9%20%7C%20%D0%A0%D0%B0%D0%B1%D0%BE%D1%82%D0%B0.%D1%80%D1%83&t=clt(808)gdpr(14)clc(0-0-0)rqnt(1)aw(1)rcm(1)cdl(na)eco(42272260)ti(1)",
+        "https://visor.sberbank.ru/get",
+        "https://mc.yandex.ru/watch/2020546/1?wmode=7&page-url=https%3A%2F%2Fwww.rabota.ru%2Fvacancy%2F%3Fkeywords%3Dpython%26sort%3DDate&charset=utf-8&uah=che%0A0&browser-info=pv%3A1%3Avf%3Apupr1nz2snmtoqrshzj5yg66c90wv%3Afu%3A0%3Aen%3Autf-8%3Ala%3Aru-RU%3Av%3A2550%3Acn%3A1%3Adp%3A0%3Als%3A1539264514836%3Ahid%3A253100597%3Az%3A180%3Ai%3A20260618231908%3Aet%3A1781813949%3Ac%3A1%3Arn%3A367091324%3Arqn%3A1%3Au%3A178181394973587424%3Aw%3A1366x768%3As%3A1366x768x24%3Ask%3A1%3Afp%3A3120%3Awv%3A2%3Ads%3A0%2C937%2C2041%2C84%2C0%2C0%2C%2C52%2C1%2C%2C%2C%2C4600%3Aco%3A0%3Acpf%3A1%3Antf%3A1%3Ans%3A1781813943515%3Arqnl%3A1%3Ast%3A1781813949%3At%3A%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA%20%D0%B2%D0%B0%D0%BA%D0%B0%D0%BD%D1%81%D0%B8%D0%B9%20%7C%20%D0%A0%D0%B0%D0%B1%D0%BE%D1%82%D0%B0.%D1%80%D1%83&t=clt%28808%29gdpr%2814%29clc%280-0-0%29rqnt%281%29aw%281%29rcm%281%29cdl%28na%29eco%2842272260%29ti%281%29&redirnss=1",
+        "https://ad.adriver.ru/cgi-bin/json.cgi?sid=1&ad=719473&bt=55&pid=4425169&bid=12604289&bn=12604289&tuid=1&cfa=1&rnd=840148&loc=https%3A%2F%2Fwww.rabota.ru%2Fvacancy%2F%3Fkeywords%3Dpython%26sort%3DDate&custom=127%3D1%3B129%3D2.13.2%3B308%3D178181394973587424%3B309%3D0%3B310%3D0",
+        "https://mc.yandex.ru/watch/2020546/1?page-url=https%3A%2F%2Fwww.rabota.ru%2Fvacancy%2F%3Fkeywords%3Dpython%26sort%3DDate&charset=utf-8&uah=che%0A0&hidv2=3393912565919121638&hittoken=1781813948_1b7f652e9b1d7239c9c3064d739840328abc572aa9b8d6df94389a87e1fb97a1&browser-info=pa%3A1%3Aar%3A1%3Avf%3Apupr1nz2snmtoqrshzj5yg66c90wv%3Afu%3A0%3Aen%3Autf-8%3Ala%3Aru-RU%3Av%3A2550%3Acn%3A1%3Adp%3A1%3Als%3A1539264514836%3Ahid%3A253100597%3Az%3A180%3Ai%3A20260618231909%3Aet%3A1781813949%3Ac%3A1%3Arn%3A890425670%3Arqn%3A2%3Au%3A178181394973587424%3Aw%3A1366x768%3As%3A1366x768x24%3Ask%3A1%3Awv%3A2%3Aco%3A0%3Acpf%3A1%3Antf%3A1%3Ans%3A1781813943515%3Aadb%3A2%3Arqnl%3A1%3Ast%3A1781813949&t=gdpr(14)mc(p-1-g-1)clc(0-0-0)rqnt(2)aw(1)rcm(1)ecs(0)cdl(na)eco(42272260)ti(1)",
+        "https://mc.yandex.ru/watch/2020546/1?page-url=goal%3A%2F%2Fwww.rabota.ru%2FMINCIFRA-CERTIFICATE-SNIPPET_SHOW_PAGE&page-ref=https%3A%2F%2Fwww.rabota.ru%2Fvacancy%2F%3Fkeywords%3Dpython%26sort%3DDate&charset=utf-8&uah=che%0A0&hidv2=3393912565919121638&hittoken=1781813948_1b7f652e9b1d7239c9c3064d739840328abc572aa9b8d6df94389a87e1fb97a1&browser-info=ar%3A1%3Avf%3Apupr1nz2snmtoqrshzj5yg66c90wv%3Afu%3A3%3Aen%3Autf-8%3Ala%3Aru-RU%3Av%3A2550%3Acn%3A1%3Adp%3A1%3Als%3A1539264514836%3Ahid%3A253100597%3Az%3A180%3Ai%3A20260618231909%3Aet%3A1781813949%3Ac%3A1%3Arn%3A4832256%3Arqn%3A3%3Au%3A178181394973587424%3Aw%3A1366x768%3As%3A1366x768x24%3Ask%3A1%3Awv%3A2%3Aco%3A0%3Acpf%3A1%3Antf%3A1%3Ans%3A1781813943515%3Aadb%3A2%3Arqnl%3A1%3Ast%3A1781813949%3At%3A%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA%20%D0%B2%D0%B0%D0%BA%D0%B0%D0%BD%D1%81%D0%B8%D0%B9%20%7C%20%D0%A0%D0%B0%D0%B1%D0%BE%D1%82%D0%B0.%D1%80%D1%83&t=gdpr(14)mc(p-1-g-1)clc(0-0-0)rqnt(3)aw(1)rcm(1)ecs(0)cdl(na)eco(42272260)ti(1)",
+        "https://visor.sberbank.ru/get?try=1",
+        "https://privacy-cs.mail.ru/fp/?id=u3zFMfZ_rU-Pr3hJUylfq",
+        "https://privacy-cs.mail.ru/fp/?id=u3zFMfZ_rU-Pr3hJUylfq",
+        "https://kraken.rambler.ru/cnt/v2/",
+        "https://kraken.rambler.ru/cnt/v2/",
+        "https://cms-res-web.online.sberbank.ru/sberid/BlackList/Button/No_Button.json"
+      ],
+      "has_next_data": false,
+      "has_initial_state": false,
+      "json_blobs_found": 1,
+      "listing_sample_count": 1,
+      "listing_first": {
+        "title": "Каталог вакансий",
+        "url": "https://www.rabota.ru/vacancy/catalogue/"
+      }
+    },
+    "playwright_headed_direct": {
+      "url": "https://www.rabota.ru/vacancy/?keywords=python&sort=Date",
+      "title": "Список вакансий | Работа.ру",
+      "html_length": 647505,
+      "anti_bot_signals": [
+        "captcha",
+        "blocked",
+        "robot"
+      ],
+      "xhr_json_endpoints": [
+        "https://visor.sberbank.ru/get",
+        "https://www.rabota.ru/api-web/v4/landings.json",
+        "https://www.rabota.ru/api-web/v4/companies/promoted.json",
+        "https://visor.sberbank.ru/get?try=1",
+        "https://ad.adriver.ru/cgi-bin/json.cgi?sid=1&ad=719473&bt=55&pid=4425169&bid=12604289&bn=12604289&tuid=1&cfa=1&rnd=742766&loc=https%3A%2F%2Fwww.rabota.ru%2Fvacancy%2F%3Fkeywords%3Dpython%26sort%3DDate&custom=127%3D1%3B129%3D2.13.2%3B308%3D0%3B309%3D0%3B310%3D0",
+        "https://www.rabota.ru/api-web/v4/vacancies/search/suggest.json",
+        "https://privacy-cs.mail.ru/fp/?id=n5Z86PiFWVsJ_xdV5dFv_",
+        "https://kraken.rambler.ru/cnt/v2/",
+        "https://kraken.rambler.ru/cnt/v2/",
+        "https://kraken.rambler.ru/cnt/v2/",
+        "https://kraken.rambler.ru/cnt/v2/",
+        "https://uaas.yandex.ru/v1/exps/?client_id=metrika.2020546&url=https%3A%2F%2Fwww.rabota.ru%2Fvacancy%2F%3Fkeywords%3Dpython%26sort%3DDate&i=&duid=",
+        "https://mc.yandex.ru/watch/2020546?wmode=7&page-url=https%3A%2F%2Fwww.rabota.ru%2Fvacancy%2F%3Fkeywords%3Dpython%26sort%3DDate&charset=utf-8&uah=che%0A0&browser-info=pv%3A1%3Avf%3Apupr1nz2snmtoqrshzj5yg66c90wv%3Afu%3A0%3Aen%3Autf-8%3Ala%3Aru-RU%3Av%3A2550%3Acn%3A1%3Adp%3A0%3Als%3A213617910846%3Ahid%3A305097374%3Az%3A180%3Ai%3A20260618231935%3Aet%3A1781813975%3Ac%3A1%3Arn%3A570609455%3Arqn%3A1%3Au%3A1781813975657575814%3Aw%3A1351x768%3As%3A1366x768x32%3Ask%3A1.0000000149011612%3Afp%3A2184%3Awv%3A2%3Ads%3A0%2C35%2C2000%2C21%2C1%2C0%2C%2C58%2C1%2C%2C%2C%2C2636%3Aco%3A0%3Acpf%3A1%3Ans%3A1781813970881%3Arqnl%3A1%3Ast%3A1781813975%3At%3A%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA%20%D0%B2%D0%B0%D0%BA%D0%B0%D0%BD%D1%81%D0%B8%D0%B9%20%7C%20%D0%A0%D0%B0%D0%B1%D0%BE%D1%82%D0%B0.%D1%80%D1%83&t=clt(1824)gdpr(14)clc(0-0-0)rqnt(1)aw(1)rcm(1)cdl(na)eco(42272260)ti(1)",
+        "https://mc.yandex.ru/watch/2020546/1?wmode=7&page-url=https%3A%2F%2Fwww.rabota.ru%2Fvacancy%2F%3Fkeywords%3Dpython%26sort%3DDate&charset=utf-8&uah=che%0A0&browser-info=pv%3A1%3Avf%3Apupr1nz2snmtoqrshzj5yg66c90wv%3Afu%3A0%3Aen%3Autf-8%3Ala%3Aru-RU%3Av%3A2550%3Acn%3A1%3Adp%3A0%3Als%3A213617910846%3Ahid%3A305097374%3Az%3A180%3Ai%3A20260618231935%3Aet%3A1781813975%3Ac%3A1%3Arn%3A570609455%3Arqn%3A1%3Au%3A1781813975657575814%3Aw%3A1351x768%3As%3A1366x768x32%3Ask%3A1.0000000149011612%3Afp%3A2184%3Awv%3A2%3Ads%3A0%2C35%2C2000%2C21%2C1%2C0%2C%2C58%2C1%2C%2C%2C%2C2636%3Aco%3A0%3Acpf%3A1%3Ans%3A1781813970881%3Arqnl%3A1%3Ast%3A1781813975%3At%3A%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA%20%D0%B2%D0%B0%D0%BA%D0%B0%D0%BD%D1%81%D0%B8%D0%B9%20%7C%20%D0%A0%D0%B0%D0%B1%D0%BE%D1%82%D0%B0.%D1%80%D1%83&t=clt%281824%29gdpr%2814%29clc%280-0-0%29rqnt%281%29aw%281%29rcm%281%29cdl%28na%29eco%2842272260%29ti%281%29",
+        "https://mc.yandex.ru/watch/2020546/1?page-url=https%3A%2F%2Fwww.rabota.ru%2Fvacancy%2F%3Fkeywords%3Dpython%26sort%3DDate&charset=utf-8&uah=che%0A0&hidv2=3393919473050976542&hittoken=1781813975_a5b6090a705530015d7eaaafc659b228da337469ec8a08ae157558a346adddf4&browser-info=pa%3A1%3Aar%3A1%3Avf%3Apupr1nz2snmtoqrshzj5yg66c90wv%3Afu%3A0%3Aen%3Autf-8%3Ala%3Aru-RU%3Av%3A2550%3Acn%3A1%3Adp%3A1%3Als%3A213617910846%3Ahid%3A305097374%3Az%3A180%3Ai%3A20260618231935%3Aet%3A1781813975%3Ac%3A1%3Arn%3A502342143%3Arqn%3A2%3Au%3A1781813975657575814%3Aw%3A1351x768%3As%3A1366x768x32%3Ask%3A1.0000000149011612%3Awv%3A2%3Aco%3A0%3Acpf%3A1%3Ans%3A1781813970881%3Aadb%3A2%3Arqnl%3A1%3Ast%3A1781813976&t=gdpr(14)mc(p-1-g-1-ex-2)clc(0-0-0)rqnt(2)aw(1)rcm(1)ecs(0)cdl(na)eco(42272260)ti(1)",
+        "https://mc.yandex.ru/watch/2020546/1?page-url=goal%3A%2F%2Fwww.rabota.ru%2FMINCIFRA-CERTIFICATE-SNIPPET_SHOW_PAGE&page-ref=https%3A%2F%2Fwww.rabota.ru%2Fvacancy%2F%3Fkeywords%3Dpython%26sort%3DDate&charset=utf-8&uah=che%0A0&hidv2=3393919473050976542&hittoken=1781813975_a5b6090a705530015d7eaaafc659b228da337469ec8a08ae157558a346adddf4&browser-info=ar%3A1%3Avf%3Apupr1nz2snmtoqrshzj5yg66c90wv%3Afu%3A3%3Aen%3Autf-8%3Ala%3Aru-RU%3Av%3A2550%3Acn%3A1%3Adp%3A1%3Als%3A213617910846%3Ahid%3A305097374%3Az%3A180%3Ai%3A20260618231935%3Aet%3A1781813975%3Ac%3A1%3Arn%3A704859392%3Arqn%3A3%3Au%3A1781813975657575814%3Aw%3A1351x768%3As%3A1366x768x32%3Ask%3A1.0000000149011612%3Awv%3A2%3Aco%3A0%3Acpf%3A1%3Ans%3A1781813970881%3Aadb%3A2%3Arqnl%3A1%3Ast%3A1781813976%3At%3A%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA%20%D0%B2%D0%B0%D0%BA%D0%B0%D0%BD%D1%81%D0%B8%D0%B9%20%7C%20%D0%A0%D0%B0%D0%B1%D0%BE%D1%82%D0%B0.%D1%80%D1%83&t=gdpr(14)mc(p-1-g-1-ex-2)clc(0-0-0)rqnt(3)aw(1)rcm(1)ecs(0)cdl(na)eco(42272260)ti(1)",
+        "https://privacy-cs.mail.ru/fp/?id=n5Z86PiFWVsJ_xdV5dFv_",
+        "https://kraken.rambler.ru/cnt/v2/",
+        "https://kraken.rambler.ru/cnt/v2/",
+        "https://visor.sberbank.ru/get"
+      ],
+      "has_next_data": false,
+      "has_initial_state": false,
+      "json_blobs_found": 1,
+      "listing_sample_count": 1,
+      "listing_first": {
+        "title": "Каталог вакансий",
+        "url": "https://www.rabota.ru/vacancy/catalogue/"
+      }
+    },
+    "api_probe_results": [
+      {
+        "url": "https://api.rabota.ru/v6/vacancies?keywords=python&sort=date_desc&limit=5",
+        "status": 404,
+        "content_type": "application/json",
+        "via": "direct",
+        "body_length": 171
+      },
+      {
+        "url": "https://api.rabota.ru/v4/vacancies?q=python&page=0&count=5",
+        "status": 404,
+        "content_type": "application/json",
+        "via": "direct",
+        "body_length": 171
+      },
+      {
+        "url": "https://www.rabota.ru/api/vacancies?keywords=python&sort=Date&page=1",
+        "status": 404,
+        "content_type": "text/html; charset=UTF-8",
+        "via": "direct",
+        "body_length": 40508
+      },
+      {
+        "url": "https://www.rabota.ru/_next/data/vacancies.json?keywords=python",
+        "status": 404,
+        "content_type": "text/html; charset=UTF-8",
+        "via": "direct",
+        "body_length": 40496
+      }
+    ],
+    "data_source": "unknown",
+    "verdict": "FAILED",
+    "httpx_anti_bot": [
+      "captcha",
+      "blocked"
+    ],
+    "vacancy_card_sample": {
+      "url": "https://www.rabota.ru/vacancy/catalogue/",
+      "title": "Работа.ру – устраивает всех!",
+      "vacancy_title": "Каталог вакансий"
+    },
+    "data_source_type": "XHR/JSON API"
+  },
+  "zarplata": {
+    "site": "zarplata",
+    "search_url": "https://www.zarplata.ru/vacancies/search/?text=python&order_by=publication_time",
+    "httpx_result": {
+      "status": 200,
+      "body_length": 1334471
+    },
+    "playwright_headless_direct": {
+      "url": "https://spb.zarplata.ru/vacancies",
+      "title": "Работа в Санкт-Петербурге: обновленные вакансии на сайте spb.zarplata.ru",
+      "html_length": 2192564,
+      "anti_bot_signals": [
+        "captcha",
+        "akamai",
+        "blocked"
+      ],
+      "xhr_json_endpoints": [
+        "https://zarplata.ru/static/styles/other/pages/__fonts_3e2a20dec491e4294c7ec1c4f92c6567.css",
+        "https://zarplata.ru/static/styles/other/pages/__magritte-fonts_4d0d9a933ed53bff79307aad380085e8.css",
+        "https://sentry.hh.ru/api/607/envelope/?sentry_key=55d08dbf26984dd4b9206c097b9cc2ab&sentry_version=7&sentry_client=sentry.javascript.react%2F8.17.0",
+        "https://spb.zarplata.ru/notices/mark_as_viewed",
+        "https://mc.yandex.ru/watch/24101293?wmode=7&page-url=https%3A%2F%2Fspb.zarplata.ru%2Fvacancies&charset=utf-8&site-info=%7B%22status%22%3A%22anonymous%22%2C%22UserID%22%3A%223AD40DCD3D503552D4E2ECDF5C35DDEA9438D7A7F71740E8B832C74D3387D3AD%22%2C%22geoRegion%22%3A%222%22%2C%22design%22%3A%22new%22%7D&uah=che%0A0&browser-info=pv%3A1%3Avf%3Apupr1nz2snmtoqrshzj5yg66c90wv%3Afu%3A0%3Aen%3Autf-8%3Ala%3Aru-RU%3Av%3A2550%3Acn%3A1%3Adp%3A0%3Als%3A496631414368%3Ahid%3A295946967%3Az%3A180%3Ai%3A20260618232027%3Aet%3A1781814027%3Ac%3A1%3Arn%3A452307347%3Arqn%3A1%3Au%3A1781814027671879739%3Aw%3A1366x768%3As%3A1366x768x24%3Ask%3A1%3Afp%3A1216%3Awv%3A2%3Ads%3A0%2C0%2C673%2C32%2C276%2C0%2C%2C316%2C9%2C%2C%2C%2C1583%3Aco%3A0%3Acpf%3A1%3Antf%3A1%3Ans%3A1781814024165%3Arqnl%3A1%3Ast%3A1781814027%3At%3A%D0%A0%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%20%D0%B2%20%D0%A1%D0%B0%D0%BD%D0%BA%D1%82-%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3%D0%B5%3A%20%D0%BE%D0%B1%D0%BD%D0%BE%D0%B2%D0%BB%D0%B5%D0%BD%D0%BD%D1%8B%D0%B5%20%D0%B2%D0%B0%D0%BA%D0%B0%D0%BD%D1%81%D0%B8%D0%B8%20%D0%BD%D0%B0%20%D1%81%D0%B0%D0%B9%D1%82%D0%B5%20spb.zarplata.ru&t=clt(2083)gdpr(14)clc(0-0-0)rqnt(1)aw(1)rcm(1)cdl(na)eco(42017300)ti(1)",
+        "https://eye.targetads.io/web/collect?dl=https%3A%2F%2Fspb.zarplata.ru%2Fvacancies&ref=&ul=ru-ru&ww=1366&wh=768&dt=%D0%A0%D0%B0%D0%B1%D0%BE%D1%82%D0%B0+%D0%B2+%D0%A1%D0%B0%D0%BD%D0%BA%D1%82-%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3%D0%B5%3A+%D0%BE%D0%B1%D0%BD%D0%BE%D0%B2%D0%BB%D0%B5%D0%BD%D0%BD%D1%8B%D0%B5+%D0%B2%D0%B0%D0%BA%D0%B0%D0%BD%D1%81%D0%B8%D0%B8+%D0%BD%D0%B0+%D1%81%D0%B0%D0%B9%D1%82%D0%B5+spb.zarplata.ru&pid=12730&cid=TA-1781814025454-3X0WJKM2&yandexuid=&edttm=1781814027&sid=1539760453&ss=1",
+        "https://privacy-cs.mail.ru/fp/?id=NilAA-wRZ3RSDxrNHjhJK",
+        "https://mc.yandex.ru/watch/24101293/1?wmode=7&page-url=https%3A%2F%2Fspb.zarplata.ru%2Fvacancies&charset=utf-8&site-info=%7B%22status%22%3A%22anonymous%22%2C%22UserID%22%3A%223AD40DCD3D503552D4E2ECDF5C35DDEA9438D7A7F71740E8B832C74D3387D3AD%22%2C%22geoRegion%22%3A%222%22%2C%22design%22%3A%22new%22%7D&uah=che%0A0&browser-info=pv%3A1%3Avf%3Apupr1nz2snmtoqrshzj5yg66c90wv%3Afu%3A0%3Aen%3Autf-8%3Ala%3Aru-RU%3Av%3A2550%3Acn%3A1%3Adp%3A0%3Als%3A496631414368%3Ahid%3A295946967%3Az%3A180%3Ai%3A20260618232027%3Aet%3A1781814027%3Ac%3A1%3Arn%3A452307347%3Arqn%3A1%3Au%3A1781814027671879739%3Aw%3A1366x768%3As%3A1366x768x24%3Ask%3A1%3Afp%3A1216%3Awv%3A2%3Ads%3A0%2C0%2C673%2C32%2C276%2C0%2C%2C316%2C9%2C%2C%2C%2C1583%3Aco%3A0%3Acpf%3A1%3Antf%3A1%3Ans%3A1781814024165%3Arqnl%3A1%3Ast%3A1781814027%3At%3A%D0%A0%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%20%D0%B2%20%D0%A1%D0%B0%D0%BD%D0%BA%D1%82-%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3%D0%B5%3A%20%D0%BE%D0%B1%D0%BD%D0%BE%D0%B2%D0%BB%D0%B5%D0%BD%D0%BD%D1%8B%D0%B5%20%D0%B2%D0%B0%D0%BA%D0%B0%D0%BD%D1%81%D0%B8%D0%B8%20%D0%BD%D0%B0%20%D1%81%D0%B0%D0%B9%D1%82%D0%B5%20spb.zarplata.ru&t=clt%282083%29gdpr%2814%29clc%280-0-0%29rqnt%281%29aw%281%29rcm%281%29cdl%28na%29eco%2842017300%29ti%281%29&redirnss=1",
+        "https://spb.zarplata.ru/api/fl/idgib-w-hh",
+        "https://privacy-cs.mail.ru/fp/?id=NilAA-wRZ3RSDxrNHjhJK",
+        "https://spb.zarplata.ru/api/fl?u=8904b7c0-4a21-11f1-9913-3b69330000001&cfidsgib-w-hh=Mojw9LTCt38Z7GTWsC0lrcwxsKUuIWnv2DuIKe2y0cu7nogqgW7UK9kkKrE5Ep5Z8yV7kxdyVmCe4S1GbPdaPsEY%2F79IvKwWyQ1knpZwfDKEjpygUFiRSbTvcVJ1xONTPkssVIkU9lyuYCUc2t6mF%2FVb"
+      ],
+      "has_next_data": false,
+      "has_initial_state": false,
+      "json_blobs_found": 1,
+      "listing_sample_count": 5,
+      "listing_first": {
+        "title": "Мастер ногтевого сервиса\n50 000 – 100 000 ₽ за месяц, на руки\nОпыт 1-3 года\nВыплаты: раз в неделю\nДо",
+        "url": ""
+      }
+    },
+    "playwright_headless_proxy": {
+      "url": "https://kotovsk.zarplata.ru/vacancies",
+      "title": "Работа в Котовске (Тамбовской области): обновленные вакансии на сайте kotovsk.zarplata.ru",
+      "html_length": 1516051,
+      "anti_bot_signals": [
+        "captcha",
+        "akamai",
+        "blocked"
+      ],
+      "xhr_json_endpoints": [
+        "https://zarplata.ru/static/styles/other/pages/__fonts_3e2a20dec491e4294c7ec1c4f92c6567.css",
+        "https://zarplata.ru/static/styles/other/pages/__magritte-fonts_4d0d9a933ed53bff79307aad380085e8.css",
+        "https://sentry.hh.ru/api/607/envelope/?sentry_key=55d08dbf26984dd4b9206c097b9cc2ab&sentry_version=7&sentry_client=sentry.javascript.react%2F8.17.0",
+        "https://mc.yandex.ru/watch/24101293?wmode=7&page-url=https%3A%2F%2Fkotovsk.zarplata.ru%2Fvacancies&charset=utf-8&site-info=%7B%22status%22%3A%22anonymous%22%2C%22UserID%22%3A%22C2F7AF31D2F53A43EF671BDFF744CC686024E0783FD739688A2612D441753CFB%22%2C%22geoRegion%22%3A%221908%22%2C%22design%22%3A%22new%22%7D&uah=che%0A0&browser-info=pv%3A1%3Avf%3Apupr1nz2snmtoqrshzj5yg66c90wv%3Afu%3A0%3Aen%3Autf-8%3Ala%3Aru-RU%3Av%3A2550%3Acn%3A1%3Adp%3A0%3Als%3A1582476294522%3Ahid%3A254341074%3Az%3A180%3Ai%3A20260618232037%3Aet%3A1781814037%3Ac%3A1%3Arn%3A870968131%3Arqn%3A1%3Au%3A1781814037484742591%3Aw%3A1366x768%3As%3A1366x768x24%3Ask%3A1%3Afp%3A3852%3Awv%3A2%3Ads%3A0%2C0%2C766%2C127%2C2202%2C0%2C%2C748%2C5%2C%2C%2C%2C4940%3Aco%3A0%3Acpf%3A1%3Antf%3A1%3Ans%3A1781814032098%3Arqnl%3A1%3Ast%3A1781814037%3At%3A%D0%A0%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%20%D0%B2%20%D0%9A%D0%BE%D1%82%D0%BE%D0%B2%D1%81%D0%BA%D0%B5%20(%D0%A2%D0%B0%D0%BC%D0%B1%D0%BE%D0%B2%D1%81%D0%BA%D0%BE%D0%B9%20%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D0%B8)%3A%20%D0%BE%D0%B1%D0%BD%D0%BE%D0%B2%D0%BB%D0%B5%D0%BD%D0%BD%D1%8B%D0%B5%20%D0%B2%D0%B0%D0%BA%D0%B0%D0%BD%D1%81%D0%B8%D0%B8%20%D0%BD%D0%B0%20%D1%81%D0%B0%D0%B9%D1%82%D0%B5%20kotovsk.zarplata.ru&t=clt(1225)gdpr(14)clc(0-0-0)rqnt(1)aw(1)rcm(1)cdl(na)eco(42017300)ti(1)",
+        "https://mc.yandex.ru/watch/24101293/1?wmode=7&page-url=https%3A%2F%2Fkotovsk.zarplata.ru%2Fvacancies&charset=utf-8&site-info=%7B%22status%22%3A%22anonymous%22%2C%22UserID%22%3A%22C2F7AF31D2F53A43EF671BDFF744CC686024E0783FD739688A2612D441753CFB%22%2C%22geoRegion%22%3A%221908%22%2C%22design%22%3A%22new%22%7D&uah=che%0A0&browser-info=pv%3A1%3Avf%3Apupr1nz2snmtoqrshzj5yg66c90wv%3Afu%3A0%3Aen%3Autf-8%3Ala%3Aru-RU%3Av%3A2550%3Acn%3A1%3Adp%3A0%3Als%3A1582476294522%3Ahid%3A254341074%3Az%3A180%3Ai%3A20260618232037%3Aet%3A1781814037%3Ac%3A1%3Arn%3A870968131%3Arqn%3A1%3Au%3A1781814037484742591%3Aw%3A1366x768%3As%3A1366x768x24%3Ask%3A1%3Afp%3A3852%3Awv%3A2%3Ads%3A0%2C0%2C766%2C127%2C2202%2C0%2C%2C748%2C5%2C%2C%2C%2C4940%3Aco%3A0%3Acpf%3A1%3Antf%3A1%3Ans%3A1781814032098%3Arqnl%3A1%3Ast%3A1781814037%3At%3A%D0%A0%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%20%D0%B2%20%D0%9A%D0%BE%D1%82%D0%BE%D0%B2%D1%81%D0%BA%D0%B5%20%28%D0%A2%D0%B0%D0%BC%D0%B1%D0%BE%D0%B2%D1%81%D0%BA%D0%BE%D0%B9%20%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D0%B8%29%3A%20%D0%BE%D0%B1%D0%BD%D0%BE%D0%B2%D0%BB%D0%B5%D0%BD%D0%BD%D1%8B%D0%B5%20%D0%B2%D0%B0%D0%BA%D0%B0%D0%BD%D1%81%D0%B8%D0%B8%20%D0%BD%D0%B0%20%D1%81%D0%B0%D0%B9%D1%82%D0%B5%20kotovsk.zarplata.ru&t=clt%281225%29gdpr%2814%29clc%280-0-0%29rqnt%281%29aw%281%29rcm%281%29cdl%28na%29eco%2842017300%29ti%281%29&redirnss=1",
+        "https://kotovsk.zarplata.ru/notices/mark_as_viewed",
+        "https://eye.targetads.io/web/collect?dl=https%3A%2F%2Fkotovsk.zarplata.ru%2Fvacancies&ref=&ul=ru-ru&ww=1366&wh=768&dt=%D0%A0%D0%B0%D0%B1%D0%BE%D1%82%D0%B0+%D0%B2+%D0%9A%D0%BE%D1%82%D0%BE%D0%B2%D1%81%D0%BA%D0%B5+%28%D0%A2%D0%B0%D0%BC%D0%B1%D0%BE%D0%B2%D1%81%D0%BA%D0%BE%D0%B9+%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D0%B8%29%3A+%D0%BE%D0%B1%D0%BD%D0%BE%D0%B2%D0%BB%D0%B5%D0%BD%D0%BD%D1%8B%D0%B5+%D0%B2%D0%B0%D0%BA%D0%B0%D0%BD%D1%81%D0%B8%D0%B8+%D0%BD%D0%B0+%D1%81%D0%B0%D0%B9%D1%82%D0%B5+kotovsk.zarplata.ru&pid=12730&cid=TA-1781814035998-1Q5W08SZ&yandexuid=&edttm=1781814037&sid=1368763814&ss=1",
+        "https://kotovsk.zarplata.ru/api/fl/idgib-w-hh",
+        "https://kotovsk.zarplata.ru/api/fl?u=8904b7c0-4a21-11f1-9913-3b69330000001&cfidsgib-w-hh=PKomMtDf%2F8KUKqjnzp3wJCwYuOMgckjF86PmAASpDE0i47Y7MPwUpQz06Fy0aHgc1IUJbTS1ehwXbZMfR3mQHJEKgnwOByrJtTsyb%2FbPPGwwzMJLJBYBqitteAcCW%2FvTrzAZgoZUPuNWzhmGTz%2BFAul2",
+        "https://privacy-cs.mail.ru/fp/?id=Enz9zoH_3azk8J_5pQJZN",
+        "https://privacy-cs.mail.ru/fp/?id=Enz9zoH_3azk8J_5pQJZN"
+      ],
+      "has_next_data": false,
+      "has_initial_state": false,
+      "json_blobs_found": 1,
+      "listing_sample_count": 5,
+      "listing_first": {
+        "title": "Слесарь-столяр\n130 000 – 136 000 ₽ за месяц, на руки\nБез опыта\nВыплаты: два раза в месяц\nООО АльфаПр",
+        "url": ""
+      }
+    },
+    "playwright_headed_direct": {
+      "url": "https://spb.zarplata.ru/vacancies",
+      "title": "Работа в Санкт-Петербурге: обновленные вакансии на сайте spb.zarplata.ru",
+      "html_length": 2195417,
+      "anti_bot_signals": [
+        "captcha",
+        "akamai",
+        "blocked"
+      ],
+      "xhr_json_endpoints": [
+        "https://zarplata.ru/static/styles/other/pages/__fonts_3e2a20dec491e4294c7ec1c4f92c6567.css",
+        "https://zarplata.ru/static/styles/other/pages/__magritte-fonts_4d0d9a933ed53bff79307aad380085e8.css",
+        "chrome-extension://invalid/",
+        "chrome-extension://invalid/",
+        "https://sentry.hh.ru/api/607/envelope/?sentry_key=55d08dbf26984dd4b9206c097b9cc2ab&sentry_version=7&sentry_client=sentry.javascript.react%2F8.17.0",
+        "https://spb.zarplata.ru/notices/mark_as_viewed",
+        "https://mc.yandex.ru/watch/24101293?wmode=7&page-url=https%3A%2F%2Fspb.zarplata.ru%2Fvacancies&charset=utf-8&site-info=%7B%22status%22%3A%22anonymous%22%2C%22UserID%22%3A%2240DC087248A0073B462BA740379E69CCFEED48A392FCBD1B30C713D39F9C4E41%22%2C%22geoRegion%22%3A%222%22%2C%22design%22%3A%22new%22%7D&uah=che%0A0&browser-info=pv%3A1%3Avf%3Apupr1nz2snmtoqrshzj5yg66c90wv%3Afu%3A0%3Aen%3Autf-8%3Ala%3Aru-RU%3Av%3A2550%3Acn%3A1%3Adp%3A0%3Als%3A25343816009%3Ahid%3A472217418%3Az%3A180%3Ai%3A20260618232047%3Aet%3A1781814048%3Ac%3A1%3Arn%3A33814738%3Arqn%3A1%3Au%3A1781814048902944643%3Aw%3A1351x768%3As%3A1366x768x32%3Ask%3A1.0000000149011612%3Afp%3A1296%3Awv%3A2%3Ads%3A0%2C0%2C634%2C21%2C232%2C0%2C%2C281%2C8%2C%2C%2C%2C1456%3Aco%3A0%3Acpf%3A1%3Ans%3A1781814044479%3Arqnl%3A1%3Ast%3A1781814048%3At%3A%D0%A0%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%20%D0%B2%20%D0%A1%D0%B0%D0%BD%D0%BA%D1%82-%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3%D0%B5%3A%20%D0%BE%D0%B1%D0%BD%D0%BE%D0%B2%D0%BB%D0%B5%D0%BD%D0%BD%D1%8B%D0%B5%20%D0%B2%D0%B0%D0%BA%D0%B0%D0%BD%D1%81%D0%B8%D0%B8%20%D0%BD%D0%B0%20%D1%81%D0%B0%D0%B9%D1%82%D0%B5%20spb.zarplata.ru&t=clt(2100)gdpr(14)clc(0-0-0)rqnt(1)aw(1)rcm(1)cdl(na)eco(42017300)ti(1)",
+        "https://privacy-cs.mail.ru/fp/?id=HAps7gYwKNtJgyBVlicHy",
+        "https://mc.yandex.ru/watch/24101293/1?wmode=7&page-url=https%3A%2F%2Fspb.zarplata.ru%2Fvacancies&charset=utf-8&site-info=%7B%22status%22%3A%22anonymous%22%2C%22UserID%22%3A%2240DC087248A0073B462BA740379E69CCFEED48A392FCBD1B30C713D39F9C4E41%22%2C%22geoRegion%22%3A%222%22%2C%22design%22%3A%22new%22%7D&uah=che%0A0&browser-info=pv%3A1%3Avf%3Apupr1nz2snmtoqrshzj5yg66c90wv%3Afu%3A0%3Aen%3Autf-8%3Ala%3Aru-RU%3Av%3A2550%3Acn%3A1%3Adp%3A0%3Als%3A25343816009%3Ahid%3A472217418%3Az%3A180%3Ai%3A20260618232047%3Aet%3A1781814048%3Ac%3A1%3Arn%3A33814738%3Arqn%3A1%3Au%3A1781814048902944643%3Aw%3A1351x768%3As%3A1366x768x32%3Ask%3A1.0000000149011612%3Afp%3A1296%3Awv%3A2%3Ads%3A0%2C0%2C634%2C21%2C232%2C0%2C%2C281%2C8%2C%2C%2C%2C1456%3Aco%3A0%3Acpf%3A1%3Ans%3A1781814044479%3Arqnl%3A1%3Ast%3A1781814048%3At%3A%D0%A0%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%20%D0%B2%20%D0%A1%D0%B0%D0%BD%D0%BA%D1%82-%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3%D0%B5%3A%20%D0%BE%D0%B1%D0%BD%D0%BE%D0%B2%D0%BB%D0%B5%D0%BD%D0%BD%D1%8B%D0%B5%20%D0%B2%D0%B0%D0%BA%D0%B0%D0%BD%D1%81%D0%B8%D0%B8%20%D0%BD%D0%B0%20%D1%81%D0%B0%D0%B9%D1%82%D0%B5%20spb.zarplata.ru&t=clt%282100%29gdpr%2814%29clc%280-0-0%29rqnt%281%29aw%281%29rcm%281%29cdl%28na%29eco%2842017300%29ti%281%29&redirnss=1",
+        "https://spb.zarplata.ru/api/fl/idgib-w-hh",
+        "https://eye.targetads.io/web/collect?dl=https%3A%2F%2Fspb.zarplata.ru%2Fvacancies&ref=&ul=ru-ru&ww=1366&wh=768&dt=%D0%A0%D0%B0%D0%B1%D0%BE%D1%82%D0%B0+%D0%B2+%D0%A1%D0%B0%D0%BD%D0%BA%D1%82-%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3%D0%B5%3A+%D0%BE%D0%B1%D0%BD%D0%BE%D0%B2%D0%BB%D0%B5%D0%BD%D0%BD%D1%8B%D0%B5+%D0%B2%D0%B0%D0%BA%D0%B0%D0%BD%D1%81%D0%B8%D0%B8+%D0%BD%D0%B0+%D1%81%D0%B0%D0%B9%D1%82%D0%B5+spb.zarplata.ru&pid=12730&cid=TA-1781814045948-4P2IIIRO&yandexuid=&edttm=1781814047&sid=1027610407&ss=1",
+        "https://privacy-cs.mail.ru/fp/?id=HAps7gYwKNtJgyBVlicHy",
+        "https://spb.zarplata.ru/api/fl?u=8904b7c0-4a21-11f1-9913-3b69330000001&cfidsgib-w-hh=NB%2FiY2wwRMq55JpxATRIEKWsLtfHjnkumnuLrC3Ou2u9d6ImkdVsvd18k0s5sDzJDLoX3zs9ILErwhqcQoYCZ%2BGvrHl0nRUBxw12or8Ge69lrQlVLkXwbASqDzAdHHdcW4z56%2B4gx3OeccTFq%2BLeDZUz"
+      ],
+      "has_next_data": false,
+      "has_initial_state": false,
+      "json_blobs_found": 1,
+      "listing_sample_count": 5,
+      "listing_first": {
+        "title": "Сейчас смотрит 1 человек\nПовар горячего цеха\n90 000 – 95 000 ₽ за месяц, на руки\nОпыт 3-6 лет\nВыплат",
+        "url": ""
+      }
+    },
+    "api_probe_results": [
+      {
+        "url": "https://api.zarplata.ru/vacancies?text=python&order_by=publication_time&per_page=5",
+        "status": 403,
+        "content_type": "application/json; charset=UTF-8",
+        "via": "direct",
+        "body_length": 81
+      },
+      {
+        "url": "https://api.zarplata.ru/v2/vacancies?text=python&order_by=publication_time&per_page=5",
+        "status": 404,
+        "content_type": "application/json; charset=UTF-8",
+        "via": "direct",
+        "body_length": 81
+      },
+      {
+        "url": "https://api.zarplata.ru/vacancies?text=python",
+        "status": 403,
+        "content_type": "application/json; charset=UTF-8",
+        "via": "direct",
+        "body_length": 81
+      },
+      {
+        "url": "https://www.zarplata.ru/api/vacancies/search?text=python&order_by=publication_time",
+        "status": 404,
+        "content_type": "text/html; charset=utf-8",
+        "via": "direct",
+        "body_length": 32166
+      }
+    ],
+    "data_source": "unknown",
+    "verdict": "FAILED",
+    "httpx_anti_bot": [
+      "captcha",
+      "blocked"
+    ],
+    "data_source_type": "XHR/JSON API"
+  }
+}

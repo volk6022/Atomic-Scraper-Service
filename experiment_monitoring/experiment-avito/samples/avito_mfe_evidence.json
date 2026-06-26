@@ -1,0 +1,132 @@
+{
+  "url": "https://www.avito.ru/all/vakansii?s=104",
+  "total_count": 2670912,
+  "items_count": 50,
+  "sample_items": [
+    {
+      "id": "8195307158",
+      "title": "Водитель-механик, Луганск",
+      "price_string": "8 300 — 14 300",
+      "price_value": 11300,
+      "price_postfix": "",
+      "price_full_string": "8 300 — 14 300 ₽",
+      "location": "Кинель",
+      "url": "https://www.avito.ru/kinel/vakansii/voditel-mehanik_lugansk_8195307158",
+      "sort_timestamp_ms": 1781801263000,
+      "sort_datetime": "2026-06-18 19:47:43",
+      "allow_timestamp_ms": 1781801263000,
+      "allow_datetime": "2026-06-18 19:47:43",
+      "description_snippet": "Вакансия: Водитель.\n\nИщем ответственного водителя с опытом работы для доставки грузов по городу и области. Обязанности: своевременная доставка заказов, бережное отношение к грузу и автомобилю, оформле",
+      "images_count": 1,
+      "phone_visible": false,
+      "message_enabled": true,
+      "category": "Вакансии"
+    },
+    {
+      "id": "8149732893",
+      "title": "Разнорабочий",
+      "price_string": "9 056 — 19 056",
+      "price_value": 14056,
+      "price_postfix": "за смену",
+      "price_full_string": "9 056 — 19 056 ₽ за смену",
+      "location": "Верхние Татышлы",
+      "url": "https://www.avito.ru/verhnie_tatyshly/vakansii/raznorabochiy_8149732893",
+      "sort_timestamp_ms": 1781801262000,
+      "sort_datetime": "2026-06-18 19:47:42",
+      "allow_timestamp_ms": 1781801262000,
+      "allow_datetime": "2026-06-18 19:47:42",
+      "description_snippet": "Ищем oтвeтственного разнорабочего для реaлизaции пpоeктoв рaзличнoй cлoжнoсти:\n\nстрoительствo жилых дoмoв, общественных зданий и заводoв;\nремонт и воccтановлeния пoврeжденныx объeктов;\npaсчиcтка paзру",
+      "images_count": 1,
+      "phone_visible": false,
+      "message_enabled": true,
+      "category": "Вакансии"
+    },
+    {
+      "id": "8225850610",
+      "title": "Вахта в Москве - Приёмщик/ Грузчик на склад",
+      "price_string": "405 000 — 415 000",
+      "price_value": 410000,
+      "price_postfix": "на руки",
+      "price_full_string": "405 000 — 415 000 ₽ на руки",
+      "location": "Спасск-Рязанский",
+      "url": "https://www.avito.ru/spassk-ryazanskiy/vakansii/vahta_v_moskve_-_priemschik_gruzchik_na_sklad_8225850610",
+      "sort_timestamp_ms": 1781801256000,
+      "sort_datetime": "2026-06-18 19:47:36",
+      "allow_timestamp_ms": 1781801256000,
+      "allow_datetime": "2026-06-18 19:47:36",
+      "description_snippet": "Работа Вахтовым Методом В Москвеоформление И Заселение С 1-ГО Дня МЫ Прямой Работодательзвоните/Пишите.\n\nУважаемые кандидаты, добавьте объявление в Избранное чтобы не потерять.\n\nМы на связи с 7:00 до ",
+      "images_count": 1,
+      "phone_visible": true,
+      "message_enabled": true,
+      "category": "Вакансии"
+    },
+    {
+      "id": "8225440163",
+      "title": "Вахта в Москве - Приёмщик/ Грузчик на склад",
+      "price_string": "405 000 — 415 000",
+      "price_value": 410000,
+      "price_postfix": "на руки",
+      "price_full_string": "405 000 — 415 000 ₽ на руки",
+      "location": "Инза",
+      "url": "https://www.avito.ru/inza/vakansii/vahta_v_moskve_-_priemschik_gruzchik_na_sklad_8225440163",
+      "sort_timestamp_ms": 1781801249000,
+      "sort_datetime": "2026-06-18 19:47:29",
+      "allow_timestamp_ms": 1781801249000,
+      "allow_datetime": "2026-06-18 19:47:29",
+      "description_snippet": "Работа Вахтовым Методом В Москвеоформление И Заселение С 1-ГО Дня МЫ Прямой Работодательзвоните/Пишите.\n\nУважаемые кандидаты, добавьте объявление в Избранное чтобы не потерять.\n\nМы на связи с 7:00 до ",
+      "images_count": 1,
+      "phone_visible": true,
+      "message_enabled": true,
+      "category": "Вакансии"
+    },
+    {
+      "id": "8224899853",
+      "title": "Вахта в Москве - Приёмщик/ Грузчик на склад",
+      "price_string": "405 000 — 415 000",
+      "price_value": 410000,
+      "price_postfix": "на руки",
+      "price_full_string": "405 000 — 415 000 ₽ на руки",
+      "location": "Димитровград",
+      "url": "https://www.avito.ru/dimitrovgrad/vakansii/vahta_v_moskve_-_priemschik_gruzchik_na_sklad_8224899853",
+      "sort_timestamp_ms": 1781801232000,
+      "sort_datetime": "2026-06-18 19:47:12",
+      "allow_timestamp_ms": 1781801232000,
+      "allow_datetime": "2026-06-18 19:47:12",
+      "description_snippet": "Работа Вахтовым Методом В Москвеоформление И Заселение С 1-ГО Дня МЫ Прямой Работодательзвоните/Пишите.\n\nУважаемые кандидаты, добавьте объявление в Избранное чтобы не потерять.\n\nМы на связи с 7:00 до ",
+      "images_count": 1,
+      "phone_visible": true,
+      "message_enabled": true,
+      "category": "Вакансии"
+    }
+  ],
+  "page2_items_count": 50,
+  "page12_id_overlap": 0,
+  "sorts": [
+    {
+      "value": "101",
+      "titles": {
+        "default": "По умолчанию"
+      }
+    },
+    {
+      "value": "2",
+      "titles": {
+        "default": "По убыванию зарплаты"
+      }
+    },
+    {
+      "value": "1",
+      "titles": {
+        "default": "По возрастанию зарплаты"
+      }
+    },
+    {
+      "value": "104",
+      "titles": {
+        "default": "По дате"
+      }
+    }
+  ],
+  "data_source": "<script type='mime/invalid' data-mfe-state='true'>",
+  "verified_2026_06_18": true
+}

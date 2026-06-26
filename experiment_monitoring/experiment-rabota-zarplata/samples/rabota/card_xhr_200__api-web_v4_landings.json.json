@@ -1,0 +1,317 @@
+{
+  "response": {
+    "rows": [
+      {
+        "id": 15,
+        "name": "Работа в маркетинге",
+        "name_in_menu": "",
+        "title": "Поиск работы в сфере маркетинга, рекламы и PR",
+        "target_id": 3260,
+        "target_name": "работа в маркетинге",
+        "background_url": "https://cdn1-media.rabota.ru/processor/background/desktop/2020/11/18/v-marketinge-2.png",
+        "mobile_background_url": "https://cdn1-media.rabota.ru/processor/background/mobile/2020/11/18/v-marketinge.png",
+        "is_show_company_logo": false,
+        "is_show_in_menu": false,
+        "query_groups": []
+      },
+      {
+        "id": 3,
+        "name": "Найдите работу с высокой зарплатой",
+        "name_in_menu": "",
+        "title": "У нас вы найдете самые свежие вакансии от прямых работодателей. Откликайтесь прямо сейчас!",
+        "target_id": 4689,
+        "target_name": "Работа для профессионалов",
+        "background_url": "https://cdn1-media.rabota.ru/processor/background/desktop/2020/05/13/desk_2.jpg",
+        "mobile_background_url": "https://cdn1-media.rabota.ru/processor/background/mobile/2020/05/13/mob1.png",
+        "is_show_company_logo": false,
+        "is_show_in_menu": false,
+        "query_groups": []
+      },
+      {
+        "id": 4,
+        "name": "Компании срочно ищут сотрудников",
+        "name_in_menu": "",
+        "title": "Срочно нужна работа? Здесь можно найти работодателей, которым нужны сотрудники прямо сейчас",
+        "target_id": 4692,
+        "target_name": "Срочный поиск работы",
+        "background_url": "https://cdn1-media.rabota.ru/processor/background/desktop/2022/04/07/web.png",
+        "mobile_background_url": "https://cdn1-media.rabota.ru/processor/background/mobile/2022/04/14/mobile1.png",
+        "is_show_company_logo": false,
+        "is_show_in_menu": false,
+        "query_groups": []
+      },
+      {
+        "id": 6,
+        "name": "Найдите работу рядом с домом",
+        "name_in_menu": "",
+        "title": "Работать в паре шагов от дома — мечта каждого. Не упустите возможность!",
+        "target_id": 4690,
+        "target_name": "Работа для квалифицированных специалистов",
+        "background_url": "https://cdn1-media.rabota.ru/processor/background/desktop/2020/05/14/desk_2.png",
+        "mobile_background_url": "https://cdn1-media.rabota.ru/processor/background/mobile/2020/05/14/mob_2.jpg",
+        "is_show_company_logo": false,
+        "is_show_in_menu": false,
+        "query_groups": []
+      },
+      {
+        "id": 9,
+        "name": "Найдите удаленную работу уже сейчас",
+        "name_in_menu": "",
+        "title": "Найдите удаленную работу и зарабатывайте не покидая дома",
+        "target_id": 2741,
+        "target_name": "Работа на дому",
+        "background_url": "https://cdn1-media.rabota.ru/processor/background/desktop/2020/05/27/img-big_2.png",
+        "mobile_background_url": null,
+        "is_show_company_logo": false,
+        "is_show_in_menu": false,
+        "query_groups": []
+      },
+      {
+        "id": 22,
+        "name": "Работа для иностранных граждан",
+        "name_in_menu": "",
+        "title": "У нас вы найдете самые свежие вакансии от прямых работодателей. Откликайтесь прямо сейчас!",
+        "target_id": 4827,
+        "target_name": "работа для мигрантов",
+        "background_url": "https://cdn1-media.rabota.ru/processor/background/desktop/2021/07/16/kartinka-dlya-lendinga-migrantov-5.png",
+        "mobile_background_url": "https://cdn1-media.rabota.ru/processor/background/mobile/2021/07/16/kartinka-dlya-lendinga-mobile-5.png",
+        "is_show_company_logo": false,
+        "is_show_in_menu": false,
+        "query_groups": []
+      },
+      {
+        "id": 2,
+        "name": "Поиск работы в стартапах уже сейчас",
+        "name_in_menu": "",
+        "title": "Участвуйте в развитии проектов новых поколений и покоряйте мир с командами единомышленников!",
+        "target_id": 4747,
+        "target_name": "Работа в стартапах",
+        "background_url": "https://cdn1-media.rabota.ru/processor/background/desktop/2020/05/13/1111.jpg",
+        "mobile_background_url": "https://cdn1-media.rabota.ru/processor/background/mobile/2020/05/13/mob.jpg",
+        "is_show_company_logo": false,
+        "is_show_in_menu": false,
+        "query_groups": []
+      },
+      {
+        "id": 24,
+        "name": "Работа для ветеранов",
+        "name_in_menu": "",
+        "title": "У нас вы найдете самые свежие вакансии от прямых работодателей. Откликайтесь прямо сейчас!",
+        "target_id": 4875,
+        "target_name": "Работа для ветеранов",
+        "background_url": "https://cdn1-media.rabota.ru/processor/background/desktop/2025/10/09/1438x512-landing-4_2.png",
+        "mobile_background_url": "https://cdn1-media.rabota.ru/processor/background/mobile/2025/10/29/768x458-landing-m.png",
+        "is_show_company_logo": false,
+        "is_show_in_menu": false,
+        "query_groups": []
+      },
+      {
+        "id": 10,
+        "name": "Равные возможности для каждого",
+        "name_in_menu": "",
+        "title": "Вакансии для людей с инвалидностью. У нас вы найдете самые свежие вакансии от прямых работодателей.",
+        "target_id": 4697,
+        "target_name": "работа для инвалидов",
+        "background_url": "https://cdn1-media.rabota.ru/processor/background/desktop/2020/11/12/1438h512-2.png",
+        "mobile_background_url": "https://cdn1-media.rabota.ru/processor/background/mobile/2020/11/12/768x458-2.png",
+        "is_show_company_logo": false,
+        "is_show_in_menu": false,
+        "query_groups": []
+      },
+      {
+        "id": 12,
+        "name": "Работа в сфере HR",
+        "name_in_menu": "",
+        "title": " Работа для сотрудников, отвечающих за подбор и развитие персонала внутри компании",
+        "target_id": 3255,
+        "target_name": "работа в сфере HR",
+        "background_url": "https://cdn1-media.rabota.ru/processor/background/desktop/2020/11/18/v-hr-2.png",
+        "mobile_background_url": "https://cdn1-media.rabota.ru/processor/background/mobile/2020/11/18/v-hr.png",
+        "is_show_company_logo": true,
+        "is_show_in_menu": false,
+        "query_groups": []
+      },
+      {
+        "id": 13,
+        "name": "Работа для топ-менеджеров",
+        "name_in_menu": "",
+        "title": "Свежие вакансии от прямых работодателей для топ-менеджеров и специалистов",
+        "target_id": 3251,
+        "target_name": "работа для топ-менеджеров",
+        "background_url": "https://cdn1-media.rabota.ru/processor/background/desktop/2020/11/18/dlya-top-menedjerov-2.png",
+        "mobile_background_url": "https://cdn1-media.rabota.ru/processor/background/mobile/2020/11/18/dlya-top-menedjerov.png",
+        "is_show_company_logo": false,
+        "is_show_in_menu": false,
+        "query_groups": []
+      },
+      {
+        "id": 14,
+        "name": "Работа в сфере финансов",
+        "name_in_menu": "",
+        "title": "Найти работу по специализации финансы. Удобный поиск вакансий с высокой заработной платой.",
+        "target_id": 4489,
+        "target_name": "работа в финансовой сфере",
+        "background_url": "https://cdn1-media.rabota.ru/processor/background/desktop/2020/11/18/v-finansah-2.png",
+        "mobile_background_url": "https://cdn1-media.rabota.ru/processor/background/mobile/2020/11/18/v-finansah.png",
+        "is_show_company_logo": false,
+        "is_show_in_menu": false,
+        "query_groups": []
+      },
+      {
+        "id": 16,
+        "name": "Работа в сфере дизайна",
+        "name_in_menu": "",
+        "title": "У нас вы найдете самые свежие вакансии от прямых работодателей. Откликайтесь прямо сейчас!",
+        "target_id": 3259,
+        "target_name": "работа в сфере дизайна",
+        "background_url": "https://cdn1-media.rabota.ru/processor/background/desktop/2020/11/18/rabota-v-sfere-dizayna-2.png",
+        "mobile_background_url": "https://cdn1-media.rabota.ru/processor/background/mobile/2020/11/18/v-sfere-dizayna_2.png",
+        "is_show_company_logo": false,
+        "is_show_in_menu": false,
+        "query_groups": []
+      },
+      {
+        "id": 5,
+        "name": "Работа для студентов и молодых специалистов без опыта",
+        "name_in_menu": "",
+        "title": "У нас вы найдете самые свежие вакансии от прямых работодателей. Откликайтесь прямо сейчас!",
+        "target_id": 4614,
+        "target_name": "работа для студентов",
+        "background_url": "https://cdn1-media.rabota.ru/processor/background/desktop/2020/05/13/desk_5.jpg",
+        "mobile_background_url": "https://cdn1-media.rabota.ru/processor/background/mobile/2020/05/13/mob_3.jpg",
+        "is_show_company_logo": false,
+        "is_show_in_menu": false,
+        "query_groups": [
+          {
+            "id": 3344,
+            "name": "стажировки",
+            "image": "https://cdn1-media.rabota.ru/processor/image/carousel/2020/05/20/1-1.png",
+            "vacancy_count": 8960
+          },
+          {
+            "id": 3278,
+            "name": "подработка для студентов",
+            "image": "https://cdn1-media.rabota.ru/processor/image/carousel/2020/05/20/1-4.png",
+            "vacancy_count": 8960
+          },
+          {
+            "id": 3612,
+            "name": "подработка курьером",
+            "image": "https://cdn1-media.rabota.ru/processor/image/carousel/2020/05/20/4-8.jpg",
+            "vacancy_count": 8960
+          },
+          {
+            "id": 3616,
+            "name": "подработка водителем",
+            "image": "https://cdn1-media.rabota.ru/processor/image/carousel/2020/05/20/4-4.png",
+            "vacancy_count": 8960
+          },
+          {
+            "id": 3623,
+            "name": "подработка официантом",
+            "image": "https://cdn1-media.rabota.ru/processor/image/carousel/2020/05/31/thumb-33624.png",
+            "vacancy_count": 8960
+          },
+          {
+            "id": 3615,
+            "name": "подработка няней",
+            "image": "https://cdn1-media.rabota.ru/processor/image/carousel/2020/05/31/thumb-33607.png",
+            "vacancy_count": 8960
+          }
+        ]
+      },
+      {
+        "id": 17,
+        "name": "Работа на производстве",
+        "name_in_menu": "",
+        "title": "У нас вы найдете самые свежие вакансии от прямых работодателей. Откликайтесь прямо сейчас!",
+        "target_id": 3265,
+        "target_name": "работа на производстве",
+        "background_url": "https://cdn1-media.rabota.ru/processor/background/desktop/2020/11/18/na-proizvodstve-2.png",
+        "mobile_background_url": "https://cdn1-media.rabota.ru/processor/background/mobile/2020/11/18/na-proizvodstve.png",
+        "is_show_company_logo": false,
+        "is_show_in_menu": false,
+        "query_groups": []
+      },
+      {
+        "id": 11,
+        "name": "Работа в сфере IT",
+        "name_in_menu": "",
+        "title": "Работа в области информационных технологий, интернета, телеком",
+        "target_id": 3250,
+        "target_name": "работа в сфере IT",
+        "background_url": "https://cdn1-media.rabota.ru/processor/background/desktop/2020/11/18/v-sfere-it-2.png",
+        "mobile_background_url": "https://cdn1-media.rabota.ru/processor/background/mobile/2020/11/18/v-sfere-it.png",
+        "is_show_company_logo": false,
+        "is_show_in_menu": false,
+        "query_groups": []
+      },
+      {
+        "id": 18,
+        "name": "Работа в сфере аудита",
+        "name_in_menu": "",
+        "title": "У нас вы найдете самые свежие вакансии от прямых работодателей. Откликайтесь прямо сейчас!",
+        "target_id": 3253,
+        "target_name": "работа в сфере аудита",
+        "background_url": "https://cdn1-media.rabota.ru/processor/background/desktop/2020/11/18/v-analitike-2_2.png",
+        "mobile_background_url": "https://cdn1-media.rabota.ru/processor/background/mobile/2020/11/18/v-analitike_2.png",
+        "is_show_company_logo": false,
+        "is_show_in_menu": false,
+        "query_groups": []
+      },
+      {
+        "id": 19,
+        "name": "Работа в юриспруденции",
+        "name_in_menu": "",
+        "title": "У нас вы найдете самые свежие вакансии от прямых работодателей. Откликайтесь прямо сейчас!",
+        "target_id": 3258,
+        "target_name": "работа в юриспруденции",
+        "background_url": "https://cdn1-media.rabota.ru/processor/background/desktop/2020/11/18/v-yurisprudentsii-2.png",
+        "mobile_background_url": "https://cdn1-media.rabota.ru/processor/background/mobile/2020/11/18/v-yurisprudentsii.png",
+        "is_show_company_logo": false,
+        "is_show_in_menu": false,
+        "query_groups": []
+      },
+      {
+        "id": 20,
+        "name": "Работа в сфере медицины",
+        "name_in_menu": "",
+        "title": "У нас вы найдете самые свежие вакансии от прямых работодателей. Откликайтесь прямо сейчас!",
+        "target_id": 3272,
+        "target_name": "работа в сфере медицины",
+        "background_url": "https://cdn1-media.rabota.ru/processor/background/desktop/2020/11/18/rabota-v-sfere-meditsiny-2.png",
+        "mobile_background_url": "https://cdn1-media.rabota.ru/processor/background/mobile/2020/11/18/rabota-v-sfere-meditsiny.png",
+        "is_show_company_logo": false,
+        "is_show_in_menu": false,
+        "query_groups": []
+      },
+      {
+        "id": 21,
+        "name": "Работа в сфере образования",
+        "name_in_menu": "",
+        "title": "У нас вы найдете самые свежие вакансии от прямых работодателей. Откликайтесь прямо сейчас!",
+        "target_id": 3264,
+        "target_name": "работа в сфере образования",
+        "background_url": "https://cdn1-media.rabota.ru/processor/background/desktop/2020/11/18/v-sfere-obrazovaniya-2.png",
+        "mobile_background_url": "https://cdn1-media.rabota.ru/processor/background/mobile/2020/11/18/v-sfere-obrazovaniya.png",
+        "is_show_company_logo": false,
+        "is_show_in_menu": false,
+        "query_groups": []
+      },
+      {
+        "id": 23,
+        "name": "Работа для людей старшего возраста",
+        "name_in_menu": "",
+        "title": "Удобный и быстрый поиск работы от прямых работодателей",
+        "target_id": 4695,
+        "target_name": "Работа для пенсионеров",
+        "background_url": "https://cdn1-media.rabota.ru/processor/background/desktop/2022/04/04/desktop.png",
+        "mobile_background_url": "https://cdn1-media.rabota.ru/processor/background/mobile/2022/04/04/mobilka.png",
+        "is_show_company_logo": false,
+        "is_show_in_menu": false,
+        "query_groups": []
+      }
+    ]
+  },
+  "request_id": 49638872
+}

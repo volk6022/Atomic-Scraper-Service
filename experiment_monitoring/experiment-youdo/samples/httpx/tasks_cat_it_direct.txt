@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <noscript><meta http-equiv="refresh" content="0; url=/exhkqyad"></noscript>
+</head>
+<style>
+    .container {
+      display: flex;
+      align-content: center;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    .load {
+      color: grey;
+      font-size: 3vh;
+    }
+    .spinner {
+      display: block;
+      background:  url('//servicepipe.ru/loaders/default.gif');
+      width: 64px;
+      height: 64px;
+    }
+</style>
+<body>
+  <div id="id_spinner" class="container"><div class="load"></div><div class="spinner"></div></div>
+  <div id="id_captcha_frame_div" style="display: none;height: 100vh;"></div>
+  <script type="text/javascript" src="https://servicepipe.ru/static/jsrsasign-all-min.js"></script>
+  <script type="text/javascript">
+
+function get_cookie_spsn() {
+  return "spsn=1781810860620_";
+}
+function get_cookie_spid() {
+  return "spid=1781810860620_aac8807f824beda998ba9fcd378e4e3b_nhcol1xfqcai3m5m";
+}
+function get_options() {
+  return JSON.parse('{"kncdipiytd":"1781810860620_df2f35e306ffa961774656b4","iamehkqlib":"17598947fc9a6971f26548428a96331a","woprmswjtq":19606,"ojqqomaznz":"_7KrTUkkUiUaxgBCAic.86ZQWItqxN9bsJWjPkSrueTkZ","bmdxprfwqa":17,"twdoonmfjr":1,"sauoqhgdwa":false,"is_captcha":false,"0hjsihgukl":false}');
+}
+function get_location() {
+  return "https://youdo.com/tasks-all-opened-all?category=it";
+}

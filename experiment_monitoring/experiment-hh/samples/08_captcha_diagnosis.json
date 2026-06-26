@@ -1,0 +1,24 @@
+[
+  {
+    "label": "Direct standard UA",
+    "root_status": 200,
+    "vacancies_status": 403,
+    "vacancies_body": "{\"errors\":[{\"type\":\"forbidden\"}],\"request_id\":\"1781711740525d6707a31a9a98c93003\"}"
+  },
+  {
+    "label": "Proxy np.puls-proxy.com:11000 (IP=78.140.240.65)",
+    "error": "timed out"
+  },
+  {
+    "label": "Proxy np.puls-proxy.com:11002 (IP=193.233.6.87)",
+    "error": "timed out"
+  },
+  {
+    "label": "Proxy np.puls-proxy.com:11004 (IP=ERROR: timed out)",
+    "error": "timed out"
+  },
+  {
+    "label": "Proxy browser-like headers",
+    "error": "timed out"
+  }
+]

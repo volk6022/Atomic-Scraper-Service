@@ -1,0 +1,158 @@
+{
+  "attempts": [
+    {
+      "method": "httpx_direct",
+      "status_code": 200,
+      "success": true
+    }
+  ],
+  "listing": {
+    "url": "https://career.habr.com/vacancies?sort=date&page=1",
+    "vacancy_count": 25,
+    "sample": [
+      {
+        "id": "1000166839",
+        "title": "Fraud Analytics [Senior / Lead]",
+        "company": "deeplay",
+        "salary": "",
+        "url": "https://career.habr.com/vacancies/1000166839",
+        "_source": "href-pattern"
+      },
+      {
+        "id": "1000166838",
+        "title": "Product Analyst [Senior / Lead]",
+        "company": "deeplay",
+        "salary": "",
+        "url": "https://career.habr.com/vacancies/1000166838",
+        "_source": "href-pattern"
+      },
+      {
+        "id": "1000166837",
+        "title": "Data Product Manager [Senior]",
+        "company": "deeplay",
+        "salary": "",
+        "url": "https://career.habr.com/vacancies/1000166837",
+        "_source": "href-pattern"
+      },
+      {
+        "id": "1000166836",
+        "title": "Финансовый аналитик",
+        "company": "deeplay",
+        "salary": "",
+        "url": "https://career.habr.com/vacancies/1000166836",
+        "_source": "href-pattern"
+      },
+      {
+        "id": "1000166962",
+        "title": "System Analyst",
+        "company": "Coral Club",
+        "salary": "",
+        "url": "https://career.habr.com/vacancies/1000166962",
+        "_source": "href-pattern"
+      },
+      {
+        "id": "1000156497",
+        "title": "IOS-разработчик в Маркетплейс",
+        "company": "RWB (Wildberries &amp; Russ)",
+        "salary": "",
+        "url": "https://career.habr.com/vacancies/1000156497",
+        "_source": "href-pattern"
+      },
+      {
+        "id": "1000156496",
+        "title": "Android-разработчик в Маркетплейс",
+        "company": "RWB (Wildberries &amp; Russ)",
+        "salary": "",
+        "url": "https://career.habr.com/vacancies/1000156496",
+        "_source": "href-pattern"
+      },
+      {
+        "id": "1000166367",
+        "title": "Data Engineer",
+        "company": "М Тех",
+        "salary": "",
+        "url": "https://career.habr.com/vacancies/1000166367",
+        "_source": "href-pattern"
+      },
+      {
+        "id": "1000162432",
+        "title": "MLOps Engineer [Trust and Safety]",
+        "company": "RWB (Wildberries &amp; Russ)",
+        "salary": "",
+        "url": "https://career.habr.com/vacancies/1000162432",
+        "_source": "href-pattern"
+      },
+      {
+        "id": "1000164839",
+        "title": "Product Analyst",
+        "company": "RWB (Wildberries &amp; Russ)",
+        "salary": "",
+        "url": "https://career.habr.com/vacancies/1000164839",
+        "_source": "href-pattern"
+      }
+    ]
+  },
+  "card": {
+    "url": "https://career.habr.com/vacancies/1000166839",
+    "title": "Fraud Analytics [Senior / Lead]",
+    "company": "deeplay",
+    "salary": "От 100 000 до 150 000 ₽",
+    "skills": [],
+    "published_at": "2026-06-18T21:49:43+03:00",
+    "description_length": 29,
+    "description_preview": "Сообщество IT-специалистовQ&A"
+  },
+  "remote_listing": {
+    "url": "https://career.habr.com/vacancies/remote?sort=date&page=1",
+    "vacancy_count": 25,
+    "sample": [
+      {
+        "id": "1000166839",
+        "title": "Fraud Analytics [Senior / Lead]",
+        "company": "deeplay",
+        "salary": "",
+        "url": "https://career.habr.com/vacancies/1000166839",
+        "_source": "href-pattern"
+      },
+      {
+        "id": "1000166838",
+        "title": "Product Analyst [Senior / Lead]",
+        "company": "deeplay",
+        "salary": "",
+        "url": "https://career.habr.com/vacancies/1000166838",
+        "_source": "href-pattern"
+      },
+      {
+        "id": "1000166837",
+        "title": "Data Product Manager [Senior]",
+        "company": "deeplay",
+        "salary": "",
+        "url": "https://career.habr.com/vacancies/1000166837",
+        "_source": "href-pattern"
+      },
+      {
+        "id": "1000166836",
+        "title": "Финансовый аналитик",
+        "company": "deeplay",
+        "salary": "",
+        "url": "https://career.habr.com/vacancies/1000166836",
+        "_source": "href-pattern"
+      },
+      {
+        "id": "1000166962",
+        "title": "System Analyst",
+        "company": "Coral Club",
+        "salary": "",
+        "url": "https://career.habr.com/vacancies/1000166962",
+        "_source": "href-pattern"
+      }
+    ]
+  },
+  "freelance_check": {
+    "url": "https://freelance.habr.com/tasks",
+    "status_code": 410,
+    "html_len": 48407,
+    "contains_closure_msg": false,
+    "html_preview": "<!doctype html>\n<html lang=\"ru\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\"\n        content=\"width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0\"\n  >\n  <meta http-equiv=\"X-UA-Compatible\" content=\"ie=edge\">\n  <title>Сервис Хабр Фриланс закрылся навсегда</title>\n  <style>\n      html,\n      body {\n          margin: 0;\n          padding: 0;\n      }\n\n      body {\n          box-sizing: border-box;\n          color: #464646;\n          font-size: 16p"
+  }
+}

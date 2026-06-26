@@ -1,0 +1,29 @@
+{
+  "topBanner": {
+    "closable": true,
+    "closeTimeout": 259200,
+    "id": "warning/landing-entrypoint-ios",
+    "page": "catalog",
+    "pageType": "catalog",
+    "payload": {
+      "action": {
+        "title": "Подробнее",
+        "uri": "https://avito.ru/apps?utm_source=avito_banner&utm_medium=referral&utm_campaign=avito_banner"
+      },
+      "background": "#000000",
+      "image": {
+        "160x160": "https://www.avito.st/s/app/i/snippets/common/stores_entrypoint.png"
+      },
+      "text": "Как дальше пользоваться Авито на iOS."
+    },
+    "position": "top"
+  },
+  "buyerLocationProps": {
+    "pathname": "/all/vakansii",
+    "query": {
+      "s": "104"
+    },
+    "user": null,
+    "isBot": false
+  }
+}

@@ -1,0 +1,67 @@
+[
+  {
+    "label": "all_vakansii_sort_date",
+    "url": "https://www.avito.ru/all/vakansii?s=104",
+    "status": 200,
+    "items_on_page": 50,
+    "total_count": 2673930,
+    "timestamps": [
+      "1781801263000",
+      "1781801262000",
+      "1781801256000"
+    ],
+    "first_item_ids": [
+      "8195307158",
+      "8149732893",
+      "8225850610",
+      "8225440163",
+      "8224899853"
+    ]
+  },
+  {
+    "label": "all_vakansii_page2",
+    "url": "https://www.avito.ru/all/vakansii?s=104&p=2",
+    "status": 200,
+    "items_on_page": 50,
+    "total_count": 2673446,
+    "timestamps": [
+      "1781801129000",
+      "1781801127000",
+      "1781801112000"
+    ],
+    "first_item_ids": [
+      "8217252338",
+      "8225094928",
+      "8225492676",
+      "8224872566",
+      "8201780127"
+    ]
+  },
+  {
+    "label": "spb_vakansii_sort_date",
+    "url": "https://www.avito.ru/sankpeterburg/vakansii?s=104",
+    "status": 404,
+    "items_on_page": 0,
+    "total_count": null,
+    "timestamps": [],
+    "first_item_ids": []
+  },
+  {
+    "label": "all_vakansii_q_python",
+    "url": "https://www.avito.ru/all/vakansii?q=python&s=104",
+    "status": 200,
+    "items_on_page": 0,
+    "total_count": null,
+    "timestamps": [],
+    "first_item_ids": []
+  },
+  {
+    "label": "spb_it_vakansii",
+    "url": "https://www.avito.ru/sankpeterburg/vakansii/informacionnye_tehnologii_-_internet_-_telecom-ASgBAgICAUSwCQ?s=104",
+    "status": 404,
+    "items_on_page": 0,
+    "total_count": null,
+    "timestamps": [],
+    "first_item_ids": []
+  }
+]

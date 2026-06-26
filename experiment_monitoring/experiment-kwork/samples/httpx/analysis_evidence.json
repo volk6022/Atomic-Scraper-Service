@@ -1,0 +1,217 @@
+{
+  "projects_page": {
+    "status": 200,
+    "server": "QRATOR",
+    "html_length": 247417,
+    "analysis": {
+      "project_id_count": 0,
+      "sample_project_ids": [],
+      "want_id_count": 0,
+      "sample_want_ids": [],
+      "titles_found": [
+        "не чаще, чем раз в час",
+        "не чаще, чем раз в 3 часа",
+        "не чаще, чем раз в 12 часов",
+        "не чаще, чем раз в 24 часа",
+        "не чаще, чем раз в 7 дней",
+        "не присылать уведомления",
+        "SEO и трафик",
+        "SEO аудиты, консультации",
+        "Внутренняя оптимизация",
+        "Продвижение сайта в топ"
+      ],
+      "prices_found": [],
+      "category_ids": [
+        "35",
+        "43",
+        "79",
+        "80",
+        "108",
+        "59",
+        "46",
+        "63",
+        "306",
+        "265",
+        "112",
+        "49",
+        "37",
+        "72",
+        "250",
+        "23",
+        "76",
+        "286",
+        "65",
+        "74"
+      ],
+      "category_name_hints": [
+        "Машинное обучение"
+      ],
+      "page_param_in_html": true,
+      "pagination_element": false,
+      "window_globals": [
+        "window.config",
+        "window.billSettings",
+        "window.translations",
+        "window.sellerLevelSettings",
+        "window.minVideoResolution",
+        "window.stateData",
+        "window.firebaseConfig",
+        "window.YandexRotorSettings"
+      ],
+      "wants_data_blob": false,
+      "inline_json_projects": [
+        {
+          "id": "1",
+          "name": "От 5 до 10"
+        },
+        {
+          "id": "2",
+          "name": "От 10 до 15"
+        },
+        {
+          "id": "3",
+          "name": "От 15 до 20"
+        },
+        {
+          "id": "4",
+          "name": "От 20"
+        },
+        {
+          "id": "0",
+          "name": "До 1 000 <span class=\\"
+        },
+        {
+          "id": "1",
+          "name": "От 1 000 <span class=\\"
+        },
+        {
+          "id": "2",
+          "name": "От 3 000 <span class=\\"
+        },
+        {
+          "id": "3",
+          "name": "От 10 000 <span class=\\"
+        },
+        {
+          "id": "4",
+          "name": "От 30 000 <span class=\\"
+        },
+        {
+          "id": "1",
+          "name": "От 5 до 10"
+        }
+      ],
+      "api_urls_in_js": [],
+      "script_count": 33
+    }
+  },
+  "card_probe": {
+    "url": "https://kwork.ru/projects/3016173/view",
+    "id": "3016173",
+    "status": 404,
+    "html_length": 50985,
+    "login_gate": false,
+    "h1_text": "",
+    "cf_turnstile": false,
+    "analysis": {
+      "project_id_count": 0,
+      "sample_project_ids": [],
+      "want_id_count": 0,
+      "sample_want_ids": [],
+      "titles_found": [
+        "Логотип и брендинг",
+        "Фирменный стиль",
+        "Брендирование и сувенирка",
+        "Презентации и инфографика",
+        "Презентации",
+        "Инфографика",
+        "Карта и схема",
+        "Арт и иллюстрации",
+        "Портрет, шарж, карикатура",
+        "Иллюстрации и рисунки"
+      ],
+      "prices_found": [],
+      "category_ids": [],
+      "category_name_hints": [
+        "Машинное обучение"
+      ],
+      "page_param_in_html": false,
+      "pagination_element": false,
+      "window_globals": [
+        "window.translations",
+        "window.config",
+        "window.translations",
+        "window.stateData"
+      ],
+      "wants_data_blob": false,
+      "inline_json_projects": [],
+      "api_urls_in_js": [],
+      "script_count": 22
+    }
+  },
+  "page2_probe": {
+    "status": 200,
+    "final_url": "https://kwork.ru/projects?page=2",
+    "html_length": 265761,
+    "project_ids": [],
+    "different_from_page1": false
+  },
+  "xhr_candidates": [
+    {
+      "method": "GET",
+      "url": "https://kwork.ru/api/projects",
+      "status": 404,
+      "is_json": true,
+      "content_type": "application/json",
+      "body_preview": "\"\\u0421\\u0442\\u0440\\u0430\\u043d\\u0438\\u0446\\u0430 \\u043d\\u0435 \\u043d\\u0430\\u0439\\u0434\\u0435\\u043d\\u0430\""
+    },
+    {
+      "method": "POST",
+      "url": "https://kwork.ru/api/projects",
+      "status": 404,
+      "is_json": true,
+      "content_type": "application/json",
+      "body_preview": "\"\\u0421\\u0442\\u0440\\u0430\\u043d\\u0438\\u0446\\u0430 \\u043d\\u0435 \\u043d\\u0430\\u0439\\u0434\\u0435\\u043d\\u0430\""
+    },
+    {
+      "method": "GET",
+      "url": "https://kwork.ru/api/projects/list",
+      "status": 404,
+      "is_json": true,
+      "content_type": "application/json",
+      "body_preview": "\"\\u0421\\u0442\\u0440\\u0430\\u043d\\u0438\\u0446\\u0430 \\u043d\\u0435 \\u043d\\u0430\\u0439\\u0434\\u0435\\u043d\\u0430\""
+    },
+    {
+      "method": "GET",
+      "url": "https://kwork.ru/projects/list",
+      "status": 404,
+      "is_json": true,
+      "content_type": "application/json",
+      "body_preview": "\"\\u0421\\u0442\\u0440\\u0430\\u043d\\u0438\\u0446\\u0430 \\u043d\\u0435 \\u043d\\u0430\\u0439\\u0434\\u0435\\u043d\\u0430\""
+    },
+    {
+      "method": "POST",
+      "url": "https://kwork.ru/projects",
+      "status": 200,
+      "is_json": true,
+      "content_type": "application/json",
+      "body_preview": "{\"success\":true,\"data\":{\"wants_20891_data\":[],\"pagination\":{\"current_page\":1,\"data\":[{\"userAlreadyWork\":null,\"dateView\":null,\"id\":3200484,\"status\":\"active\",\"wantDates\":{\"dateCreate\":\"18 \\u0438\\u044e\\u043d\\u044f\",\"dateActive\":\"18 \\u0438\\u044e\\u043d\\u044f\",\"dateExpire\":\"19 \\u0438\\u044e\\u043d\\u044f\",\"d"
+    },
+    {
+      "method": "GET",
+      "url": "https://kwork.ru/api/offer/want-list",
+      "status": 404,
+      "is_json": true,
+      "content_type": "application/json",
+      "body_preview": "\"\\u0421\\u0442\\u0440\\u0430\\u043d\\u0438\\u0446\\u0430 \\u043d\\u0435 \\u043d\\u0430\\u0439\\u0434\\u0435\\u043d\\u0430\""
+    },
+    {
+      "method": "GET",
+      "url": "https://kwork.ru/api/want/list",
+      "status": 404,
+      "is_json": true,
+      "content_type": "application/json",
+      "body_preview": "\"\\u0421\\u0442\\u0440\\u0430\\u043d\\u0438\\u0446\\u0430 \\u043d\\u0435 \\u043d\\u0430\\u0439\\u0434\\u0435\\u043d\\u0430\""
+    }
+  ]
+}

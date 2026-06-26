@@ -1,0 +1,128 @@
+{
+  "response": {
+    "queries": [
+      {
+        "id": 1,
+        "name": "Свежие вакансии",
+        "short_name": "",
+        "vacancy_count": 8960
+      },
+      {
+        "id": 4533,
+        "name": "Популярные запросы",
+        "short_name": "Популярное",
+        "vacancy_count": 7000
+      },
+      {
+        "id": 4690,
+        "name": "Работа для квалифицированных специалистов",
+        "short_name": "Работа для квалифицированных специалистов",
+        "vacancy_count": 6703
+      },
+      {
+        "id": 4692,
+        "name": "Срочная",
+        "short_name": "",
+        "vacancy_count": 5419
+      },
+      {
+        "id": 4692,
+        "name": "Быстрая работа",
+        "short_name": "",
+        "vacancy_count": 5419
+      },
+      {
+        "id": 4692,
+        "name": "Срочная работа",
+        "short_name": "",
+        "vacancy_count": 5419
+      },
+      {
+        "id": 4692,
+        "name": "Срочные вакансии",
+        "short_name": "",
+        "vacancy_count": 5419
+      },
+      {
+        "id": 4692,
+        "name": "Быстрый поиск работы",
+        "short_name": "",
+        "vacancy_count": 5419
+      },
+      {
+        "id": 4692,
+        "name": "Срочный поиск работы",
+        "short_name": "Срочный поиск работы",
+        "vacancy_count": 5419
+      },
+      {
+        "id": 3869,
+        "name": "Работа для женщин",
+        "short_name": "",
+        "vacancy_count": 4304
+      },
+      {
+        "id": 3869,
+        "name": "Работа для девушек",
+        "short_name": "",
+        "vacancy_count": 4304
+      },
+      {
+        "id": 4748,
+        "name": "Работа без образования",
+        "short_name": "без образования",
+        "vacancy_count": 4039
+      },
+      {
+        "id": 4749,
+        "name": "Работа на неполный рабочий день",
+        "short_name": "неполный день",
+        "vacancy_count": 3019
+      },
+      {
+        "id": 3278,
+        "name": "Подработка для студентов",
+        "short_name": "подработка",
+        "vacancy_count": 2783
+      },
+      {
+        "id": 4614,
+        "name": "Работа для студентов",
+        "short_name": "Работа для студентов",
+        "vacancy_count": 2557
+      },
+      {
+        "id": 4492,
+        "name": "Работа без опыта",
+        "short_name": "без опыта",
+        "vacancy_count": 2465
+      },
+      {
+        "id": 4492,
+        "name": "Работа без навыков",
+        "short_name": "",
+        "vacancy_count": 2465
+      },
+      {
+        "id": 4695,
+        "name": "Работа для пенсионеров",
+        "short_name": "",
+        "vacancy_count": 2211
+      },
+      {
+        "id": 4695,
+        "name": "Работа для военных пенсионеров",
+        "short_name": "",
+        "vacancy_count": 2211
+      },
+      {
+        "id": 3266,
+        "name": "Работа в торговле",
+        "short_name": "Работа в сфере торговли",
+        "vacancy_count": 1924
+      }
+    ],
+    "total": 20
+  },
+  "request_id": 1781813973754
+}

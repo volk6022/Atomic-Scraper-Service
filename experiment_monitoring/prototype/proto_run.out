@@ -1,0 +1,92 @@
+
+============================================================
+  RUN 1  |  2026-06-19T09:33:50+00:00
+============================================================
+  [hh        ] OK   25 items  (23.7s)
+  [avito     ] OK   30 items  (0.9s)
+  [superjob  ] OK   25 items  (1.6s)
+  [habr      ] OK   25 items  (0.4s)
+  [zarplata  ] OK   30 items  (1.6s)
+  [fl        ] OK   50 items  (0.6s)
+  [kwork     ] OK   24 items  (0.4s)
+  [youdo     ] OK   50 items  (0.2s)
+
+  Saved: run_1_20260619T093419Z.json
+
+  Sleeping 900s before run 2...
+
+============================================================
+  RUN 2  |  2026-06-19T09:49:19+00:00
+============================================================
+  [hh        ] OK   25 items  (30.5s)
+  [avito     ] OK   30 items  (1.0s)
+  [superjob  ] OK   25 items  (3.0s)
+  [habr      ] OK   25 items  (0.5s)
+  [zarplata  ] OK   30 items  (1.4s)
+  [fl        ] OK   50 items  (1.2s)
+  [kwork     ] OK   24 items  (0.4s)
+  [youdo     ] OK   50 items  (0.2s)
+
+  Saved: run_2_20260619T094957Z.json
+
+  Sleeping 900s before run 3...
+
+============================================================
+  RUN 3  |  2026-06-19T10:04:57+00:00
+============================================================
+  [hh        ] OK   25 items  (12.7s)
+  [avito     ] OK   30 items  (1.0s)
+  [superjob  ] OK   25 items  (3.7s)
+  [habr      ] OK   25 items  (0.5s)
+  [zarplata  ] OK   30 items  (1.0s)
+  [fl        ] OK   50 items  (0.5s)
+  [kwork     ] OK   24 items  (0.6s)
+  [youdo     ] OK   50 items  (0.2s)
+
+  Saved: run_3_20260619T100517Z.json
+
+  Sleeping 900s before run 4...
+
+============================================================
+  RUN 4  |  2026-06-19T10:20:17+00:00
+============================================================
+  [hh        ] OK   25 items  (17.1s)
+  [avito     ] OK   30 items  (0.8s)
+  [superjob  ] OK   25 items  (1.6s)
+  [habr      ] OK   25 items  (0.5s)
+  [zarplata  ] OK   30 items  (1.0s)
+  [fl        ] OK   50 items  (0.4s)
+  [kwork     ] OK   24 items  (0.6s)
+  [youdo     ] OK   50 items  (0.2s)
+
+  Saved: run_4_20260619T102039Z.json
+
+============================================================
+  E2E DETAIL PASS  |  2026-06-19T10:20:40+00:00
+============================================================
+  [hh        ] detail OK  id=132766519  title='ML- аналитик'
+  [hh        ] detail OK  id=133476906  title='Senior Machine Learning Engineer в команду Giga Ed'
+  [hh        ] detail OK  id=134369845  title='Python Developer AI team (в офис, г. Йошкар-Ола)'
+  [avito     ] detail OK  id=8156973668  title='Кибервожатый в детский агролагерь (подработка)'
+  [avito     ] detail OK  id=8157785785  title='Педагог по программированию в агролагерь,подработк'
+  [avito     ] detail OK  id=8112001174  title='Python Junior Сценарист/разработчик'
+  [superjob  ] detail OK  id=51698105  title='Системный администратор ЦОД (Linux/Windows)'
+  [superjob  ] detail OK  id=51698092  title='Системный администратор ЦОД'
+  [superjob  ] detail OK  id=51697637  title='Системный администратор'
+  [habr      ] detail OK  id=1000166593  title='Портфельный менеджер'
+  [habr      ] detail OK  id=1000166594  title='Маркетинговый аналитик'
+  [habr      ] detail OK  id=1000164847  title='Сетевой инженер'
+  [zarplata  ] detail OK  id=133758854  title='Администратор розничной сети'
+  [zarplata  ] detail OK  id=134144585  title='Оператор на АЗС (ул. Десантников 21)'
+  [zarplata  ] detail OK  id=134162056  title='Специалист по ведению базы данных'
+  [fl        ] detail OK  id=5510270  title='UI/UX редизайн главной страницы и элементов B2B Sa'
+  [fl        ] detail OK  id=5510269  title='Нужно создать сайт.'
+  [fl        ] detail OK  id=5510268  title='Разработка ЛК партнёрской программы'
+  [kwork     ] detail OK  id=3200802  title='Telegram-бота для выдачи лид-магнита, лидов CRM'
+  [kwork     ] detail OK  id=3168590  title='Доработать ивайтера в группы MAX (управление из тг'
+  [kwork     ] detail OK  id=3200759  title='Разработка ИИ агента и ТГ бота'
+  [youdo     ] detail OK  id=14872215  title='Создание сайта'
+  [youdo     ] detail OK  id=14872209  title='Массовая рассылка письма на 10 000 адресов'
+  [youdo     ] detail OK  id=14872183  title='Собрать на Claude страницу учета доходов-расходов'
+
+  Saved: e2e_details_20260619T102142Z.json

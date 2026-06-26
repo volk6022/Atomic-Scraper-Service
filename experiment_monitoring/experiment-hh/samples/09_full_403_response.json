@@ -1,0 +1,32 @@
+{
+  "status": 403,
+  "body": {
+    "errors": [
+      {
+        "type": "forbidden"
+      }
+    ],
+    "request_id": "178171185902642db13c8d619e83b001"
+  },
+  "headers": {
+    "server": "ddos-guard",
+    "connection": "keep-alive",
+    "keep-alive": "timeout=60",
+    "set-cookie": "__ddg8_=2wjLPO8xAWpJe9Y1; Domain=.hh.ru; Path=/; Expires=Wed, 17-Jun-2026 16:17:39 GMT, __ddg10_=1781711859; Domain=.hh.ru; Path=/; Expires=Wed, 17-Jun-2026 16:17:39 GMT, __ddg9_=178.252.127.202; Domain=.hh.ru; Path=/; Expires=Wed, 17-Jun-2026 16:17:39 GMT, __ddg1_=vR8KB2g0iEUXdmETe8qJ; Domain=.hh.ru; HttpOnly; Path=/; Expires=Thu, 17-Jun-2027 15:57:39 GMT",
+    "date": "Wed, 17 Jun 2026 15:57:39 GMT",
+    "content-type": "application/json; charset=UTF-8",
+    "content-length": "81",
+    "x-request-id": "178171185902642db13c8d619e83b001, 178171185902642db13c8d619e83b001",
+    "access-control-allow-origin": "*",
+    "access-control-expose-headers": "Location, ETag, Date, Expires, Cache-Control, Content-Type, X-Request-ID",
+    "cache-control": "no-cache",
+    "pragma": "no-cache",
+    "server-timing": "frontik;desc=\"frontik execution time\";dur=0.007108211517333984",
+    "report-to": "{\"group\":\"nel\",\"endpoints\":[{\"url\":\"https:\\/\\/nel.hhdev.ru\\/report\\/api\"}],\"max_age\":3600}, {\"group\":\"csp-endpoint\",\"max_age\":3600,\"endpoints\":[{\"url\":\"https:\\/\\/nel.hhdev.ru\\/report\\/api\"}]}",
+    "nel": "{\"success_fraction\":0,\"report_to\":\"nel\",\"max_age\":3600}",
+    "strict-transport-security": "max-age=31536000; includeSubDomains",
+    "x-frame-options": "SAMEORIGIN",
+    "x-content-type-options": "nosniff"
+  },
+  "proxy": "direct"
+}
