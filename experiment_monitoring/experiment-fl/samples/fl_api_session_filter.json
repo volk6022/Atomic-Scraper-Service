@@ -1,0 +1,28 @@
+{
+  "active": true,
+  "professions": [],
+  "prof_groups": [],
+  "cost_min": {
+    "amount": 0,
+    "currency": "RUB"
+  },
+  "cost_max": {
+    "amount": 0,
+    "currency": "RUB"
+  },
+  "without_cost": true,
+  "keywords": [],
+  "safe_deal": false,
+  "pro": true,
+  "verified": null,
+  "urgent": false,
+  "without_executor": false,
+  "without_pro": false,
+  "country_id": 0,
+  "city_id": 0,
+  "my_specs": false,
+  "less_offers": false,
+  "pro_only": true,
+  "konkurs_end_days_from": null,
+  "konkurs_end_days_to": null
+}

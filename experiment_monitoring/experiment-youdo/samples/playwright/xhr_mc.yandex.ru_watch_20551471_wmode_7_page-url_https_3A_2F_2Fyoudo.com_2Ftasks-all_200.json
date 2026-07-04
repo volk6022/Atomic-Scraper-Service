@@ -1,0 +1,35 @@
+{
+  "url": "https://mc.yandex.ru/watch/20551471?wmode=7&page-url=https%3A%2F%2Fyoudo.com%2Ftasks-all-opened-all&charset=utf-8&uah=che%0A0&browser-info=pv%3A1%3Avf%3Apupr1nz2snmtoqrshzj5yg66c90wv%3Afu%3A0%3Aen%3Autf-8%3Ala%3Aru-RU%3Av%3A2550%3Acn%3A1%3Adp%3A0%3Als%3A197094315251%3Ahid%3A730219044%3Az%3A180%3Ai%3A20260618223208%3Aet%3A1781811129%3Ac%3A1%3Arn%3A829146009%3Arqn%3A4%3Au%3A178181111742107325%3Aw%3A1366x768%3As%3A1366x768x24%3Ask%3A1%3Afp%3A448%3Awv%3A2%3Ads%3A0%2C0%2C274%2C17%2C91%2C91%2C1%2C4%2C0%2C%2C%2C%2C594%3Aco%3A0%3Acpf%3A1%3Antf%3A1%3Ans%3A1781811128094%3Aadb%3A2%3Arqnl%3A1%3Ast%3A1781811129%3At%3A%D0%92%D1%81%D0%B5%20%D0%B7%D0%B0%D0%B4%D0%B0%D0%BD%D0%B8%D1%8F%20%D0%BD%D0%B0%20%D1%81%D0%B5%D1%80%D0%B2%D0%B8%D1%81%D0%B5%20YouDo%20%D0%BE%D1%82%20%D0%B7%D0%B0%D0%BA%D0%B0%D0%B7%D1%87%D0%B8%D0%BA%D0%BE%D0%B2&t=clt(212)gdpr(14)clc(0-0-0)rqnt(1)aw(1)rcm(0)cdl(na)eco(42010116)ti(1)",
+  "status": 200,
+  "body": {
+    "settings": {
+      "auto_goals": 1,
+      "button_goals": 0,
+      "c_recp": "1.00000",
+      "form_goals": 1,
+      "pcs": "1",
+      "webvisor": {
+        "ad_recp": "1.00000",
+        "arch_type": "html",
+        "date": "2026-06-15 15:48:03",
+        "forms": 1,
+        "recp": "1.00000",
+        "urls": "regexp:.*"
+      },
+      "sbp": {
+        "a": "r95yXa+aF3X/XY27Wh8MNSF7dnRNHbBd3+C+RuJzeJetlO4MgQjSPeX+/V2xaCCa",
+        "b": "BumbnIz+pdJe2sHeQOzZa9+oVybAsXpZ792wsQ1JW+ttZNQGay1shGLirc2qWqns"
+      },
+      "eu": 0,
+      "hittoken": "1781811129_f11034944773ef5b1238f80ba9f097ca6cc6ab764ecd91d0e918522d9a326816",
+      "oauth": 1,
+      "wstoken": "11066._Om-1x8IusCE9fn62eECH5XToIHB3d7bPlTJ4qCR24DW5KWLyB6BXWwUAW7FLKV8R_oQ7Wk9MN2tdsO3olmKjw,,.tK3mA-rcDNge-Rr4FDAd0K1t_fA,",
+      "ev": {
+        "pvt": 1781811129
+      },
+      "hidv2": "3393173338965934161",
+      "ymclid": "3393173338965934161"
+    },
+    "userData": {}
+  }
+}

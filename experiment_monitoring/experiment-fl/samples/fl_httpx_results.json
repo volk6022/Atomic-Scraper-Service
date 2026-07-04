@@ -1,0 +1,335 @@
+{
+  "projects_listing": {
+    "url": "https://www.fl.ru/projects/",
+    "direct": {
+      "via": "direct",
+      "status": 200,
+      "content_length": 331553,
+      "anti_bot": {
+        "server": "ddos-guard",
+        "via": "",
+        "cf_ray": "",
+        "cf_cache_status": "",
+        "x_ddos_guard": "",
+        "x_ddos_protection": "",
+        "__ddg1_": "",
+        "__ddg2_": "",
+        "set_cookie_ddg": true,
+        "set_cookie_cf": false,
+        "x_request_id": "",
+        "ddos_guard_in_body": false,
+        "cloudflare_in_body": false,
+        "js_challenge_in_body": false,
+        "project_list_in_body": true,
+        "has_react_root": false,
+        "verdict": "DDOS-GUARD"
+      },
+      "body_snippet": "<!DOCTYPE html>\n<html xmlns=\"http://www.w3.org/1999/xhtml\">\n<head>\n    <meta charset=\"utf-8\" />\n    <meta content=\"initial-scale=1, width=device-width, user-scalable=no\" name=\"viewport\" />\n\n    \n    <meta name=\"csrf-token\" content=\"qRPLrODuNzLB1UgedSvrMS9sC406GiWDZ8bk09fq\" />\n    <meta name=\"current-uid\" content=\"0\" />\n    <meta name=\"recaptcha-site-key\" content=\"ysc1_SR7fE9d21qNQcPBQxYPPvobD8aQvZ"
+    },
+    "proxy": {
+      "via": "proxy",
+      "status": 200,
+      "content_length": 331553,
+      "anti_bot": {
+        "server": "ddos-guard",
+        "via": "",
+        "cf_ray": "",
+        "cf_cache_status": "",
+        "x_ddos_guard": "",
+        "x_ddos_protection": "",
+        "__ddg1_": "",
+        "__ddg2_": "",
+        "set_cookie_ddg": true,
+        "set_cookie_cf": false,
+        "x_request_id": "",
+        "ddos_guard_in_body": false,
+        "cloudflare_in_body": false,
+        "js_challenge_in_body": false,
+        "project_list_in_body": true,
+        "has_react_root": false,
+        "verdict": "DDOS-GUARD"
+      },
+      "sample_titles": [
+        "\n                    ",
+        "\n                ",
+        "\n                "
+      ],
+      "body_snippet": "<!DOCTYPE html>\n<html xmlns=\"http://www.w3.org/1999/xhtml\">\n<head>\n    <meta charset=\"utf-8\" />\n    <meta content=\"initial-scale=1, width=device-width, user-scalable=no\" name=\"viewport\" />\n\n    \n    <meta name=\"csrf-token\" content=\"9wIn6ANslx69pFwrre56iP0jlwWVG9vdIXi5gwSc\" />\n    <meta name=\"current-uid\" content=\"0\" />\n    <meta name=\"recaptcha-site-key\" content=\"ysc1_SR7fE9d21qNQcPBQxYPPvobD8aQvZvXwk5oZStqE728bbba5\" />\n    <meta name=\"site-url\" content=\"https://www.fl.ru\" />\n    <meta name=\"svg-sprite\" content=\"https://st.fl.ru/assets/icons.fb17db605c359621352740dfd77a403c.svg\" />\n            \n<meta name=\"description\" lang=\"ru\" content=\"Работа для фрилансеров в интернете онлайн ✅ Удаленная проектная работа на дому и заказы на фриланс ✅ Поиск работы на сайте для начинающих и профессионалов"
+    }
+  },
+  "projects_python": {
+    "url": "https://www.fl.ru/projects/category/programmirovanie/python/",
+    "direct": {
+      "via": "direct",
+      "status": 200,
+      "content_length": 300759,
+      "anti_bot": {
+        "server": "ddos-guard",
+        "via": "",
+        "cf_ray": "",
+        "cf_cache_status": "",
+        "x_ddos_guard": "",
+        "x_ddos_protection": "",
+        "__ddg1_": "",
+        "__ddg2_": "",
+        "set_cookie_ddg": true,
+        "set_cookie_cf": false,
+        "x_request_id": "",
+        "ddos_guard_in_body": false,
+        "cloudflare_in_body": false,
+        "js_challenge_in_body": false,
+        "project_list_in_body": true,
+        "has_react_root": false,
+        "verdict": "DDOS-GUARD"
+      },
+      "body_snippet": "<!DOCTYPE html>\n<html xmlns=\"http://www.w3.org/1999/xhtml\">\n<head>\n    <meta charset=\"utf-8\" />\n    <meta content=\"initial-scale=1, width=device-width, user-scalable=no\" name=\"viewport\" />\n\n    \n    <meta name=\"csrf-token\" content=\"67K5Yi5JTC371ONZKWspOHo3KolxoD7Hf4z9ZMVI\" />\n    <meta name=\"current-uid\" content=\"0\" />\n    <meta name=\"recaptcha-site-key\" content=\"ysc1_SR7fE9d21qNQcPBQxYPPvobD8aQvZ"
+    },
+    "proxy": {
+      "via": "proxy",
+      "status": 200,
+      "content_length": 300759,
+      "anti_bot": {
+        "server": "ddos-guard",
+        "via": "",
+        "cf_ray": "",
+        "cf_cache_status": "",
+        "x_ddos_guard": "",
+        "x_ddos_protection": "",
+        "__ddg1_": "",
+        "__ddg2_": "",
+        "set_cookie_ddg": true,
+        "set_cookie_cf": false,
+        "x_request_id": "",
+        "ddos_guard_in_body": false,
+        "cloudflare_in_body": false,
+        "js_challenge_in_body": false,
+        "project_list_in_body": true,
+        "has_react_root": false,
+        "verdict": "DDOS-GUARD"
+      },
+      "sample_titles": [
+        "\n                    ",
+        "\n                ",
+        "\n                "
+      ],
+      "body_snippet": "<!DOCTYPE html>\n<html xmlns=\"http://www.w3.org/1999/xhtml\">\n<head>\n    <meta charset=\"utf-8\" />\n    <meta content=\"initial-scale=1, width=device-width, user-scalable=no\" name=\"viewport\" />\n\n    \n    <meta name=\"csrf-token\" content=\"ARaNA9uxlfFTfWLkJOHsUGH8baSXDPOJLeTeAzzV\" />\n    <meta name=\"current-uid\" content=\"0\" />\n    <meta name=\"recaptcha-site-key\" content=\"ysc1_SR7fE9d21qNQcPBQxYPPvobD8aQvZvXwk5oZStqE728bbba5\" />\n    <meta name=\"site-url\" content=\"https://www.fl.ru\" />\n    <meta name=\"svg-sprite\" content=\"https://st.fl.ru/assets/icons.fb17db605c359621352740dfd77a403c.svg\" />\n            \n<meta name=\"description\" lang=\"ru\" content=\"\" />\n<meta name=\"cmsmagazine\" content=\"85293268c28a6790c0611c744d47631b\" />    <meta name='yandex-verification' content='408722b52391250b' />\n    <meta na"
+    }
+  },
+  "robots_txt": {
+    "url": "https://www.fl.ru/robots.txt",
+    "direct": {
+      "via": "direct",
+      "status": 200,
+      "content_length": 6563,
+      "anti_bot": {
+        "server": "ddos-guard",
+        "via": "",
+        "cf_ray": "",
+        "cf_cache_status": "",
+        "x_ddos_guard": "",
+        "x_ddos_protection": "",
+        "__ddg1_": "",
+        "__ddg2_": "",
+        "set_cookie_ddg": true,
+        "set_cookie_cf": false,
+        "x_request_id": "",
+        "ddos_guard_in_body": false,
+        "cloudflare_in_body": false,
+        "js_challenge_in_body": false,
+        "project_list_in_body": true,
+        "has_react_root": false,
+        "verdict": "DDOS-GUARD"
+      },
+      "body_snippet": "User-agent: Yandex\nDisallow: /login/\nDisallow: /registration/\nDisallow: /remind/\nDisallow: /search/\nDisallow: /webim\nDisallow: /xajax\nDisallow: /*?ord=\nDisallow: /projects/upload/\nDisallow: /*?from\nDisallow: /*&ord\nDisallow: /*?kind\nDisallow: /*?open=\nDisallow: /*?closed=\nDisallow: /*?user=\nDisallow: /*?order=\nDisallow: /*?om=\nDisallow: /fbd.php\nDisallow: /public/\nDisallow: /*?word=\nDisallow: /*&s"
+    },
+    "proxy": {
+      "via": "proxy",
+      "status": 200,
+      "content_length": 6563,
+      "anti_bot": {
+        "server": "ddos-guard",
+        "via": "",
+        "cf_ray": "",
+        "cf_cache_status": "",
+        "x_ddos_guard": "",
+        "x_ddos_protection": "",
+        "__ddg1_": "",
+        "__ddg2_": "",
+        "set_cookie_ddg": true,
+        "set_cookie_cf": false,
+        "x_request_id": "",
+        "ddos_guard_in_body": false,
+        "cloudflare_in_body": false,
+        "js_challenge_in_body": false,
+        "project_list_in_body": true,
+        "has_react_root": false,
+        "verdict": "DDOS-GUARD"
+      },
+      "sample_titles": [],
+      "body_snippet": "User-agent: Yandex\nDisallow: /login/\nDisallow: /registration/\nDisallow: /remind/\nDisallow: /search/\nDisallow: /webim\nDisallow: /xajax\nDisallow: /*?ord=\nDisallow: /projects/upload/\nDisallow: /*?from\nDisallow: /*&ord\nDisallow: /*?kind\nDisallow: /*?open=\nDisallow: /*?closed=\nDisallow: /*?user=\nDisallow: /*?order=\nDisallow: /*?om=\nDisallow: /fbd.php\nDisallow: /public/\nDisallow: /*?word=\nDisallow: /*&sort=\nDisallow: /proonly.php\nDisallow: /login.php\nDisallow: /&b=\nDisallow: /a.php\nDisallow: /*?tag=\nDisallow: */rss/*\nDisallow: /*?keywords\nDisallow: *?mode*\nDisallow: *?pid=\nDisallow: *?sort\nDisallow: *?action\nDisallow: /new-personal-order/\nDisallow: /guest/new/personal-order/\nDisallow: /catalog*\nDisallow: /account/registration/\nDisallow: /account/login/\nDisallow: /b2b/ydirect/\nDisallow: /task/*?G"
+    }
+  },
+  "projects_ai": {
+    "url": "https://www.fl.ru/projects/category/ai-iskusstvenniy-intellekt/",
+    "proxy": {
+      "via": "proxy",
+      "status": 200,
+      "content_length": 332284,
+      "anti_bot": {
+        "server": "ddos-guard",
+        "via": "",
+        "cf_ray": "",
+        "cf_cache_status": "",
+        "x_ddos_guard": "",
+        "x_ddos_protection": "",
+        "__ddg1_": "",
+        "__ddg2_": "",
+        "set_cookie_ddg": true,
+        "set_cookie_cf": false,
+        "x_request_id": "",
+        "ddos_guard_in_body": false,
+        "cloudflare_in_body": false,
+        "js_challenge_in_body": false,
+        "project_list_in_body": true,
+        "has_react_root": false,
+        "verdict": "DDOS-GUARD"
+      },
+      "sample_titles": [
+        "\n                    ",
+        "\n                ",
+        "\n                "
+      ],
+      "body_snippet": "<!DOCTYPE html>\n<html xmlns=\"http://www.w3.org/1999/xhtml\">\n<head>\n    <meta charset=\"utf-8\" />\n    <meta content=\"initial-scale=1, width=device-width, user-scalable=no\" name=\"viewport\" />\n\n    \n    <meta name=\"csrf-token\" content=\"hZN8tJOUFquE8GSbghROjy8mHpRSlek1fmR0H7tl\" />\n    <meta name=\"current-uid\" content=\"0\" />\n    <meta name=\"recaptcha-site-key\" content=\"ysc1_SR7fE9d21qNQcPBQxYPPvobD8aQvZvXwk5oZStqE728bbba5\" />\n    <meta name=\"site-url\" content=\"https://www.fl.ru\" />\n    <meta name=\"svg-sprite\" content=\"https://st.fl.ru/assets/icons.fb17db605c359621352740dfd77a403c.svg\" />\n            \n<meta name=\"description\" lang=\"ru\" content=\"Поиск работы по решения задач с использованием искусственного интеллекта на бирже фриланса ✅ Высокая оплата ✅ Безопасная сделка✅ Найти работу по решению з"
+    }
+  },
+  "projects_programming": {
+    "url": "https://www.fl.ru/projects/category/programmirovanie/",
+    "proxy": {
+      "via": "proxy",
+      "status": 200,
+      "content_length": 348130,
+      "anti_bot": {
+        "server": "ddos-guard",
+        "via": "",
+        "cf_ray": "",
+        "cf_cache_status": "",
+        "x_ddos_guard": "",
+        "x_ddos_protection": "",
+        "__ddg1_": "",
+        "__ddg2_": "",
+        "set_cookie_ddg": true,
+        "set_cookie_cf": false,
+        "x_request_id": "",
+        "ddos_guard_in_body": false,
+        "cloudflare_in_body": false,
+        "js_challenge_in_body": false,
+        "project_list_in_body": true,
+        "has_react_root": false,
+        "verdict": "DDOS-GUARD"
+      },
+      "sample_titles": [
+        "\n                    ",
+        "\n                ",
+        "\n                "
+      ],
+      "body_snippet": "<!DOCTYPE html>\n<html xmlns=\"http://www.w3.org/1999/xhtml\">\n<head>\n    <meta charset=\"utf-8\" />\n    <meta content=\"initial-scale=1, width=device-width, user-scalable=no\" name=\"viewport\" />\n\n    \n    <meta name=\"csrf-token\" content=\"HusWs4NL2O0euZ7HC9lEECxggJwxBMGXmbpJp7Qe\" />\n    <meta name=\"current-uid\" content=\"0\" />\n    <meta name=\"recaptcha-site-key\" content=\"ysc1_SR7fE9d21qNQcPBQxYPPvobD8aQvZvXwk5oZStqE728bbba5\" />\n    <meta name=\"site-url\" content=\"https://www.fl.ru\" />\n    <meta name=\"svg-sprite\" content=\"https://st.fl.ru/assets/icons.fb17db605c359621352740dfd77a403c.svg\" />\n            \n<meta name=\"description\" lang=\"ru\" content=\"Поиск работы для программистов на дому ✅ Высокая оплата ✅ Безопасная сделка✅ Найти работу по программированию на крупнейшей бирже фриланса\" />\n<meta name="
+    }
+  },
+  "projects_listing_ord_date": {
+    "url": "https://www.fl.ru/projects/?ord=date",
+    "proxy": {
+      "via": "proxy",
+      "status": 200,
+      "content_length": 331575,
+      "anti_bot": {
+        "server": "ddos-guard",
+        "via": "",
+        "cf_ray": "",
+        "cf_cache_status": "",
+        "x_ddos_guard": "",
+        "x_ddos_protection": "",
+        "__ddg1_": "",
+        "__ddg2_": "",
+        "set_cookie_ddg": true,
+        "set_cookie_cf": false,
+        "x_request_id": "",
+        "ddos_guard_in_body": false,
+        "cloudflare_in_body": false,
+        "js_challenge_in_body": false,
+        "project_list_in_body": true,
+        "has_react_root": false,
+        "verdict": "DDOS-GUARD"
+      },
+      "sample_titles": [
+        "\n                    ",
+        "\n                ",
+        "\n                "
+      ],
+      "body_snippet": "<!DOCTYPE html>\n<html xmlns=\"http://www.w3.org/1999/xhtml\">\n<head>\n    <meta charset=\"utf-8\" />\n    <meta content=\"initial-scale=1, width=device-width, user-scalable=no\" name=\"viewport\" />\n\n    \n    <meta name=\"csrf-token\" content=\"PWId29IQGgeJOVi3FsCXULbPoAgHOCkP5UGJmmrT\" />\n    <meta name=\"current-uid\" content=\"0\" />\n    <meta name=\"recaptcha-site-key\" content=\"ysc1_SR7fE9d21qNQcPBQxYPPvobD8aQvZvXwk5oZStqE728bbba5\" />\n    <meta name=\"site-url\" content=\"https://www.fl.ru\" />\n    <meta name=\"svg-sprite\" content=\"https://st.fl.ru/assets/icons.fb17db605c359621352740dfd77a403c.svg\" />\n            \n<meta name=\"description\" lang=\"ru\" content=\"Работа для фрилансеров в интернете онлайн ✅ Удаленная проектная работа на дому и заказы на фриланс ✅ Поиск работы на сайте для начинающих и профессионалов"
+    }
+  },
+  "projects_listing_sort_date": {
+    "url": "https://www.fl.ru/projects/?sort=date",
+    "proxy": {
+      "via": "proxy",
+      "status": 200,
+      "content_length": 331527,
+      "anti_bot": {
+        "server": "ddos-guard",
+        "via": "",
+        "cf_ray": "",
+        "cf_cache_status": "",
+        "x_ddos_guard": "",
+        "x_ddos_protection": "",
+        "__ddg1_": "",
+        "__ddg2_": "",
+        "set_cookie_ddg": true,
+        "set_cookie_cf": false,
+        "x_request_id": "",
+        "ddos_guard_in_body": false,
+        "cloudflare_in_body": false,
+        "js_challenge_in_body": false,
+        "project_list_in_body": true,
+        "has_react_root": false,
+        "verdict": "DDOS-GUARD"
+      },
+      "sample_titles": [
+        "\n                    ",
+        "\n                ",
+        "\n                "
+      ],
+      "body_snippet": "<!DOCTYPE html>\n<html xmlns=\"http://www.w3.org/1999/xhtml\">\n<head>\n    <meta charset=\"utf-8\" />\n    <meta content=\"initial-scale=1, width=device-width, user-scalable=no\" name=\"viewport\" />\n\n    \n    <meta name=\"csrf-token\" content=\"g1kKIP0uMKDzukXMQxrtu2wBkxMD6aszybj0oGMp\" />\n    <meta name=\"current-uid\" content=\"0\" />\n    <meta name=\"recaptcha-site-key\" content=\"ysc1_SR7fE9d21qNQcPBQxYPPvobD8aQvZvXwk5oZStqE728bbba5\" />\n    <meta name=\"site-url\" content=\"https://www.fl.ru\" />\n    <meta name=\"svg-sprite\" content=\"https://st.fl.ru/assets/icons.fb17db605c359621352740dfd77a403c.svg\" />\n            \n<meta name=\"description\" lang=\"ru\" content=\"Работа для фрилансеров в интернете онлайн ✅ Удаленная проектная работа на дому и заказы на фриланс ✅ Поиск работы на сайте для начинающих и профессионалов"
+    }
+  },
+  "project_card_sample": {
+    "url": "https://www.fl.ru/projects/5500352/",
+    "proxy": {
+      "via": "proxy",
+      "status": 200,
+      "content_length": 158495,
+      "anti_bot": {
+        "server": "ddos-guard",
+        "via": "",
+        "cf_ray": "",
+        "cf_cache_status": "",
+        "x_ddos_guard": "",
+        "x_ddos_protection": "",
+        "__ddg1_": "",
+        "__ddg2_": "",
+        "set_cookie_ddg": true,
+        "set_cookie_cf": false,
+        "x_request_id": "",
+        "ddos_guard_in_body": false,
+        "cloudflare_in_body": false,
+        "js_challenge_in_body": false,
+        "project_list_in_body": true,
+        "has_react_root": false,
+        "verdict": "DDOS-GUARD"
+      },
+      "sample_titles": [
+        "\n                        "
+      ],
+      "body_snippet": "<!DOCTYPE html>\n<html xmlns=\"http://www.w3.org/1999/xhtml\">\n<head>\n    <meta charset=\"utf-8\" />\n    <meta content=\"initial-scale=1, width=device-width, user-scalable=no\" name=\"viewport\" />\n\n    \n    <meta name=\"csrf-token\" content=\"oJMRksXz941tEXFCorHXO11WCiRxT4KGgiwXnyTd\" />\n    <meta name=\"current-uid\" content=\"0\" />\n    <meta name=\"recaptcha-site-key\" content=\"ysc1_SR7fE9d21qNQcPBQxYPPvobD8aQvZvXwk5oZStqE728bbba5\" />\n    <meta name=\"site-url\" content=\"https://www.fl.ru\" />\n    <meta name=\"svg-sprite\" content=\"https://st.fl.ru/assets/icons.fb17db605c359621352740dfd77a403c.svg\" />\n            \n<meta name=\"description\" lang=\"ru\" content=\"Карточка: проектная работа на дому в сфере Дизайн / Дизайн для маркетплейсов с бюджетом 3000 руб. Опубликован 15.04.2026 в 14:11.\" />\n<meta property=\"og:t"
+    }
+  }
+}

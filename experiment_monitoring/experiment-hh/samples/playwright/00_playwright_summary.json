@@ -1,0 +1,58 @@
+{
+  "headless_stealth_direct": {
+    "config": "headless_stealth_direct",
+    "headless": true,
+    "proxy": null,
+    "success": true,
+    "page_title": "Работа в Санкт-Петербурге, поиск персонала и публикация вакансий - spb.hh.ru",
+    "html_length": 1173759,
+    "vacancies_extracted": [],
+    "vacancy_count": 0
+  },
+  "headless_stealth_proxy": {
+    "config": "headless_stealth_proxy",
+    "headless": true,
+    "proxy": "http://np.puls-proxy.com:11046",
+    "success": true,
+    "page_title": "Работа в Сочи, поиск персонала и публикация вакансий - sochi.hh.ru",
+    "html_length": 1173061,
+    "vacancies_extracted": [],
+    "vacancy_count": 0
+  },
+  "headed_stealth_direct": {
+    "config": "headed_stealth_direct",
+    "headless": false,
+    "proxy": null,
+    "success": true,
+    "page_title": "Работа в Санкт-Петербурге, поиск персонала и публикация вакансий - spb.hh.ru",
+    "html_length": 1173668,
+    "vacancies_extracted": [],
+    "vacancy_count": 0
+  },
+  "headed_stealth_proxy": {
+    "config": "headed_stealth_proxy",
+    "headless": false,
+    "proxy": "http://np.puls-proxy.com:11046",
+    "success": true,
+    "page_title": "Работа в Сочи, поиск персонала и публикация вакансий - sochi.hh.ru",
+    "html_length": 1170426,
+    "vacancies_extracted": [],
+    "vacancy_count": 0
+  },
+  "vacancy_card": {
+    "config": "headless_stealth_direct",
+    "vacancy_id": "104903561",
+    "url": "https://hh.ru/vacancy/104903561",
+    "success": true,
+    "extracted": {
+      "title": "Support Specialist | Специалист поддержкиВ&nbsp;архиве с&nbsp;29&nbsp;августа&nbsp;2024",
+      "company": "SpaceHub",
+      "salary": "от&nbsp;55&nbsp;000&nbsp;₽ за&nbsp;месяц на руки",
+      "key_skills": [],
+      "contacts_shown": false
+    }
+  },
+  "employer": {
+    "success": false
+  }
+}

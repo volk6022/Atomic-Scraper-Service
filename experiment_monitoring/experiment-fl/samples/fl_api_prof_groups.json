@@ -1,0 +1,165 @@
+{
+  "items": [
+    {
+      "id": 2,
+      "name": "Сайты",
+      "name_en": "saity",
+      "rank": 1,
+      "link": "https://www.fl.ru/catalog/saity/"
+    },
+    {
+      "id": 3,
+      "name": "Дизайн",
+      "name_en": "dizajn",
+      "rank": 2,
+      "link": "https://www.fl.ru/catalog/dizajn/"
+    },
+    {
+      "id": 5,
+      "name": "Программирование",
+      "name_en": "programmirovanie",
+      "rank": 3,
+      "link": "https://www.fl.ru/catalog/programmirovanie/"
+    },
+    {
+      "id": 6,
+      "name": "Продвижение сайтов (SEO, GEO)",
+      "name_en": "prodvizhenie-saitov-seo",
+      "rank": 4,
+      "link": "https://www.fl.ru/catalog/prodvizhenie-saitov-seo/"
+    },
+    {
+      "id": 8,
+      "name": "Тексты",
+      "name_en": "teksty",
+      "rank": 5,
+      "link": "https://www.fl.ru/catalog/teksty/"
+    },
+    {
+      "id": 9,
+      "name": "3D Графика",
+      "name_en": "3d-grafika",
+      "rank": 6,
+      "link": "https://www.fl.ru/catalog/3d-grafika/"
+    },
+    {
+      "id": 11,
+      "name": "Аудио/Видео/Фото",
+      "name_en": "audio-video-photo",
+      "rank": 7,
+      "link": "https://www.fl.ru/catalog/audio-video-photo/"
+    },
+    {
+      "id": 12,
+      "name": "Реклама и Маркетинг",
+      "name_en": "reklama-marketing",
+      "rank": 8,
+      "link": "https://www.fl.ru/catalog/reklama-marketing/"
+    },
+    {
+      "id": 20,
+      "name": "Инжиниринг",
+      "name_en": "inzhiniring",
+      "rank": 9,
+      "link": "https://www.fl.ru/catalog/inzhiniring/"
+    },
+    {
+      "id": 13,
+      "name": "Аутсорсинг и консалтинг",
+      "name_en": "konsalting",
+      "rank": 10,
+      "link": "https://www.fl.ru/catalog/konsalting/"
+    },
+    {
+      "id": 30,
+      "name": "Маркетплейс менеджмент",
+      "name_en": "marketplace-management",
+      "rank": 12,
+      "link": "https://www.fl.ru/catalog/marketplace-management/"
+    },
+    {
+      "id": 31,
+      "name": "AI — искусственный интеллект",
+      "name_en": "ai-iskusstvenniy-intellekt",
+      "rank": 13,
+      "link": "https://www.fl.ru/catalog/ai-iskusstvenniy-intellekt/"
+    },
+    {
+      "id": 32,
+      "name": "Социальные сети",
+      "name_en": "socialnye-seti",
+      "rank": 14,
+      "link": "https://www.fl.ru/catalog/socialnye-seti/"
+    },
+    {
+      "id": 33,
+      "name": "Игры",
+      "name_en": "games",
+      "rank": 15,
+      "link": "https://www.fl.ru/catalog/games/"
+    },
+    {
+      "id": 34,
+      "name": "Мессенджеры",
+      "name_en": "messengers",
+      "rank": 16,
+      "link": "https://www.fl.ru/catalog/messengers/"
+    },
+    {
+      "id": 35,
+      "name": "Рисунки и иллюстрации",
+      "name_en": "risunki-i-illustracii",
+      "rank": 17,
+      "link": "https://www.fl.ru/catalog/risunki-i-illustracii/"
+    },
+    {
+      "id": 36,
+      "name": "Mobile",
+      "name_en": "mobile",
+      "rank": 18,
+      "link": "https://www.fl.ru/catalog/mobile/"
+    },
+    {
+      "id": 37,
+      "name": "Браузеры",
+      "name_en": "brauzery",
+      "rank": 19,
+      "link": "https://www.fl.ru/catalog/brauzery/"
+    },
+    {
+      "id": 38,
+      "name": "Крипто и блокчейн",
+      "name_en": "crypto-i-blockchain",
+      "rank": 20,
+      "link": "https://www.fl.ru/catalog/crypto-i-blockchain/"
+    },
+    {
+      "id": 39,
+      "name": "Анимация",
+      "name_en": "animaciya",
+      "rank": 21,
+      "link": "https://www.fl.ru/catalog/animaciya/"
+    },
+    {
+      "id": 40,
+      "name": "Интернет-магазины",
+      "name_en": "internet-magaziny",
+      "rank": 22,
+      "link": "https://www.fl.ru/catalog/internet-magaziny/"
+    },
+    {
+      "id": 41,
+      "name": "Автоматизация бизнеса",
+      "name_en": "avtomatizaciya-biznesa",
+      "rank": 23,
+      "link": "https://www.fl.ru/catalog/avtomatizaciya-biznesa/"
+    },
+    {
+      "id": 42,
+      "name": "Фирменный стиль",
+      "name_en": "firmennyi-stil",
+      "rank": 24,
+      "link": "https://www.fl.ru/catalog/firmennyi-stil/"
+    }
+  ]
+}

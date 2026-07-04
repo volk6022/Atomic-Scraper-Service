@@ -1,0 +1,288 @@
+{
+  "vacancies_get_params": [
+    {
+      "name": "page",
+      "required": false,
+      "in": "query",
+      "enum": []
+    },
+    {
+      "name": "per_page",
+      "required": false,
+      "in": "query",
+      "enum": []
+    },
+    {
+      "name": "text",
+      "required": false,
+      "in": "query",
+      "enum": []
+    },
+    {
+      "name": "search_field",
+      "required": false,
+      "in": "query",
+      "enum": []
+    },
+    {
+      "name": "experience",
+      "required": false,
+      "in": "query",
+      "enum": []
+    },
+    {
+      "name": "employment",
+      "required": false,
+      "in": "query",
+      "enum": []
+    },
+    {
+      "name": "schedule",
+      "required": false,
+      "in": "query",
+      "enum": []
+    },
+    {
+      "name": "area",
+      "required": false,
+      "in": "query",
+      "enum": []
+    },
+    {
+      "name": "metro",
+      "required": false,
+      "in": "query",
+      "enum": []
+    },
+    {
+      "name": "professional_role",
+      "required": false,
+      "in": "query",
+      "enum": []
+    },
+    {
+      "name": "industry",
+      "required": false,
+      "in": "query",
+      "enum": []
+    },
+    {
+      "name": "employer_id",
+      "required": false,
+      "in": "query",
+      "enum": []
+    },
+    {
+      "name": "currency",
+      "required": false,
+      "in": "query",
+      "enum": []
+    },
+    {
+      "name": "salary",
+      "required": false,
+      "in": "query",
+      "enum": []
+    },
+    {
+      "name": "salary_frequency",
+      "required": false,
+      "in": "query",
+      "enum": []
+    },
+    {
+      "name": "salary_mode",
+      "required": false,
+      "in": "query",
+      "enum": []
+    },
+    {
+      "name": "label",
+      "required": false,
+      "in": "query",
+      "enum": []
+    },
+    {
+      "name": "only_with_salary",
+      "required": false,
+      "in": "query",
+      "enum": []
+    },
+    {
+      "name": "period",
+      "required": false,
+      "in": "query",
+      "enum": []
+    },
+    {
+      "name": "date_from",
+      "required": false,
+      "in": "query",
+      "enum": []
+    },
+    {
+      "name": "date_to",
+      "required": false,
+      "in": "query",
+      "enum": []
+    },
+    {
+      "name": "top_lat",
+      "required": false,
+      "in": "query",
+      "enum": []
+    },
+    {
+      "name": "bottom_lat",
+      "required": false,
+      "in": "query",
+      "enum": []
+    },
+    {
+      "name": "left_lng",
+      "required": false,
+      "in": "query",
+      "enum": []
+    },
+    {
+      "name": "right_lng",
+      "required": false,
+      "in": "query",
+      "enum": []
+    },
+    {
+      "name": "order_by",
+      "required": false,
+      "in": "query",
+      "enum": []
+    },
+    {
+      "name": "sort_point_lat",
+      "required": false,
+      "in": "query",
+      "enum": []
+    },
+    {
+      "name": "sort_point_lng",
+      "required": false,
+      "in": "query",
+      "enum": []
+    },
+    {
+      "name": "clusters",
+      "required": false,
+      "in": "query",
+      "enum": []
+    },
+    {
+      "name": "describe_arguments",
+      "required": false,
+      "in": "query",
+      "enum": []
+    },
+    {
+      "name": "no_magic",
+      "required": false,
+      "in": "query",
+      "enum": []
+    },
+    {
+      "name": "premium",
+      "required": false,
+      "in": "query",
+      "enum": []
+    },
+    {
+      "name": "responses_count_enabled",
+      "required": false,
+      "in": "query",
+      "enum": []
+    },
+    {
+      "name": "part_time",
+      "required": false,
+      "in": "query",
+      "enum": []
+    },
+    {
+      "name": "accept_temporary",
+      "required": false,
+      "in": "query",
+      "enum": []
+    },
+    {
+      "name": "employment_form",
+      "required": false,
+      "in": "query",
+      "enum": []
+    },
+    {
+      "name": "work_schedule_by_days",
+      "required": false,
+      "in": "query",
+      "enum": []
+    },
+    {
+      "name": "working_hours",
+      "required": false,
+      "in": "query",
+      "enum": []
+    },
+    {
+      "name": "work_format",
+      "required": false,
+      "in": "query",
+      "enum": []
+    },
+    {
+      "name": "excluded_text",
+      "required": null,
+      "in": "query",
+      "enum": []
+    },
+    {
+      "name": "education",
+      "required": null,
+      "in": "query",
+      "enum": []
+    },
+    {
+      "name": "driver_license_types",
+      "required": false,
+      "in": "query",
+      "enum": []
+    },
+    {
+      "name": null,
+      "required": null,
+      "in": null,
+      "enum": []
+    },
+    {
+      "name": null,
+      "required": null,
+      "in": null,
+      "enum": []
+    },
+    {
+      "name": null,
+      "required": null,
+      "in": null,
+      "enum": []
+    }
+  ],
+  "vacancies_response_codes": [
+    "200",
+    "400",
+    "403",
+    "404"
+  ],
+  "vacancy_single_response_codes": [],
+  "vacancy_search_order_from_dictionaries": [
+    "publication_time",
+    "salary_desc",
+    "salary_asc",
+    "relevance",
+    "distance"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "statuses": [
+    403,
+    403,
+    403,
+    403,
+    403
+  ],
+  "note": "5 requests with 0.3s delay between them"
+}

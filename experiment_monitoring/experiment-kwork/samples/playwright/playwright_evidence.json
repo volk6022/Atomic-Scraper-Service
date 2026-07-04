@@ -1,0 +1,103 @@
+{
+  "mode": "headless=True proxy=no",
+  "headless": true,
+  "proxy": null,
+  "robots_length": 642,
+  "robots_projects_disallow": false,
+  "robots_page_disallow": true,
+  "antibot": {
+    "page_title": "Биржа проектов - Kwork",
+    "html_length": 422883,
+    "cloudflare": false,
+    "turnstile": false,
+    "ddos_guard": false,
+    "js_challenge": false,
+    "real_page": true,
+    "project_count_hint": 0,
+    "sample_project_ids": [],
+    "category_filter_present": true,
+    "window_globals": []
+  },
+  "projects_extracted": 0,
+  "projects_sample": [],
+  "xhr_requests": [
+    {
+      "type": "fetch",
+      "method": "GET",
+      "url": "https://mc.yandex.ru/watch/3?wmode=7&page-url=https%3A%2F%2Fkwork.ru%2Fprojects&page-ref=&charset=utf-8&browser-info=pv%3A1%3Avf%3Apupr1nz2snmtoqrsih1u7ksy3ul0f%3Afu%3A0%3Aen%3Autf-8%3Ala%3Aru-RU%3Av%3A2550%3Acn%3A2%3Adp%3A0%3Als%3A158046098447%3Ahid%3A252949764%3Az%3A180%3Ai%3A20260618172109%3Aet%3A1781792469%3Ac%3A1%3Arn%3A960293476%3Arqn%3A1%3Au%3A178179246998188657%3Aw%3A1366x768%3As%3A1366x768x24%3Ask%3A1%3Afp%3A484%3Awv%3A2%3Ads%3A0%2C0%2C249%2C38%2C0%2C0%2C%2C191%2C1%2C%2C%2C%2C525%3Aco%3A0%3Acpf%3A1%3Antf%3A1%3Ans%3A1781792468362%3Ast%3A1781792469&t=clc(0-0-0)rqnt(1)aw(1)cdl(na)eco(65536)ti(1)",
+      "post_data": null
+    },
+    {
+      "type": "fetch",
+      "method": "GET",
+      "url": "https://mc.yandex.ru/watch/32983614?wmode=7&page-url=https%3A%2F%2Fkwork.ru%2Fprojects&charset=utf-8&uah=che%0A0&browser-info=pv%3A1%3Avf%3Apupr1nz2snmtoqrsih1u7ksy3ul0f%3Afu%3A0%3Aen%3Autf-8%3Ala%3Aru-RU%3Av%3A2550%3Acn%3A1%3Adp%3A0%3Als%3A662093766529%3Ahid%3A252949764%3Az%3A180%3Ai%3A20260618172109%3Aet%3A1781792469%3Ac%3A1%3Arn%3A744988502%3Arqn%3A1%3Au%3A178179246998188657%3Aw%3A1366x768%3As%3A1366x768x24%3Ask%3A1%3Afp%3A484%3Awv%3A2%3Ads%3A0%2C0%2C249%2C38%2C0%2C0%2C%2C191%2C1%2C%2C%2C%2C525%3Aco%3A0%3Acpf%3A1%3Antf%3A1%3Ans%3A1781792468362%3Arqnl%3A1%3Ast%3A1781792469%3At%3A%D0%91%D0%B8%D1%80%D0%B6%D0%B0%20%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D0%BE%D0%B2%20-%20Kwork&t=clt(602)gdpr(14)clc(0-0-0)rqnt(1)aw(1)cdl(na)eco(42271236)ti(1)",
+      "post_data": null
+    },
+    {
+      "type": "fetch",
+      "method": "GET",
+      "url": "https://mc.yandex.ru/watch/3/1?wmode=7&page-url=https%3A%2F%2Fkwork.ru%2Fprojects&page-ref&charset=utf-8&browser-info=pv%3A1%3Avf%3Apupr1nz2snmtoqrsih1u7ksy3ul0f%3Afu%3A0%3Aen%3Autf-8%3Ala%3Aru-RU%3Av%3A2550%3Acn%3A2%3Adp%3A0%3Als%3A158046098447%3Ahid%3A252949764%3Az%3A180%3Ai%3A20260618172109%3Aet%3A1781792469%3Ac%3A1%3Arn%3A960293476%3Arqn%3A1%3Au%3A178179246998188657%3Aw%3A1366x768%3As%3A1366x768x24%3Ask%3A1%3Afp%3A484%3Awv%3A2%3Ads%3A0%2C0%2C249%2C38%2C0%2C0%2C%2C191%2C1%2C%2C%2C%2C525%3Aco%3A0%3Acpf%3A1%3Antf%3A1%3Ans%3A1781792468362%3Ast%3A1781792469&t=clc%280-0-0%29rqnt%281%29aw%281%29cdl%28na%29eco%2865536%29ti%281%29&redirnss=1",
+      "post_data": null,
+      "response_content_type": "application/json; charset=utf-8",
+      "response_status": 200,
+      "response_body_preview": "{\"settings\":{\"sbp\": {\"a\":\"ztJsGJCfqq55z/lBd5Kn8AMcuGi2tQCFP53xTgOJlR+7mzYg6bGZWgyHYQa8fgkn\", \"b\":\"7Ao2GZMAgyIDIVhFQ6lQ6NzeQ+yHCZsgOsfmEmfyOhGX539ALUq8/5oPTCjJv8yR\"},\"eu\":0,\"nss\":1,\"hittoken\":\"1781792469_99d5b627364529b54d4690f828ff7887a39ae09d14c12782f469d1bed643edc5\",\"oauth\":1,\"wstoken\":\"11066.FCoGKyrI18jlY14kn4T0qC3SSR3WJkzwyDcbS129T67YV7jlbIoaQ10ke1gS6_3phJ6jkUcQL3MAkGE9JxWE2Q,,.W8a4uREZazm-WpHxxYps3H-S3S0,\",\"ev\":{\"pvt\":1781792469},\"hidv2\":\"3388281863043285263\",\"ymclid\":\"3388281863043285263\"},\"userData\":{}}"
+    },
+    {
+      "type": "fetch",
+      "method": "GET",
+      "url": "https://mc.yandex.ru/watch/32983614/1?wmode=7&page-url=https%3A%2F%2Fkwork.ru%2Fprojects&charset=utf-8&uah=che%0A0&browser-info=pv%3A1%3Avf%3Apupr1nz2snmtoqrsih1u7ksy3ul0f%3Afu%3A0%3Aen%3Autf-8%3Ala%3Aru-RU%3Av%3A2550%3Acn%3A1%3Adp%3A0%3Als%3A662093766529%3Ahid%3A252949764%3Az%3A180%3Ai%3A20260618172109%3Aet%3A1781792469%3Ac%3A1%3Arn%3A744988502%3Arqn%3A1%3Au%3A178179246998188657%3Aw%3A1366x768%3As%3A1366x768x24%3Ask%3A1%3Afp%3A484%3Awv%3A2%3Ads%3A0%2C0%2C249%2C38%2C0%2C0%2C%2C191%2C1%2C%2C%2C%2C525%3Aco%3A0%3Acpf%3A1%3Antf%3A1%3Ans%3A1781792468362%3Arqnl%3A1%3Ast%3A1781792469%3At%3A%D0%91%D0%B8%D1%80%D0%B6%D0%B0%20%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D0%BE%D0%B2%20-%20Kwork&t=clt%28602%29gdpr%2814%29clc%280-0-0%29rqnt%281%29aw%281%29cdl%28na%29eco%2842271236%29ti%281%29&redirnss=1",
+      "post_data": null,
+      "response_content_type": "application/json; charset=utf-8",
+      "response_status": 200,
+      "response_body_preview": "{\"settings\":{\"auto_goals\":0,\"button_goals\":1,\"c_recp\":\"1.00000\",\"form_goals\":0,\"pcs\":\"1\",\"webvisor\":{\"ad_recp\":\"1.00000\",\"arch_type\":\"html\",\"date\":\"2026-06-15 15:51:41\",\"forms\":1,\"recp\":\"1.00000\",\"urls\":\"http://kwork.ru*\"},\"sbp\": {\"a\":\"si0O5PTYgzJKOoP1ZqSs/rAnwNNymrhYnrIllJ7bHkB+jleTN1+eA548yRccrXOR\", \"b\":\"1M0o70GYW/GyXd+QFupLxAYIPqAAfqPge6KPYq2tRD7Pk1MlStSilBAmnE0zELOj\"},\"eu\":0,\"nss\":1,\"hittoken\":\"1781792469_65ea8bde91aedc5022dd6aa5f141d3d9425eebdfa8fb4949d441241c3e5b9f38\",\"oauth\":1,\"wstoken\":\"11066.JmOjlxZY74SyBdi_y6wqzBGMGWz1rEiY8dcHvkk8F6DOhM8IyZ3UJhsmh3k6Nll-guL7xAN3zvpK7Vgpu8GHhA,,.I2hVv_CIoJnuInUrkWmmwoOYtqw,\",\"ev\":{\"pvt\":1781792469},\"hidv2\":\"3388281865731571738\",\"ymclid\":\"3388281865731571738\"},\"userData\":{}}"
+    },
+    {
+      "type": "xhr",
+      "method": "POST",
+      "url": "https://kwork.ru/api/offer/addview",
+      "post_data": "{\"wantIds\":[3200412]}",
+      "response_content_type": "application/json",
+      "response_status": 200,
+      "response_body_preview": "{\"result\":false}"
+    }
+  ],
+  "category_ids_found": [],
+  "pagination_hints": {
+    "page_param_in_html": true,
+    "pagination_element": true
+  },
+  "card_probe": {
+    "url": "https://kwork.ru/projects/3016173/view",
+    "card_id": "3016173",
+    "page_title": "Страница не найдена",
+    "cloudflare": false,
+    "js_challenge": false,
+    "turnstile": false,
+    "real_html": true,
+    "html_length": 109841,
+    "h1_text": "",
+    "login_gate": false,
+    "budget_visible": true,
+    "description_visible": true
+  },
+  "card_xhr": [
+    {
+      "type": "fetch",
+      "method": "GET",
+      "url": "https://mc.yandex.ru/watch/32983614?wmode=7&page-url=https%3A%2F%2Fkwork.ru%2Fprojects%2F3016173%2Fview&charset=utf-8&uah=che%0A0&browser-info=pv%3A1%3Avf%3Apupr1nz2snmtoqrsih1u7ksy3ul0f%3Afu%3A0%3Aen%3Autf-8%3Ala%3Aru-RU%3Av%3A2550%3Acn%3A1%3Adp%3A0%3Als%3A662093766529%3Ahid%3A143799046%3Az%3A180%3Ai%3A20260618172118%3Aet%3A1781792478%3Ac%3A1%3Arn%3A264514801%3Arqn%3A2%3Au%3A178179246998188657%3Aw%3A1366x768%3As%3A1366x768x24%3Ask%3A1%3Awv%3A2%3Ads%3A0%2C0%2C76%2C1%2C0%2C0%2C%2C211%2C4%2C%2C%2C%2C289%3Aco%3A0%3Acpf%3A1%3Antf%3A1%3Ans%3A1781792477810%3Aadb%3A2%3Arqnl%3A1%3Ast%3A1781792478%3At%3A%D0%A1%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D0%B0%20%D0%BD%D0%B5%20%D0%BD%D0%B0%D0%B9%D0%B4%D0%B5%D0%BD%D0%B0&t=clt(48)gdpr(14)clc(0-0-0)rqnt(1)aw(1)cdl(na)eco(42271236)ti(1)",
+      "post_data": null,
+      "response_content_type": "application/json; charset=utf-8",
+      "response_status": 200,
+      "response_body_preview": "{\"settings\":{\"auto_goals\":0,\"button_goals\":1,\"c_recp\":\"1.00000\",\"form_goals\":0,\"pcs\":\"1\",\"webvisor\":{\"ad_recp\":\"1.00000\",\"arch_type\":\"html\",\"date\":\"2026-06-15 15:51:41\",\"forms\":1,\"recp\":\"1.00000\",\"urls\":\"http://kwork.ru*\"},\"sbp\": {\"a\":\"UT6DOtqGIB94C+w5doY9XnYCKbS+bnnUDiBVb18NveH7ANYRRTdbu2L3kAEmtVqy\", \"b\":\"bt4fIFntb4vLaWjsJ1SgHHkZaVsBu2TGwStaX8g0vrC27AoYC20c7EeQ5Y7Uffz1\"},\"eu\":0,\"hittoken\":\"1781792478_560982182902e6fc11ba2dc9db2ae2fb5f8a566884cdacc58d4586ef66939429\",\"oauth\":1,\"wstoken\":\"11066.CW-O_M1rP5C7OOUQmdvSiM4ARfzIYQLh1_od5BxS90jymCa3OHe53xYPsyVcesmg68VxWIaP-RyRxW-29G1iwQ,,.sFA9It-osSZ2yS_kxpRFivudhRc,\",\"ev\":{\"pvt\":1781792478},\"hidv2\":\"3388284121808634178\",\"ymclid\":\"3388284121808634178\"},\"userData\":{}}"
+    },
+    {
+      "type": "fetch",
+      "method": "GET",
+      "url": "https://mc.yandex.ru/watch/26812653?wmode=7&page-url=https%3A%2F%2Fkwork.ru%2Fprojects%2F3016173%2Fview&charset=utf-8&site-info=%7B%22shareVersion%22%3A2%2C%22strategy%22%3A%22a%2Ff%2Ft%22%7D&uah=che%0A0&browser-info=pv%3A1%3Avf%3Apupr1nz2snmtoqrsih1u7ksy3ul0f%3Afu%3A0%3Aen%3Autf-8%3Ala%3Aru-RU%3Av%3A2550%3Acn%3A2%3Adp%3A1%3Als%3A379907000742%3Ahid%3A143799046%3Az%3A180%3Ai%3A20260618172118%3Aet%3A1781792478%3Ac%3A1%3Arn%3A338229851%3Arqn%3A1%3Au%3A178179246998188657%3Aw%3A1366x768%3As%3A1366x768x24%3Ask%3A1%3Awv%3A2%3Ads%3A0%2C0%2C76%2C1%2C0%2C0%2C%2C211%2C4%2C%2C%2C%2C289%3Aco%3A0%3Acpf%3A1%3Antf%3A1%3Ans%3A1781792477810%3Aadb%3A2%3Arqnl%3A1%3Ast%3A1781792478%3At%3A%D0%A1%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D0%B0%20%D0%BD%D0%B5%20%D0%BD%D0%B0%D0%B9%D0%B4%D0%B5%D0%BD%D0%B0&t=clt(69)gdpr(14)clc(0-0-0)rqnt(1)aw(1)ecs(0)cdl(na)eco(33628928)ti(1)",
+      "post_data": null,
+      "response_content_type": "application/json; charset=utf-8",
+      "response_status": 200,
+      "response_body_preview": "{\"settings\":{\"auto_goals\":1,\"button_goals\":1,\"c_recp\":\"1.00000\",\"form_goals\":1,\"pcs\":\"1\",\"webvisor\":{\"ad_recp\":\"1.00000\",\"arch_type\":\"none\",\"date\":\"2026-06-17 00:10:26\",\"forms\":1,\"recp\":\"0.00030\"},\"sbp\": {\"a\":\"0Piv1cpedixJd+NQK+xTI+SL4XY1vDY6dn4w5Mytz3QPUVgcr7Jz/fxnHMZ5A426\", \"b\":\"NmS+LHqRyhcnAj1Lfz0Hf9U7Xf9RDxjkUFnlBHy1BuOc8oRbLdX4Wre0kiXe6bjU\"},\"eu\":0,\"hittoken\":\"1781792478_ae703b8934e6b7315f7b3b766f6c00e611bb6aba639e703530d86e5233c0df4b\",\"yb\":1,\"oauth\":1,\"wstoken\":\"11066.8SIdNIe5ipS-1NAvmsY_aAtFZYWPJ7JrAL7-8J3YEIP9EEqbOBNkBAeNmJPmR0BJ-6YX0nm6Cc6mPXBZ1Xl-Ng,,.w8ciKTDhpq8kkHic0_BLw_I8GNg,\",\"ev\":{\"pvt\":1781792478},\"hidv2\":\"3388284123312292162\",\"ymclid\":\"3388284123312292162\"},\"userData\":{}}"
+    }
+  ]
+}

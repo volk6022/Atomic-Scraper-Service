@@ -1,0 +1,74 @@
+[
+  {
+    "label": "GET /",
+    "url": "https://api.hh.ru/",
+    "status": 200,
+    "body_snippet": "{\"article\":{\"title\":\"\",\"content\":\"\"},\"staticHost\":\"https://dev.hh.ru/static\",\"apiHost\":\"https://dev.hh.ru\",\"requestId\":\"1781712364713db4fa254b2819828003\",\"sentryDSN\":\"https://7dac71be294dd57aea07ef44d"
+  },
+  {
+    "label": "GET /dictionaries",
+    "url": "https://api.hh.ru/dictionaries",
+    "status": 200,
+    "body_snippet": "{\"resume_access_type\":[{\"id\":\"no_one\",\"name\":\"Не видно никому\"},{\"id\":\"whitelist\",\"name\":\"Видно выбранным работодателям\"},{\"id\":\"blacklist\",\"name\":\"Скрыто от выбранных работодателей\"},{\"id\":\"clients\","
+  },
+  {
+    "label": "GET /areas",
+    "url": "https://api.hh.ru/areas",
+    "status": 200,
+    "body_snippet": "[{\"id\":\"113\",\"parent_id\":null,\"name\":\"Россия\",\"areas\":[{\"id\":\"1620\",\"parent_id\":\"113\",\"name\":\"Республика Марий Эл\",\"areas\":[{\"id\":\"4228\",\"parent_id\":\"1620\",\"name\":\"Виловатово\",\"areas\":[],\"utc_offset\":"
+  },
+  {
+    "label": "GET /professional_roles",
+    "url": "https://api.hh.ru/professional_roles",
+    "status": -1,
+    "body_snippet": "[WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond"
+  },
+  {
+    "label": "GET /specializations",
+    "url": "https://api.hh.ru/specializations",
+    "status": 404,
+    "body_snippet": "{\"errors\":[{\"type\":\"not_found\"}],\"request_id\":\"178171238791631d33b8f66b07c99001\"}"
+  },
+  {
+    "label": "GET /industries",
+    "url": "https://api.hh.ru/industries",
+    "status": -1,
+    "body_snippet": "[WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond"
+  },
+  {
+    "label": "GET /vacancies (anon)",
+    "url": "https://api.hh.ru/vacancies",
+    "status": -1,
+    "body_snippet": "[WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond"
+  },
+  {
+    "label": "GET /vacancies (no params)",
+    "url": "https://api.hh.ru/vacancies",
+    "status": 403,
+    "body_snippet": "{\"errors\":[{\"type\":\"forbidden\"}],\"request_id\":\"178171243069140b7612b26d17e32004\"}"
+  },
+  {
+    "label": "GET /vacancies/{id} (known)",
+    "url": "https://api.hh.ru/vacancies/116855878",
+    "status": 403,
+    "body_snippet": "{\"errors\":[{\"type\":\"forbidden\"}],\"request_id\":\"1781712431320b6a627d6cb56fb6b000\"}"
+  },
+  {
+    "label": "GET /employers (search)",
+    "url": "https://api.hh.ru/employers",
+    "status": 403,
+    "body_snippet": "{\"errors\":[{\"type\":\"forbidden\"}],\"request_id\":\"1781712431920d54bae64224c8fca001\"}"
+  },
+  {
+    "label": "GET /employers/{id}",
+    "url": "https://api.hh.ru/employers/1057",
+    "status": 403,
+    "body_snippet": "{\"errors\":[{\"type\":\"forbidden\"}],\"request_id\":\"17817124325148c3dafe1227b221a002\"}"
+  },
+  {
+    "label": "GET /me",
+    "url": "https://api.hh.ru/me",
+    "status": -1,
+    "body_snippet": "[WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond"
+  }
+]

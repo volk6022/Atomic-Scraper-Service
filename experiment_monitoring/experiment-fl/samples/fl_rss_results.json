@@ -1,0 +1,49 @@
+{
+  "robots_txt": {
+    "status": 200,
+    "content_type": "text/plain",
+    "snippet": "User-agent: Yandex\nDisallow: /login/\nDisallow: /registration/\nDisallow: /remind/\nDisallow: /search/\nDisallow: /webim\nDisallow: /xajax\nDisallow: /*?ord=\nDisallow: /projects/upload/\nDisallow: /*?from\nDisallow: /*&ord\nDisallow: /*?kind\nDisallow: /*?open=\nDisallow: /*?closed=\nDisallow: /*?user=\nDisallow: /*?order=\nDisallow: /*?om=\nDisallow: /fbd.php\nDisallow: /public/\nDisallow: /*?word=\nDisallow: /*&sort=\nDisallow: /proonly.php\nDisallow: /login.php\nDisallow: /&b=\nDisallow: /a.php\nDisallow: /*?tag=\nD",
+    "headers": {
+      "server": "ddos-guard",
+      "connection": "keep-alive",
+      "keep-alive": "timeout=60",
+      "set-cookie": "__ddg8_=AzAlF5bd6ThueCtP; Domain=.fl.ru; Path=/; Expires=Wed, 17-Jun-2026 16:38:01 GMT, __ddg10_=1781713081; Domain=.fl.ru; Path=/; Expires=Wed, 17-Jun-2026 16:38:01 GMT, __ddg9_=95.174.116.240; Domain=.fl.ru; Path=/; Expires=Wed, 17-Jun-2026 16:38:01 GMT, __ddg1_=s9X8ncZD6cq54Nhq23X7; Domain=.fl.ru; HttpOnly; Path=/; Expires=Thu, 17-Jun-2027 16:18:01 GMT",
+      "content-security-policy": "upgrade-insecure-requests;, default-src 'self' fl.ru *.fl.ru static.fl.ru smartcaptcha.yandexcloud.net production-flru.website.yandexcloud.net *.mail.ru *.yandex.ru; script-src 'unsafe-inline' 'unsafe-eval' 'self' https: *.fl.ru static.fl.ru production-flru.website.yandexcloud.net *.acstat.com artfut.com www.artut.com counter.rambler.ru mc.yandex.ru *.mail.ru *.tns-counter.ru; img-src data: blob: *; media-src *.fl.ru *.usedesk.ru static.fl.ru production-flru.website.yandexcloud.net; style-src 'unsafe-inline' 'unsafe-eval' blob: https: 'self' *.fl.ru static.fl.ru production-flru.website.yandexcloud.net; font-src 'self' data: blob: https: fonts.gstatic.com an.yandex.ru yastatic.net yastat.net; frame-src 'self' *.fl.ru static.fl.ru smartcaptcha.yandexcloud.net yookassa.ru production-flru.website.yandexcloud.net *.hcaptcha.com *.soundcloud.com direct.yandex.ru mc.yandex.ru *.yandex.md yastatic.net *.typeform.com *.adriver.ru rutube.ru *.rutube.ru *.vimeo.com youtube.com *.youtube.com; child-src fl.ru *.fl.ru static.fl.ru; connect-src 'self' *.fl.ru fl.ru fl.ru:* *.fl.ru:* ws://fl.ru:* wss://fl.ru:* ws://*.fl.ru:* wss://*.fl.ru:* static.fl.ru ws://*.usedesk.ru *.usedesk.ru *.hcaptcha.com *.popmechanic.ru *.mradx.net *.mail.ru vk.com *.vk.com *.adriver.ru *.acstat.com static.fl.ru *.mail.ru wss://mc.yandex.ru mc.yandex.ru *.yandex.ru yandex.ru ymetrica1.com yastatic.net yastat.net;",
+      "date": "Wed, 17 Jun 2026 16:18:01 GMT",
+      "content-type": "text/plain",
+      "content-length": "6563",
+      "last-modified": "Mon, 01 Jun 2026 14:47:12 GMT",
+      "etag": "\"6a1d9b70-19a3\"",
+      "towww": "0",
+      "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+      "x-frame-options": "SAMEORIGIN",
+      "x-content-type-options": "nosniff",
+      "x-xss-protection": "1; mode=block",
+      "accept-ranges": "bytes"
+    }
+  },
+  "base": {
+    "error": "'charmap' codec can't encode characters in position 24-34: character maps to <undefined>"
+  },
+  "category_3": {
+    "error": "'charmap' codec can't encode characters in position 20-26: character maps to <undefined>"
+  },
+  "category_1": {
+    "error": "'charmap' codec can't encode characters in position 20-29: character maps to <undefined>"
+  },
+  "subcat_python_guess": {
+    "error": "'charmap' codec can't encode characters in position 20-27: character maps to <undefined>"
+  },
+  "subcat_ai_guess": {
+    "error": "'charmap' codec can't encode characters in position 20-22: character maps to <undefined>"
+  },
+  "subcat_dev_guess": {
+    "error": "'charmap' codec can't encode characters in position 20-29: character maps to <undefined>"
+  },
+  "cat3_sub49": {
+    "error": "'charmap' codec can't encode characters in position 20-27: character maps to <undefined>"
+  },
+  "cat3_sub51": {
+    "error": "'charmap' codec can't encode characters in position 20-22: character maps to <undefined>"
+  }
+}

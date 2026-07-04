@@ -1,0 +1,59 @@
+{
+  "response": {
+    "companies": [
+      {
+        "id": 776587,
+        "name": "ДИКСИ Юг, АО",
+        "logo": {
+          "url_original": "https://cdn1-media.rabota.ru/processor/logo/original/2022/10/12/diksi-jug-ao-02d684e1ec5674d1f89f38d756b387e6.png",
+          "url_small": "https://cdn1-media.rabota.ru/processor/logo/small/2022/10/12/diksi-jug-ao-02d684e1ec5674d1f89f38d756b387e6.png",
+          "url_medium": "https://cdn1-media.rabota.ru/processor/logo/medium/2022/10/12/diksi-jug-ao-02d684e1ec5674d1f89f38d756b387e6.png"
+        },
+        "slug": "diksi-jug1",
+        "is_target_blank": false,
+        "vacancy_count": 3138,
+        "color": null,
+        "logo_company_preview": {
+          "url": "https://cdn1-media.rabota.ru/processor/logo/logo_company_preview/2022/10/12/diksi-jug-ao-02d684e1ec5674d1f89f38d756b387e6.png",
+          "srcset": [
+            {
+              "url": "https://cdn1-media.rabota.ru/processor/logo/logo_company_preview/2022/10/12/diksi-jug-ao-02d684e1ec5674d1f89f38d756b387e6.png.png",
+              "x_descriptor": "x1"
+            },
+            {
+              "url": "https://cdn1-media.rabota.ru/processor/logo/logo_company_preview_2x/2022/10/12/diksi-jug-ao-02d684e1ec5674d1f89f38d756b387e6.png.png",
+              "x_descriptor": "2x"
+            }
+          ]
+        }
+      },
+      {
+        "id": 788450,
+        "name": "СБЕР",
+        "logo": {
+          "url_original": "https://cdn1-media.rabota.ru/processor/logo/original/2022/12/02/sberbank-a955d837a3b26750ee82ae672d90140a.png",
+          "url_small": "https://cdn1-media.rabota.ru/processor/logo/small/2022/12/02/sberbank-a955d837a3b26750ee82ae672d90140a.png",
+          "url_medium": "https://cdn1-media.rabota.ru/processor/logo/medium/2022/12/02/sberbank-a955d837a3b26750ee82ae672d90140a.png"
+        },
+        "slug": "sberbank",
+        "is_target_blank": false,
+        "vacancy_count": 2375,
+        "color": null,
+        "logo_company_preview": {
+          "url": "https://cdn1-media.rabota.ru/processor/logo/logo_company_preview/2022/12/02/sberbank-a955d837a3b26750ee82ae672d90140a.png",
+          "srcset": [
+            {
+              "url": "https://cdn1-media.rabota.ru/processor/logo/logo_company_preview/2022/12/02/sberbank-a955d837a3b26750ee82ae672d90140a.png.png",
+              "x_descriptor": "x1"
+            },
+            {
+              "url": "https://cdn1-media.rabota.ru/processor/logo/logo_company_preview_2x/2022/12/02/sberbank-a955d837a3b26750ee82ae672d90140a.png.png",
+              "x_descriptor": "2x"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "request_id": 66650036
+}

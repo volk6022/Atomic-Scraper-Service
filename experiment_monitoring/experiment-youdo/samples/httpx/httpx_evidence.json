@@ -1,0 +1,257 @@
+{
+  "main_tasks_all": {
+    "url": "https://youdo.com/tasks-all-opened-all",
+    "label": "direct/main_tasks_all",
+    "proxy": "direct",
+    "status": 200,
+    "content_type": "text/html",
+    "body_len": 1714,
+    "body_snippet": "<!DOCTYPE html>\n<html>\n<head>\n  <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n  <noscript><meta http-equiv=\"refresh\" content=\"0; url=/exhkqyad\"></noscript>\n</head>\n<style>\n    .container {\n      display: flex;\n      align-content: center;\n      align-items: center;\n      justify-content: center;\n      flex-direction: column;\n      min-height: 100vh;\n    }\n    .load {\n      color: grey;\n      font-size: 3vh;\n    }\n    .spinner {\n      display: block;\n      background:  url('//servicepipe.ru/loaders/default.gif');\n      width: 64px;\n      height: 64px;\n    }\n</style>\n<body>\n  <div id=\"id_spinner\" class=\"container\"><div class=\"load\"></div><div class=\"spinner\"></div></div>\n  <div id=\"id_captcha_frame_div\" style=\"display: none;height: 100vh;\"></div>\n  <script type=\"text/javascript\" src=\"https://servicepipe.ru/static/jsrsasign-all-min.js\"></script>\n  <script type=\"text/javascript\">\n\nfunction get_cookie_spsn() {\n  return \"spsn=1781810848261_\";\n}\nfunction get_cookie_spid() {\n  return \"spid=1781810848261_a57df42cc1b8aa17c8b8cce34465a4a4_ntvp7b4t9st5kt66\";\n}\nfunction get_options() {\n  return JSON.parse('{\"kncdipiytd\":\"1781810848261_9008b72d4abba8222f35f210\",\"iamehkqlib\":\"3f48ffddd42c673b478d2dc419b9d9e8\",\"woprmswjtq\":32379,\"ojqqomaznz\":\"_7KrTUkkUiUaxgBCAic.86ZQWItqxN9bsJWjPkSrueTkZ\",\"bmdxprfwqa\":17,\"twdoonmfjr\":1,\"sauoqhgdwa\":false,\"is_captcha\":false,\"0hjsihgukl\":false}');\n}\nfunction get_location() {\n  return \"https://youdo.com/tasks-all-opened-all\";\n}\n\n  </script",
+    "is_json": false,
+    "json_keys": [],
+    "anti_bot_headers": {
+      "server": "nginx"
+    },
+    "error": null
+  },
+  "main_tasks_all_short": {
+    "url": "https://youdo.com/tasks-all",
+    "label": "direct/main_tasks_all_short",
+    "proxy": "direct",
+    "status": 200,
+    "content_type": "text/html",
+    "body_len": 1702,
+    "body_snippet": "<!DOCTYPE html>\n<html>\n<head>\n  <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n  <noscript><meta http-equiv=\"refresh\" content=\"0; url=/exhkqyad\"></noscript>\n</head>\n<style>\n    .container {\n      display: flex;\n      align-content: center;\n      align-items: center;\n      justify-content: center;\n      flex-direction: column;\n      min-height: 100vh;\n    }\n    .load {\n      color: grey;\n      font-size: 3vh;\n    }\n    .spinner {\n      display: block;\n      background:  url('//servicepipe.ru/loaders/default.gif');\n      width: 64px;\n      height: 64px;\n    }\n</style>\n<body>\n  <div id=\"id_spinner\" class=\"container\"><div class=\"load\"></div><div class=\"spinner\"></div></div>\n  <div id=\"id_captcha_frame_div\" style=\"display: none;height: 100vh;\"></div>\n  <script type=\"text/javascript\" src=\"https://servicepipe.ru/static/jsrsasign-all-min.js\"></script>\n  <script type=\"text/javascript\">\n\nfunction get_cookie_spsn() {\n  return \"spsn=1781810849165_\";\n}\nfunction get_cookie_spid() {\n  return \"spid=1781810849165_102fff378eeabd9c45fc40306b437721_etnc8lfgfxvb1c69\";\n}\nfunction get_options() {\n  return JSON.parse('{\"kncdipiytd\":\"1781810849165_53b9b59a6d53714bffe82cf1\",\"iamehkqlib\":\"fa36a0ac523299d698961333f0273e91\",\"woprmswjtq\":2162,\"ojqqomaznz\":\"_7KrTUkkUiUaxgBCAic.86ZQWItqxN9bsJWjPkSrueTkZ\",\"bmdxprfwqa\":17,\"twdoonmfjr\":1,\"sauoqhgdwa\":false,\"is_captcha\":false,\"0hjsihgukl\":false}');\n}\nfunction get_location() {\n  return \"https://youdo.com/tasks-all\";\n}\n\n  </script>\n  <script ",
+    "is_json": false,
+    "json_keys": [],
+    "anti_bot_headers": {
+      "server": "nginx"
+    },
+    "error": null
+  },
+  "freelance_home": {
+    "url": "https://freelance.youdo.com/",
+    "label": "direct/freelance_home",
+    "proxy": "direct",
+    "status": 200,
+    "content_type": "text/html",
+    "body_len": 1704,
+    "body_snippet": "<!DOCTYPE html>\n<html>\n<head>\n  <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n  <noscript><meta http-equiv=\"refresh\" content=\"0; url=/exhkqyad\"></noscript>\n</head>\n<style>\n    .container {\n      display: flex;\n      align-content: center;\n      align-items: center;\n      justify-content: center;\n      flex-direction: column;\n      min-height: 100vh;\n    }\n    .load {\n      color: grey;\n      font-size: 3vh;\n    }\n    .spinner {\n      display: block;\n      background:  url('//servicepipe.ru/loaders/default.gif');\n      width: 64px;\n      height: 64px;\n    }\n</style>\n<body>\n  <div id=\"id_spinner\" class=\"container\"><div class=\"load\"></div><div class=\"spinner\"></div></div>\n  <div id=\"id_captcha_frame_div\" style=\"display: none;height: 100vh;\"></div>\n  <script type=\"text/javascript\" src=\"https://servicepipe.ru/static/jsrsasign-all-min.js\"></script>\n  <script type=\"text/javascript\">\n\nfunction get_cookie_spsn() {\n  return \"spsn=1781810849540_\";\n}\nfunction get_cookie_spid() {\n  return \"spid=1781810849540_fbaf40ded904d81417cd0e81df4c3d29_1mavusaqijvurpim\";\n}\nfunction get_options() {\n  return JSON.parse('{\"kncdipiytd\":\"1781810849540_6d9843cd033e5b791a4228ee\",\"iamehkqlib\":\"abeee155352fd0c604e635c2450e830f\",\"woprmswjtq\":13795,\"ojqqomaznz\":\"_7KrTUkkUiUaxgBCAic.86ZQWItqxN9bsJWjPkSrueTkZ\",\"bmdxprfwqa\":17,\"twdoonmfjr\":1,\"sauoqhgdwa\":false,\"is_captcha\":false,\"0hjsihgukl\":false}');\n}\nfunction get_location() {\n  return \"https://freelance.youdo.com/\";\n}\n\n  </script>\n  <scrip",
+    "is_json": false,
+    "json_keys": [],
+    "anti_bot_headers": {
+      "server": "nginx"
+    },
+    "error": null
+  },
+  "robots_txt": {
+    "url": "https://youdo.com/robots.txt",
+    "label": "direct/robots_txt",
+    "proxy": "direct",
+    "status": 200,
+    "content_type": "text/plain",
+    "body_len": 354,
+    "body_snippet": "A� \u0000 �:�<׈�hL/�5Y����\u0002��\u0002��B\u001fc�f��o\u0005꽮IS�\u0002\u000bP�ce�\"��SY�\u0011�χ�/��\u0007HÔ�\u001c\u0004��9�j�C��*\n�Xyǝ���\f\u0006jg�\u0013�e�爅R\\� ���1���1�\u0006|��\u0004�n�.\u001c����F���3�k�Hl�`:��\b�_q�]x�\u000e�裞�\u0013(�\u001b!�C�\b�$�\u001e�#b�&� ��џ\u0011c�U�T�\u0002\u0017S�Y\u0011&��[X��S�pQi����\u0018|��20:�>D��G��(\"i�N��\u0012=�O\f�!1\"��\u0004v\u000b\u0004\b\u0010 @�\u0000\u0001A�\u0005���{\u0010�@?4I�l3��9m~\u0011��~{�\u0006W*\u000bl����\u001f\u0013�\u0018���a�������A5�\u0019a��>e&#Mn4�At���w�Sשᐎ�!�ڶ��*��\u0013�A�\u0003",
+    "is_json": false,
+    "json_keys": [],
+    "anti_bot_headers": {
+      "server": "nginx"
+    },
+    "error": null
+  },
+  "sitemap_xml": {
+    "url": "https://youdo.com/sitemap.xml",
+    "label": "direct/sitemap_xml",
+    "proxy": "direct",
+    "status": 404,
+    "content_type": "text/html; charset=utf-8",
+    "body_len": 18898,
+    "body_snippet": "�bl��\b{�j��(JZm\u000fW\u00190'�\u001e\u0000�J�m\u0006����b��ؽ\n��\r�����3[~��K�l6��N}z���44\u0003$dV�l=\u001b\u0005!9�\f8��_��d\u001f��L�q�P[;qł�A�Ԗ_�\fu\u000e�\u0007G:!ˠ`K\u001eɆ��\b��hb$��\u0012����mK�\u0012�\u001e�\u0003��d�S�Rժփ��ٽ��b�dW\u001f@�$�\u0001�\u0001@ʉEѓ��B�\u0017��\u000b�������)��Sȝ�.�)\u0011�������]��.��X�3�d�P\u0002\u0018f@������w\u0001r\u0016 ��BH �\u0012H�\u0010�wS�\u0014�\nRQ�ti\u0017�K���r���U�;�J�L�rex�\u00026�{���qD��u��U\u001a���g\u000efVxL\u0011�Ddeg�R���\u0011��\n���ņ\u000b��14k:�����\u0002!�ޙ\f��n��@�4������\u00045��Ε�\u000bkp�����ﬓ�W�R�S��B\u0010��pt~�BD�\u001e�\u0016����!\u0006��\t����1\u0002�LC\u001e�:E�EOۀ��_fp|6�<S}\u0000;E����ڑPU��d��\u0003�S�ju\tޜ��0Esj�\u0003P6���\u000b�G߁�yL\u0011b�T�\u0012\u0012�/h�3\u0015��:Y�Ue��\u001fa�i\u0018羶��'H\u001f4��ޑm���\u000e�\\?ҳ��\u0007�[~��\u0002a!���V�n��ѧ~Vϻ��!'{��s/������h\u0014��\u001fjj��y<��վ�h\u0013�V�a ���@��v��?��^\r韜�J��>j��C�\\�\"���\u001a������@��^�ah\r�s�3��P��g���\u0017�j\n�V���\u0006<�����\fne����qH\u00072�y�4�\\�rW\u0004\u0001\u0014�\u0018�9�nz\u0018�!u�\u001e\u0011��8b�\f��\n�*\t�Ɂ��?��a\tXG�wW\u000fd�����[�\t�`%�w\"�\u001d���@�\u0014�kqA\u0006��qݨD��5˨�\tm\u001a\r���a�I\u0003\u0012Y\f���\u001dJpyq4�)j4PV�\u0015v\b�)�N�Li\u0011�\u0004\u0007\u001bWJZ3\u0016ԪT=��<�O�])����*�\u001cj���ue���8�\u0014'���)�\u0003��]�-����J�gt�����-Ϟ�7�?�(f��\u0014?�\u0014\u000ba����;�\u000b:�����\u0016��\u0007\n��\f�# �b�:\u000f`��T~��c�f`������(��/�����ϋ\f��Z\u0003^��\f�\u0001��\u0010���%�C���L�.ɵ̥�C\u0018?-���^å\u0004�YZ0O�\u000e*.M\u0002RJ�\u0014�bN\u0019��x\nqx\tע\u001b\u0006�5�����/�4fL�ƥ\u001f�\u0002RVB9Z�fAv�\f��\u001c�~��H\u0018�Y�e$)��v�\u0010k�\b�\u0019��W\u0017�̒�!�l�j��{MRZ\u001aS��\u001c��/@�\u0004*�S�\u001c�6���'0W�\u0010��iέ��q�DWq!�\u0017� !��\u0000��_`:�0�g�Tz�b��ɽ�ġϒ(\t)��*{�dZ\u001d\u0014i\\v��]�W�~��4��(I\u0019�7��\u001b��L �,���(���m\u0006�wюs�4^�\u0012\u0006, >M�LK z�R�C�\b\u0013\fU��8-p\u0018�ϻ�A���8\u001f\b�6=���s���_��ٿ��Z��r��q2�����0�y���.���K�y������\u000e\u001c�D���?�\u0005�ť >�����o�Wi����~\u0006LT�\u0001���`�\u0012�Ū�\\\r������\u0006hi�#�\u0005��\u001fr+|�<�\u001d;q���j\u000e�W�g��7���?�ٛc��\\\u001e\u0001�v,<.+��\u0006^�R{J�:|��\u0001��>�y�*��o�Ŏ�\u001f�\r�6ϣ7u���I\u0011�VyξΓy�^�WU�L\u0005�dg�*�Y\u0011]�i�*�i$�\u0014-Ñ�Mu���\u0010�d�Ϗ�|�lgC�́�\u00186�´r\u001aeP�9�\u0016�&�UR����|J9",
+    "is_json": false,
+    "json_keys": [],
+    "anti_bot_headers": {
+      "server": "nginx"
+    },
+    "error": null
+  },
+  "api_v1_tasks": {
+    "url": "https://youdo.com/api/v1/tasks",
+    "label": "direct/api_v1_tasks",
+    "proxy": "direct",
+    "status": 404,
+    "content_type": "",
+    "body_len": 0,
+    "body_snippet": "",
+    "is_json": false,
+    "json_keys": [],
+    "anti_bot_headers": {
+      "server": "nginx"
+    },
+    "error": null
+  },
+  "api_tasks": {
+    "url": "https://youdo.com/api/tasks",
+    "label": "direct/api_tasks",
+    "proxy": "direct",
+    "status": 404,
+    "content_type": "",
+    "body_len": 0,
+    "body_snippet": "",
+    "is_json": false,
+    "json_keys": [],
+    "anti_bot_headers": {
+      "server": "nginx"
+    },
+    "error": null
+  },
+  "api_v2_tasks": {
+    "url": "https://youdo.com/api/v2/tasks",
+    "label": "direct/api_v2_tasks",
+    "proxy": "direct",
+    "status": 404,
+    "content_type": "",
+    "body_len": 0,
+    "body_snippet": "",
+    "is_json": false,
+    "json_keys": [],
+    "anti_bot_headers": {
+      "server": "nginx"
+    },
+    "error": null
+  },
+  "webapi_v1_tasks": {
+    "url": "https://youdo.com/webapi/v1/tasks",
+    "label": "direct/webapi_v1_tasks",
+    "proxy": "direct",
+    "status": 404,
+    "content_type": "text/html; charset=utf-8",
+    "body_len": 93566,
+    "body_snippet": "<!DOCTYPE html><html lang=\"ru\"><head><meta charSet=\"utf-8\" data-sentry-element=\"meta\" data-sentry-source-file=\"BaseHead.tsx\" data-next-head=\"\"/><meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=yes\" data-sentry-element=\"meta\" data-sentry-source-file=\"BaseHead.tsx\" data-next-head=\"\"/><meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge,chrome=1\" data-sentry-element=\"meta\" data-sentry-source-file=\"BaseHead.tsx\" data-next-head=\"\"/><meta name=\"msapplication-TileColor\" content=\"#da532c\" data-sentry-element=\"meta\" data-sentry-source-file=\"BaseHead.tsx\" data-next-head=\"\"/><meta name=\"theme-color\" content=\"#ffffff\" data-sentry-element=\"meta\" data-sentry-source-file=\"BaseHead.tsx\" data-next-head=\"\"/><meta name=\"description\" content=\"Сервис YouDo (Юду) поможет быстро найти надежных специалистов различных областей: курьеры, мастера по ремонту, клинеры, тренеры, репетиторы, мастера красоты и пр. – более 1 500 000 исполнителей.\" data-sentry-element=\"meta\" data-sentry-source-file=\"BaseHead.tsx\" data-next-head=\"\"/><meta property=\"fb:app_id\" content=\"141970832520341\" data-sentry-element=\"meta\" data-sentry-source-file=\"BaseHead.tsx\" data-next-head=\"\"/><link rel=\"preload\" href=\"https://assets.youdo.com/static/fonts/lato/lato-regular-youdo-main.woff2\" as=\"font\" type=\"font/woff2\" crossorigin=\"anonymous\" data-next-head=\"\"/><link rel=\"preload\" href=\"https://assets.youdo.com/static/fonts/lato/lato-black-youdo-main.woff2\" as=\"fon",
+    "is_json": false,
+    "json_keys": [],
+    "anti_bot_headers": {
+      "server": "nginx"
+    },
+    "error": null
+  },
+  "api_tasks_list": {
+    "url": "https://youdo.com/api/tasks/list",
+    "label": "direct/api_tasks_list",
+    "proxy": "direct",
+    "status": 404,
+    "content_type": "",
+    "body_len": 0,
+    "body_snippet": "",
+    "is_json": false,
+    "json_keys": [],
+    "anti_bot_headers": {
+      "server": "nginx"
+    },
+    "error": null
+  },
+  "api_tasks_opened_p1": {
+    "url": "https://youdo.com/api/v1/tasks/?page=1&status=opened",
+    "label": "direct/api_tasks_opened_p1",
+    "proxy": "direct",
+    "status": 404,
+    "content_type": "",
+    "body_len": 0,
+    "body_snippet": "",
+    "is_json": false,
+    "json_keys": [],
+    "anti_bot_headers": {
+      "server": "nginx"
+    },
+    "error": null
+  },
+  "api_tasks_paged": {
+    "url": "https://youdo.com/api/v1/tasks?page=1&limit=20",
+    "label": "direct/api_tasks_paged",
+    "proxy": "direct",
+    "status": 404,
+    "content_type": "",
+    "body_len": 0,
+    "body_snippet": "",
+    "is_json": false,
+    "json_keys": [],
+    "anti_bot_headers": {
+      "server": "nginx"
+    },
+    "error": null
+  },
+  "api_tasks_search": {
+    "url": "https://youdo.com/api/v1/tasks/search",
+    "label": "direct/api_tasks_search",
+    "proxy": "direct",
+    "status": 404,
+    "content_type": "",
+    "body_len": 0,
+    "body_snippet": "",
+    "is_json": false,
+    "json_keys": [],
+    "anti_bot_headers": {
+      "server": "nginx"
+    },
+    "error": null
+  },
+  "graphql": {
+    "url": "https://youdo.com/graphql",
+    "label": "direct/graphql",
+    "proxy": "direct",
+    "status": 404,
+    "content_type": "text/html; charset=utf-8",
+    "body_len": 93573,
+    "body_snippet": "<!DOCTYPE html><html lang=\"ru\"><head><meta charSet=\"utf-8\" data-sentry-element=\"meta\" data-sentry-source-file=\"BaseHead.tsx\" data-next-head=\"\"/><meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=yes\" data-sentry-element=\"meta\" data-sentry-source-file=\"BaseHead.tsx\" data-next-head=\"\"/><meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge,chrome=1\" data-sentry-element=\"meta\" data-sentry-source-file=\"BaseHead.tsx\" data-next-head=\"\"/><meta name=\"msapplication-TileColor\" content=\"#da532c\" data-sentry-element=\"meta\" data-sentry-source-file=\"BaseHead.tsx\" data-next-head=\"\"/><meta name=\"theme-color\" content=\"#ffffff\" data-sentry-element=\"meta\" data-sentry-source-file=\"BaseHead.tsx\" data-next-head=\"\"/><meta name=\"description\" content=\"Сервис YouDo (Юду) поможет быстро найти надежных специалистов различных областей: курьеры, мастера по ремонту, клинеры, тренеры, репетиторы, мастера красоты и пр. – более 1 500 000 исполнителей.\" data-sentry-element=\"meta\" data-sentry-source-file=\"BaseHead.tsx\" data-next-head=\"\"/><meta property=\"fb:app_id\" content=\"141970832520341\" data-sentry-element=\"meta\" data-sentry-source-file=\"BaseHead.tsx\" data-next-head=\"\"/><link rel=\"preload\" href=\"https://assets.youdo.com/static/fonts/lato/lato-regular-youdo-main.woff2\" as=\"font\" type=\"font/woff2\" crossorigin=\"anonymous\" data-next-head=\"\"/><link rel=\"preload\" href=\"https://assets.youdo.com/static/fonts/lato/lato-black-youdo-main.woff2\" as=\"fon",
+    "is_json": false,
+    "json_keys": [],
+    "anti_bot_headers": {
+      "server": "nginx"
+    },
+    "error": null
+  },
+  "tasks_cat_it": {
+    "url": "https://youdo.com/tasks-all-opened-all?category=it",
+    "label": "direct/tasks_cat_it",
+    "proxy": "direct",
+    "status": 200,
+    "content_type": "text/html",
+    "body_len": 1726,
+    "body_snippet": "<!DOCTYPE html>\n<html>\n<head>\n  <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n  <noscript><meta http-equiv=\"refresh\" content=\"0; url=/exhkqyad\"></noscript>\n</head>\n<style>\n    .container {\n      display: flex;\n      align-content: center;\n      align-items: center;\n      justify-content: center;\n      flex-direction: column;\n      min-height: 100vh;\n    }\n    .load {\n      color: grey;\n      font-size: 3vh;\n    }\n    .spinner {\n      display: block;\n      background:  url('//servicepipe.ru/loaders/default.gif');\n      width: 64px;\n      height: 64px;\n    }\n</style>\n<body>\n  <div id=\"id_spinner\" class=\"container\"><div class=\"load\"></div><div class=\"spinner\"></div></div>\n  <div id=\"id_captcha_frame_div\" style=\"display: none;height: 100vh;\"></div>\n  <script type=\"text/javascript\" src=\"https://servicepipe.ru/static/jsrsasign-all-min.js\"></script>\n  <script type=\"text/javascript\">\n\nfunction get_cookie_spsn() {\n  return \"spsn=1781810860620_\";\n}\nfunction get_cookie_spid() {\n  return \"spid=1781810860620_aac8807f824beda998ba9fcd378e4e3b_nhcol1xfqcai3m5m\";\n}\nfunction get_options() {\n  return JSON.parse('{\"kncdipiytd\":\"1781810860620_df2f35e306ffa961774656b4\",\"iamehkqlib\":\"17598947fc9a6971f26548428a96331a\",\"woprmswjtq\":19606,\"ojqqomaznz\":\"_7KrTUkkUiUaxgBCAic.86ZQWItqxN9bsJWjPkSrueTkZ\",\"bmdxprfwqa\":17,\"twdoonmfjr\":1,\"sauoqhgdwa\":false,\"is_captcha\":false,\"0hjsihgukl\":false}');\n}\nfunction get_location() {\n  return \"https://youdo.com/tasks-all-opened-all?category=it\";\n}",
+    "is_json": false,
+    "json_keys": [],
+    "anti_bot_headers": {
+      "server": "nginx"
+    },
+    "error": null
+  },
+  "post_tasks-all-opened-all": {
+    "url": "https://youdo.com/tasks-all-opened-all",
+    "label": "post/tasks-all-opened-all",
+    "proxy": "direct",
+    "status": 200,
+    "content_type": "text/html; charset=utf-8",
+    "body_len": 183325,
+    "body_snippet": "<!DOCTYPE html><html lang=\"ru\"><head><meta charSet=\"utf-8\" data-sentry-element=\"meta\" data-sentry-source-file=\"BaseHead.tsx\" data-next-head=\"\"/><meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=yes\" data-sentry-element=\"meta\" data-sentry-source-file=\"BaseHead.tsx\" data-next-head=\"\"/><meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge,chrome=1\" data-sentry-element=\"meta\" data-sentry-source-file=\"BaseHead.tsx\" data-next-head=\"\"/><meta name=\"msapplication-TileColor\" content=\"#da532c\" data-sentry-element=\"meta\" data-sentry-source-file=\"BaseHead.tsx\" data-next-head=\"\"/><meta name=\"theme-color\" content=\"#ffffff\" data-sentry-element=\"meta\" data-sentry-source-file=\"BaseHead.tsx\" data-next-head=\"\"/><meta property=\"fb:app_id\" content=\"141970832520341\" data-sentry-element=\"meta\" data-sentry-source-file=\"BaseHead.tsx\" data-next-head=\"\"/><link rel=\"preload\" href=\"https://assets.youdo.com/static/fonts/lato/lato-regular-youdo-main.woff2\" as=\"font\" type=\"font/woff2\" crossorigin=\"anonymous\" data-next-head=\"\"/><link rel=\"preload\" href=\"https://assets.youdo.com/static/fonts/lato/lato-black-youdo-main.woff2\" as=\"font\" type=\"font/woff2\" crossorigin=\"anonymous\" data-next-head=\"\"/><link rel=\"preload\" href=\"https://assets.youdo.com/static/fonts/lato/lato-bold-youdo-main.woff2\" as=\"font\" type=\"font/woff2\" crossorigin=\"anonymous\" data-next-head=\"\"/><link rel=\"apple-touch-icon\" sizes=\"180x180\" href=\"/static/apple-touch-icon.png\" da",
+    "is_json": false,
+    "json_keys": [],
+    "anti_bot_headers": {
+      "server": "nginx"
+    },
+    "error": null
+  },
+  "post_tasks": {
+    "url": "https://youdo.com/api/v1/tasks",
+    "label": "post/tasks",
+    "proxy": "direct",
+    "status": 404,
+    "content_type": "",
+    "body_len": 0,
+    "body_snippet": "",
+    "is_json": false,
+    "json_keys": [],
+    "anti_bot_headers": {
+      "server": "nginx"
+    },
+    "error": null
+  }
+}

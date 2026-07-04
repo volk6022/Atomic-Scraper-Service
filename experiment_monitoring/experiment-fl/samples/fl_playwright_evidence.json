@@ -1,0 +1,93 @@
+{
+  "url": "https://www.fl.ru/projects/category/ai-iskusstvenniy-intellekt/",
+  "headless": true,
+  "proxy_used": false,
+  "projects_count": 30,
+  "projects_sample": [
+    {
+      "id": "5510124",
+      "title": "Установить ИИ Cloude на компьютер",
+      "budget": "",
+      "link": "https://www.fl.ru/projects/5510124/ustanovit-ii-cloude-na-kompyuter.html",
+      "_source": "dom"
+    },
+    {
+      "id": "5508757",
+      "title": "AI-ассистент/ SMM",
+      "budget": "",
+      "link": "https://www.fl.ru/projects/5508757/ai-assistent--smm.html",
+      "_source": "dom"
+    },
+    {
+      "id": "5510095",
+      "title": "Сгенерировать видеоролик длительность до 15 секунд",
+      "budget": "",
+      "link": "https://www.fl.ru/projects/5510095/sgenerirovat-videorolik-dlitelnost-do-15-sekund.html",
+      "_source": "dom"
+    },
+    {
+      "id": "5510040",
+      "title": "Настройка подключения Claude Code.",
+      "budget": "",
+      "link": "https://www.fl.ru/projects/5510040/nastroyka-podklyucheniya-claude-code-.html",
+      "_source": "dom"
+    },
+    {
+      "id": "5510020",
+      "title": "Создание вирусных AI-видео для TikTok / Reels под ключ",
+      "budget": "",
+      "link": "https://www.fl.ru/projects/5510020/sozdanie-virusnyih-ai-video-dlya-tiktok---reels-pod-klyuch.html",
+      "_source": "dom"
+    },
+    {
+      "id": "5509868",
+      "title": "Начинающий вайбкодер",
+      "budget": "",
+      "link": "https://www.fl.ru/projects/5509868/nachinayuschiy-vaybkoder.html",
+      "_source": "dom"
+    },
+    {
+      "id": "5509386",
+      "title": "AI-разработчик (Python/Go) — автоматизация в AdTech",
+      "budget": "",
+      "link": "https://www.fl.ru/projects/5509386/ai-razrabotchik-python-go--avtomatizatsiya-v-adtech.html",
+      "_source": "dom"
+    },
+    {
+      "id": "5509781",
+      "title": "Настройка простой системы Karpathy's LLM Wiki: база знаний в Obsidian в связке с моими LLM",
+      "budget": "",
+      "link": "https://www.fl.ru/projects/5509781/nastroyka-prostoy-sistemyi-karpathys-llm-wiki-baza-znaniy-v-obsidian-v-svyazke-s-moimi-llm.html",
+      "_source": "dom"
+    },
+    {
+      "id": "5509776",
+      "title": "Создание AI-мультфильмов",
+      "budget": "",
+      "link": "https://www.fl.ru/projects/5509776/sozdanie-ai-multfilmov.html",
+      "_source": "dom"
+    },
+    {
+      "id": "5509771",
+      "title": "AL – разработчик",
+      "budget": "",
+      "link": "https://www.fl.ru/projects/5509771/al---razrabotchik.html",
+      "_source": "dom"
+    }
+  ],
+  "xhr_requests": [
+    "https://mc.yandex.ru/watch/6051055/1?wmode=7&page-url=https%3A%2F%2Fwww.fl.ru%2Fprojects%2Fcategory%2Fai-iskusstvenniy-intellekt%2F&charset=utf-8&uah=che%0A0&browser-info=pv%3A1%3Avf%3Apupr1nz2snmtoqrshzj5yg66c90wv%3Afu%3A0%3Aen%3Autf-8%3Ala%3Aru-RU%3Av%3A2550%3Acn%3A1%3Adp%3A0%3Als%3A124882967237%3Ahid%3A898271272%3Az%3A180%3Ai%3A20260618170916%3Aet%3A1781791757%3Ac%3A1%3Arn%3A925159323%3Arqn%3A1%3Au%3A1781791757383756162%3Aw%3A1366x768%3As%3A1366x768x24%3Ask%3A1%3Afp%3A4000%3Awv%3A2%3Ads%3A2%2C31%2C3432%2C15%2C0%2C0%2C%2C893%2C83%2C%2C%2C%2C4378%3Aco%3A0%3Acpf%3A1%3Ans%3A1781791752152%3Arqnl%3A1%3Ast%3A1781791757%3At%3A%E2%AD%90%D0%A3%D0%B4%D0%B0%D0%BB%D0%B5%D0%BD%D0%BD%D0%B0%D1%8F%20%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%20%D1%81%20AI%20%E2%80%94%20%D0%B8%D1%81%D0%BA%D1%83%D1%81%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D1%8B%D0%BC%20%D0%B8%D0%BD%D1%82%D0%B5%D0%BB%D0%BB%D0%B5%D0%BA%D1%82%D0%BE%D0%BC&t=clt%28136%29gdpr%2814%29clc%280-0-0%29rqnt%281%29aw%281%29rcm%281%29cdl%28na%29eco%2842271252%29ti%281%29&redirnss=1",
+    "https://st.fl.ru/assets/icons.fb17db605c359621352740dfd77a403c.svg",
+    "https://mc.yandex.ru/watch/6051055?wmode=7&page-url=https%3A%2F%2Fwww.fl.ru%2Fprojects%2Fcategory%2Fai-iskusstvenniy-intellekt%2F&charset=utf-8&uah=che%0A0&browser-info=pv%3A1%3Avf%3Apupr1nz2snmtoqrshzj5yg66c90wv%3Afu%3A0%3Aen%3Autf-8%3Ala%3Aru-RU%3Av%3A2550%3Acn%3A1%3Adp%3A0%3Als%3A124882967237%3Ahid%3A898271272%3Az%3A180%3Ai%3A20260618170916%3Aet%3A1781791757%3Ac%3A1%3Arn%3A925159323%3Arqn%3A1%3Au%3A1781791757383756162%3Aw%3A1366x768%3As%3A1366x768x24%3Ask%3A1%3Afp%3A4000%3Awv%3A2%3Ads%3A2%2C31%2C3432%2C15%2C0%2C0%2C%2C893%2C83%2C%2C%2C%2C4378%3Aco%3A0%3Acpf%3A1%3Ans%3A1781791752152%3Arqnl%3A1%3Ast%3A1781791757%3At%3A%E2%AD%90%D0%A3%D0%B4%D0%B0%D0%BB%D0%B5%D0%BD%D0%BD%D0%B0%D1%8F%20%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%20%D1%81%20AI%20%E2%80%94%20%D0%B8%D1%81%D0%BA%D1%83%D1%81%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D1%8B%D0%BC%20%D0%B8%D0%BD%D1%82%D0%B5%D0%BB%D0%BB%D0%B5%D0%BA%D1%82%D0%BE%D0%BC&t=clt(136)gdpr(14)clc(0-0-0)rqnt(1)aw(1)rcm(1)cdl(na)eco(42271252)ti(1)",
+    "https://www.fl.ru/countries/"
+  ],
+  "xhr_json_responses": [
+    {
+      "url": "https://mc.yandex.ru/watch/6051055/1?wmode=7&page-url=https%3A%2F%2Fwww.fl.ru%2Fprojects%2Fcategory%2Fai-iskusstvenniy-intellekt%2F&charset=utf-8&uah=che%0A0&browser-info=pv%3A1%3Avf%3Apupr1nz2snmtoqrshzj5yg66c90wv%3Afu%3A0%3Aen%3Autf-8%3Ala%3Aru-RU%3Av%3A2550%3Acn%3A1%3Adp%3A0%3Als%3A124882967237%3Ahid%3A898271272%3Az%3A180%3Ai%3A20260618170916%3Aet%3A1781791757%3Ac%3A1%3Arn%3A925159323%3Arqn%3A1%3Au%3A1781791757383756162%3Aw%3A1366x768%3As%3A1366x768x24%3Ask%3A1%3Afp%3A4000%3Awv%3A2%3Ads%3A2%2C31%2C3432%2C15%2C0%2C0%2C%2C893%2C83%2C%2C%2C%2C4378%3Aco%3A0%3Acpf%3A1%3Ans%3A1781791752152%3Arqnl%3A1%3Ast%3A1781791757%3At%3A%E2%AD%90%D0%A3%D0%B4%D0%B0%D0%BB%D0%B5%D0%BD%D0%BD%D0%B0%D1%8F%20%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%20%D1%81%20AI%20%E2%80%94%20%D0%B8%D1%81%D0%BA%D1%83%D1%81%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D1%8B%D0%BC%20%D0%B8%D0%BD%D1%82%D0%B5%D0%BB%D0%BB%D0%B5%D0%BA%D1%82%D0%BE%D0%BC&t=clt%28136%29gdpr%2814%29clc%280-0-0%29rqnt%281%29aw%281%29rcm%281%29cdl%28na%29eco%2842271252%29ti%281%29&redirnss=1",
+      "status": 200,
+      "body_trimmed": "{\"settings\":{\"auto_goals\":0,\"button_goals\":0,\"c_recp\":\"1.00000\",\"form_goals\":0,\"pcs\":\"1\",\"webvisor\":{\"ad_recp\":\"1.00000\",\"arch_type\":\"none\",\"date\":\"2026-06-15 12:30:26\",\"forms\":1,\"recp\":\"1.00000\"},\"sbp\": {\"a\":\"qhsKANPtmB8BBBkHTd4aS6n5oodc1GxoPLHbP+igkYydbsWjP3BGiUF1sN+CsOXJ\", \"b\":\"iSx6nrV/xXYRRxnOPt3EfiFwZM4htJOoKx+yns7r7dZFILPOk94ptzld1UkgwYjM\"},\"eu\":0,\"nss\":1,\"hittoken\":\"1781791758_5952d68c21ff483dfab59b58cf5786b4cc64c4ea158ed244dfc16ba7a19d05b7\",\"wstoken\":\"11066.y0i0UXBQDmbdD-DSJHFnsiAzIQieQ0wKGBYgBOi-CyQRLxnzPGIdMVyCSAUZX4CGCXBI8jAVhqXpAXnuVW7U4g,,.rs5CVHJs-u_iMuzRqKHkX1hkfJk,\",\"ev\":{\"pvt\":1781791758},\"hidv2\":\"3388095415357276294\",\"ymclid\":\"3388095415357276294\"},\"userData\":{}}"
+    }
+  ],
+  "anti_bot_verdict": "REAL-CONTENT",
+  "stealth_applied_to_context": true
+}

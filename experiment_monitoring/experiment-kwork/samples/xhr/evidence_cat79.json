@@ -1,0 +1,402 @@
+{
+  "params": {
+    "c": "79"
+  },
+  "total": 3,
+  "last_page": 1,
+  "per_page": 12,
+  "current_page": 1,
+  "projects_count": 3,
+  "projects": [
+    {
+      "userAlreadyWork": null,
+      "dateView": null,
+      "id": 3200173,
+      "status": "active",
+      "wantDates": {
+        "dateCreate": "18 июня",
+        "dateActive": "18 июня",
+        "dateExpire": "20 июня",
+        "dateReject": ""
+      },
+      "isWantActive": true,
+      "isWantArchive": false,
+      "altStatusHint": {
+        "color": "blue",
+        "title": "Сбор предложений"
+      },
+      "getReviewCanChange": false,
+      "wantGetSumOrderCount": 0,
+      "projectReviewType": 2,
+      "wantUserGetProfileUrl": "https://kwork.ru/user/alexsmedia",
+      "possiblePriceLimit": 7000,
+      "getWantsActiveCount": "1",
+      "isHigherPrice": false,
+      "category_id": "79",
+      "description": "Нужна адаптивная верстка Лендинга из макета фигма\r\nДизайн приложил\r\nБолее подробное тз по эффектам скину в тз но по большей части все понятно",
+      "files": [
+        {
+          "FID": 391856767,
+          "USERID": "107674",
+          "type_entity": 54,
+          "entity_id": "3200173",
+          "fname": "MOB Главная.png",
+          "s": "00/d3/f3/c33e501454",
+          "size": 1213374,
+          "time": "1781773032",
+          "lang": "ru",
+          "status": "active",
+          "storage": "s3",
+          "miniature_status": "created",
+          "miniature_creating_attempts": "1",
+          "permanent": "0",
+          "mime_type_id": "1",
+          "sort_index": "0",
+          "url": "https://kwork.ru/files/uploaded/00/d3/f3/c33e501454/MOB%20%D0%93%D0%BB%D0%B0%D0%B2%D0%BD%D0%B0%D1%8F.png",
+          "file_image_representation": null
+        },
+        {
+          "FID": 391856775,
+          "USERID": "107674",
+          "type_entity": 54,
+          "entity_id": "3200173",
+          "fname": "PC Главная (1).png",
+          "s": "80/64/ab/7c1a43008e",
+          "size": 8245945,
+          "time": "1781773036",
+          "lang": "ru",
+          "status": "active",
+          "storage": "s3",
+          "miniature_status": "none",
+          "miniature_creating_attempts": "0",
+          "permanent": "0",
+          "mime_type_id": "1",
+          "sort_index": "0",
+          "url": "https://kwork.ru/files/uploaded/80/64/ab/7c1a43008e/PC%20%D0%93%D0%BB%D0%B0%D0%B2%D0%BD%D0%B0%D1%8F%20%281%29.png",
+          "file_image_representation": null
+        }
+      ],
+      "kwork_count": 80,
+      "lang": "ru",
+      "name": "Верстка Landing Page",
+      "max_days": "10",
+      "priceLimit": "7000.00",
+      "user": {
+        "USERID": 107674,
+        "username": "alexsmedia",
+        "profilepicture": "noprofilepicture.gif",
+        "profilePictureSrcSet": "",
+        "badges": [
+          {
+            "id": 1579234,
+            "user_id": "107674",
+            "badge_id": "7",
+            "date_create": "2024-03-21 16:35:36",
+            "badge": {
+              "id": 7,
+              "title": "Мега Покупатель",
+              "description": "",
+              "super_title": "",
+              "super_description": "",
+              "payer_level": null,
+              "is_super_payer": false,
+              "sort": "1"
+            }
+          },
+          {
+            "id": 568211,
+            "user_id": "107674",
+            "badge_id": "17",
+            "date_create": "2021-05-21 15:45:42",
+            "badge": {
+              "id": 17,
+              "title": "Очень мощный покупатель",
+              "description": "Сделано более 100 покупок",
+              "super_title": "Очень мощный суперпокупатель",
+              "super_description": "Сделано более 100 покупок и не менее 12 покупок за последние 3 месяца.",
+              "payer_level": 5,
+              "is_super_payer": false,
+              "sort": "1"
+            }
+          },
+          {
+            "id": 1061058,
+            "user_id": "107674",
+            "badge_id": "42",
+            "date_create": "2023-10-09 10:08:56",
+            "badge": {
+              "id": 42,
+              "title": "Более 5 лет с Kwork",
+              "description": "",
+              "super_title": null,
+              "super_description": null,
+              "payer_level": null,
+              "is_super_payer": false,
+              "sort": "0"
+            }
+          }
+        ],
+        "data": {
+          "wants_count": "254",
+          "wants_hired_percent": "57"
+        }
+      },
+      "date_active": "2026-06-18 11:58:29",
+      "date_expire": "2026-06-20 11:58:29",
+      "date_create": "2026-06-18 11:58:29",
+      "views_dirty": "550",
+      "isUserWant": false,
+      "alreadyWork": null,
+      "isOtherActiveWantsExceptByWantId": false,
+      "timeLeft": "1 д. 18 ч.",
+      "currentUserReviewType": null,
+      "hasPortfolioAvailable": true,
+      "isNeural": false,
+      "orderManagerStatusDone": 5,
+      "availableDurations": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        10,
+        14,
+        21,
+        30,
+        45,
+        60,
+        75,
+        90
+      ],
+      "categoryLinksIdRu": 59,
+      "getPriceThreshold": 4000
+    },
+    {
+      "userAlreadyWork": null,
+      "dateView": null,
+      "id": 3200088,
+      "status": "active",
+      "wantDates": {
+        "dateCreate": "18 июня",
+        "dateActive": "18 июня",
+        "dateExpire": "20 июня",
+        "dateReject": ""
+      },
+      "isWantActive": true,
+      "isWantArchive": false,
+      "altStatusHint": {
+        "color": "blue",
+        "title": "Сбор предложений"
+      },
+      "getReviewCanChange": false,
+      "wantGetSumOrderCount": 0,
+      "projectReviewType": 2,
+      "wantUserGetProfileUrl": "https://kwork.ru/user/sib-target",
+      "possiblePriceLimit": 15000,
+      "getWantsActiveCount": "1",
+      "isHigherPrice": true,
+      "category_id": "79",
+      "description": "Необходимо сверстать и интегрировать в WordPress посадочную страницу по готовому макету Figma.\r\nЧто нужно сделать:\r\n- Сверстать страницу с максимально точным соблюдением дизайна.\r\n- Реализовать адаптивную верстку для десктопа, планшетов и мобильных устройств.\r\n- Интегрировать страницу в WordPress в виде отдельного шаблона.\r\n- Вывести весь редактируемый контент через ACF, чтобы можно было самостоятельно менять тексты, изображения и списки через админ-панель.\r\n- Реализовать интерактивные элементы, предусмотренные макетом (FAQ-аккордеон, мобильное меню, слайдер и др.).\r\n- Обеспечить корректную работу в современных браузерах.\r\nТехнические требования:\r\n- WordPress.\r\n- Кастомная разработка без использования Elementor, Divi, WPBakery и других визуальных конструкторов.\r\n- Использование ACF для управления контентом.\r\n- Чистый HTML/CSS/JavaScript без лишних зависимостей.\r\n- Понятный и структурированный код.\r\nПредоставлю:\r\n- Макет в Figma.\r\n- Доступ к WordPress или чистую установку.\r\n- Комментарии по логике отдельных блоков при необходимости.\r\nВ отклике прошу указать:\r\n- Примеры выполненных проектов на WordPress без конструкторов.\r\n- Срок выполнения.\r\n- Стоимость работ.\r\n- Какие плагины и подходы планируете использовать.\r\n- Готовность внести небольшие правки после сдачи проекта.",
+      "files": [
+        {
+          "FID": 391840975,
+          "USERID": "21982468",
+          "type_entity": 54,
+          "entity_id": "3200088",
+          "fname": "Лаборатория1440.jpg",
+          "s": "50/49/e1/a85192a951",
+          "size": 929422,
+          "time": "1781766855",
+          "lang": "ru",
+          "status": "active",
+          "storage": "s3",
+          "miniature_status": "none",
+          "miniature_creating_attempts": "0",
+          "permanent": "0",
+          "mime_type_id": "5",
+          "sort_index": "0",
+          "url": "https://kwork.ru/files/uploaded/50/49/e1/a85192a951/%D0%9B%D0%B0%D0%B1%D0%BE%D1%80%D0%B0%D1%82%D0%BE%D1%80%D0%B8%D1%8F1440.jpg",
+          "file_image_representation": null
+        },
+        {
+          "FID": 391840993,
+          "USERID": "21982468",
+          "type_entity": 54,
+          "entity_id": "3200088",
+          "fname": "Лаборатория-375.jpg",
+          "s": "18/90/7a/5bf8b70899",
+          "size": 773018,
+          "time": "1781766865",
+          "lang": "ru",
+          "status": "active",
+          "storage": "s3",
+          "miniature_status": "created",
+          "miniature_creating_attempts": "1",
+          "permanent": "0",
+          "mime_type_id": "5",
+          "sort_index": "0",
+          "url": "https://kwork.ru/files/uploaded/18/90/7a/5bf8b70899/%D0%9B%D0%B0%D0%B1%D0%BE%D1%80%D0%B0%D1%82%D0%BE%D1%80%D0%B8%D1%8F-375.jpg",
+          "file_image_representation": null
+        }
+      ],
+      "kwork_count": 29,
+      "lang": "ru",
+      "name": "Перенос макета из Figma на WordPress",
+      "max_days": "10",
+      "priceLimit": "5000.00",
+      "user": {
+        "USERID": 21982468,
+        "username": "Sib-Target",
+        "profilepicture": "28/21982468-4.jpg",
+        "profilePictureSrcSet": "https://cdn-edge.kwork.ru/files/avatar/big/28/21982468-4.jpg 1x, https://cdn-edge.kwork.ru/files/avatar/big_r/28/21982468-4.jpg 2x",
+        "badges": [
+          {
+            "id": 1999339,
+            "user_id": "21982468",
+            "badge_id": "25",
+            "date_create": "2026-01-29 11:02:51",
+            "badge": {
+              "id": 25,
+              "title": "Большой шаг вперед - 3 покупки на Kwork!",
+              "description": "Начисляется когда покупатель завершил 3 покупки",
+              "super_title": "",
+              "super_description": null,
+              "payer_level": null,
+              "is_super_payer": false,
+              "sort": "1"
+            }
+          }
+        ],
+        "data": {
+          "wants_count": "2",
+          "wants_hired_percent": "100"
+        }
+      },
+      "date_active": "2026-06-18 10:48:35",
+      "date_expire": "2026-06-20 10:48:35",
+      "date_create": "2026-06-18 10:17:55",
+      "views_dirty": "502",
+      "isUserWant": false,
+      "alreadyWork": null,
+      "isOtherActiveWantsExceptByWantId": false,
+      "timeLeft": "1 д. 17 ч.",
+      "currentUserReviewType": null,
+      "hasPortfolioAvailable": true,
+      "isNeural": false,
+      "orderManagerStatusDone": 5,
+      "availableDurations": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        10,
+        14,
+        21,
+        30,
+        45,
+        60,
+        75,
+        90
+      ],
+      "categoryLinksIdRu": 59,
+      "getPriceThreshold": 4000
+    },
+    {
+      "userAlreadyWork": null,
+      "dateView": null,
+      "id": 3199248,
+      "status": "active",
+      "wantDates": {
+        "dateCreate": "17 июня",
+        "dateActive": "17 июня",
+        "dateExpire": "19 июня",
+        "dateReject": ""
+      },
+      "isWantActive": true,
+      "isWantArchive": false,
+      "altStatusHint": {
+        "color": "blue",
+        "title": "В работе"
+      },
+      "getReviewCanChange": false,
+      "wantGetSumOrderCount": 1,
+      "projectReviewType": null,
+      "wantUserGetProfileUrl": "https://kwork.ru/user/electronicssolution",
+      "possiblePriceLimit": 15000,
+      "getWantsActiveCount": "1",
+      "isHigherPrice": true,
+      "category_id": "79",
+      "description": "Нужно сверстать сайт, есть дизайн FIGMA. \r\nАдаптация под мобильные и планшеты.\r\nP.S. Доступ открыл, сначала смотрите дизайн, потом откликайтесь.\r\nНа вопросы отвечу.\r\nСсылка на дизайн: https://www.figma.com/design/Rvr2OqPO2dtOSoDFbJgkyQ/EC-website?node-id=0-1&amp;p=f&amp;t=IFcr8I2XOuqNFN7S-0",
+      "files": [],
+      "kwork_count": 86,
+      "lang": "ru",
+      "name": "Сверстать сайт по дизайну FIGMA",
+      "max_days": "10",
+      "priceLimit": "5000.00",
+      "user": {
+        "USERID": 9868849,
+        "username": "ElectronicsSolution",
+        "profilepicture": "06/9868849-1.jpg",
+        "profilePictureSrcSet": "https://cdn-edge.kwork.ru/files/avatar/big/06/9868849-1.jpg 1x, https://cdn-edge.kwork.ru/files/avatar/big_r/06/9868849-1.jpg 2x",
+        "badges": [
+          {
+            "id": 721244,
+            "user_id": "9868849",
+            "badge_id": "14",
+            "date_create": "2022-04-23 10:46:06",
+            "badge": {
+              "id": 14,
+              "title": "Освоившийся покупатель",
+              "description": "Сделано более 7 покупок",
+              "super_title": "Освоившийся суперпокупатель",
+              "super_description": "Сделано более 7 покупок  и не менее 12 покупок за последние 3 месяца.",
+              "payer_level": 2,
+              "is_super_payer": false,
+              "sort": "1"
+            }
+          }
+        ],
+        "data": {
+          "wants_count": "9",
+          "wants_hired_percent": "100"
+        }
+      },
+      "date_active": "2026-06-17 08:24:06",
+      "date_expire": "2026-06-19 07:47:26",
+      "date_create": "2026-06-17 07:47:17",
+      "views_dirty": "933",
+      "isUserWant": false,
+      "alreadyWork": null,
+      "isOtherActiveWantsExceptByWantId": false,
+      "timeLeft": "14 ч. 28 мин.",
+      "currentUserReviewType": null,
+      "hasPortfolioAvailable": true,
+      "isNeural": false,
+      "orderManagerStatusDone": 5,
+      "availableDurations": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        10,
+        14,
+        21,
+        30,
+        45,
+        60,
+        75,
+        90
+      ],
+      "categoryLinksIdRu": 59,
+      "getPriceThreshold": 4000
+    }
+  ]
+}

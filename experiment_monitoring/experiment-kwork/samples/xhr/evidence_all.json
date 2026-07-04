@@ -1,0 +1,1262 @@
+{
+  "params": {},
+  "total": 494,
+  "last_page": 42,
+  "per_page": 12,
+  "current_page": 1,
+  "projects_count": 12,
+  "projects": [
+    {
+      "userAlreadyWork": null,
+      "dateView": null,
+      "id": 3200484,
+      "status": "active",
+      "wantDates": {
+        "dateCreate": "18 июня",
+        "dateActive": "18 июня",
+        "dateExpire": "19 июня",
+        "dateReject": ""
+      },
+      "isWantActive": true,
+      "isWantArchive": false,
+      "altStatusHint": {
+        "color": "blue",
+        "title": "Сбор предложений"
+      },
+      "getReviewCanChange": false,
+      "wantGetSumOrderCount": 0,
+      "projectReviewType": null,
+      "wantUserGetProfileUrl": "https://kwork.ru/user/valentinche13",
+      "possiblePriceLimit": 3000,
+      "getWantsActiveCount": "1",
+      "isHigherPrice": true,
+      "category_id": "38",
+      "description": "Добрый день, нужно сделать простую интеграцию сайта услуг на modx с crm битрикс. Просто передавать заявки с сайта в crm",
+      "files": [],
+      "kwork_count": 3,
+      "lang": "ru",
+      "name": "Интегрировать сайт на modx с crm битрикс",
+      "max_days": "10",
+      "priceLimit": "1000.00",
+      "user": {
+        "USERID": 2820957,
+        "username": "valentinche13",
+        "profilepicture": "noprofilepicture.gif",
+        "profilePictureSrcSet": "",
+        "badges": [
+          {
+            "id": 827525,
+            "user_id": "2820957",
+            "badge_id": "14",
+            "date_create": "2022-11-12 14:03:28",
+            "badge": {
+              "id": 14,
+              "title": "Освоившийся покупатель",
+              "description": "Сделано более 7 покупок",
+              "super_title": "Освоившийся суперпокупатель",
+              "super_description": "Сделано более 7 покупок  и не менее 12 покупок за последние 3 месяца.",
+              "payer_level": 2,
+              "is_super_payer": false,
+              "sort": "1"
+            }
+          },
+          {
+            "id": 1942151,
+            "user_id": "2820957",
+            "badge_id": "42",
+            "date_create": "2025-11-27 14:04:04",
+            "badge": {
+              "id": 42,
+              "title": "Более 5 лет с Kwork",
+              "description": "",
+              "super_title": null,
+              "super_description": null,
+              "payer_level": null,
+              "is_super_payer": false,
+              "sort": "0"
+            }
+          }
+        ],
+        "data": {
+          "wants_count": "17",
+          "wants_hired_percent": "57"
+        }
+      },
+      "date_active": "2026-06-18 17:15:26",
+      "date_expire": "2026-06-19 17:15:26",
+      "date_create": "2026-06-18 17:15:26",
+      "views_dirty": "56",
+      "isUserWant": false,
+      "alreadyWork": null,
+      "isOtherActiveWantsExceptByWantId": false,
+      "timeLeft": "23 ч. 56 мин.",
+      "currentUserReviewType": null,
+      "hasPortfolioAvailable": false,
+      "isNeural": false,
+      "orderManagerStatusDone": 5,
+      "availableDurations": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        10,
+        14,
+        21,
+        30,
+        45,
+        60,
+        75,
+        90
+      ],
+      "categoryLinksIdRu": 59,
+      "getPriceThreshold": 4000
+    },
+    {
+      "userAlreadyWork": null,
+      "dateView": null,
+      "id": 3194598,
+      "status": "active",
+      "wantDates": {
+        "dateCreate": "10 июня, 10:55",
+        "dateActive": "18 июня, 17:14",
+        "dateExpire": "19 июня, 17:14",
+        "dateReject": ""
+      },
+      "isWantActive": true,
+      "isWantArchive": false,
+      "altStatusHint": {
+        "color": "blue",
+        "title": "Сбор предложений"
+      },
+      "getReviewCanChange": false,
+      "wantGetSumOrderCount": 0,
+      "projectReviewType": null,
+      "wantUserGetProfileUrl": "https://kwork.ru/user/webworkeuropa",
+      "possiblePriceLimit": 4500,
+      "getWantsActiveCount": "1",
+      "isHigherPrice": true,
+      "category_id": "72",
+      "description": "Нужен европейский трафик (Германия, Франция, Британия, Испания), под гугл в течении 30 дней. Трафик высокого уровня под 3 ключевых запроса из поиска.\r\nТоесть трафик с поиска с поведенчиским фактором.",
+      "files": [],
+      "kwork_count": 0,
+      "lang": "ru",
+      "name": "Нужен европейский трафик, гугл",
+      "max_days": "30",
+      "priceLimit": "1500.00",
+      "user": {
+        "USERID": 256557,
+        "username": "webworkeuropa",
+        "profilepicture": "noprofilepicture.gif",
+        "profilePictureSrcSet": "",
+        "badges": [
+          {
+            "id": 1513577,
+            "user_id": "256557",
+            "badge_id": "7",
+            "date_create": "2023-10-19 14:42:25",
+            "badge": {
+              "id": 7,
+              "title": "Мега Покупатель",
+              "description": "",
+              "super_title": "",
+              "super_description": "",
+              "payer_level": null,
+              "is_super_payer": false,
+              "sort": "1"
+            }
+          },
+          {
+            "id": 11162,
+            "user_id": "256557",
+            "badge_id": "10",
+            "date_create": "2017-12-17 15:38:32",
+            "badge": {
+              "id": 10,
+              "title": "Участник Новогодней акции",
+              "description": "Новый год 2018",
+              "super_title": "",
+              "super_description": null,
+              "payer_level": null,
+              "is_super_payer": false,
+              "sort": "1"
+            }
+          },
+          {
+            "id": 414011,
+            "user_id": "256557",
+            "badge_id": "23",
+            "date_create": "2020-05-21 23:13:08",
+            "badge": {
+              "id": 23,
+              "title": "Суперкомментатор",
+              "description": "За написание подробных отзывов",
+              "super_title": "",
+              "super_description": null,
+              "payer_level": null,
+              "is_super_payer": false,
+              "sort": "1"
+            }
+          },
+          {
+            "id": 629986,
+            "user_id": "256557",
+            "badge_id": "29",
+            "date_create": "2021-10-12 11:01:34",
+            "badge": {
+              "id": 29,
+              "title": "Покупатель профи-эксперт",
+              "description": "Сделано более 300 покупок",
+              "super_title": "Суперпокупатель профи-эксперт",
+              "super_description": "Сделано более 300 покупок и не менее 12 покупок за последние 3 месяца.",
+              "payer_level": 6,
+              "is_super_payer": false,
+              "sort": "1"
+            }
+          },
+          {
+            "id": 701412,
+            "user_id": "256557",
+            "badge_id": "36",
+            "date_create": "2022-03-05 11:44:36",
+            "badge": {
+              "id": 36,
+              "title": "Успешно завершил более 100 заказов в 2021 году",
+              "description": "",
+              "super_title": "",
+              "super_description": "",
+              "payer_level": null,
+              "is_super_payer": false,
+              "sort": "0"
+            }
+          },
+          {
+            "id": 1679692,
+            "user_id": "256557",
+            "badge_id": "42",
+            "date_create": "2024-10-08 10:34:16",
+            "badge": {
+              "id": 42,
+              "title": "Более 5 лет с Kwork",
+              "description": "",
+              "super_title": null,
+              "super_description": null,
+              "payer_level": null,
+              "is_super_payer": false,
+              "sort": "0"
+            }
+          }
+        ],
+        "data": {
+          "wants_count": "130",
+          "wants_hired_percent": "73"
+        }
+      },
+      "date_active": "2026-06-18 17:14:24",
+      "date_expire": "2026-06-19 17:14:24",
+      "date_create": "2026-06-10 10:55:37",
+      "views_dirty": "968",
+      "isUserWant": false,
+      "alreadyWork": null,
+      "isOtherActiveWantsExceptByWantId": false,
+      "timeLeft": "23 ч. 55 мин.",
+      "currentUserReviewType": null,
+      "hasPortfolioAvailable": false,
+      "isNeural": false,
+      "orderManagerStatusDone": 5,
+      "availableDurations": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        10,
+        14,
+        21,
+        30,
+        45,
+        60,
+        75,
+        90
+      ],
+      "categoryLinksIdRu": 59,
+      "getPriceThreshold": 4000
+    },
+    {
+      "userAlreadyWork": null,
+      "dateView": null,
+      "id": 3198269,
+      "status": "active",
+      "wantDates": {
+        "dateCreate": "16 июня",
+        "dateActive": "18 июня",
+        "dateExpire": "19 июня",
+        "dateReject": "16 июня"
+      },
+      "isWantActive": true,
+      "isWantArchive": false,
+      "altStatusHint": {
+        "color": "blue",
+        "title": "Сбор предложений"
+      },
+      "getReviewCanChange": false,
+      "wantGetSumOrderCount": 0,
+      "projectReviewType": null,
+      "wantUserGetProfileUrl": "https://kwork.ru/user/rezonator_",
+      "possiblePriceLimit": 1500,
+      "getWantsActiveCount": "2",
+      "isHigherPrice": true,
+      "category_id": "46",
+      "description": "Никак не могу понять как пройти верификацию на ВК. А поддержка тупит в свою очередь. Хочу чтоб объяснили толком пошагово и помогли",
+      "files": [],
+      "kwork_count": 0,
+      "lang": "ru",
+      "name": "Помочь верифицировать анкету",
+      "max_days": "30",
+      "priceLimit": "500.00",
+      "user": {
+        "USERID": 13605316,
+        "username": "Rezonator_",
+        "profilepicture": "17/13605316-1.jpg",
+        "profilePictureSrcSet": "https://cdn-edge.kwork.ru/files/avatar/big/17/13605316-1.jpg 1x, https://cdn-edge.kwork.ru/files/avatar/big_r/17/13605316-1.jpg 2x",
+        "badges": [
+          {
+            "id": 1794745,
+            "user_id": "13605316",
+            "badge_id": "15",
+            "date_create": "2025-02-04 14:39:42",
+            "badge": {
+              "id": 15,
+              "title": "Опытный покупатель",
+              "description": "Сделано более 20 покупок",
+              "super_title": "Опытный суперпокупатель",
+              "super_description": "Сделано более 20 покупок и не менее 12 покупок за последние 3 месяца.",
+              "payer_level": 3,
+              "is_super_payer": false,
+              "sort": "1"
+            }
+          }
+        ],
+        "data": {
+          "wants_count": "20",
+          "wants_hired_percent": "62"
+        }
+      },
+      "date_active": "2026-06-18 17:13:08",
+      "date_expire": "2026-06-19 17:13:08",
+      "date_create": "2026-06-16 00:12:06",
+      "views_dirty": "688",
+      "isUserWant": false,
+      "alreadyWork": null,
+      "isOtherActiveWantsExceptByWantId": true,
+      "timeLeft": "23 ч. 54 мин.",
+      "currentUserReviewType": null,
+      "hasPortfolioAvailable": false,
+      "isNeural": false,
+      "orderManagerStatusDone": 5,
+      "availableDurations": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        10,
+        14,
+        21,
+        30,
+        45,
+        60,
+        75,
+        90
+      ],
+      "categoryLinksIdRu": 59,
+      "getPriceThreshold": 4000
+    },
+    {
+      "userAlreadyWork": null,
+      "dateView": null,
+      "id": 3200480,
+      "status": "active",
+      "wantDates": {
+        "dateCreate": "18 июня",
+        "dateActive": "18 июня",
+        "dateExpire": "19 июня",
+        "dateReject": ""
+      },
+      "isWantActive": true,
+      "isWantArchive": false,
+      "altStatusHint": {
+        "color": "blue",
+        "title": "Сбор предложений"
+      },
+      "getReviewCanChange": false,
+      "wantGetSumOrderCount": 0,
+      "projectReviewType": null,
+      "wantUserGetProfileUrl": "https://kwork.ru/user/vasilevpavel",
+      "possiblePriceLimit": 10500,
+      "getWantsActiveCount": "1",
+      "isHigherPrice": true,
+      "category_id": "272",
+      "description": "Нужен современный дизайн-макет для билборда в формате корел для типографии. Техническое задание прилагаю.",
+      "files": [
+        {
+          "FID": 391912369,
+          "USERID": "11289502",
+          "type_entity": 54,
+          "entity_id": "3200480",
+          "fname": "ТЗ Баннер_Керма Премиум_Орк.docx",
+          "s": "4b/88/a3/893653bad3",
+          "size": 765951,
+          "time": "1781791722",
+          "lang": "ru",
+          "status": "active",
+          "storage": "s3",
+          "miniature_status": "none",
+          "miniature_creating_attempts": "0",
+          "permanent": "0",
+          "mime_type_id": "16",
+          "sort_index": "0",
+          "url": "https://kwork.ru/files/uploaded/4b/88/a3/893653bad3/%D0%A2%D0%97%20%D0%91%D0%B0%D0%BD%D0%BD%D0%B5%D1%80_%D0%9A%D0%B5%D1%80%D0%BC%D0%B0%20%D0%9F%D1%80%D0%B5%D0%BC%D0%B8%D1%83%D0%BC_%D0%9E%D1%80%D0%BA.docx",
+          "file_image_representation": null
+        }
+      ],
+      "kwork_count": 3,
+      "lang": "ru",
+      "name": "Дизайн макета на билборд",
+      "max_days": "10",
+      "priceLimit": "3500.00",
+      "user": {
+        "USERID": 11289502,
+        "username": "vasilevpavel",
+        "profilepicture": "38/11289502-1.jpg",
+        "profilePictureSrcSet": "https://cdn-edge.kwork.ru/files/avatar/big/38/11289502-1.jpg 1x, https://cdn-edge.kwork.ru/files/avatar/big_r/38/11289502-1.jpg 2x",
+        "badges": [
+          {
+            "id": 1797469,
+            "user_id": "11289502",
+            "badge_id": "16",
+            "date_create": "2025-02-11 11:02:46",
+            "badge": {
+              "id": 16,
+              "title": "Мощный покупатель",
+              "description": "Сделано более 50 покупок",
+              "super_title": "Мощный суперпокупатель",
+              "super_description": "Сделано более 50 покупок  и не менее 12 покупок за последние 3 месяца.",
+              "payer_level": 4,
+              "is_super_payer": false,
+              "sort": "1"
+            }
+          },
+          {
+            "id": 1791719,
+            "user_id": "11289502",
+            "badge_id": "23",
+            "date_create": "2025-01-27 20:58:55",
+            "badge": {
+              "id": 23,
+              "title": "Суперкомментатор",
+              "description": "За написание подробных отзывов",
+              "super_title": "",
+              "super_description": null,
+              "payer_level": null,
+              "is_super_payer": false,
+              "sort": "1"
+            }
+          }
+        ],
+        "data": {
+          "wants_count": "86",
+          "wants_hired_percent": "60"
+        }
+      },
+      "date_active": "2026-06-18 17:08:44",
+      "date_expire": "2026-06-19 17:08:44",
+      "date_create": "2026-06-18 17:08:44",
+      "views_dirty": "70",
+      "isUserWant": false,
+      "alreadyWork": null,
+      "isOtherActiveWantsExceptByWantId": false,
+      "timeLeft": "23 ч. 50 мин.",
+      "currentUserReviewType": null,
+      "hasPortfolioAvailable": true,
+      "isNeural": false,
+      "orderManagerStatusDone": 5,
+      "availableDurations": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        10,
+        14,
+        21,
+        30,
+        45,
+        60,
+        75,
+        90
+      ],
+      "categoryLinksIdRu": 59,
+      "getPriceThreshold": 4000
+    },
+    {
+      "userAlreadyWork": null,
+      "dateView": null,
+      "id": 3200403,
+      "status": "active",
+      "wantDates": {
+        "dateCreate": "18 июня",
+        "dateActive": "18 июня",
+        "dateExpire": "19 июня",
+        "dateReject": ""
+      },
+      "isWantActive": true,
+      "isWantArchive": false,
+      "altStatusHint": {
+        "color": "blue",
+        "title": "Сбор предложений"
+      },
+      "getReviewCanChange": false,
+      "wantGetSumOrderCount": 0,
+      "projectReviewType": null,
+      "wantUserGetProfileUrl": "https://kwork.ru/user/varvaraffi",
+      "possiblePriceLimit": 7500,
+      "getWantsActiveCount": "1",
+      "isHigherPrice": true,
+      "category_id": "75",
+      "description": "Пожалуйста, выполните перенос текста с изображений в документ Word. Важно, чтобы задача была выполнена аккуратно и без ошибок. Обратите внимание на детали и старайтесь сохранить оригинальный формат. Срок выполнения &mdash; строго в установленный срок.",
+      "files": [],
+      "kwork_count": 27,
+      "lang": "ru",
+      "name": "Сделать перенос слов",
+      "max_days": "10",
+      "priceLimit": "2500.00",
+      "user": {
+        "USERID": 24531636,
+        "username": "VarvaraFFi",
+        "profilepicture": "noprofilepicture.gif",
+        "profilePictureSrcSet": "",
+        "badges": [],
+        "data": {
+          "wants_count": "1",
+          "wants_hired_percent": "0"
+        }
+      },
+      "date_active": "2026-06-18 17:04:41",
+      "date_expire": "2026-06-19 17:04:41",
+      "date_create": "2026-06-18 15:59:51",
+      "views_dirty": "163",
+      "isUserWant": false,
+      "alreadyWork": null,
+      "isOtherActiveWantsExceptByWantId": false,
+      "timeLeft": "23 ч. 46 мин.",
+      "currentUserReviewType": null,
+      "hasPortfolioAvailable": false,
+      "isNeural": false,
+      "orderManagerStatusDone": 5,
+      "availableDurations": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        10,
+        14,
+        21,
+        30,
+        45,
+        60,
+        75,
+        90
+      ],
+      "categoryLinksIdRu": 59,
+      "getPriceThreshold": 4000
+    },
+    {
+      "userAlreadyWork": null,
+      "dateView": null,
+      "id": 3200400,
+      "status": "active",
+      "wantDates": {
+        "dateCreate": "18 июня",
+        "dateActive": "18 июня",
+        "dateExpire": "19 июня",
+        "dateReject": ""
+      },
+      "isWantActive": true,
+      "isWantArchive": false,
+      "altStatusHint": {
+        "color": "blue",
+        "title": "Сбор предложений"
+      },
+      "getReviewCanChange": false,
+      "wantGetSumOrderCount": 0,
+      "projectReviewType": null,
+      "wantUserGetProfileUrl": "https://kwork.ru/user/maxison",
+      "possiblePriceLimit": 1000,
+      "getWantsActiveCount": "1",
+      "isHigherPrice": false,
+      "category_id": "38",
+      "description": "Нужно донастроить уведомления о новых заказах в ТГ, CMS Shop-Script. \r\nВ уведомлениях нужно передавать всю информацию о заказе, включая Скидку, Статус, Способ оплаты, Метод доставки, Адрес, Номер отправления. Сейчас передаются только Имя, Контакты и Состав.",
+      "files": [],
+      "kwork_count": 9,
+      "lang": "ru",
+      "name": "Доработка уведомлений в ТГ Shop-Script",
+      "max_days": "10",
+      "priceLimit": "1000.00",
+      "user": {
+        "USERID": 2218,
+        "username": "maxison",
+        "profilepicture": "02/2218-6.jpg",
+        "profilePictureSrcSet": "https://cdn-edge.kwork.ru/files/avatar/big/02/2218-6.jpg 1x, https://cdn-edge.kwork.ru/files/avatar/big_r/02/2218-6.jpg 2x",
+        "badges": [
+          {
+            "id": 2002269,
+            "user_id": "2218",
+            "badge_id": "17",
+            "date_create": "2026-02-09 12:48:23",
+            "badge": {
+              "id": 17,
+              "title": "Очень мощный покупатель",
+              "description": "Сделано более 100 покупок",
+              "super_title": "Очень мощный суперпокупатель",
+              "super_description": "Сделано более 100 покупок и не менее 12 покупок за последние 3 месяца.",
+              "payer_level": 5,
+              "is_super_payer": false,
+              "sort": "1"
+            }
+          },
+          {
+            "id": 1661692,
+            "user_id": "2218",
+            "badge_id": "42",
+            "date_create": "2024-10-08 10:34:16",
+            "badge": {
+              "id": 42,
+              "title": "Более 5 лет с Kwork",
+              "description": "",
+              "super_title": null,
+              "super_description": null,
+              "payer_level": null,
+              "is_super_payer": false,
+              "sort": "0"
+            }
+          }
+        ],
+        "data": {
+          "wants_count": "71",
+          "wants_hired_percent": "50"
+        }
+      },
+      "date_active": "2026-06-18 17:04:29",
+      "date_expire": "2026-06-19 17:04:29",
+      "date_create": "2026-06-18 15:56:49",
+      "views_dirty": "164",
+      "isUserWant": false,
+      "alreadyWork": null,
+      "isOtherActiveWantsExceptByWantId": false,
+      "timeLeft": "23 ч. 45 мин.",
+      "currentUserReviewType": null,
+      "hasPortfolioAvailable": false,
+      "isNeural": false,
+      "orderManagerStatusDone": 5,
+      "availableDurations": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        10,
+        14,
+        21,
+        30,
+        45,
+        60,
+        75,
+        90
+      ],
+      "categoryLinksIdRu": 59,
+      "getPriceThreshold": 4000
+    },
+    {
+      "userAlreadyWork": null,
+      "dateView": null,
+      "id": 3200393,
+      "status": "active",
+      "wantDates": {
+        "dateCreate": "18 июня",
+        "dateActive": "18 июня",
+        "dateExpire": "19 июня",
+        "dateReject": ""
+      },
+      "isWantActive": true,
+      "isWantArchive": false,
+      "altStatusHint": {
+        "color": "blue",
+        "title": "Сбор предложений"
+      },
+      "getReviewCanChange": false,
+      "wantGetSumOrderCount": 0,
+      "projectReviewType": null,
+      "wantUserGetProfileUrl": "https://kwork.ru/user/reflectio",
+      "possiblePriceLimit": 6000,
+      "getWantsActiveCount": "1",
+      "isHigherPrice": true,
+      "category_id": "76",
+      "description": "Хочу начать выкладывать видео на постоянной основе для tiktok канала. \r\nХочется делать вставки короткие в фильмы. Это может быть и юмористический контент и со смысловой нагрузкой, но наверное больше юмористический. \r\nНа примере вот таких хуков - https://www.youtube.com/shorts/7bZfVZmA2WU\r\nСам попробовал, не получается качественно. То как получается не нравится. \r\nДелать планирую всё, как в видео - ссылка выше. ",
+      "files": [],
+      "kwork_count": 0,
+      "lang": "ru",
+      "name": "Создание видео через нейросеть",
+      "max_days": "10",
+      "priceLimit": "2000.00",
+      "user": {
+        "USERID": 14527867,
+        "username": "Reflectio",
+        "profilepicture": "noprofilepicture.gif",
+        "profilePictureSrcSet": "",
+        "badges": [
+          {
+            "id": 1787763,
+            "user_id": "14527867",
+            "badge_id": "14",
+            "date_create": "2025-01-16 18:25:34",
+            "badge": {
+              "id": 14,
+              "title": "Освоившийся покупатель",
+              "description": "Сделано более 7 покупок",
+              "super_title": "Освоившийся суперпокупатель",
+              "super_description": "Сделано более 7 покупок  и не менее 12 покупок за последние 3 месяца.",
+              "payer_level": 2,
+              "is_super_payer": false,
+              "sort": "1"
+            }
+          }
+        ],
+        "data": {
+          "wants_count": "3",
+          "wants_hired_percent": "50"
+        }
+      },
+      "date_active": "2026-06-18 17:03:16",
+      "date_expire": "2026-06-19 17:03:16",
+      "date_create": "2026-06-18 15:46:34",
+      "views_dirty": "75",
+      "isUserWant": false,
+      "alreadyWork": null,
+      "isOtherActiveWantsExceptByWantId": false,
+      "timeLeft": "23 ч. 44 мин.",
+      "currentUserReviewType": null,
+      "hasPortfolioAvailable": true,
+      "isNeural": false,
+      "orderManagerStatusDone": 5,
+      "availableDurations": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        10,
+        14,
+        21,
+        30,
+        45,
+        60,
+        75,
+        90
+      ],
+      "categoryLinksIdRu": 59,
+      "getPriceThreshold": 4000
+    },
+    {
+      "userAlreadyWork": null,
+      "dateView": null,
+      "id": 3200479,
+      "status": "active",
+      "wantDates": {
+        "dateCreate": "18 июня",
+        "dateActive": "18 июня",
+        "dateExpire": "19 июня",
+        "dateReject": ""
+      },
+      "isWantActive": true,
+      "isWantArchive": false,
+      "altStatusHint": {
+        "color": "blue",
+        "title": "Сбор предложений"
+      },
+      "getReviewCanChange": false,
+      "wantGetSumOrderCount": 0,
+      "projectReviewType": null,
+      "wantUserGetProfileUrl": "https://kwork.ru/user/nedurovv",
+      "possiblePriceLimit": 1500,
+      "getWantsActiveCount": "1",
+      "isHigherPrice": true,
+      "category_id": "72",
+      "description": "Цель: нарастить ссылочную массу, улучшить поведенческие факторы и повысить видимость сайта в поисковых системах по целевым запросам.\r\nЗадачи:\r\n1. Формирование семантического ядра:\r\n* собрать ключевые запросы: &laquo;аварийный комиссар Владивосток&raquo;, &laquo;вызов аварийного комиссара&raquo;, &laquo;помощь аварийного комиссара после ДТП&raquo; и т. д.;\r\n* учесть геозависимые запросы с упоминанием Владивостока;\r\n* сгруппировать запросы по страницам сайта.\r\n2. Наращивание ссылочной массы:\r\n* разместить ссылки на тематических порталах (автофорумы, сообщества автолюбителей);\r\n* желательно опубликовать материалы в местных СМИ и блогах с упоминанием услуг и ссылкой на сайт;\r\n3. Предоставить отчет выполненной работы.",
+      "files": [],
+      "kwork_count": 1,
+      "lang": "ru",
+      "name": "SEO‑продвижение сайта &laquo;Аварийный комиссар Владивосток&raquo;",
+      "max_days": "30",
+      "priceLimit": "500.00",
+      "user": {
+        "USERID": 8073858,
+        "username": "nedurovv",
+        "profilepicture": "03/8073858-1.jpg",
+        "profilePictureSrcSet": "https://cdn-edge.kwork.ru/files/avatar/big/03/8073858-1.jpg 1x, https://cdn-edge.kwork.ru/files/avatar/big_r/03/8073858-1.jpg 2x",
+        "badges": [
+          {
+            "id": 2022949,
+            "user_id": "8073858",
+            "badge_id": "14",
+            "date_create": "2026-04-23 15:17:08",
+            "badge": {
+              "id": 14,
+              "title": "Освоившийся покупатель",
+              "description": "Сделано более 7 покупок",
+              "super_title": "Освоившийся суперпокупатель",
+              "super_description": "Сделано более 7 покупок  и не менее 12 покупок за последние 3 месяца.",
+              "payer_level": 2,
+              "is_super_payer": false,
+              "sort": "1"
+            }
+          }
+        ],
+        "data": {
+          "wants_count": "16",
+          "wants_hired_percent": "53"
+        }
+      },
+      "date_active": "2026-06-18 17:01:53",
+      "date_expire": "2026-06-19 17:01:53",
+      "date_create": "2026-06-18 17:01:53",
+      "views_dirty": "65",
+      "isUserWant": false,
+      "alreadyWork": null,
+      "isOtherActiveWantsExceptByWantId": false,
+      "timeLeft": "23 ч. 43 мин.",
+      "currentUserReviewType": null,
+      "hasPortfolioAvailable": false,
+      "isNeural": false,
+      "orderManagerStatusDone": 5,
+      "availableDurations": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        10,
+        14,
+        21,
+        30,
+        45,
+        60,
+        75,
+        90
+      ],
+      "categoryLinksIdRu": 59,
+      "getPriceThreshold": 4000
+    },
+    {
+      "userAlreadyWork": null,
+      "dateView": null,
+      "id": 3200129,
+      "status": "active",
+      "wantDates": {
+        "dateCreate": "18 июня",
+        "dateActive": "18 июня",
+        "dateExpire": "19 июня",
+        "dateReject": "18 июня"
+      },
+      "isWantActive": true,
+      "isWantArchive": false,
+      "altStatusHint": {
+        "color": "blue",
+        "title": "Сбор предложений"
+      },
+      "getReviewCanChange": false,
+      "wantGetSumOrderCount": 0,
+      "projectReviewType": null,
+      "wantUserGetProfileUrl": "https://kwork.ru/user/utayerate489",
+      "possiblePriceLimit": 3000,
+      "getWantsActiveCount": "3",
+      "isHigherPrice": true,
+      "category_id": "265",
+      "description": "Провести видео онлайн-собеседования, сделать запись, оценить кандидатов и составить итоговый отчет по лучшим и подходящим соискателям ",
+      "files": [],
+      "kwork_count": 0,
+      "lang": "ru",
+      "name": "Провести собеседования",
+      "max_days": "10",
+      "priceLimit": "1000.00",
+      "user": {
+        "USERID": 23691425,
+        "username": "utayerate489",
+        "profilepicture": "noprofilepicture.gif",
+        "profilePictureSrcSet": "",
+        "badges": [
+          {
+            "id": 2033694,
+            "user_id": "23691425",
+            "badge_id": "14",
+            "date_create": "2026-06-09 12:47:29",
+            "badge": {
+              "id": 14,
+              "title": "Освоившийся покупатель",
+              "description": "Сделано более 7 покупок",
+              "super_title": "Освоившийся суперпокупатель",
+              "super_description": "Сделано более 7 покупок  и не менее 12 покупок за последние 3 месяца.",
+              "payer_level": 2,
+              "is_super_payer": false,
+              "sort": "1"
+            }
+          }
+        ],
+        "data": {
+          "wants_count": "21",
+          "wants_hired_percent": "42"
+        }
+      },
+      "date_active": "2026-06-18 17:00:58",
+      "date_expire": "2026-06-19 11:56:57",
+      "date_create": "2026-06-18 11:19:41",
+      "views_dirty": "237",
+      "isUserWant": false,
+      "alreadyWork": null,
+      "isOtherActiveWantsExceptByWantId": true,
+      "timeLeft": "18 ч. 38 мин.",
+      "currentUserReviewType": null,
+      "hasPortfolioAvailable": false,
+      "isNeural": false,
+      "orderManagerStatusDone": 5,
+      "availableDurations": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        10,
+        14,
+        21,
+        30,
+        45,
+        60,
+        75,
+        90
+      ],
+      "categoryLinksIdRu": 59,
+      "getPriceThreshold": 4000
+    },
+    {
+      "userAlreadyWork": null,
+      "dateView": null,
+      "id": 3200387,
+      "status": "active",
+      "wantDates": {
+        "dateCreate": "18 июня",
+        "dateActive": "18 июня",
+        "dateExpire": "20 июня",
+        "dateReject": "18 июня"
+      },
+      "isWantActive": true,
+      "isWantArchive": false,
+      "altStatusHint": {
+        "color": "blue",
+        "title": "Сбор предложений"
+      },
+      "getReviewCanChange": false,
+      "wantGetSumOrderCount": 0,
+      "projectReviewType": null,
+      "wantUserGetProfileUrl": "https://kwork.ru/user/grishkovei",
+      "possiblePriceLimit": 45000,
+      "getWantsActiveCount": "1",
+      "isHigherPrice": true,
+      "category_id": "59",
+      "description": "Здравствуйте! Интернет-магазин смартфонов региональный.\r\nНужно аккуратно нарастить ссылочную массу под Яндекс и Гугл: живые тематические сайты (техника/гаджеты/шопинг) или региональные Белгородские. Без прогонов, сеток, профилей и telegra.ph пачками &mdash; важна естественность, чтобы не словить фильтр.\r\nВозможно сможете предложить другие варианты\r\nЧто можете предложить под мою нишу? Какие доноры, какой объём и сроки? Скиньте, пожалуйста, 3&ndash;5 примеров площадок, где размещаете, ваши успешные кейсы в подобной тематике",
+      "files": [],
+      "kwork_count": 1,
+      "lang": "ru",
+      "name": "Ссылочная масса для магазина смартфонов",
+      "max_days": "10",
+      "priceLimit": "15000.00",
+      "user": {
+        "USERID": 18156635,
+        "username": "grishkovei",
+        "profilepicture": "noprofilepicture.gif",
+        "profilePictureSrcSet": "",
+        "badges": [
+          {
+            "id": 1870548,
+            "user_id": "18156635",
+            "badge_id": "25",
+            "date_create": "2025-09-07 21:29:09",
+            "badge": {
+              "id": 25,
+              "title": "Большой шаг вперед - 3 покупки на Kwork!",
+              "description": "Начисляется когда покупатель завершил 3 покупки",
+              "super_title": "",
+              "super_description": null,
+              "payer_level": null,
+              "is_super_payer": false,
+              "sort": "1"
+            }
+          }
+        ],
+        "data": {
+          "wants_count": "1",
+          "wants_hired_percent": "0"
+        }
+      },
+      "date_active": "2026-06-18 16:58:42",
+      "date_expire": "2026-06-20 16:58:42",
+      "date_create": "2026-06-18 15:43:02",
+      "views_dirty": "89",
+      "isUserWant": false,
+      "alreadyWork": null,
+      "isOtherActiveWantsExceptByWantId": false,
+      "timeLeft": "1 д. 23 ч.",
+      "currentUserReviewType": null,
+      "hasPortfolioAvailable": false,
+      "isNeural": false,
+      "orderManagerStatusDone": 5,
+      "availableDurations": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        10,
+        14,
+        21,
+        30,
+        45,
+        60,
+        75,
+        90
+      ],
+      "categoryLinksIdRu": 59,
+      "getPriceThreshold": 4000
+    },
+    {
+      "userAlreadyWork": null,
+      "dateView": null,
+      "id": 3200474,
+      "status": "active",
+      "wantDates": {
+        "dateCreate": "18 июня",
+        "dateActive": "18 июня",
+        "dateExpire": "19 июня",
+        "dateReject": ""
+      },
+      "isWantActive": true,
+      "isWantArchive": false,
+      "altStatusHint": {
+        "color": "blue",
+        "title": "Сбор предложений"
+      },
+      "getReviewCanChange": false,
+      "wantGetSumOrderCount": 0,
+      "projectReviewType": null,
+      "wantUserGetProfileUrl": "https://kwork.ru/user/dmitriy_ivanovich22",
+      "possiblePriceLimit": 1500,
+      "getWantsActiveCount": "1",
+      "isHigherPrice": true,
+      "category_id": "25",
+      "description": "Создать логотип отражающий в себе: Вектор, ядро и группу с текстом: ТПК &quot;Корвекс Групп&quot;\r\nОдин квадратный и один горизонтальный &quot;лого + название&quot; без фона. Размеры не важны, главное - пропорции. Первый квадратный, второй 3:1",
+      "files": [],
+      "kwork_count": 7,
+      "lang": "ru",
+      "name": "Логотип",
+      "max_days": "10",
+      "priceLimit": "500.00",
+      "user": {
+        "USERID": 11644151,
+        "username": "Dmitriy_Ivanovich22",
+        "profilepicture": "noprofilepicture.gif",
+        "profilePictureSrcSet": "",
+        "badges": [
+          {
+            "id": 1788333,
+            "user_id": "11644151",
+            "badge_id": "15",
+            "date_create": "2025-01-18 12:36:12",
+            "badge": {
+              "id": 15,
+              "title": "Опытный покупатель",
+              "description": "Сделано более 20 покупок",
+              "super_title": "Опытный суперпокупатель",
+              "super_description": "Сделано более 20 покупок и не менее 12 покупок за последние 3 месяца.",
+              "payer_level": 3,
+              "is_super_payer": false,
+              "sort": "1"
+            }
+          }
+        ],
+        "data": {
+          "wants_count": "12",
+          "wants_hired_percent": "70"
+        }
+      },
+      "date_active": "2026-06-18 16:58:09",
+      "date_expire": "2026-06-19 16:58:09",
+      "date_create": "2026-06-18 16:58:09",
+      "views_dirty": "137",
+      "isUserWant": false,
+      "alreadyWork": null,
+      "isOtherActiveWantsExceptByWantId": false,
+      "timeLeft": "23 ч. 39 мин.",
+      "currentUserReviewType": null,
+      "hasPortfolioAvailable": true,
+      "isNeural": false,
+      "orderManagerStatusDone": 5,
+      "availableDurations": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        10,
+        14,
+        21,
+        30,
+        45,
+        60,
+        75,
+        90
+      ],
+      "categoryLinksIdRu": 59,
+      "getPriceThreshold": 4000
+    },
+    {
+      "userAlreadyWork": null,
+      "dateView": null,
+      "id": 3200471,
+      "status": "active",
+      "wantDates": {
+        "dateCreate": "18 июня",
+        "dateActive": "18 июня",
+        "dateExpire": "19 июня",
+        "dateReject": ""
+      },
+      "isWantActive": true,
+      "isWantArchive": false,
+      "altStatusHint": {
+        "color": "blue",
+        "title": "Сбор предложений"
+      },
+      "getReviewCanChange": false,
+      "wantGetSumOrderCount": 0,
+      "projectReviewType": null,
+      "wantUserGetProfileUrl": "https://kwork.ru/user/filimonx",
+      "possiblePriceLimit": 9000,
+      "getWantsActiveCount": "1",
+      "isHigherPrice": true,
+      "category_id": "38",
+      "description": "Необходимо к уже готовому сайту добавить возможность по наполнению товаров CMS / админ-панель с управлением товарами (Product management system).\r\nУсловия по стоимости и срокам жду от исполнителя.",
+      "files": [],
+      "kwork_count": 11,
+      "lang": "ru",
+      "name": "Добавить опцию CMS в готовый сайт",
+      "max_days": "10",
+      "priceLimit": "3000.00",
+      "user": {
+        "USERID": 250668,
+        "username": "Filimonx",
+        "profilepicture": "noprofilepicture.gif",
+        "profilePictureSrcSet": "",
+        "badges": [
+          {
+            "id": 1553098,
+            "user_id": "250668",
+            "badge_id": "14",
+            "date_create": "2024-01-23 05:39:02",
+            "badge": {
+              "id": 14,
+              "title": "Освоившийся покупатель",
+              "description": "Сделано более 7 покупок",
+              "super_title": "Освоившийся суперпокупатель",
+              "super_description": "Сделано более 7 покупок  и не менее 12 покупок за последние 3 месяца.",
+              "payer_level": 2,
+              "is_super_payer": false,
+              "sort": "1"
+            }
+          },
+          {
+            "id": 1679260,
+            "user_id": "250668",
+            "badge_id": "42",
+            "date_create": "2024-10-08 10:34:16",
+            "badge": {
+              "id": 42,
+              "title": "Более 5 лет с Kwork",
+              "description": "",
+              "super_title": null,
+              "super_description": null,
+              "payer_level": null,
+              "is_super_payer": false,
+              "sort": "0"
+            }
+          }
+        ],
+        "data": {
+          "wants_count": "3",
+          "wants_hired_percent": "100"
+        }
+      },
+      "date_active": "2026-06-18 16:57:14",
+      "date_expire": "2026-06-19 16:57:14",
+      "date_create": "2026-06-18 16:57:14",
+      "views_dirty": "195",
+      "isUserWant": false,
+      "alreadyWork": null,
+      "isOtherActiveWantsExceptByWantId": false,
+      "timeLeft": "23 ч. 38 мин.",
+      "currentUserReviewType": null,
+      "hasPortfolioAvailable": false,
+      "isNeural": false,
+      "orderManagerStatusDone": 5,
+      "availableDurations": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        10,
+        14,
+        21,
+        30,
+        45,
+        60,
+        75,
+        90
+      ],
+      "categoryLinksIdRu": 59,
+      "getPriceThreshold": 4000
+    }
+  ]
+}

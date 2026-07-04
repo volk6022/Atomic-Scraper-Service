@@ -1,0 +1,134 @@
+{
+  "ai_31": {
+    "error": "'charmap' codec can't encode characters in position 15-20: character maps to <undefined>"
+  },
+  "programming_5": {
+    "error": "'charmap' codec can't encode characters in position 14-19: character maps to <undefined>"
+  },
+  "mobile_36": {
+    "error": "'charmap' codec can't encode characters in position 15-20: character maps to <undefined>"
+  },
+  "automation_41": {
+    "error": "'charmap' codec can't encode characters in position 15-20: character maps to <undefined>"
+  },
+  "cat5_sub1": {
+    "error": "'charmap' codec can't encode characters in position 22-27: character maps to <undefined>"
+  },
+  "cat5_sub2": {
+    "error": "'charmap' codec can't encode characters in position 22-27: character maps to <undefined>"
+  },
+  "cat5_sub3": {
+    "error": "'charmap' codec can't encode characters in position 22-27: character maps to <undefined>"
+  },
+  "cat5_sub4": {
+    "url": "https://www.fl.ru/rss/all.xml?category=5&subcategory=4",
+    "channel_title": "Заказы на FL.ru (Фри-ланс: Другое - Технический дизайн)",
+    "item_count": 0,
+    "first_item": {}
+  },
+  "cat5_sub5": {
+    "error": "'charmap' codec can't encode characters in position 22-27: character maps to <undefined>"
+  },
+  "cat5_sub6": {
+    "error": "'charmap' codec can't encode characters in position 22-27: character maps to <undefined>"
+  },
+  "cat5_sub7": {
+    "url": "https://www.fl.ru/rss/all.xml?category=5&subcategory=7",
+    "channel_title": "Заказы на FL.ru (Фри-ланс: Другое - Флеш-графика)",
+    "item_count": 0,
+    "first_item": {}
+  },
+  "cat5_sub8": {
+    "error": "'charmap' codec can't encode characters in position 22-27: character maps to <undefined>"
+  },
+  "cat5_sub9": {
+    "error": "'charmap' codec can't encode characters in position 22-27: character maps to <undefined>"
+  },
+  "cat5_sub10": {
+    "error": "'charmap' codec can't encode characters in position 23-28: character maps to <undefined>"
+  },
+  "cat5_sub11": {
+    "error": "'charmap' codec can't encode characters in position 23-28: character maps to <undefined>"
+  },
+  "cat5_sub12": {
+    "error": "'charmap' codec can't encode characters in position 23-28: character maps to <undefined>"
+  },
+  "cat5_sub13": {
+    "error": "'charmap' codec can't encode characters in position 23-28: character maps to <undefined>"
+  },
+  "cat5_sub14": {
+    "url": "https://www.fl.ru/rss/all.xml?category=5&subcategory=14",
+    "channel_title": "Заказы на FL.ru (Фри-ланс)",
+    "item_count": 0,
+    "first_item": {}
+  },
+  "cat5_sub15": {
+    "error": "'charmap' codec can't encode characters in position 23-28: character maps to <undefined>"
+  },
+  "cat5_sub16": {
+    "error": "'charmap' codec can't encode characters in position 23-28: character maps to <undefined>"
+  },
+  "cat5_sub17": {
+    "error": "'charmap' codec can't encode characters in position 23-28: character maps to <undefined>"
+  },
+  "cat5_sub18": {
+    "error": "'charmap' codec can't encode characters in position 23-28: character maps to <undefined>"
+  },
+  "cat5_sub19": {
+    "error": "'charmap' codec can't encode characters in position 23-28: character maps to <undefined>"
+  },
+  "cat5_sub20": {
+    "url": "https://www.fl.ru/rss/all.xml?category=5&subcategory=20",
+    "channel_title": "Заказы на FL.ru (Фри-ланс)",
+    "item_count": 0,
+    "first_item": {}
+  },
+  "cat5_sub21": {
+    "url": "https://www.fl.ru/rss/all.xml?category=5&subcategory=21",
+    "channel_title": "Заказы на FL.ru (Фри-ланс: Реклама и Маркетинг - Медиапланирование)",
+    "item_count": 0,
+    "first_item": {}
+  },
+  "cat5_sub22": {
+    "url": "https://www.fl.ru/rss/all.xml?category=5&subcategory=22",
+    "channel_title": "Заказы на FL.ru (Фри-ланс)",
+    "item_count": 0,
+    "first_item": {}
+  },
+  "cat5_sub23": {
+    "url": "https://www.fl.ru/rss/all.xml?category=5&subcategory=23",
+    "channel_title": "Заказы на FL.ru (Фри-ланс)",
+    "item_count": 0,
+    "first_item": {}
+  },
+  "cat5_sub24": {
+    "url": "https://www.fl.ru/rss/all.xml?category=5&subcategory=24",
+    "channel_title": "Заказы на FL.ru (Фри-ланс: Аудио/Видео/Фото - Музыка/Звуки)",
+    "item_count": 0,
+    "first_item": {}
+  },
+  "cat5_sub25": {
+    "error": "'charmap' codec can't encode characters in position 23-28: character maps to <undefined>"
+  },
+  "cat5_sub26": {
+    "url": "https://www.fl.ru/rss/all.xml?category=5&subcategory=26",
+    "channel_title": "Заказы на FL.ru (Фри-ланс)",
+    "item_count": 0,
+    "first_item": {}
+  },
+  "cat5_sub27": {
+    "error": "'charmap' codec can't encode characters in position 23-28: character maps to <undefined>"
+  },
+  "cat5_sub28": {
+    "url": "https://www.fl.ru/rss/all.xml?category=5&subcategory=28",
+    "channel_title": "Заказы на FL.ru (Фри-ланс)",
+    "item_count": 0,
+    "first_item": {}
+  },
+  "cat5_sub29": {
+    "url": "https://www.fl.ru/rss/all.xml?category=5&subcategory=29",
+    "channel_title": "Заказы на FL.ru (Фри-ланс)",
+    "item_count": 0,
+    "first_item": {}
+  }
+}

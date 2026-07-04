@@ -1,0 +1,70 @@
+[
+  {
+    "url": "https://www.avito.ru/all/vakansii",
+    "proxy": "direct",
+    "status": 200,
+    "html_len": 1982537,
+    "elapsed": 2.1,
+    "verdict": "REAL_CONTENT",
+    "html_snippet": "<!DOCTYPE html><html lang=\"ru\"><head><link rel=\"preconnect\" href=\"https://www.avito.st\" crossorigin=\"anonymous\"/><link rel=\"preconnect\" href=\"https://www.google-analytics.com\"/><link rel=\"preconnect\" href=\"https://yastatic.net\"/><link rel=\"preload\" href=\"https://www.avito.st/s/common/assets/fonts/manrope/manrope-medium.woff2\" as=\"font\" type=\"font/woff2\" crossorigin=\"crossorigin\"/><link rel=\"preload\" href=\"https://www.avito.st/s/common/assets/fonts/manrope/manrope-bold.woff2\" as=\"font\" type=\"font/woff2\" crossorigin=\"crossorigin\"/><title data-rh='true'>Авито — Объявления на сайте Авито</title><meta charset=\"utf-8\"/><meta name=\"format-detection\" content=\"telephone=no\"/><meta http-equiv=\"cleartype\" content=\"on\"/><meta name=\"yandex-verification\" content=\"499bdc75d3636c55\"/><meta name=\"google-site-verification\" content=\"7iEzRRMJ2_0p66pVS7wTYYvhZZSFBdzL5FVml4IKUS0\"/><meta data-rh=\"true\" content=\"width=device-width\" name=\"viewport\" /><meta data-rh=\"true\" content=\"Авито — Объявления на сайте Авито\" name=\"description\" /><meta data-rh=\"true\" content=\"https://m.avito.ru/icons/touch-icon-512x512.png\" property=\"og:image\" /><meta data-rh=\"true\" content=\"512\" property=\"og:image:width\" /><meta data-rh=\"true\" content=\"512\" property=\"og:image:height\" /><meta data-rh=\"true\" content=\"website\" property=\"og:type\" /><meta data-rh=\"true\" content=\"Авито\" property=\"og:site_name\" /><meta data-rh=\"true\" content=\"ru_RU\" property=\"og:locale\" /><meta data-rh=\"true\" content=\"ru\" property=\"og:country-name\" /><meta data-rh=\"true\" content=\"472292516308756\" property=\"fb:app_id\" /><link rel=\"shortcut icon\" href=\"https://www.avito.st/dstatic/favicon.ico\" type=\"image/x-icon\" crossorigin=\"anonymous\"/><link rel=\"stylesheet\" href=\"https://www.avito.st/dstatic/css/legacy/reset.css\" type=\"text/css\" crossorigin=\"anonymous\"/><link rel=\"stylesheet\" href=\"https://www.avito.st/dstatic/build/client/css/bootstrap.bb918f96b082e364.css\" crossorigin=\"anonymous\"><style>@font-face {\n  font-family: Manrope;\n  src: url('https://www.avito.st/s/common/assets/fonts/manrope/manrope-medium.woff2') format('woff2');\n  font-weight: 100 400;\n  font-display: optional;\n}\n\n@font-face {\n  font-family: Manrope;\n  src: url('https://www.avito.st/s/common/assets/fonts/manrope/manrope-bold.woff2') format('woff2');\n  font-weight: 700 800;\n  font-display: optional;\n}\n</style><link rel=\"preload\" as=\"script\" href=\"https://www.avito.st/dstatic/build/client/ru-RU/runtime.eef692ac9e5bb1ef.js\" crossorigin=\"anonymous\">\n<link rel=\"preload\" as=\"script\" href=\"https://www.avito.st/dstatic/build/client/ru-RU/react.ef3fa81730be29c6.js\" crossorigin=\"anonymous\">\n<link rel=\"preload\" as=\"script\" href=\"https://www.avito.st/dstatic/build/client/ru-RU/sentry.fad266614f8b210f.js\" crossorigin=\"anonymous\">\n<link rel=\"preload\" as=\"script\" href=\"https://www.avito.st/dstatic/build/client/ru-RU/react-dom.38195d34d5af38c1.js\" crossorigin=\"anonymous\">\n<link rel=\"preload\" as=\"script\" href=\"https://www.avito.st/dstatic/build/client/ru-RU/react-router.5ad",
+    "final_url": "https://www.avito.ru/all/vakansii",
+    "embedded_json": {
+      "item_ids_found": [
+        "8001988373",
+        "8001988373",
+        "8001988373",
+        "8001988373",
+        "8001988373",
+        "8001988373",
+        "8001988373",
+        "8001988373",
+        "8001988373",
+        "8001988373",
+        "8001988373",
+        "8169398743",
+        "8169398743",
+        "8169398743",
+        "8169398743",
+        "8169398743",
+        "8169398743",
+        "8169398743",
+        "8169398743",
+        "8169398743"
+      ]
+    }
+  },
+  {
+    "url": "https://www.avito.ru/all/vakansii",
+    "proxy": "proxy",
+    "status": 200,
+    "html_len": 2152422,
+    "elapsed": 2.72,
+    "verdict": "REAL_CONTENT",
+    "html_snippet": "<!DOCTYPE html><html lang=\"ru\"><head><link rel=\"preconnect\" href=\"https://www.avito.st\" crossorigin=\"anonymous\"/><link rel=\"preconnect\" href=\"https://www.google-analytics.com\"/><link rel=\"preconnect\" href=\"https://yastatic.net\"/><link rel=\"preload\" href=\"https://www.avito.st/s/common/assets/fonts/manrope/manrope-medium.woff2\" as=\"font\" type=\"font/woff2\" crossorigin=\"crossorigin\"/><link rel=\"preload\" href=\"https://www.avito.st/s/common/assets/fonts/manrope/manrope-bold.woff2\" as=\"font\" type=\"font/woff2\" crossorigin=\"crossorigin\"/><title data-rh='true'>Авито — Объявления на сайте Авито</title><meta charset=\"utf-8\"/><meta name=\"format-detection\" content=\"telephone=no\"/><meta http-equiv=\"cleartype\" content=\"on\"/><meta name=\"yandex-verification\" content=\"499bdc75d3636c55\"/><meta name=\"google-site-verification\" content=\"7iEzRRMJ2_0p66pVS7wTYYvhZZSFBdzL5FVml4IKUS0\"/><meta data-rh=\"true\" content=\"width=device-width\" name=\"viewport\" /><meta data-rh=\"true\" content=\"Авито — Объявления на сайте Авито\" name=\"description\" /><meta data-rh=\"true\" content=\"https://m.avito.ru/icons/touch-icon-512x512.png\" property=\"og:image\" /><meta data-rh=\"true\" content=\"512\" property=\"og:image:width\" /><meta data-rh=\"true\" content=\"512\" property=\"og:image:height\" /><meta data-rh=\"true\" content=\"website\" property=\"og:type\" /><meta data-rh=\"true\" content=\"Авито\" property=\"og:site_name\" /><meta data-rh=\"true\" content=\"ru_RU\" property=\"og:locale\" /><meta data-rh=\"true\" content=\"ru\" property=\"og:country-name\" /><meta data-rh=\"true\" content=\"472292516308756\" property=\"fb:app_id\" /><link rel=\"shortcut icon\" href=\"https://www.avito.st/dstatic/favicon.ico\" type=\"image/x-icon\" crossorigin=\"anonymous\"/><link rel=\"stylesheet\" href=\"https://www.avito.st/dstatic/css/legacy/reset.css\" type=\"text/css\" crossorigin=\"anonymous\"/><link rel=\"stylesheet\" href=\"https://www.avito.st/dstatic/build/client/css/bootstrap.bb918f96b082e364.css\" crossorigin=\"anonymous\"><style>@font-face {\n  font-family: Manrope;\n  src: url('https://www.avito.st/s/common/assets/fonts/manrope/manrope-medium.woff2') format('woff2');\n  font-weight: 100 400;\n  font-display: optional;\n}\n\n@font-face {\n  font-family: Manrope;\n  src: url('https://www.avito.st/s/common/assets/fonts/manrope/manrope-bold.woff2') format('woff2');\n  font-weight: 700 800;\n  font-display: optional;\n}\n</style><link rel=\"preload\" as=\"script\" href=\"https://www.avito.st/dstatic/build/client/ru-RU/runtime.eef692ac9e5bb1ef.js\" crossorigin=\"anonymous\">\n<link rel=\"preload\" as=\"script\" href=\"https://www.avito.st/dstatic/build/client/ru-RU/react.ef3fa81730be29c6.js\" crossorigin=\"anonymous\">\n<link rel=\"preload\" as=\"script\" href=\"https://www.avito.st/dstatic/build/client/ru-RU/sentry.fad266614f8b210f.js\" crossorigin=\"anonymous\">\n<link rel=\"preload\" as=\"script\" href=\"https://www.avito.st/dstatic/build/client/ru-RU/react-dom.38195d34d5af38c1.js\" crossorigin=\"anonymous\">\n<link rel=\"preload\" as=\"script\" href=\"https://www.avito.st/dstatic/build/client/ru-RU/react-router.5ad",
+    "final_url": "https://www.avito.ru/all/vakansii",
+    "embedded_json": {
+      "item_ids_found": [
+        "8002206496",
+        "8002206496",
+        "8002206496",
+        "8002206496",
+        "8002206496",
+        "8002206496",
+        "8002206496",
+        "8002206496",
+        "8002206496",
+        "8002206496",
+        "8002206496",
+        "8195268450",
+        "8195268450",
+        "8195268450",
+        "8195268450",
+        "8195268450",
+        "8195268450",
+        "8195268450",
+        "8195268450",
+        "8131655636"
+      ]
+    }
+  }
+]

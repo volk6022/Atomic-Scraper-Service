@@ -1,0 +1,3091 @@
+{
+  "run": 2,
+  "ts": "2026-06-19T09:49:19+00:00",
+  "sites": {
+    "hh": {
+      "ok": true,
+      "count": 25,
+      "error": null,
+      "items": [
+        {
+          "source": "hh",
+          "id": "132766519",
+          "title": "ML- аналитик",
+          "url": "https://hh.ru/vacancy/132766519",
+          "amount": null,
+          "date": "",
+          "_extra": {
+            "company": "ПАО Совкомбанк. ИТ"
+          }
+        },
+        {
+          "source": "hh",
+          "id": "133476906",
+          "title": "Senior Machine Learning Engineer в команду Giga Edge",
+          "url": "https://hh.ru/vacancy/133476906",
+          "amount": null,
+          "date": "",
+          "_extra": {
+            "company": "Сбер. Data Science"
+          }
+        },
+        {
+          "source": "hh",
+          "id": "134369845",
+          "title": "Python Developer AI team (в офис, г. Йошкар-Ола)",
+          "url": "https://hh.ru/vacancy/134369845",
+          "amount": null,
+          "date": "",
+          "_extra": {
+            "company": "TravelLine"
+          }
+        },
+        {
+          "source": "hh",
+          "id": "134369083",
+          "title": "Разработчик Python (Django, DRF)",
+          "url": "https://hh.ru/vacancy/134369083",
+          "amount": null,
+          "date": "",
+          "_extra": {
+            "company": "ООО Ред Софт"
+          }
+        },
+        {
+          "source": "hh",
+          "id": "134368770",
+          "title": "Java Developer",
+          "url": "https://hh.ru/vacancy/134368770",
+          "amount": null,
+          "date": "",
+          "_extra": {
+            "company": "Сбер. IT"
+          }
+        },
+        {
+          "source": "hh",
+          "id": "134368558",
+          "title": "Java разработчик (ученик)",
+          "url": "https://hh.ru/vacancy/134368558",
+          "amount": null,
+          "date": "",
+          "_extra": {
+            "company": "Aston"
+          }
+        },
+        {
+          "source": "hh",
+          "id": "133648053",
+          "title": "Senior Computer Vision Engineer (Embedded / Jetson)",
+          "url": "https://hh.ru/vacancy/133648053",
+          "amount": null,
+          "date": "",
+          "_extra": {
+            "company": "ООО Инновационные Системы"
+          }
+        },
+        {
+          "source": "hh",
+          "id": "134368099",
+          "title": "Программист Отдела развития ВРМ систем (Low-code)",
+          "url": "https://hh.ru/vacancy/134368099",
+          "amount": null,
+          "date": "",
+          "_extra": {
+            "company": "ООО Кубань Кредит, КБ"
+          }
+        },
+        {
+          "source": "hh",
+          "id": "92354865",
+          "title": "Middle PHP Developer",
+          "url": "https://hh.ru/vacancy/92354865",
+          "amount": "от 200000 RUR",
+          "date": "",
+          "_extra": {
+            "company": "Perfect Panel"
+          }
+        },
+        {
+          "source": "hh",
+          "id": "134367137",
+          "title": "Разработчик ИИ-продуктов / Mobile & AI Developer (Middle)",
+          "url": "https://hh.ru/vacancy/134367137",
+          "amount": "от 120000 до 120000 RUR",
+          "date": "",
+          "_extra": {
+            "company": "Команда Мечты, ИТ"
+          }
+        },
+        {
+          "source": "hh",
+          "id": "133123630",
+          "title": "Senior Python Developer",
+          "url": "https://hh.ru/vacancy/133123630",
+          "amount": null,
+          "date": "",
+          "_extra": {
+            "company": "ООО АйТи БАСТИОН"
+          }
+        },
+        {
+          "source": "hh",
+          "id": "134366734",
+          "title": "Python Junior Сценарист/разработчик",
+          "url": "https://hh.ru/vacancy/134366734",
+          "amount": "от 65000 RUR",
+          "date": "",
+          "_extra": {
+            "company": "Сбер. IT"
+          }
+        },
+        {
+          "source": "hh",
+          "id": "133646477",
+          "title": "DevOps-инженер",
+          "url": "https://hh.ru/vacancy/133646477",
+          "amount": null,
+          "date": "",
+          "_extra": {
+            "company": "Stream Telecom"
+          }
+        },
+        {
+          "source": "hh",
+          "id": "134366567",
+          "title": "Middle React Developer",
+          "url": "https://hh.ru/vacancy/134366567",
+          "amount": "до 230000 RUR",
+          "date": "",
+          "_extra": {
+            "company": "evrone.ru"
+          }
+        },
+        {
+          "source": "hh",
+          "id": "134207338",
+          "title": "Разработчик ПЛИС",
+          "url": "https://hh.ru/vacancy/134207338",
+          "amount": null,
+          "date": "2026-06-19T11:11:30.669+03:00",
+          "_extra": {
+            "company": "Myrtle"
+          }
+        },
+        {
+          "source": "hh",
+          "id": "134366107",
+          "title": "Корпоративный архитектор",
+          "url": "https://hh.ru/vacancy/134366107",
+          "amount": null,
+          "date": "",
+          "_extra": {
+            "company": "Сбер. IT"
+          }
+        },
+        {
+          "source": "hh",
+          "id": "133646053",
+          "title": "Администратор-программист CRM",
+          "url": "https://hh.ru/vacancy/133646053",
+          "amount": null,
+          "date": "",
+          "_extra": {
+            "company": "ООО Международный Центр Фертильности"
+          }
+        },
+        {
+          "source": "hh",
+          "id": "132425136",
+          "title": "Аналитик данных / программист (Python / SQL / BI)",
+          "url": "https://hh.ru/vacancy/132425136",
+          "amount": null,
+          "date": "",
+          "_extra": {
+            "company": "ООО «ОФИСМАГ», Оптовое направление"
+          }
+        },
+        {
+          "source": "hh",
+          "id": "133645838",
+          "title": "Fullstack-разработчик (JS/TS + Go) — middle-senior / senior",
+          "url": "https://hh.ru/vacancy/133645838",
+          "amount": "от 290000 RUR",
+          "date": "",
+          "_extra": {
+            "company": "ООО ФармХаб"
+          }
+        },
+        {
+          "source": "hh",
+          "id": "134365660",
+          "title": "C#/.NET-разработчик",
+          "url": "https://hh.ru/vacancy/134365660",
+          "amount": null,
+          "date": "",
+          "_extra": {
+            "company": "Paragon Software"
+          }
+        },
+        {
+          "source": "hh",
+          "id": "133391312",
+          "title": "Тимлид Embedded ПО в Автономный транспорт",
+          "url": "https://hh.ru/vacancy/133391312",
+          "amount": null,
+          "date": "",
+          "_extra": {
+            "company": "Автономный транспорт"
+          }
+        },
+        {
+          "source": "hh",
+          "id": "129948047",
+          "title": "Системный разработчик (Embedded linux) в команду робота-доставщика",
+          "url": "https://hh.ru/vacancy/129948047",
+          "amount": null,
+          "date": "",
+          "_extra": {
+            "company": "Автономный транспорт"
+          }
+        },
+        {
+          "source": "hh",
+          "id": "134365307",
+          "title": "Python разработчик",
+          "url": "https://hh.ru/vacancy/134365307",
+          "amount": null,
+          "date": "",
+          "_extra": {
+            "company": "Сбер. IT"
+          }
+        },
+        {
+          "source": "hh",
+          "id": "134365196",
+          "title": "FullStack-разработчик (Junior)",
+          "url": "https://hh.ru/vacancy/134365196",
+          "amount": null,
+          "date": "",
+          "_extra": {
+            "company": "Аналитический Центр Минприроды России"
+          }
+        },
+        {
+          "source": "hh",
+          "id": "132111987",
+          "title": "Senior fullstack java developer",
+          "url": "https://hh.ru/vacancy/132111987",
+          "amount": null,
+          "date": "",
+          "_extra": {
+            "company": "ООО Бизнес Технологии"
+          }
+        }
+      ]
+    },
+    "avito": {
+      "ok": true,
+      "count": 30,
+      "error": null,
+      "items": [
+        {
+          "source": "avito",
+          "id": "8156973668",
+          "title": "Кибервожатый в детский агролагерь (подработка)",
+          "url": "https://www.avito.ru/istra/vakansii/kibervozhatyy_v_detskiy_agrolager_podrabotka_8156973668",
+          "amount": "от 50 000 ₽ на руки",
+          "date": "2026-06-19T09:20:57+00:00",
+          "_extra": {
+            "location": "Истра",
+            "desc": "Истринская сыроварня Олега и Татьяны Сироты — это история о любви к настоящему ремеслу и качественным продуктам.\n\nСегодня мы гордимся тем, что наши сыры, масло, молоко, йогурты и другие молочные проду"
+          }
+        },
+        {
+          "source": "avito",
+          "id": "8157785785",
+          "title": "Педагог по программированию в агролагерь,подработк",
+          "url": "https://www.avito.ru/istra/vakansii/pedagog_po_programmirovaniyu_v_agrolagerpodrabotk_8157785785",
+          "amount": "от 50 000 ₽ на руки",
+          "date": "2026-06-19T09:30:21+00:00",
+          "_extra": {
+            "location": "Истра",
+            "desc": "· Истринская сыроварня Олега и Татьяны Сироты — это история о любви к настоящему ремеслу и качественным продуктам.\n\nСегодня мы гордимся тем, что наши сыры, масло, молоко, йогурты и другие молочные про"
+          }
+        },
+        {
+          "source": "avito",
+          "id": "8112001174",
+          "title": "Python Junior Сценарист/разработчик",
+          "url": "https://www.avito.ru/omsk/vakansii/python_junior_stsenaristrazrabotchik_8112001174",
+          "amount": "от 65 000 ₽",
+          "date": "2026-06-19T08:16:53+00:00",
+          "_extra": {
+            "location": "Омск",
+            "desc": "Наша команда виртуального ассистента работает над созданием навыков для семейства ассистентов Салют. Наша задача — учить виртуальных помощников отвечать на вопросы клиентов и помогать им в решении их "
+          }
+        },
+        {
+          "source": "avito",
+          "id": "8217352703",
+          "title": "Инженер по безопасной разработке / DevSecOps",
+          "url": "https://www.avito.ru/moskva/vakansii/inzhener_po_bezopasnoy_razrabotke_devsecops_8217352703",
+          "amount": "Зарплата не указана",
+          "date": "2026-06-19T07:50:19+00:00",
+          "_extra": {
+            "location": "Москва",
+            "desc": "«М. Тех» — Аккредитованная ИТ-Компания В Группе «М. Видео-Эльдорадо».\n\nКоманда «М. Тех» разрабатывает более 100 инновационных ИТ продуктов на основе современной микросервисной и облачной инфраструктур"
+          }
+        },
+        {
+          "source": "avito",
+          "id": "8112102476",
+          "title": "Системный администратор Linux",
+          "url": "https://www.avito.ru/moskva/vakansii/sistemnyy_administrator_linux_8112102476",
+          "amount": "Зарплата не указана",
+          "date": "2026-06-19T06:31:36+00:00",
+          "_extra": {
+            "location": "Москва",
+            "desc": "Требуется Middle системный администратор Linux / mlops инженер.\n\nГибридный формат работы.\n\n— Поддержка и развитие инфраструктуры для ML-проектов.\n\n— Автоматизация процессов разработки, тестирования и "
+          }
+        },
+        {
+          "source": "avito",
+          "id": "8175702685",
+          "title": "Разработчик AI",
+          "url": "https://www.avito.ru/volgograd/vakansii/razrabotchik_ai_8175702685",
+          "amount": "100 000 — 130 000 ₽ на руки",
+          "date": "2026-06-18T20:44:49+00:00",
+          "_extra": {
+            "location": "Волгоград",
+            "desc": "Описание вакансии.\n- Мы создаём интеллектуальную систему аудита — сервис, который анализирует корпоративную документацию и выявляет риски: утечки данных, несоответствия политикам безопасности, юридиче"
+          }
+        },
+        {
+          "source": "avito",
+          "id": "8142200907",
+          "title": "Fullstack разработчик",
+          "url": "https://www.avito.ru/voronezh/vakansii/fullstack_razrabotchik_8142200907",
+          "amount": "от 200 000 ₽ сдельно на руки",
+          "date": "2026-06-18T09:27:30+00:00",
+          "_extra": {
+            "location": "Воронеж",
+            "desc": "Нужен fullstack-разработчик: мобильное веб-приложение с картой (Pwa).\nСтроительная компания (благоустройство дворов, тротуаров, скверов — 30+ объектов) делает своё приложение «стройкарта». Прорабы на "
+          }
+        },
+        {
+          "source": "avito",
+          "id": "8223813098",
+          "title": "Преподаватель информатики (удалённая работа)",
+          "url": "https://www.avito.ru/orel/vakansii/prepodavatel_informatiki_udalennaya_rabota_8223813098",
+          "amount": "50 000 — 108 000 ₽",
+          "date": "2026-06-17T15:05:51+00:00",
+          "_extra": {
+            "location": "Орёл",
+            "desc": "Вакансия: Преподаватель информатики (удалённая работа).\n\nКолледж «Твой курс» ищет увлечённого педагога по информатике, который разделяет ценности гуманистической педагогики. Мы создаём индивидуальные "
+          }
+        },
+        {
+          "source": "avito",
+          "id": "8124882348",
+          "title": "Fullstack разработчик в офис",
+          "url": "https://www.avito.ru/kirovskaya_oblast_kirov/vakansii/fullstack_razrabotchik_v_ofis_8124882348",
+          "amount": "от 60 000 ₽ на руки",
+          "date": "2026-06-17T08:03:34+00:00",
+          "_extra": {
+            "location": "Киров",
+            "desc": "Обязанности:\n— разработка и тестирование личного кабинета.\n\nТребования:\n— опыт работы с:\n\nBackend.\nPython, Postgres, redis, docker, Linux.\n\nFrontend.\nReact, next, tailwind, typescript.\n\nУсловия:\n— офи"
+          }
+        },
+        {
+          "source": "avito",
+          "id": "8175471406",
+          "title": "GO-разработчик под ключ / Ментор по GO / IT",
+          "url": "https://www.avito.ru/moskva/vakansii/go-razrabotchik_pod_klyuch_mentor_po_go_it_8175471406",
+          "amount": "150 000 — 350 000 ₽ на руки",
+          "date": "2026-06-16T13:33:01+00:00",
+          "_extra": {
+            "location": "Москва",
+            "desc": "Хочешь стать Golang разработчиком с ЗП от 150-250к, но не хватает поддержки от опытных менторов? Оставляешь много откликов, но в итоге ни одного собеседования? Или просто не можешь даже просто доучить"
+          }
+        },
+        {
+          "source": "avito",
+          "id": "8211367074",
+          "title": "Системный администратор",
+          "url": "https://www.avito.ru/kolomna/vakansii/sistemnyy_administrator_8211367074",
+          "amount": "Зарплата не указана",
+          "date": "2026-06-15T06:48:35+00:00",
+          "_extra": {
+            "location": "Коломна",
+            "desc": "Компания ООО «Диво» производитель вкусной и натуральной еды по-домашнему приглашает в свою команду Системного администратора!\n\nМы работаем более 15 лет и продолжаем активно развиваться, поэтому нашей "
+          }
+        },
+        {
+          "source": "avito",
+          "id": "8114234343",
+          "title": "Разработчик мобильных приложений",
+          "url": "https://www.avito.ru/kazan/vakansii/razrabotchik_mobilnyh_prilozheniy_8114234343",
+          "amount": "до 1 000 000 ₽",
+          "date": "2026-06-17T19:21:41+00:00",
+          "_extra": {
+            "location": "Казань",
+            "desc": "Пожалуйста, прочитайте описание полностью. Казань и ближ районы!\n\nРабота с полным кодом только в офисе!\n\nРабота предстоит большая, конкурс на одно вакантное место. Если ты действительно готов доказать"
+          }
+        },
+        {
+          "source": "avito",
+          "id": "8214780085",
+          "title": "Разработчик / тестировщик по для бас",
+          "url": "https://www.avito.ru/nalchik/vakansii/razrabotchik_testirovschik_po_dlya_bas_8214780085",
+          "amount": "260 101 — 340 404 ₽",
+          "date": "2026-06-09T07:11:34+00:00",
+          "_extra": {
+            "location": "Нальчик",
+            "desc": "В инжиниринговый центр по разработке и внедрению беспилотных авиационных систем (Бас) требуются специалисты для работы с программным обеспечением и полевыми испытаниями.\n\nОбучение и адаптация (3 месяц"
+          }
+        },
+        {
+          "source": "avito",
+          "id": "8214737001",
+          "title": "Разработчик / тестировщик по для бас",
+          "url": "https://www.avito.ru/lipetsk/vakansii/razrabotchik_testirovschik_po_dlya_bas_8214737001",
+          "amount": "260 101 — 340 404 ₽",
+          "date": "2026-06-09T07:10:11+00:00",
+          "_extra": {
+            "location": "Липецк",
+            "desc": "В инжиниринговый центр по разработке и внедрению беспилотных авиационных систем (Бас) требуются специалисты для работы с программным обеспечением и полевыми испытаниями.\n\nОбучение и адаптация (3 месяц"
+          }
+        },
+        {
+          "source": "avito",
+          "id": "8214786095",
+          "title": "Разработчик / тестировщик по для бас",
+          "url": "https://www.avito.ru/tula/vakansii/razrabotchik_testirovschik_po_dlya_bas_8214786095",
+          "amount": "260 101 — 340 404 ₽",
+          "date": "2026-06-09T07:09:29+00:00",
+          "_extra": {
+            "location": "Тула",
+            "desc": "В инжиниринговый центр по разработке и внедрению беспилотных авиационных систем (Бас) требуются специалисты для работы с программным обеспечением и полевыми испытаниями.\n\nОбучение и адаптация (3 месяц"
+          }
+        },
+        {
+          "source": "avito",
+          "id": "8214812799",
+          "title": "Разработчик / тестировщик по для бас",
+          "url": "https://www.avito.ru/stavropol/vakansii/razrabotchik_testirovschik_po_dlya_bas_8214812799",
+          "amount": "260 101 — 340 404 ₽",
+          "date": "2026-06-09T07:09:14+00:00",
+          "_extra": {
+            "location": "Ставрополь",
+            "desc": "В инжиниринговый центр по разработке и внедрению беспилотных авиационных систем (Бас) требуются специалисты для работы с программным обеспечением и полевыми испытаниями.\n\nОбучение и адаптация (3 месяц"
+          }
+        },
+        {
+          "source": "avito",
+          "id": "8214760416",
+          "title": "Разработчик / тестировщик по для бас",
+          "url": "https://www.avito.ru/ivanovo/vakansii/razrabotchik_testirovschik_po_dlya_bas_8214760416",
+          "amount": "260 101 — 340 404 ₽",
+          "date": "2026-06-09T07:08:55+00:00",
+          "_extra": {
+            "location": "Иваново",
+            "desc": "В инжиниринговый центр по разработке и внедрению беспилотных авиационных систем (Бас) требуются специалисты для работы с программным обеспечением и полевыми испытаниями.\n\nОбучение и адаптация (3 месяц"
+          }
+        },
+        {
+          "source": "avito",
+          "id": "8213891238",
+          "title": "Разработчик / тестировщик по для бас",
+          "url": "https://www.avito.ru/anapa/vakansii/razrabotchik_testirovschik_po_dlya_bas_8213891238",
+          "amount": "260 101 — 340 404 ₽",
+          "date": "2026-06-09T07:08:39+00:00",
+          "_extra": {
+            "location": "Анапа",
+            "desc": "В инжиниринговый центр по разработке и внедрению беспилотных авиационных систем (Бас) требуются специалисты для работы с программным обеспечением и полевыми испытаниями.\n\nОбучение и адаптация (3 месяц"
+          }
+        },
+        {
+          "source": "avito",
+          "id": "8214087306",
+          "title": "Разработчик / тестировщик по для бас",
+          "url": "https://www.avito.ru/sochi/vakansii/razrabotchik_testirovschik_po_dlya_bas_8214087306",
+          "amount": "260 101 — 340 404 ₽",
+          "date": "2026-06-09T07:08:33+00:00",
+          "_extra": {
+            "location": "Сочи",
+            "desc": "В инжиниринговый центр по разработке и внедрению беспилотных авиационных систем (Бас) требуются специалисты для работы с программным обеспечением и полевыми испытаниями.\n\nОбучение и адаптация (3 месяц"
+          }
+        },
+        {
+          "source": "avito",
+          "id": "8214438717",
+          "title": "Разработчик / тестировщик по для бас",
+          "url": "https://www.avito.ru/surgut/vakansii/razrabotchik_testirovschik_po_dlya_bas_8214438717",
+          "amount": "260 101 — 340 404 ₽",
+          "date": "2026-06-09T07:08:22+00:00",
+          "_extra": {
+            "location": "Сургут",
+            "desc": "В инжиниринговый центр по разработке и внедрению беспилотных авиационных систем (Бас) требуются специалисты для работы с программным обеспечением и полевыми испытаниями.\n\nОбучение и адаптация (3 месяц"
+          }
+        },
+        {
+          "source": "avito",
+          "id": "8214603711",
+          "title": "Разработчик / тестировщик по для бас",
+          "url": "https://www.avito.ru/izhevsk/vakansii/razrabotchik_testirovschik_po_dlya_bas_8214603711",
+          "amount": "260 101 — 340 404 ₽",
+          "date": "2026-06-09T07:08:11+00:00",
+          "_extra": {
+            "location": "Ижевск",
+            "desc": "В инжиниринговый центр по разработке и внедрению беспилотных авиационных систем (Бас) требуются специалисты для работы с программным обеспечением и полевыми испытаниями.\n\nОбучение и адаптация (3 месяц"
+          }
+        },
+        {
+          "source": "avito",
+          "id": "8214624507",
+          "title": "Разработчик / тестировщик по для бас",
+          "url": "https://www.avito.ru/arhangelsk/vakansii/razrabotchik_testirovschik_po_dlya_bas_8214624507",
+          "amount": "260 101 — 340 404 ₽",
+          "date": "2026-06-09T08:00:44+00:00",
+          "_extra": {
+            "location": "Архангельск",
+            "desc": "В инжиниринговый центр по разработке и внедрению беспилотных авиационных систем (Бас) требуются специалисты для работы с программным обеспечением и полевыми испытаниями.\n\nОбучение и адаптация (3 месяц"
+          }
+        },
+        {
+          "source": "avito",
+          "id": "8214850125",
+          "title": "Разработчик / тестировщик по для бас",
+          "url": "https://www.avito.ru/nizhniy_novgorod/vakansii/razrabotchik_testirovschik_po_dlya_bas_8214850125",
+          "amount": "260 101 — 340 404 ₽",
+          "date": "2026-06-09T07:07:10+00:00",
+          "_extra": {
+            "location": "Нижний Новгород",
+            "desc": "В инжиниринговый центр по разработке и внедрению беспилотных авиационных систем (Бас) требуются специалисты для работы с программным обеспечением и полевыми испытаниями.\n\nОбучение и адаптация (3 месяц"
+          }
+        },
+        {
+          "source": "avito",
+          "id": "8102045973",
+          "title": "ML-разработчик под ключ / IT / Оффер 300к+",
+          "url": "https://www.avito.ru/moskva/vakansii/ml-razrabotchik_pod_klyuch_it_offer_300k_8102045973",
+          "amount": "300 000 — 500 000 ₽ на руки",
+          "date": "2026-06-16T12:41:37+00:00",
+          "_extra": {
+            "location": "Москва",
+            "desc": "Хочешь выйти на зарплату 300–400 тысяч рублей в Machine Learning за 3-4 месяца?\n\nИндивидуальное обучение ML и Data Science с гарантией трудоустройства.\n\nПолное сопровождение от вашего уровня до первой"
+          }
+        },
+        {
+          "source": "avito",
+          "id": "8223571254",
+          "title": "Вайбкодер AI разработчик",
+          "url": "https://www.avito.ru/kazan/vakansii/vaybkoder_ai_razrabotchik_8223571254",
+          "amount": "Зарплата не указана",
+          "date": "2026-06-05T10:09:47+00:00",
+          "_extra": {
+            "location": "Казань",
+            "desc": "Ищем вайбкодера / AI-разработчика в проект Expoten.\nИщем сильного вайбкодера, который умеет быстро превращать идеи в работающие продукты с помощью AI-инструментов.\n\nЧто нужно делать:\n\n— Разрабатывать "
+          }
+        },
+        {
+          "source": "avito",
+          "id": "8170419849",
+          "title": "Python/JS developer",
+          "url": "https://www.avito.ru/moskva_zelenograd/vakansii/pythonjs_developer_8170419849",
+          "amount": "Зарплата не указана",
+          "date": "2026-06-04T06:49:40+00:00",
+          "_extra": {
+            "location": "Зеленоград",
+            "desc": "ООО «Снс Холдинг» основана в 1992 году и на сегодняшний день является одним из ведущих* игроков российского Fmcg-рынка, осуществляя дистрибуцию:\n\nI. Продукции производства Itms:\nсигареты;\nсистемы нагр"
+          }
+        },
+        {
+          "source": "avito",
+          "id": "8049679188",
+          "title": "Монтажник рэа (сборка светодиодных приборов)",
+          "url": "https://www.avito.ru/mytischi/vakansii/montazhnik_rea_sborka_svetodiodnyh_priborov_8049679188",
+          "amount": "100 000 — 140 000 ₽",
+          "date": "2026-06-16T08:56:46+00:00",
+          "_extra": {
+            "location": "Мытищи",
+            "desc": "О компании.\n\nООО Моспромзнак работает с 2012 года в Мытищах. Исторически — производство маркировки для транспорта. Сейчас активно развиваем направление светотехники и электроники:\n— Светодиодные освет"
+          }
+        },
+        {
+          "source": "avito",
+          "id": "8079751678",
+          "title": "Главный инженер данных",
+          "url": "https://www.avito.ru/tuymazy/vakansii/glavnyy_inzhener_dannyh_8079751678",
+          "amount": "Зарплата не указана",
+          "date": "2026-06-16T07:11:32+00:00",
+          "_extra": {
+            "location": "Туймазы",
+            "desc": "Описание:\nМы ищем опытного инженера данных для формирования и ускорения доставки целевого состояния платформы данных, позволяющей использовать genai. Мы хотим видеть в нашей команде увлеченного специа"
+          }
+        },
+        {
+          "source": "avito",
+          "id": "8060428812",
+          "title": "Инженер-интегратор",
+          "url": "https://www.avito.ru/krasnodar/vakansii/inzhener-integrator_8060428812",
+          "amount": "80 000 — 150 000 ₽ на руки",
+          "date": "2026-05-30T06:06:34+00:00",
+          "_extra": {
+            "location": "Краснодар",
+            "desc": "Мы ищем талантливых и мотивированных Инженеров-интеграторов для проектирования, программирования, настройки и внедрения комплексных решений в области домашней автоматизации (Умный Дом) и Автоматизиров"
+          }
+        },
+        {
+          "source": "avito",
+          "id": "8094989807",
+          "title": "It специалист",
+          "url": "https://www.avito.ru/michurinsk/vakansii/it_spetsialist_8094989807",
+          "amount": "Зарплата не указана",
+          "date": "2026-06-19T08:33:36+00:00",
+          "_extra": {
+            "location": "Мичуринск",
+            "desc": "Мы, маркет запасных частей «Автомания» ищем опытного IT специалиста для поддержки и развития IT инфраструктуры нашей компании. Если вы разбираетесь в сетевых технологиях,\nадминистрировании серверов и "
+          }
+        }
+      ]
+    },
+    "superjob": {
+      "ok": true,
+      "count": 25,
+      "error": null,
+      "items": [
+        {
+          "source": "superjob",
+          "id": "51698105",
+          "title": "Системный администратор ЦОД (Linux/Windows)",
+          "url": "https://russia.superjob.ru/vakansii/sistemnyj-administrator-cod-51698105.html",
+          "amount": null,
+          "date": "2026-06-19T12:00:05+03:00",
+          "_extra": {
+            "company": "Филиал ФКУ Налог-Сервис ФНС России по ЦОД в г.Москве",
+            "slug": "sistemnyj-administrator-cod"
+          }
+        },
+        {
+          "source": "superjob",
+          "id": "51698092",
+          "title": "Системный администратор ЦОД",
+          "url": "https://russia.superjob.ru/vakansii/sistemnyj-administrator-cod-51698092.html",
+          "amount": null,
+          "date": "2026-06-19T12:00:00+03:00",
+          "_extra": {
+            "company": "Филиал ФКУ Налог-Сервис ФНС России по ЦОД в г.Москве",
+            "slug": "sistemnyj-administrator-cod"
+          }
+        },
+        {
+          "source": "superjob",
+          "id": "51697637",
+          "title": "Системный администратор",
+          "url": "https://russia.superjob.ru/vakansii/sistemnyj-administrator-51697637.html",
+          "amount": "25000–30000 RUB",
+          "date": "2026-06-19T11:31:04+03:00",
+          "_extra": {
+            "company": "Филиал ФКУ «Налог-Сервис» ФНС России по ЦОД в г. Москве",
+            "slug": "sistemnyj-administrator"
+          }
+        },
+        {
+          "source": "superjob",
+          "id": "52017937",
+          "title": "Python-разработчик стажер (Блок AI)",
+          "url": "https://russia.superjob.ru/vakansii/python-razrabotchik-stazher-52017937.html",
+          "amount": null,
+          "date": "2026-06-17T11:57:00+03:00",
+          "_extra": {
+            "company": "VK: Старт карьеры",
+            "slug": "python-razrabotchik-stazher"
+          }
+        },
+        {
+          "source": "superjob",
+          "id": "52008770",
+          "title": "Стажер направления Data Analytics",
+          "url": "https://russia.superjob.ru/vakansii/stazher-napravleniya-data-analytics-52008770.html",
+          "amount": null,
+          "date": "2026-06-19T12:42:48+03:00",
+          "_extra": {
+            "company": "Сбер: Старт карьеры",
+            "slug": "stazher-napravleniya-data-analytics"
+          }
+        },
+        {
+          "source": "superjob",
+          "id": "51824510",
+          "title": "Инженер по искусственному интеллекту",
+          "url": "https://russia.superjob.ru/vakansii/inzhener-po-iskusstvennomu-intellektu-51824510.html",
+          "amount": null,
+          "date": "2026-06-19T12:20:05+03:00",
+          "_extra": {
+            "company": "DreamWorks",
+            "slug": "inzhener-po-iskusstvennomu-intellektu"
+          }
+        },
+        {
+          "source": "superjob",
+          "id": "51921374",
+          "title": "Аналитик антифрода L3",
+          "url": "https://russia.superjob.ru/vakansii/analitik-antifroda-l3-51921374.html",
+          "amount": null,
+          "date": "2026-06-19T12:06:32+03:00",
+          "_extra": {
+            "company": "Мах (Team VK company)",
+            "slug": "analitik-antifroda-l3"
+          }
+        },
+        {
+          "source": "superjob",
+          "id": "51961680",
+          "title": "Стажер-аналитик",
+          "url": "https://russia.superjob.ru/vakansii/stazher-analitik-51961680.html",
+          "amount": null,
+          "date": "2026-06-19T11:47:51+03:00",
+          "_extra": {
+            "company": "Лаборатория Касперского",
+            "slug": "stazher-analitik"
+          }
+        },
+        {
+          "source": "superjob",
+          "id": "52035515",
+          "title": "Преподаватель/Мастер ПО (программирование)",
+          "url": "https://russia.superjob.ru/vakansii/prepodavatel-52035515.html",
+          "amount": "от 100000",
+          "date": "2026-06-19T11:42:00+03:00",
+          "_extra": {
+            "company": "ГОУ СПО Колледж связи",
+            "slug": "prepodavatel"
+          }
+        },
+        {
+          "source": "superjob",
+          "id": "51056436",
+          "title": "Системный инженер",
+          "url": "https://russia.superjob.ru/vakansii/sistemnyj-inzhener-51056436.html",
+          "amount": "от 200000",
+          "date": "2026-06-19T11:32:00+03:00",
+          "_extra": {
+            "company": "ЭКО центр",
+            "slug": "sistemnyj-inzhener"
+          }
+        },
+        {
+          "source": "superjob",
+          "id": "51826679",
+          "title": "Стажёр-разработчик программного обеспечения",
+          "url": "https://russia.superjob.ru/vakansii/stazhjor-razrabotchik-programmnogo-obespecheniya-51826679.html",
+          "amount": null,
+          "date": "2026-06-19T11:20:04+03:00",
+          "_extra": {
+            "company": "Amazon",
+            "slug": "stazhjor-razrabotchik-programmnogo-obespecheniya"
+          }
+        },
+        {
+          "source": "superjob",
+          "id": "51959566",
+          "title": "Аналитик данных Excel (Усть-Луга, Ленинградская область)",
+          "url": "https://russia.superjob.ru/vakansii/analitik-dannyh-excel-51959566.html",
+          "amount": "100000–120000 RUB",
+          "date": "2026-06-19T10:52:42+03:00",
+          "_extra": {
+            "company": "Международный EPC-проект Генеральный подрядчик",
+            "slug": "analitik-dannyh-excel"
+          }
+        },
+        {
+          "source": "superjob",
+          "id": "51905385",
+          "title": "Техник по техническому обслуживанию (обслуживание вещательного оборудования)",
+          "url": "https://russia.superjob.ru/vakansii/tehnik-po-tehnicheskomu-obsluzhivaniyu-51905385.html",
+          "amount": null,
+          "date": "2026-06-18T18:40:04+03:00",
+          "_extra": {
+            "company": "Nickelodeon",
+            "slug": "tehnik-po-tehnicheskomu-obsluzhivaniyu"
+          }
+        },
+        {
+          "source": "superjob",
+          "id": "51905379",
+          "title": "Стажер в отдел продуктовой разработки",
+          "url": "https://russia.superjob.ru/vakansii/stazher-v-otdel-produktovoj-razrabotki-51905379.html",
+          "amount": null,
+          "date": "2026-06-18T18:25:04+03:00",
+          "_extra": {
+            "company": "Okkam",
+            "slug": "stazher-v-otdel-produktovoj-razrabotki"
+          }
+        },
+        {
+          "source": "superjob",
+          "id": "51994534",
+          "title": "Аналитик",
+          "url": "https://russia.superjob.ru/vakansii/analitik-51994534.html",
+          "amount": null,
+          "date": "2026-06-18T18:17:39+03:00",
+          "_extra": {
+            "company": "РОСМЭН",
+            "slug": "analitik"
+          }
+        },
+        {
+          "source": "superjob",
+          "id": "51994500",
+          "title": "Специалист по автоматизации",
+          "url": "https://russia.superjob.ru/vakansii/specialist-po-avtomatizacii-51994500.html",
+          "amount": null,
+          "date": "2026-06-18T17:37:12+03:00",
+          "_extra": {
+            "company": "Flowwow",
+            "slug": "specialist-po-avtomatizacii"
+          }
+        },
+        {
+          "source": "superjob",
+          "id": "51865215",
+          "title": "Стажер-специалист по искусственному интеллекту",
+          "url": "https://russia.superjob.ru/vakansii/stazher-specialist-po-iskusstvennomu-intellektu-51865215.html",
+          "amount": null,
+          "date": "2026-06-18T17:16:20+03:00",
+          "_extra": {
+            "company": "Netflix",
+            "slug": "stazher-specialist-po-iskusstvennomu-intellektu"
+          }
+        },
+        {
+          "source": "superjob",
+          "id": "51994469",
+          "title": "Стажёр разработчик-ETL",
+          "url": "https://russia.superjob.ru/vakansii/stazhjor-razrabotchik-etl-51994469.html",
+          "amount": null,
+          "date": "2026-06-18T17:14:40+03:00",
+          "_extra": {
+            "company": "OZON: Старт карьеры",
+            "slug": "stazhjor-razrabotchik-etl"
+          }
+        },
+        {
+          "source": "superjob",
+          "id": "51919034",
+          "title": "Стажер направления Генеративный ИИ",
+          "url": "https://russia.superjob.ru/vakansii/stazher-napravleniya-generativnyj-ii-51919034.html",
+          "amount": null,
+          "date": "2026-06-18T17:11:36+03:00",
+          "_extra": {
+            "company": "Volkswagen Group",
+            "slug": "stazher-napravleniya-generativnyj-ii"
+          }
+        },
+        {
+          "source": "superjob",
+          "id": "51921967",
+          "title": "Специалист по качеству данных",
+          "url": "https://russia.superjob.ru/vakansii/specialist-po-kachestvu-dannyh-51921967.html",
+          "amount": null,
+          "date": "2026-06-18T17:05:28+03:00",
+          "_extra": {
+            "company": "Точка банк",
+            "slug": "specialist-po-kachestvu-dannyh"
+          }
+        },
+        {
+          "source": "superjob",
+          "id": "51780741",
+          "title": "Программист АСУТП",
+          "url": "https://russia.superjob.ru/vakansii/programmist-asutp-51780741.html",
+          "amount": "от 150000",
+          "date": "2026-06-18T16:10:00+03:00",
+          "_extra": {
+            "company": "Группа Компаний РУСАГРО",
+            "slug": "programmist-asutp"
+          }
+        },
+        {
+          "source": "superjob",
+          "id": "51782497",
+          "title": "Стажер отдела операционной деятельности цифровых медиа",
+          "url": "https://russia.superjob.ru/vakansii/stazher-otdela-operacionnoj-deyatelnosti-cifrovyh-media-51782497.html",
+          "amount": null,
+          "date": "2026-06-18T14:30:12+03:00",
+          "_extra": {
+            "company": "Disney",
+            "slug": "stazher-otdela-operacionnoj-deyatelnosti-cifrovyh-media"
+          }
+        },
+        {
+          "source": "superjob",
+          "id": "52008995",
+          "title": "Инженер-программист C++",
+          "url": "https://russia.superjob.ru/vakansii/inzhener-programmist-c-52008995.html",
+          "amount": null,
+          "date": "2026-06-18T14:06:30+03:00",
+          "_extra": {
+            "company": "Figma",
+            "slug": "inzhener-programmist-c"
+          }
+        },
+        {
+          "source": "superjob",
+          "id": "51981322",
+          "title": "Стажер в области машинного обучения",
+          "url": "https://russia.superjob.ru/vakansii/stazher-v-oblasti-mashinnogo-obucheniya-51981322.html",
+          "amount": null,
+          "date": "2026-06-18T14:06:05+03:00",
+          "_extra": {
+            "company": "Pinterest",
+            "slug": "stazher-v-oblasti-mashinnogo-obucheniya"
+          }
+        },
+        {
+          "source": "superjob",
+          "id": "51904968",
+          "title": "Data Scientist",
+          "url": "https://russia.superjob.ru/vakansii/data-scientist-51904968.html",
+          "amount": null,
+          "date": "2026-06-18T14:05:06+03:00",
+          "_extra": {
+            "company": "Мегафон: Старт Карьеры",
+            "slug": "data-scientist"
+          }
+        }
+      ]
+    },
+    "habr": {
+      "ok": true,
+      "count": 25,
+      "error": null,
+      "items": [
+        {
+          "source": "habr",
+          "id": "1000166424",
+          "title": "Бэкенд разработчик Java | Python | Go | C++ ",
+          "url": "https://career.habr.com/vacancies/1000166424",
+          "amount": null,
+          "date": "2026-06-19T12:47:58+03:00",
+          "_extra": {
+            "company": "Яндекс",
+            "remote": false
+          }
+        },
+        {
+          "source": "habr",
+          "id": "1000166593",
+          "title": "Портфельный менеджер",
+          "url": "https://career.habr.com/vacancies/1000166593",
+          "amount": null,
+          "date": "2026-06-19T12:33:27+03:00",
+          "_extra": {
+            "company": "MoneyCat",
+            "remote": true
+          }
+        },
+        {
+          "source": "habr",
+          "id": "1000166594",
+          "title": "Маркетинговый аналитик",
+          "url": "https://career.habr.com/vacancies/1000166594",
+          "amount": null,
+          "date": "2026-06-19T12:33:27+03:00",
+          "_extra": {
+            "company": "MoneyCat",
+            "remote": true
+          }
+        },
+        {
+          "source": "habr",
+          "id": "1000164847",
+          "title": "Сетевой инженер",
+          "url": "https://career.habr.com/vacancies/1000164847",
+          "amount": null,
+          "date": "2026-06-19T12:27:16+03:00",
+          "_extra": {
+            "company": "Банк России",
+            "remote": false
+          }
+        },
+        {
+          "source": "habr",
+          "id": "1000163215",
+          "title": "DevSecOps инженер (DevOps)",
+          "url": "https://career.habr.com/vacancies/1000163215",
+          "amount": null,
+          "date": "2026-06-19T12:27:12+03:00",
+          "_extra": {
+            "company": "ИТ-компания «Лоция»",
+            "remote": true
+          }
+        },
+        {
+          "source": "habr",
+          "id": "1000128923",
+          "title": "Системный администратор платформы",
+          "url": "https://career.habr.com/vacancies/1000128923",
+          "amount": null,
+          "date": "2026-06-19T12:27:04+03:00",
+          "_extra": {
+            "company": "Action tech",
+            "remote": true
+          }
+        },
+        {
+          "source": "habr",
+          "id": "1000166722",
+          "title": "Инженер по тестированию (мобильные приложения)",
+          "url": "https://career.habr.com/vacancies/1000166722",
+          "amount": null,
+          "date": "2026-06-19T12:11:33+03:00",
+          "_extra": {
+            "company": "РТЛабс",
+            "remote": false
+          }
+        },
+        {
+          "source": "habr",
+          "id": "1000166843",
+          "title": "Системный аналитик",
+          "url": "https://career.habr.com/vacancies/1000166843",
+          "amount": null,
+          "date": "2026-06-19T11:43:35+03:00",
+          "_extra": {
+            "company": "Лига Цифровой Экономики",
+            "remote": true
+          }
+        },
+        {
+          "source": "habr",
+          "id": "1000167069",
+          "title": "Инженер по инцидентам ИБ / SOC",
+          "url": "https://career.habr.com/vacancies/1000167069",
+          "amount": null,
+          "date": "2026-06-19T11:43:01+03:00",
+          "_extra": {
+            "company": "М Тех",
+            "remote": false
+          }
+        },
+        {
+          "source": "habr",
+          "id": "1000167068",
+          "title": "Архитектор по информационной безопасности",
+          "url": "https://career.habr.com/vacancies/1000167068",
+          "amount": null,
+          "date": "2026-06-19T11:41:15+03:00",
+          "_extra": {
+            "company": "М Тех",
+            "remote": false
+          }
+        },
+        {
+          "source": "habr",
+          "id": "1000164586",
+          "title": "Архитектор BPMSoft",
+          "url": "https://career.habr.com/vacancies/1000164586",
+          "amount": null,
+          "date": "2026-06-19T11:38:06+03:00",
+          "_extra": {
+            "company": "АстраЗенека",
+            "remote": false
+          }
+        },
+        {
+          "source": "habr",
+          "id": "1000150058",
+          "title": "Java разработчик",
+          "url": "https://career.habr.com/vacancies/1000150058",
+          "amount": "до 450 000 ₽",
+          "date": "2026-06-19T11:27:07+03:00",
+          "_extra": {
+            "company": "SENSE",
+            "remote": true
+          }
+        },
+        {
+          "source": "habr",
+          "id": "1000164829",
+          "title": "Администратор Hadoop",
+          "url": "https://career.habr.com/vacancies/1000164829",
+          "amount": null,
+          "date": "2026-06-19T11:27:07+03:00",
+          "_extra": {
+            "company": "Банк России",
+            "remote": false
+          }
+        },
+        {
+          "source": "habr",
+          "id": "1000164844",
+          "title": "Инженер по глубокому обучению в команду нейросетевого планировщика траектории",
+          "url": "https://career.habr.com/vacancies/1000164844",
+          "amount": null,
+          "date": "2026-06-19T11:27:07+03:00",
+          "_extra": {
+            "company": "Navio",
+            "remote": false
+          }
+        },
+        {
+          "source": "habr",
+          "id": "1000164877",
+          "title": "DevOps Site Reliability Engineer / SRE",
+          "url": "https://career.habr.com/vacancies/1000164877",
+          "amount": null,
+          "date": "2026-06-19T11:24:11+03:00",
+          "_extra": {
+            "company": "РОСГОССТРАХ",
+            "remote": true
+          }
+        },
+        {
+          "source": "habr",
+          "id": "1000167067",
+          "title": "Администратор СУБД GreenPlum",
+          "url": "https://career.habr.com/vacancies/1000167067",
+          "amount": null,
+          "date": "2026-06-19T11:07:02+03:00",
+          "_extra": {
+            "company": "Rubytech",
+            "remote": false
+          }
+        },
+        {
+          "source": "habr",
+          "id": "1000166721",
+          "title": "Продуктовый дизайнер / Веб-дизайнер",
+          "url": "https://career.habr.com/vacancies/1000166721",
+          "amount": null,
+          "date": "2026-06-19T11:04:41+03:00",
+          "_extra": {
+            "company": "IT_One",
+            "remote": true
+          }
+        },
+        {
+          "source": "habr",
+          "id": "1000167066",
+          "title": "Инженер по безопасной разработке / DevSecOps",
+          "url": "https://career.habr.com/vacancies/1000167066",
+          "amount": null,
+          "date": "2026-06-19T10:58:04+03:00",
+          "_extra": {
+            "company": "М Тех",
+            "remote": false
+          }
+        },
+        {
+          "source": "habr",
+          "id": "1000162419",
+          "title": "DevSecOps/AppSec",
+          "url": "https://career.habr.com/vacancies/1000162419",
+          "amount": null,
+          "date": "2026-06-19T10:27:14+03:00",
+          "_extra": {
+            "company": "ИТ-компания «Лоция»",
+            "remote": true
+          }
+        },
+        {
+          "source": "habr",
+          "id": "1000166492",
+          "title": "Администратор СЗИ",
+          "url": "https://career.habr.com/vacancies/1000166492",
+          "amount": "от 104 000 до 165 000 ₽",
+          "date": "2026-06-19T10:27:09+03:00",
+          "_extra": {
+            "company": "Гринатом",
+            "remote": false
+          }
+        },
+        {
+          "source": "habr",
+          "id": "1000166491",
+          "title": "UX‑исследователь, middle/middle+",
+          "url": "https://career.habr.com/vacancies/1000166491",
+          "amount": null,
+          "date": "2026-06-19T10:27:09+03:00",
+          "_extra": {
+            "company": "Контур",
+            "remote": true
+          }
+        },
+        {
+          "source": "habr",
+          "id": "1000167065",
+          "title": "Team Lead DevOps / Infrastructure Lead",
+          "url": "https://career.habr.com/vacancies/1000167065",
+          "amount": null,
+          "date": "2026-06-19T10:25:22+03:00",
+          "_extra": {
+            "company": "deeplay",
+            "remote": true
+          }
+        },
+        {
+          "source": "habr",
+          "id": "1000167064",
+          "title": "Reverse engineer ",
+          "url": "https://career.habr.com/vacancies/1000167064",
+          "amount": null,
+          "date": "2026-06-19T10:19:03+03:00",
+          "_extra": {
+            "company": "deeplay",
+            "remote": true
+          }
+        },
+        {
+          "source": "habr",
+          "id": "1000166279",
+          "title": "MLOps",
+          "url": "https://career.habr.com/vacancies/1000166279",
+          "amount": null,
+          "date": "2026-06-19T10:12:26+03:00",
+          "_extra": {
+            "company": "Лаборатория Касперского",
+            "remote": true
+          }
+        },
+        {
+          "source": "habr",
+          "id": "1000167062",
+          "title": "Тестировщик ЦФТ",
+          "url": "https://career.habr.com/vacancies/1000167062",
+          "amount": null,
+          "date": "2026-06-19T09:47:35+03:00",
+          "_extra": {
+            "company": "Axenix (ex. Accenture)",
+            "remote": true
+          }
+        }
+      ]
+    },
+    "zarplata": {
+      "ok": true,
+      "count": 30,
+      "error": null,
+      "items": [
+        {
+          "source": "zarplata",
+          "id": "133758854",
+          "title": "Администратор розничной сети",
+          "url": "https://www.zarplata.ru/vacancy/133758854",
+          "amount": "от 110000 до 110000 RUR",
+          "date": "",
+          "_extra": {
+            "company": "Зелёный мир"
+          }
+        },
+        {
+          "source": "zarplata",
+          "id": "134144585",
+          "title": "Оператор на АЗС (ул. Десантников 21)",
+          "url": "https://www.zarplata.ru/vacancy/134144585",
+          "amount": "от 76000 RUR",
+          "date": "",
+          "_extra": {
+            "company": "Сеть АЗС «Газпромнефть» / ООО «Газпромнефть-Центр»"
+          }
+        },
+        {
+          "source": "zarplata",
+          "id": "134162056",
+          "title": "Специалист по ведению базы данных",
+          "url": "https://www.zarplata.ru/vacancy/134162056",
+          "amount": null,
+          "date": "",
+          "_extra": {
+            "company": "Лента, федеральная розничная сеть, Работа в офисе"
+          }
+        },
+        {
+          "source": "zarplata",
+          "id": "133212540",
+          "title": "Продавец-консультант в Acoola",
+          "url": "https://www.zarplata.ru/vacancy/133212540",
+          "amount": "от 70000 RUR",
+          "date": "",
+          "_extra": {
+            "company": "Concept Group"
+          }
+        },
+        {
+          "source": "zarplata",
+          "id": "134241858",
+          "title": "Офис-менеджер",
+          "url": "https://www.zarplata.ru/vacancy/134241858",
+          "amount": "от 95000 RUR",
+          "date": "",
+          "_extra": {
+            "company": "Центр ДНК Тест"
+          }
+        },
+        {
+          "source": "zarplata",
+          "id": "134215754",
+          "title": "Специалист по юридической обработке данных",
+          "url": "https://www.zarplata.ru/vacancy/134215754",
+          "amount": null,
+          "date": "",
+          "_extra": {
+            "company": "Secunda"
+          }
+        },
+        {
+          "source": "zarplata",
+          "id": "134164987",
+          "title": "Менеджер по документообороту",
+          "url": "https://www.zarplata.ru/vacancy/134164987",
+          "amount": null,
+          "date": "",
+          "_extra": {
+            "company": "Газстройпром, Молодые специалисты"
+          }
+        },
+        {
+          "source": "zarplata",
+          "id": "133598443",
+          "title": "Оператор аттракционов",
+          "url": "https://www.zarplata.ru/vacancy/133598443",
+          "amount": "от 100000 до 150000 RUR",
+          "date": "",
+          "_extra": {
+            "company": "Диво Остров"
+          }
+        },
+        {
+          "source": "zarplata",
+          "id": "134087113",
+          "title": "Главный инженер по эксплуатации",
+          "url": "https://www.zarplata.ru/vacancy/134087113",
+          "amount": "от 200000 до 200000 RUR",
+          "date": "",
+          "_extra": {
+            "company": "Управляющая компания Корвет"
+          }
+        },
+        {
+          "source": "zarplata",
+          "id": "134219157",
+          "title": "Бухгалтер на первичную документацию",
+          "url": "https://www.zarplata.ru/vacancy/134219157",
+          "amount": "до 60000 RUR",
+          "date": "",
+          "_extra": {
+            "company": "КонсТуБи"
+          }
+        },
+        {
+          "source": "zarplata",
+          "id": "134232145",
+          "title": "Руководитель проектного офиса IT",
+          "url": "https://www.zarplata.ru/vacancy/134232145",
+          "amount": null,
+          "date": "",
+          "_extra": {
+            "company": "Силовые машины, Акционерное общество"
+          }
+        },
+        {
+          "source": "zarplata",
+          "id": "134312142",
+          "title": "Middle QA Manual Engineer",
+          "url": "https://www.zarplata.ru/vacancy/134312142",
+          "amount": null,
+          "date": "",
+          "_extra": {
+            "company": "Невасофт"
+          }
+        },
+        {
+          "source": "zarplata",
+          "id": "133593174",
+          "title": "Специалист по сборке летательных аппаратов (север города)",
+          "url": "https://www.zarplata.ru/vacancy/133593174",
+          "amount": "от 90000 до 110000 RUR",
+          "date": "",
+          "_extra": {
+            "company": "Специальный Технологический Центр (ООО СТЦ)"
+          }
+        },
+        {
+          "source": "zarplata",
+          "id": "134315446",
+          "title": "Младший редактор",
+          "url": "https://www.zarplata.ru/vacancy/134315446",
+          "amount": "от 52500 RUR",
+          "date": "",
+          "_extra": {
+            "company": "АСТ, издательская группа"
+          }
+        },
+        {
+          "source": "zarplata",
+          "id": "134047891",
+          "title": "Специалист по разметке дорожных видео",
+          "url": "https://www.zarplata.ru/vacancy/134047891",
+          "amount": "от 17000 до 39000 RUR",
+          "date": "",
+          "_extra": {
+            "company": "Data Light"
+          }
+        },
+        {
+          "source": "zarplata",
+          "id": "133720328",
+          "title": "Административный координатор",
+          "url": "https://www.zarplata.ru/vacancy/133720328",
+          "amount": "от 80000 RUR",
+          "date": "",
+          "_extra": {
+            "company": "Атланты Северо-Запад"
+          }
+        },
+        {
+          "source": "zarplata",
+          "id": "134207883",
+          "title": "Помощник/помощница в загородный дом",
+          "url": "https://www.zarplata.ru/vacancy/134207883",
+          "amount": "от 180000 RUR",
+          "date": "",
+          "_extra": {
+            "company": "Дорогие соискатели, здравствуйте! Приглашаем на работу к нам в помощь. Мы семейная пара, живём вместе более 20 лет. Есть дети, взрослые."
+          }
+        },
+        {
+          "source": "zarplata",
+          "id": "134267026",
+          "title": "Директор филиала",
+          "url": "https://www.zarplata.ru/vacancy/134267026",
+          "amount": "от 250000 RUR",
+          "date": "",
+          "_extra": {
+            "company": "Крупная филиальная сеть"
+          }
+        },
+        {
+          "source": "zarplata",
+          "id": "134276386",
+          "title": "Личный водитель",
+          "url": "https://www.zarplata.ru/vacancy/134276386",
+          "amount": null,
+          "date": "",
+          "_extra": {
+            "company": "Частная семья"
+          }
+        },
+        {
+          "source": "zarplata",
+          "id": "134165645",
+          "title": "Исполнительный директор (CEO)",
+          "url": "https://www.zarplata.ru/vacancy/134165645",
+          "amount": "от 500000 до 850000 RUR",
+          "date": "",
+          "_extra": {
+            "company": "Continental-HR"
+          }
+        },
+        {
+          "source": "zarplata",
+          "id": "134284158",
+          "title": "Водитель-экспедитор",
+          "url": "https://www.zarplata.ru/vacancy/134284158",
+          "amount": "от 100000 до 130000 RUR",
+          "date": "",
+          "_extra": {
+            "company": "Невский Завод Теплоэнергетического Оборудования"
+          }
+        },
+        {
+          "source": "zarplata",
+          "id": "134177738",
+          "title": "Администратор стриптиз-клуба",
+          "url": "https://www.zarplata.ru/vacancy/134177738",
+          "amount": "от 200000 RUR",
+          "date": "",
+          "_extra": {
+            "company": "Цитадель"
+          }
+        },
+        {
+          "source": "zarplata",
+          "id": "134262326",
+          "title": "Менеджер по подбору персонала/Рекрутер",
+          "url": "https://www.zarplata.ru/vacancy/134262326",
+          "amount": "от 130000 до 150000 RUR",
+          "date": "",
+          "_extra": {
+            "company": "Французские булочные-кондитерские Garçon"
+          }
+        },
+        {
+          "source": "zarplata",
+          "id": "133363966",
+          "title": "Специалист по документообороту",
+          "url": "https://www.zarplata.ru/vacancy/133363966",
+          "amount": null,
+          "date": "",
+          "_extra": {
+            "company": "Пивоваренная компания Балтика Офис"
+          }
+        },
+        {
+          "source": "zarplata",
+          "id": "134064498",
+          "title": "Специалист по информационной работе и взаимодействию со СМИ",
+          "url": "https://www.zarplata.ru/vacancy/134064498",
+          "amount": "от 104664 до 113198 RUR",
+          "date": "",
+          "_extra": {
+            "company": "Территориальный фонд обязательного медицинского страхования Ленинградской области"
+          }
+        },
+        {
+          "source": "zarplata",
+          "id": "134270999",
+          "title": "Тестировщик/QA engineer",
+          "url": "https://www.zarplata.ru/vacancy/134270999",
+          "amount": "от 150000 до 200000 RUR",
+          "date": "",
+          "_extra": {
+            "company": "Карвиль"
+          }
+        },
+        {
+          "source": "zarplata",
+          "id": "134368742",
+          "title": "Специалист по ручному тестированию",
+          "url": "https://www.zarplata.ru/vacancy/134368742",
+          "amount": "от 79100 до 113000 RUR",
+          "date": "",
+          "_extra": {
+            "company": "Решение"
+          }
+        },
+        {
+          "source": "zarplata",
+          "id": "134177661",
+          "title": "Координатор проекта (Помощник директора/ассистент)",
+          "url": "https://www.zarplata.ru/vacancy/134177661",
+          "amount": null,
+          "date": "",
+          "_extra": {
+            "company": "Пивоваренная компания Балтика Офис"
+          }
+        },
+        {
+          "source": "zarplata",
+          "id": "134218462",
+          "title": "Кладовщик хирургического склада",
+          "url": "https://www.zarplata.ru/vacancy/134218462",
+          "amount": "до 67500 RUR",
+          "date": "",
+          "_extra": {
+            "company": "Нейровет"
+          }
+        },
+        {
+          "source": "zarplata",
+          "id": "134231092",
+          "title": "Бухгалтер по расчету заработной платы",
+          "url": "https://www.zarplata.ru/vacancy/134231092",
+          "amount": "до 133750 RUR",
+          "date": "",
+          "_extra": {
+            "company": "СКА Арена"
+          }
+        }
+      ]
+    },
+    "fl": {
+      "ok": true,
+      "count": 50,
+      "error": null,
+      "items": [
+        {
+          "source": "fl",
+          "id": "5510274",
+          "title": "Необходимо разработать .exe-приложение (бот) для ОС Windows, созданное на языке python",
+          "url": "https://www.fl.ru/projects/5510274/neobhodimo-razrabotat-exe-prilojenie-bot-dlya-os-windows-sozdannoe-na-yazyike-python-.html",
+          "amount": null,
+          "date": "Fri, 19 Jun 2026 09:48:07 GMT",
+          "_extra": {
+            "desc": "Необходимо разработать .exe-приложение (бот) для ОС Windows, созданное на языке \nPython. Бот помогает автоматически переносить запись (заявку) на сайте, где пользователь..."
+          }
+        },
+        {
+          "source": "fl",
+          "id": "5510273",
+          "title": "Создать слайд для теста",
+          "url": "https://www.fl.ru/projects/5510273/sozdat-slayd-dlya-testa.html",
+          "amount": null,
+          "date": "Fri, 19 Jun 2026 09:48:02 GMT",
+          "_extra": {
+            "desc": "Техническое задание для дизайнера\n\n## Цель работы\n\nПодготовить изображение для проведения A/B-теста (Split Test) карточек товаров на маркетплейсе.\n\nВажно: это НЕ дизайн баннера..."
+          }
+        },
+        {
+          "source": "fl",
+          "id": "5510272",
+          "title": "Посмотреть кабинет авито (250 обьявлений) консультация по продвижению + корректировка (Бюджет: 1 000  &#8381;)",
+          "url": "https://www.fl.ru/projects/5510272/posmotret-kabinet-avito-250-obyavleniy-konsultatsiya-po-prodvijeniyu--korrektirovka.html",
+          "amount": null,
+          "date": "Fri, 19 Jun 2026 09:47:28 GMT",
+          "_extra": {
+            "desc": "Ранее кабинет вели подрядчики, подрядчики перестали вести проект.\nОстались 250 обьявлений, с ручными ставками, некоторые из них почему то скрыты пишет.\nСтатистика начала то..."
+          }
+        },
+        {
+          "source": "fl",
+          "id": "5510275",
+          "title": "План эко-парка",
+          "url": "https://www.fl.ru/projects/5510275/plan-eko-parka.html",
+          "amount": null,
+          "date": "Fri, 19 Jun 2026 09:45:35 GMT",
+          "_extra": {
+            "desc": "- ситуационный план \n- визуализация"
+          }
+        },
+        {
+          "source": "fl",
+          "id": "5510271",
+          "title": "SEO контент маркетинг",
+          "url": "https://www.fl.ru/projects/5510271/seo-kontent-marketing.html",
+          "amount": null,
+          "date": "Fri, 19 Jun 2026 09:37:32 GMT",
+          "_extra": {
+            "desc": "Необходимо привести трафик на лендинг.\nТема лендинга - интеграции ИИ в бизнес.\n\nЕсть площадки на, которых планируем публиковаться, также есть свой блог.\n\nНеобходимо разработать..."
+          }
+        },
+        {
+          "source": "fl",
+          "id": "5510270",
+          "title": "UI/UX редизайн главной страницы и элементов B2B SaaS-платформы (работа по готовой структуре)",
+          "url": "https://www.fl.ru/projects/5510270/ui-ux-redizayn-glavnoy-stranitsyi-i-elementov-b2b-saas-platformyi-rabota-po-gotovoy-strukture.html",
+          "amount": null,
+          "date": "Fri, 19 Jun 2026 09:33:09 GMT",
+          "_extra": {
+            "desc": "Продукт — LegalTech-платформа (автоматизированный конструктор документов и готовых правовых решений для бизнеса). Это ИТ-сервис, а не просто склад шаблонов. Внутри находятся..."
+          }
+        },
+        {
+          "source": "fl",
+          "id": "5510269",
+          "title": "Нужно создать сайт.",
+          "url": "https://www.fl.ru/projects/5510269/nujno-sozdat-sayt-.html",
+          "amount": null,
+          "date": "Fri, 19 Jun 2026 09:31:29 GMT",
+          "_extra": {
+            "desc": "Нужно создать сайт\n- дизайн сайта уже есть\n- нужно воплотить дизайн: desktop / tablet / mobile.\n- 14 страниц: 13 типовых с одинаковыми шапками и подвалами, 1 страница (главная)..."
+          }
+        },
+        {
+          "source": "fl",
+          "id": "5510268",
+          "title": "Разработка ЛК партнёрской программы  (Бюджет: 7 000  &#8381;)",
+          "url": "https://www.fl.ru/projects/5510268/razrabotka-lk-partnrskoy-programmyi-.html",
+          "amount": null,
+          "date": "Fri, 19 Jun 2026 09:30:51 GMT",
+          "_extra": {
+            "desc": "Нужно разработать личный кабинет партнёрской программы и отдельную админ-панель для менеджера, ориентируясь на прототипы по ссылкам, которые я отправил. \n\nВ ЛК партнёр должен..."
+          }
+        },
+        {
+          "source": "fl",
+          "id": "5510225",
+          "title": "Сделать фото для онлайн магазина женская одежда (Бюджет: 2 500  &#8381;)",
+          "url": "https://www.fl.ru/projects/5510225/sdelat-foto-dlya-onlayn-magazina-jenskaya-odejda.html",
+          "amount": null,
+          "date": "Fri, 19 Jun 2026 09:30:16 GMT",
+          "_extra": {
+            "desc": "Сделать фото для соцсети фотографий женская одежда"
+          }
+        },
+        {
+          "source": "fl",
+          "id": "5510265",
+          "title": "Требуется фотограф для предметной съемки декоративного камня (Москва/МО)",
+          "url": "https://www.fl.ru/projects/5510265/trebuetsya-fotograf-dlya-predmetnoy-syemki-dekorativnogo-kamnya-moskva-mo.html",
+          "amount": null,
+          "date": "Fri, 19 Jun 2026 09:02:14 GMT",
+          "_extra": {
+            "desc": "Описание\nИщем фотографа для долгосрочного сотрудничества по съемке образцов декоративного камня и декоративного кирпича для каталога и сайта производителя.\n\nЧто необходимо:\n•..."
+          }
+        },
+        {
+          "source": "fl",
+          "id": "5510263",
+          "title": "Нужен консультант по компьютерному зрению, идентификации по лицу",
+          "url": "https://www.fl.ru/projects/5510263/nujen-konsultant-po-kompyuternomu-zreniyu-identifikatsii-po-litsu-.html",
+          "amount": null,
+          "date": "Fri, 19 Jun 2026 08:55:55 GMT",
+          "_extra": {
+            "desc": "Нужен консультант по компьютерному зрению, идентификации по лицу и проверке, что перед камерой находится живой человек, для аудита архитектуры.\n\nНужен опыт именно в следующих..."
+          }
+        },
+        {
+          "source": "fl",
+          "id": "5510262",
+          "title": "инженер-проектировщик ЭОМ",
+          "url": "https://www.fl.ru/projects/5510262/injener-proektirovschik-eom.html",
+          "amount": null,
+          "date": "Fri, 19 Jun 2026 08:53:04 GMT",
+          "_extra": {
+            "desc": "Задачи:\n— электрика экспозиций и мультимедиа;\n— схемы, трассы, нагрузки, спецификации;\n— выпуск рабочей документации.\n\nТребования:\n— AutoCAD;\n— опыт ЭОМ от 3 лет;\n— умение..."
+          }
+        },
+        {
+          "source": "fl",
+          "id": "5510258",
+          "title": "Ищем участников для юзабилити-тестирования (iPhone) (Бюджет: 400  &#8381;)",
+          "url": "https://www.fl.ru/projects/5510258/-ischem-uchastnikov-dlya-yuzabiliti-testirovaniya-iphone.html",
+          "amount": null,
+          "date": "Fri, 19 Jun 2026 08:40:58 GMT",
+          "_extra": {
+            "desc": "Помогите нам сделать наш сайт удобнее! Ищем тех, кто пользуется iPhone.\n\n  Что нужно:\n  - Воспользоваться функционалом сайта со своего телефона\n  - Вслух комментировать свои..."
+          }
+        },
+        {
+          "source": "fl",
+          "id": "5510257",
+          "title": "Нужен консультант по компьютерному зрению, идентификации по лицу.",
+          "url": "https://www.fl.ru/projects/5510257/nujen-konsultant-po-kompyuternomu-zreniyu-identifikatsii-po-litsu.html",
+          "amount": null,
+          "date": "Fri, 19 Jun 2026 08:39:56 GMT",
+          "_extra": {
+            "desc": "Нужен консультант по компьютерному зрению, идентификации по лицу и проверке, что перед камерой находится живой человек, для аудита архитектуры.\n\nНужен опыт именно в следующих..."
+          }
+        },
+        {
+          "source": "fl",
+          "id": "5510256",
+          "title": "Верстка лендинга для услуги (адаптив, HTML/React) (Бюджет: 6 000  &#8381;)",
+          "url": "https://www.fl.ru/projects/5510256/verstka-lendinga-dlya-uslugi-adaptiv-html-react.html",
+          "amount": null,
+          "date": "Fri, 19 Jun 2026 08:38:42 GMT",
+          "_extra": {
+            "desc": "Нужен одностраничный лендинг под продвижение услуги. Дизайн есть в Figma — нужно аккуратно сверстать и собрать рабочую страницу.\nЧто нужно:\n\n— адаптив под десктоп / планшет /..."
+          }
+        },
+        {
+          "source": "fl",
+          "id": "5510089",
+          "title": "Позвонить компаниям по скрипту (Бюджет: 2 000  &#8381;, для всех)",
+          "url": "https://www.fl.ru/projects/5510089/pozvonit-kompaniyam-po-skriptu.html",
+          "amount": null,
+          "date": "Fri, 19 Jun 2026 08:37:23 GMT",
+          "_extra": {
+            "desc": "Нужно позвонить в компании, нашим потенциальным клиентам, по нашим скриптам. Окажем помощь в обучении. Номер будет наш, звонить через sip на своем пк или ноутбуке. 20р диалог. (диалогов для начала сто)"
+          }
+        },
+        {
+          "source": "fl",
+          "id": "5510255",
+          "title": "дизайн упаковки",
+          "url": "https://www.fl.ru/projects/5510255/dizayn-upakovki-.html",
+          "amount": null,
+          "date": "Fri, 19 Jun 2026 08:34:49 GMT",
+          "_extra": {
+            "desc": "Простая и оперативная задача макет упаковки для индивидуального вип-пакета . Есть основной концепт надо адаптировать"
+          }
+        },
+        {
+          "source": "fl",
+          "id": "5510253",
+          "title": "Мокап тичнения на коже.",
+          "url": "https://www.fl.ru/projects/5510253/mokap-tichneniya-na-koje.html",
+          "amount": null,
+          "date": "Fri, 19 Jun 2026 08:27:20 GMT",
+          "_extra": {
+            "desc": "Необходим вокап тичнения на коже.\n\nВ слоях."
+          }
+        },
+        {
+          "source": "fl",
+          "id": "5510248",
+          "title": "Замена элементов на чехле с помощью ИИ",
+          "url": "https://www.fl.ru/projects/5510248/zamena-elementov-na-chehle-s-pomoschyu-ii.html",
+          "amount": null,
+          "date": "Fri, 19 Jun 2026 08:10:30 GMT",
+          "_extra": {
+            "desc": "У меня есть исходники, концепция которых должна быть сохранена. Заменить на них необходимо: вырез под камеру, кнопки, разъемы, заставку на экране и фронтальную камеру. Также..."
+          }
+        },
+        {
+          "source": "fl",
+          "id": "5510245",
+          "title": "Нужен специалист по Asterisk",
+          "url": "https://www.fl.ru/projects/5510245/nujen-spetsialist-po-asterisk.html",
+          "amount": null,
+          "date": "Fri, 19 Jun 2026 08:10:23 GMT",
+          "_extra": {
+            "desc": "Настроить Asterisk на сервере/ПК.\nОрганизовать подключение SIM-карты к системе (через GSM-шлюз, USB GSM-модем или другое подходящее решение).\nОбеспечить возможность совершения..."
+          }
+        },
+        {
+          "source": "fl",
+          "id": "5510252",
+          "title": "при помощи нейросети (ИИ) \"накопирайтить\" 100 текстов с низким уровнем заспамности (Бюджет: 1 000  &#8381;)",
+          "url": "https://www.fl.ru/projects/5510252/pri-pomoschi-neyroseti-ii-nakopiraytit-100-tekstov-s-nizkim-urovnem-zaspamnosti.html",
+          "amount": null,
+          "date": "Fri, 19 Jun 2026 08:10:18 GMT",
+          "_extra": {
+            "desc": "Здравствуйте!\nЗадача состоит в том, чтобы при помощи нейросети (ИИ) накопирайтить 100 текстов для каждого города из списка, который предоставлю, на тему: «Вакансии в таком-то..."
+          }
+        },
+        {
+          "source": "fl",
+          "id": "5510250",
+          "title": "Доработка на next.js срочно",
+          "url": "https://www.fl.ru/projects/5510250/dorabotka-na-nextjs-srochno-.html",
+          "amount": null,
+          "date": "Fri, 19 Jun 2026 08:05:43 GMT",
+          "_extra": {
+            "desc": "Доработка на next.js\nПроизвести тестирование сайта, выявить ошибки, исправить их"
+          }
+        },
+        {
+          "source": "fl",
+          "id": "5510246",
+          "title": "Чертежи в компас-3D (Бюджет: 499  &#8381;)",
+          "url": "https://www.fl.ru/projects/5510246/cherteji-v-kompas-3d.html",
+          "amount": null,
+          "date": "Fri, 19 Jun 2026 07:56:41 GMT",
+          "_extra": {
+            "desc": "Проушина\nБолт для крепления проушины\nБолт вставляемый в проушину\n-болты должны быть разного диаметра \nГайка для первого болта\nГайка для второго болта\nШайба для первого болта..."
+          }
+        },
+        {
+          "source": "fl",
+          "id": "5510244",
+          "title": "Отредактировать дипломную работу по ГОСТУ",
+          "url": "https://www.fl.ru/projects/5510244/otredaktirovat-diplomnuyu-rabotu-po-gostu.html",
+          "amount": null,
+          "date": "Fri, 19 Jun 2026 07:49:44 GMT",
+          "_extra": {
+            "desc": "Дипломная работа, объем - 90 листов, текст полностью написан ничего исправлять не нужно, проверка на антиплагиат тоже не нужна, прошу просто отредактировать работу по ГОСТУ,..."
+          }
+        },
+        {
+          "source": "fl",
+          "id": "5510243",
+          "title": "Разработка дизайна блока на сайт",
+          "url": "https://www.fl.ru/projects/5510243/razrabotka-dizayna-bloka-na-sayt.html",
+          "amount": null,
+          "date": "Fri, 19 Jun 2026 07:49:38 GMT",
+          "_extra": {
+            "desc": "Добрый день, коллеги!\nНеобходимо разработать дизайн блока демонстрирующего все преимущества услуги. Дизайн нужно сделать как можно быстрее. Профессионально. Исходники..."
+          }
+        },
+        {
+          "source": "fl",
+          "id": "5510242",
+          "title": "Парсинг данных",
+          "url": "https://www.fl.ru/projects/5510242/parsing-dannyih-.html",
+          "amount": null,
+          "date": "Fri, 19 Jun 2026 07:43:46 GMT",
+          "_extra": {
+            "desc": "Скачать данные (кривая производительности + чертёж) на все представленные карточки насосов (50HZ c электродвигателем). \nУ сайта есть ограничения на скачивание файлов."
+          }
+        },
+        {
+          "source": "fl",
+          "id": "5510241",
+          "title": "ТРЕБУЕТСЯ МОНТАЖЕР SHORTS / REELS / ВЕРТИКАЛЬНЫХ ВИДЕО",
+          "url": "https://www.fl.ru/projects/5510241/trebuetsya-montajer-shorts---reels---vertikalnyih-video.html",
+          "amount": null,
+          "date": "Fri, 19 Jun 2026 07:40:08 GMT",
+          "_extra": {
+            "desc": "Ищем монтажера для регулярной обработки коротких вертикальных видео.\n\nТематика: косметическая продукция, рекламные интеграции блогеров.\n\nЧто нужно делать:\n\n1. Получать готовое..."
+          }
+        },
+        {
+          "source": "fl",
+          "id": "5510240",
+          "title": "Написать отзыв на Яндекс, 2гис (Бюджет: 300  &#8381;)",
+          "url": "https://www.fl.ru/projects/5510240/napisat-otzyiv-na-yandeks-2gis.html",
+          "amount": null,
+          "date": "Fri, 19 Jun 2026 07:34:21 GMT",
+          "_extra": {
+            "desc": "Нужен человек который сможет написать отзывы"
+          }
+        },
+        {
+          "source": "fl",
+          "id": "5510239",
+          "title": "создать 100 модных fashion луков одежды (Бюджет: 15 000  &#8381;)",
+          "url": "https://www.fl.ru/projects/5510239/sozdat-100-modnyih-fashion-lukov-odejdyi.html",
+          "amount": null,
+          "date": "Fri, 19 Jun 2026 07:21:36 GMT",
+          "_extra": {
+            "desc": "Ищу человека с хорошим чувством стиля для создания подборок одежды (женская мода, эстетика). Мы работаем с партнерскими программами (Shein, AliExpress, TEMU) и переливаем..."
+          }
+        },
+        {
+          "source": "fl",
+          "id": "5510238",
+          "title": "Доработка сайта на MODX",
+          "url": "https://www.fl.ru/projects/5510238/dorabotka-sayta-na-modx.html",
+          "amount": null,
+          "date": "Fri, 19 Jun 2026 07:21:19 GMT",
+          "_extra": {
+            "desc": "Доработка сайта с дизайна на платформе MODX: \nВнедрение новых блоков на главную страницу, О компании и в карточку товара\nВнедрение страницы Услуги внутренняя (верстка и..."
+          }
+        },
+        {
+          "source": "fl",
+          "id": "5510070",
+          "title": "Повышение репутации (отзыв) (Бюджет: 200  &#8381;, для всех)",
+          "url": "https://www.fl.ru/projects/5510070/povyishenie-reputatsii-otzyiv.html",
+          "amount": null,
+          "date": "Fri, 19 Jun 2026 07:21:07 GMT",
+          "_extra": {
+            "desc": "Добрый день!\nнужно будет создать задание на площадке. Далее идет короткая переписка в чате. И потом через 2-3 дня оставлить отзыв. \nТексты предоставим"
+          }
+        },
+        {
+          "source": "fl",
+          "id": "5510237",
+          "title": "Разработка 3D модели рисунка протектора шины LCV (SolidWorks/NX/STEP) (для всех)",
+          "url": "https://www.fl.ru/projects/5510237/razrabotka-3d-modeli-risunka-protektora-shinyi-lcv-solidworks-nx-step.html",
+          "amount": null,
+          "date": "Fri, 19 Jun 2026 07:13:52 GMT",
+          "_extra": {
+            "desc": "Задача: Разработать 3D-модель ненаправленного рисунка протектора шины для легкого коммерческого транспорта (LCV, типоразмер 195/75 R16C) с нуля по готовому детальному техническому заданию.\n\nТребуемая квалификация:\n\nИнженер-конструктор или промышленный дизайнер с опытом работы в САПР (SolidWorks, Sie"
+          }
+        },
+        {
+          "source": "fl",
+          "id": "5510236",
+          "title": "Оставить положительный отклик о  работе магазина. (Бюджет: 70  &#8381;)",
+          "url": "https://www.fl.ru/projects/5510236/ostavit-polojitelnyiy-otklik-o--rabote-magazina.html",
+          "amount": null,
+          "date": "Fri, 19 Jun 2026 07:13:44 GMT",
+          "_extra": {
+            "desc": "Оставить положительный отклик о работе магазина.\nТекст отклика грамотный и информативный. Не похожий на шаблонный или заказной.\nОбъем отклика не менее 5 строк текста.\nПишем по..."
+          }
+        },
+        {
+          "source": "fl",
+          "id": "5510233",
+          "title": "Разработка раздела ТХ котельной",
+          "url": "https://www.fl.ru/projects/5510233/razrabotka-razdela-th-kotelnoy.html",
+          "amount": null,
+          "date": "Fri, 19 Jun 2026 07:04:13 GMT",
+          "_extra": {
+            "desc": "Необходимо разработать раздел ТХ котельной стадии П по 87 ПП для негосударственной экспертизы на основании разделов стадии Р. Материалы по ссылке..."
+          }
+        },
+        {
+          "source": "fl",
+          "id": "5510234",
+          "title": "Создание 34 изображений «До и после» (замена решеток радиатора)",
+          "url": "https://www.fl.ru/projects/5510234/sozdanie-34-izobrajeniy-do-i-posle-zamena-reshetok-radiatora.html",
+          "amount": null,
+          "date": "Fri, 19 Jun 2026 07:04:08 GMT",
+          "_extra": {
+            "desc": "Здравствуйте, уважаемые фрилансеры!\n\nИщу специалиста для подготовки 34 фотографий в формате «До и после». Задача — наглядно показать, как меняется внешний вид автомобиля при..."
+          }
+        },
+        {
+          "source": "fl",
+          "id": "5510235",
+          "title": "нужен конструктив бани из поротерма с навесом для авто (для всех)",
+          "url": "https://www.fl.ru/projects/5510235/nujen-konstruktiv-bani-iz-poroterma-s-navesom-dlya-avto.html",
+          "amount": null,
+          "date": "Fri, 19 Jun 2026 06:57:17 GMT",
+          "_extra": {
+            "desc": "разработан эскизный проект бани - во вложении. (есть 3д модель в архикаде)\n\nстены из поротерма 440мм (остался после строительства дома)\nростверк на сваях под баню уже залит\n\nнужен конструктив кровли бани и навеса, фундаменты под навес и террасу, подбор оконных/дверных перемычек\n\nв зоне навеса для ав"
+          }
+        },
+        {
+          "source": "fl",
+          "id": "5510232",
+          "title": "Пройти верификацию на ресурсе  (Бюджет: 1 000  &#8381;)",
+          "url": "https://www.fl.ru/projects/5510232/proyti-verifikatsiyu-na-resurse-.html",
+          "amount": null,
+          "date": "Fri, 19 Jun 2026 06:39:26 GMT",
+          "_extra": {
+            "desc": "Прохождение самой простой верификации на ресурсе, занимает времени не больше 5 минут"
+          }
+        },
+        {
+          "source": "fl",
+          "id": "5510063",
+          "title": "необходимо оформить сертификаты на товар для озон (для всех)",
+          "url": "https://www.fl.ru/projects/5510063/neobhodimo-oformit-sertifikatyi-na-tovar-dlya-ozon.html",
+          "amount": null,
+          "date": "Fri, 19 Jun 2026 06:27:06 GMT",
+          "_extra": {
+            "desc": "какие документы потребуются для продажи на Ozon следующих товаров:\nМеталлическая бутылка для воды (спортивная бутылка/термос).\nБамбуковая накладка на подлокотник дивана со столиком.\nМассажный коврик для ног с пластиковыми элементами под морскую гальку.\nЖенская диадема (корона) с декоративными камням"
+          }
+        },
+        {
+          "source": "fl",
+          "id": "5510230",
+          "title": "ACF pro+ верстка в rem внутренняя страница на WP  (Бюджет: 24 000  &#8381;)",
+          "url": "https://www.fl.ru/projects/5510230/acf-pro-verstka-v-rem-vnutrennyaya-stranitsa-na-wp-.html",
+          "amount": null,
+          "date": "Fri, 19 Jun 2026 06:20:33 GMT",
+          "_extra": {
+            "desc": "Макет https://www.figma.com/design/vMhpgV3E1WxZXJEV355FSU/английский-онлайн-финал?node-id=640-203\nЗадача выполнить верстку в ремах (кроссбраузерная, чистая), сделать анимацию..."
+          }
+        },
+        {
+          "source": "fl",
+          "id": "5510190",
+          "title": "Банер для профиля LinkedIn",
+          "url": "https://www.fl.ru/projects/5510190/baner-dlya-profilya-linkedin.html",
+          "amount": null,
+          "date": "Fri, 19 Jun 2026 05:42:48 GMT",
+          "_extra": {
+            "desc": "ЦЕЛЬ: Создать баннер для профиля LinkedIn, который за 2 секунды транслирует ценность кандидата (Lead Product Manager) и сразу показывает масштаб его достижений. Задача —..."
+          }
+        },
+        {
+          "source": "fl",
+          "id": "5510174",
+          "title": "Сделать баннер для продажи гитар (Бюджет: 300  &#8381;)",
+          "url": "https://www.fl.ru/projects/5510174/sdelat-banner-dlya-prodaji-gitar.html",
+          "amount": null,
+          "date": "Fri, 19 Jun 2026 05:40:23 GMT",
+          "_extra": {
+            "desc": "Нужно сделать банер, для моего небольшого магазинчика продажи гитар, на нем нужно :\n\nкрутая фотка гитары (акустика или электро — стильно снятая);\n\nкороткий цепляющий заголовок..."
+          }
+        },
+        {
+          "source": "fl",
+          "id": "5510201",
+          "title": "Внести сложные правки в плохоотрендереную интерьерную визуализацию (Бюджет: 1 000  &#8381;)",
+          "url": "https://www.fl.ru/projects/5510201/vnesti-slojnyie-pravki-v-plohootrenderenuyu-interernuyu-vizualizatsiyu.html",
+          "amount": null,
+          "date": "Fri, 19 Jun 2026 05:38:31 GMT",
+          "_extra": {
+            "desc": "Необходимо включить восприятие на полную мощность и внести изменения в корявые рендеры, выполненные спустя рукава, чтобы привести в соответствие общее оформление к единому..."
+          }
+        },
+        {
+          "source": "fl",
+          "id": "5510175",
+          "title": "Low poly файл для печати  stl | асфальтовый каток (Бюджет: 300  &#8381;)",
+          "url": "https://www.fl.ru/projects/5510175/--low-poly-fayl-dlya-pechati--stl--asfaltovyiy-katok.html",
+          "amount": null,
+          "date": "Fri, 19 Jun 2026 05:37:13 GMT",
+          "_extra": {
+            "desc": "асфальтовый каток"
+          }
+        },
+        {
+          "source": "fl",
+          "id": "5510228",
+          "title": "Озвучка русских народных сказок с музыкальным сопровождением",
+          "url": "https://www.fl.ru/projects/5510228/ozvuchka-russkih-narodnyih-skazok-s-muzyikalnyim-soprovojdeniem.html",
+          "amount": null,
+          "date": "Fri, 19 Jun 2026 05:36:26 GMT",
+          "_extra": {
+            "desc": "Здравствуйте. Требуется выразительная озвучка детских народных сказок с музыкальным сопровождением. Около 20 штук."
+          }
+        },
+        {
+          "source": "fl",
+          "id": "5510226",
+          "title": "Ищем разработчиков для интервью про деплой приложений, ботов и backend-сервисов (Бюджет: 2 000  &#8381;)",
+          "url": "https://www.fl.ru/projects/5510226/ischem-razrabotchikov-dlya-intervyu-pro-deploy-prilojeniy-botov-i-backend-servisov.html",
+          "amount": null,
+          "date": "Fri, 19 Jun 2026 05:36:19 GMT",
+          "_extra": {
+            "desc": "Привет! Мы проводим исследование и ищем фрилансеров-разработчиков, которые делают и запускают в продакшн приложения для клиентов.\n\nНам важно пообщаться с теми, кто на практике..."
+          }
+        },
+        {
+          "source": "fl",
+          "id": "5510200",
+          "title": "Сделать несколько логотипов (Бюджет: 3 000  &#8381;)",
+          "url": "https://www.fl.ru/projects/5510200/sdelat-neskolko-logotipov.html",
+          "amount": null,
+          "date": "Fri, 19 Jun 2026 05:35:39 GMT",
+          "_extra": {
+            "desc": "Есть концептуальный пример логотипа робо-собачки, надо его доделать, чтобы был более не ИИшный, внести несколько правок.\nНа основе него сделать еще пару вариантов - только..."
+          }
+        },
+        {
+          "source": "fl",
+          "id": "5510212",
+          "title": "Ищем таргетолога / маркетолога для запуска рекламы онлайн-проекта (для всех)",
+          "url": "https://www.fl.ru/projects/5510212/ischem-targetologa---marketologa-dlya-zapuska-reklamyi-onlayn-proekta.html",
+          "amount": null,
+          "date": "Fri, 19 Jun 2026 05:35:28 GMT",
+          "_extra": {
+            "desc": "Ищем таргетолога / маркетолога для запуска рекламы онлайн-проекта\n\nНужен специалист для запуска рекламы духовно-просветительского онлайн-проекта.\n\nЕсть готовая воронка: реклама → диагностика GetCourse → 7 писем → мастер-класс → продажа курса → ретаргетинг.\n\nЧто нужно:\n- проверить готовность воронки "
+          }
+        },
+        {
+          "source": "fl",
+          "id": "5510219",
+          "title": "Ищу человека для записи с экрана",
+          "url": "https://www.fl.ru/projects/5510219/ischu-cheloveka-dlya-zapisi-s-ekrana.html",
+          "amount": null,
+          "date": "Fri, 19 Jun 2026 05:34:35 GMT",
+          "_extra": {
+            "desc": "Ищу человека, который сходит в кинотеатр и запишет мультфильм историю игрушек на свой смартфон (желательно айфон, и желательно чтобы был штатив), во время съемок не должно быть..."
+          }
+        },
+        {
+          "source": "fl",
+          "id": "5510198",
+          "title": "Создать сообщество (магазин) в VK взяв инфу с моего сайта",
+          "url": "https://www.fl.ru/projects/5510198/-sozdat-soobschestvo-magazin-v-vk-vzyav-infu-s-moego-sayta.html",
+          "amount": null,
+          "date": "Fri, 19 Jun 2026 05:34:27 GMT",
+          "_extra": {
+            "desc": "Необходимо сделать сообщество с каталогом для продвижения продукции. Информация есть. Есть сайты - 2 шт. \nПредлагайте стоимость, пишите как это называется, присылайте примеры..."
+          }
+        },
+        {
+          "source": "fl",
+          "id": "5510217",
+          "title": "Внедрить ИИ",
+          "url": "https://www.fl.ru/projects/5510217/vnedrit-ii-.html",
+          "amount": null,
+          "date": "Fri, 19 Jun 2026 05:34:20 GMT",
+          "_extra": {
+            "desc": "Создание ИИ-администратора для бьюти салона, с максимальной автоматизацией работы администратора.\n\nМессенджеры: MAX · Telegram · VK"
+          }
+        }
+      ]
+    },
+    "kwork": {
+      "ok": true,
+      "count": 24,
+      "error": null,
+      "items": [
+        {
+          "source": "kwork",
+          "id": "3200802",
+          "title": "Telegram-бота для выдачи лид-магнита, лидов CRM",
+          "url": "https://kwork.ru/projects/3200802",
+          "amount": "5000.00",
+          "date": "",
+          "_extra": {
+            "desc": "Ищу специалиста для настройки Telegram-бота с интеграцией Bitrix24.\r\nЗадача:\r\n\t1.\tПользователь нажимает кнопку &laquo;Получить бесплатно&raquo;.\r\n\t2.\tБот предлагает оставить контакт:\r\n\t&bull;\t[:1f4f1] номер телефона (через кнопку Telegram &laquo;Поделиться номером&raquo;)\r\nили\r\n\t&bull;\t[:2709] e-mai"
+          }
+        },
+        {
+          "source": "kwork",
+          "id": "3168590",
+          "title": "Доработать ивайтера в группы MAX (управление из тг)",
+          "url": "https://kwork.ru/projects/3168590",
+          "amount": "5000.00",
+          "date": "",
+          "_extra": {
+            "desc": "Добрый день! Нужно доработать бота (веб апп) для инвайта в группы Макс. \r\nБот практически готов, но нужно доработать некоторые моменты.\r\n- починить авторизацию аккаунтов Max в боте тг (сделать ее более стабильной и рабочей)\r\n- починить сбор айди по ключевым (работает сейчас не правильно, довести ее "
+          }
+        },
+        {
+          "source": "kwork",
+          "id": "3200759",
+          "title": "Разработка ИИ агента и ТГ бота",
+          "url": "https://kwork.ru/projects/3200759",
+          "amount": "5000.00",
+          "date": "",
+          "_extra": {
+            "desc": "Задача необходимо разработать локального бота текстовика но с работой внешних MCP серверов (с возможностью дополнения), + создание базы знаний и бэкенд для интеграции его ответов с ТГ ботом, также для пользователей необходимо будет вести 2 тарифа, бесплатное с ограниченными количеством запросов, и п"
+          }
+        },
+        {
+          "source": "kwork",
+          "id": "3053720",
+          "title": "Кодовое слово в комментариях в N8N",
+          "url": "https://kwork.ru/projects/3053720",
+          "amount": "500.00",
+          "date": "",
+          "_extra": {
+            "desc": "Сделать через n8n чтобы по кодовому слову можно было выдавать человеку плюшку/бонус гайд - т.е. идёт ответ на сам комментарий + отсылается в директ сообщение, напишите какое количество аккаунтов для этого понадобится и какие?"
+          }
+        },
+        {
+          "source": "kwork",
+          "id": "3022438",
+          "title": "Скрипт на n8n, либо любой другой ЯП",
+          "url": "https://kwork.ru/projects/3022438",
+          "amount": "500.00",
+          "date": "",
+          "_extra": {
+            "desc": "Нужно написать шаблон на n8n (возможен другой язык программирование - главное чтобы удобно было пользоваться):\r\n1) в Chatgpt или Gemini делать: есть авторы  которые хорошо пишут посты, нужно брать посты не старше 2-3 дней - делать классный рерайт, чтобы они выглядели ещё лучше и интереснее и делать "
+          }
+        },
+        {
+          "source": "kwork",
+          "id": "3200721",
+          "title": "ИИ агент",
+          "url": "https://kwork.ru/projects/3200721",
+          "amount": "15000.00",
+          "date": "",
+          "_extra": {
+            "desc": "Пожалуйста не отвечайте мне промтом из GPT или Claude.\r\nПредложите свое решение\r\nНужен агент, работающий на VPS без моего участия. Каждые 10 минут в рабочее время с 7:00 до 19:00 агент должен автоматически открывать список из примерно 4-6 сайтов и заполнять на них формы заявок согласно легкому фильт"
+          }
+        },
+        {
+          "source": "kwork",
+          "id": "3199623",
+          "title": "Генерация каруселей через Claude Code",
+          "url": "https://kwork.ru/projects/3199623",
+          "amount": "500.00",
+          "date": "",
+          "_extra": {
+            "desc": "Надо по референсу генерировать сочные карусели через Claude Code:\r\n1) делать на 100% уникальные текста\r\n2) ставить другие цвета и немного изменять дизайна чтобы не было проблем с плагиатом\r\n3) на последнем слайде делать CTA - призыв к действию\r\nВышлите пожалуйста какие вы генерировали карусели."
+          }
+        },
+        {
+          "source": "kwork",
+          "id": "2923776",
+          "title": "Отправка писем через Google Script",
+          "url": "https://kwork.ru/projects/2923776",
+          "amount": "1000.00",
+          "date": "",
+          "_extra": {
+            "desc": "1) Нужно брать из файлов email, заголовки писем, тело письма, и прикреплять презентацию и/или изображения (нужна чтобы эта функция была отключаемой - когда то надо прикреплять файлы, когда то нет)\r\n2) нужна статистика по отправкам писем\r\n3) надо менять текст писем (выставлять каждые 5, 10, 15, 20)\r\n"
+          }
+        },
+        {
+          "source": "kwork",
+          "id": "3200703",
+          "title": "Разработка SaaS-сервиса удалённого доступа (Rust)",
+          "url": "https://kwork.ru/projects/3200703",
+          "amount": "100000.00",
+          "date": "",
+          "_extra": {
+            "desc": "Нужен разработчик для SaaS удалённого доступа к ПК на базе open-source remote desktop engine (есть коммерческая pro-лицензия). Важно: часть enterprise-функций уже есть в движке и должна быть корректно включена и интегрирована, без разработки с нуля.\r\n⸻\r\nЗадачи:\r\n1. Инфраструктура\r\n* Развернуть серве"
+          }
+        },
+        {
+          "source": "kwork",
+          "id": "3198895",
+          "title": "Написать программу для просмотра/дочит. дзен/ютуб/рутуб",
+          "url": "https://kwork.ru/projects/3198895",
+          "amount": "1000.00",
+          "date": "",
+          "_extra": {
+            "desc": "С достижением монетизации, без блокировок и прочих санкций. Рассмотрю любые предложения с реальным достижением успеха."
+          }
+        },
+        {
+          "source": "kwork",
+          "id": "3198919",
+          "title": "Генератор почтовых адресов",
+          "url": "https://kwork.ru/projects/3198919",
+          "amount": "1000.00",
+          "date": "",
+          "_extra": {
+            "desc": "Программа должна сама создавать названия и пароль в произвольной и(или) иной форме в автоматическом режиме с автоматической регистрацией на почтовых сервисах. Рассмотрю любые реальные варианты."
+          }
+        },
+        {
+          "source": "kwork",
+          "id": "3189570",
+          "title": "Программа просмотра публикаций в Дзен",
+          "url": "https://kwork.ru/projects/3189570",
+          "amount": "1000.00",
+          "date": "",
+          "_extra": {
+            "desc": "Нужна программа просмотра статей и видео в Дзен с аккаунтов дзен-каналов, одноклассники, в контакте. Принцип работы: программу вставляются ссылки из файла и программа используя аккаунты смотрит от 1 до 5 минут( от 1 шт в час до 10 в час)."
+          }
+        },
+        {
+          "source": "kwork",
+          "id": "3200907",
+          "title": "Разработка ЛК партнёрской программы",
+          "url": "https://kwork.ru/projects/3200907",
+          "amount": "7000.00",
+          "date": "",
+          "_extra": {
+            "desc": "Нужно разработать личный кабинет партнёрской программы Belstanok и отдельную админ-панель для менеджера, ориентируясь на прототипы по ссылкам, которые я отправил. \r\n.\r\nВ ЛК партнёр должен видеть главную страницу, добавлять клиентов и товары, запрашивать вывод средств, заполнять личные данные и читат"
+          }
+        },
+        {
+          "source": "kwork",
+          "id": "3200905",
+          "title": "Сайт агрегатор со спортивной тематикой",
+          "url": "https://kwork.ru/projects/3200905",
+          "amount": "60000.00",
+          "date": "",
+          "_extra": {
+            "desc": "Сайт-страница агрегатор\r\n1. Должен быть сайт который мы сможем сами редактировать (просто)\r\n2. Должен работать поиск, фильтр (город, направленность)\r\n3. Основная страница со спортивными лагерями 5-7 штук\r\n4. В каждый лагерь можно было зайти и посмотреть подробнее\r\n5. Оплата на сайте\r\n6. Возможность "
+          }
+        },
+        {
+          "source": "kwork",
+          "id": "3200733",
+          "title": "Настройка локального ИИ (Llama 3, STT/TTS) и VR",
+          "url": "https://kwork.ru/projects/3200733",
+          "amount": "15000.00",
+          "date": "",
+          "_extra": {
+            "desc": "Здравствуйте! Ищу опытного программиста для настройки локальной нейросети и создания интерактивного аватара под ключ. Компьютер мощный, все нужные программы уже скачаны. Подробное техническое задание со всеми деталями, списком софта и характеристиками железа я прикрепил в виде скриншота к этому зака"
+          }
+        },
+        {
+          "source": "kwork",
+          "id": "3200887",
+          "title": "Доработка подмены номера на сайте",
+          "url": "https://kwork.ru/projects/3200887",
+          "amount": "1000.00",
+          "date": "",
+          "_extra": {
+            "desc": "На сайте некорректно подменяется номер, на несколько секунд перестаёт показываться, ищу программиста который сможет это исправить, номер должен показываться без исчезания на всех страницах сайта"
+          }
+        },
+        {
+          "source": "kwork",
+          "id": "3200870",
+          "title": "Помощь с установкой и запуском Cucomm",
+          "url": "https://kwork.ru/projects/3200870",
+          "amount": "2000.00",
+          "date": "",
+          "_extra": {
+            "desc": "Нужен специалист с опытом работы с программой Cucomm.\r\nПроблема: программа скачивается на компьютер, но не запускается. При попытке открыть появляется сообщение о необходимости обновить версию, хотя установлена самая последняя версия, скачанная с официального сайта.\r\nНужна помощь в:\r\nкорректной уста"
+          }
+        },
+        {
+          "source": "kwork",
+          "id": "3200867",
+          "title": "Доработка и редизайн сайта",
+          "url": "https://kwork.ru/projects/3200867",
+          "amount": "15000.00",
+          "date": "",
+          "_extra": {
+            "desc": "Задачи по обновлению сайта:\r\n- перенос сайта на новый хостинг;\r\n- миграция на WordPress (с чистого кода);\r\n- редизайн всех страниц (по готовому макету главной страницы);\r\n- создание раздела со статьями;\r\n- добавление на главную страницу ссылки/блока для перехода к разделу со статьями."
+          }
+        },
+        {
+          "source": "kwork",
+          "id": "3200857",
+          "title": "Создать Android APK-приложение webview c трекингом",
+          "url": "https://kwork.ru/projects/3200857",
+          "amount": "10000.00",
+          "date": "",
+          "_extra": {
+            "desc": "Нужно упаковать готовый веб-сайт в компактное Android-приложение (WebView-обёртка) и реализовать определение источника установки.\r\nКлючевые требования к результату:\r\n- Приложение &mdash; тонкая обёртка над нашим сайтом, компактный APK.\r\n- Раздача APK будет идти вне Google Play (прямое скачивание с н"
+          }
+        },
+        {
+          "source": "kwork",
+          "id": "3200846",
+          "title": "Ускорить сайт",
+          "url": "https://kwork.ru/projects/3200846",
+          "amount": "1000.00",
+          "date": "",
+          "_extra": {
+            "desc": "Есть сайт, у него есть проблемы по открыванию карт, на iphone вообще еле грузит, иногда совсем не грузит. Нужно исправить, стоимость такой работы мне неизвестна. \r\nНужен человек который понимает в Html Css Js Php возможно дальнейшее сотрудничество по данному сайту.  \r\nПредлагайте стоимость работы, р"
+          }
+        },
+        {
+          "source": "kwork",
+          "id": "3200837",
+          "title": "Устранение последствий компрометации сервера",
+          "url": "https://kwork.ru/projects/3200837",
+          "amount": "5000.00",
+          "date": "",
+          "_extra": {
+            "desc": "Сервер скомпрометирован и используется как узел ботнета для рассылки вредоносной активности:\r\n* SSH Brute-force: Массовое сканирование и подбор паролей к сотням внешних IP-адресов от имени пользователя root (жалоба от Profihost AG от 11.06.2026).\r\n* POP3 Brute-force / Spam: Подбор паролей к почтовым"
+          }
+        },
+        {
+          "source": "kwork",
+          "id": "3200686",
+          "title": "Помощник стримеру на стрим | Twitch",
+          "url": "https://kwork.ru/projects/3200686",
+          "amount": "5000.00",
+          "date": "",
+          "_extra": {
+            "desc": "Привет! Ищем человека на один стрим (6 часов) с хорошим компьютером, который знаком со стримами и Twitch. Если опыта нет - не переживай, всему обучим.\r\nЧем предстоит заниматься:\r\nконтролировать чат во время эфиров;\r\nпроверять качество звука и трансляции;\r\nпомогать оперативно решать возникающие вопро"
+          }
+        },
+        {
+          "source": "kwork",
+          "id": "3200823",
+          "title": "Настройка форм на сайте 1С-Битрикс",
+          "url": "https://kwork.ru/projects/3200823",
+          "amount": "3000.00",
+          "date": "",
+          "_extra": {
+            "desc": "Требуется настройка форм на сайте на 1С-Битрикс для отправки уведомлений о заявках и заказах на электронную почту.\r\nЕсть почта, которая создана на почтовых серверах Beget, есть сайт на 1С-Битрикс, который лежит в облаке timeweb cloud, задача настроить SMTP на любой из сторон для корректной отправки "
+          }
+        },
+        {
+          "source": "kwork",
+          "id": "3200805",
+          "title": "Доработать проект на Wordpress",
+          "url": "https://kwork.ru/projects/3200805",
+          "amount": "10000.00",
+          "date": "",
+          "_extra": {
+            "desc": "Доработать сайт на wordpress астрологии , добавить ии агента и внесение правок по тз, так же рассмотрим seo оптимизацию сайта ."
+          }
+        }
+      ]
+    },
+    "youdo": {
+      "ok": true,
+      "count": 50,
+      "error": null,
+      "items": [
+        {
+          "source": "youdo",
+          "id": "14872215",
+          "title": "Создание сайта",
+          "url": "https://youdo.com/t14872215",
+          "amount": "до 15 000",
+          "date": "Начать 18 июня, 13:04",
+          "_extra": {
+            "category": "webdevelopment",
+            "offers": 0,
+            "status": "new"
+          }
+        },
+        {
+          "source": "youdo",
+          "id": "14872209",
+          "title": "Массовая рассылка письма на 10 000 адресов",
+          "url": "https://youdo.com/t14872209",
+          "amount": "до 1 500",
+          "date": "Начать 18 июня, 13:03",
+          "_extra": {
+            "category": "webdevelopment",
+            "offers": 0,
+            "status": "new"
+          }
+        },
+        {
+          "source": "youdo",
+          "id": "14872183",
+          "title": "Собрать на Claude страницу учета доходов-расходов",
+          "url": "https://youdo.com/t14872183",
+          "amount": "до 5 000",
+          "date": "Начать 18 июня, 12:40",
+          "_extra": {
+            "category": "webdevelopment",
+            "offers": 0,
+            "status": "new"
+          }
+        },
+        {
+          "source": "youdo",
+          "id": "14872173",
+          "title": "Доработка сайта на wordpress",
+          "url": "https://youdo.com/t14872173",
+          "amount": "до 14 000",
+          "date": "Начать 18 июня, 12:54",
+          "_extra": {
+            "category": "webdevelopment",
+            "offers": 0,
+            "status": "new"
+          }
+        },
+        {
+          "source": "youdo",
+          "id": "14872008",
+          "title": "Поддержка битрикс24",
+          "url": "https://youdo.com/t14872008",
+          "amount": "до 7 000",
+          "date": "Начать 21 июня, 19:00",
+          "_extra": {
+            "category": "webdevelopment",
+            "offers": 0,
+            "status": "new"
+          }
+        },
+        {
+          "source": "youdo",
+          "id": "14871822",
+          "title": "Прокликать сайт отеля",
+          "url": "https://youdo.com/t14871822",
+          "amount": "до 14 000",
+          "date": "Начать 19 июня, 8:00",
+          "_extra": {
+            "category": "webdevelopment",
+            "offers": 0,
+            "status": "new"
+          }
+        },
+        {
+          "source": "youdo",
+          "id": "14871769",
+          "title": "Ищу программиста",
+          "url": "https://youdo.com/t14871769",
+          "amount": "до 5 000",
+          "date": "Начать 19 июня, 14:45",
+          "_extra": {
+            "category": "webdevelopment",
+            "offers": 0,
+            "status": "new"
+          }
+        },
+        {
+          "source": "youdo",
+          "id": "14871123",
+          "title": "Нужен парсинг базы для обзвона",
+          "url": "https://youdo.com/t14871123",
+          "amount": "до  100",
+          "date": "Начать 31 июля, 22:45",
+          "_extra": {
+            "category": "webdevelopment",
+            "offers": 0,
+            "status": "new"
+          }
+        },
+        {
+          "source": "youdo",
+          "id": "14871686",
+          "title": "Прокликать сайт отеля",
+          "url": "https://youdo.com/t14871686",
+          "amount": "до 3 000",
+          "date": "18 июня, 10:20 — 20 июня, 10:25",
+          "_extra": {
+            "category": "webdevelopment",
+            "offers": 0,
+            "status": "new"
+          }
+        },
+        {
+          "source": "youdo",
+          "id": "14871606",
+          "title": "Доработка и поддержка сайта на wordpress",
+          "url": "https://youdo.com/t14871606",
+          "amount": "до 80 000",
+          "date": "Начать 19 июня, 0:00",
+          "_extra": {
+            "category": "webdevelopment",
+            "offers": 0,
+            "status": "new"
+          }
+        },
+        {
+          "source": "youdo",
+          "id": "14871245",
+          "title": "Программист 1с",
+          "url": "https://youdo.com/t14871245",
+          "amount": "до 5 000",
+          "date": "Начать 18 июня, 9:00",
+          "_extra": {
+            "category": "webdevelopment",
+            "offers": 0,
+            "status": "new"
+          }
+        },
+        {
+          "source": "youdo",
+          "id": "14871100",
+          "title": "Разработка мобильного приложения",
+          "url": "https://youdo.com/t14871100",
+          "amount": "до 70 000",
+          "date": "Начать 28 июля, 22:40",
+          "_extra": {
+            "category": "webdevelopment",
+            "offers": 0,
+            "status": "new"
+          }
+        },
+        {
+          "source": "youdo",
+          "id": "14870868",
+          "title": "Заполнить карточки товара на сайте",
+          "url": "https://youdo.com/t14870868",
+          "amount": "до 22 000",
+          "date": "Начать 17 июня, 20:45",
+          "_extra": {
+            "category": "webdevelopment",
+            "offers": 0,
+            "status": "new"
+          }
+        },
+        {
+          "source": "youdo",
+          "id": "14870699",
+          "title": "Нужен помощник по техническим процессам",
+          "url": "https://youdo.com/t14870699",
+          "amount": null,
+          "date": "Начать 17 июня, 22:00",
+          "_extra": {
+            "category": "webdevelopment",
+            "offers": 0,
+            "status": "new"
+          }
+        },
+        {
+          "source": "youdo",
+          "id": "14870240",
+          "title": "Создать сайт для транспортной компании, аренда автобусов...",
+          "url": "https://youdo.com/t14870240",
+          "amount": "до 70 000",
+          "date": "Начать 17 июня, 18:53",
+          "_extra": {
+            "category": "webdevelopment",
+            "offers": 0,
+            "status": "new"
+          }
+        },
+        {
+          "source": "youdo",
+          "id": "14870212",
+          "title": "Нужен верстальщик на сложный лендинг с perfect pixel...",
+          "url": "https://youdo.com/t14870212",
+          "amount": "до 14 000",
+          "date": "Начать 18 июня, 14:00",
+          "_extra": {
+            "category": "webdevelopment",
+            "offers": 0,
+            "status": "new"
+          }
+        },
+        {
+          "source": "youdo",
+          "id": "14870052",
+          "title": "Услуги программиста",
+          "url": "https://youdo.com/t14870052",
+          "amount": "до 1000 000",
+          "date": "Начать 18 июня, 18:10",
+          "_extra": {
+            "category": "webdevelopment",
+            "offers": 0,
+            "status": "new"
+          }
+        },
+        {
+          "source": "youdo",
+          "id": "14869934",
+          "title": "Короткий ленд на Тильда",
+          "url": "https://youdo.com/t14869934",
+          "amount": "до 5 000",
+          "date": "Начать 17 июня, 20:00",
+          "_extra": {
+            "category": "webdevelopment",
+            "offers": 0,
+            "status": "new"
+          }
+        },
+        {
+          "source": "youdo",
+          "id": "14869892",
+          "title": "Создание ИИ-агента для отслеживания изменений на сайте...",
+          "url": "https://youdo.com/t14869892",
+          "amount": "до 30 000",
+          "date": "Начать 22 июня, 0:00",
+          "_extra": {
+            "category": "webdevelopment",
+            "offers": 0,
+            "status": "new"
+          }
+        },
+        {
+          "source": "youdo",
+          "id": "14869847",
+          "title": "Услуги дизайнера-верстальщика",
+          "url": "https://youdo.com/t14869847",
+          "amount": "до 14 000",
+          "date": "Начать 19 июня, 10:00",
+          "_extra": {
+            "category": "webdevelopment",
+            "offers": 0,
+            "status": "new"
+          }
+        },
+        {
+          "source": "youdo",
+          "id": "14869624",
+          "title": "Разработать мобильное приложение",
+          "url": "https://youdo.com/t14869624",
+          "amount": "до 14 000",
+          "date": "1 июля, 16:30 — 2 сентября, 13:30",
+          "_extra": {
+            "category": "webdevelopment",
+            "offers": 0,
+            "status": "new"
+          }
+        },
+        {
+          "source": "youdo",
+          "id": "14868773",
+          "title": "Донастройка внутренней работы команды в Битрикс24",
+          "url": "https://youdo.com/t14868773",
+          "amount": "до 10 000",
+          "date": "22 июня, 0:00 — 26 июня, 23:59",
+          "_extra": {
+            "category": "webdevelopment",
+            "offers": 0,
+            "status": "new"
+          }
+        },
+        {
+          "source": "youdo",
+          "id": "14869123",
+          "title": "Сделать телеграмм бота с ИИ",
+          "url": "https://youdo.com/t14869123",
+          "amount": "до 1 500",
+          "date": "Начать 17 июня, 15:27",
+          "_extra": {
+            "category": "webdevelopment",
+            "offers": 0,
+            "status": "new"
+          }
+        },
+        {
+          "source": "youdo",
+          "id": "14868947",
+          "title": "Специалист по wordpress",
+          "url": "https://youdo.com/t14868947",
+          "amount": "до 5 000",
+          "date": "Начать 18 июня, 0:00",
+          "_extra": {
+            "category": "webdevelopment",
+            "offers": 0,
+            "status": "new"
+          }
+        },
+        {
+          "source": "youdo",
+          "id": "14868824",
+          "title": "Настроить загрузку конверсий из Мой Склад в Яндекс...",
+          "url": "https://youdo.com/t14868824",
+          "amount": "до 10 000",
+          "date": "Начать 18 июня, 0:00",
+          "_extra": {
+            "category": "webdevelopment",
+            "offers": 0,
+            "status": "new"
+          }
+        },
+        {
+          "source": "youdo",
+          "id": "14868757",
+          "title": "Добавить в программу ревит библиотеку с мебелью",
+          "url": "https://youdo.com/t14868757",
+          "amount": "до  300",
+          "date": "Начать 17 июня, 14:19",
+          "_extra": {
+            "category": "webdevelopment",
+            "offers": 0,
+            "status": "new"
+          }
+        },
+        {
+          "source": "youdo",
+          "id": "14868244",
+          "title": "Создать чат-бот",
+          "url": "https://youdo.com/t14868244",
+          "amount": "до 12 000",
+          "date": "Завершить 24 июня, 15:00",
+          "_extra": {
+            "category": "webdevelopment",
+            "offers": 0,
+            "status": "new"
+          }
+        },
+        {
+          "source": "youdo",
+          "id": "14868179",
+          "title": "Честный знак - продажа косметики с 1 июля (1С доработка...",
+          "url": "https://youdo.com/t14868179",
+          "amount": "до 14 000",
+          "date": "Завершить 26 июня, 23:59",
+          "_extra": {
+            "category": "webdevelopment",
+            "offers": 0,
+            "status": "new"
+          }
+        },
+        {
+          "source": "youdo",
+          "id": "14868168",
+          "title": "Менеджер по маркетплейсам",
+          "url": "https://youdo.com/t14868168",
+          "amount": "до 80 000",
+          "date": "Начать 17 июня, 12:28",
+          "_extra": {
+            "category": "webdevelopment",
+            "offers": 0,
+            "status": "new"
+          }
+        },
+        {
+          "source": "youdo",
+          "id": "14868124",
+          "title": "PHP разработчик на парт-тайм",
+          "url": "https://youdo.com/t14868124",
+          "amount": "до 70 000",
+          "date": "Начать 22 июня, 0:00",
+          "_extra": {
+            "category": "webdevelopment",
+            "offers": 0,
+            "status": "new"
+          }
+        },
+        {
+          "source": "youdo",
+          "id": "14868006",
+          "title": "Нужен специалист по ии",
+          "url": "https://youdo.com/t14868006",
+          "amount": "до 10 000",
+          "date": "Начать 18 июня, 0:00",
+          "_extra": {
+            "category": "webdevelopment",
+            "offers": 0,
+            "status": "new"
+          }
+        },
+        {
+          "source": "youdo",
+          "id": "14867958",
+          "title": "Создать бота в телеграмме",
+          "url": "https://youdo.com/t14867958",
+          "amount": "до 22 000",
+          "date": "Начать 3 июля, 9:55",
+          "_extra": {
+            "category": "webdevelopment",
+            "offers": 0,
+            "status": "new"
+          }
+        },
+        {
+          "source": "youdo",
+          "id": "14867930",
+          "title": "Задачи по настройке АмоCRM",
+          "url": "https://youdo.com/t14867930",
+          "amount": "до 4 500",
+          "date": "Начать 19 июня, 0:00",
+          "_extra": {
+            "category": "webdevelopment",
+            "offers": 0,
+            "status": "new"
+          }
+        },
+        {
+          "source": "youdo",
+          "id": "14867875",
+          "title": "Сделать одностраничный сайт",
+          "url": "https://youdo.com/t14867875",
+          "amount": "до 30 000",
+          "date": "17 июня, 10:49 — 24 июня, 23:55",
+          "_extra": {
+            "category": "webdevelopment",
+            "offers": 0,
+            "status": "new"
+          }
+        },
+        {
+          "source": "youdo",
+          "id": "14867857",
+          "title": "Восстановить сайт, который был удален с хостинга и...",
+          "url": "https://youdo.com/t14867857",
+          "amount": "до 30 000",
+          "date": "Начать 17 июня, 10:40",
+          "_extra": {
+            "category": "webdevelopment",
+            "offers": 0,
+            "status": "new"
+          }
+        },
+        {
+          "source": "youdo",
+          "id": "14864558",
+          "title": "Добавить готовую базу",
+          "url": "https://youdo.com/t14864558",
+          "amount": "до 1 000",
+          "date": "Начать 17 июня, 8:00",
+          "_extra": {
+            "category": "webdevelopment",
+            "offers": 0,
+            "status": "new"
+          }
+        },
+        {
+          "source": "youdo",
+          "id": "14867693",
+          "title": "Нужен программист 1с",
+          "url": "https://youdo.com/t14867693",
+          "amount": "до 2 000",
+          "date": "Начать 17 июня, 8:40",
+          "_extra": {
+            "category": "webdevelopment",
+            "offers": 0,
+            "status": "new"
+          }
+        },
+        {
+          "source": "youdo",
+          "id": "14867687",
+          "title": "Сайт знакомств под ключ. нужны встречи с разрабом в...",
+          "url": "https://youdo.com/t14867687",
+          "amount": "до 149 000",
+          "date": "Начать 29 июня, 22:00",
+          "_extra": {
+            "category": "webdevelopment",
+            "offers": 0,
+            "status": "new"
+          }
+        },
+        {
+          "source": "youdo",
+          "id": "14867436",
+          "title": "Создать сайт",
+          "url": "https://youdo.com/t14867436",
+          "amount": "до 8 000",
+          "date": "Начать 20 июня, 0:00",
+          "_extra": {
+            "category": "webdevelopment",
+            "offers": 0,
+            "status": "new"
+          }
+        },
+        {
+          "source": "youdo",
+          "id": "14867398",
+          "title": "Прокачать сайт",
+          "url": "https://youdo.com/t14867398",
+          "amount": "до 7 000",
+          "date": "Начать 17 июня, 1:00",
+          "_extra": {
+            "category": "webdevelopment",
+            "offers": 0,
+            "status": "new"
+          }
+        },
+        {
+          "source": "youdo",
+          "id": "14867272",
+          "title": "Сделать сайт под ключ",
+          "url": "https://youdo.com/t14867272",
+          "amount": "до 8 000",
+          "date": "Начать 22 июня, 22:30",
+          "_extra": {
+            "category": "webdevelopment",
+            "offers": 0,
+            "status": "new"
+          }
+        },
+        {
+          "source": "youdo",
+          "id": "14867217",
+          "title": "Доработка сайта на wordpress",
+          "url": "https://youdo.com/t14867217",
+          "amount": "до 10 000",
+          "date": "Завершить 1 июля, 23:59",
+          "_extra": {
+            "category": "webdevelopment",
+            "offers": 0,
+            "status": "new"
+          }
+        },
+        {
+          "source": "youdo",
+          "id": "14867100",
+          "title": "Создать сайт для производства подарочных коробок и...",
+          "url": "https://youdo.com/t14867100",
+          "amount": "до 30 000",
+          "date": "Начать 17 июня, 0:00",
+          "_extra": {
+            "category": "webdevelopment",
+            "offers": 0,
+            "status": "new"
+          }
+        },
+        {
+          "source": "youdo",
+          "id": "14866761",
+          "title": "Сделать сайт стрип клуба",
+          "url": "https://youdo.com/t14866761",
+          "amount": "до 60 000",
+          "date": "Начать 16 июня, 20:02",
+          "_extra": {
+            "category": "webdevelopment",
+            "offers": 0,
+            "status": "new"
+          }
+        },
+        {
+          "source": "youdo",
+          "id": "14866466",
+          "title": "Специалист по интернет-магазину в телеграм канале",
+          "url": "https://youdo.com/t14866466",
+          "amount": "до 20 000",
+          "date": "Начать 18 июня, 0:00",
+          "_extra": {
+            "category": "webdevelopment",
+            "offers": 0,
+            "status": "new"
+          }
+        },
+        {
+          "source": "youdo",
+          "id": "14866561",
+          "title": "Доработка сайта на tilda",
+          "url": "https://youdo.com/t14866561",
+          "amount": "до 25 000",
+          "date": "Начать 16 июня, 19:53",
+          "_extra": {
+            "category": "webdevelopment",
+            "offers": 0,
+            "status": "new"
+          }
+        },
+        {
+          "source": "youdo",
+          "id": "14866555",
+          "title": "Создать личный кабинет на сайте",
+          "url": "https://youdo.com/t14866555",
+          "amount": "до 30 000",
+          "date": "Завершить 1 августа, 23:59",
+          "_extra": {
+            "category": "webdevelopment",
+            "offers": 0,
+            "status": "new"
+          }
+        },
+        {
+          "source": "youdo",
+          "id": "14866364",
+          "title": "Автоматизация расчета себестоимости заказов",
+          "url": "https://youdo.com/t14866364",
+          "amount": "до 10 000",
+          "date": "Начать 17 июня, 0:00",
+          "_extra": {
+            "category": "webdevelopment",
+            "offers": 0,
+            "status": "new"
+          }
+        },
+        {
+          "source": "youdo",
+          "id": "14866388",
+          "title": "Создать лендинг",
+          "url": "https://youdo.com/t14866388",
+          "amount": "до 3 000",
+          "date": "16 июня, 18:45 — 1 июля, 18:45",
+          "_extra": {
+            "category": "webdevelopment",
+            "offers": 0,
+            "status": "new"
+          }
+        },
+        {
+          "source": "youdo",
+          "id": "14866381",
+          "title": "Нужно наполнить сайт картинками и текстом",
+          "url": "https://youdo.com/t14866381",
+          "amount": "до 7 000",
+          "date": "Начать 19 июня, 18:45",
+          "_extra": {
+            "category": "webdevelopment",
+            "offers": 0,
+            "status": "new"
+          }
+        }
+      ]
+    }
+  }
+}

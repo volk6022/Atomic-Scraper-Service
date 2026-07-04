@@ -1,0 +1,11 @@
+{
+  "url": "https://api.mindbox.ru/v1.1/customer/track-visit?version=1.0.798&transport=XmlHttpRequest",
+  "status": 200,
+  "body": {
+    "requestId": null,
+    "deviceUUID": "084cceb2-5e89-403b-9f53-b001d1540977",
+    "session": {
+      "deviceGuid": "084cceb2-5e89-403b-9f53-b001d1540977"
+    }
+  }
+}

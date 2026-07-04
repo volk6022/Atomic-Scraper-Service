@@ -30,6 +30,25 @@ class Settings(BaseSettings):
     RATE_LIMIT_YANDEX_PER_HOUR: int = 30
     RATE_LIMIT_DEFAULT_PER_HOUR: int = 1000
 
+    # Monitoring / Catalog scrapers (promoted from experiment_monitoring/)
+    # Most sources (fl/kwork/superjob/habr/zarplata) pass anti-bot via httpx-direct;
+    # enable proxy rotation for the ones that need it (hh). See RotatingHTTPClient.
+    MONITOR_USE_PROXY: bool = False
+    MONITOR_HTTP_TIMEOUT: float = 25.0       # read/pool timeout for the httpx path
+    MONITOR_MAX_PROXY_RETRIES: int = 12      # proxies to rotate through before failing
+
+    # Scheduled monitor sweep (Phase 3)
+    MONITOR_SOURCES: str = ""                # CSV of source keys; "" = all registered
+    MONITOR_COLLECT_LIMIT: int = 40          # items per source per sweep
+    MONITOR_INTERVAL_MINUTES: int = 15       # sweep cadence (cron */N when N < 60)
+    # CSV of IT keywords; a collected item passes if its title/desc contains any.
+    # "" = no filtering (keep every item).
+    MONITOR_KEYWORDS: str = (
+        "python,django,fastapi,flask,backend,ml,machine learning,data,parsing,парсинг,"
+        "разработчик,программист,бот,bot,автоматизация,api,нейросет,ai"
+    )
+    MONITOR_SEEN_TTL_DAYS: int = 7           # sliding TTL on the per-source seen set
+
     # SearXNG SERP Backend
     # Подтверждено прогонами в serp_experiment/REPORT_searxng.md:
     # VPN на хосте + pool 20 socks5 + retries=2 → 95.3% success.
