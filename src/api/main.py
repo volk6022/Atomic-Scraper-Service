@@ -9,6 +9,8 @@ from src.api.routers import (
     yandex_maps,
     enrichment,
     research,
+    monitoring,
+    catalog,
 )
 from src.api.websockets import handler
 from src.api.middleware.rate_limit import RateLimitMiddleware
@@ -36,6 +38,8 @@ app.include_router(
 )
 app.include_router(enrichment.router, prefix="/api/v1", tags=["enrichment"])
 app.include_router(research.router, prefix="/api/v1/research", tags=["research"])
+app.include_router(monitoring.router, prefix="/api/v1/monitor", tags=["monitoring"])
+app.include_router(catalog.router, prefix="/api/v1/catalog", tags=["catalog"])
 
 
 if __name__ == "__main__":

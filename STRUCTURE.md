@@ -106,3 +106,53 @@ tests/                             # [Tests] Test suite
 | Yandex Maps | yandex_maps.py, business_card.py | FR-006 |
 | Site Enrichment | site_enricher.py, content_cleaner.py, enrichment.py | FR-007, FR-008 |
 | Rate Limiting | token_bucket.py, rate_limit.py, rate_limit_rule.py | FR-009, FR-010 |
+
+## Monitoring & Catalog scrapers
+
+Promoted from `experiment_monitoring/` (the standalone probes stay there as
+reference + test fixtures). Two families, both using the shared async HTTP layer.
+
+### Async HTTP layer — `src/infrastructure/http/`
+
+- `rotating_client.py` — `RotatingHTTPClient`: async httpx with sequential proxy
+  rotation (proxies from the existing `proxy_provider` / `proxies.txt`), dead-proxy
+  TTL memory. Direct by default (`MONITOR_USE_PROXY`), rotates when enabled.
+- `antibot.py` — `detect_antibot(resp)` → CLEAN / DDOS-GUARD / CLOUDFLARE / CHALLENGE
+  / BLOCKED, so callers know when to fall back to the browser.
+
+### Demand-side monitor (job/order feeds)
+
+- `src/actions/monitoring/base.py` — `BaseSourceScraper` with the hybrid
+  `fetch_text` (httpx-first, browser fallback on anti-bot) and `fetch_json`.
+- `src/actions/monitoring/sources/*.py` — one module per source (hh, avito,
+  superjob, habr, zarplata, fl, kwork, youdo). Pure parsers copied verbatim from
+  `prototype/monitor_proto.py`; each registers into `SOURCE_REGISTRY`.
+- `src/api/routers/monitoring.py` — `POST /api/v1/monitor/{source}/{collect,detail}`,
+  `GET /api/v1/monitor/sources`. Normalised `MonitorItem` output.
+- `src/infrastructure/tasks/monitor_store.py` — dedup store (Redis + in-memory
+  fallback) keyed by `(source, id)`.
+- `src/infrastructure/queue/monitor_worker.py` — `run_monitor_sweep` (collect →
+  keyword filter → diff → emit new) + Taskiq `scheduled_monitor_sweep` on a cron
+  from `MONITOR_INTERVAL_MINUTES`. Run the scheduler with:
+  `taskiq scheduler src.infrastructure.queue.monitor_worker:scheduler`.
+
+### Supply-side catalog (competition analysis)
+
+- `src/actions/catalog/http.py` — `catalog_request`: throttled, block-aware,
+  proxy-rotating request helper for deep category paging.
+- `src/actions/catalog/{kwork_services,kwork_profiles,fl_freelancers}.py` — async
+  ports of the mature supply scrapers. Pure parsers copied verbatim.
+- `src/api/routers/catalog.py` — `POST /api/v1/catalog/{kwork-services,
+  kwork-profiles,fl-freelancers}`. Typed `Gig` / `FreelancerProfile` output.
+
+**Rate limiting note:** `RateLimitMiddleware` keys on the *request* host (our own
+API), so it caps callers of these endpoints via the default rule — it does not
+throttle the upstream targets. Politeness toward kwork/fl/hh is enforced *inside*
+the scrapers via `throttle()` + per-request proxy rotation.
+
+| Feature | Files | Notes |
+|---------|-------|-------|
+| Async HTTP | http/rotating_client.py, http/antibot.py | shared by both families |
+| Demand monitor | actions/monitoring/**, routers/monitoring.py, queue/monitor_worker.py, tasks/monitor_store.py | 8 sources, API + scheduled sweep |
+| Supply catalog | actions/catalog/**, routers/catalog.py | kwork gigs/profiles, fl freelancers |
+| Tests | tests/unit/test_monitor_parsers.py, test_monitor_sweep.py, test_http_layer.py, tests/contract/test_monitoring_api.py, test_catalog_api.py | parsers on saved samples + API contracts |
